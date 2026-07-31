@@ -10,16 +10,18 @@ namespace YatchDungeon
     public class UnitDirector : DirectorBase
     {
         private Dictionary<string, UnitDataTableRow> _unitDataMap;
-        private UnitCore _hoveredUnit;
+        private UnitPlaceCell _hoveredCell;
+        private UnitPlaceCell _restoreCell;
         private UnitCore _draggingUnit;
         private Vector3 _dragOffset;
         private Camera _camera;
+        [SerializeField] private UnitPlaceGrid allyPlaceGrid;
 
         public override IEnumerator OnInitialize()
         {
             _camera = CameraManager.GetMainCamera();
             _unitDataMap = DataTableManager.FindAllRows<UnitDataTableRow>().ToDictionary(x => x.id);
-            
+
             InputManager.RegisterAction("Click", PlayerActionType.Performed, OnMouseDownUnit);
             InputManager.RegisterAction("Click", PlayerActionType.Canceled, OnMouseUpUnit);
             yield return null;
@@ -29,17 +31,35 @@ namespace YatchDungeon
         {
             if (_draggingUnit)
             {
+                if (_hoveredCell)
+                {
+                    if (!_hoveredCell.IsEmpty())
+                    {
+                        var unit = _hoveredCell.PopUnit();
+                        unit.MoveTo(_restoreCell.transform.position);
+                        _restoreCell.PushUnit(unit);
+                    }
+                    _draggingUnit.Warp(_hoveredCell.transform.position);
+                    _hoveredCell.PushUnit(_draggingUnit);
+                }
+                else
+                {
+                    _draggingUnit.MoveTo(_restoreCell.transform.position);
+                    _restoreCell.PushUnit(_draggingUnit);
+                }
+                
+                _restoreCell = null;
                 _draggingUnit = null;
+                _dragOffset = Vector3.zero;
             }
         }
 
         private void OnMouseDownUnit(InputAction.CallbackContext obj)
         {
-            // 클릭 순간 호버링 중인 유닛이 있다면 드래그 시작
-            if (_hoveredUnit)
+            if (_hoveredCell && !_hoveredCell.IsEmpty())
             {
-                _draggingUnit = _hoveredUnit;
-
+                _draggingUnit = _hoveredCell.PopUnit();
+                _restoreCell = _hoveredCell;
                 // 1. 마우스 스크린 좌표 -> 월드 좌표 변환
                 Vector3 mouseScreenPos = Mouse.current.position.ReadValue();
                 mouseScreenPos.z = -_camera.transform.position.z; // 카메라 거리 맞추기
@@ -56,9 +76,22 @@ namespace YatchDungeon
             var data = _unitDataMap[unitId];
             var instance = Instantiate(data.prefab);
             instance.Setup(data);
+
+            var cell = allyPlaceGrid.GetRandomEmptyCell();
+            instance.MoveTo(cell.transform.position);
+            cell.PushUnit(instance);
         }
 
         public void Update()
+        {
+            if (_camera)
+            {
+                CheckDraggingUnit();
+                CheckHoverUnitCell();
+            }
+        }
+
+        private void CheckDraggingUnit()
         {
             if (_draggingUnit)
             {
@@ -66,33 +99,43 @@ namespace YatchDungeon
                 Vector3 mouseScreenPos = Mouse.current.position.ReadValue();
                 mouseScreenPos.z = -_camera.transform.position.z;
                 Vector3 mouseWorldPos = _camera.ScreenToWorldPoint(mouseScreenPos);
-                
+
                 Vector3 targetPos = mouseWorldPos + _dragOffset;
                 targetPos.z = 0; // 2D 환경 Z축 고정
-                
+
                 _draggingUnit.transform.position = targetPos;
-            }
-            else
-            {
-                CheckHoverUnit();
             }
         }
 
-        private void CheckHoverUnit()
+        private void CheckHoverUnitCell()
         {
             // 마우스 스크린 좌표를 월드 좌표로 변환 후 OverlapCircle 수행
             Vector3 mouseScreenPos = Mouse.current.position.ReadValue();
             mouseScreenPos.z = -_camera.transform.position.z;
             Vector3 mouseWorldPos = _camera.ScreenToWorldPoint(mouseScreenPos);
 
-            var result = Physics2D.OverlapCircle(mouseWorldPos, 0.1f, LayerMask.GetMask("Unit"));
+            var radius = _draggingUnit == null ? 0.1f : 0.3f;
+            var result = Physics2D.OverlapCircle(mouseWorldPos, radius, LayerMask.GetMask("Cell"));
             if (result)
             {
-                _hoveredUnit = result.GetComponent<UnitCore>();
+                var currentCell = result.GetComponent<UnitPlaceCell>();
+
+                if (_hoveredCell && _hoveredCell != currentCell)
+                {
+                    _hoveredCell.OnHoverExit();
+                }
+
+                _hoveredCell = currentCell;
+                _hoveredCell.OnHoverEnter();
             }
             else
             {
-                _hoveredUnit = null;
+                if (_hoveredCell)
+                {
+                    _hoveredCell.OnHoverExit();
+                }
+
+                _hoveredCell = null;
             }
         }
     }
