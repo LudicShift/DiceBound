@@ -15,5 +15,10 @@ namespace YatchDungeon
         {
             return !_dice;
         }
+
+        public bool IsLinked(DiceWidget dice)
+        {
+            return dice == _dice;
+        }
     }
 }

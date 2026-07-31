@@ -13,8 +13,9 @@ namespace YatchDungeon
         private bool _isRolling;
         private int _number;
 
-        public Func<int, Sprite> spriteGetter; 
-        
+        public Func<int, Sprite> spriteGetter;
+        private bool _isMoving;
+
         public override void Awake()
         {
             base.Awake();
@@ -32,6 +33,10 @@ namespace YatchDungeon
             SetSprite(spriteGetter.Invoke(_number));
         }
 
+        public bool IsMoving()
+        {
+            return _isMoving;
+        }
         public void RollEnd()
         {
             _isRolling = false;
@@ -45,7 +50,11 @@ namespace YatchDungeon
 
         public void MoveTo(Vector3 position)
         {
-            transform.DOMove(position,1);
+            _isMoving = true;
+            transform.DOMove(position,1).OnComplete(() =>
+            {
+                _isMoving = false;
+            });
         }
 
         public void Warp(Vector3 position)

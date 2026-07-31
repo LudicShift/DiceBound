@@ -20,6 +20,8 @@ namespace YatchDungeon
 
         [SerializeField] private ButtonWidget _showFieldButton;
         
+        [SerializeField] private TextWidget _combinationInfoWidget;
+        
         [SerializeField] private Transform initialDicePoint;
         
         [SerializeField]
@@ -57,7 +59,6 @@ namespace YatchDungeon
         {
             _remainRollCount = 3;
             ResetDice();
-            _rerollButtonWidget.Show();
             Roll();
         }
         
@@ -68,8 +69,9 @@ namespace YatchDungeon
 
         private IEnumerator RollRoutine()
         {
-            _rerollButtonWidget.Hide();
-            _claimButtonWidget.Hide();
+            _combinationInfoWidget.SetText("Rolling...");
+            _rerollButtonWidget.SetInteractable(false);
+            _claimButtonWidget.SetInteractable(false);
             _remainRollCount--;
             int count = 0;
             foreach (var dice in _remainDices)
@@ -77,11 +79,11 @@ namespace YatchDungeon
                 StartCoroutine(dice.Roll(()=>count++));
             }
             yield return new WaitUntil(()=>count >= _remainDices.Count);
-            _claimButtonWidget.Show();
-            _rerollButtonWidget.Show();
+            _claimButtonWidget.SetInteractable(true);
+            _rerollButtonWidget.SetInteractable(true);
             if (_remainRollCount <= 0)
             {
-                _rerollButtonWidget.Hide();
+                _rerollButtonWidget.SetInteractable(false);
             }
             Debug.Log("Roll");
             ShowResult();
@@ -147,6 +149,11 @@ namespace YatchDungeon
 
         private void OnDiceClick(DiceWidget dice)
         {
+            if (dice.IsMoving())
+            {
+                return;
+            }
+            
             if (_remainDices.Contains(dice))
             {
                 KeepDice(dice);
@@ -183,8 +190,24 @@ namespace YatchDungeon
         {
             _keepDices.Remove(dice);
             _remainDices.Add(dice);
+            
+            var keepPoint = GetLinkedKeepPoint(dice);
             var point = GetLinkedRemainPoint(dice);
+            keepPoint.SetDice(null);
             dice.MoveTo(point.transform.position);
+        }
+
+        private DiceKeepPointWidget GetLinkedKeepPoint(DiceWidget dice)
+        {
+            foreach (var keepPoint in _keepPoints)
+            {
+                if (keepPoint.IsLinked(dice))
+                {
+                    return keepPoint;
+                }
+            }
+
+            return null;
         }
 
         private DiceRemainPointWidget GetLinkedRemainPoint(DiceWidget dice)
@@ -206,7 +229,7 @@ namespace YatchDungeon
             var combinationContext = new CombinationContext(allDices);
             var combination = Evaluate(combinationContext);
             //대충 유닛 스폰
-            Debug.Log(combination.GetName());
+            _combinationInfoWidget.SetText(combination.GetName());
         }
         
         private void OnClaimButtonClick()
@@ -228,7 +251,7 @@ namespace YatchDungeon
             }
             else
             {
-                ShowCanvas();
+                ShowLayer();
             }
         }
 
