@@ -17,6 +17,10 @@ namespace YatchDungeon
         public Func<int, Sprite> animationSpriteGetter;
         private bool _isMoving;
         private int _animationIndex;
+        
+        [SerializeField] private float moveDuration = 0.3f;
+        [SerializeField] private int rollTime = 2;
+        [SerializeField] private float rollDuration = 0.3f;
 
         public IEnumerator Roll(Action finishCallback)
         {
@@ -24,10 +28,10 @@ namespace YatchDungeon
             //_animator.SetInteger("Index",Random.Range(1,3));
             //yield return new WaitUntil(() => !_isRolling);
             var rollStartIndex = Random.Range(0, 5);
-            var rollEndIndex = rollStartIndex + 12;
+            var rollEndIndex = rollStartIndex + 6*rollTime;
             _animationIndex = rollStartIndex;
             yield return transform.DOMoveY(50f, 0.1f).SetRelative(true).WaitForCompletion();
-            yield return DOTween.To(GetRollIndex, SetRollIndex, rollEndIndex,0.3f).WaitForCompletion();
+            yield return DOTween.To(GetRollIndex, SetRollIndex, rollEndIndex,rollDuration).WaitForCompletion();
             yield return transform.DOMoveY(-50f, 0.1f).SetRelative(true).WaitForCompletion();
             _number = Random.Range(1, 6);
             SetSprite(spriteGetter.Invoke(_number));
@@ -58,7 +62,7 @@ namespace YatchDungeon
         public void MoveTo(Vector3 position)
         {
             _isMoving = true;
-             transform.DOMove(position, 1).OnComplete(() => { _isMoving = false; });
+             transform.DOMove(position, moveDuration).OnComplete(() => { _isMoving = false; });
         }
 
         public void Warp(Vector3 position)
