@@ -34,6 +34,7 @@ namespace YatchDungeon
         private List<DiceRemainPointWidget> _remainPoints;
         [SerializeField] private List<Sprite> diceSprite;
         [SerializeField] private List<Sprite> diceAnimationSprite;
+        private UnitDirector _unitDirector;
 
 
         public void ShowCanvas()
@@ -118,6 +119,7 @@ namespace YatchDungeon
         public override IEnumerator OnInitialize()
         {
             _keepDices = new List<DiceWidget>();
+            _unitDirector = DirectorFacade.GetSubMode<UnitDirector>();
             _remainDices = canvas.GetComponentsInChildren<DiceWidget>(true).ToList();
             _remainPoints = canvas.GetComponentsInChildren<DiceRemainPointWidget>(true).ToList();
             _keepPoints = canvas.GetComponentsInChildren<DiceKeepPointWidget>(true).ToList();
@@ -132,15 +134,20 @@ namespace YatchDungeon
             _showFieldButton.AddOnClickAction(OnShowFieldButtonClick);
             _rerollButtonWidget.AddOnClickAction(Roll);
             _claimButtonWidget.AddOnClickAction(OnClaimButtonClick);
+
+            var combinationDataList = DataTableManager.FindAllRows<CombinationDataTableRow>();
+            var dictionary =  combinationDataList.ToDictionary(x => x.id);
+            
+            
             var combinationList = new List<CombinationBase>();
-            combinationList.Add(new OnePairCombination(8));
-            combinationList.Add(new TwoPairCombination(7));
-            combinationList.Add(new TripleCombination(6));
-            combinationList.Add(new SmallStraightCombination(5));
-            combinationList.Add(new LargeStraightCombination(4));
-            combinationList.Add(new FullHouseCombination(3));
-            combinationList.Add(new FourOfKindCombination(2));
-            combinationList.Add(new YatchCombination(1));
+            combinationList.Add(new OnePairCombination(dictionary["ONE_PAIR"]));
+            combinationList.Add(new TwoPairCombination(dictionary["TWO_PAIR"]));
+            combinationList.Add(new TripleCombination(dictionary["TRIPLE"]));
+            combinationList.Add(new SmallStraightCombination(dictionary["S_STRAIGHT"]));
+            combinationList.Add(new LargeStraightCombination(dictionary["FULL_HOUSE"]));
+            combinationList.Add(new FullHouseCombination(dictionary["FOUR_KIND"]));
+            combinationList.Add(new FourOfKindCombination(dictionary["L_STRAIGHT"]));
+            combinationList.Add(new FiveKindCombination(dictionary["FIVE_KIND"]));
             combinationList.Sort((a,b)=>a.GetPriority() - b.GetPriority());
             _combinations = combinationList.ToArray();
             
@@ -247,9 +254,7 @@ namespace YatchDungeon
             var allDices = _remainDices.Concat(_keepDices).ToList();
             var combinationContext = new CombinationContext(allDices);
             var combination = Evaluate(combinationContext);
-            //대충 유닛 스폰
-            Debug.Log(combination.GetName());
-            Debug.Log("Claim");
+            _unitDirector.SpawnAllyUnit(combination.GetUnitID());
             HideCanvas();
         }
 

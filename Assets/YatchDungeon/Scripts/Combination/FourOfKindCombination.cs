@@ -5,7 +5,7 @@ namespace YatchDungeon
 {
     public class FourOfKindCombination :CombinationBase
     {
-        public FourOfKindCombination(int priority) : base(priority)
+        public FourOfKindCombination(CombinationDataTableRow priority) : base(priority)
         {
         }
 
@@ -34,9 +34,5 @@ namespace YatchDungeon
             return false;
         }
 
-        public override string GetName()
-        {
-            return "Four of a Kind";
-        }
     }
 }

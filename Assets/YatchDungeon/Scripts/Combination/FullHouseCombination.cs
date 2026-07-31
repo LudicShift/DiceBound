@@ -5,7 +5,7 @@ namespace YatchDungeon
 {
     public class FullHouseCombination : CombinationBase
     {
-        public FullHouseCombination(int priority) : base(priority)
+        public FullHouseCombination(CombinationDataTableRow priority) : base(priority)
         {
         }
 
@@ -41,9 +41,5 @@ namespace YatchDungeon
             return hasThreeOfKind && hasPair;
         }
 
-        public override string GetName()
-        {
-            return "Full House";
-        }
     }
 }

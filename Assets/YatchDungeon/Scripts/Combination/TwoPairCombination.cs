@@ -5,7 +5,7 @@ namespace YatchDungeon
 {
     public class TwoPairCombination : CombinationBase
     {
-        public TwoPairCombination(int priority) : base(priority)
+        public TwoPairCombination(CombinationDataTableRow priority) : base(priority)
         {
         }
 
@@ -33,11 +33,6 @@ namespace YatchDungeon
                 }
             }
             return pairCount >= 2; // Changed from == 2 to >= 2 to correctly identify two pairs
-        }
-
-        public override string GetName()
-        {
-            return "TwoPair";
         }
     }
 }

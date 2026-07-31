@@ -1,0 +1,238 @@
+id,KR,EN,isEnable,Category
+GRADE_COMMON,일반,Common,TRUE,Grade
+GRADE_RARE,희귀,Rare,TRUE,Grade
+GRADE_EPIC,영웅,Epic,TRUE,Grade
+GRADE_LEGENDARY,전설,Legendary,TRUE,Grade
+GRADE_BOSS,보스,Boss,TRUE,Grade
+MAT_MANA_STONE_NAME,하급 마력석,Lesser Mana Stone,TRUE,Material
+MAT_MANA_STONE_DESC,마력을 굳혀 만든 조각.,Raw magic condensed into a shard.,TRUE,Material
+MAT_HOLY_WATER_NAME,축복받은 성수,Blessed Holy Water,TRUE,Material
+MAT_HOLY_WATER_DESC,몸을 단단하게 만드는 물.,Water that hardens flesh against harm.,TRUE,Material
+MAT_HARD_STEEL_NAME,단단한 강철,Hardened Steel,TRUE,Material
+MAT_HARD_STEEL_DESC,아무것도 물어뜯지 못할 때까지 벼린 강철.,Steel folded until nothing bites it.,TRUE,Material
+MAT_MAGIC_SCROLL_NAME,고위 마법 스크롤,Arcane Scroll,TRUE,Material
+MAT_MAGIC_SCROLL_DESC,모든 주문을 날카롭게 다듬는 두루마리.,A scroll that sharpens every incantation.,TRUE,Material
+MAT_JOKER_CORE_NAME,빛나는 조커 코어,Shining Joker Core,TRUE,Material
+MAT_JOKER_CORE_DESC,주사위의 운을 그대로 굳힌 핵.,"The die's own luck, made solid.",TRUE,Material
+HAND_ONE_PAIR,원 페어,One Pair,TRUE,DiceHand
+HAND_TWO_PAIR,투 페어,Two Pair,TRUE,DiceHand
+HAND_TRIPLE,트리플,Triple,TRUE,DiceHand
+HAND_S_STRAIGHT,스몰 스트레이트,Small Straight,TRUE,DiceHand
+HAND_FULL_HOUSE,풀 하우스,Full House,TRUE,DiceHand
+HAND_FOUR_KIND,포 카드,Four of a Kind,TRUE,DiceHand
+HAND_L_STRAIGHT,라지 스트레이트,Large Straight,TRUE,DiceHand
+HAND_FIVE_KIND,파이브 카드,Five of a Kind,TRUE,DiceHand
+UN_SOLDIER_NAME,병사,Soldier,TRUE,Unit
+UN_SOLDIER_DESC,전열을 지키며 물러서지 않는다.,Holds the front rank and never gives ground.,TRUE,Unit
+UN_ARCHER_NAME,궁수,Archer,TRUE,Unit
+UN_ARCHER_DESC,후열에서 어느 열이든 골라 쏜다.,Picks off any column from the safety of the rear.,TRUE,Unit
+UN_SWORDSMAN_NAME,검사,Swordsman,TRUE,Unit
+UN_SWORDSMAN_DESC,한 번의 회전으로 전열을 쓸어버린다.,Sweeps the entire front column with one turn of the blade.,TRUE,Unit
+UN_LANCER_NAME,창병,Lancer,TRUE,Unit
+UN_LANCER_DESC,후열에서도 둘째 열까지 닿는 긴 창.,Long enough to strike the second column from the back rank.,TRUE,Unit
+UN_PRIEST_NAME,사제,Priest,TRUE,Unit
+UN_PRIEST_DESC,뒤에서 빛으로 전열을 세워둔다.,Keeps the line standing with light from behind.,TRUE,Unit
+UN_AXEMAN_NAME,중장 도끼병,Armored Axeman,TRUE,Unit
+UN_AXEMAN_DESC,땅을 갈라 전열 전체를 둔하게 만든다.,Splits the ground and dulls everything in the front column.,TRUE,Unit
+UN_WIZARD_NAME,마법사,Wizard,TRUE,Unit
+UN_WIZARD_DESC,가장 뭉친 열 위로 불을 떨어뜨린다.,Drops fire on whichever column has clustered.,TRUE,Unit
+UN_KNIGHT_NAME,기사,Knight,TRUE,Unit
+UN_KNIGHT_DESC,모든 칼끝을 자신에게 모아 후열을 지킨다.,Pulls every blade onto himself so the rear may work.,TRUE,Unit
+UN_TEMPLAR_NAME,성전 기사단장,Knight Templar,TRUE,Unit
+UN_TEMPLAR_DESC,전장 전체를 한 번에 심판하는 최종 영웅.,"The final hero, judging the whole field at once.",TRUE,Unit
+UN_SLIME_NAME,슬라임,Slime,TRUE,Unit
+UN_SLIME_DESC,방어구를 갉아먹는 성가신 존재.,A crawling nuisance that eats through armor.,TRUE,Unit
+UN_BAT_NAME,박쥐,Bat,TRUE,Unit
+UN_BAT_DESC,후열에서 울어 아군의 박자를 흐트러뜨린다.,Screeches from the rear to dull your tempo.,TRUE,Unit
+UN_SKELETON_NAME,해골,Skeleton,TRUE,Unit
+UN_SKELETON_DESC,좀처럼 눕지 않는 뼈다귀.,Bones that refuse to stay down.,TRUE,Unit
+UN_SKELARCHER_NAME,해골 궁수,Skeleton Archer,TRUE,Unit
+UN_SKELARCHER_DESC,전열 너머 후열로 독을 넘긴다.,Arcs venom over the front line into your rear.,TRUE,Unit
+UN_ORC_NAME,오크,Orc,TRUE,Unit
+UN_ORC_DESC,싸우는 도중 스스로 격앙된다.,Works itself into a frenzy mid-fight.,TRUE,Unit
+UN_WEREWOLF_NAME,늑대인간,Werewolf,TRUE,Unit
+UN_WEREWOLF_DESC,전열 너머 약해진 것을 찾아 문다.,Reaches past the front for whatever is bleeding.,TRUE,Unit
+UN_ARMSKEL_NAME,중장 해골,Armored Skeleton,TRUE,Unit
+UN_ARMSKEL_DESC,강철을 튕겨내는 갑주 해골.,Plated bones that shrug steel aside.,TRUE,Unit
+UN_GSSKEL_NAME,대검 해골,Greatsword Skeleton,TRUE,Unit
+UN_GSSKEL_DESC,한 번의 휘두름이 두 열을 관통한다.,One swing carries through two ranks.,TRUE,Unit
+UN_ORCRIDER_NAME,오크 기수,Orc rider,TRUE,Unit
+UN_ORCRIDER_DESC,벽을 무시하고 후열을 직격한다.,Ignores the wall entirely and hits the back.,TRUE,Unit
+UN_ARMORC_NAME,중장 오크,Armored Orc,TRUE,Unit
+UN_ARMORC_DESC,모든 공격을 자신에게 요구한다.,Demands every attack for himself.,TRUE,Unit
+UN_WEREBEAR_NAME,곰인간,Werebear,TRUE,Unit
+UN_WEREBEAR_DESC,먹잇감이 멎을 때까지 붙든다.,Holds its prey still until it stops moving.,TRUE,Unit
+UN_NECRO_NAME,네크로맨서,Necromancer,TRUE,Unit
+UN_NECRO_DESC,빈자리를 죽은 자로 채운다.,Fills the empty slots with borrowed dead.,TRUE,Unit
+UN_ELITEORC_NAME,정예 오크,Elite Orc,TRUE,Unit
+UN_ELITEORC_DESC,일격이 전장에 닿는 전쟁군주.,The warlord whose swing reaches the whole field.,TRUE,Unit
+STATUS_STUN_NAME,기절,Stun,TRUE,Status
+STATUS_STUN_DESC,아무 행동도 할 수 없다. 시전 중이던 스킬은 취소된다.,"Cannot act at all. Attacks and casts stop, and any cast in progress is lost.",TRUE,Status
+STATUS_SILENCE_NAME,침묵,Silence,TRUE,Status
+STATUS_SILENCE_DESC,액티브 스킬을 쓸 수 없다. 기본 공격은 계속한다.,"Active skills are locked, but basic attacks continue.",TRUE,Status
+STATUS_TAUNT_NAME,도발,Taunt,TRUE,Status
+STATUS_TAUNT_DESC,공격 대상을 시전자로 고정한다. 도달 범위 밖이면 무효가 된다.,"Forces attacks onto the caster, but only while the caster stays in reach.",TRUE,Status
+STATUS_SLOW_ATK_NAME,둔화,Slow,TRUE,Status
+STATUS_SLOW_ATK_DESC,공격 속도를 스택당 30% 낮춘다. 최대 2스택.,"Cuts attack speed by 30% per stack, up to two stacks.",TRUE,Status
+STATUS_HASTE_NAME,가속,Haste,TRUE,Status
+STATUS_HASTE_DESC,공격 속도를 스택당 30% 높인다.,Raises attack speed by 30% per stack.,TRUE,Status
+STATUS_DEF_DOWN_NAME,방어 약화,Defense Down,TRUE,Status
+STATUS_DEF_DOWN_DESC,스택마다 방어력을 30%씩 깎는다. 최대 3스택.,"Strips 30% of defense per stack, stacking three times.",TRUE,Status
+STATUS_MDF_DOWN_NAME,마법 저항 약화,Resist Down,TRUE,Status
+STATUS_MDF_DOWN_DESC,스택마다 마법 저항을 30%씩 깎는다. 최대 3스택.,"Strips 30% of magic resistance per stack, stacking three times.",TRUE,Status
+STATUS_STR_UP_NAME,격노,Fury,TRUE,Status
+STATUS_STR_UP_DESC,힘이 30% 오른다.,Raises STR by 30%.,TRUE,Status
+STATUS_GUARD_UP_NAME,수호,Guard,TRUE,Status
+STATUS_GUARD_UP_DESC,물리·마법 방어가 50% 오른다.,Raises both defenses by 50%.,TRUE,Status
+STATUS_PHYS_WARD_NAME,방어 태세,Physical Ward,TRUE,Status
+STATUS_PHYS_WARD_DESC,받는 물리 피해가 절반이 된다.,Halves incoming physical damage.,TRUE,Status
+STATUS_SHIELD_NAME,보호막,Shield,TRUE,Status
+STATUS_SHIELD_DESC,체력보다 먼저 피해를 흡수한다. 시전자의 마력에 비례한다.,"Absorbs damage before HP, scaled by the caster's MAG.",TRUE,Status
+STATUS_POISON_NAME,중독,Poison,TRUE,Status
+STATUS_POISON_DESC,1초마다 방어를 무시하는 피해를 준다.,Deals defense-ignoring damage every second.,TRUE,Status
+STATUS_BURN_NAME,화상,Burn,TRUE,Status
+STATUS_BURN_DESC,1초마다 마법 피해를 준다.,Burns for magic damage every second.,TRUE,Status
+STATUS_BLEED_NAME,출혈,Bleed,TRUE,Status
+STATUS_BLEED_DESC,1초마다 물리 피해를 준다.,Bleeds for physical damage every second.,TRUE,Status
+STATUS_REGEN_NAME,재생,Regeneration,TRUE,Status
+STATUS_REGEN_DESC,1초마다 체력을 회복한다.,Restores HP every second.,TRUE,Status
+STATUS_LIFESTEAL_NAME,흡혈,Lifesteal,TRUE,Status
+STATUS_LIFESTEAL_DESC,가한 피해의 절반을 회복한다.,Restores half of the damage dealt.,TRUE,Status
+STATUS_ROOT_NAME,속박,Root,TRUE,Status
+STATUS_ROOT_DESC,강제 이동 효과를 무효화한다.,Nullifies forced repositioning.,TRUE,Status
+STATUS_INVULN_NAME,무적,Invulnerable,TRUE,Status
+STATUS_INVULN_DESC,모든 피해를 무효화한다.,Nullifies all damage.,TRUE,Status
+SKILL_BASIC_MELEE_NAME,기본 공격(근접),Basic Attack (Melee),TRUE,Skill
+SKILL_BASIC_MELEE_DESC,제자리에서 유효 최전열의 적을 공격한다.,Strikes the foremost living enemy from its post.,TRUE,Skill
+SKILL_BASIC_RANGED_NAME,기본 공격(원거리),Basic Attack (Ranged),TRUE,Skill
+SKILL_BASIC_RANGED_DESC,모든 열에 도달하며 기본적으로 앞의 적을 노린다.,"Reaches every column, defaulting to the nearest enemy.",TRUE,Skill
+SKILL_BASIC_MAGIC_NAME,기본 공격(마법),Basic Attack (Magic),TRUE,Skill
+SKILL_BASIC_MAGIC_DESC,모든 열에 도달하는 마법 탄을 날린다.,Hurls a bolt that reaches any column.,TRUE,Skill
+SKILL_SOLDIER_01_NAME,방패 타격,Shield Bash,TRUE,Skill
+SKILL_SOLDIER_01_DESC,최전열의 적을 후려쳐 1초간 기절시킨다.,Slams a front enemy and stuns it for 1 second.,TRUE,Skill
+SKILL_ARCHER_01_NAME,연사,Rapid Shot,TRUE,Skill
+SKILL_ARCHER_01_DESC,화살 2발을 연달아 쏜다. 각 발이 따로 판정된다.,"Looses two arrows, each rolling its own checks.",TRUE,Skill
+SKILL_SWORDSMAN_01_NAME,회전 베기,Whirlwind Slash,TRUE,Skill
+SKILL_SWORDSMAN_01_DESC,최전열 세로 3칸을 한 번에 베어낸다.,Sweeps up to three vertical slots of the front column.,TRUE,Skill
+SKILL_LANCER_01_NAME,관통 찌르기,Piercing Thrust,TRUE,Skill
+SKILL_LANCER_01_DESC,같은 행의 적 3명을 앞에서부터 꿰뚫는다.,Skewers up to three enemies along one row.,TRUE,Skill
+SKILL_PRIEST_01_NAME,치유의 빛,Healing Light,TRUE,Skill
+SKILL_PRIEST_01_DESC,가장 약한 아군을 회복시키고 재생을 남긴다.,Heals the weakest ally and leaves a regeneration.,TRUE,Skill
+SKILL_AXEMAN_01_NAME,지진격,Earthshaker,TRUE,Skill
+SKILL_AXEMAN_01_DESC,전열 세로 3칸에 피해를 주고 둔화시킨다.,"Cracks the front column, damaging and slowing it.",TRUE,Skill
+SKILL_WIZARD_01_NAME,파이어볼,Fireball,TRUE,Skill
+SKILL_WIZARD_01_DESC,어느 열이든 폭발시켜 세로 3칸을 태운다.,"Detonates on any column, scorching three slots.",TRUE,Skill
+SKILL_KNIGHT_01_NAME,성스러운 방벽,Holy Bulwark,TRUE,Skill
+SKILL_KNIGHT_01_DESC,방어력을 올리고 도달 가능한 적을 모두 끌어당긴다.,Raises defenses and pulls every enemy in reach.,TRUE,Skill
+SKILL_TEMPLAR_01_NAME,단죄의 검,Sword of Condemnation,TRUE,Skill
+SKILL_TEMPLAR_01_DESC,적 전체를 심판하고 30% 이하를 즉사시킨다.,"Judges every enemy, executing those left below 30%.",TRUE,Skill
+SKILL_SLIME_01_NAME,산성 침,Acid Spit,TRUE,Skill
+SKILL_SLIME_01_DESC,산성 침을 뱉어 방어력을 깎는다.,Spits acid that shreds defense.,TRUE,Skill
+SKILL_BAT_01_NAME,초음파,Sonic Screech,TRUE,Skill
+SKILL_BAT_01_DESC,피해 없이 아군 하나의 속도를 늦춘다.,Slows one random ally without dealing damage.,TRUE,Skill
+SKILL_SKELETON_01_NAME,뼈 던지기,Bone Throw,TRUE,Skill
+SKILL_SKELETON_01_DESC,전열 너머로 뼈를 던진다.,Lobs a bone over the front line.,TRUE,Skill
+SKILL_SKELARCHER_01_NAME,독화살,Poison Arrow,TRUE,Skill
+SKILL_SKELARCHER_01_DESC,후열을 겨냥해 쏘고 중독시킨다.,Targets the back column and poisons it.,TRUE,Skill
+SKILL_ORC_01_NAME,분노의 함성,Rage Roar,TRUE,Skill
+SKILL_ORC_01_DESC,포효로 자신의 공격력을 끌어올린다.,Roars to boost its own attack power.,TRUE,Skill
+SKILL_WEREWOLF_01_NAME,흡혈 이빨,Bloodfang,TRUE,Skill
+SKILL_WEREWOLF_01_DESC,가장 약해진 적을 물고 절반을 회복한다.,Bites the weakest reachable enemy and drinks back half.,TRUE,Skill
+SKILL_ARMSKEL_01_NAME,방어 태세,Defensive Stance,TRUE,Skill
+SKILL_ARMSKEL_01_DESC,받는 물리 피해를 절반으로 줄인다.,Halves incoming physical damage.,TRUE,Skill
+SKILL_GSSKEL_01_NAME,내려찍기,Cleave,TRUE,Skill
+SKILL_GSSKEL_01_DESC,같은 행의 두 명을 함께 갈라버린다.,Brings the greatsword down through two enemies.,TRUE,Skill
+SKILL_ORCRIDER_01_NAME,돌진,Charge,TRUE,Skill
+SKILL_ORCRIDER_01_DESC,전열을 무시하고 후열을 짓밟은 뒤 돌아온다.,Tramples past the front line and returns.,TRUE,Skill
+SKILL_ARMORC_01_NAME,도발,Provoke,TRUE,Skill
+SKILL_ARMORC_01_DESC,아군 전체가 자신을 공격하게 만든다.,Forces every ally to attack it.,TRUE,Skill
+SKILL_WEREBEAR_01_NAME,곰의 포옹,Bear Hug,TRUE,Skill
+SKILL_WEREBEAR_01_DESC,앞의 적을 2초간 짓눌러 붙든다.,Crushes a front enemy for 2 seconds.,TRUE,Skill
+SKILL_NECRO_01_NAME,사령 소환,Raise Dead,TRUE,Skill
+SKILL_NECRO_01_DESC,빈 슬롯에 해골 2기를 세운다.,Raises two skeletons in empty slots.,TRUE,Skill
+SKILL_ELITEORC_01_NAME,대지 강타,Earth Smash,TRUE,Skill
+SKILL_ELITEORC_01_DESC,대지를 내리쳐 아군 전체를 강타하고 기절시킨다.,"Shatters the ground, damaging and stunning all allies.",TRUE,Skill
+SKILL_SUMMON_SKELETON_NAME,소환된 언데드,Summoned Undead,TRUE,Skill
+SKILL_SUMMON_SKELETON_DESC,소환된 존재는 본래 힘의 70%만 지닌다.,A summoned body carries only 70% of its strength.,TRUE,Skill
+RL_SHARP_BLADE_NAME,예리한 칼날,Sharp Blade,TRUE,Relic
+RL_SHARP_BLADE_DESC,모든 아군의 공격이 무거워진다.,Every ally swings harder.,TRUE,Relic
+RL_TOWER_SHIELD_NAME,탑 실드,Tower Shield,TRUE,Relic
+RL_TOWER_SHIELD_DESC,전열이 두 배로 버틴다.,The front rank holds twice as long.,TRUE,Relic
+RL_IRON_HEART_NAME,강철 심장,Iron Heart,TRUE,Relic
+RL_IRON_HEART_DESC,모두가 더 오래 버틴다.,Everyone endures more.,TRUE,Relic
+RL_HOURGLASS_NAME,금 간 모래시계,Cracked Hourglass,TRUE,Relic
+RL_HOURGLASS_DESC,스킬이 더 빨리 돌아온다.,Skills come around faster.,TRUE,Relic
+RL_GAMBLER_COIN_NAME,도박사의 동전,Gambler's Coin,TRUE,Relic
+RL_GAMBLER_COIN_DESC,더 크게 때리고 더 크게 맞는다.,"Bigger hits, thinner guard.",TRUE,Relic
+RL_BLOODSTONE_NAME,피의 결정,Bloodstone,TRUE,Relic
+RL_BLOODSTONE_DESC,가한 피해가 자신을 되살린다.,Damage feeds the wielder.,TRUE,Relic
+RL_VENOM_FLASK_NAME,맹독 플라스크,Venom Flask,TRUE,Relic
+RL_VENOM_FLASK_DESC,기본 공격이 곪기 시작한다.,Basic attacks start to fester.,TRUE,Relic
+RL_EMBER_CORE_NAME,잔불의 핵,Ember Core,TRUE,Relic
+RL_EMBER_CORE_DESC,"불이 더 오래, 더 뜨겁게 남는다.",Fire lingers longer and hotter.,TRUE,Relic
+RL_WARHORN_NAME,전쟁 나팔,War Horn,TRUE,Relic
+RL_WARHORN_DESC,전투의 첫 순간은 아군의 것이다.,The opening seconds belong to you.,TRUE,Relic
+RL_SANCTUARY_NAME,성역의 조각,Sanctuary Shard,TRUE,Relic
+RL_SANCTUARY_DESC,모든 치유가 더 멀리 간다.,Every mending goes further.,TRUE,Relic
+RL_EXECUTIONER_NAME,처형인의 인장,Executioner's Seal,TRUE,Relic
+RL_EXECUTIONER_DESC,상처 입은 먹이는 도망치지 못한다.,Wounded prey does not escape.,TRUE,Relic
+RL_DICE_CHARM_NAME,납덩이 부적,Loaded Charm,TRUE,Relic
+RL_DICE_CHARM_DESC,주사위가 이쪽으로 기운다.,The dice lean your way.,TRUE,Relic
+PK_EXTRA_ROLL_NAME,여분의 손,Extra Hand,TRUE,Perk
+PK_EXTRA_ROLL_DESC,주사위를 고칠 기회가 한 번 더.,One more chance to fix the dice.,TRUE,Perk
+PK_SIXTH_DIE_NAME,여섯 번째 주사위,Sixth Die,TRUE,Perk
+PK_SIXTH_DIE_DESC,판 위에 주사위 하나가 더 오른다.,A whole extra die on the table.,TRUE,Perk
+PK_LUCKY_HAND_NAME,행운의 패,Lucky Hand,TRUE,Perk
+PK_LUCKY_HAND_DESC,때때로 족보가 저 혼자 올라간다.,Sometimes the hand climbs on its own.,TRUE,Perk
+PK_ALCHEMIST_NAME,연금술사,Alchemist,TRUE,Perk
+PK_ALCHEMIST_DESC,재료가 더 자주 떨어진다.,Materials fall more often.,TRUE,Perk
+PK_DEPLOY_EXPAND_NAME,증원 요청,Reinforcements,TRUE,Perk
+PK_DEPLOY_EXPAND_DESC,전장에 한 명이 더 선다.,One more body on the field.,TRUE,Perk
+PK_BENCH_EXPAND_NAME,확장된 대기석,Wider Bench,TRUE,Perk
+PK_BENCH_EXPAND_DESC,융합 전에 쌓아둘 자리가 늘어난다.,More room to hold before fusing.,TRUE,Perk
+PK_FUSION_MASTER_NAME,융합술사,Fusion Master,TRUE,Perk
+PK_FUSION_MASTER_DESC,융합된 영웅이 더 강하게 나온다.,Fused heroes come out stronger.,TRUE,Perk
+PK_MERCHANT_NAME,상인 인맥,Merchant Contact,TRUE,Perk
+PK_MERCHANT_DESC,모든 것이 싸진다.,Everything costs less.,TRUE,Perk
+PK_SCAVENGER_NAME,수집가,Scavenger,TRUE,Perk
+PK_SCAVENGER_DESC,웨이브 보상이 늘어난다.,Clearing waves pays better.,TRUE,Perk
+PK_INSURANCE_NAME,마지막 유언,Last Will,TRUE,Perk
+PK_INSURANCE_DESC,한 번의 패배는 끝이 아니다.,One defeat is not the end.,TRUE,Perk
+SVC_HEAL_NAME,야전 치료,Field Medic,TRUE,Shop
+SVC_HEAL_DESC,모든 유닛의 체력을 절반 회복한다.,Restores half the health of every unit.,TRUE,Shop
+SVC_REROLL_UNIT_NAME,인력 교체,Recruit Swap,TRUE,Shop
+SVC_REROLL_UNIT_DESC,대기석 유닛 하나를 같은 등급의 다른 유닛으로 바꾼다.,Trades one benched unit for another of equal grade.,TRUE,Shop
+UI_TITLE,야추 다이스 & 퓨전 디펜스,Yacht Dice & Fusion Defense,TRUE,UI
+UI_ROLL,굴리기,Roll,TRUE,UI
+UI_REROLL,다시 굴리기,Re-roll,TRUE,UI
+UI_HOLD,킵,Hold,TRUE,UI
+UI_ROLL_LEFT,남은 횟수: {0},Rolls Left: {0},TRUE,UI
+UI_FUSION,융합,Fusion,TRUE,UI
+UI_BENCH,대기석,Bench,TRUE,UI
+UI_DEPLOY,배치,Deploy,TRUE,UI
+UI_BATTLE_START,전투 시작,Battle Start,TRUE,UI
+UI_WAVE,웨이브 {0},Wave {0},TRUE,UI
+UI_GOLD,골드,Gold,TRUE,UI
+UI_VICTORY,승리,Victory,TRUE,UI
+UI_DEFEAT,패배,Defeat,TRUE,UI
+UI_MISS,빗나감,MISS,TRUE,UI
+UI_CRITICAL,치명타!,CRITICAL!,TRUE,UI
+UI_IMMUNE,저항,RESIST,TRUE,UI
+UI_COOLDOWN,재사용 대기시간,Cooldown,TRUE,UI
+UI_FRONT_ROW,전열,Front Row,TRUE,UI
+UI_BACK_ROW,후열,Back Row,TRUE,UI
+UI_SLOT_EMPTY,빈 슬롯,Empty Slot,TRUE,UI
+UI_SLOT_LOCKED,잠긴 슬롯,Locked Slot,TRUE,UI
+UI_REACH,도달 {0}열,Reach {0},TRUE,UI
+UI_OUT_OF_REACH,도달할 수 없음,Out of reach,TRUE,UI
+UI_DEPLOY_FULL,배치 가능 인원을 초과했습니다 ({0}명).,Deployment limit reached ({0}).,TRUE,UI
+UI_MELEE_WARNING,근접 유닛은 후열에서 적에게 닿지 않습니다.,Melee units cannot reach from the back row.,TRUE,UI
+UI_SHOP,상점,Shop,TRUE,UI
+UI_SHOP_REROLL,상품 교체 ({0}골드),Re-roll Stock ({0}g),TRUE,UI
+UI_RELIC,유물,Relic,TRUE,UI
+UI_PERK,퍽,Perk,TRUE,UI
+UI_SOLD_OUT,품절,Sold Out,TRUE,UI
+UI_NOT_ENOUGH_GOLD,골드가 부족합니다.,Not enough gold.,TRUE,UI
+UI_RELIC_FULL,유물 슬롯이 가득 찼습니다 ({0}개).,Relic slots are full ({0}).,TRUE,UI
+UI_PERK_MAX,이미 최대 레벨입니다.,Already at max level.,TRUE,UI
+UI_NEXT_SCENE,다이스 룸으로,To Dice Room,TRUE,UI

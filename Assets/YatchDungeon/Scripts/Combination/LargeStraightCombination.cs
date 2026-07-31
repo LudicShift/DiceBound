@@ -5,7 +5,7 @@ namespace YatchDungeon
 {
     public class LargeStraightCombination : CombinationBase
     {
-        public LargeStraightCombination(int priority) : base(priority)
+        public LargeStraightCombination(CombinationDataTableRow priority) : base(priority)
         {
         }
 
@@ -25,10 +25,6 @@ namespace YatchDungeon
             }
             return false;
         }
-
-        public override string GetName()
-        {
-            return "Large Straight";
-        }
+        
     }
 }

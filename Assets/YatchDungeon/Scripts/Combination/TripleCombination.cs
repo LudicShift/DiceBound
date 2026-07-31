@@ -5,7 +5,7 @@ namespace YatchDungeon
 {
     public class TripleCombination : CombinationBase
     {
-        public TripleCombination(int priority) : base(priority)
+        public TripleCombination(CombinationDataTableRow priority) : base(priority)
         {
             
         }
@@ -34,10 +34,6 @@ namespace YatchDungeon
             }
             return false;
         }
-
-        public override string GetName()
-        {
-            return "Triple";
-        }
+        
     }
 }

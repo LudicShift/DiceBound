@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43b5b6cfd4ac2d842b3f23b05bff445d, type: 3}
+  m_Name: PrefabManager
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.PrefabManager
+  prefabs: []
+  initialSpawnPrefabs:
+  - {fileID: 6327262114061444259, guid: 99382c5606fb97d438f5f9eff0421582, type: 3}

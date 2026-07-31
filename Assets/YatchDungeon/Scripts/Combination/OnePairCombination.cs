@@ -5,7 +5,7 @@ namespace YatchDungeon
 {
     public class OnePairCombination:CombinationBase
     {
-        public OnePairCombination(int priority) : base(priority)
+        public OnePairCombination(CombinationDataTableRow priority) : base(priority)
         {
         }
 
@@ -34,10 +34,6 @@ namespace YatchDungeon
             }
             return pairCount == 1;
         }
-
-        public override string GetName()
-        {
-            return "One Pair";
-        }
+        
     }
 }

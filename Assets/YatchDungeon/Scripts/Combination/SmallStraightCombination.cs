@@ -5,7 +5,7 @@ namespace YatchDungeon
 {
     public class SmallStraightCombination : CombinationBase
     {
-        public SmallStraightCombination(int priority) : base(priority)
+        public SmallStraightCombination(CombinationDataTableRow priority) : base(priority)
         {
         }
 
@@ -30,10 +30,6 @@ namespace YatchDungeon
             }
             return false;
         }
-
-        public override string GetName()
-        {
-            return "Small Straight";
-        }
+        
     }
 }
