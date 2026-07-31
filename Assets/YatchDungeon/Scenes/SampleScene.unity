@@ -326,8 +326,8 @@ CanvasGroup:
   m_GameObject: {fileID: 135035499}
   m_Enabled: 1
   m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &135035503
 MonoBehaviour:
@@ -427,8 +427,8 @@ CanvasGroup:
   m_GameObject: {fileID: 249850833}
   m_Enabled: 1
   m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &249850837
 MonoBehaviour:
@@ -1433,7 +1433,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &414376882
@@ -1699,6 +1699,13 @@ MonoBehaviour:
   - {fileID: 1006403438, guid: 85e083b0437827f4cb662652e914a7e4, type: 3}
   - {fileID: -1902253850, guid: 85e083b0437827f4cb662652e914a7e4, type: 3}
   - {fileID: 1702158697, guid: 85e083b0437827f4cb662652e914a7e4, type: 3}
+  diceAnimationSprite:
+  - {fileID: 833219917, guid: 85e083b0437827f4cb662652e914a7e4, type: 3}
+  - {fileID: -1713674779, guid: 85e083b0437827f4cb662652e914a7e4, type: 3}
+  - {fileID: 503941824, guid: 85e083b0437827f4cb662652e914a7e4, type: 3}
+  - {fileID: 1004653434, guid: 85e083b0437827f4cb662652e914a7e4, type: 3}
+  - {fileID: 322781945, guid: 85e083b0437827f4cb662652e914a7e4, type: 3}
+  - {fileID: 429611566, guid: 85e083b0437827f4cb662652e914a7e4, type: 3}
 --- !u!114 &504579073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1823,8 +1830,8 @@ CanvasGroup:
   m_GameObject: {fileID: 622540794}
   m_Enabled: 1
   m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &622540798
 MonoBehaviour:
@@ -2198,7 +2205,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &764752921
@@ -2420,8 +2427,8 @@ CanvasGroup:
   m_GameObject: {fileID: 839275562}
   m_Enabled: 1
   m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &839275566
 MonoBehaviour:
@@ -3794,8 +3801,8 @@ CanvasGroup:
   m_GameObject: {fileID: 1540922687}
   m_Enabled: 1
   m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &1540922691
 MonoBehaviour:
@@ -4481,7 +4488,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1895465664

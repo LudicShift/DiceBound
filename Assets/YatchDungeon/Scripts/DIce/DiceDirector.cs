@@ -33,6 +33,7 @@ namespace YatchDungeon
         private List<DiceKeepPointWidget> _keepPoints;
         private List<DiceRemainPointWidget> _remainPoints;
         [SerializeField] private List<Sprite> diceSprite;
+        [SerializeField] private List<Sprite> diceAnimationSprite;
 
 
         public void ShowCanvas()
@@ -58,8 +59,8 @@ namespace YatchDungeon
         public void Setup()
         {
             _remainRollCount = 3;
-            ResetDice();
-            Roll();
+            StartCoroutine(ResetDice());
+           
         }
         
         public void Roll()
@@ -91,7 +92,7 @@ namespace YatchDungeon
         
         
 
-        private void ResetDice()
+        private IEnumerator ResetDice()
         {
             if (_keepDices.Count > 0)
             {
@@ -105,10 +106,13 @@ namespace YatchDungeon
             {
                 _remainPoints[i].SetDice(_remainDices[i]);
                 _remainDices[i].Warp(initialDicePoint.position);
-                _remainDices[i].MoveTo(_remainPoints[i].transform.position);
+             _remainDices[i].MoveTo(_remainPoints[i].transform.position);
             }
-            
+
+            yield return new WaitForSeconds(1.0f);
             _keepDices.Clear();
+            
+            Roll();
         }
 
         public override IEnumerator OnInitialize()
@@ -122,6 +126,7 @@ namespace YatchDungeon
             {
                 dice.onPointerClickCallback += _ => OnDiceClick(dice);
                 dice.spriteGetter = GetDiceSprite;
+                dice.animationSpriteGetter = GetDiceAnimationSprite;
             }
             
             _showFieldButton.AddOnClickAction(OnShowFieldButtonClick);
@@ -140,6 +145,11 @@ namespace YatchDungeon
             _combinations = combinationList.ToArray();
             
             yield return null;
+        }
+
+        private Sprite GetDiceAnimationSprite(int index)
+        {
+            return diceAnimationSprite[index % 6];
         }
 
         private Sprite GetDiceSprite(int index)
