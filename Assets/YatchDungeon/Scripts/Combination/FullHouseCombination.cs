@@ -43,7 +43,7 @@ namespace YatchDungeon
 
         public override string GetName()
         {
-            return "Combination";
+            return "Full House";
         }
     }
 }
