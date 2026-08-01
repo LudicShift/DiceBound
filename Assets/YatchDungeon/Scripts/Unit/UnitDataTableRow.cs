@@ -2,8 +2,23 @@
 
 namespace YatchDungeon
 {
+    public enum UnitAttackType
+    {
+        Melee,
+        Ranged,
+        Magic
+    }
+
+    public enum UnitGroup
+    {
+        Ally,
+        Enemy
+    }
+    
     public class UnitDataTableRow : DataTableRowBase
     {
+        public UnitGroup group;
+        public UnitAttackType attackType;
         public string nameKey;
         public string descKey;
         public string roleKey;

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using KCoreKit;
@@ -16,6 +17,7 @@ namespace YatchDungeon
         private Vector3 _dragOffset;
         private Camera _camera;
         [SerializeField] private UnitPlaceGrid allyPlaceGrid;
+        [SerializeField] private UnitPlaceGrid enemyPlaceGrid;
 
         public override IEnumerator OnInitialize()
         {
@@ -39,6 +41,7 @@ namespace YatchDungeon
                         unit.MoveTo(_restoreCell.transform.position);
                         _restoreCell.PushUnit(unit);
                     }
+
                     _draggingUnit.Warp(_hoveredCell.transform.position);
                     _hoveredCell.PushUnit(_draggingUnit);
                 }
@@ -47,7 +50,7 @@ namespace YatchDungeon
                     _draggingUnit.MoveTo(_restoreCell.transform.position);
                     _restoreCell.PushUnit(_draggingUnit);
                 }
-                
+
                 _restoreCell = null;
                 _draggingUnit = null;
                 _dragOffset = Vector3.zero;
@@ -71,16 +74,6 @@ namespace YatchDungeon
             }
         }
 
-        public void SpawnAllyUnit(string unitId)
-        {
-            var data = _unitDataMap[unitId];
-            var instance = Instantiate(data.prefab);
-            instance.Setup(data);
-
-            var cell = allyPlaceGrid.GetRandomEmptyCell();
-            instance.MoveTo(cell.transform.position);
-            cell.PushUnit(instance);
-        }
 
         public void Update()
         {
@@ -137,6 +130,33 @@ namespace YatchDungeon
 
                 _hoveredCell = null;
             }
+        }
+
+        public void SpawnUnit(string unitId)
+        {
+            var data = _unitDataMap[unitId];
+            var instance = Instantiate(data.prefab);
+            instance.Setup(data);
+
+            var cell = PickSpawnCell(data);
+            instance.MoveTo(cell.transform.position);
+            cell.PushUnit(instance);
+        }
+
+        private UnitPlaceCell PickSpawnCell(UnitDataTableRow data)
+        {
+            UnitPlaceGrid grid = null;
+            switch (data.group)
+            {
+                case UnitGroup.Ally:
+                    grid = allyPlaceGrid;
+                    break;
+                case UnitGroup.Enemy:
+                    grid = enemyPlaceGrid;
+                    break;
+            }
+
+            return grid.GetRandomEmptyCell(data.attackType);
         }
     }
 }

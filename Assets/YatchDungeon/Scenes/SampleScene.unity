@@ -2374,6 +2374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDirector
   allyPlaceGrid: {fileID: 1535455968}
+  enemyPlaceGrid: {fileID: 1092675209}
 --- !u!1001 &517283839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4128,7 +4129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitPlaceGrid
   columnCount: 4
   spacing: {x: 10, y: 5}
-  reverseIndexing: 0
+  reverseIndexing: 1
 --- !u!1001 &1102618053
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5407,7 +5408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitPlaceGrid
   columnCount: 4
   spacing: {x: 10, y: 5}
-  reverseIndexing: 1
+  reverseIndexing: 0
 --- !u!1 &1540922687
 GameObject:
   m_ObjectHideFlags: 0
@@ -6257,7 +6258,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Five of a kind
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 833bd7407d13e384cbb50a212dc49465, type: 2}
   m_sharedMaterial: {fileID: -6105743587192656677, guid: 833bd7407d13e384cbb50a212dc49465, type: 2}

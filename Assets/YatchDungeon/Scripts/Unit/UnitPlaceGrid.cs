@@ -24,26 +24,49 @@ namespace YatchDungeon
             }
 
             int count = 0;
+            int rowCount = _cells.Count / columnCount;
             while (_cells.Count > count)
             {
-                _cells[count].transform.localPosition = new Vector3((int)(count / columnCount) * spacing.x,
+                int currentRow = count / columnCount;
+                _cells[count].transform.localPosition = new Vector3(currentRow * spacing.x,
                     (count % columnCount) * spacing.y);
-                if (reverseIndexing)
+                if (!reverseIndexing)
                 {
-                    _cells[count].Setup((_cells.Count/columnCount)-(count / columnCount)-1);
+                    _cells[count].Setup(Mathf.Lerp(0, 1, (rowCount - currentRow - 1) / (float)(rowCount-1)));
                 }
                 else
                 {
-                    _cells[count].Setup((count / columnCount));
+                    _cells[count].Setup(Mathf.Lerp(0, 1, currentRow / (float)(rowCount-1)));
                 }
 
                 count++;
             }
         }
 
-        public UnitPlaceCell GetRandomEmptyCell()
+        public UnitPlaceCell GetRandomEmptyCell(UnitAttackType attackType)
         {
-            var emptyCells = _cells.FindAll(x=>x.IsEmpty());
+            switch (attackType)
+            {
+                case UnitAttackType.Melee:
+                    var nearCells = _cells.FindAll(x => x.IsEmpty() && x.distance <= 0.5f);
+                    if (nearCells.Count > 0)
+                    {
+                        return nearCells.GetRandomElement();
+                    }
+
+                    break;
+                case UnitAttackType.Ranged:
+                case UnitAttackType.Magic:
+                    var farCells = _cells.FindAll(x => x.IsEmpty() && x.distance > 0.5f);
+                    if (farCells.Count > 0)
+                    {
+                        return farCells.GetRandomElement();
+                    }
+
+                    break;
+            }
+
+            var emptyCells = _cells.FindAll(x => x.IsEmpty());
             return emptyCells.GetRandomElement();
         }
     }

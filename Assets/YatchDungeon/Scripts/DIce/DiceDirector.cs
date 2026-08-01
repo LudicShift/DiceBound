@@ -266,7 +266,7 @@ namespace YatchDungeon
             var allDices = _remainDices.Concat(_keepDices).ToList();
             var combinationContext = new CombinationContext(allDices);
             var combination = Evaluate(combinationContext);
-            _unitDirector.SpawnAllyUnit(combination.GetUnitID());
+            _unitDirector.SpawnUnit(combination.GetUnitID());
             HideCanvas();
         }
 

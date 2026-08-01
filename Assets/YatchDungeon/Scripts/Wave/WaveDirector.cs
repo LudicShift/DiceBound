@@ -1,0 +1,65 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using KCoreKit;
+using UnityEngine;
+
+namespace YatchDungeon
+{
+    public class WaveDirector : DirectorBase
+    {
+        private  Dictionary<int,WaveDataTableRow> _waveList;
+        private Dictionary<int,List<WaveEnemyPoolDataTableRow>> _wavePoolList;
+
+        [SerializeField] private ButtonWidget playWaveButtonWidget;
+
+        private int _currentWave;
+
+        [SerializeField] private UnitPlaceGrid enemyPlaceGrid;
+
+
+        private UnitDirector _unitDirector;
+
+        public override IEnumerator OnInitialize()
+        {
+            _unitDirector = DirectorFacade.GetSubMode<UnitDirector>();
+            playWaveButtonWidget.AddOnClickAction(OnPlayWaveButtonClick);
+            _waveList = DataTableManager.FindAllRows<WaveDataTableRow>().ToDictionary(x=>x.index);
+            _wavePoolList = DataTableManager.FindAllRows<WaveEnemyPoolDataTableRow>().GroupBy(x=>x.index).ToDictionary(x=>x.Key, x=>x.ToList());
+            yield return null;
+        }
+
+        private void OnPlayWaveButtonClick()
+        {
+            PlayWave(_currentWave);
+            _currentWave++;
+        }
+
+        public void PlayWave(int index)
+        {
+            var wave = _waveList[index];
+            int enemyCount = 0;
+            while (enemyCount < wave.numberOfEnemy)
+            {
+                _unitDirector.SpawnUnit(PickEnemy(wave.index));
+            }
+        }
+        
+        private string PickEnemy(int waveIndex)
+        {
+            var enemyPool = _wavePoolList[waveIndex];
+            float sum = enemyPool.Sum(x => x.encounterWeight);
+            float randomValue = Random.Range(0f, sum);
+            float accum = 0f;
+            for (int i = 0; i < enemyPool.Count; i++)
+            {
+                accum+=  enemyPool[i].encounterWeight;
+                if (accum >= randomValue)
+                {
+                    return enemyPool[i].enemyId;
+                }
+            }
+            throw new System.NotSupportedException();
+        }
+    }
+}

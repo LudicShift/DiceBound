@@ -6,7 +6,7 @@ namespace YatchDungeon
     public class UnitPlaceCell : MonoBehaviour
     {
         private UnitCore _unit;
-        public int row;
+        public float distance;
         private SpriteRenderer _spriteRenderer;
 
         public void Awake()
@@ -41,9 +41,9 @@ namespace YatchDungeon
             return unit;
         }
 
-        public void Setup(int row)
+        public void Setup(float distance)
         {
-            this.row = row;
+            this.distance = distance;
         }
     }
 }
