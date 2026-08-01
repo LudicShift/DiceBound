@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8895729150409449025
+--- !u!114 &-9219235315163477944
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15,9 +15,60 @@ MonoBehaviour:
   id: 
   tags: []
   isEnable: 1
-  index: 1
-  numberOfEnemy: 3
---- !u!114 &-8190476759503181765
+  index: 26
+  numberOfEnemy: 10
+--- !u!114 &-8376471047345615620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 21
+  numberOfEnemy: 8
+--- !u!114 &-6859154697890640503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 14
+  numberOfEnemy: 7
+--- !u!114 &-6737064575717101754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 28
+  numberOfEnemy: 11
+--- !u!114 &-6663386100537928011
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -34,7 +85,7 @@ MonoBehaviour:
   isEnable: 1
   index: 0
   numberOfEnemy: 3
---- !u!114 &-7421507789509494938
+--- !u!114 &-6310876401166526966
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -49,9 +100,77 @@ MonoBehaviour:
   id: 
   tags: []
   isEnable: 1
-  index: 9
-  numberOfEnemy: 3
---- !u!114 &-6314124292755873152
+  index: 12
+  numberOfEnemy: 6
+--- !u!114 &-6069815654995432429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 10
+  numberOfEnemy: 1
+--- !u!114 &-4947265646318056184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 27
+  numberOfEnemy: 11
+--- !u!114 &-3790741141447021789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 23
+  numberOfEnemy: 9
+--- !u!114 &-3499175371381702237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 29
+  numberOfEnemy: 8
+--- !u!114 &-2887899119529299006
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -67,8 +186,8 @@ MonoBehaviour:
   tags: []
   isEnable: 1
   index: 6
-  numberOfEnemy: 3
---- !u!114 &-5308416398101568500
+  numberOfEnemy: 5
+--- !u!114 &-2016154937430336813
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -83,9 +202,9 @@ MonoBehaviour:
   id: 
   tags: []
   isEnable: 1
-  index: 7
-  numberOfEnemy: 3
---- !u!114 &-3044364513404119605
+  index: 3
+  numberOfEnemy: 4
+--- !u!114 &-1556250156997690680
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,8 +220,8 @@ MonoBehaviour:
   tags: []
   isEnable: 1
   index: 2
-  numberOfEnemy: 3
---- !u!114 &-1624963530855092523
+  numberOfEnemy: 4
+--- !u!114 &-10090571334040475
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,8 +236,8 @@ MonoBehaviour:
   id: 
   tags: []
   isEnable: 1
-  index: 8
-  numberOfEnemy: 3
+  index: 18
+  numberOfEnemy: 9
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,18 +255,54 @@ MonoBehaviour:
   rowTypeName: YatchDungeon.WaveDataTableRow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   dataList:
-  - {fileID: -8190476759503181765}
-  - {fileID: -8895729150409449025}
-  - {fileID: -3044364513404119605}
-  - {fileID: 6443341541591291905}
-  - {fileID: 891689623589844915}
-  - {fileID: 4430361627274008595}
-  - {fileID: -6314124292755873152}
-  - {fileID: -5308416398101568500}
-  - {fileID: -1624963530855092523}
-  - {fileID: -7421507789509494938}
-  - {fileID: 8917562981652335133}
---- !u!114 &891689623589844915
+  - {fileID: -6663386100537928011}
+  - {fileID: 6657726865803332168}
+  - {fileID: -1556250156997690680}
+  - {fileID: -2016154937430336813}
+  - {fileID: 3331742079492064462}
+  - {fileID: 4187194464691019615}
+  - {fileID: -2887899119529299006}
+  - {fileID: 8036049471070949844}
+  - {fileID: 4015091367614309580}
+  - {fileID: 4278738140664436445}
+  - {fileID: -6069815654995432429}
+  - {fileID: 6473888341765482839}
+  - {fileID: -6310876401166526966}
+  - {fileID: 8692193841450022382}
+  - {fileID: -6859154697890640503}
+  - {fileID: 4360232525631928435}
+  - {fileID: 984680316484203490}
+  - {fileID: 3931254843365916850}
+  - {fileID: -10090571334040475}
+  - {fileID: 7485164221086329885}
+  - {fileID: 7817258976725914543}
+  - {fileID: -8376471047345615620}
+  - {fileID: 3773642453648768938}
+  - {fileID: -3790741141447021789}
+  - {fileID: 4913732510685133817}
+  - {fileID: 5169352824712909732}
+  - {fileID: -9219235315163477944}
+  - {fileID: -4947265646318056184}
+  - {fileID: -6737064575717101754}
+  - {fileID: -3499175371381702237}
+--- !u!114 &984680316484203490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 16
+  numberOfEnemy: 8
+--- !u!114 &3331742079492064462
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -163,8 +318,59 @@ MonoBehaviour:
   tags: []
   isEnable: 1
   index: 4
-  numberOfEnemy: 3
---- !u!114 &4430361627274008595
+  numberOfEnemy: 5
+--- !u!114 &3773642453648768938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 22
+  numberOfEnemy: 9
+--- !u!114 &3931254843365916850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 17
+  numberOfEnemy: 8
+--- !u!114 &4015091367614309580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 8
+  numberOfEnemy: 6
+--- !u!114 &4187194464691019615
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,8 +386,8 @@ MonoBehaviour:
   tags: []
   isEnable: 1
   index: 5
-  numberOfEnemy: 3
---- !u!114 &6443341541591291905
+  numberOfEnemy: 5
+--- !u!114 &4278738140664436445
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -196,9 +402,9 @@ MonoBehaviour:
   id: 
   tags: []
   isEnable: 1
-  index: 3
-  numberOfEnemy: 3
---- !u!114 &8917562981652335133
+  index: 9
+  numberOfEnemy: 7
+--- !u!114 &4360232525631928435
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -213,5 +419,141 @@ MonoBehaviour:
   id: 
   tags: []
   isEnable: 1
-  index: 10
+  index: 15
+  numberOfEnemy: 8
+--- !u!114 &4913732510685133817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 24
+  numberOfEnemy: 10
+--- !u!114 &5169352824712909732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 25
+  numberOfEnemy: 10
+--- !u!114 &6473888341765482839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 11
+  numberOfEnemy: 6
+--- !u!114 &6657726865803332168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 1
   numberOfEnemy: 3
+--- !u!114 &7485164221086329885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 19
+  numberOfEnemy: 9
+--- !u!114 &7817258976725914543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 20
+  numberOfEnemy: 1
+--- !u!114 &8036049471070949844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 7
+  numberOfEnemy: 6
+--- !u!114 &8692193841450022382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 13
+  numberOfEnemy: 7

@@ -1,6 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-1231131122349054567
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463daf5080d293049bd98a91154e958f, type: 3}
+  m_Name: DT_Skill
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.DataTable
+  rowScript: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  csv: {fileID: 4900000, guid: dc6abe150a212084eaf996f91f226ae7, type: 3}
+  rowTypeName: YatchDungeon.SkillDataTableRow, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  dataList:
+  - {fileID: 601648275329423415}
+--- !u!114 &601648275329423415
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24,21 +42,3 @@ MonoBehaviour:
   attackTargetOption: 1
   targetCount: 1
   effectPrefab: {fileID: 7670170294891014883, guid: 310ecb62d45727043a8e5fcbbb14b9dc, type: 3}
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 463daf5080d293049bd98a91154e958f, type: 3}
-  m_Name: DT_Skill
-  m_EditorClassIdentifier: KCoreKit::KCoreKit.DataTable
-  rowScript: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  csv: {fileID: 4900000, guid: dc6abe150a212084eaf996f91f226ae7, type: 3}
-  rowTypeName: YatchDungeon.SkillDataTableRow, Assembly-CSharp, Version=0.0.0.0,
-    Culture=neutral, PublicKeyToken=null
-  dataList:
-  - {fileID: -1231131122349054567}

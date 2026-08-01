@@ -1,14 +1,24 @@
 id,nameKey,descKey,prefab,group,attackType,grade,hp,str,con,dex,mag,def,mdf,spd,role,skillBasicKey,skillPassiveKey,skillActiveKey,maxSkillSlot,isEnable
-UN_SOLDIER,UN_SOLDIER_NAME,UN_SOLDIER_DESC,Unit/PF_SOLDIER.prefab,Ally,Melee,Common,150,15,12,10,0,10,5,100,Tank,MeleeAttack,,,3,TRUE
-UN_ARCHER,UN_ARCHER_NAME,UN_ARCHER_DESC,Unit/PF_ARCHER.prefab,Ally,Ranged,Common,100,5,8,20,0,5,5,120,Ranged DPS,MeleeAttack,,,3,TRUE
-UN_SWORDSMAN,UN_SWORDSMAN_NAME,UN_SWORDSMAN_DESC,Unit/PF_SWORDSMAN.prefab,Ally,Melee,Rare,220,25,15,15,0,15,10,110,Melee DPS,MeleeAttack,,,3,TRUE
-UN_LANCER,UN_LANCER_NAME,UN_LANCER_DESC,Unit/PF_LANCER.prefab,Ally,Melee,Rare,200,22,14,18,0,12,8,105,Melee DPS,MeleeAttack,,,3,TRUE
-UN_PRIEST,UN_PRIEST_NAME,UN_PRIEST_DESC,Unit/PF_PRIEST.prefab,Ally,Magic,Rare,120,5,10,10,25,8,20,90,Healer,MeleeAttack,,,3,TRUE
-UN_AXEMAN,UN_AXEMAN_NAME,UN_AXEMAN_DESC,Unit/PF_AXEMAN.prefab,Ally,Melee,Epic,400,40,30,10,0,30,15,80,Bruiser,MeleeAttack,,,3,TRUE
-UN_WIZARD,UN_WIZARD_NAME,UN_WIZARD_DESC,Unit/PF_WIZARD.prefab,Ally,Magic,Epic,150,5,10,15,50,8,30,95,Magic DPS,MeleeAttack,,,3,TRUE
-UN_KNIGHT,UN_KNIGHT_NAME,UN_KNIGHT_DESC,Unit/PF_KNIGHT.prefab,Ally,Melee,Epic,450,35,35,12,10,40,25,90,Tank,MeleeAttack,,,3,TRUE
-UN_TEMPLAR,UN_TEMPLAR_NAME,UN_TEMPLAR_DESC,Unit/PF_TEMPLAR.prefab,Ally,Melee,Legendary,800,60,50,20,40,50,40,100,Carry,MeleeAttack,,,3,TRUE
+UN_SOLDIER,UN_SOLDIER_NAME,UN_SOLDIER_DESC,UnitAlly/PF_SOLDIER.prefab,Ally,Melee,Common,150,15,12,10,0,10,5,100,Tank,MeleeAttack,,,3,TRUE
+UN_ARCHER,UN_ARCHER_NAME,UN_ARCHER_DESC,UnitAlly/PF_ARCHER.prefab,Ally,Ranged,Common,100,5,8,20,0,5,5,120,Ranged DPS,MeleeAttack,,,3,TRUE
+UN_SWORDSMAN,UN_SWORDSMAN_NAME,UN_SWORDSMAN_DESC,UnitAlly/PF_SWORDSMAN.prefab,Ally,Melee,Rare,220,25,15,15,0,15,10,110,Melee DPS,MeleeAttack,,,3,TRUE
+UN_LANCER,UN_LANCER_NAME,UN_LANCER_DESC,UnitAlly/PF_LANCER.prefab,Ally,Melee,Rare,200,22,14,18,0,12,8,105,Melee DPS,MeleeAttack,,,3,TRUE
+UN_PRIEST,UN_PRIEST_NAME,UN_PRIEST_DESC,UnitAlly/PF_PRIEST.prefab,Ally,Magic,Rare,120,5,10,10,25,8,20,90,Healer,MeleeAttack,,,3,TRUE
+UN_AXEMAN,UN_AXEMAN_NAME,UN_AXEMAN_DESC,UnitAlly/PF_AXEMAN.prefab,Ally,Melee,Epic,400,40,30,10,0,30,15,80,Bruiser,MeleeAttack,,,3,TRUE
+UN_WIZARD,UN_WIZARD_NAME,UN_WIZARD_DESC,UnitAlly/PF_WIZARD.prefab,Ally,Magic,Epic,150,5,10,15,50,8,30,95,Magic DPS,MeleeAttack,,,3,TRUE
+UN_KNIGHT,UN_KNIGHT_NAME,UN_KNIGHT_DESC,UnitAlly/PF_KNIGHT.prefab,Ally,Melee,Epic,450,35,35,12,10,40,25,90,Tank,MeleeAttack,,,3,TRUE
+UN_TEMPLAR,UN_TEMPLAR_NAME,UN_TEMPLAR_DESC,UnitAlly/PF_TEMPLAR.prefab,Ally,Melee,Legendary,800,60,50,20,40,50,40,100,Carry,MeleeAttack,,,3,TRUE
 ,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,
-TEST_ENEMY1,UN_ARCHER_NAME,UN_ARCHER_DESC,Unit/PF_ARCHER.prefab,Enemy,Melee,Common,150,15,12,10,0,10,5,100,Tank,MeleeAttack,,,3,TRUE
-TEST_ENEMY2,UN_ARCHER_NAME,UN_ARCHER_DESC,Unit/PF_AXEMAN.prefab,Enemy,Melee,Common,150,15,12,10,0,10,5,100,Tank,MeleeAttack,,,3,TRUE
+UN_SLIME,UN_SLIME_NAME,UN_SLIME_DESC,UnitEnemy/PF_SLIME.prefab,Enemy,Melee,Common,80,8,8,5,5,2,2,80,Melee DPS,MeleeAttack,,,3,TRUE
+UN_BAT,UN_BAT_NAME,UN_BAT_DESC,UnitEnemy/PF_BAT.prefab,Enemy,Ranged,Common,60,5,5,18,0,2,5,140,Ranged DPS,MeleeAttack,,,3,TRUE
+UN_SKELETON,UN_SKELETON_NAME,UN_SKELETON_DESC,UnitEnemy/PF_SKELETON.prefab,Enemy,Melee,Common,100,12,10,10,0,8,2,90,Melee DPS,MeleeAttack,,,3,TRUE
+UN_SKELARCHER,UN_SKELARCHER_NAME,UN_SKELARCHER_DESC,UnitEnemy/PF_SKELARCHER.prefab,Enemy,Ranged,Rare,80,5,8,22,0,5,2,110,Ranged DPS,MeleeAttack,,,3,TRUE
+UN_ORC,UN_ORC_NAME,UN_ORC_DESC,UnitEnemy/PF_ORC.prefab,Enemy,Melee,Rare,200,20,18,8,0,10,5,90,Bruiser,MeleeAttack,,,3,TRUE
+UN_WEREWOLF,UN_WEREWOLF_NAME,UN_WEREWOLF_DESC,UnitEnemy/PF_WEREWOLF.prefab,Enemy,Melee,Rare,180,25,15,25,0,12,8,130,Assassin,MeleeAttack,,,3,TRUE
+UN_ARMSKEL,UN_ARMSKEL_NAME,UN_ARMSKEL_DESC,UnitEnemy/PF_ARMSKEL.prefab,Enemy,Melee,Epic,250,15,20,8,0,30,5,80,Tank,MeleeAttack,,,3,TRUE
+UN_GSSKEL,UN_GSSKEL_NAME,UN_GSSKEL_DESC,UnitEnemy/PF_GSSKEL.prefab,Enemy,Melee,Epic,250,45,20,10,0,15,10,85,Melee DPS,MeleeAttack,,,3,TRUE
+UN_ORCRIDER,UN_ORCRIDER_NAME,UN_ORCRIDER_DESC,UnitEnemy/PF_ORCRIDER.prefab,Enemy,Melee,Epic,300,30,25,15,0,15,10,150,Assassin,MeleeAttack,,,3,TRUE
+UN_ARMORC,UN_ARMORC_NAME,UN_ARMORC_DESC,UnitEnemy/PF_ARMORC.prefab,Enemy,Melee,Epic,450,25,35,8,0,40,15,70,Tank,MeleeAttack,,,3,TRUE
+UN_WEREBEAR,UN_WEREBEAR_NAME,UN_WEREBEAR_DESC,UnitEnemy/PF_WEREBEAR.prefab,Enemy,Melee,Epic,500,40,40,10,0,25,20,85,Bruiser,MeleeAttack,,,3,TRUE
+UN_NECRO,UN_NECRO_NAME,UN_NECRO_DESC,UnitEnemy/PF_NECRO.prefab,Enemy,Magic,Boss,1500,10,40,15,80,20,50,95,Boss,MeleeAttack,,,3,TRUE
+UN_ELITEORC,UN_ELITEORC_NAME,UN_ELITEORC_DESC,UnitEnemy/PF_ELITEORC.prefab,Enemy,Melee,Boss,2500,70,60,20,0,60,40,100,Boss,MeleeAttack,,,3,TRUE
