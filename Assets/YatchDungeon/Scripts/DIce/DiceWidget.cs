@@ -30,9 +30,9 @@ namespace YatchDungeon
             var rollStartIndex = Random.Range(0, 5);
             var rollEndIndex = rollStartIndex + 6*rollTime;
             _animationIndex = rollStartIndex;
-            yield return transform.DOMoveY(50f, 0.1f).SetRelative(true).WaitForCompletion();
+            yield return rectTransform.DOAnchorPosY(50f, 0.1f).SetRelative(true).WaitForCompletion();
             yield return DOTween.To(GetRollIndex, SetRollIndex, rollEndIndex,rollDuration).WaitForCompletion();
-            yield return transform.DOMoveY(-50f, 0.1f).SetRelative(true).WaitForCompletion();
+            yield return rectTransform.DOAnchorPosY(-50f, 0.1f).SetRelative(true).WaitForCompletion();
             _number = Random.Range(1, 6);
             SetSprite(spriteGetter.Invoke(_number));
             finishCallback?.Invoke();
