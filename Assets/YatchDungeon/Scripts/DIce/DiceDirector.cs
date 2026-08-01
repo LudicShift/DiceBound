@@ -16,7 +16,7 @@ namespace YatchDungeon
         [SerializeField]
         private ButtonWidget _claimButtonWidget;
         [SerializeField]
-        private ButtonWidget _rerollButtonWidget;
+        private DiceRerollButtonWidget _rerollButtonWidget;
 
         [SerializeField] private ButtonWidget _showFieldButton;
         
@@ -67,14 +67,18 @@ namespace YatchDungeon
         public void Roll()
         {
             StartCoroutine(RollRoutine());
+            
         }
 
         private IEnumerator RollRoutine()
         {
             _combinationInfoWidget.SetText("Rolling...");
-            _rerollButtonWidget.SetInteractable(false);
-            _claimButtonWidget.SetInteractable(false);
+           
             _remainRollCount--;
+            _claimButtonWidget.SetInteractable(false);
+            _rerollButtonWidget.Disable();
+            _rerollButtonWidget.SetCount(_remainRollCount);
+            
             int count = 0;
             foreach (var dice in _remainDices)
             {
@@ -82,10 +86,14 @@ namespace YatchDungeon
             }
             yield return new WaitUntil(()=>count >= _remainDices.Count);
             _claimButtonWidget.SetInteractable(true);
-            _rerollButtonWidget.SetInteractable(true);
+            
             if (_remainRollCount <= 0)
             {
-                _rerollButtonWidget.SetInteractable(false);
+                _rerollButtonWidget.Disable();
+            }
+            else
+            {
+                _rerollButtonWidget.Enable();
             }
             Debug.Log("Roll");
             ShowResult();
@@ -107,11 +115,15 @@ namespace YatchDungeon
             {
                 _remainPoints[i].SetDice(_remainDices[i]);
                 _remainDices[i].Warp(initialDicePoint.position);
-             _remainDices[i].MoveTo(_remainPoints[i].transform.position);
+                _remainDices[i].MoveTo(_remainPoints[i].transform.position);
             }
 
             yield return new WaitForSeconds(1.0f);
             _keepDices.Clear();
+            foreach (var point in _keepPoints)
+            {
+                point.SetDice(null);
+            }
             
             Roll();
         }
@@ -144,9 +156,9 @@ namespace YatchDungeon
             combinationList.Add(new TwoPairCombination(dictionary["TWO_PAIR"]));
             combinationList.Add(new TripleCombination(dictionary["TRIPLE"]));
             combinationList.Add(new SmallStraightCombination(dictionary["S_STRAIGHT"]));
-            combinationList.Add(new LargeStraightCombination(dictionary["FULL_HOUSE"]));
-            combinationList.Add(new FullHouseCombination(dictionary["FOUR_KIND"]));
-            combinationList.Add(new FourOfKindCombination(dictionary["L_STRAIGHT"]));
+            combinationList.Add(new LargeStraightCombination(dictionary["L_STRAIGHT"]));
+            combinationList.Add(new FullHouseCombination(dictionary["FULL_HOUSE"]));
+            combinationList.Add(new FourOfKindCombination(dictionary["FOUR_KIND"]));
             combinationList.Add(new FiveKindCombination(dictionary["FIVE_KIND"]));
             combinationList.Sort((a,b)=>a.GetPriority() - b.GetPriority());
             _combinations = combinationList.ToArray();

@@ -2098,6 +2098,8 @@ GameObject:
   - component: {fileID: 501363062}
   - component: {fileID: 501363064}
   - component: {fileID: 501363063}
+  - component: {fileID: 501363066}
+  - component: {fileID: 501363065}
   m_Layer: 5
   m_Name: Reroll Count (TMP)
   m_TagString: Untagged
@@ -2224,6 +2226,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 501363061}
   m_CullTransparentMesh: 1
+--- !u!114 &501363065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501363061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24edc751b31995246b0ea6da628e9c29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.TextWidget
+--- !u!225 &501363066
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501363061}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &504579069
 GameObject:
   m_ObjectHideFlags: 0
@@ -2290,7 +2316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.DiceDirector
   _claimButtonWidget: {fileID: 113023234}
-  _rerollButtonWidget: {fileID: 2032662340}
+  _rerollButtonWidget: {fileID: 2032662346}
   _showFieldButton: {fileID: 1481126483}
   _combinationInfoWidget: {fileID: 1852891681}
   initialDicePoint: {fileID: 2117079358}
@@ -4319,7 +4345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -6993,8 +7019,8 @@ GameObject:
   - component: {fileID: 2032662343}
   - component: {fileID: 2032662342}
   - component: {fileID: 2032662341}
-  - component: {fileID: 2032662340}
   - component: {fileID: 2032662345}
+  - component: {fileID: 2032662346}
   m_Layer: 5
   m_Name: RerollButton
   m_TagString: Untagged
@@ -7023,18 +7049,6 @@ RectTransform:
   m_AnchoredPosition: {x: 960, y: -800}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2032662340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2032662338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
 --- !u!225 &2032662341
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -7155,6 +7169,19 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &2032662346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032662338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29fbff793d2b4885be905211793372da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.DiceRerollButtonWidget
+  rerollCount: {fileID: 501363065}
 --- !u!1 &2049718761
 GameObject:
   m_ObjectHideFlags: 0
