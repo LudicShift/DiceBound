@@ -68,7 +68,6 @@ namespace YatchDungeon
         public void Roll()
         {
             StartCoroutine(RollRoutine());
-            
         }
 
         private IEnumerator RollRoutine()
@@ -86,7 +85,7 @@ namespace YatchDungeon
                 StartCoroutine(dice.Roll(()=>count++));
             }
             yield return new WaitUntil(()=>count >= _remainDices.Count);
-            _claimButtonWidget.SetInteractable(true);
+            
             
             if (_remainRollCount <= 0)
             {
@@ -98,12 +97,14 @@ namespace YatchDungeon
             }
             Debug.Log("Roll");
             ShowResult();
+            _claimButtonWidget.SetInteractable(true);
         }
         
         
 
         private IEnumerator ResetDice()
         {
+            _claimButtonWidget.SetInteractable(false);
             if (_keepDices.Count > 0)
             {
                 foreach (var dice in _keepDices)

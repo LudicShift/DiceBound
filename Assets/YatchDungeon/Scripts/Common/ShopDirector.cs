@@ -9,7 +9,7 @@ namespace YatchDungeon
         [SerializeField] private ButtonWidget shopButtonWidget;
         [SerializeField] private ButtonWidget backToFieldButton;
         [SerializeField] private ButtonWidget rollDiceButtonWidget;
-        [SerializeField] private int rollDiceCost;
+        private int rollDiceCost = 100;
         [SerializeField] private Canvas canvas;
 
         private WalletDirector _walletDirector;

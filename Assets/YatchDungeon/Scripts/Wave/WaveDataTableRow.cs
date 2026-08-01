@@ -6,5 +6,6 @@ namespace YatchDungeon
     {
         public int index;
         public int numberOfEnemy;
+        public int waveRewardGold;
     }
 }

@@ -1,4 +1,5 @@
-﻿using KCoreKit;
+﻿using System.Collections;
+using KCoreKit;
 using UnityEngine;
 
 namespace YatchDungeon
@@ -7,7 +8,13 @@ namespace YatchDungeon
     {
         [SerializeField]
         private TextWidget goldTextWidget;
-        private int _gold;
+        private int _gold = 500;
+
+        public override IEnumerator OnInitialize()
+        {
+            goldTextWidget.SetText(_gold.ToString());
+            yield return null;
+        }
 
         public bool HasGold(int gold)
         {

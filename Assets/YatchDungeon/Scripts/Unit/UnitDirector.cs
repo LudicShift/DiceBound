@@ -267,7 +267,7 @@ namespace YatchDungeon
             return _allies.GetRandomElements(count);
         }
 
-        public int GetAllUnitCount()
+        public int GetAllyUnitCount()
         {
             return _allies.Count;
         }
