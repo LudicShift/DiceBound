@@ -43,6 +43,7 @@ namespace YatchDungeon
             _abilityAgent = GetComponent<AbilityAgent>();
             _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
             _animator = GetComponentInChildren<Animator>();
+            _animator.speed = 1.5f;
         }
 
         public void Update()
@@ -189,12 +190,10 @@ namespace YatchDungeon
             Sequence seq = DOTween.Sequence();
             seq.Join(transform.DOMoveX(1.5f*_direction, 0.075f).SetRelative(true));
             seq.AppendCallback(()=> Animate("Attack01"));
-            
-            seq.AppendInterval(0.2f);
-            
+            seq.AppendInterval(0.6f);
             seq.AppendCallback(attackAction.Invoke);
             
-            seq.Join(transform.DOMoveX(-1.5f*_direction, 0.075f).SetRelative(true));
+            seq.Append(transform.DOMoveX(-1.5f*_direction, 0.075f).SetRelative(true));
             
             seq.Play();
         }
