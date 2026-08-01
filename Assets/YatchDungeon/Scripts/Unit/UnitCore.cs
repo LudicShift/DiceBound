@@ -31,11 +31,14 @@ namespace YatchDungeon
         private SpriteRenderer _spriteRenderer;
         private GaugeWidget _hpGague;
         private readonly Vector2 _hpOffset = new Vector2(0,150f);
+        
+        private Animator _animator;
 
         public void Awake()
         {
             _abilityAgent = GetComponent<AbilityAgent>();
             _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+            _animator = GetComponentInChildren<Animator>();
         }
 
         public void Update()
@@ -129,11 +132,15 @@ namespace YatchDungeon
             _abilityAgent.SetUpdate(false);
         }
 
+        public void Animate(string value)
+        {
+            _animator.Play(value);
+        }
+
         public void OnDamage(float damage)
         {
             hp -= damage;
-            Debug.Log($"hp:{hp}");
-            Debug.Log($"damage:{damage}");
+            Animate("Hurt");
             _hpGague.OnChange(hp);
             if (hp <= 0)
             {
