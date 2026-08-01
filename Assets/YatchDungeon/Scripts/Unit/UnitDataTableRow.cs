@@ -37,5 +37,6 @@ namespace YatchDungeon
         public int def;
         public int mdf;
         public int spd;
+        public float height;
     }
 }

@@ -32,7 +32,6 @@ namespace YatchDungeon
         public UnitGroup group;
         private SpriteRenderer _spriteRenderer;
         private GaugeWidget _hpGague;
-        private readonly Vector2 _hpOffset = new Vector2(0,150f);
         
         private Animator _animator;
         private Vector3 _restorePosition;
@@ -51,7 +50,7 @@ namespace YatchDungeon
             if (_hpGague)
             {
                var screenPoint =  RectTransformUtility.WorldToScreenPoint(CameraManager.GetMainCamera(), transform.position);
-                _hpGague.rectTransform.anchoredPosition = screenPoint+_hpOffset;
+                _hpGague.rectTransform.anchoredPosition = screenPoint+new Vector2( 0,_data.height);
             }
         }
 

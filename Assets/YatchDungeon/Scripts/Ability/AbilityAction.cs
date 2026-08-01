@@ -23,6 +23,7 @@ namespace YatchDungeon
                     var instance = Object.Instantiate(abilityContext.skillEffectPrefab);
                     instance.transform.position = abilityContext.self.transform.position;
                     instance.SetDamage(UnitUtility.GetApMelee(abilityContext.self));
+                    instance.SetDirection(abilityContext.self.group == UnitGroup.Ally);
                     instance.Execute(target);
                 }
             });
