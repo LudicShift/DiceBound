@@ -69,5 +69,11 @@ namespace YatchDungeon
             var emptyCells = _cells.FindAll(x => x.IsEmpty());
             return emptyCells.GetRandomElement();
         }
+
+        public int GetUnitCount()
+        {
+            return _cells.Count(x=>!x.IsEmpty());
+        }
+        
     }
 }

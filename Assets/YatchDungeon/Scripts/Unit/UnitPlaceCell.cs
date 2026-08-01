@@ -45,5 +45,10 @@ namespace YatchDungeon
         {
             this.distance = distance;
         }
+
+        public UnitCore GetUnit()
+        {
+            return _unit;
+        }
     }
 }

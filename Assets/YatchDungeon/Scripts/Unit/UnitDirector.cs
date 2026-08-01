@@ -8,19 +8,34 @@ using UnityEngine.InputSystem;
 
 namespace YatchDungeon
 {
+    public enum UnitTargetOption
+    {
+        Ally,
+        Enemy,
+        Self
+    }
+
     public class UnitDirector : DirectorBase
     {
         private Dictionary<string, UnitDataTableRow> _unitDataMap;
         private UnitPlaceCell _hoveredCell;
         private UnitPlaceCell _restoreCell;
         private UnitCore _draggingUnit;
+
         private Vector3 _dragOffset;
         private Camera _camera;
         [SerializeField] private UnitPlaceGrid allyPlaceGrid;
         [SerializeField] private UnitPlaceGrid enemyPlaceGrid;
 
+        private List<UnitCore> _units = new List<UnitCore>();
+        private List<UnitCore> _allies = new List<UnitCore>();
+        private List<UnitCore> _enemies = new List<UnitCore>();
+
+        private SkillDirector _skillDirector;
+
         public override IEnumerator OnInitialize()
         {
+            _skillDirector = DirectorFacade.GetSubMode<SkillDirector>();
             _camera = CameraManager.GetMainCamera();
             _unitDataMap = DataTableManager.FindAllRows<UnitDataTableRow>().ToDictionary(x => x.id);
 
@@ -137,10 +152,49 @@ namespace YatchDungeon
             var data = _unitDataMap[unitId];
             var instance = Instantiate(data.prefab);
             instance.Setup(data);
+            if (data.skillBasicKey != "")
+            {
+                instance.BindSkill(_skillDirector.GetSkill(data.skillBasicKey));
+            }
+
+            if (data.skillActiveKey != "")
+            {
+                instance.BindSkill(_skillDirector.GetSkill(data.skillActiveKey));
+            }
+
+            if (data.skillPassiveKey != "")
+            {
+                instance.BindSkill(_skillDirector.GetSkill(data.skillPassiveKey));
+            }
+
+            instance.onDeadAction += OnUnitDead;
 
             var cell = PickSpawnCell(data);
             instance.MoveTo(cell.transform.position);
             cell.PushUnit(instance);
+            _units.Add(instance);
+            switch (data.group)
+            {
+                case UnitGroup.Ally:
+                    _allies.Add(instance);
+                    break;
+                case UnitGroup.Enemy:
+                    _enemies.Add(instance);
+                    break; 
+            }
+        }
+
+        private void OnUnitDead(UnitCore unit)
+        {
+            _units.Remove(unit);
+            _allies.Remove(unit);
+            _enemies.Remove(unit);
+            Destroy(unit.gameObject);
+        }
+
+        public int GetEnemyUnitCount()
+        {
+            return enemyPlaceGrid.GetUnitCount();
         }
 
         private UnitPlaceCell PickSpawnCell(UnitDataTableRow data)
@@ -157,6 +211,36 @@ namespace YatchDungeon
             }
 
             return grid.GetRandomEmptyCell(data.attackType);
+        }
+
+        public List<UnitCore> GetAllUnit()
+        {
+            return _units;
+        }
+
+        public List<UnitCore> GetTarget(UnitCore self, UnitTargetOption target, int count)
+        {
+            switch (target)
+            {
+                case UnitTargetOption.Ally:
+                    return GetRandomAllies(count);
+                case UnitTargetOption.Enemy:
+                    return GetRandomEnemies(count);
+                case UnitTargetOption.Self:
+                    return new List<UnitCore> { self };
+            }
+
+            return null;
+        }
+
+        private List<UnitCore> GetRandomEnemies(int count)
+        {
+            return _enemies.GetRandomElements(count);
+        }
+
+        private List<UnitCore> GetRandomAllies(int count)
+        {
+            return _allies.GetRandomElements(count);
         }
     }
 }
