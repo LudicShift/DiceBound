@@ -10,11 +10,14 @@ namespace YatchDungeon
         public void Awake()
         {
             RandomSystem.SetSeed((int)Time.time);
+           
         }
 
         public override IEnumerator OnInitialize()
         {
             StartCoroutine(MainRoutine());
+            AbilitySystem.Setup<AbilityAction,AbilityCondition>();
+            AbilityAction.Setup();
             yield return null;
         }
 

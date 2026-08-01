@@ -7,7 +7,7 @@ namespace YatchDungeon
     {
         private static UnitDirector _unitDirector;
 
-        public void Setup()
+        public static void Setup()
         {
             _unitDirector = DirectorFacade.GetSubMode<UnitDirector>();
         }

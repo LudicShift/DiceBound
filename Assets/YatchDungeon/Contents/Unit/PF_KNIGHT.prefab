@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3003753007602453789}
   - component: {fileID: 2098071271932889212}
+  - component: {fileID: 8547970548987146007}
   m_Layer: 0
   m_Name: PF_KNIGHT
   m_TagString: Untagged
@@ -46,6 +47,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitCore
   moveDuration: 0.3
+  str: 0
+  dex: 0
+  mag: 0
+  spd: 0
+  mdf: 0
+  def: 0
+  con: 0
+  maxhp: 0
+  hp: 0
+--- !u!114 &8547970548987146007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6302351625213716871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 078623f2a69b9bb4697bbc4c1fbad88a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityAgent
 --- !u!1001 &5611360990984231562
 PrefabInstance:
   m_ObjectHideFlags: 0

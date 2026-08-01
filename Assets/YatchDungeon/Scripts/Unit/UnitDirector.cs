@@ -39,37 +39,43 @@ namespace YatchDungeon
             _camera = CameraManager.GetMainCamera();
             _unitDataMap = DataTableManager.FindAllRows<UnitDataTableRow>().ToDictionary(x => x.id);
 
-            InputManager.RegisterAction("Click", PlayerActionType.Performed, OnMouseDownUnit);
+            InputManager.RegisterAction("Click", PlayerActionType.Started, OnMouseDownUnit);
             InputManager.RegisterAction("Click", PlayerActionType.Canceled, OnMouseUpUnit);
             yield return null;
         }
 
         private void OnMouseUpUnit(InputAction.CallbackContext obj)
         {
-            if (_draggingUnit)
-            {
-                if (_hoveredCell)
-                {
-                    if (!_hoveredCell.IsEmpty())
-                    {
-                        var unit = _hoveredCell.PopUnit();
-                        unit.MoveTo(_restoreCell.transform.position);
-                        _restoreCell.PushUnit(unit);
-                    }
+            if (_draggingUnit == null) return;
 
+            if (_hoveredCell != null)
+            {
+                // 1. 호버된 셀이 비어있는 경우: 해당 셀에 배치
+                if (_hoveredCell.IsEmpty())
+                {
                     _draggingUnit.Warp(_hoveredCell.transform.position);
                     _hoveredCell.PushUnit(_draggingUnit);
                 }
+                // 2. 호버된 셀에 이미 다른 유닛이 있는 경우 (자리 교체 혹은 원래 자리 복귀)
                 else
                 {
+                    // 여기서는 안전하게 원래 자리로 되돌리거나, 필요에 따라 스왑 로직 구현 가능
+                    // 우선 원래 자리로 돌리는 안전한 처리:
                     _draggingUnit.MoveTo(_restoreCell.transform.position);
                     _restoreCell.PushUnit(_draggingUnit);
                 }
-
-                _restoreCell = null;
-                _draggingUnit = null;
-                _dragOffset = Vector3.zero;
             }
+            else
+            {
+                // 3. 셀이 아닌 곳에 드롭한 경우: 원래 자리로 복귀
+                _draggingUnit.MoveTo(_restoreCell.transform.position);
+                _restoreCell.PushUnit(_draggingUnit);
+            }
+
+            // 상태 초기화
+            _restoreCell = null;
+            _draggingUnit = null;
+            _dragOffset = Vector3.zero;
         }
 
         private void OnMouseDownUnit(InputAction.CallbackContext obj)
@@ -134,7 +140,7 @@ namespace YatchDungeon
                 }
 
                 _hoveredCell = currentCell;
-                _hoveredCell.OnHoverEnter();
+                _hoveredCell.OnHoverEnter(_draggingUnit != null);
             }
             else
             {

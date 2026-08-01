@@ -12,16 +12,20 @@ namespace YatchDungeon
         public void Awake()
         {
             _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+            _spriteRenderer.color = new Color32  (6, 169, 250, 192);
         }
 
-        public void OnHoverEnter()
+        public void OnHoverEnter(bool value)
         {
-            _spriteRenderer.color = Color.red;
+            if (value)
+            {
+                _spriteRenderer.color = new Color32 (10, 250, 6, 192);
+            }
         }
         
         public void OnHoverExit()
         {
-            _spriteRenderer.color = Color.white;
+            _spriteRenderer.color = new Color32  (6, 169, 250, 192);
         }
 
         public bool IsEmpty()

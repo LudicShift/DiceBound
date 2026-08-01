@@ -72,7 +72,7 @@ namespace YatchDungeon
                 targetOption =  skill.targetOption,
                 targetCount =  skill.targetCount,
             };
-            
+            _abilityAgent.AddEffect(skill.abilityId);
             switch (skill.skillType)
             {
                 case SkillType.Basic:
@@ -105,17 +105,21 @@ namespace YatchDungeon
 
         public void OnBeginBattle()
         {
-            throw new NotImplementedException();
+            _abilityAgent.SetUpdate(true);
         }
 
         public void OnEndBattle()
         {
-            throw new NotImplementedException();
+            _abilityAgent.SetUpdate(false);
         }
 
         public void OnDamage(float damage)
         {
-            throw new NotImplementedException();
+            hp -= damage;
+            if (hp <= 0)
+            {
+                onDeadAction?.Invoke(this);
+            }
         }
     }
 }
