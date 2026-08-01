@@ -2,7 +2,52 @@ fileFormatVersion: 2
 guid: 3ff8b1a0bbfbe16408bb71e135652201
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Attack01
+    second: {fileID: 7400000, guid: c4b3398930294a244a796dcca769e7a1, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Attack02
+    second: {fileID: 7400000, guid: eb159b7ce767a2441a969969ac309fd1, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Attack03
+    second: {fileID: 7400000, guid: 3e2ad13c2dfef0b4b9bd5daaa0ee5a43, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Block
+    second: {fileID: 7400000, guid: 0d253453ee2b8234985feb8f4812061c, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Death
+    second: {fileID: 7400000, guid: 2ad6da535dce5ff4e845b4db39a1cb4c, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Hurt
+    second: {fileID: 7400000, guid: 2f3ba0267f2f50c4193083df5713c9af, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Idle
+    second: {fileID: 7400000, guid: b19d2e75266b94d4caeb26a5838ae524, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Walk01
+    second: {fileID: 7400000, guid: 58d31707a471f6e4b97d4a47938dd9ea, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Walk02
+    second: {fileID: 7400000, guid: d343f0088903c1c4f8b0bc43c731b777, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -102,7 +147,7 @@ ScriptedImporter:
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
   importFileNodeState: 1
-  platformSettingsDirtyTick: 639212030090394604
+  platformSettingsDirtyTick: 639212343796691502
   textureAssetName: 
   singleSpriteImportData:
   - name: 

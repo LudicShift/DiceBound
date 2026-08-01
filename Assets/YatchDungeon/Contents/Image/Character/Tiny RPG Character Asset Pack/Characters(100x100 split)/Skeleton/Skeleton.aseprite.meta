@@ -2,7 +2,47 @@ fileFormatVersion: 2
 guid: 720f5bb3845d8d8419a488bf17305b26
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Attack01
+    second: {fileID: 7400000, guid: 33a672a4ca1b24245b59f4007d47b2c0, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Attack02
+    second: {fileID: 7400000, guid: 07f86e855429d2f4c8fa22df6881f0bd, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Block
+    second: {fileID: 7400000, guid: 0b9cb4d70b9fefe4c950df8b9e8994f8, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Death
+    second: {fileID: 7400000, guid: 565c77ef1fec00940aa67e62f24e6919, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Hurt
+    second: {fileID: 7400000, guid: 71452dcf80b48d24b960389e7cdcfb0a, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Idle
+    second: {fileID: 7400000, guid: 170b2743cc90efb4ab0d372d330ecd84, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Summon
+    second: {fileID: 7400000, guid: 1ec24c5018f35e348945faa7efc9b5dd, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Walk
+    second: {fileID: 7400000, guid: b3736ddf4d2bd51449e8e50cd272e9fe, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -102,7 +142,7 @@ ScriptedImporter:
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
   importFileNodeState: 1
-  platformSettingsDirtyTick: 639212030090439967
+  platformSettingsDirtyTick: 639212344703281512
   textureAssetName: 
   singleSpriteImportData:
   - name: 

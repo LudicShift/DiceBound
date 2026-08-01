@@ -56,6 +56,7 @@ MonoBehaviour:
   con: 0
   maxhp: 0
   hp: 0
+  group: 0
 --- !u!114 &-5895628856896005233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,6 +81,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Armored Axeman
       objectReference: {fileID: 0}
+    - target: {fileID: 1160356261127867848, guid: 4dc4706ac72c3a24089ba01f97ddd6ac, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a1c1bd40becca914ba36f9af8f5f939c, type: 2}
     - target: {fileID: 7878350319992209165, guid: 4dc4706ac72c3a24089ba01f97ddd6ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

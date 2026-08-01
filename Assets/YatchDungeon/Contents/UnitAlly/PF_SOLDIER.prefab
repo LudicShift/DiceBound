@@ -56,6 +56,7 @@ MonoBehaviour:
   con: 0
   maxhp: 0
   hp: 0
+  group: 0
 --- !u!114 &-164458703295529515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,6 +81,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Soldier
       objectReference: {fileID: 0}
+    - target: {fileID: 1160356261127867848, guid: 0c5fa6443f7b2c549af798db99a3d4a1, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: edd160c6963e46845bed89835d12b8b3, type: 2}
     - target: {fileID: 7878350319992209165, guid: 0c5fa6443f7b2c549af798db99a3d4a1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

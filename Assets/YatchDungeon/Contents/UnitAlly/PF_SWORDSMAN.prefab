@@ -56,6 +56,7 @@ MonoBehaviour:
   con: 0
   maxhp: 0
   hp: 0
+  group: 0
 --- !u!114 &6255343161127551793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,6 +81,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Swordsman
       objectReference: {fileID: 0}
+    - target: {fileID: 1160356261127867848, guid: 6f95b2320dfb543438318edba52b1917, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b05c65d772eeb474faf51b8a0617111d, type: 2}
     - target: {fileID: 7878350319992209165, guid: 6f95b2320dfb543438318edba52b1917, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

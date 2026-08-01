@@ -2,7 +2,57 @@ fileFormatVersion: 2
 guid: d65a115449b8df140b71a064e55ee703
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Attack
+    second: {fileID: 7400000, guid: 25f5be940f903bc4c99c74d74db5eeda, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Attack(With magic effects)
+    second: {fileID: 7400000, guid: fcc3287fe19e73946b5210840f062f2f, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Attack_effect
+    second: {fileID: 7400000, guid: 6790b8ab9743b374bb21049393991668, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Death
+    second: {fileID: 7400000, guid: 4788153d12a6faf428bcf123857f9878, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Heal
+    second: {fileID: 7400000, guid: c6a488af0dd293a489eeb61868fd808f, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Heal(With magic effects)
+    second: {fileID: 7400000, guid: 3c907090423a71c469235b4f85c16857, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Heal_effect
+    second: {fileID: 7400000, guid: c07930f23a665cb4491b17f82660d4cc, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Hurt
+    second: {fileID: 7400000, guid: b2e18d4cc5819574690d49815bae4dbb, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Idle
+    second: {fileID: 7400000, guid: 49d3d29f05d206c4fa5c2ff0c54f7da1, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Walk
+    second: {fileID: 7400000, guid: 65f6454d8ea5cb6438f5f46d012d4678, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -102,7 +152,7 @@ ScriptedImporter:
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
   importFileNodeState: 1
-  platformSettingsDirtyTick: 639212030090414852
+  platformSettingsDirtyTick: 639212344585861927
   textureAssetName: 
   singleSpriteImportData:
   - name: 

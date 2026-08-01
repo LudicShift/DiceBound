@@ -56,6 +56,7 @@ MonoBehaviour:
   con: 0
   maxhp: 0
   hp: 0
+  group: 0
 --- !u!114 &-2866483243043681456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,6 +81,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lancer
       objectReference: {fileID: 0}
+    - target: {fileID: 1160356261127867848, guid: e451dbd025473fd488951d06e36ed4b7, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f121b5f0dd42fef4ba15f7ea011afdb9, type: 2}
     - target: {fileID: 3626916397498700004, guid: e451dbd025473fd488951d06e36ed4b7, type: 3}
       propertyPath: m_Color.b
       value: 1

@@ -2,7 +2,57 @@ fileFormatVersion: 2
 guid: 9cc6e83351a835c42a3ad8fd46280d7e
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Attack01
+    second: {fileID: 7400000, guid: d55bfdb9fadb6724db2d7412b8c28c81, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Attack01(With magic effects)
+    second: {fileID: 7400000, guid: 3a0b062da74391446adf6599cb759814, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Attack01_Effect
+    second: {fileID: 7400000, guid: b4550e801e3c4914a9247244912e7197, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Attack02
+    second: {fileID: 7400000, guid: 3bd83e560a37a9942a7d0cd4e8721ec6, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Attack02(With magic effects)
+    second: {fileID: 7400000, guid: f4270ce8098f8bc428106bc985994c72, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Attack02_Effect
+    second: {fileID: 7400000, guid: 2473996c08962ab4d826304e75a37b14, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Death
+    second: {fileID: 7400000, guid: 81438030b7c667e40b911deab79dbded, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Hurt
+    second: {fileID: 7400000, guid: a85684f7015024148bbd52912e3e0031, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Idle
+    second: {fileID: 7400000, guid: b6f1dcdc79d16e14c845e80a2d819368, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Walk
+    second: {fileID: 7400000, guid: 1fc95055a55fdfb42a0dccfc3ff6637a, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -102,7 +152,7 @@ ScriptedImporter:
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
   importFileNodeState: 1
-  platformSettingsDirtyTick: 639212030090374497
+  platformSettingsDirtyTick: 639212345603795719
   textureAssetName: 
   singleSpriteImportData:
   - name: 

@@ -2,7 +2,32 @@ fileFormatVersion: 2
 guid: c4910d12a94106e4ba242f0aa14993b1
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Attack01
+    second: {fileID: 7400000, guid: aab92500e13c32a4facfb9741265e3b0, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Attack02
+    second: {fileID: 7400000, guid: 876bf34458c687d4a855114929ee3f32, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Death
+    second: {fileID: 7400000, guid: 0e5ab75e3b0611943954038098fad8a4, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Flying
+    second: {fileID: 7400000, guid: 3bccf0715b0841d449439486f1aafdcf, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Hurt
+    second: {fileID: 7400000, guid: abb53ef4ccc80c348955f26c9f26bd43, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -102,7 +127,7 @@ ScriptedImporter:
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
   importFileNodeState: 1
-  platformSettingsDirtyTick: 639212030090485721
+  platformSettingsDirtyTick: 639212343207376693
   textureAssetName: 
   singleSpriteImportData:
   - name: 

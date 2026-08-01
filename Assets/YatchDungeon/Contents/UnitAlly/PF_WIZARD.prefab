@@ -56,6 +56,7 @@ MonoBehaviour:
   con: 0
   maxhp: 0
   hp: 0
+  group: 0
 --- !u!114 &-267721017496849204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,6 +81,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wizard
       objectReference: {fileID: 0}
+    - target: {fileID: 1160356261127867848, guid: 9cc6e83351a835c42a3ad8fd46280d7e, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f9599ea8e28308844a15cbeefeca6179, type: 2}
     - target: {fileID: 7878350319992209165, guid: 9cc6e83351a835c42a3ad8fd46280d7e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

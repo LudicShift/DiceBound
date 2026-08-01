@@ -56,6 +56,7 @@ MonoBehaviour:
   con: 0
   maxhp: 0
   hp: 0
+  group: 0
 --- !u!114 &-5808130160273033745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,6 +81,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Knight Templar
       objectReference: {fileID: 0}
+    - target: {fileID: 1160356261127867848, guid: 3ff8b1a0bbfbe16408bb71e135652201, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c20cd87d450d8eb41abbfa8161774fb1, type: 2}
     - target: {fileID: 7878350319992209165, guid: 3ff8b1a0bbfbe16408bb71e135652201, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
