@@ -130,6 +130,7 @@ namespace YatchDungeon
         public void OnEndBattle()
         {
             _abilityAgent.SetUpdate(false);
+            Animate("Idle");
         }
 
         public void Animate(string value)
