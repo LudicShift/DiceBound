@@ -31,18 +31,21 @@ namespace YatchDungeon
 
         private void OnPlayWaveButtonClick()
         {
-            PlayWave(_currentWave);
-            _currentWave++;
+            if (!_isPlaying)
+            {
+                PlayWave(_currentWave);
+                _currentWave++;
+            }
         }
 
         public void PlayWave(int index)
         {
+            _isPlaying = true;
             StartCoroutine(WaveRoutine(index));
         }
 
         private IEnumerator WaveRoutine(int index)
         {
-          
             var wave = _waveList[index];
             int enemyCount = 0;
             while (enemyCount < wave.numberOfEnemy)
@@ -54,6 +57,7 @@ namespace YatchDungeon
             _battleDirector.BeginBattle();
             yield return new WaitUntil(() => _unitDirector.GetEnemyUnitCount() == 0 || _unitDirector.GetAllUnitCount() == 0);
             _battleDirector.EndBattle();
+            _isPlaying = false;
         }
         
         
