@@ -20,9 +20,12 @@ namespace YatchDungeon
         [SerializeField] private float moveDuration;
 
         [SerializeField] private SkillMoveOption moveOption;
+        
+        private ParticleSystem _particleSystem;
 
         public void Awake()
         {
+            _particleSystem =  GetComponent<ParticleSystem>();
             Destroy(gameObject, lifetime);
         }
 
@@ -35,7 +38,7 @@ namespace YatchDungeon
         {
             if (flip)
             {
-                transform.eulerAngles = new Vector3(0, 180f, 0);
+                _particleSystem.DOFlip();
             }
         }
 
