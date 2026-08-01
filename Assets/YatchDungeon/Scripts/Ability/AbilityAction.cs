@@ -14,7 +14,7 @@ namespace YatchDungeon
         
         public static void MeleeAttack(AbilityEffect effect, AbilityPropertySet propertySet, ref AbilityContext context)
         {
-            var targetList = _unitDirector.GetTarget(context.self,context.targetOption,context.targetCount);
+            var targetList = _unitDirector.GetTarget(context.self,context.AttackTargetOption,context.targetCount);
             foreach (var target in targetList)
             {
                 var instance = Object.Instantiate(context.skillEffectPrefab);

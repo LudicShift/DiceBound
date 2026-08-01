@@ -15,15 +15,13 @@ namespace YatchDungeon
 
         private int _currentWave;
 
-        [SerializeField] private UnitPlaceGrid enemyPlaceGrid;
-
-
         private UnitDirector _unitDirector;
         private bool _isPlaying;
         private BattleDirector _battleDirector;
 
         public override IEnumerator OnInitialize()
         {
+            _battleDirector = DirectorFacade.GetSubMode<BattleDirector>();
             _unitDirector = DirectorFacade.GetSubMode<UnitDirector>();
             playWaveButtonWidget.AddOnClickAction(OnPlayWaveButtonClick);
             _waveList = DataTableManager.FindAllRows<WaveDataTableRow>().ToDictionary(x=>x.index);
@@ -54,7 +52,7 @@ namespace YatchDungeon
             }
             
             _battleDirector.BeginBattle();
-            yield return new WaitUntil(() => _unitDirector.GetEnemyUnitCount() > 0);
+            yield return new WaitUntil(() => _unitDirector.GetEnemyUnitCount() == 0 || _unitDirector.GetAllUnitCount() == 0);
             _battleDirector.EndBattle();
         }
         

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-3601722807917110388
+--- !u!114 &-8650182091541677184
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -17,6 +17,24 @@ MonoBehaviour:
   isEnable: 1
   index: 0
   language: EN
+  fontAsset: {fileID: 11400000, guid: 833bd7407d13e384cbb50a212dc49465, type: 2}
+--- !u!114 &-2293981524070604959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b624d8ed0c4d4ff5aef32fa316eebd36, type: 3}
+  m_Name: KR_0
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.LocalizedFontDataTableRow
+  id: KR_0
+  tags: []
+  isEnable: 1
+  index: 0
+  language: KR
   fontAsset: {fileID: 11400000, guid: 833bd7407d13e384cbb50a212dc49465, type: 2}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -35,23 +53,5 @@ MonoBehaviour:
   rowTypeName: KCoreKit.LocalizedFontDataTableRow, KCoreKit, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   dataList:
-  - {fileID: 4395795916980540763}
-  - {fileID: -3601722807917110388}
---- !u!114 &4395795916980540763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b624d8ed0c4d4ff5aef32fa316eebd36, type: 3}
-  m_Name: KR_0
-  m_EditorClassIdentifier: KCoreKit::KCoreKit.LocalizedFontDataTableRow
-  id: KR_0
-  tags: []
-  isEnable: 1
-  index: 0
-  language: KR
-  fontAsset: {fileID: 11400000, guid: 833bd7407d13e384cbb50a212dc49465, type: 2}
+  - {fileID: -2293981524070604959}
+  - {fileID: -8650182091541677184}

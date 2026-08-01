@@ -27,15 +27,19 @@ namespace YatchDungeon
         
         public Action<UnitCore> onDeadAction;
         private AbilityAgent _abilityAgent;
+        public UnitGroup group;
+        private SpriteRenderer _spriteRenderer;
 
         public void Awake()
         {
             _abilityAgent = GetComponent<AbilityAgent>();
+            _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         }
 
         public void Setup(UnitDataTableRow data)
         {
             _data = data;
+            group =  data.group;
             spd = data.spd;
             def = data.def;
             mag = data.mag;
@@ -69,7 +73,7 @@ namespace YatchDungeon
                 self = GetComponent<UnitCore>(),
                 skillEffectPrefab= skill.effectPrefab,
                 castTime = skill.castTime,
-                targetOption =  skill.targetOption,
+                AttackTargetOption =  skill.attackTargetOption,
                 targetCount =  skill.targetCount,
             };
             _abilityAgent.AddEffect(skill.abilityId);
@@ -120,6 +124,11 @@ namespace YatchDungeon
             {
                 onDeadAction?.Invoke(this);
             }
+        }
+
+        public void FlipSprite(bool value)
+        {
+            _spriteRenderer.flipX  = value;
         }
     }
 }

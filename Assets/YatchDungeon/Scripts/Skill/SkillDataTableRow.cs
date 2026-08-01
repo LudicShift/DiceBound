@@ -17,7 +17,7 @@ namespace YatchDungeon
         public string abilityId;
         public float cooldown;
         public float castTime;
-        public UnitTargetOption targetOption;
+        public UnitAttackTargetOption attackTargetOption;
         public int targetCount;
         public SkillEffect effectPrefab;
       

@@ -6,7 +6,7 @@ namespace YatchDungeon
     {
         public UnitCore self;
         public SkillEffect skillEffectPrefab;
-        public UnitTargetOption targetOption;
+        public UnitAttackTargetOption AttackTargetOption;
         public float castTime;
         public int targetCount;
     }

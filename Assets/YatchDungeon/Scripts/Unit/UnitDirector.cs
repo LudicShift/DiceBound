@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 
 namespace YatchDungeon
 {
-    public enum UnitTargetOption
+    public enum UnitAttackTargetOption
     {
         Ally,
         Enemy,
@@ -183,9 +183,11 @@ namespace YatchDungeon
             {
                 case UnitGroup.Ally:
                     _allies.Add(instance);
+                    instance.FlipSprite(false);
                     break;
                 case UnitGroup.Enemy:
                     _enemies.Add(instance);
+                    instance.FlipSprite(true);
                     break; 
             }
         }
@@ -200,7 +202,7 @@ namespace YatchDungeon
 
         public int GetEnemyUnitCount()
         {
-            return enemyPlaceGrid.GetUnitCount();
+            return _enemies.Count;
         }
 
         private UnitPlaceCell PickSpawnCell(UnitDataTableRow data)
@@ -224,15 +226,16 @@ namespace YatchDungeon
             return _units;
         }
 
-        public List<UnitCore> GetTarget(UnitCore self, UnitTargetOption target, int count)
+        public List<UnitCore> GetTarget(UnitCore self, UnitAttackTargetOption attackTarget, int count)
         {
-            switch (target)
+            
+            switch (attackTarget)
             {
-                case UnitTargetOption.Ally:
-                    return GetRandomAllies(count);
-                case UnitTargetOption.Enemy:
-                    return GetRandomEnemies(count);
-                case UnitTargetOption.Self:
+                case UnitAttackTargetOption.Ally:
+                    return self.group == UnitGroup.Ally? GetRandomAllies(count) : GetRandomEnemies(count);
+                case UnitAttackTargetOption.Enemy:
+                    return self.group == UnitGroup.Ally? GetRandomEnemies(count): GetRandomAllies(count);
+                case UnitAttackTargetOption.Self:
                     return new List<UnitCore> { self };
             }
 
@@ -247,6 +250,11 @@ namespace YatchDungeon
         private List<UnitCore> GetRandomAllies(int count)
         {
             return _allies.GetRandomElements(count);
+        }
+
+        public int GetAllUnitCount()
+        {
+            return _allies.Count;
         }
     }
 }
