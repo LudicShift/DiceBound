@@ -29,11 +29,22 @@ namespace YatchDungeon
         private AbilityAgent _abilityAgent;
         public UnitGroup group;
         private SpriteRenderer _spriteRenderer;
+        private GaugeWidget _hpGague;
+        private readonly Vector2 _hpOffset = new Vector2(0,150f);
 
         public void Awake()
         {
             _abilityAgent = GetComponent<AbilityAgent>();
             _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        }
+
+        public void Update()
+        {
+            if (_hpGague)
+            {
+               var screenPoint =  RectTransformUtility.WorldToScreenPoint(CameraManager.GetMainCamera(), transform.position);
+                _hpGague.rectTransform.anchoredPosition = screenPoint+_hpOffset;
+            }
         }
 
         public void Setup(UnitDataTableRow data)
@@ -76,6 +87,7 @@ namespace YatchDungeon
                 AttackTargetOption =  skill.attackTargetOption,
                 targetCount =  skill.targetCount,
             };
+            
             _abilityAgent.AddEffect(skill.abilityId);
             switch (skill.skillType)
             {
@@ -120,15 +132,25 @@ namespace YatchDungeon
         public void OnDamage(float damage)
         {
             hp -= damage;
+            Debug.Log($"hp:{hp}");
+            Debug.Log($"damage:{damage}");
+            _hpGague.OnChange(hp);
             if (hp <= 0)
             {
                 onDeadAction?.Invoke(this);
+                Destroy(_hpGague.gameObject);
             }
         }
 
         public void FlipSprite(bool value)
         {
             _spriteRenderer.flipX  = value;
+        }
+
+        public void BindHPGauge(GaugeWidget hpGauge)
+        {
+            _hpGague = hpGauge;
+            _hpGague.Setup(maxhp,hp);
         }
     }
 }

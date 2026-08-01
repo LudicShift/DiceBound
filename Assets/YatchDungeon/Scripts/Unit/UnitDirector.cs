@@ -26,6 +26,8 @@ namespace YatchDungeon
         private Camera _camera;
         [SerializeField] private UnitPlaceGrid allyPlaceGrid;
         [SerializeField] private UnitPlaceGrid enemyPlaceGrid;
+        
+        [SerializeField] private Canvas hpCanvas;
 
         private List<UnitCore> _units = new List<UnitCore>();
         private List<UnitCore> _allies = new List<UnitCore>();
@@ -190,6 +192,10 @@ namespace YatchDungeon
                     instance.FlipSprite(true);
                     break; 
             }
+            
+            var hpGauge = PrefabManager.Create<GaugeWidget>();
+            hpGauge.SetParent(hpCanvas.transform);
+            instance.BindHPGauge(hpGauge);
         }
 
         private void OnUnitDead(UnitCore unit)
