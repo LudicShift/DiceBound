@@ -37,7 +37,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 960, y: 540}
-  m_SizeDelta: {x: 144, y: 20}
+  m_SizeDelta: {x: 72, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4134974741140569124
 CanvasRenderer:
@@ -101,6 +101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99b5da10ec7942ee839cabae858585c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.GaugeWidget
-  maxValue: 0
+  maxValue: -11.38
   currentValue: 0
   changeDuration: 0.1
