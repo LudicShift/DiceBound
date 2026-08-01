@@ -26,6 +26,7 @@ namespace YatchDungeon
         public float hp;
         
         public Action<UnitCore> onDeadAction;
+        public Action<UnitCore,int> onHitAction;
         private AbilityAgent _abilityAgent;
         public UnitGroup group;
         private SpriteRenderer _spriteRenderer;
@@ -141,6 +142,7 @@ namespace YatchDungeon
         public void OnDamage(float damage)
         {
             hp -= damage;
+            onHitAction?.Invoke(this,(int)damage);
             Animate("Hurt");
             _hpGague.OnChange(hp);
             if (hp <= 0)

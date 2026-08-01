@@ -34,10 +34,12 @@ namespace YatchDungeon
         private List<UnitCore> _enemies = new List<UnitCore>();
 
         private SkillDirector _skillDirector;
+        private BattleDirector _battleDirector;
 
         public override IEnumerator OnInitialize()
         {
             _skillDirector = DirectorFacade.GetSubMode<SkillDirector>();
+            _battleDirector = DirectorFacade.GetSubMode<BattleDirector>();
             _camera = CameraManager.GetMainCamera();
             _unitDataMap = DataTableManager.FindAllRows<UnitDataTableRow>().ToDictionary(x => x.id);
 
@@ -61,10 +63,9 @@ namespace YatchDungeon
                 // 2. 호버된 셀에 이미 다른 유닛이 있는 경우 (자리 교체 혹은 원래 자리 복귀)
                 else
                 {
-                    // 여기서는 안전하게 원래 자리로 되돌리거나, 필요에 따라 스왑 로직 구현 가능
-                    // 우선 원래 자리로 돌리는 안전한 처리:
-                    _draggingUnit.MoveTo(_restoreCell.transform.position);
-                    _restoreCell.PushUnit(_draggingUnit);
+                    var unit = _hoveredCell.PopUnit();
+                    unit.MoveTo(_restoreCell.transform.position);
+                    _restoreCell.PushUnit(unit);
                 }
             }
             else
@@ -176,6 +177,7 @@ namespace YatchDungeon
             }
 
             instance.onDeadAction += OnUnitDead;
+            instance.onHitAction += OnUnitHit;
 
             var cell = PickSpawnCell(data);
             instance.MoveTo(cell.transform.position);
@@ -196,6 +198,11 @@ namespace YatchDungeon
             var hpGauge = PrefabManager.Create<GaugeWidget>();
             hpGauge.SetParent(hpCanvas.transform);
             instance.BindHPGauge(hpGauge);
+        }
+
+        private void OnUnitHit(UnitCore core, int damage)
+        {
+            _battleDirector.ShowDamage(core,damage);
         }
 
         private void OnUnitDead(UnitCore unit)
