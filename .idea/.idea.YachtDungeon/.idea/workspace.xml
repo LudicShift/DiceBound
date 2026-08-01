@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bfb779d-8d8b-461e-97e3-3eb14cfd33e0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Common/DamageWidget.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Common/DamageWidget.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Title/TitleDirector.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Title/TitleDirector.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.YachtDungeon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.YachtDungeon/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/YatchDungeon/Resources/PrefabManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/YatchDungeon/Resources/PrefabManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/YatchDungeon/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/YatchDungeon/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Unit/BattleDirector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Unit/BattleDirector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Unit/UnitCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Unit/UnitCore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Unit/UnitDirector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Unit/UnitDirector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Wave/WaveDirector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Wave/WaveDirector.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +49,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Skill/SkillDataTableRow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Skill/SkillDirector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Skill/SkillEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Title/TitleDirector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Unit/BattleDirector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Unit/UnitCore.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Unit/UnitDIrector.cs" root0="FORCE_HIGHLIGHTING" />
@@ -72,21 +67,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "develop",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.3.11f1\Editor\Unity.exe" />
