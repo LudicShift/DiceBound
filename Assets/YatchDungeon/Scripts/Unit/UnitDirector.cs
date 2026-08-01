@@ -103,7 +103,7 @@ namespace YatchDungeon
 
         public void Update()
         {
-            if (_camera)
+            if (_camera && !_battleDirector.IsPlaying())
             {
                 CheckDraggingUnit();
                 CheckHoverUnitCell();

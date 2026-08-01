@@ -6,11 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="3bfb779d-8d8b-461e-97e3-3eb14cfd33e0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.YachtDungeon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.YachtDungeon/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/YatchDungeon/Prefabs/PF_UnitCell.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/YatchDungeon/Prefabs/PF_UnitCell.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/YatchDungeon/Contents/Image/Character/Tiny RPG Character Asset Pack/Aseprite file/Soldier.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/YatchDungeon/Contents/Image/Character/Tiny RPG Character Asset Pack/Aseprite file/Soldier.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Ability/AbilityAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Ability/AbilityAction.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/YatchDungeon/Scripts/DIce/DiceDirector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/YatchDungeon/Scripts/DIce/DiceDirector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Unit/BattleDirector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Unit/BattleDirector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Unit/UnitCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Unit/UnitCore.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Unit/UnitDirector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Unit/UnitDirector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Unit/UnitPlaceCell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Unit/UnitPlaceCell.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Unit/UnitPlaceGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Unit/UnitPlaceGrid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Wave/WaveDirector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Wave/WaveDirector.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +29,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1b6535aa091d41cf8b3ca222ed9ceef0212600/49/bde2ece7/RectTransform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1b6535aa091d41cf8b3ca222ed9ceef0212600/f3/877425a9/Time.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/66e67b0ae14d416886d0dc376a0bf4fb4000/16/d8c2aaad/ABSAnimationComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/85f554d43a0a4e42b62a44c4e3531b102b800/06/f387f299/DOTween.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/85f554d43a0a4e42b62a44c4e3531b102b800/06/f387f299/DOTween.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/db9d5c0615754553bd220d886adb797437a00/da/1fded2e0/Animator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/KCoreKit/Scripts/AbilitySystem/AbilityScheduler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Ability/AbilityAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Ability/AbilityCondition.cs" root0="FORCE_HIGHLIGHTING" />
@@ -132,6 +135,7 @@
       <updated>1785501550341</updated>
       <workItem from="1785501552087" duration="1449000" />
       <workItem from="1785503050224" duration="15042000" />
+      <workItem from="1785603523480" duration="756000" />
     </task>
     <servers />
   </component>
@@ -163,19 +167,6 @@
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/YatchDungeon/Scripts/Unit/UnitDirector.cs</url>
-          <line>89</line>
-          <properties documentPath="C:\Users\KHJ\Documents\YachtDungeon\Assets\YatchDungeon\Scripts\Unit\UnitDirector.cs" containingFunctionPresentation="Method 'OnMouseDownUnit'">
-            <startOffsets>
-              <option value="2997" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3036" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

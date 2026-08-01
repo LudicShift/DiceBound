@@ -11,18 +11,20 @@ namespace YatchDungeon
         {
             _unitDirector = DirectorFacade.GetSubMode<UnitDirector>();
         }
-        
+
         public static void MeleeAttack(AbilityEffect effect, AbilityPropertySet propertySet, ref AbilityContext context)
         {
-            
-            var targetList = _unitDirector.GetTarget(context.self,context.AttackTargetOption,context.targetCount);
-            foreach (var target in targetList)
+            var targetList = _unitDirector.GetTarget(context.self, context.AttackTargetOption, context.targetCount);
+            var abilityContext = context;
+            context.self.ShowAttackAnimation(() =>
             {
-                context.self.Animate("Attack01");
-                var instance = Object.Instantiate(context.skillEffectPrefab);
-                instance.SetDamage(UnitUtility.GetApMelee(context.self));
-                instance.Execute(target);
-            }
+                foreach (var target in targetList)
+                {
+                    var instance = Object.Instantiate(abilityContext.skillEffectPrefab);
+                    instance.SetDamage(UnitUtility.GetApMelee(abilityContext.self));
+                    instance.Execute(target);
+                }
+            });
         }
     }
 }

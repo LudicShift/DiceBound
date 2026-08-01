@@ -54,6 +54,7 @@ namespace YatchDungeon
                 enemyCount++;
             }
             
+            yield return new WaitForSeconds(0.5f);
             _battleDirector.BeginBattle();
             yield return new WaitUntil(() => _unitDirector.GetEnemyUnitCount() == 0 || _unitDirector.GetAllUnitCount() == 0);
             _battleDirector.EndBattle();

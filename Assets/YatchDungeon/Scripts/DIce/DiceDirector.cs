@@ -122,7 +122,7 @@ namespace YatchDungeon
                 _remainDices[i].MoveTo(_remainPoints[i].transform.position);
             }
 
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(0.5f);
             _keepDices.Clear();
             foreach (var point in _keepPoints)
             {

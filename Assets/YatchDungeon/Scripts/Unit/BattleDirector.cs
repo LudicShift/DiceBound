@@ -11,6 +11,7 @@ namespace YatchDungeon
         [SerializeField]
         private Canvas damageCanvas;
         private ObjectPool<DamageWidget>  _damageWidgetPool;
+        private bool _isPlaying;
 
         public override IEnumerator OnInitialize()
         {
@@ -38,6 +39,7 @@ namespace YatchDungeon
 
         public void BeginBattle()
         {
+            _isPlaying = true;
            var units =  _unitDirector.GetAllUnit();
            foreach (var unit in units)
            {
@@ -47,6 +49,7 @@ namespace YatchDungeon
 
         public void EndBattle()
         {
+            _isPlaying = false;
             var units =  _unitDirector.GetAllUnit();
             foreach (var unit in units)
             {
@@ -61,6 +64,11 @@ namespace YatchDungeon
            damageWidget.Setup(damage);
            damageWidget.rectTransform.anchoredPosition = screenPoint;
            damageWidget.Animate(x=>_damageWidgetPool.Release(x));
+        }
+
+        public bool IsPlaying()
+        {
+            return _isPlaying;
         }
     }
 }
