@@ -1,136 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8717750438861341278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06f2606026b4405b848c281a13adc79f, type: 3}
-  m_Name: ONE_PAIR
-  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.CombinationDataTableRow
-  id: ONE_PAIR
-  tags: []
-  isEnable: 1
-  priority: 8
-  nameKey: HAND_ONE_PAIR
-  descKey: 
-  unitID: UN_SOLDIER
-  grade: Common
-  additionalResourceId: '-'
---- !u!114 &-8385099291837766650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06f2606026b4405b848c281a13adc79f, type: 3}
-  m_Name: L_STRAIGHT
-  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.CombinationDataTableRow
-  id: L_STRAIGHT
-  tags: []
-  isEnable: 1
-  priority: 2
-  nameKey: HAND_L_STRAIGHT
-  descKey: 
-  unitID: UN_WIZARD
-  grade: Epic
-  additionalResourceId: MAT_MAGIC_SCROLL
---- !u!114 &-4410508502971242396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06f2606026b4405b848c281a13adc79f, type: 3}
-  m_Name: TWO_PAIR
-  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.CombinationDataTableRow
-  id: TWO_PAIR
-  tags: []
-  isEnable: 1
-  priority: 7
-  nameKey: HAND_TWO_PAIR
-  descKey: 
-  unitID: UN_ARCHER
-  grade: Common
-  additionalResourceId: '-'
---- !u!114 &-2451516752974729287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06f2606026b4405b848c281a13adc79f, type: 3}
-  m_Name: S_STRAIGHT
-  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.CombinationDataTableRow
-  id: S_STRAIGHT
-  tags: []
-  isEnable: 1
-  priority: 5
-  nameKey: HAND_S_STRAIGHT
-  descKey: 
-  unitID: UN_SWORDSMAN
-  grade: Rare
-  additionalResourceId: MAT_MANA_STONE
---- !u!114 &-1097890441110251786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06f2606026b4405b848c281a13adc79f, type: 3}
-  m_Name: FULL_HOUSE
-  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.CombinationDataTableRow
-  id: FULL_HOUSE
-  tags: []
-  isEnable: 1
-  priority: 4
-  nameKey: HAND_FULL_HOUSE
-  descKey: 
-  unitID: UN_PRIEST
-  grade: Rare
-  additionalResourceId: MAT_HOLY_WATER
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 463daf5080d293049bd98a91154e958f, type: 3}
-  m_Name: DT_Combination
-  m_EditorClassIdentifier: KCoreKit::KCoreKit.DataTable
-  rowScript: {fileID: 11500000, guid: 06f2606026b4405b848c281a13adc79f, type: 3}
-  csv: {fileID: 4900000, guid: b2e3f491b378ee54a88136d9806f0d59, type: 3}
-  rowTypeName: YatchDungeon.CombinationDataTableRow, Assembly-CSharp, Version=0.0.0.0,
-    Culture=neutral, PublicKeyToken=null
-  dataList:
-  - {fileID: -8717750438861341278}
-  - {fileID: -4410508502971242396}
-  - {fileID: 5240246851079034809}
-  - {fileID: -2451516752974729287}
-  - {fileID: -1097890441110251786}
-  - {fileID: 1443607471193894243}
-  - {fileID: -8385099291837766650}
-  - {fileID: 158295949098874117}
---- !u!114 &158295949098874117
+--- !u!114 &-8860331030443790141
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,7 +21,28 @@ MonoBehaviour:
   unitID: UN_KNIGHT
   grade: Epic
   additionalResourceId: MAT_JOKER_CORE
---- !u!114 &1443607471193894243
+--- !u!114 &-4421302076214413330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06f2606026b4405b848c281a13adc79f, type: 3}
+  m_Name: L_STRAIGHT
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.CombinationDataTableRow
+  id: L_STRAIGHT
+  tags: []
+  isEnable: 1
+  priority: 2
+  nameKey: HAND_L_STRAIGHT
+  descKey: 
+  unitID: UN_WIZARD
+  grade: Epic
+  additionalResourceId: MAT_MAGIC_SCROLL
+--- !u!114 &-3154742835877965118
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,7 +63,28 @@ MonoBehaviour:
   unitID: UN_AXEMAN
   grade: Epic
   additionalResourceId: MAT_HARD_STEEL
---- !u!114 &5240246851079034809
+--- !u!114 &-609862409031702388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06f2606026b4405b848c281a13adc79f, type: 3}
+  m_Name: ONE_PAIR
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.CombinationDataTableRow
+  id: ONE_PAIR
+  tags: []
+  isEnable: 1
+  priority: 8
+  nameKey: HAND_ONE_PAIR
+  descKey: 
+  unitID: UN_SOLDIER
+  grade: Common
+  additionalResourceId: '-'
+--- !u!114 &-560717088874560399
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -193,3 +105,91 @@ MonoBehaviour:
   unitID: UN_LANCER
   grade: Rare
   additionalResourceId: '-'
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463daf5080d293049bd98a91154e958f, type: 3}
+  m_Name: DT_Combination
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.DataTable
+  rowScript: {fileID: 11500000, guid: 06f2606026b4405b848c281a13adc79f, type: 3}
+  csv: {fileID: 4900000, guid: b2e3f491b378ee54a88136d9806f0d59, type: 3}
+  rowTypeName: YatchDungeon.CombinationDataTableRow, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  dataList:
+  - {fileID: -609862409031702388}
+  - {fileID: 5919506617804424062}
+  - {fileID: -560717088874560399}
+  - {fileID: 6738092760484547382}
+  - {fileID: 8551862668888134357}
+  - {fileID: -3154742835877965118}
+  - {fileID: -4421302076214413330}
+  - {fileID: -8860331030443790141}
+--- !u!114 &5919506617804424062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06f2606026b4405b848c281a13adc79f, type: 3}
+  m_Name: TWO_PAIR
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.CombinationDataTableRow
+  id: TWO_PAIR
+  tags: []
+  isEnable: 1
+  priority: 7
+  nameKey: HAND_TWO_PAIR
+  descKey: 
+  unitID: UN_ARCHER
+  grade: Common
+  additionalResourceId: '-'
+--- !u!114 &6738092760484547382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06f2606026b4405b848c281a13adc79f, type: 3}
+  m_Name: S_STRAIGHT
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.CombinationDataTableRow
+  id: S_STRAIGHT
+  tags: []
+  isEnable: 1
+  priority: 5
+  nameKey: HAND_S_STRAIGHT
+  descKey: 
+  unitID: UN_SWORDSMAN
+  grade: Rare
+  additionalResourceId: MAT_MANA_STONE
+--- !u!114 &8551862668888134357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06f2606026b4405b848c281a13adc79f, type: 3}
+  m_Name: FULL_HOUSE
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.CombinationDataTableRow
+  id: FULL_HOUSE
+  tags: []
+  isEnable: 1
+  priority: 4
+  nameKey: HAND_FULL_HOUSE
+  descKey: 
+  unitID: UN_PRIEST
+  grade: Rare
+  additionalResourceId: MAT_HOLY_WATER
