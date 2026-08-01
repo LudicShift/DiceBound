@@ -17,27 +17,9 @@ MonoBehaviour:
   rowTypeName: KCoreKit.LocalizedFontDataTableRow, KCoreKit, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   dataList:
-  - {fileID: 8518564662470927839}
-  - {fileID: 6020562224308567176}
---- !u!114 &6020562224308567176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b624d8ed0c4d4ff5aef32fa316eebd36, type: 3}
-  m_Name: EN_0
-  m_EditorClassIdentifier: KCoreKit::KCoreKit.LocalizedFontDataTableRow
-  id: EN_0
-  tags: []
-  isEnable: 1
-  index: 0
-  language: EN
-  fontAsset: {fileID: 11400000, guid: 833bd7407d13e384cbb50a212dc49465, type: 2}
---- !u!114 &8518564662470927839
+  - {fileID: 3766137150216777989}
+  - {fileID: 8408834263129295433}
+--- !u!114 &3766137150216777989
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,4 +36,22 @@ MonoBehaviour:
   isEnable: 1
   index: 0
   language: KR
+  fontAsset: {fileID: 11400000, guid: 833bd7407d13e384cbb50a212dc49465, type: 2}
+--- !u!114 &8408834263129295433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b624d8ed0c4d4ff5aef32fa316eebd36, type: 3}
+  m_Name: EN_0
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.LocalizedFontDataTableRow
+  id: EN_0
+  tags: []
+  isEnable: 1
+  index: 0
+  language: EN
   fontAsset: {fileID: 11400000, guid: 833bd7407d13e384cbb50a212dc49465, type: 2}
