@@ -52,6 +52,7 @@ namespace YatchDungeon
         {
             if (_draggingUnit == null) return;
 
+            allyPlaceGrid.Hide();
             if (_hoveredCell != null)
             {
                 // 1. 호버된 셀이 비어있는 경우: 해당 셀에 배치
@@ -85,6 +86,7 @@ namespace YatchDungeon
         {
             if (_hoveredCell && !_hoveredCell.IsEmpty())
             {
+                allyPlaceGrid.Show();
                 _draggingUnit = _hoveredCell.PopUnit();
                 _restoreCell = _hoveredCell;
                 // 1. 마우스 스크린 좌표 -> 월드 좌표 변환

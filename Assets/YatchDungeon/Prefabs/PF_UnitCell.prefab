@@ -47,6 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitPlaceCell
   distance: 1
+  normalColor: {r: 0, g: 1, b: 0.9661107, a: 0.6313726}
+  hoverColor: {r: 0.9811321, g: 0.65412384, b: 0.1064436, a: 0.8666667}
 --- !u!61 &-4124590810575218473
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -175,7 +177,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 761a2fbab684b6d45864220ffd03108a, type: 3}
-  m_Color: {r: 0.45098042, g: 1, b: 0.7842837, a: 0.5058824}
+  m_Color: {r: 0.45098042, g: 1, b: 0.7842837, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

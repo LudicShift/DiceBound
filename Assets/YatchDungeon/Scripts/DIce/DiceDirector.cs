@@ -34,6 +34,7 @@ namespace YatchDungeon
         private List<DiceRemainPointWidget> _remainPoints;
         [SerializeField] private List<Sprite> diceSprite;
         [SerializeField] private List<Sprite> diceAnimationSprite;
+        [SerializeField] private Sprite emptySprite;
         private UnitDirector _unitDirector;
 
 
@@ -110,11 +111,14 @@ namespace YatchDungeon
                     _remainDices.Add(dice);
                 }
             }
+            
+            _combinationInfoWidget.SetText("");
 
             for (int i = 0; i < _remainDices.Count; i++)
             {
                 _remainPoints[i].SetDice(_remainDices[i]);
                 _remainDices[i].Warp(initialDicePoint.position);
+                _remainDices[i].SetSprite(emptySprite);
                 _remainDices[i].MoveTo(_remainPoints[i].transform.position);
             }
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using DG.Tweening;
 using UnityEngine;
 
 namespace YatchDungeon
@@ -8,24 +9,43 @@ namespace YatchDungeon
         private UnitCore _unit;
         public float distance;
         private SpriteRenderer _spriteRenderer;
+        private bool _shown;
 
+        [SerializeField] private Color normalColor;
+        [SerializeField] private Color hoverColor;
+        
+        public void Show()
+        {
+            _spriteRenderer.DOFade(0.5f, 0.2f);
+            _shown = true;
+        }
+        
+        
+        public void Hide()
+        {
+            _spriteRenderer.DOFade(0.0f, 0.2f);
+            _shown = false;
+        }
+        
         public void Awake()
         {
             _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-            _spriteRenderer.color = new Color32  (6, 169, 250, 192);
         }
 
         public void OnHoverEnter(bool value)
         {
-            if (value)
+            if (_shown && value)
             {
-                _spriteRenderer.color = new Color32 (10, 250, 6, 192);
+                _spriteRenderer.color = hoverColor;
             }
         }
         
         public void OnHoverExit()
         {
-            _spriteRenderer.color = new Color32  (6, 169, 250, 192);
+            if (_shown)
+            {
+                _spriteRenderer.color = normalColor;
+            }
         }
 
         public bool IsEmpty()

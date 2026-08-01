@@ -15,6 +15,22 @@ namespace YatchDungeon
         private List<UnitPlaceCell> _cells;
         [SerializeField] private bool reverseIndexing;
 
+        public void Show()
+        {
+            foreach (var cell in _cells)
+            {
+                cell.Show();
+            }
+        }
+
+        public void Hide()
+        {
+            foreach (var cell in _cells)
+            {
+                cell.Hide();
+            }
+        }
+        
         public void OnValidate()
         {
             _cells = GetComponentsInChildren<UnitPlaceCell>().ToList();
