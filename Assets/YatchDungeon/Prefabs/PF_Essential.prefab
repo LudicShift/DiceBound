@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2388808905897616743}
   - component: {fileID: 2294674635376956396}
   - component: {fileID: 1725539259892109697}
+  - component: {fileID: 1721135064785177694}
   m_Layer: 0
   m_Name: PF_Essential
   m_TagString: Untagged
@@ -102,3 +103,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da3bd944df254dc0a3a8cf45f199fb80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.InputManager
+--- !u!114 &1721135064785177694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4320118492477380267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c6d53009bc55764d965d801aa2a7ff8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.DontDestroyAndDistinct
