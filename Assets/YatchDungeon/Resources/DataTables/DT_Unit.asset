@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8744419791384903862
+--- !u!114 &-5487974995870626713
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,61 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_WIZARD
+  m_Name: UN_LANCER
   m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
-  id: UN_WIZARD
-  tags: []
-  isEnable: 1
-  group: 0
-  attackType: 2
-  nameKey: UN_WIZARD_NAME
-  descKey: UN_WIZARD_DESC
-  roleKey: 
-  skillBasicKey: SK_BASIC_MAGIC
-  skillPassiveKey: SK_WIZARD_01
-  skillActiveKey: '-'
-  prefab: {fileID: 2098071271932889212, guid: 38d2e25d747ffd842b9ff68fd5114e1e, type: 3}
-  hp: 150
-  str: 5
-  con: 10
-  dex: 15
-  mag: 50
-  def: 8
-  mdf: 30
-  spd: 95
---- !u!114 &-8418067097767127584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_TEMPLAR
-  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
-  id: UN_TEMPLAR
+  id: UN_LANCER
   tags: []
   isEnable: 1
   group: 0
   attackType: 0
-  nameKey: UN_TEMPLAR_NAME
-  descKey: UN_TEMPLAR_DESC
+  nameKey: UN_LANCER_NAME
+  descKey: UN_LANCER_DESC
   roleKey: 
   skillBasicKey: SK_BASIC_MELEE
-  skillPassiveKey: SK_TEMPLAR_01
+  skillPassiveKey: SK_LANCER_01
   skillActiveKey: '-'
-  prefab: {fileID: 2098071271932889212, guid: 38d2e25d747ffd842b9ff68fd5114e1e, type: 3}
-  hp: 800
-  str: 60
-  con: 50
-  dex: 20
-  mag: 40
-  def: 50
-  mdf: 40
-  spd: 100
---- !u!114 &-8060356016317681634
+  prefab: {fileID: 2098071271932889212, guid: e56b0c82a8bdf4c428de8394cce0da39, type: 3}
+  hp: 200
+  str: 22
+  con: 14
+  dex: 18
+  mag: 0
+  def: 12
+  mdf: 8
+  spd: 105
+--- !u!114 &-3703427205688398818
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,7 +64,7 @@ MonoBehaviour:
   def: 5
   mdf: 5
   spd: 120
---- !u!114 &-5020233663052663967
+--- !u!114 &-2388543074957582229
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,29 +74,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_SOLDIER
+  m_Name: UN_WIZARD
   m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
-  id: UN_SOLDIER
+  id: UN_WIZARD
   tags: []
   isEnable: 1
   group: 0
-  attackType: 0
-  nameKey: UN_SOLDIER_NAME
-  descKey: UN_SOLDIER_DESC
+  attackType: 2
+  nameKey: UN_WIZARD_NAME
+  descKey: UN_WIZARD_DESC
   roleKey: 
-  skillBasicKey: SK_BASIC_MELEE
-  skillPassiveKey: SK_SOLDIER_01
+  skillBasicKey: SK_BASIC_MAGIC
+  skillPassiveKey: SK_WIZARD_01
   skillActiveKey: '-'
-  prefab: {fileID: 2098071271932889212, guid: 38d2e25d747ffd842b9ff68fd5114e1e, type: 3}
+  prefab: {fileID: 2098071271932889212, guid: d5a314b72f63d9048893f4e35b9f8224, type: 3}
   hp: 150
-  str: 15
-  con: 12
-  dex: 10
-  mag: 0
-  def: 10
-  mdf: 5
-  spd: 100
---- !u!114 &-3487700551657140887
+  str: 5
+  con: 10
+  dex: 15
+  mag: 50
+  def: 8
+  mdf: 30
+  spd: 95
+--- !u!114 &-227763613180176600
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,7 +119,7 @@ MonoBehaviour:
   skillBasicKey: SK_BASIC_MELEE
   skillPassiveKey: SK_SWORDSMAN_01
   skillActiveKey: '-'
-  prefab: {fileID: 2098071271932889212, guid: 38d2e25d747ffd842b9ff68fd5114e1e, type: 3}
+  prefab: {fileID: 2098071271932889212, guid: f797f3fdcc22e484cae520437b315eff, type: 3}
   hp: 220
   str: 25
   con: 15
@@ -160,38 +128,6 @@ MonoBehaviour:
   def: 15
   mdf: 10
   spd: 110
---- !u!114 &-290636328239299560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_AXEMAN
-  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
-  id: UN_AXEMAN
-  tags: []
-  isEnable: 1
-  group: 0
-  attackType: 0
-  nameKey: UN_AXEMAN_NAME
-  descKey: UN_AXEMAN_DESC
-  roleKey: 
-  skillBasicKey: SK_BASIC_MELEE
-  skillPassiveKey: SK_AXEMAN_01
-  skillActiveKey: '-'
-  prefab: {fileID: 2098071271932889212, guid: 38d2e25d747ffd842b9ff68fd5114e1e, type: 3}
-  hp: 400
-  str: 40
-  con: 30
-  dex: 10
-  mag: 0
-  def: 30
-  mdf: 15
-  spd: 80
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,16 +145,48 @@ MonoBehaviour:
   rowTypeName: YatchDungeon.UnitDataTableRow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   dataList:
-  - {fileID: -5020233663052663967}
-  - {fileID: -8060356016317681634}
-  - {fileID: -3487700551657140887}
-  - {fileID: 1589795534641716728}
-  - {fileID: 1180608156518194164}
-  - {fileID: -290636328239299560}
-  - {fileID: -8744419791384903862}
-  - {fileID: 648402904935398418}
-  - {fileID: -8418067097767127584}
---- !u!114 &648402904935398418
+  - {fileID: 1725512834841039621}
+  - {fileID: -3703427205688398818}
+  - {fileID: -227763613180176600}
+  - {fileID: -5487974995870626713}
+  - {fileID: 3816446151912580370}
+  - {fileID: 4231840024468873439}
+  - {fileID: -2388543074957582229}
+  - {fileID: 2725434426606531754}
+  - {fileID: 3130118843561198464}
+--- !u!114 &1725512834841039621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
+  m_Name: UN_SOLDIER
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
+  id: UN_SOLDIER
+  tags: []
+  isEnable: 1
+  group: 0
+  attackType: 0
+  nameKey: UN_SOLDIER_NAME
+  descKey: UN_SOLDIER_DESC
+  roleKey: 
+  skillBasicKey: SK_BASIC_MELEE
+  skillPassiveKey: SK_SOLDIER_01
+  skillActiveKey: '-'
+  prefab: {fileID: 2098071271932889212, guid: 0d278d31817901a42a254c41f3b1ba61, type: 3}
+  hp: 150
+  str: 15
+  con: 12
+  dex: 10
+  mag: 0
+  def: 10
+  mdf: 5
+  spd: 100
+--- !u!114 &2725434426606531754
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -241,7 +209,7 @@ MonoBehaviour:
   skillBasicKey: SK_BASIC_MELEE
   skillPassiveKey: SK_KNIGHT_01
   skillActiveKey: '-'
-  prefab: {fileID: 2098071271932889212, guid: 38d2e25d747ffd842b9ff68fd5114e1e, type: 3}
+  prefab: {fileID: 2098071271932889212, guid: 07fbd8492fe8f2b4fa22e0864dff9eef, type: 3}
   hp: 450
   str: 35
   con: 35
@@ -250,7 +218,39 @@ MonoBehaviour:
   def: 40
   mdf: 25
   spd: 90
---- !u!114 &1180608156518194164
+--- !u!114 &3130118843561198464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
+  m_Name: UN_TEMPLAR
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
+  id: UN_TEMPLAR
+  tags: []
+  isEnable: 1
+  group: 0
+  attackType: 0
+  nameKey: UN_TEMPLAR_NAME
+  descKey: UN_TEMPLAR_DESC
+  roleKey: 
+  skillBasicKey: SK_BASIC_MELEE
+  skillPassiveKey: SK_TEMPLAR_01
+  skillActiveKey: '-'
+  prefab: {fileID: 2098071271932889212, guid: f726e8dae21919c489f420d35835fd10, type: 3}
+  hp: 800
+  str: 60
+  con: 50
+  dex: 20
+  mag: 40
+  def: 50
+  mdf: 40
+  spd: 100
+--- !u!114 &3816446151912580370
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -273,7 +273,7 @@ MonoBehaviour:
   skillBasicKey: SK_BASIC_MAGIC
   skillPassiveKey: SK_PRIEST_01
   skillActiveKey: '-'
-  prefab: {fileID: 2098071271932889212, guid: 38d2e25d747ffd842b9ff68fd5114e1e, type: 3}
+  prefab: {fileID: 2098071271932889212, guid: 134df95868d5ede47b6630e6b60308b8, type: 3}
   hp: 120
   str: 5
   con: 10
@@ -282,7 +282,7 @@ MonoBehaviour:
   def: 8
   mdf: 20
   spd: 90
---- !u!114 &1589795534641716728
+--- !u!114 &4231840024468873439
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -292,25 +292,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_LANCER
+  m_Name: UN_AXEMAN
   m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
-  id: UN_LANCER
+  id: UN_AXEMAN
   tags: []
   isEnable: 1
   group: 0
   attackType: 0
-  nameKey: UN_LANCER_NAME
-  descKey: UN_LANCER_DESC
+  nameKey: UN_AXEMAN_NAME
+  descKey: UN_AXEMAN_DESC
   roleKey: 
   skillBasicKey: SK_BASIC_MELEE
-  skillPassiveKey: SK_LANCER_01
+  skillPassiveKey: SK_AXEMAN_01
   skillActiveKey: '-'
-  prefab: {fileID: 2098071271932889212, guid: 38d2e25d747ffd842b9ff68fd5114e1e, type: 3}
-  hp: 200
-  str: 22
-  con: 14
-  dex: 18
+  prefab: {fileID: 2098071271932889212, guid: c09469da4526be94aa608ba3c79d02cc, type: 3}
+  hp: 400
+  str: 40
+  con: 30
+  dex: 10
   mag: 0
-  def: 12
-  mdf: 8
-  spd: 105
+  def: 30
+  mdf: 15
+  spd: 80
