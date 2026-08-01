@@ -19,6 +19,8 @@ namespace YatchDungeon
 
 
         private UnitDirector _unitDirector;
+        private bool _isPlaying;
+        private BattleDirector _battleDirector;
 
         public override IEnumerator OnInitialize()
         {
@@ -37,14 +39,27 @@ namespace YatchDungeon
 
         public void PlayWave(int index)
         {
+            StartCoroutine(WaveRoutine(index));
+        }
+
+        private IEnumerator WaveRoutine(int index)
+        {
+          
             var wave = _waveList[index];
             int enemyCount = 0;
             while (enemyCount < wave.numberOfEnemy)
             {
                 _unitDirector.SpawnUnit(PickEnemy(wave.index));
+                enemyCount++;
             }
+            
+            _battleDirector.BeginBattle();
+            yield return new WaitUntil(() => _unitDirector.GetEnemyUnitCount() > 0);
+            _battleDirector.EndBattle();
         }
         
+        
+
         private string PickEnemy(int waveIndex)
         {
             var enemyPool = _wavePoolList[waveIndex];

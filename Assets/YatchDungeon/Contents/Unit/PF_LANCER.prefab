@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3003753007602453789}
   - component: {fileID: 2098071271932889212}
+  - component: {fileID: -2866483243043681456}
   m_Layer: 0
   m_Name: PF_LANCER
   m_TagString: Untagged
@@ -46,6 +47,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitCore
   moveDuration: 0.3
+  str: 0
+  dex: 0
+  mag: 0
+  spd: 0
+  mdf: 0
+  def: 0
+  con: 0
+  maxhp: 0
+  hp: 0
+--- !u!114 &-2866483243043681456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6302351625213716871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 078623f2a69b9bb4697bbc4c1fbad88a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityAgent
 --- !u!1001 &8956173602168987769
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58,9 +80,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lancer
       objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: e451dbd025473fd488951d06e36ed4b7, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: e451dbd025473fd488951d06e36ed4b7, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: e451dbd025473fd488951d06e36ed4b7, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878350319992209165, guid: e451dbd025473fd488951d06e36ed4b7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878350319992209165, guid: e451dbd025473fd488951d06e36ed4b7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878350319992209165, guid: e451dbd025473fd488951d06e36ed4b7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: e451dbd025473fd488951d06e36ed4b7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.33333
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: e451dbd025473fd488951d06e36ed4b7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -97,6 +143,10 @@ PrefabInstance:
     - target: {fileID: 7878350319992209165, guid: e451dbd025473fd488951d06e36ed4b7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878350319992209165, guid: e451dbd025473fd488951d06e36ed4b7, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
