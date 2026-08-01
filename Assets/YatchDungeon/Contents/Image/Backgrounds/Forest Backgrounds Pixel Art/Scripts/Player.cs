@@ -2,40 +2,34 @@ using UnityEngine;
 
 namespace ForestBackgroundsPixelArt
 {
-    [RequireComponent(typeof(Rigidbody2D))]
+    // 더 이상 물리엔진(Rigidbody2D)이 필요 없으므로 RequireComponent는 삭제했습니다.
     public class Player : MonoBehaviour
     {
-        private Rigidbody2D rb;
-
         [SerializeField]
         [Range(2.0f, 8.0f)]
-        private float speed = 4.0f;
+        private float speed = 4.0f; // 걷는 속도
 
-        [SerializeField]
-        [Range(10.0f, 20.0f)]
-        private float jumpForce = 16.0f;
+        private Transform mainCamera;
+        private float cameraZ; // 카메라의 원래 Z축 위치(깊이)를 기억하기 위함
 
         private void Start()
         {
-            rb = GetComponent<Rigidbody2D>();
+            mainCamera = Camera.main.transform;
+            cameraZ = mainCamera.position.z;
         }
 
         private void Update()
         {
-            float horizontal = Input.GetAxisRaw("Horizontal");
+            // 1. 유닛(플레이어)이 오른쪽으로 계속 자동 이동합니다.
+            // (만약 유닛이 걷는 애니메이션이 있다면 애니메이터만 켜두시면 됩니다)
+            transform.Translate(Vector3.right * speed * Time.deltaTime);
 
-            rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
-
-            if (Input.GetButtonDown("Jump"))
+            // 2. 메인 카메라가 유닛의 X축을 그대로 따라가도록 만듭니다.
+            // Y축과 Z축은 원래 카메라 위치를 유지합니다.
+            if (mainCamera != null)
             {
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            }
-
-            if (Input.GetButtonUp("Jump") && rb.linearVelocity.y > 0f)
-            {
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
+                mainCamera.position = new Vector3(transform.position.x, mainCamera.position.y, cameraZ);
             }
         }
     }
 }
-
