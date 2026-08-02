@@ -1,72 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8398565743308437320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_WIZARD
-  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
-  id: UN_WIZARD
-  tags: []
-  isEnable: 1
-  group: 0
-  attackType: 2
-  nameKey: UN_WIZARD_NAME
-  descKey: UN_WIZARD_DESC
-  roleKey: 
-  skillBasicKey: MeleeAttack
-  skillPassiveKey: 
-  skillActiveKey: 
-  prefab: {fileID: 2098071271932889212, guid: d5a314b72f63d9048893f4e35b9f8224, type: 3}
-  hp: 150
-  str: 5
-  con: 10
-  dex: 15
-  mag: 50
-  def: 8
-  mdf: 30
-  spd: 95
-  height: 100
---- !u!114 &-8184868484927101326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_ORCRIDER
-  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
-  id: UN_ORCRIDER
-  tags: []
-  isEnable: 1
-  group: 1
-  attackType: 0
-  nameKey: UN_ORCRIDER_NAME
-  descKey: UN_ORCRIDER_DESC
-  roleKey: 
-  skillBasicKey: MeleeAttack
-  skillPassiveKey: 
-  skillActiveKey: 
-  prefab: {fileID: 2098071271932889212, guid: afa3cae1b643e91428ed6e42ccc1c797, type: 3}
-  hp: 300
-  str: 30
-  con: 25
-  dex: 15
-  mag: 0
-  def: 15
-  mdf: 10
-  spd: 150
-  height: 100
---- !u!114 &-7742849844215863719
+--- !u!114 &-9086337608937383513
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,7 +33,7 @@ MonoBehaviour:
   mdf: 5
   spd: 100
   height: 100
---- !u!114 &-5416641565419452374
+--- !u!114 &-8329135242980994146
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,465 +43,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_SKELARCHER
+  m_Name: UN_NECRO
   m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
-  id: UN_SKELARCHER
+  id: UN_NECRO
   tags: []
   isEnable: 1
   group: 1
-  attackType: 1
-  nameKey: UN_SKELARCHER_NAME
-  descKey: UN_SKELARCHER_DESC
-  roleKey: 
-  skillBasicKey: MeleeAttack
-  skillPassiveKey: 
-  skillActiveKey: 
-  prefab: {fileID: 2098071271932889212, guid: 1a49cdb3d210a864f99975e489f7f15c, type: 3}
-  hp: 80
-  str: 5
-  con: 8
-  dex: 22
-  mag: 0
-  def: 5
-  mdf: 2
-  spd: 110
-  height: 100
---- !u!114 &-4475866576098646170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_WEREWOLF
-  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
-  id: UN_WEREWOLF
-  tags: []
-  isEnable: 1
-  group: 1
-  attackType: 0
-  nameKey: UN_WEREWOLF_NAME
-  descKey: UN_WEREWOLF_DESC
-  roleKey: 
-  skillBasicKey: MeleeAttack
-  skillPassiveKey: 
-  skillActiveKey: 
-  prefab: {fileID: 2098071271932889212, guid: 1ce138e4a1f563742ad742b8449e7c1d, type: 3}
-  hp: 180
-  str: 25
-  con: 15
-  dex: 25
-  mag: 0
-  def: 12
-  mdf: 8
-  spd: 130
-  height: 100
---- !u!114 &-3845401828854911998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_ARMORC
-  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
-  id: UN_ARMORC
-  tags: []
-  isEnable: 1
-  group: 1
-  attackType: 0
-  nameKey: UN_ARMORC_NAME
-  descKey: UN_ARMORC_DESC
-  roleKey: 
-  skillBasicKey: MeleeAttack
-  skillPassiveKey: 
-  skillActiveKey: 
-  prefab: {fileID: 2098071271932889212, guid: 8e097d42a9cbc4f4dbc9f65980ecdf87, type: 3}
-  hp: 450
-  str: 25
-  con: 35
-  dex: 8
-  mag: 0
-  def: 40
-  mdf: 15
-  spd: 70
-  height: 100
---- !u!114 &-3520445403386990684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_ARMSKEL
-  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
-  id: UN_ARMSKEL
-  tags: []
-  isEnable: 1
-  group: 1
-  attackType: 0
-  nameKey: UN_ARMSKEL_NAME
-  descKey: UN_ARMSKEL_DESC
-  roleKey: 
-  skillBasicKey: MeleeAttack
-  skillPassiveKey: 
-  skillActiveKey: 
-  prefab: {fileID: 2098071271932889212, guid: a75e487d6c5bdad4695702865dea31c9, type: 3}
-  hp: 250
-  str: 15
-  con: 20
-  dex: 8
-  mag: 0
-  def: 30
-  mdf: 5
-  spd: 80
-  height: 100
---- !u!114 &-3170844937314866445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_LANCER
-  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
-  id: UN_LANCER
-  tags: []
-  isEnable: 1
-  group: 0
-  attackType: 0
-  nameKey: UN_LANCER_NAME
-  descKey: UN_LANCER_DESC
-  roleKey: 
-  skillBasicKey: MeleeAttack
-  skillPassiveKey: 
-  skillActiveKey: 
-  prefab: {fileID: 2098071271932889212, guid: e56b0c82a8bdf4c428de8394cce0da39, type: 3}
-  hp: 200
-  str: 22
-  con: 14
-  dex: 18
-  mag: 0
-  def: 12
-  mdf: 8
-  spd: 105
-  height: 175
---- !u!114 &-1903842202543611978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_ARCHER
-  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
-  id: UN_ARCHER
-  tags: []
-  isEnable: 1
-  group: 0
-  attackType: 1
-  nameKey: UN_ARCHER_NAME
-  descKey: UN_ARCHER_DESC
-  roleKey: 
-  skillBasicKey: MeleeAttack
-  skillPassiveKey: 
-  skillActiveKey: 
-  prefab: {fileID: 2098071271932889212, guid: 38d2e25d747ffd842b9ff68fd5114e1e, type: 3}
-  hp: 100
-  str: 5
-  con: 8
-  dex: 20
-  mag: 0
-  def: 5
-  mdf: 5
-  spd: 120
-  height: 100
---- !u!114 &-918358637697651769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_PRIEST
-  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
-  id: UN_PRIEST
-  tags: []
-  isEnable: 1
-  group: 0
   attackType: 2
-  nameKey: UN_PRIEST_NAME
-  descKey: UN_PRIEST_DESC
+  nameKey: UN_NECRO_NAME
+  descKey: UN_NECRO_DESC
   roleKey: 
   skillBasicKey: MeleeAttack
   skillPassiveKey: 
   skillActiveKey: 
-  prefab: {fileID: 2098071271932889212, guid: 134df95868d5ede47b6630e6b60308b8, type: 3}
-  hp: 120
-  str: 5
-  con: 10
-  dex: 10
-  mag: 25
-  def: 8
-  mdf: 20
-  spd: 90
-  height: 100
---- !u!114 &-824468723380186439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_BAT
-  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
-  id: UN_BAT
-  tags: []
-  isEnable: 1
-  group: 1
-  attackType: 1
-  nameKey: UN_BAT_NAME
-  descKey: UN_BAT_DESC
-  roleKey: 
-  skillBasicKey: MeleeAttack
-  skillPassiveKey: 
-  skillActiveKey: 
-  prefab: {fileID: 2098071271932889212, guid: bf597a284b363b54d8d1b44015790783, type: 3}
-  hp: 60
-  str: 5
-  con: 5
-  dex: 18
-  mag: 0
-  def: 2
-  mdf: 5
-  spd: 140
-  height: 100
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 463daf5080d293049bd98a91154e958f, type: 3}
-  m_Name: DT_Unit
-  m_EditorClassIdentifier: KCoreKit::KCoreKit.DataTable
-  rowScript: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  csv: {fileID: 4900000, guid: ee90f62e4541f874098bc98ccabccc89, type: 3}
-  rowTypeName: YatchDungeon.UnitDataTableRow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  dataList:
-  - {fileID: -7742849844215863719}
-  - {fileID: -1903842202543611978}
-  - {fileID: 4693030806760700714}
-  - {fileID: -3170844937314866445}
-  - {fileID: -918358637697651769}
-  - {fileID: 5907875051115403717}
-  - {fileID: -8398565743308437320}
-  - {fileID: 3617626546525328896}
-  - {fileID: 6866038605060377199}
-  - {fileID: 1912493744342527928}
-  - {fileID: -824468723380186439}
-  - {fileID: 3301906309885507754}
-  - {fileID: -5416641565419452374}
-  - {fileID: 4309889142256853941}
-  - {fileID: -4475866576098646170}
-  - {fileID: -3520445403386990684}
-  - {fileID: 8341923953733202925}
-  - {fileID: -8184868484927101326}
-  - {fileID: -3845401828854911998}
-  - {fileID: 1991230288134058922}
-  - {fileID: 4718797270010014957}
-  - {fileID: 8646684974765882698}
---- !u!114 &1912493744342527928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_SLIME
-  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
-  id: UN_SLIME
-  tags: []
-  isEnable: 1
-  group: 1
-  attackType: 0
-  nameKey: UN_SLIME_NAME
-  descKey: UN_SLIME_DESC
-  roleKey: 
-  skillBasicKey: MeleeAttack
-  skillPassiveKey: 
-  skillActiveKey: 
-  prefab: {fileID: 2098071271932889212, guid: be333a8089d5de840a6367060adc0fcf, type: 3}
-  hp: 80
-  str: 8
-  con: 8
-  dex: 5
-  mag: 5
-  def: 2
-  mdf: 2
-  spd: 80
-  height: 100
---- !u!114 &1991230288134058922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_WEREBEAR
-  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
-  id: UN_WEREBEAR
-  tags: []
-  isEnable: 1
-  group: 1
-  attackType: 0
-  nameKey: UN_WEREBEAR_NAME
-  descKey: UN_WEREBEAR_DESC
-  roleKey: 
-  skillBasicKey: MeleeAttack
-  skillPassiveKey: 
-  skillActiveKey: 
-  prefab: {fileID: 2098071271932889212, guid: 4815e2242e29f8d4989cdf674d0b5095, type: 3}
-  hp: 500
-  str: 40
+  prefab: {fileID: 2098071271932889212, guid: d2b81544130e1a84595f081b9d992500, type: 3}
+  hp: 750
+  str: 10
   con: 40
-  dex: 10
-  mag: 0
-  def: 25
-  mdf: 20
-  spd: 85
+  dex: 15
+  mag: 80
+  def: 20
+  mdf: 50
+  spd: 95
   height: 100
---- !u!114 &3301906309885507754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_SKELETON
-  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
-  id: UN_SKELETON
-  tags: []
-  isEnable: 1
-  group: 1
-  attackType: 0
-  nameKey: UN_SKELETON_NAME
-  descKey: UN_SKELETON_DESC
-  roleKey: 
-  skillBasicKey: MeleeAttack
-  skillPassiveKey: 
-  skillActiveKey: 
-  prefab: {fileID: 2098071271932889212, guid: 01a2d349e883437408bfbf29475a5dfd, type: 3}
-  hp: 100
-  str: 12
-  con: 10
-  dex: 10
-  mag: 0
-  def: 8
-  mdf: 2
-  spd: 90
-  height: 100
---- !u!114 &3617626546525328896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_KNIGHT
-  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
-  id: UN_KNIGHT
-  tags: []
-  isEnable: 1
-  group: 0
-  attackType: 0
-  nameKey: UN_KNIGHT_NAME
-  descKey: UN_KNIGHT_DESC
-  roleKey: 
-  skillBasicKey: MeleeAttack
-  skillPassiveKey: 
-  skillActiveKey: 
-  prefab: {fileID: 2098071271932889212, guid: 07fbd8492fe8f2b4fa22e0864dff9eef, type: 3}
-  hp: 450
-  str: 35
-  con: 35
-  dex: 12
-  mag: 10
-  def: 40
-  mdf: 25
-  spd: 90
-  height: 100
---- !u!114 &4309889142256853941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_ORC
-  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
-  id: UN_ORC
-  tags: []
-  isEnable: 1
-  group: 1
-  attackType: 0
-  nameKey: UN_ORC_NAME
-  descKey: UN_ORC_DESC
-  roleKey: 
-  skillBasicKey: MeleeAttack
-  skillPassiveKey: 
-  skillActiveKey: 
-  prefab: {fileID: 2098071271932889212, guid: 290e249e450dde042b02a4b667bc7266, type: 3}
-  hp: 200
-  str: 20
-  con: 18
-  dex: 8
-  mag: 0
-  def: 10
-  mdf: 5
-  spd: 90
-  height: 100
---- !u!114 &4693030806760700714
+--- !u!114 &-7706136515454769962
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -600,7 +99,7 @@ MonoBehaviour:
   mdf: 10
   spd: 110
   height: 100
---- !u!114 &4718797270010014957
+--- !u!114 &-7632513264193243974
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -610,30 +109,63 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_NECRO
+  m_Name: UN_KNIGHT
   m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
-  id: UN_NECRO
+  id: UN_KNIGHT
   tags: []
   isEnable: 1
-  group: 1
-  attackType: 2
-  nameKey: UN_NECRO_NAME
-  descKey: UN_NECRO_DESC
+  group: 0
+  attackType: 0
+  nameKey: UN_KNIGHT_NAME
+  descKey: UN_KNIGHT_DESC
   roleKey: 
   skillBasicKey: MeleeAttack
   skillPassiveKey: 
   skillActiveKey: 
-  prefab: {fileID: 2098071271932889212, guid: d2b81544130e1a84595f081b9d992500, type: 3}
-  hp: 1500
-  str: 10
-  con: 40
-  dex: 15
-  mag: 80
-  def: 20
-  mdf: 50
-  spd: 95
+  prefab: {fileID: 2098071271932889212, guid: 07fbd8492fe8f2b4fa22e0864dff9eef, type: 3}
+  hp: 450
+  str: 35
+  con: 35
+  dex: 12
+  mag: 10
+  def: 40
+  mdf: 25
+  spd: 90
   height: 100
---- !u!114 &5907875051115403717
+--- !u!114 &-6595335497519225561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
+  m_Name: UN_ARMORC
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
+  id: UN_ARMORC
+  tags: []
+  isEnable: 1
+  group: 1
+  attackType: 0
+  nameKey: UN_ARMORC_NAME
+  descKey: UN_ARMORC_DESC
+  roleKey: 
+  skillBasicKey: MeleeAttack
+  skillPassiveKey: 
+  skillActiveKey: 
+  prefab: {fileID: 2098071271932889212, guid: 8e097d42a9cbc4f4dbc9f65980ecdf87, type: 3}
+  hp: 225
+  str: 25
+  con: 35
+  dex: 8
+  mag: 0
+  def: 40
+  mdf: 15
+  spd: 70
+  height: 100
+--- !u!114 &-5663223319097060157
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -666,7 +198,508 @@ MonoBehaviour:
   mdf: 15
   spd: 80
   height: 100
---- !u!114 &6866038605060377199
+--- !u!114 &-5472465088699018321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
+  m_Name: UN_SLIME
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
+  id: UN_SLIME
+  tags: []
+  isEnable: 1
+  group: 1
+  attackType: 0
+  nameKey: UN_SLIME_NAME
+  descKey: UN_SLIME_DESC
+  roleKey: 
+  skillBasicKey: MeleeAttack
+  skillPassiveKey: 
+  skillActiveKey: 
+  prefab: {fileID: 2098071271932889212, guid: be333a8089d5de840a6367060adc0fcf, type: 3}
+  hp: 40
+  str: 8
+  con: 8
+  dex: 5
+  mag: 5
+  def: 2
+  mdf: 2
+  spd: 80
+  height: 100
+--- !u!114 &-4691131075377157242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
+  m_Name: UN_ORCRIDER
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
+  id: UN_ORCRIDER
+  tags: []
+  isEnable: 1
+  group: 1
+  attackType: 0
+  nameKey: UN_ORCRIDER_NAME
+  descKey: UN_ORCRIDER_DESC
+  roleKey: 
+  skillBasicKey: MeleeAttack
+  skillPassiveKey: 
+  skillActiveKey: 
+  prefab: {fileID: 2098071271932889212, guid: afa3cae1b643e91428ed6e42ccc1c797, type: 3}
+  hp: 150
+  str: 30
+  con: 25
+  dex: 15
+  mag: 0
+  def: 15
+  mdf: 10
+  spd: 150
+  height: 100
+--- !u!114 &-2680469820407806414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
+  m_Name: UN_ELITEORC
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
+  id: UN_ELITEORC
+  tags: []
+  isEnable: 1
+  group: 1
+  attackType: 0
+  nameKey: UN_ELITEORC_NAME
+  descKey: UN_ELITEORC_DESC
+  roleKey: 
+  skillBasicKey: MeleeAttack
+  skillPassiveKey: 
+  skillActiveKey: 
+  prefab: {fileID: 2098071271932889212, guid: e8b962b5650f9fd4cba8878e63ca8957, type: 3}
+  hp: 1250
+  str: 70
+  con: 60
+  dex: 20
+  mag: 0
+  def: 60
+  mdf: 40
+  spd: 100
+  height: 100
+--- !u!114 &-2394853187927100563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
+  m_Name: UN_WEREBEAR
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
+  id: UN_WEREBEAR
+  tags: []
+  isEnable: 1
+  group: 1
+  attackType: 0
+  nameKey: UN_WEREBEAR_NAME
+  descKey: UN_WEREBEAR_DESC
+  roleKey: 
+  skillBasicKey: MeleeAttack
+  skillPassiveKey: 
+  skillActiveKey: 
+  prefab: {fileID: 2098071271932889212, guid: 4815e2242e29f8d4989cdf674d0b5095, type: 3}
+  hp: 250
+  str: 40
+  con: 40
+  dex: 10
+  mag: 0
+  def: 25
+  mdf: 20
+  spd: 85
+  height: 100
+--- !u!114 &-1289059460649899182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
+  m_Name: UN_WIZARD
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
+  id: UN_WIZARD
+  tags: []
+  isEnable: 1
+  group: 0
+  attackType: 2
+  nameKey: UN_WIZARD_NAME
+  descKey: UN_WIZARD_DESC
+  roleKey: 
+  skillBasicKey: MeleeAttack
+  skillPassiveKey: 
+  skillActiveKey: 
+  prefab: {fileID: 2098071271932889212, guid: d5a314b72f63d9048893f4e35b9f8224, type: 3}
+  hp: 150
+  str: 5
+  con: 10
+  dex: 15
+  mag: 50
+  def: 8
+  mdf: 30
+  spd: 95
+  height: 100
+--- !u!114 &-1001952356074413569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
+  m_Name: UN_BAT
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
+  id: UN_BAT
+  tags: []
+  isEnable: 1
+  group: 1
+  attackType: 1
+  nameKey: UN_BAT_NAME
+  descKey: UN_BAT_DESC
+  roleKey: 
+  skillBasicKey: MeleeAttack
+  skillPassiveKey: 
+  skillActiveKey: 
+  prefab: {fileID: 2098071271932889212, guid: bf597a284b363b54d8d1b44015790783, type: 3}
+  hp: 30
+  str: 5
+  con: 5
+  dex: 18
+  mag: 0
+  def: 2
+  mdf: 5
+  spd: 140
+  height: 100
+--- !u!114 &-843965504433862483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
+  m_Name: UN_LANCER
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
+  id: UN_LANCER
+  tags: []
+  isEnable: 1
+  group: 0
+  attackType: 0
+  nameKey: UN_LANCER_NAME
+  descKey: UN_LANCER_DESC
+  roleKey: 
+  skillBasicKey: MeleeAttack
+  skillPassiveKey: 
+  skillActiveKey: 
+  prefab: {fileID: 2098071271932889212, guid: e56b0c82a8bdf4c428de8394cce0da39, type: 3}
+  hp: 200
+  str: 22
+  con: 14
+  dex: 18
+  mag: 0
+  def: 12
+  mdf: 8
+  spd: 105
+  height: 175
+--- !u!114 &-692317307329643631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
+  m_Name: UN_SKELETON
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
+  id: UN_SKELETON
+  tags: []
+  isEnable: 1
+  group: 1
+  attackType: 0
+  nameKey: UN_SKELETON_NAME
+  descKey: UN_SKELETON_DESC
+  roleKey: 
+  skillBasicKey: MeleeAttack
+  skillPassiveKey: 
+  skillActiveKey: 
+  prefab: {fileID: 2098071271932889212, guid: 01a2d349e883437408bfbf29475a5dfd, type: 3}
+  hp: 50
+  str: 12
+  con: 10
+  dex: 10
+  mag: 0
+  def: 8
+  mdf: 2
+  spd: 90
+  height: 100
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463daf5080d293049bd98a91154e958f, type: 3}
+  m_Name: DT_Unit
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.DataTable
+  rowScript: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
+  csv: {fileID: 4900000, guid: ee90f62e4541f874098bc98ccabccc89, type: 3}
+  rowTypeName: YatchDungeon.UnitDataTableRow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  dataList:
+  - {fileID: -9086337608937383513}
+  - {fileID: 6593917605797988165}
+  - {fileID: -7706136515454769962}
+  - {fileID: -843965504433862483}
+  - {fileID: 6201997952905492743}
+  - {fileID: -5663223319097060157}
+  - {fileID: -1289059460649899182}
+  - {fileID: -7632513264193243974}
+  - {fileID: 8592360025115986117}
+  - {fileID: -5472465088699018321}
+  - {fileID: -1001952356074413569}
+  - {fileID: -692317307329643631}
+  - {fileID: 4131616171879403306}
+  - {fileID: 8078624603996796958}
+  - {fileID: 9165005693019584523}
+  - {fileID: 5329538689108079624}
+  - {fileID: 1613041550586795900}
+  - {fileID: -4691131075377157242}
+  - {fileID: -6595335497519225561}
+  - {fileID: -2394853187927100563}
+  - {fileID: -8329135242980994146}
+  - {fileID: -2680469820407806414}
+--- !u!114 &1613041550586795900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
+  m_Name: UN_GSSKEL
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
+  id: UN_GSSKEL
+  tags: []
+  isEnable: 1
+  group: 1
+  attackType: 0
+  nameKey: UN_GSSKEL_NAME
+  descKey: UN_GSSKEL_DESC
+  roleKey: 
+  skillBasicKey: MeleeAttack
+  skillPassiveKey: 
+  skillActiveKey: 
+  prefab: {fileID: 2098071271932889212, guid: a9a38a16517363346a480c3635acfe9d, type: 3}
+  hp: 125
+  str: 45
+  con: 20
+  dex: 10
+  mag: 0
+  def: 15
+  mdf: 10
+  spd: 85
+  height: 100
+--- !u!114 &4131616171879403306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
+  m_Name: UN_SKELARCHER
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
+  id: UN_SKELARCHER
+  tags: []
+  isEnable: 1
+  group: 1
+  attackType: 1
+  nameKey: UN_SKELARCHER_NAME
+  descKey: UN_SKELARCHER_DESC
+  roleKey: 
+  skillBasicKey: MeleeAttack
+  skillPassiveKey: 
+  skillActiveKey: 
+  prefab: {fileID: 2098071271932889212, guid: 1a49cdb3d210a864f99975e489f7f15c, type: 3}
+  hp: 40
+  str: 5
+  con: 8
+  dex: 22
+  mag: 0
+  def: 5
+  mdf: 2
+  spd: 110
+  height: 100
+--- !u!114 &5329538689108079624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
+  m_Name: UN_ARMSKEL
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
+  id: UN_ARMSKEL
+  tags: []
+  isEnable: 1
+  group: 1
+  attackType: 0
+  nameKey: UN_ARMSKEL_NAME
+  descKey: UN_ARMSKEL_DESC
+  roleKey: 
+  skillBasicKey: MeleeAttack
+  skillPassiveKey: 
+  skillActiveKey: 
+  prefab: {fileID: 2098071271932889212, guid: a75e487d6c5bdad4695702865dea31c9, type: 3}
+  hp: 125
+  str: 15
+  con: 20
+  dex: 8
+  mag: 0
+  def: 30
+  mdf: 5
+  spd: 80
+  height: 100
+--- !u!114 &6201997952905492743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
+  m_Name: UN_PRIEST
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
+  id: UN_PRIEST
+  tags: []
+  isEnable: 1
+  group: 0
+  attackType: 2
+  nameKey: UN_PRIEST_NAME
+  descKey: UN_PRIEST_DESC
+  roleKey: 
+  skillBasicKey: MeleeAttack
+  skillPassiveKey: 
+  skillActiveKey: 
+  prefab: {fileID: 2098071271932889212, guid: 134df95868d5ede47b6630e6b60308b8, type: 3}
+  hp: 120
+  str: 5
+  con: 10
+  dex: 10
+  mag: 25
+  def: 8
+  mdf: 20
+  spd: 90
+  height: 100
+--- !u!114 &6593917605797988165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
+  m_Name: UN_ARCHER
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
+  id: UN_ARCHER
+  tags: []
+  isEnable: 1
+  group: 0
+  attackType: 1
+  nameKey: UN_ARCHER_NAME
+  descKey: UN_ARCHER_DESC
+  roleKey: 
+  skillBasicKey: MeleeAttack
+  skillPassiveKey: 
+  skillActiveKey: 
+  prefab: {fileID: 2098071271932889212, guid: 38d2e25d747ffd842b9ff68fd5114e1e, type: 3}
+  hp: 100
+  str: 5
+  con: 8
+  dex: 20
+  mag: 0
+  def: 5
+  mdf: 5
+  spd: 120
+  height: 100
+--- !u!114 &8078624603996796958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
+  m_Name: UN_ORC
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
+  id: UN_ORC
+  tags: []
+  isEnable: 1
+  group: 1
+  attackType: 0
+  nameKey: UN_ORC_NAME
+  descKey: UN_ORC_DESC
+  roleKey: 
+  skillBasicKey: MeleeAttack
+  skillPassiveKey: 
+  skillActiveKey: 
+  prefab: {fileID: 2098071271932889212, guid: 290e249e450dde042b02a4b667bc7266, type: 3}
+  hp: 100
+  str: 20
+  con: 18
+  dex: 8
+  mag: 0
+  def: 10
+  mdf: 5
+  spd: 90
+  height: 100
+--- !u!114 &8592360025115986117
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -699,7 +732,7 @@ MonoBehaviour:
   mdf: 40
   spd: 100
   height: 100
---- !u!114 &8341923953733202925
+--- !u!114 &9165005693019584523
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -709,59 +742,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_GSSKEL
+  m_Name: UN_WEREWOLF
   m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
-  id: UN_GSSKEL
+  id: UN_WEREWOLF
   tags: []
   isEnable: 1
   group: 1
   attackType: 0
-  nameKey: UN_GSSKEL_NAME
-  descKey: UN_GSSKEL_DESC
+  nameKey: UN_WEREWOLF_NAME
+  descKey: UN_WEREWOLF_DESC
   roleKey: 
   skillBasicKey: MeleeAttack
   skillPassiveKey: 
   skillActiveKey: 
-  prefab: {fileID: 2098071271932889212, guid: a9a38a16517363346a480c3635acfe9d, type: 3}
-  hp: 250
-  str: 45
-  con: 20
-  dex: 10
+  prefab: {fileID: 2098071271932889212, guid: 1ce138e4a1f563742ad742b8449e7c1d, type: 3}
+  hp: 90
+  str: 25
+  con: 15
+  dex: 25
   mag: 0
-  def: 15
-  mdf: 10
-  spd: 85
-  height: 100
---- !u!114 &8646684974765882698
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_ELITEORC
-  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDataTableRow
-  id: UN_ELITEORC
-  tags: []
-  isEnable: 1
-  group: 1
-  attackType: 0
-  nameKey: UN_ELITEORC_NAME
-  descKey: UN_ELITEORC_DESC
-  roleKey: 
-  skillBasicKey: MeleeAttack
-  skillPassiveKey: 
-  skillActiveKey: 
-  prefab: {fileID: 2098071271932889212, guid: e8b962b5650f9fd4cba8878e63ca8957, type: 3}
-  hp: 2500
-  str: 70
-  con: 60
-  dex: 20
-  mag: 0
-  def: 60
-  mdf: 40
-  spd: 100
+  def: 12
+  mdf: 8
+  spd: 130
   height: 100
