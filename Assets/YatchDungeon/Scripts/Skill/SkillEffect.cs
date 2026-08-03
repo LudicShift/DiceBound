@@ -21,6 +21,7 @@ namespace YatchDungeon
 
         [SerializeField] private SkillMoveOption moveOption;
         private ParticleSystemRenderer psRenderer;
+        private bool _isHeal;
 
         public void Awake()
         {
@@ -28,6 +29,11 @@ namespace YatchDungeon
             psRenderer = GetComponentInChildren<ParticleSystemRenderer>(true);
         }
 
+        public void SetHeal(bool value)
+        {
+           _isHeal = value;
+        }
+        
         public void SetDamage(float damage)
         {
             _damage = damage;
@@ -53,15 +59,31 @@ namespace YatchDungeon
             {
                 case SkillMoveOption.Warp:
                     transform.position = target.transform.position;
-                    target.OnDamage(_damage);
+                    if (!_isHeal)
+                    {
+                        target.OnDamage(_damage);
+                    }
+                    else
+                    {
+                        target.OnHeal(_damage);
+                    }
                     break;
                 case SkillMoveOption.Move:
                     transform.DOMove(target.transform.position, moveDuration).OnComplete(() =>
                     {
-                        target.OnDamage(_damage);
+                        if (!_isHeal)
+                        {
+                            target.OnDamage(_damage);
+                        }
+                        else
+                        {
+                            target.OnHeal(_damage);
+                        }
                     });
                     break;
             }
         }
+
+        
     }
 }

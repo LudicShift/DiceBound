@@ -60,15 +60,15 @@ namespace YatchDungeon
         }
 
         // 10. 물리 경감 (MITIGATION_P = min(DEF / (DEF + 100), 0.75))
-        public static float GetMitigationP(float def)
+        public static float GetMitigationP(UnitCore target)
         {
-            return Mathf.Min(def / (def + 100f), 0.75f);
+            return Mathf.Min(target.def / (target.def + 100f), 0.75f);
         }
 
         // 11. 마법 경감 (MITIGATION_M = min(MDF / (MDF + 100), 0.75))
-        public static float GetMitigationM(float mdf)
+        public static float GetMitigationM(UnitCore target)
         {
-            return Mathf.Min(mdf / (mdf + 100f), 0.75f);
+            return Mathf.Min(target.mdf / (target.mdf + 100f), 0.75f);
         }
 
         // 12. 상태이상 저항 (STATUS_RESIST = min(CON * 0.005, 0.40))

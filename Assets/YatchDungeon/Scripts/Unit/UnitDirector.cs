@@ -180,6 +180,7 @@ namespace YatchDungeon
 
             instance.onDeadAction += OnUnitDead;
             instance.onHitAction += OnUnitHit;
+            instance.onHealAction += OnUnitHeal;
 
             var cell = PickSpawnCell(data);
             instance.MoveTo(cell.transform.position);
@@ -200,6 +201,11 @@ namespace YatchDungeon
             var hpGauge = PrefabManager.Create<GaugeWidget>();
             hpGauge.SetParent(hpCanvas.transform);
             instance.BindHPGauge(hpGauge);
+        }
+
+        private void OnUnitHeal(UnitCore core, int damage)
+        {
+            _battleDirector.ShowHeal(core,damage);
         }
 
         private void OnUnitHit(UnitCore core, int damage)

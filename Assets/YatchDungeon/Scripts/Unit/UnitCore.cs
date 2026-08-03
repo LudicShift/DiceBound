@@ -28,6 +28,7 @@ namespace YatchDungeon
         
         public Action<UnitCore> onDeadAction;
         public Action<UnitCore,int> onHitAction;
+        public Action<UnitCore,int> onHealAction;
         private AbilityAgent _abilityAgent;
         public UnitGroup group;
         private SpriteRenderer _spriteRenderer;
@@ -160,7 +161,6 @@ namespace YatchDungeon
             if (hp <= 0)
             {
                 StartCoroutine(DeadRoutine());
-             
             }
         }
 
@@ -195,6 +195,17 @@ namespace YatchDungeon
             seq.Append(transform.DOMoveX(-1.5f*_direction, 0.075f).SetRelative(true));
             
             seq.Play();
+        }
+
+        public void OnHeal(float damage)
+        {
+            hp += damage;
+            onHealAction?.Invoke(this,(int)damage);
+            _hpGague.OnChange(hp);
+            if (hp <= 0)
+            {
+                StartCoroutine(DeadRoutine());
+            }
         }
     }
 }

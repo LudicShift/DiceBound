@@ -61,6 +61,7 @@ namespace YatchDungeon
         {
            var screenPoint =  RectTransformUtility.WorldToScreenPoint(CameraManager.GetMainCamera(),core.transform.position);
            var damageWidget =  _damageWidgetPool.Get();
+           damageWidget.SetColor(Color.red);
            damageWidget.Setup(damage);
            damageWidget.rectTransform.anchoredPosition = screenPoint;
            damageWidget.Animate(x=>_damageWidgetPool.Release(x));
@@ -69,6 +70,16 @@ namespace YatchDungeon
         public bool IsPlaying()
         {
             return _isPlaying;
+        }
+
+        public void ShowHeal(UnitCore core, int damage)
+        {
+            var screenPoint =  RectTransformUtility.WorldToScreenPoint(CameraManager.GetMainCamera(),core.transform.position);
+            var damageWidget =  _damageWidgetPool.Get();
+            damageWidget.SetColor(Color.green);
+            damageWidget.Setup(damage);
+            damageWidget.rectTransform.anchoredPosition = screenPoint;
+            damageWidget.Animate(x=>_damageWidgetPool.Release(x));
         }
     }
 }

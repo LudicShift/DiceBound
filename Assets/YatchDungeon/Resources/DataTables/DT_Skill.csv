@@ -1,2 +1,5 @@
 id,skillType,nameKey,descKey,abilityId,cooldown,castTime,attackTargetOption,targetCount,effectPrefab,isEnable
 MeleeAttack,Basic,,,MeleeAttack,0,0,Enemy,1,SkillEffect/PF_MeleeAttack.prefab,TRUE
+RangedAttack,Basic,,,RangedAttack,0,0,Enemy,1,SkillEffect/PF_RangedAttack.prefab,TRUE
+MagicAttack,Basic,,,MagicAttack,0,0,Enemy,2,SkillEffect/PF_MagicAttack.prefab,TRUE
+Heal,Basic,,,Heal,0,0,Ally,3,SkillEffect/PF_Heal.prefab,TRUE

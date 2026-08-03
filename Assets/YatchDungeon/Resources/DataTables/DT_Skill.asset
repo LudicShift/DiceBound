@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7951688905112450224
+--- !u!114 &-8473604084353307525
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24,6 +24,30 @@ MonoBehaviour:
   attackTargetOption: 1
   targetCount: 1
   effectPrefab: {fileID: 7670170294891014883, guid: 310ecb62d45727043a8e5fcbbb14b9dc, type: 3}
+--- !u!114 &-810929264471736562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  m_Name: Heal
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.SkillDataTableRow
+  id: Heal
+  tags: []
+  isEnable: 1
+  skillType: 0
+  nameKey: 
+  descKey: 
+  abilityId: Heal
+  cooldown: 0
+  castTime: 0
+  attackTargetOption: 0
+  targetCount: 3
+  effectPrefab: {fileID: 7670170294891014883, guid: 76e4cf3b396a6894ba6f4a802b5f37e2, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41,4 +65,55 @@ MonoBehaviour:
   rowTypeName: YatchDungeon.SkillDataTableRow, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
   dataList:
-  - {fileID: -7951688905112450224}
+  - {fileID: -8473604084353307525}
+  - {fileID: 613291756172361861}
+  - {fileID: 4150940186486731939}
+  - {fileID: -810929264471736562}
+--- !u!114 &613291756172361861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  m_Name: RangedAttack
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.SkillDataTableRow
+  id: RangedAttack
+  tags: []
+  isEnable: 1
+  skillType: 0
+  nameKey: 
+  descKey: 
+  abilityId: RangedAttack
+  cooldown: 0
+  castTime: 0
+  attackTargetOption: 1
+  targetCount: 1
+  effectPrefab: {fileID: 7670170294891014883, guid: ef8cd2dcbd938d9479bbc139171455fd, type: 3}
+--- !u!114 &4150940186486731939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  m_Name: MagicAttack
+  m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.SkillDataTableRow
+  id: MagicAttack
+  tags: []
+  isEnable: 1
+  skillType: 0
+  nameKey: 
+  descKey: 
+  abilityId: MagicAttack
+  cooldown: 0
+  castTime: 0
+  attackTargetOption: 1
+  targetCount: 2
+  effectPrefab: {fileID: 7670170294891014883, guid: 9ce10667aea58f942b419fd26ea5a49d, type: 3}
