@@ -1,0 +1,5 @@
+id,skillType,nameKey,descKey,abilityId,cooldown,castTime,attackTargetOption,targetCount,effectKey,isEnable
+MeleeAttack,Basic,,,MeleeAttack,0,0,Enemy,1,MeleeAttack,TRUE
+RangedAttack,Basic,,,RangedAttack,0,0,Enemy,1,RangedAttack,TRUE
+MagicAttack,Basic,,,MagicAttack,0,0,Enemy,2,MagicAttack,TRUE
+Heal,Basic,,,Heal,0,0,Ally,3,Heal,TRUE

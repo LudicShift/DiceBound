@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf2384cfef4491c842255b751dd389e, type: 3}
+  m_Name: CSVRemoteManager
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.CSVRemoteManager
+  contexts:
+  - csvFile: {fileID: 4900000, guid: 838f86e5d18594e47b78c28c22d518ee, type: 3}
+    remoteAddress: https://docs.google.com/spreadsheets/d/e/2PACX-1vTpl5BC3vu3kx9pdSOlbsVhpvXipqRDaXbMbETAI9jgO-zn7MPaqi6TFd13q6kJMQ/pub?output=csv&gid=1024639787
+    syncOption: 0
+  - csvFile: {fileID: 4900000, guid: 1b02c5047123319438390339b3d97d17, type: 3}
+    remoteAddress: https://docs.google.com/spreadsheets/d/e/2PACX-1vTpl5BC3vu3kx9pdSOlbsVhpvXipqRDaXbMbETAI9jgO-zn7MPaqi6TFd13q6kJMQ/pub?output=csv&gid=1836034679
+    syncOption: 0
+  - csvFile: {fileID: 4900000, guid: ee90f62e4541f874098bc98ccabccc89, type: 3}
+    remoteAddress: https://docs.google.com/spreadsheets/d/e/2PACX-1vRUOPaqMH53TZrA20iHHj-X9V57e7VP1xpxLp1z0PGAQlKN-07Ge7GGet98h860-A/pub?output=csv&gid=425679513
+    syncOption: 0
+  - csvFile: {fileID: 4900000, guid: b2e3f491b378ee54a88136d9806f0d59, type: 3}
+    remoteAddress: https://docs.google.com/spreadsheets/d/e/2PACX-1vRUOPaqMH53TZrA20iHHj-X9V57e7VP1xpxLp1z0PGAQlKN-07Ge7GGet98h860-A/pub?output=csv&gid=961771368
+    syncOption: 0
+  - csvFile: {fileID: 4900000, guid: fc41fcf4ab3d4ca4fb6ab6cc4a9bba1d, type: 3}
+    remoteAddress: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRUOPaqMH53TZrA20iHHj-X9V57e7VP1xpxLp1z0PGAQlKN-07Ge7GGet98h860-A/pub?output=csv&gid=133750684  '
+    syncOption: 0
+  - csvFile: {fileID: 4900000, guid: aa0c9ee8dae156249b37496959f3f22e, type: 3}
+    remoteAddress: https://docs.google.com/spreadsheets/d/e/2PACX-1vRUOPaqMH53TZrA20iHHj-X9V57e7VP1xpxLp1z0PGAQlKN-07Ge7GGet98h860-A/pub?output=csv&gid=338949343
+    syncOption: 0
+  - csvFile: {fileID: 4900000, guid: f9cf516a4361657448590f8941b88e8d, type: 3}
+    remoteAddress: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRUOPaqMH53TZrA20iHHj-X9V57e7VP1xpxLp1z0PGAQlKN-07Ge7GGet98h860-A/pub?output=csv&gid=2019213656  '
+    syncOption: 0
+  - csvFile: {fileID: 4900000, guid: dc6abe150a212084eaf996f91f226ae7, type: 3}
+    remoteAddress: https://docs.google.com/spreadsheets/d/e/2PACX-1vRUOPaqMH53TZrA20iHHj-X9V57e7VP1xpxLp1z0PGAQlKN-07Ge7GGet98h860-A/pub?output=csv&gid=381133991
+    syncOption: 0
+  - csvFile: {fileID: 4900000, guid: 5d2b34fa49d8ceb4c9cf89a5dcf3aa38, type: 3}
+    remoteAddress: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRUOPaqMH53TZrA20iHHj-X9V57e7VP1xpxLp1z0PGAQlKN-07Ge7GGet98h860-A/pub?output=csv&gid=1859227038 '
+    syncOption: 0
+  - csvFile: {fileID: 4900000, guid: 43bec5bca8e57e841980a4795b6dc7df, type: 3}
+    remoteAddress: https://docs.google.com/spreadsheets/d/e/2PACX-1vRUOPaqMH53TZrA20iHHj-X9V57e7VP1xpxLp1z0PGAQlKN-07Ge7GGet98h860-A/pub?output=csv&gid=1414329003
+    syncOption: 0
+  - csvFile: {fileID: 4900000, guid: d39fedcd0898f9d499002ef6ec500cea, type: 3}
+    remoteAddress: https://docs.google.com/spreadsheets/d/e/2PACX-1vRUOPaqMH53TZrA20iHHj-X9V57e7VP1xpxLp1z0PGAQlKN-07Ge7GGet98h860-A/pub?output=csv&gid=1549943408
+    syncOption: 0
