@@ -28,7 +28,8 @@ namespace DiceBound
         private PrefabPool<GaugeWidget> _hpGaugePrefabPool;
         private List<UnitCore> _units = new List<UnitCore>();
         private List<UnitCore> _allies = new List<UnitCore>();
-        private List<UnitCore> _enemies = new List<UnitCore>();
+        private List<UnitCore> _enemies = new List<UnitCore>(); 
+        private List<UnitCore> _deadAllies = new List<UnitCore>();
 
         private SkillDirector _skillDirector;
         private BattleDirector _battleDirector;
@@ -205,22 +206,16 @@ namespace DiceBound
 
         private void OnUnitDead(UnitCore unit)
         {
-           //switch (unit.group)
-           //{
-           //    case UnitGroup.Ally:
-           //        _allies.Remove(unit);
-           //        allyPlaceGrid.Remove(unit);
-           //        break;
-           //    case UnitGroup.Enemy:
-           //        _enemies.Remove(unit);
-           //        enemyPlaceGrid.Remove(unit);
-           //        break;
-           //}
-
-            //_hpGaugePrefabPool.Release(unit.ReleaseHpGauge());
-            //_unitPrefabPool.Release(unit);
-            //_units.Remove(unit);
-            //
+           switch (unit.group)
+           {
+               case UnitGroup.Ally:
+                   _deadAllies.Add(unit);
+                   break;
+               case UnitGroup.Enemy:
+                   _enemies.Remove(unit);
+                   enemyPlaceGrid.Remove(unit);
+                   break;
+           }
         }
 
         public int GetEnemyUnitCount()
@@ -282,6 +277,16 @@ namespace DiceBound
         public bool IsAlive(UnitCore target)
         {
             return ! target.IsDead();
+        }
+
+        public int GetDeadAllyUnitCount()
+        {
+            return _deadAllies.Count;
+        }
+
+        public void ClearDeadAllies()
+        {
+            _deadAllies.Clear();
         }
     }
 }

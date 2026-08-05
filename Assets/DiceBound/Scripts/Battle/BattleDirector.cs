@@ -86,7 +86,7 @@ namespace DiceBound
                 var effect = _skillDirector.GetSkillEffect(context.skillEffectKey);
                 effect.SetPosition(context.self.transform.position);
                 
-                yield return new WaitForSeconds(context.castTime);
+                //yield return new WaitForSeconds(context.castTime);
                 yield return effect.Play(context.target).WaitForCompletion();
                 
                 _skillDirector.Release(context.skillEffectKey,effect);

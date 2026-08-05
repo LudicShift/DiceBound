@@ -23,7 +23,7 @@ namespace DiceBound
         public string abilityId;
         public float cooldown;
         public float castTime;
-        public SkillTargetOption skillTargetOption;
+        public SkillTargetOption targetOption;
         public string effectKey;
         public int targetCount;
     }

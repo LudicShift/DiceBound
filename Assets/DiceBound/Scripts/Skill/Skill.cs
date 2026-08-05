@@ -19,6 +19,7 @@ namespace DiceBound
         private int _targetCount;
         private float _timeElapsed;
         private readonly SkillDataTableRow _data;
+        private SkillTargetOption _targetOption;
 
 
         public Skill(SkillDataTableRow data)
@@ -32,6 +33,7 @@ namespace DiceBound
             _castTime = data.cooldown;
             _cooldown = data.castTime;
             _targetCount = data.targetCount;
+            _targetOption = data.targetOption;
         }
 
         public void SetOwner(UnitCore owner)
@@ -45,6 +47,7 @@ namespace DiceBound
                 skillEffectKey= effectKey,
                 castTime = _castTime,
                 targetCount = _targetCount,
+                targetOption = _targetOption,
             };
         }
 

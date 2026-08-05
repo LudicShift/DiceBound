@@ -16,7 +16,7 @@ namespace DiceBound
 
         public static void MeleeAttack(AbilityEffect effect, AbilityActionDataTableRow data, ref AbilityContext context)
         {
-            var targetList = _unitDirector.GetTarget(context.self, context.AttackTargetOption, context.targetCount);
+            var targetList = _unitDirector.GetTarget(context.self, context.targetOption, context.targetCount);
             var abilityContext = context;
             var statAgent = abilityContext.self.GetStatAgent();
             context.self.ShowAttackAnimation(() =>
@@ -56,7 +56,7 @@ namespace DiceBound
         public static void RangedAttack(AbilityEffect effect, AbilityActionDataTableRow data,
             ref AbilityContext context)
         {
-            var targetList = _unitDirector.GetTarget(context.self, context.AttackTargetOption, context.targetCount);
+            var targetList = _unitDirector.GetTarget(context.self, context.targetOption, context.targetCount);
             var abilityContext = context;
             var statAgent = abilityContext.self.GetStatAgent();
             context.self.ShowAttackAnimation(() =>
@@ -72,7 +72,7 @@ namespace DiceBound
 
         public static void MagicAttack(AbilityEffect effect, AbilityActionDataTableRow data, ref AbilityContext context)
         {
-            var targetList = _unitDirector.GetTarget(context.self, context.AttackTargetOption, context.targetCount);
+            var targetList = _unitDirector.GetTarget(context.self, context.targetOption, context.targetCount);
             var abilityContext = context;
             var statAgent = abilityContext.self.GetStatAgent();
             context.self.ShowAttackAnimation(() =>
@@ -88,7 +88,7 @@ namespace DiceBound
 
         public static void Heal(AbilityEffect effect, AbilityActionDataTableRow data, ref AbilityContext context)
         {
-            var targetList = _unitDirector.GetTarget(context.self, context.AttackTargetOption, context.targetCount);
+            var targetList = _unitDirector.GetTarget(context.self, context.targetOption, context.targetCount);
             var abilityContext = context;
             var statAgent = abilityContext.self.GetStatAgent();
             context.self.ShowAttackAnimation(() =>

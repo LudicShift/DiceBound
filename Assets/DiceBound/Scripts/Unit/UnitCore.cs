@@ -16,22 +16,21 @@ namespace DiceBound
         private StatAgent _statAgent;
 
         public float hp;
-        
+
         public Action<UnitCore> onDeadAction;
-        public Action<UnitCore,int> onHitAction;
-        public Action<UnitCore,int> onHealAction;
-        
+        public Action<UnitCore, int> onHitAction;
+        public Action<UnitCore, int> onHealAction;
+
         public UnitGroup group;
         private Vector3 _restorePosition;
-        private Dictionary<string,Skill> _skills = new Dictionary<string,Skill>();
-        
-        
+        private Dictionary<string, Skill> _skills = new Dictionary<string, Skill>();
+
+
         private AbilityAgent _abilityAgent;
         private SpriteRenderer _spriteRenderer;
         private GaugeWidget _hpGauge;
         private Animator _animator;
-   
-        
+
 
         [SerializeField] private TweenAnimationSequenceConvertor hitSequence;
         [SerializeField] private TweenAnimationSequenceConvertor attackSequence;
@@ -61,10 +60,12 @@ namespace DiceBound
             {
                 return;
             }
+
             if (_hpGauge)
             {
-               var screenPoint =  RectTransformUtility.WorldToScreenPoint(CameraManager.GetMainCamera(), transform.position);
-                _hpGauge.rectTransform.anchoredPosition = screenPoint+new Vector2( 0,_data.height);
+                var screenPoint =
+                    RectTransformUtility.WorldToScreenPoint(CameraManager.GetMainCamera(), transform.position);
+                _hpGauge.rectTransform.anchoredPosition = screenPoint + new Vector2(0, _data.height);
             }
 
             if (_isBattle)
@@ -79,16 +80,16 @@ namespace DiceBound
         public void Setup(UnitDataTableRow data)
         {
             _data = data;
-            group =  data.group;
+            group = data.group;
             _animator.runtimeAnimatorController = data.animator;
-            _statAgent.SetBaseValue("str",data.str);
-            _statAgent.SetBaseValue("spd",data.spd);
-            _statAgent.SetBaseValue("def",data.def);
-            _statAgent.SetBaseValue("mag",data.mag);
-            _statAgent.SetBaseValue("con",data.con);
-            _statAgent.SetBaseValue("dex",data.dex);
-            _statAgent.SetBaseValue("mdf",data.mdf);
-            _statAgent.SetBaseValue("hp",data.hp);
+            _statAgent.SetBaseValue("str", data.str);
+            _statAgent.SetBaseValue("spd", data.spd);
+            _statAgent.SetBaseValue("def", data.def);
+            _statAgent.SetBaseValue("mag", data.mag);
+            _statAgent.SetBaseValue("con", data.con);
+            _statAgent.SetBaseValue("dex", data.dex);
+            _statAgent.SetBaseValue("mdf", data.mdf);
+            _statAgent.SetBaseValue("hp", data.hp);
             hp = StatUtility.GetMaxHp(_statAgent);
         }
 
@@ -103,6 +104,7 @@ namespace DiceBound
             {
                 return;
             }
+
             var skill = new Skill(data);
             _skills.Add(data.id, skill);
             skill.SetOwner(this);
@@ -140,6 +142,7 @@ namespace DiceBound
             {
                 skill.Value.OnBattleEnd();
             }
+
             _spriteRenderer.color = Color.white;
             transform.position = _restorePosition;
             ResetHp();
@@ -154,11 +157,11 @@ namespace DiceBound
         public void OnDamage(float damage)
         {
             hp -= damage;
-            onHitAction?.Invoke(this,(int)damage);
+            onHitAction?.Invoke(this, (int)damage);
             Animate("Hurt");
 
             hitSequence.Play();
-            
+
             _hpGauge.OnChange(hp);
             if (hp <= 0)
             {
@@ -175,28 +178,29 @@ namespace DiceBound
 
         public void FlipSprite(bool value)
         {
-            _spriteRenderer.flipX  = value;
+            _spriteRenderer.flipX = value;
         }
 
         public void BindHpGauge(GaugeWidget hpGauge)
         {
             _hpGauge = hpGauge;
-            _hpGauge.Setup(StatUtility.GetMaxHp(_statAgent),hp);
+            _hpGauge.Setup(StatUtility.GetMaxHp(_statAgent), hp);
         }
 
         public void ShowAttackAnimation(Action attackAction)
         {
             Sequence seq = DOTween.Sequence();
-            seq.AppendCallback(()=> Animate("Attack01"));
-            seq.Append(attackSequence.GetSequence());
-            seq.AppendCallback(attackAction.Invoke);
+            seq.JoinCallback(() => Animate("Attack01"));
+            seq.JoinCallback(() => attackSequence.Play());
+            seq.JoinCallback(attackAction.Invoke);
             seq.Play();
         }
 
         public void OnHeal(float damage)
         {
             hp += damage;
-            onHealAction?.Invoke(this,(int)damage);
+            onHealAction?.Invoke(this, (int)damage);
+            //hitSequence.Play();
             _hpGauge.OnChange(hp);
             if (hp <= 0)
             {

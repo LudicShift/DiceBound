@@ -79,13 +79,14 @@ namespace DiceBound
             
                 yield return new WaitForSeconds(0.5f);
                 _battleDirector.BeginBattle();
-                yield return new WaitUntil(() =>_unitDirector.GetEnemyUnitCount() == 0  || _unitDirector.GetAllyUnitCount() == 0);
-                if (_unitDirector.GetEnemyUnitCount()== 0 )
+                yield return new WaitUntil(() =>_unitDirector.GetEnemyUnitCount() == 0  || _unitDirector.GetAllyUnitCount() ==_unitDirector.GetDeadAllyUnitCount());
+                if (_unitDirector.GetEnemyUnitCount() == 0 )
                 {
+                    _unitDirector.ClearDeadAllies();
                     _walletDirector.AddGold(wave.waveRewardGold);
                     _battleDirector.EndBattle();
                 }
-                else if( _unitDirector.GetAllyUnitCount() == 0)
+                else if( _unitDirector.GetAllyUnitCount() == _unitDirector.GetDeadAllyUnitCount())
                 {
                     _battleDirector.EndBattle();
                     ShowGameOver();
