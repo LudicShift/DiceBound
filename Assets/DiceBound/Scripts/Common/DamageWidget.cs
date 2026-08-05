@@ -8,23 +8,28 @@ namespace DiceBound
 {
     public class DamageWidget : TextWidget
     {
+        private TweenAnimationSequenceConvertor _appear;
+
+        public void Awake()
+        {
+            _appear = GetComponentInChildren<TweenAnimationSequenceConvertor>();
+        }
 
         public void Setup(int value)
         {
             SetText($"{value}");
         }
 
-        public void Animate(Action<DamageWidget> callback)
+        public void Play(Action<DamageWidget> callback)
         {
-            Sequence seq = DOTween.Sequence();
-            rectTransform.localScale = Vector3.zero;
-            seq.Join(rectTransform.DOAnchorPos(new Vector2(Random.Range(-10,10)*10,100), 0.2f).SetRelative());
-            seq.Join(transform.DOScale(1, 0.3f));
-            seq.AppendInterval(0.3f);
-            seq.Append(transform.DOScale(0, 0.3f));
-            seq.AppendCallback(()=>callback.Invoke(this));
+            Debug.Log("데미지");
+            rectTransform.anchoredPosition += new Vector2(Random.Range(-150f, 150f), Random.Range(110f, 120f));
+            //rectTransform.localScale = Vector3.zero;
+            var seq = DOTween.Sequence();
+            seq.JoinCallback(()=>_appear.Play());
+            seq.AppendInterval(1f);
+            seq.AppendCallback(() => { callback.Invoke(this); });
+            seq.Play();
         }
-
-      
     }
 }

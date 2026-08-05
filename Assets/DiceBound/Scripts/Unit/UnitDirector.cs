@@ -24,11 +24,12 @@ namespace DiceBound
         [SerializeField] private Canvas hpCanvas;
 
 
-        private PrefabPool<UnitCore> _unitPrefabPool;
+        private PrefabPool<UnitCore> _allyPrefabPool;
+        private PrefabPool<UnitCore> _enemyPrefabPool;
         private PrefabPool<GaugeWidget> _hpGaugePrefabPool;
         private List<UnitCore> _units = new List<UnitCore>();
         private List<UnitCore> _allies = new List<UnitCore>();
-        private List<UnitCore> _enemies = new List<UnitCore>(); 
+        private List<UnitCore> _enemies = new List<UnitCore>();
         private List<UnitCore> _deadAllies = new List<UnitCore>();
 
         private SkillDirector _skillDirector;
@@ -36,9 +37,16 @@ namespace DiceBound
 
         public override IEnumerator OnInitialize()
         {
-            _unitPrefabPool = new PrefabPool<UnitCore>(PrefabManager.CachePrefab<UnitCore>(), World.GetTransform(), 50);
             _hpGaugePrefabPool =
-                new PrefabPool<GaugeWidget>(PrefabManager.CachePrefab<GaugeWidget>(), hpCanvas.transform, 50);
+                new PrefabPool<GaugeWidget>(PrefabManager.CachePrefab<GaugeWidget>(), hpCanvas.transform, 100);
+            _allyPrefabPool =
+                new PrefabPool<UnitCore>(PrefabManager.CachePrefab<UnitCore>("PF_Ally"), World.GetTransform(), 50);
+            _enemyPrefabPool = new PrefabPool<UnitCore>(PrefabManager.CachePrefab<UnitCore>("PF_Enemy"),
+                World.GetTransform(), 50);
+            _allyPrefabPool.onGetAction += OnGetUnit;
+            _enemyPrefabPool.onGetAction += OnGetUnit;
+            _allyPrefabPool.onReleaseAction += OnReleaseUnit;
+            _enemyPrefabPool.onReleaseAction += OnReleaseUnit;
 
             _skillDirector = DirectorFacade.GetDirector<SkillDirector>();
             _battleDirector = DirectorFacade.GetDirector<BattleDirector>();
@@ -50,6 +58,24 @@ namespace DiceBound
             InputManager.RegisterAction("Click", PlayerActionType.Canceled, OnMouseUpUnit);
 
             yield return null;
+        }
+
+        private void OnReleaseUnit(UnitCore instance)
+        {
+            instance.onDeadAction -= OnUnitDead;
+            instance.onHitAction -= OnUnitHit;
+            instance.onHealAction -= OnUnitHeal;
+            var hp = instance.GetHpGauge();
+            instance.ReleaseHpGauge(hp);
+            _hpGaugePrefabPool.Release(hp);
+        }
+
+        private void OnGetUnit(UnitCore instance)
+        {
+            instance.onDeadAction += OnUnitDead;
+            instance.onHitAction += OnUnitHit;
+            instance.onHealAction += OnUnitHeal;
+            instance.BindHpGauge(_hpGaugePrefabPool.Get());
         }
 
         private void OnMouseUpUnit(InputAction.CallbackContext obj)
@@ -165,17 +191,23 @@ namespace DiceBound
         public void SpawnUnit(string unitId)
         {
             var data = _unitDataDictionary[unitId];
-            var instance = _unitPrefabPool.Get();
+            UnitCore instance;
+            if (data.group == UnitGroup.Ally)
+            {
+                instance = _allyPrefabPool.Get();
+            }
+            else
+            {
+                instance = _enemyPrefabPool.Get();
+            }
+
             instance.Setup(data);
             instance.Animate("Idle");
-            instance.onDeadAction += OnUnitDead;
-            instance.onHitAction += OnUnitHit;
-            instance.onHealAction += OnUnitHeal;
-            instance.BindHpGauge(_hpGaugePrefabPool.Get());
+
             instance.BindSkill(_skillDirector.GetSkill(data.skillBasicKey));
             instance.BindSkill(_skillDirector.GetSkill(data.skillActiveKey));
             instance.BindSkill(_skillDirector.GetSkill(data.skillPassiveKey));
-            
+
             var cell = PickSpawnCell(data);
             instance.MoveTo(cell.transform.position);
             cell.PushUnit(instance);
@@ -206,16 +238,22 @@ namespace DiceBound
 
         private void OnUnitDead(UnitCore unit)
         {
-           switch (unit.group)
-           {
-               case UnitGroup.Ally:
-                   _deadAllies.Add(unit);
-                   break;
-               case UnitGroup.Enemy:
-                   _enemies.Remove(unit);
-                   enemyPlaceGrid.Remove(unit);
-                   break;
-           }
+            switch (unit.group)
+            {
+                case UnitGroup.Ally:
+                    _deadAllies.Add(unit);
+                    break;
+                case UnitGroup.Enemy:
+                    if (_units.Contains(unit))
+                    {
+                        _enemies.Remove(unit);
+                        _units.Remove(unit);
+                        enemyPlaceGrid.Remove(unit);
+                        _enemyPrefabPool.Release(unit);
+                    }
+
+                    break;
+            }
         }
 
         public int GetEnemyUnitCount()
@@ -276,7 +314,7 @@ namespace DiceBound
 
         public bool IsAlive(UnitCore target)
         {
-            return ! target.IsDead();
+            return !target.IsDead();
         }
 
         public int GetDeadAllyUnitCount()

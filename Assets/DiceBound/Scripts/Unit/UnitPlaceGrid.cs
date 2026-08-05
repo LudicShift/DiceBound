@@ -98,7 +98,7 @@ namespace DiceBound
         public void Remove(UnitCore unit)
         {
             var cell = _cells.Find(x => x.GetUnit() == unit);
-            cell.PopUnit();
+            cell?.PopUnit();
         }
     }
 }

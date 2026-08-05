@@ -1,4 +1,5 @@
-﻿using DG.Tweening;
+﻿using System;
+using DG.Tweening;
 using UnityEngine;
 
 namespace DiceBound
@@ -33,7 +34,7 @@ namespace DiceBound
         }
 
 
-        public Sequence Play(UnitCore target)
+        public Sequence Play(UnitCore target,Action<SkillEffect> callback)
         {
             Sequence sequence = DOTween.Sequence();
             switch (moveOption)
@@ -44,10 +45,12 @@ namespace DiceBound
                         transform.position = target.transform.position;
                     });
                     sequence.AppendInterval(lifetime);
+                    sequence.AppendCallback(() => callback.Invoke(this));
                     break;
                 case SkillMoveOption.Move:
                     sequence.Append(transform.DOMove(target.transform.position, moveDuration)) ;
                     sequence.AppendInterval(lifetime);
+                    sequence.AppendCallback(() => callback.Invoke(this));
                     break;
             }
 

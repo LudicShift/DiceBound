@@ -34,7 +34,9 @@ namespace DiceBound
 
         [SerializeField] private TweenAnimationSequenceConvertor hitSequence;
         [SerializeField] private TweenAnimationSequenceConvertor attackSequence;
+        [SerializeField] private TweenAnimationSequenceConvertor deadSequence;
         private bool _isBattle;
+        private AnimationCallbackBehaviour[] _callBackBehaviours;
 
 
         public void Awake()
@@ -81,7 +83,16 @@ namespace DiceBound
         {
             _data = data;
             group = data.group;
+            
             _animator.runtimeAnimatorController = data.animator;
+            _callBackBehaviours = _animator.GetBehaviours<AnimationCallbackBehaviour>();
+            
+            foreach (var behaviour in _callBackBehaviours)
+            {
+                behaviour.callback += OnAnimationCallback;
+            }
+
+            _skills = new Dictionary<string, Skill>();
             _statAgent.SetBaseValue("str", data.str);
             _statAgent.SetBaseValue("spd", data.spd);
             _statAgent.SetBaseValue("def", data.def);
@@ -93,6 +104,7 @@ namespace DiceBound
             hp = StatUtility.GetMaxHp(_statAgent);
         }
 
+       
         public void ResetHp()
         {
             hp = StatUtility.GetMaxHp(_statAgent);
@@ -152,6 +164,7 @@ namespace DiceBound
         public void Animate(string value)
         {
             _animator.Play(value);
+            
         }
 
         public void OnDamage(float damage)
@@ -161,9 +174,9 @@ namespace DiceBound
             Animate("Hurt");
 
             hitSequence.Play();
-
             _hpGauge.OnChange(hp);
-            if (hp <= 0)
+            
+            if (_isBattle && hp <= 0)
             {
                 StartCoroutine(DeadRoutine());
             }
@@ -172,6 +185,8 @@ namespace DiceBound
         private IEnumerator DeadRoutine()
         {
             Animate("Death");
+            _isBattle = false;
+            deadSequence.Play();
             yield return new WaitForSeconds(0.5f);
             onDeadAction?.Invoke(this);
         }
@@ -186,26 +201,41 @@ namespace DiceBound
             _hpGauge = hpGauge;
             _hpGauge.Setup(StatUtility.GetMaxHp(_statAgent), hp);
         }
+        public GaugeWidget GetHpGauge()
+        {
+           return _hpGauge;
+        }
+        public void ReleaseHpGauge(GaugeWidget hpGauge)
+        {
+            _hpGauge = null;
+        }
 
+    
         public void ShowAttackAnimation(Action attackAction)
         {
+           
             Sequence seq = DOTween.Sequence();
-            seq.JoinCallback(() => Animate("Attack01"));
-            seq.JoinCallback(() => attackSequence.Play());
+            seq.JoinCallback(() => Animate("Attack"));
+            seq.JoinCallback(()=>attackSequence.Play());
             seq.JoinCallback(attackAction.Invoke);
             seq.Play();
         }
+        
+        private void OnAnimationCallback(AnimatorStateInfo info)
+        {
+            if (info.IsName("Attack") || info.IsName("Hurt"))
+            {
+                Animate("Idle");
+            }
+        }
 
+        
         public void OnHeal(float damage)
         {
             hp += damage;
             onHealAction?.Invoke(this, (int)damage);
             //hitSequence.Play();
             _hpGauge.OnChange(hp);
-            if (hp <= 0)
-            {
-                StartCoroutine(DeadRoutine());
-            }
         }
 
         public GaugeWidget ReleaseHpGauge()
