@@ -82,9 +82,9 @@ namespace DiceBound
                 yield return new WaitUntil(() =>_unitDirector.GetEnemyUnitCount() == 0  || _unitDirector.GetAllyUnitCount() ==_unitDirector.GetDeadAllyUnitCount());
                 if (_unitDirector.GetEnemyUnitCount() == 0 )
                 {
-                    _unitDirector.ClearDeadAllies();
-                    _walletDirector.AddGold(wave.waveRewardGold);
                     _battleDirector.EndBattle();
+                    _unitDirector.ReviveDeadAllies();
+                    _walletDirector.AddGold(wave.waveRewardGold);
                 }
                 else if( _unitDirector.GetAllyUnitCount() == _unitDirector.GetDeadAllyUnitCount())
                 {

@@ -106,24 +106,30 @@ namespace DiceBound
 
         public void ShowHeal(UnitCore core, int damage)
         {
-            var screenPoint =
-                RectTransformUtility.WorldToScreenPoint(CameraManager.GetMainCamera(), core.transform.position);
             var damageWidget = _damageWidgetPool.Get();
             damageWidget.SetColor(Color.green);
             damageWidget.Setup(damage);
-            damageWidget.rectTransform.anchoredPosition = screenPoint;
+            PositionOverUnit(damageWidget.rectTransform, core.transform.position);
             damageWidget.Play(x => _damageWidgetPool.Release(x));
         }
 
         public void ShowDamage(UnitCore core, int damage)
         {
-            var screenPoint =
-                RectTransformUtility.WorldToScreenPoint(CameraManager.GetMainCamera(), core.transform.position);
             var damageWidget = _damageWidgetPool.Get();
-            damageWidget.SetColor(Color.red);
+            damageWidget.SetColor(core.group == UnitGroup.Ally ? Color.red : Color.orange);
+
             damageWidget.Setup(damage);
-            damageWidget.rectTransform.anchoredPosition = screenPoint;
+            PositionOverUnit(damageWidget.rectTransform, core.transform.position);
             damageWidget.Play(x => _damageWidgetPool.Release(x));
+        }
+
+        private void PositionOverUnit(RectTransform target, Vector3 worldPosition)
+        {
+            var camera = CameraManager.GetMainCamera();
+            var screenPoint = RectTransformUtility.WorldToScreenPoint(camera, worldPosition);
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                (RectTransform)damageCanvas.transform, screenPoint, camera, out var localPoint);
+            target.anchoredPosition = localPoint;
         }
 
         public void EnqueueContext(BattleContext battleContext)

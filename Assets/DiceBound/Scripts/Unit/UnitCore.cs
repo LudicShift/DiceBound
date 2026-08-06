@@ -65,9 +65,11 @@ namespace DiceBound
 
             if (_hpGauge)
             {
-                var screenPoint =
-                    RectTransformUtility.WorldToScreenPoint(CameraManager.GetMainCamera(), transform.position);
-                _hpGauge.rectTransform.anchoredPosition = screenPoint + new Vector2(0, _data.height);
+                var camera = CameraManager.GetMainCamera();
+                var screenPoint = RectTransformUtility.WorldToScreenPoint(camera, transform.position);
+                RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                    (RectTransform)_hpGauge.rectTransform.parent, screenPoint, camera, out var localPoint);
+                _hpGauge.rectTransform.anchoredPosition = localPoint + new Vector2(0, _data.height);
             }
 
             if (_isBattle)
@@ -155,9 +157,21 @@ namespace DiceBound
                 skill.Value.OnBattleEnd();
             }
 
-            _spriteRenderer.color = Color.white;
             transform.position = _restorePosition;
+
+            if (!IsDead())
+            {
+                _spriteRenderer.color = Color.white;
+                ResetHp();
+                Animate("Idle");
+            }
+        }
+
+        public void Revive()
+        {
+            _spriteRenderer.color = Color.white;
             ResetHp();
+            _hpGauge.OnChange(hp);
             Animate("Idle");
         }
 

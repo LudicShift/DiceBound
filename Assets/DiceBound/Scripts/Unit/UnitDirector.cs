@@ -209,7 +209,7 @@ namespace DiceBound
             instance.BindSkill(_skillDirector.GetSkill(data.skillPassiveKey));
 
             var cell = PickSpawnCell(data);
-            instance.MoveTo(cell.transform.position);
+            instance.Warp(cell.transform.position);
             cell.PushUnit(instance);
 
             _units.Add(instance);
@@ -241,7 +241,12 @@ namespace DiceBound
             switch (unit.group)
             {
                 case UnitGroup.Ally:
-                    _deadAllies.Add(unit);
+                    if (!_deadAllies.Contains(unit))
+                    {
+                        _units.Remove(unit);
+                        _allies.Remove(unit);
+                        _deadAllies.Add(unit);
+                    }
                     break;
                 case UnitGroup.Enemy:
                     if (_units.Contains(unit))
@@ -304,7 +309,7 @@ namespace DiceBound
 
         private List<UnitCore> GetRandomAllies(int count)
         {
-            return _allies.GetRandomElements(count);
+            return _allies.Where(x => !x.IsDead()).ToList().GetRandomElements(count);
         }
 
         public int GetAllyUnitCount()
@@ -322,8 +327,13 @@ namespace DiceBound
             return _deadAllies.Count;
         }
 
-        public void ClearDeadAllies()
+        public void ReviveDeadAllies()
         {
+            foreach (var unit in _deadAllies)
+            {
+                unit.Revive();
+            }
+
             _deadAllies.Clear();
         }
     }
