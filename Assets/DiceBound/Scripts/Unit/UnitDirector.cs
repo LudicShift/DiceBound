@@ -75,7 +75,6 @@ namespace DiceBound
             instance.onDeadAction += OnUnitDead;
             instance.onHitAction += OnUnitHit;
             instance.onHealAction += OnUnitHeal;
-            instance.BindHpGauge(_hpGaugePrefabPool.Get());
         }
 
         private void OnMouseUpUnit(InputAction.CallbackContext obj)
@@ -202,6 +201,7 @@ namespace DiceBound
             }
 
             instance.Setup(data);
+            instance.BindHpGauge(_hpGaugePrefabPool.Get());
             instance.Animate("Idle");
 
             instance.BindSkill(_skillDirector.GetSkill(data.skillBasicKey));

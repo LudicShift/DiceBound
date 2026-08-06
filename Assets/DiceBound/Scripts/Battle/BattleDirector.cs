@@ -25,8 +25,7 @@ namespace DiceBound
             _skillDirector = DirectorFacade.GetDirector<SkillDirector>();
             yield return null;
         }
-
-       
+        
         public void BeginBattle()
         {
             _isPlaying = true;
@@ -117,7 +116,6 @@ namespace DiceBound
         {
             var damageWidget = _damageWidgetPool.Get();
             damageWidget.SetColor(core.group == UnitGroup.Ally ? Color.red : Color.orange);
-
             damageWidget.Setup(damage);
             PositionOverUnit(damageWidget.rectTransform, core.transform.position);
             damageWidget.Play(x => _damageWidgetPool.Release(x));

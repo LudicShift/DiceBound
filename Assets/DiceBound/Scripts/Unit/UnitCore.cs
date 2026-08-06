@@ -32,9 +32,9 @@ namespace DiceBound
         private Animator _animator;
 
 
-        [SerializeField] private TweenAnimationSequenceConvertor hitSequence;
-        [SerializeField] private TweenAnimationSequenceConvertor attackSequence;
-        [SerializeField] private TweenAnimationSequenceConvertor deadSequence;
+        [SerializeField] private TweenAnimationCombiner hitSequence;
+        [SerializeField] private TweenAnimationCombiner attackSequence;
+        [SerializeField] private TweenAnimationCombiner deadSequence;
         private bool _isBattle;
         private AnimationCallbackBehaviour[] _callBackBehaviours;
 
@@ -187,7 +187,7 @@ namespace DiceBound
             onHitAction?.Invoke(this, (int)damage);
             Animate("Hurt");
 
-            hitSequence.Play();
+            StartCoroutine(hitSequence.Play());
             _hpGauge.OnChange(hp);
             
             if (_isBattle && hp <= 0)
@@ -200,7 +200,7 @@ namespace DiceBound
         {
             Animate("Death");
             _isBattle = false;
-            deadSequence.Play();
+            StartCoroutine(deadSequence.Play());
             yield return new WaitForSeconds(0.5f);
             onDeadAction?.Invoke(this);
         }
@@ -227,12 +227,9 @@ namespace DiceBound
     
         public void ShowAttackAnimation(Action attackAction)
         {
-           
-            Sequence seq = DOTween.Sequence();
-            seq.JoinCallback(() => Animate("Attack"));
-            seq.JoinCallback(()=>attackSequence.Play());
-            seq.JoinCallback(attackAction.Invoke);
-            seq.Play();
+            Animate("Attack");
+            StartCoroutine(attackSequence.Play());
+            attackAction.Invoke();
         }
         
         private void OnAnimationCallback(AnimatorStateInfo info)
