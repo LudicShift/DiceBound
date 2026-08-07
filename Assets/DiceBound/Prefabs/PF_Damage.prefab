@@ -51,7 +51,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.TweenAnimationSequenceConvertor
   mode: 0
-  isRoot: 0
 --- !u!114 &2716096948772632498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,7 +98,7 @@ MonoBehaviour:
   tweenTargetIsTargetGO: 1
   delay: 0
   duration: 0.4
-  easeType: 25
+  easeType: 19
   easeCurve:
     serializedVersion: 2
     m_Curve:
@@ -128,7 +127,7 @@ MonoBehaviour:
   loops: 1
   id: 
   isRelative: 0
-  isFrom: 0
+  isFrom: 1
   isIndependentUpdate: 0
   autoKill: 0
   autoGenerate: 1
@@ -140,7 +139,7 @@ MonoBehaviour:
   forcedTargetType: 0
   autoPlay: 0
   useTargetAsV3: 0
-  endValueFloat: 1
+  endValueFloat: 0
   endValueV3: {x: 0, y: 0, z: 0}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
@@ -206,8 +205,8 @@ MonoBehaviour:
   targetGO: {fileID: 3753666102664184795}
   tweenTargetIsTargetGO: 1
   delay: 0
-  duration: 0.6
-  easeType: 18
+  duration: 0.3
+  easeType: 11
   easeCurve:
     serializedVersion: 2
     m_Curve:
@@ -236,20 +235,20 @@ MonoBehaviour:
   loops: 1
   id: 
   isRelative: 1
-  isFrom: 0
+  isFrom: 1
   isIndependentUpdate: 0
   autoKill: 0
   autoGenerate: 1
   isActive: 1
   isValid: 1
   target: {fileID: 6543602077528779970}
-  animationType: 1
+  animationType: 12
   targetType: 5
   forcedTargetType: 0
   autoPlay: 0
   useTargetAsV3: 0
   endValueFloat: 0
-  endValueV3: {x: 0, y: 100, z: 0}
+  endValueV3: {x: 50, y: 50, z: 50}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
@@ -262,8 +261,8 @@ MonoBehaviour:
   endValueTransform: {fileID: 0}
   optionalBool0: 0
   optionalBool1: 1
-  optionalFloat0: 1
-  optionalInt0: 10
+  optionalFloat0: 90
+  optionalInt0: 5
   optionalRotationMode: 0
   optionalScrambleMode: 0
   optionalShakeRandomnessMode: 0
@@ -299,6 +298,7 @@ RectTransform:
   m_Children:
   - {fileID: 1035993795567727395}
   - {fileID: 67879579654932901}
+  - {fileID: 7350001385384076345}
   m_Father: {fileID: 1560099070096605368}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -319,7 +319,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.TweenAnimationCombiner
   mode: 1
-  isRoot: 1
 --- !u!1 &3602412463993251543
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,14 +419,14 @@ RectTransform:
   m_GameObject: {fileID: 3753666102664184795}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1560099070096605368}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.000028422273, y: -0.000011773938}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8783211201196411446
@@ -530,7 +529,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!1 &6415577765189955226
+--- !u!1 &5692457241694566523
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -538,10 +537,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 67879579654932901}
-  - component: {fileID: 2625101698162374783}
-  - component: {fileID: 217950684178823642}
-  - component: {fileID: 4671140880195062852}
+  - component: {fileID: 7350001385384076345}
+  - component: {fileID: 6441265632750882176}
+  - component: {fileID: 6769802131308928768}
   m_Layer: 5
   m_Name: Disappear
   m_TagString: Untagged
@@ -549,13 +547,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &67879579654932901
+--- !u!224 &7350001385384076345
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6415577765189955226}
+  m_GameObject: {fileID: 5692457241694566523}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
@@ -568,28 +566,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2625101698162374783
+--- !u!114 &6441265632750882176
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6415577765189955226}
+  m_GameObject: {fileID: 5692457241694566523}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 08dcf7db256d4a809962253936c111aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.TweenAnimationSequenceConvertor
   mode: 0
-  isRoot: 0
---- !u!114 &217950684178823642
+--- !u!114 &6769802131308928768
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6415577765189955226}
-  m_Enabled: 0
+  m_GameObject: {fileID: 5692457241694566523}
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d0390bd8b8ffd640b34fe25065ff1df, type: 3}
   m_Name: 
@@ -690,6 +687,56 @@ MonoBehaviour:
   optionalScrambleMode: 0
   optionalShakeRandomnessMode: 0
   optionalString: 
+--- !u!1 &6415577765189955226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 67879579654932901}
+  - component: {fileID: 2625101698162374783}
+  - component: {fileID: 4671140880195062852}
+  m_Layer: 5
+  m_Name: Float
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &67879579654932901
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6415577765189955226}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 7987097849578096759}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2625101698162374783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6415577765189955226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08dcf7db256d4a809962253936c111aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.TweenAnimationSequenceConvertor
+  mode: 0
 --- !u!114 &4671140880195062852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -736,8 +783,8 @@ MonoBehaviour:
   targetGO: {fileID: 3753666102664184795}
   tweenTargetIsTargetGO: 1
   delay: 0
-  duration: 0.6
-  easeType: 1
+  duration: 0.3
+  easeType: 10
   easeCurve:
     serializedVersion: 2
     m_Curve:
@@ -779,7 +826,7 @@ MonoBehaviour:
   autoPlay: 0
   useTargetAsV3: 0
   endValueFloat: 0
-  endValueV3: {x: 0, y: 100, z: 0}
+  endValueV3: {x: 0, y: 150, z: 0}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 

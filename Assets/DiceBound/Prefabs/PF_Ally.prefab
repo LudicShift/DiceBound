@@ -46,7 +46,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.TweenAnimationSequenceConvertor
   mode: 0
-  isRoot: 1
 --- !u!114 &3391803860467907046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,7 +314,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.TweenAnimationSequenceConvertor
   mode: 0
-  isRoot: 1
 --- !u!114 &4031636046130316503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470,7 +468,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.TweenAnimationSequenceConvertor
   mode: 0
-  isRoot: 1
 --- !u!114 &7136547789591922088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -514,10 +511,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   targetIsSelf: 0
-  targetGO: {fileID: 2426898278721724553}
+  targetGO: {fileID: 6302351625213716871}
   tweenTargetIsTargetGO: 1
   delay: 0
-  duration: 0.3
+  duration: 0.2
   easeType: 6
   easeCurve:
     serializedVersion: 2
@@ -553,7 +550,7 @@ MonoBehaviour:
   autoGenerate: 1
   isActive: 1
   isValid: 1
-  target: {fileID: 3189649902283032812}
+  target: {fileID: 3003753007602453789}
   animationType: 2
   targetType: 11
   forcedTargetType: 0
