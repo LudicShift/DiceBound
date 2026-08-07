@@ -66,11 +66,7 @@ namespace DiceBound
 
             if (_hpGauge)
             {
-                var camera = CameraManager.GetMainCamera();
-                var screenPoint = RectTransformUtility.WorldToScreenPoint(camera, _spriteRenderer.transform.position);
-                RectTransformUtility.ScreenPointToLocalPointInRectangle(
-                    (RectTransform)_hpGauge.rectTransform.parent, screenPoint, camera, out var localPoint);
-                _hpGauge.rectTransform.anchoredPosition = localPoint + new Vector2(0, _data.height);
+               _hpGauge.SetPositionFromWorldPoint(CameraManager.GetMainCamera(), _spriteRenderer.transform.position, new Vector2(0,_data.height));
             }
 
             if (_isBattle)

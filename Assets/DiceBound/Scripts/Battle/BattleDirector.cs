@@ -20,12 +20,13 @@ namespace DiceBound
 
         public override IEnumerator OnInitialize()
         {
-            _damageWidgetPool = new PrefabPool<DamageWidget>(PrefabManager.CachePrefab<DamageWidget>(),damageCanvas.transform,20);
+            _damageWidgetPool =
+                new PrefabPool<DamageWidget>(PrefabManager.CachePrefab<DamageWidget>(), damageCanvas.transform, 20);
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
             _skillDirector = DirectorFacade.GetDirector<SkillDirector>();
             yield return null;
         }
-        
+
         public void BeginBattle()
         {
             _isPlaying = true;
@@ -44,6 +45,7 @@ namespace DiceBound
             {
                 unit.OnBattleEnd();
             }
+
             _battleContextQueue.Clear();
         }
 
@@ -66,17 +68,14 @@ namespace DiceBound
                 {
                     yield break;
                 }
-                
+
                 var effect = _skillDirector.GetSkillEffect(context.skillEffectKey);
                 effect.SetPosition(context.self.transform.position);
-                
+
                 Debug.DrawLine(context.self.transform.position, context.target.transform.position, Color.red);
                 //yield return new WaitForSeconds(context.castTime);
-                effect.Play(context.target, x =>
-                {
-                    _skillDirector.Release(context.skillEffectKey, x);
-                });
-                
+                effect.Play(context.target, x => { _skillDirector.Release(context.skillEffectKey, x); });
+
                 if (!context.self || !_unitDirector.IsAlive(context.self))
                 {
                     yield break;
@@ -91,9 +90,8 @@ namespace DiceBound
                 {
                     context.target.OnHeal(context.healPower);
                 }
-             
+
                 //context.target.OnDebuff(context.debuff);
-                
             }
         }
 
@@ -108,7 +106,8 @@ namespace DiceBound
             var damageWidget = _damageWidgetPool.Get();
             damageWidget.SetColor(Color.green);
             damageWidget.Setup(damage);
-            PositionOverUnit(damageWidget.rectTransform, core.transform.position);
+            damageWidget.SetPositionFromWorldPoint(CameraManager.GetMainCamera(), core.transform.position,
+                new Vector2(Random.Range(-10, 10) * 10, 100));
             damageWidget.Play(x => _damageWidgetPool.Release(x));
         }
 
@@ -117,18 +116,11 @@ namespace DiceBound
             var damageWidget = _damageWidgetPool.Get();
             damageWidget.SetColor(core.group == UnitGroup.Ally ? Color.red : Color.orange);
             damageWidget.Setup(damage);
-            PositionOverUnit(damageWidget.rectTransform, core.transform.position);
+            damageWidget.SetPositionFromWorldPoint(CameraManager.GetMainCamera(), core.transform.position,
+                new Vector2(Random.Range(-10, 10) * 10, 100));
             damageWidget.Play(x => _damageWidgetPool.Release(x));
         }
 
-        private void PositionOverUnit(RectTransform target, Vector3 worldPosition)
-        {
-            var camera = CameraManager.GetMainCamera();
-            var screenPoint = RectTransformUtility.WorldToScreenPoint(camera, worldPosition);
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(
-                (RectTransform)damageCanvas.transform, screenPoint, camera, out var localPoint);
-            target.anchoredPosition = localPoint;
-        }
 
         public void EnqueueContext(BattleContext battleContext)
         {
