@@ -24,7 +24,7 @@ namespace DiceBound
 
         private IEnumerator PlayAnimation(Action<DamageWidget> callback)
         {
-            yield return tween.Play(()=>Debug.Log("DamageTweenEnd"));
+            yield return tween.Play();
             //yield return new WaitForSeconds(0.5f);
             callback?.Invoke(this);
         }

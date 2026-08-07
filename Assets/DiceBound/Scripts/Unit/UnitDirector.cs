@@ -210,6 +210,7 @@ namespace DiceBound
 
             var cell = PickSpawnCell(data);
             instance.Warp(cell.transform.position);
+            instance.PlayAppear();
             cell.PushUnit(instance);
 
             _units.Add(instance);

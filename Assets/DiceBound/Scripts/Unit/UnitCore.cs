@@ -32,6 +32,7 @@ namespace DiceBound
         private Animator _animator;
 
 
+        [SerializeField] private TweenAnimationCombiner appearSequence;
         [SerializeField] private TweenAnimationCombiner hitSequence;
         [SerializeField] private TweenAnimationCombiner attackSequence;
         [SerializeField] private TweenAnimationCombiner deadSequence;
@@ -66,7 +67,7 @@ namespace DiceBound
             if (_hpGauge)
             {
                 var camera = CameraManager.GetMainCamera();
-                var screenPoint = RectTransformUtility.WorldToScreenPoint(camera, transform.position);
+                var screenPoint = RectTransformUtility.WorldToScreenPoint(camera, _spriteRenderer.transform.position);
                 RectTransformUtility.ScreenPointToLocalPointInRectangle(
                     (RectTransform)_hpGauge.rectTransform.parent, screenPoint, camera, out var localPoint);
                 _hpGauge.rectTransform.anchoredPosition = localPoint + new Vector2(0, _data.height);
@@ -110,6 +111,7 @@ namespace DiceBound
         public void ResetHp()
         {
             hp = StatUtility.GetMaxHp(_statAgent);
+            _hpGauge.OnChange(hp);
         }
 
         public void BindSkill(SkillDataTableRow data)
@@ -269,6 +271,11 @@ namespace DiceBound
         public bool IsDead()
         {
             return hp <= 0;
+        }
+
+        public void PlayAppear()
+        {
+            StartCoroutine(appearSequence.Play(0.2f));
         }
     }
 }

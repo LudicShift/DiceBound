@@ -37,7 +37,8 @@ namespace DiceBound
         private List<DicePointWidget> _remainPoints;
         private List<DiceWidget> _keepDices;
         private List<DiceWidget> _remainDices;
-      
+        private string _noCombinationText;
+
         public void ShowCanvas()
         {
             canvas.gameObject.SetActive(true);
@@ -134,6 +135,8 @@ namespace DiceBound
 
         public override IEnumerator OnInitialize()
         {
+            _noCombinationText = "No Combination";//추후 현지화
+            
             _keepDices = new List<DiceWidget>();
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
             _remainDices = canvas.GetComponentsInChildren<DiceWidget>(true).ToList();
@@ -261,16 +264,27 @@ namespace DiceBound
             var allDices = _remainDices.Concat(_keepDices).ToList();
             var combinationContext = new CombinationContext(allDices);
             var combination = Evaluate(combinationContext);
-            _combinationInfoWidget.SetText(combination.GetName());
+            if (combination!=null)
+            {
+                _combinationInfoWidget.SetText(combination.GetName());
+            }
+            else
+            {
+                _combinationInfoWidget.SetText(_noCombinationText);
+            }
         }
         
         private void OnClaimButtonClick()
         {
+           
             var allDices = _remainDices.Concat(_keepDices).ToList();
             var combinationContext = new CombinationContext(allDices);
             var combination = Evaluate(combinationContext);
-            _unitDirector.SpawnUnit(combination.GetUnitID());
-            HideCanvas();
+            if (combination != null)
+            {
+                _unitDirector.SpawnUnit(combination.GetUnitID());
+                HideCanvas();
+            }
         }
 
         private void OnShowFieldButtonClick()
