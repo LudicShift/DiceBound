@@ -38,6 +38,7 @@ namespace DiceBound
         [SerializeField] private TweenAnimationCombiner deadSequence;
         private bool _isBattle;
         private AnimationCallbackBehaviour[] _callBackBehaviours;
+        public UnitAttackType attackType;
 
 
         public void Awake()
@@ -82,6 +83,7 @@ namespace DiceBound
         {
             _data = data;
             group = data.group;
+            attackType = data.attackType;
             
             _animator.runtimeAnimatorController = data.animator;
             _callBackBehaviours = _animator.GetBehaviours<AnimationCallbackBehaviour>();
@@ -129,12 +131,12 @@ namespace DiceBound
 
         public void MoveTo(Vector3 position)
         {
-            transform.DOMove(position, moveDuration);
+            transform.DOLocalMove(position, moveDuration);
         }
 
         public void Warp(Vector3 position)
         {
-            transform.position = position;
+            transform.localPosition = position;
         }
 
         public void OnBattleBegin()
@@ -271,7 +273,17 @@ namespace DiceBound
 
         public void PlayAppear()
         {
-            StartCoroutine(appearSequence.Play(0.2f));
+            _spriteRenderer.color = new Color();
+            _hpGauge.image.color = new Color();
+            StartCoroutine(appearSequence.Play(0.2f, () =>
+            {
+                _hpGauge.image.color = Color.red;
+            }));
+        }
+
+        public void SetParent(Transform parent)
+        {
+           transform.SetParent(parent);
         }
     }
 }

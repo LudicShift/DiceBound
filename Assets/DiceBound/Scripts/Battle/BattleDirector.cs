@@ -114,7 +114,8 @@ namespace DiceBound
         public void ShowDamage(UnitCore core, int damage)
         {
             var damageWidget = _damageWidgetPool.Get();
-            damageWidget.SetColor(core.group == UnitGroup.Ally ? Color.red : Color.orange);
+            //damageWidget.SetColor(core.group == UnitGroup.Ally ? Color.red : Color.orange);
+            damageWidget.SetColor(Color.red );
             damageWidget.Setup(damage);
             damageWidget.SetPositionFromWorldPoint(CameraManager.GetMainCamera(), core.transform.position,
                 new Vector2(Random.Range(-10, 10) * 10, 100));

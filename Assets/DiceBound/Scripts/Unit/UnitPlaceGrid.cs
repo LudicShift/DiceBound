@@ -95,10 +95,15 @@ namespace DiceBound
             return _cells.Count(x=>!x.IsEmpty());
         }
 
-        public void Remove(UnitCore unit)
+        public UnitPlaceCell FindCellByUnit(UnitCore unit)
+        {
+            return _cells.Find(x=>x.GetUnit() == unit);
+        }
+
+        public void RemoveUnit(UnitCore unit)
         {
             var cell = _cells.Find(x => x.GetUnit() == unit);
-            cell?.PopUnit();
+            cell?.RemoveUnit();
         }
     }
 }

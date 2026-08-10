@@ -2778,6 +2778,7 @@ GameObject:
   - component: {fileID: 504579072}
   - component: {fileID: 504579071}
   - component: {fileID: 504579075}
+  - component: {fileID: 504579079}
   - component: {fileID: 504579076}
   - component: {fileID: 504579078}
   - component: {fileID: 504579077}
@@ -2893,8 +2894,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 711eb6a4d5044ac2a8bf5f6b32bce690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDirector
-  allyPlaceGrid: {fileID: 1535455968}
-  enemyPlaceGrid: {fileID: 1092675209}
   hpCanvas: {fileID: 255095993}
 --- !u!114 &504579076
 MonoBehaviour:
@@ -2937,6 +2936,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.BattleDirector
   damageCanvas: {fileID: 766101618}
+--- !u!114 &504579079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504579069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bfea64f4d094a7e9a14e6e0a64c4705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitPlaceDirector
+  allyGrid: {fileID: 1535455968}
+  enemyGrid: {fileID: 1092675209}
 --- !u!1 &512551058
 GameObject:
   m_ObjectHideFlags: 0

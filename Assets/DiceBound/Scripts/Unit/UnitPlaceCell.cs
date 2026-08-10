@@ -52,16 +52,23 @@ namespace DiceBound
             return !_unit;
         }
 
-        public void PushUnit(UnitCore unit)
+        public void PlaceUnit(UnitCore unit, bool warp = true)
         {
             _unit = unit;
+            _unit.SetParent(transform);
+            if (warp)
+            {
+                _unit.Warp(Vector3.zero);
+            }
+            else
+            {
+                _unit.MoveTo(Vector3.zero);
+            }
         }
         
-        public UnitCore PopUnit()
+        public void RemoveUnit()
         {
-            var unit = _unit;
             _unit = null;
-            return unit;
         }
 
         public void Setup(float distance)
