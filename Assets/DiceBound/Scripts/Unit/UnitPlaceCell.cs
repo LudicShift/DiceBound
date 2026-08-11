@@ -58,11 +58,11 @@ namespace DiceBound
             _unit.SetParent(transform);
             if (warp)
             {
-                _unit.Warp(Vector3.zero);
+                _unit.LocalWarp(Vector3.zero);
             }
             else
             {
-                _unit.MoveTo(Vector3.zero);
+                _unit.LocalMove(Vector3.zero);
             }
         }
         

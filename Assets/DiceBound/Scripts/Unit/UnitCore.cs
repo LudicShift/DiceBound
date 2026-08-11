@@ -29,8 +29,10 @@ namespace DiceBound
         private AbilityAgent _abilityAgent;
         private SpriteRenderer _spriteRenderer;
         private GaugeWidget _hpGauge;
+        private TierLabelWidget _tierLabel;
         private Animator _animator;
         private SpriteOutliner _outliner;
+        private UnitMergeEffectHandler _mergeEffectHandler;
 
 
         [SerializeField] private TweenAnimationPlayer appearSequence;
@@ -40,6 +42,8 @@ namespace DiceBound
         private bool _isBattle;
         private AnimationCallbackBehaviour[] _callBackBehaviours;
         public UnitAttackType attackType;
+        private int _tier = 0;
+        
 
 
         public void Awake()
@@ -48,6 +52,7 @@ namespace DiceBound
             _abilityAgent = GetComponent<AbilityAgent>();
             _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
             _outliner = GetComponentInChildren<SpriteOutliner>();
+            _mergeEffectHandler = GetComponentInChildren<UnitMergeEffectHandler>();
             _animator = GetComponentInChildren<Animator>();
             _animator.speed = 1.5f;
             _statAgent.AddStat("str");
@@ -70,6 +75,11 @@ namespace DiceBound
             if (_hpGauge)
             {
                _hpGauge.SetPositionFromWorldPoint(CameraManager.GetMainCamera(), _spriteRenderer.transform.position, new Vector2(0,_data.height));
+            }
+
+            if (_tierLabel)
+            {
+                _tierLabel.SetPositionFromWorldPoint(CameraManager.GetMainCamera(), _spriteRenderer.transform.position, new Vector2(0,_data.height+30));
             }
 
             if (_isBattle)
@@ -130,13 +140,16 @@ namespace DiceBound
         {
             return _data;
         }
-
-        public void MoveTo(Vector3 position)
+        public Tween Move(Vector3 position)
         {
-            transform.DOLocalMove(position, moveDuration);
+           return transform.DOMove(position, moveDuration);
+        }
+        public Tween LocalMove(Vector3 position)
+        {
+           return transform.DOLocalMove(position, moveDuration);
         }
 
-        public void Warp(Vector3 position)
+        public void LocalWarp(Vector3 position)
         {
             transform.localPosition = position;
         }
@@ -233,6 +246,14 @@ namespace DiceBound
             _hpGauge = hpGauge;
             _hpGauge.Setup(StatUtility.GetMaxHp(_statAgent), hp);
         }
+        
+        public void BindTierLabel(TierLabelWidget tierLabel)
+        {
+            _tierLabel = tierLabel;
+            _tierLabel.OnChange(_tier);
+        }
+        
+        
         public GaugeWidget GetHpGauge()
         {
            return _hpGauge;
@@ -290,19 +311,55 @@ namespace DiceBound
             return hp <= 0;
         }
 
-        public void PlayAppear()
+        public void PlayAppear(Action onComplete = null)
         {
             _spriteRenderer.color = new Color();
             _hpGauge.canvasGroup.alpha = 0;
             StartCoroutine(appearSequence.Play(0.2f, () =>
             {
                 _hpGauge.canvasGroup.alpha = 1;
+                onComplete?.Invoke();
             }));
         }
 
         public void SetParent(Transform parent)
         {
            transform.SetParent(parent);
+        }
+
+        public void Upgrade()
+        {
+            _tier++;
+            _tierLabel.OnChange(_tier);
+            foreach (var stat in _statAgent.GetAllStats())
+            {
+                stat.Value.AddModifier(new StatModifier(0.8f, StatModifyType.PercentMult));
+            }
+        }
+
+        public TierLabelWidget GetTierLabel()
+        {
+            return _tierLabel;
+        }
+
+        public IEnumerator ShowUpgradeEffect()
+        {
+            yield return _mergeEffectHandler.FadeIn();
+        }
+
+        public IEnumerator HideUpgradeEffect()
+        {
+            yield return  _mergeEffectHandler.FadeOut();
+        }
+
+        public string GetId()
+        {
+           return _data.id;
+        }
+
+        public int GetTier()
+        {
+            return _tier;
         }
     }
 }

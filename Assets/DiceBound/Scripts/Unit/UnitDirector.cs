@@ -20,6 +20,7 @@ namespace DiceBound
         private PrefabPool<UnitCore> _allyPrefabPool;
         private PrefabPool<UnitCore> _enemyPrefabPool;
         private PrefabPool<GaugeWidget> _hpGaugePrefabPool;
+        private PrefabPool<TierLabelWidget> _tierLabelPrefabPool;
         private List<UnitCore> _units = new List<UnitCore>();
         private List<UnitCore> _allies = new List<UnitCore>();
         private List<UnitCore> _enemies = new List<UnitCore>();
@@ -29,16 +30,20 @@ namespace DiceBound
         private BattleDirector _battleDirector;
         private UnitPlaceDirector _unitPlaceDirector;
 
+        public Action<UnitCore> onSpawnAlly;
+
         [SerializeField] private UnitTrashCan trashCan;
 
         public override IEnumerator OnInitialize()
         {
-            _hpGaugePrefabPool =
-                new PrefabPool<GaugeWidget>(PrefabManager.CachePrefab<GaugeWidget>(), hpCanvas.transform, 100);
+            _hpGaugePrefabPool = new PrefabPool<GaugeWidget>(PrefabManager.CachePrefab<GaugeWidget>(), hpCanvas.transform, 100);
+            _tierLabelPrefabPool = new PrefabPool<TierLabelWidget>(PrefabManager.CachePrefab<TierLabelWidget>(), hpCanvas.transform,100);
+            
             _allyPrefabPool =
                 new PrefabPool<UnitCore>(PrefabManager.CachePrefab<UnitCore>("PF_Ally"), World.GetTransform(), 50);
             _enemyPrefabPool = new PrefabPool<UnitCore>(PrefabManager.CachePrefab<UnitCore>("PF_Enemy"),
                 World.GetTransform(), 50);
+            
             _allyPrefabPool.onGetAction += OnGetUnit;
             _enemyPrefabPool.onGetAction += OnGetUnit;
             _allyPrefabPool.onReleaseAction += OnReleaseUnit;
@@ -51,7 +56,6 @@ namespace DiceBound
 
             _camera = CameraManager.GetMainCamera();
             _unitDataDictionary = DataTableManager.FindAllRows<UnitDataTableRow>().ToDictionary(x => x.id);
-            
             yield return null;
         }
 
@@ -63,8 +67,10 @@ namespace DiceBound
             instance.onHitAction -= OnUnitHit;
             instance.onHealAction -= OnUnitHeal;
             var hp = instance.GetHpGauge();
+            var tierLabel = instance.GetTierLabel();
             instance.ReleaseHpGauge(hp);
             _hpGaugePrefabPool.Release(hp);
+            _tierLabelPrefabPool.Release(tierLabel);
         }
 
         private void OnGetUnit(UnitCore instance)
@@ -90,6 +96,7 @@ namespace DiceBound
 
             instance.Setup(data);
             instance.BindHpGauge(_hpGaugePrefabPool.Get());
+            instance.BindTierLabel(_tierLabelPrefabPool.Get());
             instance.Animate("Idle");
 
             instance.BindSkill(_skillDirector.GetSkill(data.skillBasicKey));
@@ -97,7 +104,6 @@ namespace DiceBound
             instance.BindSkill(_skillDirector.GetSkill(data.skillPassiveKey));
 
             _unitPlaceDirector.PlaceUnit(instance);
-            instance.PlayAppear();
             
 
             _units.Add(instance);
@@ -105,10 +111,12 @@ namespace DiceBound
             {
                 case UnitGroup.Ally:
                     _allies.Add(instance);
+                    instance.PlayAppear(()=>onSpawnAlly.Invoke(instance));
                     instance.FlipSprite(false);
                     break;
                 case UnitGroup.Enemy:
                     _enemies.Add(instance);
+                    instance.PlayAppear();
                     instance.FlipSprite(true);
                     break;
             }
@@ -148,7 +156,7 @@ namespace DiceBound
             }
         }
         
-        private void RemoveAllyUnit(UnitCore unit)
+        public void RemoveAllyUnit(UnitCore unit)
         {
             _allies.Remove(unit);
             _units.Remove(unit);
@@ -160,7 +168,11 @@ namespace DiceBound
         {
             return _enemies.Count;
         }
-
+        public List<UnitCore> GetAllies()
+        {
+            return _allies;
+        }
+        
         public List<UnitCore> GetAllUnit()
         {
             return _units;
