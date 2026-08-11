@@ -30,6 +30,7 @@ namespace DiceBound
         private SpriteRenderer _spriteRenderer;
         private GaugeWidget _hpGauge;
         private Animator _animator;
+        private SpriteOutliner _outliner;
 
 
         [SerializeField] private TweenAnimationPlayer appearSequence;
@@ -46,6 +47,7 @@ namespace DiceBound
             _statAgent = GetComponent<StatAgent>();
             _abilityAgent = GetComponent<AbilityAgent>();
             _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+            _outliner = GetComponentInChildren<SpriteOutliner>();
             _animator = GetComponentInChildren<Animator>();
             _animator.speed = 1.5f;
             _statAgent.AddStat("str");
@@ -175,10 +177,25 @@ namespace DiceBound
             Animate("Idle");
         }
 
+        public void SetHighlight(bool value, Color color = default,int order = 1)
+        {
+            _outliner.SetEnable(value);
+            _outliner.SetColor(color);
+            if (value)
+            {
+                _spriteRenderer.sortingOrder = order;
+            }
+            else
+            {
+                _spriteRenderer.sortingOrder = 0;
+            }
+        } 
+        
+     
+
         public void Animate(string value)
         {
             _animator.Play(value);
-            
         }
 
         public void OnDamage(float damage)
@@ -276,10 +293,10 @@ namespace DiceBound
         public void PlayAppear()
         {
             _spriteRenderer.color = new Color();
-            _hpGauge.image.color = new Color();
+            _hpGauge.canvasGroup.alpha = 0;
             StartCoroutine(appearSequence.Play(0.2f, () =>
             {
-                _hpGauge.image.color = Color.red;
+                _hpGauge.canvasGroup.alpha = 1;
             }));
         }
 

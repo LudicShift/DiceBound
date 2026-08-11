@@ -45,6 +45,7 @@ namespace DiceBound
             {
                 _draggingUnit = _hoveredUnit;
                 _replaceCell = allyGrid.FindCellByUnit(_hoveredUnit);
+                _replaceCell.RemoveUnit();
                 _mode = UnitPlaceMode.Drag;
                 allyGrid.Show();
             }
@@ -61,6 +62,7 @@ namespace DiceBound
                     {
                         var unit = _hoveredCell.GetUnit();
                         _replaceCell.PlaceUnit(unit);
+                        unit.SetHighlight(false);
                     }
                     _hoveredCell.PlaceUnit(_draggingUnit);
                 }
@@ -102,11 +104,24 @@ namespace DiceBound
             var result = Physics2D.OverlapCircle(InputManager.GetWorldMousePosition(), 1, LayerMask.GetMask("Cell"));
             if (result != null)
             {
+                if (_hoveredCell)
+                {
+                    var unit1 = _hoveredCell.GetUnit();
+                    unit1?.SetHighlight(false);
+                }
                 _hoveredCell = result.GetComponent<UnitPlaceCell>();
+                var unit = _hoveredCell.GetUnit();
+                unit?.SetHighlight(true,Color.gray,0);
             }
             else
             {
+                if (_hoveredCell)
+                {
+                    var unit = _hoveredCell.GetUnit();
+                    unit?.SetHighlight(false);
+                }
                 _hoveredCell = null;
+                
             }
         }
 
@@ -115,10 +130,19 @@ namespace DiceBound
             var result = Physics2D.OverlapCircle(InputManager.GetWorldMousePosition(), 1, LayerMask.GetMask("Unit"));
             if (result != null)
             {
+                if (_hoveredUnit)
+                {
+                    _hoveredUnit.SetHighlight(false);
+                }
                 _hoveredUnit = result.GetComponent<UnitCore>();
+                _hoveredUnit.SetHighlight(true,Color.white);
             }
             else
             {
+                if (_hoveredUnit)
+                {
+                    _hoveredUnit.SetHighlight(false);
+                }
                 _hoveredUnit = null;
             }
         }
