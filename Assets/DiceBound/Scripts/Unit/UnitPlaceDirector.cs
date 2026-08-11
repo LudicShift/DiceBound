@@ -33,6 +33,11 @@ namespace DiceBound
             yield return null;
         }
 
+        public void SetEnable(bool value)
+        {
+            _mode = value ? UnitPlaceMode.Normal : UnitPlaceMode.Block;
+        }
+
 
         private void OnDragBegin(InputAction.CallbackContext context)
         {
@@ -80,6 +85,7 @@ namespace DiceBound
                     CheckHoveredCell();
                     MoveDraggingUnit();
                     break;
+                
             }
         }
 

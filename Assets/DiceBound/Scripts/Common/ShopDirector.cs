@@ -14,6 +14,7 @@ namespace DiceBound
 
         private WalletDirector _walletDirector;
         private DiceDirector _diceDirector;
+        private bool _isEnable;
 
         public override IEnumerator OnInitialize()
         {
@@ -44,7 +45,15 @@ namespace DiceBound
 
         private void ShowCanvas()
         {
-            canvas.gameObject.SetActive(true);
+            if (_isEnable)
+            {
+                canvas.gameObject.SetActive(true);
+            }
+        }
+
+        public void SetEnable(bool value)
+        {
+            _isEnable = value;
         }
     }
 }
