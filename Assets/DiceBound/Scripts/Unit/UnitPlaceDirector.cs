@@ -45,6 +45,7 @@ namespace DiceBound
             if (_mode == UnitPlaceMode.Normal && _hoveredUnit)
             {
                 _draggingUnit = _hoveredUnit;
+                _draggingUnit.tooltipProvider.SetEnabled(false);
                 _replaceCell = allyGrid.FindCellByUnit(_hoveredUnit);
                 _replaceCell.RemoveUnit();
                 _mode = UnitPlaceMode.Drag;
@@ -56,6 +57,7 @@ namespace DiceBound
         {
             if (_mode == UnitPlaceMode.Drag && _draggingUnit)
             {
+                _draggingUnit.tooltipProvider.SetEnabled(true);
                 if (_trashCan)
                 {
                     _replaceCell.RemoveUnit();
@@ -64,6 +66,7 @@ namespace DiceBound
                 }
                 if (_hoveredCell)
                 {
+                    
                     _replaceCell.RemoveUnit();
                     if (!_hoveredCell.IsEmpty())
                     {

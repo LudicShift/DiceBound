@@ -16,46 +16,59 @@ namespace DiceBound
             _context.text = text;
         }
 
-        public void BindWidget(string id, TooltipWidget widget)
+        public void Update()
         {
-            _context = new TooltipContext();
-            _context.widget = widget;
+            if (_context is { enabled: true })
+            {
+                _context.widget.OnUpdate(_context);
+            }
         }
 
-        public void SetTooltipPosition(string id, Vector2 position)
+
+        public void BindWidget(TooltipWidget widget, bool enabled)
+        {
+            _context = new TooltipContext
+            {
+                widget = widget,
+                enabled = enabled
+            };
+        }
+
+        public void SetTooltipPosition(Vector3 position, Vector2 offset ,bool screenSpace = true)
         {
             _context.tooltipPosition = position;
+            _context.offset = offset;
+            _context.screenSpace = screenSpace;
         }
-
-        public void SetTooltipSize(string id, Vector2 size)
-        {
-            _context.tooltipSize = size;
-        }
-
+        
         public void OnPointerEnter(PointerEventData eventData)
         {
-            if (_context.enabled)
+            if (_context is { enabled: true })
             {
-                enterAction?.Invoke(_context);
+                _context.widget.Show();
+                _context.widget.OnShow(_context);
             }
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
-            if (_context.enabled)
+            if (_context is { enabled: true })
             {
                 exitAction?.Invoke(_context);
+                _context.widget.Hide();
             }
         }
 
-        public void SetEnabled(string id, bool value)
+        public void SetEnabled(bool value)
         {
-            _context.enabled = value;
-        }
-
-        public void SetTitleText(string id, string text)
-        {
-            _context.title = text;
+            if (_context != null)
+            {
+                _context.enabled = value;
+                if (!_context.enabled)
+                {
+                    _context.widget.Hide();
+                }
+            }
         }
     }
 }

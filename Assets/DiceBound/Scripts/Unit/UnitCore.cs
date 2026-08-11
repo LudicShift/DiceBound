@@ -43,11 +43,13 @@ namespace DiceBound
         private AnimationCallbackBehaviour[] _callBackBehaviours;
         public UnitAttackType attackType;
         private int _tier = 0;
-        
+        [HideInInspector]
+        public TooltipProvider tooltipProvider;
 
 
         public void Awake()
         {
+            tooltipProvider = GetComponent<TooltipProvider>();
             _statAgent = GetComponent<StatAgent>();
             _abilityAgent = GetComponent<AbilityAgent>();
             _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -67,6 +69,8 @@ namespace DiceBound
 
         public void Update()
         {
+            
+            tooltipProvider.SetTooltipPosition(transform.position,CalculateTooltipOffset(),false);
             if (IsDead())
             {
                 return;
@@ -89,6 +93,14 @@ namespace DiceBound
                     skill.Value.OnUpdate();
                 }
             }
+        }
+
+        private Vector2 CalculateTooltipOffset()
+        {
+            var result = new Vector2();
+            result.x = Mathf.Sign(transform.position.x) * -200;
+            result.y =  250;
+            return result;
         }
 
         public void Setup(UnitDataTableRow data)

@@ -920,6 +920,7 @@ GameObject:
   - component: {fileID: 3421820209706376858}
   - component: {fileID: 120364583445347332}
   - component: {fileID: 5069998341349010457}
+  - component: {fileID: 4533858068737350952}
   m_Layer: 7
   m_Name: PF_Ally
   m_TagString: Untagged
@@ -964,6 +965,7 @@ MonoBehaviour:
   attackSequence: {fileID: 8356632432054330236}
   deadSequence: {fileID: 1921513507531996774}
   attackType: 0
+  tooltipProvider: {fileID: 0}
 --- !u!114 &3421820209706376858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1024,3 +1026,15 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 5
+--- !u!114 &4533858068737350952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6302351625213716871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0107861d02343dcaa517da484087198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.TooltipProvider

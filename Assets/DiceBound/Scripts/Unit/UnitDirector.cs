@@ -29,6 +29,7 @@ namespace DiceBound
         private SkillDirector _skillDirector;
         private BattleDirector _battleDirector;
         private UnitPlaceDirector _unitPlaceDirector;
+        private TooltipDirector _tooltipDirector;
 
         public Action<UnitCore> onSpawnAlly;
 
@@ -50,6 +51,7 @@ namespace DiceBound
             _enemyPrefabPool.onReleaseAction += OnReleaseUnit;
             trashCan.onRemoveUnitAction += RemoveAllyUnit;
 
+            _tooltipDirector = DirectorFacade.GetDirector<TooltipDirector>();
             _unitPlaceDirector = DirectorFacade.GetDirector<UnitPlaceDirector>();
             _skillDirector = DirectorFacade.GetDirector<SkillDirector>();
             _battleDirector = DirectorFacade.GetDirector<BattleDirector>();
@@ -102,7 +104,8 @@ namespace DiceBound
             instance.BindSkill(_skillDirector.GetSkill(data.skillBasicKey));
             instance.BindSkill(_skillDirector.GetSkill(data.skillActiveKey));
             instance.BindSkill(_skillDirector.GetSkill(data.skillPassiveKey));
-
+            _tooltipDirector.BindTooltip("Unit",instance.tooltipProvider);
+            
             _unitPlaceDirector.PlaceUnit(instance);
             
 

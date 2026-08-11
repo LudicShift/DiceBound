@@ -4,42 +4,37 @@ using UnityEngine;
 
 namespace DiceBound
 {
-    public enum PositionMode
-    {
-        Normal,
-        Anchored
-    }
+
     public class TooltipWidget : WidgetBase
     {
         public string id;
         [SerializeField] private RectTransform root;
-        [SerializeField] private TextWidget title;
         [SerializeField] private TextWidget text;
-        public PositionMode positionMode;
-        public bool isEnable;
-
-        public void SetEnabled(bool value)
-        {
-            isEnable = value;
-        }
-
+        
         public void OnShow(TooltipContext context)
         {
-            switch (positionMode)
+            if (context.screenSpace)
             {
-                case PositionMode.Normal:
-                    root.position = context.tooltipPosition;
-                    break;
-                case PositionMode.Anchored:
-                    root.anchoredPosition = context.tooltipPosition;
-                    break;
+                root.anchoredPosition = new Vector2(context.tooltipPosition.x+context.offset.x,context.tooltipPosition.y+context.offset.y);
             }
-      
-            root.sizeDelta = context.tooltipSize;
-            text.SetFont(LocalizationManager.GetFontAsset(0));
+            else
+            {
+                 SetPositionFromWorldPoint(CameraManager.GetMainCamera(),context.tooltipPosition,context.offset);
+            }
             text.SetText(context.text);
-            title?.SetFont(LocalizationManager.GetFontAsset(0));
-            title?.SetText(context.title);
+        }
+
+        public void OnUpdate(TooltipContext context)
+        {
+            if (context.screenSpace)
+            {
+                root.anchoredPosition = new Vector2(context.tooltipPosition.x+context.offset.x,context.tooltipPosition.y+context.offset.y);
+            }
+            else
+            {
+                SetPositionFromWorldPoint(CameraManager.GetMainCamera(),context.tooltipPosition,context.offset);
+            }
+            
         }
     }
 }
