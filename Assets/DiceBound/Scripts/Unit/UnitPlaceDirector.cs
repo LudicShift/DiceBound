@@ -23,8 +23,9 @@ namespace DiceBound
         private UnitPlaceCell _replaceCell;
 
         [SerializeField] private UnitPlaceGrid allyGrid;
-
         [SerializeField] private UnitPlaceGrid enemyGrid;
+        private UnitTrashCan _trashCan;
+        
 
         public override IEnumerator OnInitialize()
         {
@@ -55,6 +56,11 @@ namespace DiceBound
         {
             if (_mode == UnitPlaceMode.Drag && _draggingUnit)
             {
+                if (_trashCan)
+                {
+                    _replaceCell.RemoveUnit();
+                    _trashCan.Execute(_draggingUnit);
+                }
                 if (_hoveredCell)
                 {
                     _replaceCell.RemoveUnit();
@@ -85,6 +91,7 @@ namespace DiceBound
                     break;
                 case UnitPlaceMode.Drag:
                     CheckHoveredCell();
+                    CheckHoveredTrashcan();
                     MoveDraggingUnit();
                     break;
                 
@@ -98,7 +105,29 @@ namespace DiceBound
                 _draggingUnit.transform.position = InputManager.GetWorldMousePosition();
             }
         }
-
+        
+        private void CheckHoveredTrashcan()
+        {
+            var result = Physics2D.OverlapCircle(InputManager.GetWorldMousePosition(), 1, LayerMask.GetMask("TrashCan"));
+            if (result != null)
+            {
+                if (!_trashCan)
+                {
+                    _trashCan = result.GetComponent<UnitTrashCan>();
+                    _trashCan.SetHighlight(true);
+                }
+            }
+            else
+            {
+                if (_trashCan)
+                {
+                    _trashCan.SetHighlight(false);
+                    _trashCan = null;
+                }
+            }
+           
+        }
+        
         private void CheckHoveredCell()
         {
             var result = Physics2D.OverlapCircle(InputManager.GetWorldMousePosition(), 1, LayerMask.GetMask("Cell"));

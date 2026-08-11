@@ -29,6 +29,8 @@ namespace DiceBound
         private BattleDirector _battleDirector;
         private UnitPlaceDirector _unitPlaceDirector;
 
+        [SerializeField] private UnitTrashCan trashCan;
+
         public override IEnumerator OnInitialize()
         {
             _hpGaugePrefabPool =
@@ -41,6 +43,7 @@ namespace DiceBound
             _enemyPrefabPool.onGetAction += OnGetUnit;
             _allyPrefabPool.onReleaseAction += OnReleaseUnit;
             _enemyPrefabPool.onReleaseAction += OnReleaseUnit;
+            trashCan.onRemoveUnitAction += RemoveAllyUnit;
 
             _unitPlaceDirector = DirectorFacade.GetDirector<UnitPlaceDirector>();
             _skillDirector = DirectorFacade.GetDirector<SkillDirector>();
@@ -51,6 +54,8 @@ namespace DiceBound
             
             yield return null;
         }
+
+   
 
         private void OnReleaseUnit(UnitCore instance)
         {
@@ -141,6 +146,14 @@ namespace DiceBound
 
                     break;
             }
+        }
+        
+        private void RemoveAllyUnit(UnitCore unit)
+        {
+            _allies.Remove(unit);
+            _units.Remove(unit);
+            _unitPlaceDirector.RemoveUnit(unit);
+            _allyPrefabPool.Release(unit);
         }
 
         public int GetEnemyUnitCount()
