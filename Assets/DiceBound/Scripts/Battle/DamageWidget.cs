@@ -9,7 +9,7 @@ namespace DiceBound
     public class DamageWidget : TextWidget
     {
         [SerializeField]
-        private TweenAnimationCombiner tween;
+        private TweenAnimationPlayer tween;
         
         public void Setup(int value)
         {

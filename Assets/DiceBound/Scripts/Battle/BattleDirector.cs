@@ -35,7 +35,7 @@ namespace DiceBound
         {
             _isPlaying = true;
             _unitPlaceDirector.SetEnable(false);
-            _shopDirector.SetEnable(true);
+            _shopDirector.SetEnable(false);
             var units = _unitDirector.GetAllUnit();
             foreach (var unit in units)
             {

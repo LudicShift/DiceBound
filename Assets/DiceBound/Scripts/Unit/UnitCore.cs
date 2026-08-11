@@ -32,10 +32,10 @@ namespace DiceBound
         private Animator _animator;
 
 
-        [SerializeField] private TweenAnimationCombiner appearSequence;
-        [SerializeField] private TweenAnimationCombiner hitSequence;
-        [SerializeField] private TweenAnimationCombiner attackSequence;
-        [SerializeField] private TweenAnimationCombiner deadSequence;
+        [SerializeField] private TweenAnimationPlayer appearSequence;
+        [SerializeField] private TweenAnimationPlayer hitSequence;
+        [SerializeField] private TweenAnimationPlayer attackSequence;
+        [SerializeField] private TweenAnimationPlayer deadSequence;
         private bool _isBattle;
         private AnimationCallbackBehaviour[] _callBackBehaviours;
         public UnitAttackType attackType;

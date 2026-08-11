@@ -14,7 +14,7 @@ namespace DiceBound
 
         private WalletDirector _walletDirector;
         private DiceDirector _diceDirector;
-        private bool _isEnable;
+        private bool _isEnable = true;
 
         public override IEnumerator OnInitialize()
         {
