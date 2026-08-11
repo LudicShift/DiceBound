@@ -184,6 +184,7 @@ namespace DiceBound
         public void OnDamage(float damage)
         {
             hp -= damage;
+            hp = Mathf.Clamp(hp, 0, StatUtility.GetMaxHp(_statAgent));
             onHitAction?.Invoke(this, (int)damage);
             Animate("Hurt");
 
@@ -244,6 +245,7 @@ namespace DiceBound
         public void OnHeal(float damage)
         {
             hp += damage;
+            hp = Mathf.Clamp(hp, 0, StatUtility.GetMaxHp(_statAgent));
             onHealAction?.Invoke(this, (int)damage);
             //hitSequence.Play();
             _hpGauge.OnChange(hp);

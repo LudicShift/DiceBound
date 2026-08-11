@@ -127,7 +127,6 @@ namespace DiceBound
                     if (!_deadAllies.Contains(unit))
                     {
                         _units.Remove(unit);
-                        _allies.Remove(unit);
                         _deadAllies.Add(unit);
                     }
                     break;

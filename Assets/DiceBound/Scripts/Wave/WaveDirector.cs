@@ -80,7 +80,7 @@ namespace DiceBound
                 yield return new WaitForSeconds(0.5f);
                 _battleDirector.BeginBattle();
                 yield return new WaitUntil(() =>_unitDirector.GetEnemyUnitCount() == 0  || _unitDirector.GetAllyUnitCount() ==_unitDirector.GetDeadAllyUnitCount());
-                if (_unitDirector.GetEnemyUnitCount() == 0 )
+                if (_unitDirector.GetEnemyUnitCount() == 0)
                 {
                     _battleDirector.EndBattle();
                     _unitDirector.ReviveDeadAllies();
