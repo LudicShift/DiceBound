@@ -54,7 +54,9 @@ namespace DiceBound
                     sequence.AppendCallback(() => callback.Invoke(this));
                     break;
                 case SkillMoveOption.Move:
-                    sequence.Append(transform.DOMove(target.transform.position, moveDuration)) ;
+                    var targetDirection = Vector3.Normalize(target.transform.position - transform.position);
+                    transform.rotation = Quaternion.FromToRotation(Vector3.right,targetDirection);
+                    sequence.Join(transform.DOMove(target.transform.position, moveDuration)) ;
                     sequence.AppendInterval(lifetime);
                     sequence.AppendCallback(() => callback.Invoke(this));
                     break;
