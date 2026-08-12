@@ -70,7 +70,7 @@ namespace DiceBound
                 {
                     var context = _battleContextQueue.Dequeue();
                     var selfBattleContext = context.self.battleContext;
-                    if ( selfBattleContext == null || selfBattleContext.priority > context.priority)
+                    if ( selfBattleContext == null || selfBattleContext.priority >= context.priority)
                     {
                         context.self.battleContext = context;
                         StartCoroutine(ExecuteBattleContext(context.self.battleContext));
