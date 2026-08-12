@@ -464,7 +464,10 @@ namespace DiceBound
 
         public void StopBattleCoroutine()
         {
-           StopCoroutine(_battleCoroutine);
+            if (_battleCoroutine!=null)
+            {
+                StopCoroutine(_battleCoroutine);
+            }
         }
     }
 }
