@@ -13,7 +13,14 @@ namespace DiceBound
         
         public void Setup(int value)
         {
-            SetText($"{value}");
+            if (value == 0)
+            {
+                SetText($"Miss");
+            }
+            else
+            {
+                SetText($"{value}");
+            }
         }
 
         public void Play(Action<DamageWidget> callback)

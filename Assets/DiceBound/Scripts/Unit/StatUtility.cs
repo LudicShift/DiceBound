@@ -49,7 +49,7 @@ namespace DiceBound
         }
 
         // 8. 치명타 배율 (CRIT_MULT = 1.5)
-        public static float GetCritMult(UnitCore unitCore)
+        public static float GetCritMult(StatAgent statAgent)
         {
             return 1.5f;
         }

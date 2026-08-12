@@ -83,11 +83,20 @@ namespace DiceBound
             instance.onDeadAction -= OnUnitDead;
             instance.onHitAction -= OnUnitHit;
             instance.onHealAction -= OnUnitHeal;
+            instance.onDodgeAction -= OnUnitDodge;
             var hp = instance.GetHpGauge();
             var tierLabel = instance.GetTierLabel();
             instance.ReleaseHpGauge(hp);
             _hpGaugePrefabPool.Release(hp);
-            _tierLabelPrefabPool.Release(tierLabel);
+            if (tierLabel)
+            {
+                _tierLabelPrefabPool.Release(tierLabel);
+            }
+        }
+
+        private void OnUnitDodge(UnitCore unit)
+        {
+            _battleDirector.ShowMiss(unit);
         }
 
         private void OnGetUnit(UnitCore instance)
@@ -95,6 +104,7 @@ namespace DiceBound
             instance.onDeadAction += OnUnitDead;
             instance.onHitAction += OnUnitHit;
             instance.onHealAction += OnUnitHeal;
+            instance.onDodgeAction += OnUnitDodge;
         }
 
         public bool IsAllyFull()
@@ -117,7 +127,7 @@ namespace DiceBound
 
             instance.Setup(data);
             instance.BindHpGauge(_hpGaugePrefabPool.Get());
-            instance.BindTierLabel(_tierLabelPrefabPool.Get());
+         
             instance.Animate("Idle");
 
             instance.BindSkill(_skillDirector.GetSkill(data.skillBasicKey));
@@ -134,6 +144,7 @@ namespace DiceBound
                 case UnitGroup.Ally:
                     _allies.Add(instance);
                     instance.PlayAppear(()=>onSpawnAlly.Invoke(instance));
+                    instance.BindTierLabel(_tierLabelPrefabPool.Get());
                     instance.FlipSprite(false);
                     UpdateAllyCountText();
                     break;
@@ -150,9 +161,9 @@ namespace DiceBound
             _battleDirector.ShowHeal(core, damage);
         }
 
-        private void OnUnitHit(UnitCore core, int damage)
+        private void OnUnitHit(UnitCore core, int damage,bool isCritical)
         {
-            _battleDirector.ShowDamage(core, damage);
+            _battleDirector.ShowDamage(core, damage,isCritical);
         }
 
         private void OnUnitDead(UnitCore unit)

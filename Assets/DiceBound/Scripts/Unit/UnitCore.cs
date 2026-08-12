@@ -18,7 +18,8 @@ namespace DiceBound
         public float hp;
 
         public Action<UnitCore> onDeadAction;
-        public Action<UnitCore, int> onHitAction;
+        public Action<UnitCore> onDodgeAction;
+        public Action<UnitCore, int,bool> onHitAction;
         public Action<UnitCore, int> onHealAction;
 
         public UnitGroup group;
@@ -39,6 +40,7 @@ namespace DiceBound
         [SerializeField] private TweenAnimationPlayer hitSequence;
         [SerializeField] private TweenAnimationPlayer attackSequence;
         [SerializeField] private TweenAnimationPlayer deadSequence;
+        [SerializeField] private TweenAnimationPlayer dodgeSequence;
         private bool _isBattle;
         private AnimationCallbackBehaviour[] _callBackBehaviours;
         public UnitAttackType attackType;
@@ -223,11 +225,11 @@ namespace DiceBound
             _animator.Play(value);
         }
 
-        public void OnDamage(float damage)
+        public void OnDamage(float damage, bool isCritical)
         {
             hp -= damage;
             hp = Mathf.Clamp(hp, 0, StatUtility.GetMaxHp(_statAgent));
-            onHitAction?.Invoke(this, (int)damage);
+            onHitAction?.Invoke(this, (int)damage,isCritical);
             Animate("Hurt");
 
             StartCoroutine(hitSequence.Play());
@@ -342,11 +344,16 @@ namespace DiceBound
         public void Upgrade()
         {
             _tier++;
-            _tierLabel.OnChange(_tier);
+            
             foreach (var stat in _statAgent.GetAllStats())
             {
                 stat.Value.AddModifier(new StatModifier(0.8f, StatModifyType.PercentMult));
             }
+            
+            _tierLabel.OnChange(_tier);
+            var maxHp = StatUtility.GetMaxHp(_statAgent);
+            hp = maxHp;
+            _hpGauge.Setup(maxHp, hp);
         }
 
         public TierLabelWidget GetTierLabel()
@@ -372,6 +379,12 @@ namespace DiceBound
         public int GetTier()
         {
             return _tier;
+        }
+        
+        public void OnDodge()
+        {
+            StartCoroutine(dodgeSequence.Play());
+            onDodgeAction?.Invoke(this);
         }
     }
 }

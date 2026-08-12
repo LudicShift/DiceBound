@@ -89,9 +89,28 @@ namespace DiceBound
                     yield break;
                 }
 
+
                 if (context.damage > 0)
                 {
-                    context.target.OnDamage(context.damage);
+                    var dodgeRoll = Random.Range(0, 1.0f);
+                    if (dodgeRoll <
+                        StatUtility.GetDodgeRate(context.target.GetStatAgent(), context.self.GetStatAgent()))
+                    {
+                        context.target.OnDodge();
+                        yield break;
+                    }
+
+                    var criticalRoll = Random.Range(0, 1.0f);
+                    var damage = context.damage;
+                    if (criticalRoll < StatUtility.GetCritRate(context.self.GetStatAgent()))
+                    {
+                        damage *= StatUtility.GetCritMult(context.self.GetStatAgent());
+                        context.target.OnDamage(damage, true);
+                    }
+                    else
+                    {
+                        context.target.OnDamage(damage, false);
+                    }
                 }
 
                 if (context.healPower > 0)
@@ -119,11 +138,18 @@ namespace DiceBound
             damageWidget.Play(x => _damageWidgetPool.Release(x));
         }
 
-        public void ShowDamage(UnitCore core, int damage)
+        public void ShowDamage(UnitCore core, int damage, bool isCritical)
         {
             var damageWidget = _damageWidgetPool.Get();
-            //damageWidget.SetColor(core.group == UnitGroup.Ally ? Color.red : Color.orange);
-            damageWidget.SetColor(Color.red );
+            if (isCritical)
+            {
+                damageWidget.SetColor(Color.purple);
+            }
+            else
+            {
+                damageWidget.SetColor(Color.red);
+            }
+
             damageWidget.Setup(damage);
             damageWidget.SetPositionFromWorldPoint(CameraManager.GetMainCamera(), core.transform.position,
                 new Vector2(Random.Range(-10, 10) * 10, 100));
@@ -134,6 +160,17 @@ namespace DiceBound
         public void EnqueueContext(BattleContext battleContext)
         {
             _battleContextQueue.Enqueue(battleContext);
+        }
+
+        public void ShowMiss(UnitCore core)
+        {
+            var damageWidget = _damageWidgetPool.Get();
+            damageWidget.SetColor(Color.white);
+
+            damageWidget.Setup(0);
+            damageWidget.SetPositionFromWorldPoint(CameraManager.GetMainCamera(), core.transform.position,
+                new Vector2(Random.Range(-10, 10) * 10, 100));
+            damageWidget.Play(x => _damageWidgetPool.Release(x));
         }
     }
 }

@@ -49,23 +49,29 @@ namespace DiceBound
             }
 
             yield return new WaitForSeconds(0.2f);
-            
+
             var mainUnit = unitList[0];
             unitList.Remove(mainUnit);
 
             int count = 0;
             for (int i = 0; i < unitList.Count; i++)
             {
-                unitList[i].Move(mainUnit.transform.position).SetDelay(i * 0.3f).OnComplete(() => { count++; });
+                unitList[i].Move(mainUnit.transform.position).SetDelay(i * 0.3f).OnComplete(() =>
+                {
+                    mainUnit.transform.DOScale(0.2f, 0.1f).SetRelative().SetEase(Ease.OutElastic);
+                    count++;
+                });
             }
 
             yield return new WaitUntil(() => count == unitList.Count);
 
             foreach (var unit in unitList)
             {
+                StartCoroutine(unit.HideUpgradeEffect());
                 _unitDirector.RemoveAllyUnit(unit);
             }
 
+            yield return mainUnit.transform.DOScale(1, 0.3f).WaitForCompletion();
             yield return mainUnit.HideUpgradeEffect();
             mainUnit.Upgrade();
             OnSpawnAlly(mainUnit);
