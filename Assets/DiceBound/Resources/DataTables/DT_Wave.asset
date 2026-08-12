@@ -1,24 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8559047765539663114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  index: 23
-  numberOfEnemy: 9
-  waveRewardGold: 150
---- !u!114 &-8185526955677818550
+--- !u!114 &-9033664539087522519
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -36,7 +18,7 @@ MonoBehaviour:
   index: 21
   numberOfEnemy: 8
   waveRewardGold: 150
---- !u!114 &-7495827661066901319
+--- !u!114 &-9029337992792316702
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -51,28 +33,10 @@ MonoBehaviour:
   id: 
   tags: []
   isEnable: 1
-  index: 19
-  numberOfEnemy: 9
-  waveRewardGold: 150
---- !u!114 &-6824806312892567553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  index: 16
+  index: 29
   numberOfEnemy: 8
   waveRewardGold: 150
---- !u!114 &-5382100075715807667
+--- !u!114 &-8755371981698772046
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,10 +51,10 @@ MonoBehaviour:
   id: 
   tags: []
   isEnable: 1
-  index: 0
-  numberOfEnemy: 3
+  index: 15
+  numberOfEnemy: 8
   waveRewardGold: 150
---- !u!114 &-5377550595250878230
+--- !u!114 &-7997495032459285876
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,7 +72,43 @@ MonoBehaviour:
   index: 22
   numberOfEnemy: 9
   waveRewardGold: 150
---- !u!114 &-4644148823451320809
+--- !u!114 &-7895938907663443541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 16
+  numberOfEnemy: 8
+  waveRewardGold: 150
+--- !u!114 &-7784562342720098730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 18
+  numberOfEnemy: 9
+  waveRewardGold: 150
+--- !u!114 &-7653615795393750019
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,43 +126,7 @@ MonoBehaviour:
   index: 24
   numberOfEnemy: 10
   waveRewardGold: 150
---- !u!114 &-4291618973915596667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  index: 8
-  numberOfEnemy: 6
-  waveRewardGold: 150
---- !u!114 &-4196221073163818160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  index: 17
-  numberOfEnemy: 8
-  waveRewardGold: 150
---- !u!114 &-4026355262438080925
+--- !u!114 &-7352343477300147115
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,7 +144,43 @@ MonoBehaviour:
   index: 2
   numberOfEnemy: 4
   waveRewardGold: 150
---- !u!114 &-2404125409927528671
+--- !u!114 &-6674802649592152140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 26
+  numberOfEnemy: 10
+  waveRewardGold: 150
+--- !u!114 &-6523184349882122108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 14
+  numberOfEnemy: 7
+  waveRewardGold: 150
+--- !u!114 &-6333171892829658621
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -198,7 +198,7 @@ MonoBehaviour:
   index: 9
   numberOfEnemy: 7
   waveRewardGold: 150
---- !u!114 &-1491087006555356245
+--- !u!114 &-5909411911443170475
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -213,8 +213,116 @@ MonoBehaviour:
   id: 
   tags: []
   isEnable: 1
-  index: 4
+  index: 27
+  numberOfEnemy: 11
+  waveRewardGold: 150
+--- !u!114 &-5210091051049349290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 17
+  numberOfEnemy: 8
+  waveRewardGold: 150
+--- !u!114 &-4341552573071393342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 28
+  numberOfEnemy: 11
+  waveRewardGold: 150
+--- !u!114 &-4207769295132401556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 7
+  numberOfEnemy: 6
+  waveRewardGold: 150
+--- !u!114 &-2331851220875346882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 6
   numberOfEnemy: 5
+  waveRewardGold: 150
+--- !u!114 &-1447315764758048193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 23
+  numberOfEnemy: 9
+  waveRewardGold: 150
+--- !u!114 &-869894171799909483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 25
+  numberOfEnemy: 10
   waveRewardGold: 150
 --- !u!114 &11400000
 MonoBehaviour:
@@ -233,37 +341,37 @@ MonoBehaviour:
   rowTypeName: DiceBound.WaveDataTableRow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   dataList:
-  - {fileID: -5382100075715807667}
-  - {fileID: 9094214243108072105}
-  - {fileID: -4026355262438080925}
-  - {fileID: 5084889797627281281}
-  - {fileID: -1491087006555356245}
-  - {fileID: 7335487963755134600}
-  - {fileID: 4237647801300061661}
-  - {fileID: 699401168410129240}
-  - {fileID: -4291618973915596667}
-  - {fileID: -2404125409927528671}
-  - {fileID: 331055428610369735}
-  - {fileID: 2904840246845874067}
-  - {fileID: 3926247666489756939}
-  - {fileID: 4002326617589865440}
-  - {fileID: 5949655389628659989}
-  - {fileID: 429669537084806689}
-  - {fileID: -6824806312892567553}
-  - {fileID: -4196221073163818160}
-  - {fileID: 6175247564816672346}
-  - {fileID: -7495827661066901319}
-  - {fileID: 840427929205001283}
-  - {fileID: -8185526955677818550}
-  - {fileID: -5377550595250878230}
-  - {fileID: -8559047765539663114}
-  - {fileID: -4644148823451320809}
-  - {fileID: 1479660961318282116}
-  - {fileID: 717294203537891899}
-  - {fileID: 6147549634446893226}
-  - {fileID: 1410356996875123753}
-  - {fileID: 3429405423960818483}
---- !u!114 &331055428610369735
+  - {fileID: 5334001726224344536}
+  - {fileID: 6535582931211406753}
+  - {fileID: -7352343477300147115}
+  - {fileID: 2091737928930909822}
+  - {fileID: 8860743199633785033}
+  - {fileID: 6478545491779839501}
+  - {fileID: -2331851220875346882}
+  - {fileID: -4207769295132401556}
+  - {fileID: 7058900527338347979}
+  - {fileID: -6333171892829658621}
+  - {fileID: 6266653887297215985}
+  - {fileID: 8932356560884121509}
+  - {fileID: 9186785186046880876}
+  - {fileID: 2422354136811900056}
+  - {fileID: -6523184349882122108}
+  - {fileID: -8755371981698772046}
+  - {fileID: -7895938907663443541}
+  - {fileID: -5210091051049349290}
+  - {fileID: -7784562342720098730}
+  - {fileID: 567232767280845855}
+  - {fileID: 8773889976957872032}
+  - {fileID: -9033664539087522519}
+  - {fileID: -7997495032459285876}
+  - {fileID: -1447315764758048193}
+  - {fileID: -7653615795393750019}
+  - {fileID: -869894171799909483}
+  - {fileID: -6674802649592152140}
+  - {fileID: -5909411911443170475}
+  - {fileID: -4341552573071393342}
+  - {fileID: -9029337992792316702}
+--- !u!114 &567232767280845855
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -278,208 +386,10 @@ MonoBehaviour:
   id: 
   tags: []
   isEnable: 1
-  index: 10
-  numberOfEnemy: 1
+  index: 19
+  numberOfEnemy: 9
   waveRewardGold: 150
---- !u!114 &429669537084806689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  index: 15
-  numberOfEnemy: 8
-  waveRewardGold: 150
---- !u!114 &699401168410129240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  index: 7
-  numberOfEnemy: 6
-  waveRewardGold: 150
---- !u!114 &717294203537891899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  index: 26
-  numberOfEnemy: 10
-  waveRewardGold: 150
---- !u!114 &840427929205001283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  index: 20
-  numberOfEnemy: 1
-  waveRewardGold: 150
---- !u!114 &1410356996875123753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  index: 28
-  numberOfEnemy: 11
-  waveRewardGold: 150
---- !u!114 &1479660961318282116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  index: 25
-  numberOfEnemy: 10
-  waveRewardGold: 150
---- !u!114 &2904840246845874067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  index: 11
-  numberOfEnemy: 6
-  waveRewardGold: 150
---- !u!114 &3429405423960818483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  index: 29
-  numberOfEnemy: 8
-  waveRewardGold: 150
---- !u!114 &3926247666489756939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  index: 12
-  numberOfEnemy: 6
-  waveRewardGold: 150
---- !u!114 &4002326617589865440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  index: 13
-  numberOfEnemy: 7
-  waveRewardGold: 150
---- !u!114 &4237647801300061661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  index: 6
-  numberOfEnemy: 5
-  waveRewardGold: 150
---- !u!114 &5084889797627281281
+--- !u!114 &2091737928930909822
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -497,7 +407,7 @@ MonoBehaviour:
   index: 3
   numberOfEnemy: 4
   waveRewardGold: 150
---- !u!114 &5949655389628659989
+--- !u!114 &2422354136811900056
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -512,10 +422,10 @@ MonoBehaviour:
   id: 
   tags: []
   isEnable: 1
-  index: 14
+  index: 13
   numberOfEnemy: 7
   waveRewardGold: 150
---- !u!114 &6147549634446893226
+--- !u!114 &5334001726224344536
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -530,10 +440,10 @@ MonoBehaviour:
   id: 
   tags: []
   isEnable: 1
-  index: 27
-  numberOfEnemy: 11
+  index: 0
+  numberOfEnemy: 3
   waveRewardGold: 150
---- !u!114 &6175247564816672346
+--- !u!114 &6266653887297215985
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -548,10 +458,10 @@ MonoBehaviour:
   id: 
   tags: []
   isEnable: 1
-  index: 18
-  numberOfEnemy: 9
+  index: 10
+  numberOfEnemy: 1
   waveRewardGold: 150
---- !u!114 &7335487963755134600
+--- !u!114 &6478545491779839501
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -569,7 +479,7 @@ MonoBehaviour:
   index: 5
   numberOfEnemy: 5
   waveRewardGold: 150
---- !u!114 &9094214243108072105
+--- !u!114 &6535582931211406753
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -586,4 +496,94 @@ MonoBehaviour:
   isEnable: 1
   index: 1
   numberOfEnemy: 3
+  waveRewardGold: 150
+--- !u!114 &7058900527338347979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 8
+  numberOfEnemy: 6
+  waveRewardGold: 150
+--- !u!114 &8773889976957872032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 20
+  numberOfEnemy: 1
+  waveRewardGold: 150
+--- !u!114 &8860743199633785033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 4
+  numberOfEnemy: 5
+  waveRewardGold: 150
+--- !u!114 &8932356560884121509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 11
+  numberOfEnemy: 6
+  waveRewardGold: 150
+--- !u!114 &9186785186046880876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d959c4fa90643c8af217a0d98e64deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  index: 12
+  numberOfEnemy: 6
   waveRewardGold: 150
