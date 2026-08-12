@@ -96,8 +96,7 @@ namespace DiceBound
                 }
                 
                 context.self.PlayAttackAnimation(context.self.battleContext.animClip);
-                var effect = _skillDirector.GetSkillEffect(context.skillEffectKey);
-                effect.SetPosition(context.self.transform.position);
+              
                 yield return new WaitForSeconds(context.startUpDelay);
                 if (!(CheckAlive(context.target) &&CheckAlive(context.self)))
                 {
@@ -105,6 +104,8 @@ namespace DiceBound
                     yield break;
                 }
                 context.self.PlayAttackTween();
+                var effect = _skillDirector.GetSkillEffect(context.skillEffectKey);
+                effect.SetPosition(context.self.transform.position);
                 effect.Play(context.target, x => { _skillDirector.Release(context.skillEffectKey, x); });
                 // 💡 여기서 hitIndex 계산 및 ShowDamage 수동 호출했던 부분들을 모두 지우고 원상복구합니다.
                 if (context.damage > 0)

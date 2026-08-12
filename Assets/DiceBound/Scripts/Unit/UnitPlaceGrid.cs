@@ -34,7 +34,7 @@ namespace DiceBound
                 cell.Hide();
             }
         }
-        
+
         public void OnValidate()
         {
             _cells = GetComponentsInChildren<UnitPlaceCell>().ToList();
@@ -48,15 +48,21 @@ namespace DiceBound
             while (_cells.Count > count)
             {
                 int currentRow = count / columnCount;
-                _cells[count].transform.localPosition = new Vector3(currentRow * spacing.x,
-                    (count % columnCount) * spacing.y);
+                int currentColumn = count % columnCount;
+
+                // 짝수번째 칸(2, 4, ...)을 반 칸 밀어 지그재그로 배치한다.
+                float zigzagOffset = currentColumn % 2 == 1 ? spacing.x * 0.5f : 0f;
+
+                _cells[count].transform.localPosition =
+                    new Vector3(currentRow * spacing.x + zigzagOffset, currentColumn * spacing.y);
+
                 if (!reverseIndexing)
                 {
-                    _cells[count].Setup(Mathf.Lerp(0, 1, (rowCount - currentRow - 1) / (float)(rowCount-1)));
+                    _cells[count].Setup(Mathf.Lerp(0, 1, (rowCount - currentRow - 1) / (float)(rowCount - 1)));
                 }
                 else
                 {
-                    _cells[count].Setup(Mathf.Lerp(0, 1, currentRow / (float)(rowCount-1)));
+                    _cells[count].Setup(Mathf.Lerp(0, 1, currentRow / (float)(rowCount - 1)));
                 }
 
                 count++;
@@ -73,6 +79,7 @@ namespace DiceBound
                     {
                         return nearCells.GetRandomElement();
                     }
+
                     break;
                 case UnitAttackType.Ranged:
                 case UnitAttackType.Magic:
@@ -81,6 +88,7 @@ namespace DiceBound
                     {
                         return farCells.GetRandomElement();
                     }
+
                     break;
             }
 
@@ -90,12 +98,12 @@ namespace DiceBound
 
         public int GetUnitCount()
         {
-            return _cells.Count(x=>!x.IsEmpty());
+            return _cells.Count(x => !x.IsEmpty());
         }
 
         public UnitPlaceCell FindCellByUnit(UnitCore unit)
         {
-            return _cells.Find(x=>x.GetUnit() == unit);
+            return _cells.Find(x => x.GetUnit() == unit);
         }
 
         public void RemoveUnit(UnitCore unit)
