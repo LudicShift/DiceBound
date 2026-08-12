@@ -73,7 +73,6 @@ namespace DiceBound
                     {
                         return nearCells.GetRandomElement();
                     }
-
                     break;
                 case UnitAttackType.Ranged:
                 case UnitAttackType.Magic:
@@ -82,7 +81,6 @@ namespace DiceBound
                     {
                         return farCells.GetRandomElement();
                     }
-
                     break;
             }
 

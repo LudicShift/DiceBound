@@ -30,7 +30,7 @@ namespace DiceBound
 
         public void OnRollDiceButtonClick()
         {
-            if (!_walletDirector.HasGold(rollDiceCost) || !_unitDirector.IsAllyFull())
+            if (_walletDirector.HasGold(rollDiceCost) && !_unitDirector.IsAllyFull())
             {
                 _walletDirector.SpendGold(rollDiceCost);
                 _diceDirector.ShowCanvas();
