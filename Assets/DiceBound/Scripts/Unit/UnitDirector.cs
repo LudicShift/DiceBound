@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Ami.BroAudio;
 using KCoreKit;
 using KCoreKit.Scripts.Common;
 using UnityEngine;
@@ -30,7 +31,7 @@ namespace DiceBound
         private SkillDirector _skillDirector;
         private BattleDirector _battleDirector;
         private UnitPlaceDirector _unitPlaceDirector;
-        private TooltipDirector _tooltipDirector;
+       // private TooltipDirector _tooltipDirector;
         private WalletDirector _walletDirector;
 
         public Action<UnitCore> onSpawnAlly;
@@ -64,7 +65,7 @@ namespace DiceBound
             _enemyPrefabPool.onReleaseAction += OnReleaseUnit;
             trashCan.onRemoveUnitAction += SellUnit;
 
-            _tooltipDirector = DirectorFacade.GetDirector<TooltipDirector>();
+            //_tooltipDirector = DirectorFacade.GetDirector<TooltipDirector>();
             _unitPlaceDirector = DirectorFacade.GetDirector<UnitPlaceDirector>();
             _skillDirector = DirectorFacade.GetDirector<SkillDirector>();
             _battleDirector = DirectorFacade.GetDirector<BattleDirector>();
@@ -129,17 +130,21 @@ namespace DiceBound
                 instance = _enemyPrefabPool.Get();
             }
 
-            instance.Setup(data,tier);
+            instance.Setup(data);
             instance.BindHpGauge(_hpGaugePrefabPool.Get());
             instance.BindTierLabel(_tierLabelPrefabPool.Get());
+         
             
             instance.Animate("Idle");
             instance.BindSkill(_skillDirector.GetSkill(data.skillBasicKey));
             instance.BindSkill(_skillDirector.GetSkill(data.skillActiveKey));
             instance.BindSkill(_skillDirector.GetSkill(data.skillPassiveKey));
             
-            _tooltipDirector.BindTooltip("Unit",instance.tooltipProvider);
-            
+           //_tooltipDirector.BindTooltip("Unit",instance.tooltipProvider);
+           for (int i = 0; i < tier; i++)
+           {
+               instance.Upgrade();
+           }
             _unitPlaceDirector.PlaceUnit(instance);
             
 

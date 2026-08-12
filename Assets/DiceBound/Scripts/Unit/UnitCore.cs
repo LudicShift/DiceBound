@@ -111,7 +111,7 @@ namespace DiceBound
             return result;
         }
 
-        public void Setup(UnitDataTableRow data, int tier = 0)
+        public void Setup(UnitDataTableRow data)
         {
             _tier = 0;
             _data = data;
@@ -138,10 +138,6 @@ namespace DiceBound
             _statAgent.ClearStatModifier("mdf");
             _statAgent.ClearStatModifier("hp");
             hp = StatUtility.GetMaxHp(_statAgent);
-            for (int i = 0; i < tier; i++)
-            {
-                Upgrade();
-            }
         }
 
 
@@ -427,8 +423,6 @@ namespace DiceBound
             var maxHp = StatUtility.GetMaxHp(_statAgent);
             hp = maxHp;
             _hpGauge.Setup(maxHp, hp);
-
-           
         }
 
         public TierLabelWidget GetTierLabel()
