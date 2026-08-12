@@ -22,8 +22,11 @@ MonoBehaviour:
   roleKey: 
   skillBasicKey: MeleeAttack
   skillPassiveKey: 
-  skillActiveKey: 
+  skillActiveKey: SK_LANCER_T2
+  skillActiveKeyTier3: 
   animator: {fileID: 9100000, guid: f121b5f0dd42fef4ba15f7ea011afdb9, type: 2}
+  grade: Rare
+  maxSkillSlot: 3
   hp: 200
   str: 22
   con: 14
@@ -55,8 +58,11 @@ MonoBehaviour:
   roleKey: 
   skillBasicKey: MeleeAttack
   skillPassiveKey: 
-  skillActiveKey: 
+  skillActiveKey: SK_SLIME_T2
+  skillActiveKeyTier3: 
   animator: {fileID: 9100000, guid: 675632e0417a4394392fe43afc95ee63, type: 2}
+  grade: Common
+  maxSkillSlot: 3
   hp: 40
   str: 8
   con: 8
@@ -89,7 +95,10 @@ MonoBehaviour:
   skillBasicKey: MagicAttack
   skillPassiveKey: 
   skillActiveKey: 
+  skillActiveKeyTier3: SK_NECRO_T3
   animator: {fileID: 9100000, guid: 802c5d4612fe23f4dbf151a08eec37f3, type: 2}
+  grade: Boss
+  maxSkillSlot: 3
   hp: 750
   str: 10
   con: 40
@@ -121,8 +130,11 @@ MonoBehaviour:
   roleKey: 
   skillBasicKey: RangedAttack
   skillPassiveKey: 
-  skillActiveKey: 
+  skillActiveKey: SK_SKELARCHER_T2
+  skillActiveKeyTier3: 
   animator: {fileID: 9100000, guid: 0e1986e1966ed5540ade8f335bf50f1c, type: 2}
+  grade: Rare
+  maxSkillSlot: 3
   hp: 40
   str: 5
   con: 8
@@ -154,8 +166,11 @@ MonoBehaviour:
   roleKey: 
   skillBasicKey: MeleeAttack
   skillPassiveKey: 
-  skillActiveKey: 
+  skillActiveKey: SK_TEMPLAR_T2
+  skillActiveKeyTier3: 
   animator: {fileID: 9100000, guid: c20cd87d450d8eb41abbfa8161774fb1, type: 2}
+  grade: Legendary
+  maxSkillSlot: 3
   hp: 800
   str: 60
   con: 50
@@ -187,8 +202,11 @@ MonoBehaviour:
   roleKey: 
   skillBasicKey: MagicAttack
   skillPassiveKey: 
-  skillActiveKey: 
+  skillActiveKey: SK_WIZARD_T2
+  skillActiveKeyTier3: 
   animator: {fileID: 9100000, guid: f9599ea8e28308844a15cbeefeca6179, type: 2}
+  grade: Epic
+  maxSkillSlot: 3
   hp: 150
   str: 5
   con: 10
@@ -220,8 +238,11 @@ MonoBehaviour:
   roleKey: 
   skillBasicKey: MeleeAttack
   skillPassiveKey: 
-  skillActiveKey: 
+  skillActiveKey: SK_ORCRIDER_T2
+  skillActiveKeyTier3: SK_ORCRIDER_T3
   animator: {fileID: 9100000, guid: 7ff35c75f95b4b04098b7f3312bafa60, type: 2}
+  grade: Epic
+  maxSkillSlot: 3
   hp: 150
   str: 30
   con: 25
@@ -253,8 +274,11 @@ MonoBehaviour:
   roleKey: 
   skillBasicKey: RangedAttack
   skillPassiveKey: 
-  skillActiveKey: 
+  skillActiveKey: SK_BAT_T2
+  skillActiveKeyTier3: 
   animator: {fileID: 9100000, guid: ad34ac1b31f3e4b49858c7f3cbf5af6a, type: 2}
+  grade: Common
+  maxSkillSlot: 3
   hp: 30
   str: 5
   con: 5
@@ -286,8 +310,11 @@ MonoBehaviour:
   roleKey: 
   skillBasicKey: MeleeAttack
   skillPassiveKey: 
-  skillActiveKey: 
+  skillActiveKey: SK_SKELETON_T2
+  skillActiveKeyTier3: 
   animator: {fileID: 9100000, guid: e92d7c756fe3c4b46aa8271932f7bd32, type: 2}
+  grade: Common
+  maxSkillSlot: 3
   hp: 50
   str: 12
   con: 10
@@ -319,8 +346,11 @@ MonoBehaviour:
   roleKey: 
   skillBasicKey: Heal
   skillPassiveKey: 
-  skillActiveKey: 
+  skillActiveKey: SK_PRIEST_T2
+  skillActiveKeyTier3: 
   animator: {fileID: 9100000, guid: 06b4bfad80fdff64f8b643e9649cee6a, type: 2}
+  grade: Rare
+  maxSkillSlot: 3
   hp: 120
   str: 5
   con: 10
@@ -352,8 +382,11 @@ MonoBehaviour:
   roleKey: 
   skillBasicKey: MeleeAttack
   skillPassiveKey: 
-  skillActiveKey: 
+  skillActiveKey: SK_AXEMAN_T2
+  skillActiveKeyTier3: SK_AXEMAN_T3
   animator: {fileID: 9100000, guid: a1c1bd40becca914ba36f9af8f5f939c, type: 2}
+  grade: Epic
+  maxSkillSlot: 3
   hp: 400
   str: 40
   con: 30
@@ -386,7 +419,10 @@ MonoBehaviour:
   skillBasicKey: MeleeAttack
   skillPassiveKey: 
   skillActiveKey: 
+  skillActiveKeyTier3: SK_ARMSKEL_T3
   animator: {fileID: 9100000, guid: 6251ab0d44039ff4ab867c2e09377cea, type: 2}
+  grade: Epic
+  maxSkillSlot: 3
   hp: 125
   str: 15
   con: 20
@@ -418,8 +454,11 @@ MonoBehaviour:
   roleKey: 
   skillBasicKey: MeleeAttack
   skillPassiveKey: 
-  skillActiveKey: 
+  skillActiveKey: SK_ORC_T2
+  skillActiveKeyTier3: SK_ORC_T3
   animator: {fileID: 9100000, guid: df301476b053ec2469b6b0e786685d81, type: 2}
+  grade: Rare
+  maxSkillSlot: 3
   hp: 100
   str: 20
   con: 18
@@ -490,8 +529,11 @@ MonoBehaviour:
   roleKey: 
   skillBasicKey: MeleeAttack
   skillPassiveKey: 
-  skillActiveKey: 
+  skillActiveKey: SK_ELITEORC_T2
+  skillActiveKeyTier3: SK_ELITEORC_T3
   animator: {fileID: 9100000, guid: 55ee146211f52364baa1a568298ba15f, type: 2}
+  grade: Boss
+  maxSkillSlot: 3
   hp: 1250
   str: 70
   con: 60
@@ -524,7 +566,10 @@ MonoBehaviour:
   skillBasicKey: MeleeAttack
   skillPassiveKey: 
   skillActiveKey: 
+  skillActiveKeyTier3: SK_KNIGHT_T3
   animator: {fileID: 9100000, guid: 2a5f9d3a97a5c2646989946f48a63244, type: 2}
+  grade: Epic
+  maxSkillSlot: 3
   hp: 450
   str: 35
   con: 35
@@ -556,8 +601,11 @@ MonoBehaviour:
   roleKey: 
   skillBasicKey: RangedAttack
   skillPassiveKey: 
-  skillActiveKey: 
+  skillActiveKey: SK_ARCHER_T2
+  skillActiveKeyTier3: 
   animator: {fileID: 9100000, guid: ac56b7207f8bb0541840052639389dd2, type: 2}
+  grade: Common
+  maxSkillSlot: 3
   hp: 100
   str: 5
   con: 8
@@ -590,7 +638,10 @@ MonoBehaviour:
   skillBasicKey: MeleeAttack
   skillPassiveKey: 
   skillActiveKey: 
+  skillActiveKeyTier3: SK_ARMORC_T3
   animator: {fileID: 9100000, guid: 1b544bfb4ad0a3942a910eb0f182b046, type: 2}
+  grade: Epic
+  maxSkillSlot: 3
   hp: 225
   str: 25
   con: 35
@@ -622,8 +673,11 @@ MonoBehaviour:
   roleKey: 
   skillBasicKey: MeleeAttack
   skillPassiveKey: 
-  skillActiveKey: 
+  skillActiveKey: SK_WEREBEAR_T2
+  skillActiveKeyTier3: SK_WEREBEAR_T3
   animator: {fileID: 9100000, guid: cafe02283a9dc1343b1d9073f3980905, type: 2}
+  grade: Epic
+  maxSkillSlot: 3
   hp: 250
   str: 40
   con: 40
@@ -655,8 +709,11 @@ MonoBehaviour:
   roleKey: 
   skillBasicKey: MeleeAttack
   skillPassiveKey: 
-  skillActiveKey: 
+  skillActiveKey: SK_SOLDIER_T2
+  skillActiveKeyTier3: 
   animator: {fileID: 9100000, guid: edd160c6963e46845bed89835d12b8b3, type: 2}
+  grade: Common
+  maxSkillSlot: 3
   hp: 150
   str: 15
   con: 12
@@ -688,8 +745,11 @@ MonoBehaviour:
   roleKey: 
   skillBasicKey: MeleeAttack
   skillPassiveKey: 
-  skillActiveKey: 
+  skillActiveKey: SK_WEREWOLF_T2
+  skillActiveKeyTier3: 
   animator: {fileID: 9100000, guid: 27b7224d480ebee4db7cef2ff54f0a05, type: 2}
+  grade: Rare
+  maxSkillSlot: 3
   hp: 90
   str: 25
   con: 15
@@ -721,8 +781,11 @@ MonoBehaviour:
   roleKey: 
   skillBasicKey: MeleeAttack
   skillPassiveKey: 
-  skillActiveKey: 
+  skillActiveKey: SK_SWORDSMAN_T2
+  skillActiveKeyTier3: SK_SWORDSMAN_T3
   animator: {fileID: 9100000, guid: b05c65d772eeb474faf51b8a0617111d, type: 2}
+  grade: Rare
+  maxSkillSlot: 3
   hp: 220
   str: 25
   con: 15
@@ -754,8 +817,11 @@ MonoBehaviour:
   roleKey: 
   skillBasicKey: MeleeAttack
   skillPassiveKey: 
-  skillActiveKey: 
+  skillActiveKey: SK_GSSKEL_T2
+  skillActiveKeyTier3: SK_GSSKEL_T3
   animator: {fileID: 9100000, guid: d42cf200f0630d042b368596d76bd750, type: 2}
+  grade: Epic
+  maxSkillSlot: 3
   hp: 125
   str: 45
   con: 20

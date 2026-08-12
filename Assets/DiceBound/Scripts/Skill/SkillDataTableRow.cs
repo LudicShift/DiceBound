@@ -26,5 +26,6 @@ namespace DiceBound
         public SkillTargetOption targetOption;
         public string effectKey;
         public int targetCount;
+        public string animClip;
     }
 }

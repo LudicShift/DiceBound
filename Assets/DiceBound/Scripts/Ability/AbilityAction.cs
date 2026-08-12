@@ -1,4 +1,4 @@
-﻿using KCoreKit;
+using KCoreKit;
 using UnityEngine;
 
 namespace DiceBound
@@ -27,7 +27,7 @@ namespace DiceBound
                     BasicAttack(abilityContext, target,
                         StatUtility.GetApMelee(statAgent) * (1 - StatUtility.GetMitigationP(targetStatAgent)));
                 }
-            });
+            }, context.animClip);
         }
 
         private static void BasicAttack(AbilityContext context, UnitCore target, float damage)
@@ -67,7 +67,7 @@ namespace DiceBound
                     BasicAttack(abilityContext, target,
                         StatUtility.GetApRanged(statAgent) * (1 - StatUtility.GetMitigationP(targetStatAgent)));
                 }
-            });
+            }, context.animClip);
         }
 
         public static void MagicAttack(AbilityEffect effect, AbilityActionDataTableRow data, ref AbilityContext context)
@@ -83,7 +83,7 @@ namespace DiceBound
                     BasicAttack(abilityContext, target,
                         StatUtility.GetApMagic(statAgent) * (1 - StatUtility.GetMitigationM(targetStatAgent)));
                 }
-            });
+            }, context.animClip);
         }
 
         public static void Heal(AbilityEffect effect, AbilityActionDataTableRow data, ref AbilityContext context)
@@ -97,7 +97,7 @@ namespace DiceBound
                 {
                     Healing(abilityContext, target, StatUtility.GetHealPower(statAgent));
                 }
-            });
+            }, context.animClip);
         }
     }
 }

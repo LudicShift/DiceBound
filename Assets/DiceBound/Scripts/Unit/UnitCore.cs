@@ -45,6 +45,10 @@ namespace DiceBound
         private AnimationCallbackBehaviour[] _callBackBehaviours;
         public UnitAttackType attackType;
         private int _tier = 0;
+        private string _lastAttackAnim = "Attack";
+        private SkillDataTableRow _activeSkillTier2;
+        private SkillDataTableRow _activeSkillTier3;
+        private string _boundActiveSkillId;
         [HideInInspector] public TooltipProvider tooltipProvider;
 
 
@@ -125,6 +129,10 @@ namespace DiceBound
             }
 
             _skills = new Dictionary<string, Skill>();
+            _boundActiveSkillId = null;
+            var skillDirector = DirectorFacade.GetDirector<SkillDirector>();
+            _activeSkillTier2 = string.IsNullOrEmpty(data.skillActiveKey) ? null : skillDirector.GetSkill(data.skillActiveKey);
+            _activeSkillTier3 = string.IsNullOrEmpty(data.skillActiveKeyTier3) ? null : skillDirector.GetSkill(data.skillActiveKeyTier3);
             _statAgent.SetBaseValue("str", data.str);
             _statAgent.SetBaseValue("spd", data.spd);
             _statAgent.SetBaseValue("def", data.def);
@@ -161,6 +169,16 @@ namespace DiceBound
             var skill = new Skill(data);
             _skills.Add(data.id, skill);
             skill.SetOwner(this);
+        }
+
+        public void UnbindSkill(string id)
+        {
+            if (string.IsNullOrEmpty(id))
+            {
+                return;
+            }
+
+            _skills.Remove(id);
         }
 
         public UnitDataTableRow GetData()
@@ -282,16 +300,17 @@ namespace DiceBound
         }
 
 
-        public void ShowAttackAnimation(Action attackAction)
+        public void ShowAttackAnimation(Action attackAction, string clip = "Attack")
         {
-            Animate("Attack");
+            _lastAttackAnim = string.IsNullOrEmpty(clip) ? "Attack" : clip;
+            Animate(_lastAttackAnim);
             StartCoroutine(attackSequence.Play());
             attackAction.Invoke();
         }
 
         private void OnAnimationCallback(AnimatorStateInfo info)
         {
-            if (info.IsName("Attack") || info.IsName("Hurt"))
+            if (info.IsName(_lastAttackAnim) || info.IsName("Hurt"))
             {
                 Animate("Idle");
             }
@@ -358,6 +377,20 @@ namespace DiceBound
             var maxHp = StatUtility.GetMaxHp(_statAgent);
             hp = maxHp;
             _hpGauge.Setup(maxHp, hp);
+
+            SkillDataTableRow nextActiveSkill = _tier switch
+            {
+                1 => _activeSkillTier2,
+                2 => _activeSkillTier3 != null ? _activeSkillTier3 : _activeSkillTier2,
+                _ => null
+            };
+
+            if (nextActiveSkill != null && nextActiveSkill.id != _boundActiveSkillId)
+            {
+                UnbindSkill(_boundActiveSkillId);
+                BindSkill(nextActiveSkill);
+                _boundActiveSkillId = nextActiveSkill.id;
+            }
         }
 
         public TierLabelWidget GetTierLabel()

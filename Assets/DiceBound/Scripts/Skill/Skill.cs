@@ -30,8 +30,8 @@ namespace DiceBound
             desc = data.descKey;
             _abilityId = data.abilityId;
             effectKey = data.effectKey;
-            _castTime = data.cooldown;
-            _cooldown = data.castTime;
+            _castTime = data.castTime;
+            _cooldown = data.cooldown;
             _targetCount = data.targetCount;
             _targetOption = data.targetOption;
         }
@@ -48,6 +48,7 @@ namespace DiceBound
                 castTime = _castTime,
                 targetCount = _targetCount,
                 targetOption = _targetOption,
+                animClip = string.IsNullOrEmpty(_data.animClip) ? "Attack" : _data.animClip,
             };
         }
 

@@ -9,5 +9,6 @@ namespace DiceBound
         public SkillTargetOption targetOption;
         public float castTime;
         public int targetCount;
+        public string animClip;
     }
 }

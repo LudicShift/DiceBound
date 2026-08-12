@@ -1,24 +1,24 @@
-id,nameKey,descKey,animator,group,attackType,grade,hp,str,con,dex,mag,def,mdf,spd,role,skillBasicKey,skillPassiveKey,skillActiveKey,maxSkillSlot,isEnable,height
-UN_SOLDIER,UN_SOLDIER_NAME,UN_SOLDIER_DESC,Animation/Soldier.controller,Ally,Melee,Common,150,15,12,10,0,10,5,100,Tank,MeleeAttack,,,3,TRUE,100
-UN_ARCHER,UN_ARCHER_NAME,UN_ARCHER_DESC,Animation/Archer.controller,Ally,Ranged,Common,100,5,8,20,0,5,5,120,Ranged DPS,RangedAttack,,,3,TRUE,100
-UN_SWORDSMAN,UN_SWORDSMAN_NAME,UN_SWORDSMAN_DESC,Animation/Swordsman.controller,Ally,Melee,Rare,220,25,15,15,0,15,10,110,Melee DPS,MeleeAttack,,,3,TRUE,100
-UN_LANCER,UN_LANCER_NAME,UN_LANCER_DESC,Animation/Lancer.controller,Ally,Melee,Rare,200,22,14,18,0,12,8,105,Melee DPS,MeleeAttack,,,3,TRUE,175
-UN_PRIEST,UN_PRIEST_NAME,UN_PRIEST_DESC,Animation/Priest.controller,Ally,Magic,Rare,120,5,10,10,25,8,20,90,Healer,Heal,,,3,TRUE,100
-UN_AXEMAN,UN_AXEMAN_NAME,UN_AXEMAN_DESC,Animation/Armored Axeman.controller,Ally,Melee,Epic,400,40,30,10,0,30,15,80,Bruiser,MeleeAttack,,,3,TRUE,100
-UN_WIZARD,UN_WIZARD_NAME,UN_WIZARD_DESC,Animation/Wizard.controller,Ally,Magic,Epic,150,5,10,15,50,8,30,95,Magic DPS,MagicAttack,,,3,TRUE,100
-UN_KNIGHT,UN_KNIGHT_NAME,UN_KNIGHT_DESC,Animation/Knight.controller,Ally,Melee,Epic,450,35,35,12,10,40,25,90,Tank,MeleeAttack,,,3,TRUE,100
-UN_TEMPLAR,UN_TEMPLAR_NAME,UN_TEMPLAR_DESC,Animation/Knight Templar.controller,Ally,Melee,Legendary,800,60,50,20,40,50,40,100,Carry,MeleeAttack,,,3,TRUE,100
-,,,,,,,,,,,,,,,,,,,,,
-UN_SLIME,UN_SLIME_NAME,UN_SLIME_DESC,Animation/Slime.controller,Enemy,Melee,Common,40,8,8,5,5,2,2,80,Melee DPS,MeleeAttack,,,3,TRUE,100
-UN_BAT,UN_BAT_NAME,UN_BAT_DESC,Animation/Bat.controller,Enemy,Ranged,Common,30,5,5,18,0,2,5,140,Ranged DPS,RangedAttack,,,3,TRUE,100
-UN_SKELETON,UN_SKELETON_NAME,UN_SKELETON_DESC,Animation/Skeleton.controller,Enemy,Melee,Common,50,12,10,10,0,8,2,90,Melee DPS,MeleeAttack,,,3,TRUE,100
-UN_SKELARCHER,UN_SKELARCHER_NAME,UN_SKELARCHER_DESC,Animation/Skeleton Archer.controller,Enemy,Ranged,Rare,40,5,8,22,0,5,2,110,Ranged DPS,RangedAttack,,,3,TRUE,100
-UN_ORC,UN_ORC_NAME,UN_ORC_DESC,Animation/Orc.controller,Enemy,Melee,Rare,100,20,18,8,0,10,5,90,Bruiser,MeleeAttack,,,3,TRUE,100
-UN_WEREWOLF,UN_WEREWOLF_NAME,UN_WEREWOLF_DESC,Animation/Werewolf.controller,Enemy,Melee,Rare,90,25,15,25,0,12,8,130,Assassin,MeleeAttack,,,3,TRUE,100
-UN_ARMSKEL,UN_ARMSKEL_NAME,UN_ARMSKEL_DESC,Animation/Armored Skeleton.controller,Enemy,Melee,Epic,125,15,20,8,0,30,5,80,Tank,MeleeAttack,,,3,TRUE,100
-UN_GSSKEL,UN_GSSKEL_NAME,UN_GSSKEL_DESC,Animation/Greatsword Skeleton.controller,Enemy,Melee,Epic,125,45,20,10,0,15,10,85,Melee DPS,MeleeAttack,,,3,TRUE,100
-UN_ORCRIDER,UN_ORCRIDER_NAME,UN_ORCRIDER_DESC,Animation/Orc rider.controller,Enemy,Melee,Epic,150,30,25,15,0,15,10,150,Assassin,MeleeAttack,,,3,TRUE,100
-UN_ARMORC,UN_ARMORC_NAME,UN_ARMORC_DESC,Animation/Armored Orc.controller,Enemy,Melee,Epic,225,25,35,8,0,40,15,70,Tank,MeleeAttack,,,3,TRUE,100
-UN_WEREBEAR,UN_WEREBEAR_NAME,UN_WEREBEAR_DESC,Animation/Werebear.controller,Enemy,Melee,Epic,250,40,40,10,0,25,20,85,Bruiser,MeleeAttack,,,3,TRUE,100
-UN_NECRO,UN_NECRO_NAME,UN_NECRO_DESC,Animation/Necromancer.controller,Enemy,Magic,Boss,750,10,40,15,80,20,50,95,Boss,MagicAttack,,,3,TRUE,100
-UN_ELITEORC,UN_ELITEORC_NAME,UN_ELITEORC_DESC,Animation/Elite Orc.controller,Enemy,Melee,Boss,1250,70,60,20,0,60,40,100,Boss,MeleeAttack,,,3,TRUE,100
+id,nameKey,descKey,animator,group,attackType,grade,hp,str,con,dex,mag,def,mdf,spd,role,skillBasicKey,skillPassiveKey,skillActiveKey,maxSkillSlot,isEnable,height,skillActiveKeyTier3
+UN_SOLDIER,UN_SOLDIER_NAME,UN_SOLDIER_DESC,Animation/Soldier.controller,Ally,Melee,Common,150,15,12,10,0,10,5,100,Tank,MeleeAttack,,SK_SOLDIER_T2,3,TRUE,100,
+UN_ARCHER,UN_ARCHER_NAME,UN_ARCHER_DESC,Animation/Archer.controller,Ally,Ranged,Common,100,5,8,20,0,5,5,120,Ranged DPS,RangedAttack,,SK_ARCHER_T2,3,TRUE,100,
+UN_SWORDSMAN,UN_SWORDSMAN_NAME,UN_SWORDSMAN_DESC,Animation/Swordsman.controller,Ally,Melee,Rare,220,25,15,15,0,15,10,110,Melee DPS,MeleeAttack,,SK_SWORDSMAN_T2,3,TRUE,100,SK_SWORDSMAN_T3
+UN_LANCER,UN_LANCER_NAME,UN_LANCER_DESC,Animation/Lancer.controller,Ally,Melee,Rare,200,22,14,18,0,12,8,105,Melee DPS,MeleeAttack,,SK_LANCER_T2,3,TRUE,175,
+UN_PRIEST,UN_PRIEST_NAME,UN_PRIEST_DESC,Animation/Priest.controller,Ally,Magic,Rare,120,5,10,10,25,8,20,90,Healer,Heal,,SK_PRIEST_T2,3,TRUE,100,
+UN_AXEMAN,UN_AXEMAN_NAME,UN_AXEMAN_DESC,Animation/Armored Axeman.controller,Ally,Melee,Epic,400,40,30,10,0,30,15,80,Bruiser,MeleeAttack,,SK_AXEMAN_T2,3,TRUE,100,SK_AXEMAN_T3
+UN_WIZARD,UN_WIZARD_NAME,UN_WIZARD_DESC,Animation/Wizard.controller,Ally,Magic,Epic,150,5,10,15,50,8,30,95,Magic DPS,MagicAttack,,SK_WIZARD_T2,3,TRUE,100,
+UN_KNIGHT,UN_KNIGHT_NAME,UN_KNIGHT_DESC,Animation/Knight.controller,Ally,Melee,Epic,450,35,35,12,10,40,25,90,Tank,MeleeAttack,,,3,TRUE,100,SK_KNIGHT_T3
+UN_TEMPLAR,UN_TEMPLAR_NAME,UN_TEMPLAR_DESC,Animation/Knight Templar.controller,Ally,Melee,Legendary,800,60,50,20,40,50,40,100,Carry,MeleeAttack,,SK_TEMPLAR_T2,3,TRUE,100,
+,,,,,,,,,,,,,,,,,,,,,,
+UN_SLIME,UN_SLIME_NAME,UN_SLIME_DESC,Animation/Slime.controller,Enemy,Melee,Common,40,8,8,5,5,2,2,80,Melee DPS,MeleeAttack,,SK_SLIME_T2,3,TRUE,100,
+UN_BAT,UN_BAT_NAME,UN_BAT_DESC,Animation/Bat.controller,Enemy,Ranged,Common,30,5,5,18,0,2,5,140,Ranged DPS,RangedAttack,,SK_BAT_T2,3,TRUE,100,
+UN_SKELETON,UN_SKELETON_NAME,UN_SKELETON_DESC,Animation/Skeleton.controller,Enemy,Melee,Common,50,12,10,10,0,8,2,90,Melee DPS,MeleeAttack,,SK_SKELETON_T2,3,TRUE,100,
+UN_SKELARCHER,UN_SKELARCHER_NAME,UN_SKELARCHER_DESC,Animation/Skeleton Archer.controller,Enemy,Ranged,Rare,40,5,8,22,0,5,2,110,Ranged DPS,RangedAttack,,SK_SKELARCHER_T2,3,TRUE,100,
+UN_ORC,UN_ORC_NAME,UN_ORC_DESC,Animation/Orc.controller,Enemy,Melee,Rare,100,20,18,8,0,10,5,90,Bruiser,MeleeAttack,,SK_ORC_T2,3,TRUE,100,SK_ORC_T3
+UN_WEREWOLF,UN_WEREWOLF_NAME,UN_WEREWOLF_DESC,Animation/Werewolf.controller,Enemy,Melee,Rare,90,25,15,25,0,12,8,130,Assassin,MeleeAttack,,SK_WEREWOLF_T2,3,TRUE,100,
+UN_ARMSKEL,UN_ARMSKEL_NAME,UN_ARMSKEL_DESC,Animation/Armored Skeleton.controller,Enemy,Melee,Epic,125,15,20,8,0,30,5,80,Tank,MeleeAttack,,,3,TRUE,100,SK_ARMSKEL_T3
+UN_GSSKEL,UN_GSSKEL_NAME,UN_GSSKEL_DESC,Animation/Greatsword Skeleton.controller,Enemy,Melee,Epic,125,45,20,10,0,15,10,85,Melee DPS,MeleeAttack,,SK_GSSKEL_T2,3,TRUE,100,SK_GSSKEL_T3
+UN_ORCRIDER,UN_ORCRIDER_NAME,UN_ORCRIDER_DESC,Animation/Orc rider.controller,Enemy,Melee,Epic,150,30,25,15,0,15,10,150,Assassin,MeleeAttack,,SK_ORCRIDER_T2,3,TRUE,100,SK_ORCRIDER_T3
+UN_ARMORC,UN_ARMORC_NAME,UN_ARMORC_DESC,Animation/Armored Orc.controller,Enemy,Melee,Epic,225,25,35,8,0,40,15,70,Tank,MeleeAttack,,,3,TRUE,100,SK_ARMORC_T3
+UN_WEREBEAR,UN_WEREBEAR_NAME,UN_WEREBEAR_DESC,Animation/Werebear.controller,Enemy,Melee,Epic,250,40,40,10,0,25,20,85,Bruiser,MeleeAttack,,SK_WEREBEAR_T2,3,TRUE,100,SK_WEREBEAR_T3
+UN_NECRO,UN_NECRO_NAME,UN_NECRO_DESC,Animation/Necromancer.controller,Enemy,Magic,Boss,750,10,40,15,80,20,50,95,Boss,MagicAttack,,,3,TRUE,100,SK_NECRO_T3
+UN_ELITEORC,UN_ELITEORC_NAME,UN_ELITEORC_DESC,Animation/Elite Orc.controller,Enemy,Melee,Boss,1250,70,60,20,0,60,40,100,Boss,MeleeAttack,,SK_ELITEORC_T2,3,TRUE,100,SK_ELITEORC_T3
