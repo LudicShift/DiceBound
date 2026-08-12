@@ -68,7 +68,14 @@ namespace DiceBound
             {
                 if (_battleContextQueue.Count > 0)
                 {
-                    StartCoroutine(ExecuteBattleContext(_battleContextQueue.Dequeue()));
+                    var context = _battleContextQueue.Dequeue();
+                    var selfBattleContext = context.self.battleContext;
+                    if ( selfBattleContext == null || selfBattleContext.priority > context.priority)
+                    {
+                        context.self.battleContext = context;
+                        context.self.StopBattleCoroutine();
+                        context.self.StartBattleCoroutine(ExecuteBattleContext(context.self.battleContext));
+                    }
                 }
             }
         }
@@ -88,12 +95,7 @@ namespace DiceBound
                     yield break;
                 }
 
-                var currentBattleContext = context.self.battleContext;
-                if ( currentBattleContext != null && currentBattleContext.priority <  context.priority)
-                {
-                    yield break;
-                }
-                context.self.battleContext = context;
+                
                 context.self.PlayAttackAnimation(context.self.battleContext.animClip);
 
                 
@@ -132,6 +134,8 @@ namespace DiceBound
                 {
                     context.target.OnHeal(context.healPower);
                 }
+
+                context.self.battleContext = null;
             }
         }
 
