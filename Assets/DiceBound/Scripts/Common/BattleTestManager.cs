@@ -33,6 +33,8 @@ namespace DiceBound
         [SerializeField] private float interval = 1f;
         [Tooltip("공격 애니메이션 시작 후 이펙트가 발사되기까지의 지연")]
         [SerializeField] private float startUpDelay;
+        [Tooltip("재생 배속. Time.timeScale 로 적용되어 애니메이션·트윈·파티클에 모두 반영된다.")]
+        [SerializeField] private float speed = 1f;
 
         private UnitCore _ally;
         private UnitCore _enemy;
@@ -108,6 +110,7 @@ namespace DiceBound
             canvas.SetEffectOptions(effectNames, _effectIndex);
             canvas.SetInterval(interval);
             canvas.SetStartUpDelay(startUpDelay);
+            canvas.SetSpeed(speed);
             canvas.SetPaused(false);
 
             canvas.onPlay += OnPlay;
@@ -115,6 +118,7 @@ namespace DiceBound
             canvas.onStop += OnStop;
             canvas.onIntervalChanged += value => interval = value;
             canvas.onStartUpDelayChanged += value => startUpDelay = value;
+            canvas.onSpeedChanged += value => { speed = value; ApplyTimeScale(); };
             canvas.onAllySelected += index => { _allyIndex = index; ApplyAppearance(); };
             canvas.onEnemySelected += index => { _enemyIndex = index; ApplyAppearance(); };
             canvas.onEffectSelected += index => _effectIndex = index;
@@ -183,10 +187,16 @@ namespace DiceBound
 
         // ---------- 재생 제어 ----------
 
+        /// <summary>일시정지 여부와 배속을 함께 반영한다.</summary>
+        private void ApplyTimeScale()
+        {
+            Time.timeScale = _isPaused ? 0f : Mathf.Max(0.01f, speed);
+        }
+
         private void OnPlay()
         {
-            Time.timeScale = 1f;
             _isPaused = false;
+            ApplyTimeScale();
             if (canvas) canvas.SetPaused(false);
 
             if (_loop == null) _loop = StartCoroutine(AttackLoop());
@@ -197,7 +207,7 @@ namespace DiceBound
         {
             if (_loop == null) return;
             _isPaused = !_isPaused;
-            Time.timeScale = _isPaused ? 0f : 1f;
+            ApplyTimeScale();
             if (canvas) canvas.SetPaused(_isPaused);
             SetStatus(_isPaused ? "Paused" : "Playing");
         }
@@ -211,7 +221,7 @@ namespace DiceBound
             }
 
             _isPaused = false;
-            Time.timeScale = 1f;
+            ApplyTimeScale();
             if (canvas) canvas.SetPaused(false);
 
             ClearEffects();

@@ -26,6 +26,10 @@ namespace DiceBound
         [SerializeField] private Slider startUpDelaySlider;
         [SerializeField] private TextMeshProUGUI startUpDelayValueLabel;
 
+        [Header("Speed")]
+        [SerializeField] private Slider speedSlider;
+        [SerializeField] private TextMeshProUGUI speedValueLabel;
+
         [Header("Selection")]
         [SerializeField] private TMP_Dropdown allyDropdown;
         [SerializeField] private TMP_Dropdown enemyDropdown;
@@ -40,6 +44,7 @@ namespace DiceBound
         public event Action onStop;
         public event Action<float> onIntervalChanged;
         public event Action<float> onStartUpDelayChanged;
+        public event Action<float> onSpeedChanged;
         public event Action<int> onAllySelected;
         public event Action<int> onEnemySelected;
         public event Action<int> onEffectSelected;
@@ -53,6 +58,11 @@ namespace DiceBound
         public float StartUpDelay
         {
             get { return startUpDelaySlider ? startUpDelaySlider.value : 0f; }
+        }
+
+        public float Speed
+        {
+            get { return speedSlider ? speedSlider.value : 1f; }
         }
 
         public void Awake()
@@ -79,6 +89,16 @@ namespace DiceBound
                     if (onStartUpDelayChanged != null) onStartUpDelayChanged(value);
                 });
                 UpdateStartUpDelayLabel(startUpDelaySlider.value);
+            }
+
+            if (speedSlider)
+            {
+                speedSlider.onValueChanged.AddListener(value =>
+                {
+                    UpdateSpeedLabel(value);
+                    if (onSpeedChanged != null) onSpeedChanged(value);
+                });
+                UpdateSpeedLabel(speedSlider.value);
             }
 
             if (allyDropdown) allyDropdown.onValueChanged.AddListener(i => { if (onAllySelected != null) onAllySelected(i); });
@@ -117,6 +137,13 @@ namespace DiceBound
             UpdateStartUpDelayLabel(value);
         }
 
+        public void SetSpeed(float value)
+        {
+            if (!speedSlider) return;
+            speedSlider.SetValueWithoutNotify(value);
+            UpdateSpeedLabel(value);
+        }
+
         public void SetPaused(bool paused)
         {
             if (pauseLabel) pauseLabel.text = paused ? "Resume" : "Pause";
@@ -147,6 +174,11 @@ namespace DiceBound
         private void UpdateStartUpDelayLabel(float value)
         {
             if (startUpDelayValueLabel) startUpDelayValueLabel.text = value.ToString("0.00") + "s";
+        }
+
+        private void UpdateSpeedLabel(float value)
+        {
+            if (speedValueLabel) speedValueLabel.text = value.ToString("0.00") + "x";
         }
     }
 }
