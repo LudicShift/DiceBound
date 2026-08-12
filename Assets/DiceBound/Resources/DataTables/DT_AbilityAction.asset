@@ -1,6 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-359948801410478943
+--- !u!114 &-2243197049464668157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598896e4bb5e41349532ce8273b14f81, type: 3}
+  m_Name: Heal
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityActionDataTableRow
+  id: Heal
+  tags: []
+  isEnable: 1
+  actionFunctionName: Heal
+--- !u!114 &-1024431741081989251
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -16,6 +32,22 @@ MonoBehaviour:
   tags: []
   isEnable: 1
   actionFunctionName: MagicAttack
+--- !u!114 &-424674744584900694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598896e4bb5e41349532ce8273b14f81, type: 3}
+  m_Name: RangedAttack
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityActionDataTableRow
+  id: RangedAttack
+  tags: []
+  isEnable: 1
+  actionFunctionName: RangedAttack
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33,43 +65,11 @@ MonoBehaviour:
   rowTypeName: KCoreKit.AbilityActionDataTableRow, KCoreKit, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   dataList:
-  - {fileID: 8086521832134382224}
-  - {fileID: 1494332473728948964}
-  - {fileID: -359948801410478943}
-  - {fileID: 2597412846184952096}
---- !u!114 &1494332473728948964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 598896e4bb5e41349532ce8273b14f81, type: 3}
-  m_Name: RangedAttack
-  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityActionDataTableRow
-  id: RangedAttack
-  tags: []
-  isEnable: 1
-  actionFunctionName: RangedAttack
---- !u!114 &2597412846184952096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 598896e4bb5e41349532ce8273b14f81, type: 3}
-  m_Name: Heal
-  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityActionDataTableRow
-  id: Heal
-  tags: []
-  isEnable: 1
-  actionFunctionName: Heal
---- !u!114 &8086521832134382224
+  - {fileID: 4524282669058428293}
+  - {fileID: -424674744584900694}
+  - {fileID: -1024431741081989251}
+  - {fileID: -2243197049464668157}
+--- !u!114 &4524282669058428293
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

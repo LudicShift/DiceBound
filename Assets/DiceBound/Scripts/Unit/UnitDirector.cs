@@ -135,7 +135,9 @@ namespace DiceBound
             instance.Animate("Idle");
 
             instance.BindSkill(_skillDirector.GetSkill(data.skillBasicKey));
+            instance.BindSkill(_skillDirector.GetSkill(data.skillActiveKey));
             instance.BindSkill(_skillDirector.GetSkill(data.skillPassiveKey));
+            
             _tooltipDirector.BindTooltip("Unit",instance.tooltipProvider);
             
             _unitPlaceDirector.PlaceUnit(instance);

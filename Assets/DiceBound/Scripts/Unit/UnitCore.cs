@@ -46,9 +46,7 @@ namespace DiceBound
         public UnitAttackType attackType;
         private int _tier = 0;
         private string _lastAttackAnim = "Attack";
-        private SkillDataTableRow _activeSkillTier2;
-        private SkillDataTableRow _activeSkillTier3;
-        private string _boundActiveSkillId;
+
         [HideInInspector] public TooltipProvider tooltipProvider;
 
 
@@ -123,10 +121,6 @@ namespace DiceBound
             BindAnimatorController(data.animator);
 
             _skills = new Dictionary<string, Skill>();
-            _boundActiveSkillId = null;
-            var skillDirector = DirectorFacade.GetDirector<SkillDirector>();
-            _activeSkillTier2 = string.IsNullOrEmpty(data.skillActiveKey) ? null : skillDirector.GetSkill(data.skillActiveKey);
-            _activeSkillTier3 = string.IsNullOrEmpty(data.skillActiveKeyTier3) ? null : skillDirector.GetSkill(data.skillActiveKeyTier3);
             _statAgent.SetBaseValue("str", data.str);
             _statAgent.SetBaseValue("spd", data.spd);
             _statAgent.SetBaseValue("def", data.def);
@@ -221,17 +215,7 @@ namespace DiceBound
             _skills.Add(data.id, skill);
             skill.SetOwner(this);
         }
-
-        public void UnbindSkill(string id)
-        {
-            if (string.IsNullOrEmpty(id))
-            {
-                return;
-            }
-
-            _skills.Remove(id);
-        }
-
+        
         public UnitDataTableRow GetData()
         {
             return _data;
@@ -437,19 +421,7 @@ namespace DiceBound
             hp = maxHp;
             _hpGauge.Setup(maxHp, hp);
 
-            SkillDataTableRow nextActiveSkill = _tier switch
-            {
-                1 => _activeSkillTier2,
-                2 => _activeSkillTier3 != null ? _activeSkillTier3 : _activeSkillTier2,
-                _ => null
-            };
-
-            if (nextActiveSkill != null && nextActiveSkill.id != _boundActiveSkillId)
-            {
-                UnbindSkill(_boundActiveSkillId);
-                BindSkill(nextActiveSkill);
-                _boundActiveSkillId = nextActiveSkill.id;
-            }
+           
         }
 
         public TierLabelWidget GetTierLabel()

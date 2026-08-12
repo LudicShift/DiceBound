@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8216660566399531323
+--- !u!114 &-9216767763672008883
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,12 +10,428 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
-  m_Name: ArrowEffect01
+  m_Name: Proj_PoisonBolt01
   m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
-  id: ArrowEffect01
+  id: Proj_PoisonBolt01
   tags: []
   isEnable: 1
-  prefab: {fileID: 7670170294891014883, guid: ef8cd2dcbd938d9479bbc139171455fd, type: 3}
+  prefab: {fileID: 4037642982315283950, guid: 05622c80529b4224cbc26625938cca4f, type: 3}
+--- !u!114 &-8941742315883618936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Proj_ArcaneBolt01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Proj_ArcaneBolt01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 96613508230792230, guid: 785dac9daece916469ca48f205aa6a31, type: 3}
+--- !u!114 &-8909862275317061715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: MagicIce01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: MagicIce01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 8541260079669729688, guid: b3a02943db53035418e39148150d9a65, type: 3}
+--- !u!114 &-8815894038179726277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Slash_Cross01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Slash_Cross01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 2704876779431897055, guid: 29593946d6612eb4a92cda883843b020, type: 3}
+--- !u!114 &-8806424251432158044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: HitEffect01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: HitEffect01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 7670170294891014883, guid: 310ecb62d45727043a8e5fcbbb14b9dc, type: 3}
+--- !u!114 &-8372831493570512807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Proj_FireBolt01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Proj_FireBolt01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 2722176953975503289, guid: 47a9fd62abad8f3469e9e9e8046ebd20, type: 3}
+--- !u!114 &-7467385778706308662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Proj_Rock01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Proj_Rock01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 6109266140980601158, guid: 61407880144e1ba4ba4e00348c29f27a, type: 3}
+--- !u!114 &-7203538186170661441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Debuff_Weaken01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Debuff_Weaken01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 5032137364569144657, guid: a05b60d98b678334590f0cb6c4a418d3, type: 3}
+--- !u!114 &-7042788935856314607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Hit_Crush01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Hit_Crush01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 6488130598191442361, guid: 1301f06a49e78b342a3a3cd8dbf63273, type: 3}
+--- !u!114 &-6949439291716475109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: MagicNova01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: MagicNova01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 5277175255012338580, guid: fe40fe18652135d428de955ec14307d2, type: 3}
+--- !u!114 &-6465655566889150870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: ProjIceBolt01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: ProjIceBolt01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 2124651570931090805, guid: 1995d378be01a0f4386cd8107f135e0c, type: 3}
+--- !u!114 &-6069895762237383148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Support_BuffAttack01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Support_BuffAttack01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 4588733065956995308, guid: f2c6731f3d952e84cbf4237759540c0c, type: 3}
+--- !u!114 &-5803982143068540348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Magic_Star01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Magic_Star01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 9140869290443286545, guid: a32a54a17dd126b448ec6c04a7d1605c, type: 3}
+--- !u!114 &-5572847398992624828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Hit_Blood01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Hit_Blood01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 2241005172396869413, guid: c04c137f14b26904b8eb4946baed3c29, type: 3}
+--- !u!114 &-5562341243027679463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: SupportBuffSpeed01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: SupportBuffSpeed01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 4049267131913824571, guid: 17da572ba8c727d4cad8374bc88d8317, type: 3}
+--- !u!114 &-5532425449637393373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Slash_Storm01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Slash_Storm01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 1044301630901941452, guid: 070abcc2e5b067740876073a631ee5ff, type: 3}
+--- !u!114 &-5151460661315814702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Slash_Arc01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Slash_Arc01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 8952821624917814656, guid: a0c91b5f52d632242aadd8a23317bd68, type: 3}
+--- !u!114 &-4819314774490366096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Support_Shield01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Support_Shield01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 928617999060311590, guid: 361e899c51aad4a4485e0f019bcb5d64, type: 3}
+--- !u!114 &-4463111183939161814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Proj_DarkBolt01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Proj_DarkBolt01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 6000116670185949443, guid: f0962f80ba0f11f4f841a1d5a7954b1a, type: 3}
+--- !u!114 &-3363307778156903106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Support_Revive01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Support_Revive01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 2845274561315454471, guid: 57e1baff686e0644f83e115dac80dbf4, type: 3}
+--- !u!114 &-3181336210484789048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Debuff_Stun01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Debuff_Stun01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 5482904349305274858, guid: 856a4fa38458cdc4f845aa4a28190627, type: 3}
+--- !u!114 &-3165478032480063955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: SlashWide01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: SlashWide01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 8005287524990550153, guid: bc25b8c665e731949abc0b6e3e1c01d8, type: 3}
+--- !u!114 &-2794463450428180110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Hit_Slash01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Hit_Slash01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 8076849593861057266, guid: 95db8b60b5ed1e14ca0bee5d641ff751, type: 3}
+--- !u!114 &-2641513115497497487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Proj_Star01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Proj_Star01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 8069720912332695572, guid: 119edfc2afec4424ca7d1a6d4228d22d, type: 3}
+--- !u!114 &-2187345244278898961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Magic_Lightning01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Magic_Lightning01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 722586626663596629, guid: 2a594ff53401f734fb7eebe99c43d308, type: 3}
+--- !u!114 &-1509448956347375232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Hit_Spark01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Hit_Spark01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 5496527929592648242, guid: 0da76b27d2ff7f5419cd1e5834431588, type: 3}
+--- !u!114 &-1091125587720280184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Proj_ArrowPierce01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Proj_ArrowPierce01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 203443211168045645, guid: cae04ba88e06fc246a056e454b84132d, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33,11 +449,59 @@ MonoBehaviour:
   rowTypeName: DiceBound.SkillEffectDataTableRow, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
   dataList:
-  - {fileID: 3377242749901206480}
-  - {fileID: -8216660566399531323}
-  - {fileID: 8952588998709404685}
-  - {fileID: 7965967072974679540}
---- !u!114 &3377242749901206480
+  - {fileID: -8806424251432158044}
+  - {fileID: 8832527425368575923}
+  - {fileID: 7375432458933775775}
+  - {fileID: 3206922286247572409}
+  - {fileID: 5329435921731329969}
+  - {fileID: 7088877077459501750}
+  - {fileID: 1399681421858925293}
+  - {fileID: 2065614866482081844}
+  - {fileID: -3181336210484789048}
+  - {fileID: -7203538186170661441}
+  - {fileID: -5572847398992624828}
+  - {fileID: 2141612534775812195}
+  - {fileID: -7042788935856314607}
+  - {fileID: 1404638670077069331}
+  - {fileID: 6719900267597490305}
+  - {fileID: 4137040998065395288}
+  - {fileID: 926534297806803874}
+  - {fileID: -2794463450428180110}
+  - {fileID: -1509448956347375232}
+  - {fileID: 8542687410338032317}
+  - {fileID: -6069895762237383148}
+  - {fileID: 4664549288947502482}
+  - {fileID: -5562341243027679463}
+  - {fileID: 6882860313326666944}
+  - {fileID: 115529195775230258}
+  - {fileID: -3363307778156903106}
+  - {fileID: -4819314774490366096}
+  - {fileID: -3165478032480063955}
+  - {fileID: -5151460661315814702}
+  - {fileID: -8815894038179726277}
+  - {fileID: -5532425449637393373}
+  - {fileID: -2641513115497497487}
+  - {fileID: -8941742315883618936}
+  - {fileID: -1091125587720280184}
+  - {fileID: -4463111183939161814}
+  - {fileID: -8372831493570512807}
+  - {fileID: 7828174177564075973}
+  - {fileID: -6465655566889150870}
+  - {fileID: -9216767763672008883}
+  - {fileID: -7467385778706308662}
+  - {fileID: 8286692090706857712}
+  - {fileID: 1640797858719786556}
+  - {fileID: 8472198885847266446}
+  - {fileID: 8222579404311682894}
+  - {fileID: 5169242581265156934}
+  - {fileID: 8360206509220174439}
+  - {fileID: -8909862275317061715}
+  - {fileID: -2187345244278898961}
+  - {fileID: 936821554016991794}
+  - {fileID: -6949439291716475109}
+  - {fileID: 8116050986271961622}
+  - {fileID: -5803982143068540348}
+--- !u!114 &115529195775230258
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -47,13 +511,125 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
-  m_Name: HitEffect01
+  m_Name: Support_Regen01
   m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
-  id: HitEffect01
+  id: Support_Regen01
   tags: []
   isEnable: 1
-  prefab: {fileID: 7670170294891014883, guid: 310ecb62d45727043a8e5fcbbb14b9dc, type: 3}
---- !u!114 &7965967072974679540
+  prefab: {fileID: 7851482281581845156, guid: 6d5f2761ab1343042a666034c7d4681f, type: 3}
+--- !u!114 &926534297806803874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Hit_Shockwave01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Hit_Shockwave01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 8640637916395411452, guid: 6bb4d287254308245902cab3e4c88bf9, type: 3}
+--- !u!114 &936821554016991794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Magic_Meteor01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Magic_Meteor01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 2775381352680391580, guid: 3d6ad415a6a5dc54e9827475036a8eb8, type: 3}
+--- !u!114 &1399681421858925293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Debuff_Freeze01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Debuff_Freeze01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 4064494182828471810, guid: e1dff25389dfa294fae5288614770c58, type: 3}
+--- !u!114 &1404638670077069331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Hit_Heavy01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Hit_Heavy01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 7633394632303836200, guid: a0db74fda89cd4e4a9d1d946890af778, type: 3}
+--- !u!114 &1640797858719786556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Magic_Arcane01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Magic_Arcane01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 1725510111173126649, guid: 552c6cfc1d7f54741943091c48c146a1, type: 3}
+--- !u!114 &2065614866482081844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Debuff_Poison01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Debuff_Poison01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 5956721420370385662, guid: 83490a1f4ab97b34fa76f0347af99705, type: 3}
+--- !u!114 &2141612534775812195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Hit_Claw01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Hit_Claw01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 766085601933922073, guid: d4cf1603f1f66804380cbf81763705c3, type: 3}
+--- !u!114 &3206922286247572409
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -69,7 +645,119 @@ MonoBehaviour:
   tags: []
   isEnable: 1
   prefab: {fileID: 7670170294891014883, guid: 76e4cf3b396a6894ba6f4a802b5f37e2, type: 3}
---- !u!114 &8952588998709404685
+--- !u!114 &4137040998065395288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Hit_Shatter01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Hit_Shatter01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 5886192184003038602, guid: 2644c53906d6e674dbb3f854bbe425f9, type: 3}
+--- !u!114 &4664549288947502482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Support_BuffDefense01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Support_BuffDefense01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 2011346133730672480, guid: 5058fe02b875f0547af9cacd101b039f, type: 3}
+--- !u!114 &5169242581265156934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Magic_Fire01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Magic_Fire01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 4713303335627935530, guid: ed97eee874de25a4cb5e714d0a081b97, type: 3}
+--- !u!114 &5329435921731329969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Debuff_Burn01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Debuff_Burn01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 8183746281153828502, guid: 1b70ef38ae93ea645ac5cc808f5e3a07, type: 3}
+--- !u!114 &6719900267597490305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Hit_Pierce01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Hit_Pierce01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 2192894425932399271, guid: cbbca9f8328757848a74561a904d6630, type: 3}
+--- !u!114 &6882860313326666944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Support_HealBurst01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Support_HealBurst01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 6212699687000237143, guid: be09c34ddb756594bb1d28ad81b28493, type: 3}
+--- !u!114 &7088877077459501750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Debuff_Curse01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Debuff_Curse01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 6832489245667119290, guid: 24e19646faa49b34ead898b6468d74de, type: 3}
+--- !u!114 &7375432458933775775
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -85,3 +773,131 @@ MonoBehaviour:
   tags: []
   isEnable: 1
   prefab: {fileID: 7670170294891014883, guid: 9ce10667aea58f942b419fd26ea5a49d, type: 3}
+--- !u!114 &7828174177564075973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Proj_HolyBolt01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Proj_HolyBolt01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 2161803046877901300, guid: a8a551e002c190f4fb43395f5da6c2d1, type: 3}
+--- !u!114 &8116050986271961622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Magic_Poison01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Magic_Poison01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 8269854367190270542, guid: d026d724ed40ece40b25713ee377a868, type: 3}
+--- !u!114 &8222579404311682894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Magic_Explosion01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Magic_Explosion01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 1016200261918884012, guid: 0e0235860bedd0c44a1f0a009ef83604, type: 3}
+--- !u!114 &8286692090706857712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Magic_Summon01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Magic_Summon01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 386284008485705827, guid: 12cf02243fc1a944a93f0d3e70f30866, type: 3}
+--- !u!114 &8360206509220174439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Magic_Holy01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Magic_Holy01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 3489379240390377502, guid: 141db7776d81a14489ea1c724636e1a0, type: 3}
+--- !u!114 &8472198885847266446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Magic_Dark01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Magic_Dark01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 3566788176722088706, guid: 9705fd396a5c36543bd716a13d49956c, type: 3}
+--- !u!114 &8542687410338032317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: Hit_Splash01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: Hit_Splash01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 2385454086746710544, guid: 02a3c4e82631b3443a17fda7f968b04b, type: 3}
+--- !u!114 &8832527425368575923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941914224a47490e8799b52e0635baf3, type: 3}
+  m_Name: ArrowEffect01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffectDataTableRow
+  id: ArrowEffect01
+  tags: []
+  isEnable: 1
+  prefab: {fileID: 7670170294891014883, guid: ef8cd2dcbd938d9479bbc139171455fd, type: 3}

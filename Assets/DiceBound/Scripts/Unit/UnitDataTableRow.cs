@@ -27,8 +27,7 @@ namespace DiceBound
         public string skillBasicKey;
         public string skillPassiveKey;
         public string skillActiveKey;
-        public string skillActiveKeyTier3;
-
+      
         public AnimatorController animator;
 
         public string grade;
