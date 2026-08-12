@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8300484848366643859}
   - component: {fileID: 3169529250128374388}
   - component: {fileID: 2180998824252411856}
+  - component: {fileID: 2827093969039685370}
   m_Layer: 5
   m_Name: PF_GoldEffect
   m_TagString: Untagged
@@ -37,7 +38,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 960, y: 540}
-  m_SizeDelta: {x: 64, y: 64}
+  m_SizeDelta: {x: 32, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3954472227333458012
 CanvasRenderer:
@@ -67,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -184369898, guid: 31eb70a0401b7fb479292ede467cd625, type: 3}
+  m_Sprite: {fileID: 12892267, guid: 428316bfdf239204f8fecd75d2798415, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -101,3 +102,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e838c0df1db5e345946472fbd4b4d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DiceBound.GainGoldEffectWidget
+--- !u!95 &2827093969039685370
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2643559610400821699}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 684d3f2a2a3bd1642aa40f7f8d83894e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
