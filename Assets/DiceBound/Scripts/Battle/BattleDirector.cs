@@ -8,6 +8,14 @@ using UnityEngine.Pool;
 
 namespace DiceBound
 {
+    public enum DamageType
+    {
+        Normal,
+        Critical,
+        Miss,
+        Heal
+    }
+
     public class BattleDirector : DirectorBase
     {
         private UnitDirector _unitDirector;
@@ -20,10 +28,11 @@ namespace DiceBound
         private SkillDirector _skillDirector;
         private ShopDirector _shopDirector;
 
+        private Dictionary<UnitCore, int> _hitCountMap = new Dictionary<UnitCore, int>();
+
         public override IEnumerator OnInitialize()
         {
-            _damageWidgetPool =
-                new PrefabPool<DamageWidget>(PrefabManager.CachePrefab<DamageWidget>(), damageCanvas.transform, 20);
+            _damageWidgetPool = new PrefabPool<DamageWidget>(PrefabManager.CachePrefab<DamageWidget>(), damageCanvas.transform, 20);
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
             _unitPlaceDirector = DirectorFacade.GetDirector<UnitPlaceDirector>();
             _skillDirector = DirectorFacade.GetDirector<SkillDirector>();
@@ -68,33 +77,30 @@ namespace DiceBound
             }
         }
 
+        // 💡 누락되었던 EnqueueContext 메서드 복구
+        public void EnqueueContext(BattleContext battleContext)
+        {
+            _battleContextQueue.Enqueue(battleContext);
+        }
+
         private IEnumerator ExecuteBattleContext(BattleContext context)
         {
             if (context.target && _unitDirector.IsAlive(context.target))
             {
-                if (!context.self || !_unitDirector.IsAlive(context.self))
-                {
-                    yield break;
-                }
+                if (!context.self || !_unitDirector.IsAlive(context.self)) yield break;
 
                 var effect = _skillDirector.GetSkillEffect(context.skillEffectKey);
                 effect.SetPosition(context.self.transform.position);
 
-                Debug.DrawLine(context.self.transform.position, context.target.transform.position, Color.red);
-                //yield return new WaitForSeconds(context.castTime);
                 effect.Play(context.target, x => { _skillDirector.Release(context.skillEffectKey, x); });
 
-                if (!context.self || !_unitDirector.IsAlive(context.self))
-                {
-                    yield break;
-                }
+                if (!context.self || !_unitDirector.IsAlive(context.self)) yield break;
 
-
+                // 💡 여기서 hitIndex 계산 및 ShowDamage 수동 호출했던 부분들을 모두 지우고 원상복구합니다.
                 if (context.damage > 0)
                 {
                     var dodgeRoll = Random.Range(0, 1.0f);
-                    if (dodgeRoll <
-                        StatUtility.GetDodgeRate(context.target.GetStatAgent(), context.self.GetStatAgent()))
+                    if (dodgeRoll < StatUtility.GetDodgeRate(context.target.GetStatAgent(), context.self.GetStatAgent()))
                     {
                         context.target.OnDodge();
                         yield break;
@@ -117,60 +123,62 @@ namespace DiceBound
                 {
                     context.target.OnHeal(context.healPower);
                 }
-
-                //context.target.OnDebuff(context.debuff);
             }
         }
 
-
-        public bool IsPlaying()
+        // 💡 UnitCore 등에서 이 메서드들이 호출될 때마다 hitIndex를 여기서 직접 계산하도록 옮겼습니다.
+        public void ShowHeal(UnitCore core, float healAmount)
         {
-            return _isPlaying;
+            int hitIndex = GetAndIncrementHitCount(core);
+            SpawnWidget(core, healAmount, DamageType.Heal, hitIndex);
+            StartCoroutine(ResetHitCountAfterDelay(core, 0.5f));
         }
 
-        public void ShowHeal(UnitCore core, int damage)
+        public void ShowDamage(UnitCore core, float damageAmount, bool isCritical)
         {
-            var damageWidget = _damageWidgetPool.Get();
-            damageWidget.SetColor(Color.green);
-            damageWidget.Setup(damage);
-            damageWidget.SetPositionFromWorldPoint(CameraManager.GetMainCamera(), core.transform.position,
-                new Vector2(Random.Range(-10, 10) * 10, 100));
-            damageWidget.Play(x => _damageWidgetPool.Release(x));
-        }
-
-        public void ShowDamage(UnitCore core, int damage, bool isCritical)
-        {
-            var damageWidget = _damageWidgetPool.Get();
-            if (isCritical)
-            {
-                damageWidget.SetColor(Color.purple);
-            }
-            else
-            {
-                damageWidget.SetColor(Color.red);
-            }
-
-            damageWidget.Setup(damage);
-            damageWidget.SetPositionFromWorldPoint(CameraManager.GetMainCamera(), core.transform.position,
-                new Vector2(Random.Range(-10, 10) * 10, 100));
-            damageWidget.Play(x => _damageWidgetPool.Release(x));
-        }
-
-
-        public void EnqueueContext(BattleContext battleContext)
-        {
-            _battleContextQueue.Enqueue(battleContext);
+            int hitIndex = GetAndIncrementHitCount(core);
+            DamageType type = isCritical ? DamageType.Critical : DamageType.Normal;
+            SpawnWidget(core, damageAmount, type, hitIndex);
+            StartCoroutine(ResetHitCountAfterDelay(core, 0.5f));
         }
 
         public void ShowMiss(UnitCore core)
         {
-            var damageWidget = _damageWidgetPool.Get();
-            damageWidget.SetColor(Color.white);
+            int hitIndex = GetAndIncrementHitCount(core);
+            SpawnWidget(core, 0f, DamageType.Miss, hitIndex);
+            StartCoroutine(ResetHitCountAfterDelay(core, 0.5f));
+        }
 
-            damageWidget.Setup(0);
-            damageWidget.SetPositionFromWorldPoint(CameraManager.GetMainCamera(), core.transform.position,
-                new Vector2(Random.Range(-10, 10) * 10, 100));
-            damageWidget.Play(x => _damageWidgetPool.Release(x));
+        private int GetAndIncrementHitCount(UnitCore target)
+        {
+            if (!_hitCountMap.ContainsKey(target))
+                _hitCountMap[target] = 0;
+
+            int currentCount = _hitCountMap[target];
+            _hitCountMap[target]++;
+            return currentCount;
+        }
+
+        private IEnumerator ResetHitCountAfterDelay(UnitCore target, float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            if (_hitCountMap.ContainsKey(target))
+            {
+                _hitCountMap[target] = Mathf.Max(0, _hitCountMap[target] - 1);
+            }
+        }
+
+        private void SpawnWidget(UnitCore core, float amount, DamageType type, int hitIndex)
+        {
+            var damageWidget = _damageWidgetPool.Get();
+
+            float offsetX = Random.Range(-5f, 5f);
+            float offsetY = 120f + (hitIndex * 30f);
+
+            damageWidget.SetPositionFromWorldPoint(CameraManager.GetMainCamera(), core.transform.position, new Vector2(offsetX, offsetY));
+
+            damageWidget.Setup(Mathf.RoundToInt(amount), type);
+            damageWidget.Play(hitIndex, x => _damageWidgetPool.Release(x));
         }
     }
 }
