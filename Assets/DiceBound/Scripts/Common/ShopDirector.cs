@@ -15,11 +15,13 @@ namespace DiceBound
         private WalletDirector _walletDirector;
         private DiceDirector _diceDirector;
         private bool _isEnable = true;
+        private UnitDirector _unitDirector;
 
         public override IEnumerator OnInitialize()
         {
             _diceDirector = DirectorFacade.GetDirector<DiceDirector>();
             _walletDirector = DirectorFacade.GetDirector<WalletDirector>();
+            _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
             shopButtonWidget.onClickAction += ShowCanvas;
             backToFieldButton.onClickAction += HideCanvas;
             rollDiceButtonWidget.onClickAction += OnRollDiceButtonClick;
@@ -28,7 +30,7 @@ namespace DiceBound
 
         public void OnRollDiceButtonClick()
         {
-            if (_walletDirector.HasGold(rollDiceCost))
+            if (!_walletDirector.HasGold(rollDiceCost) || !_unitDirector.IsAllyFull())
             {
                 _walletDirector.SpendGold(rollDiceCost);
                 _diceDirector.ShowCanvas();
