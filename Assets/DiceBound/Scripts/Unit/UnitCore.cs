@@ -285,11 +285,6 @@ namespace DiceBound
 
         public void OnDamage(float damage, bool isCritical)
         {
-            if (IsDead() || !gameObject.activeInHierarchy)
-            {
-                return;
-            }
-
             hp -= damage;
             hp = Mathf.Clamp(hp, 0, StatUtility.GetMaxHp(_statAgent));
             onHitAction?.Invoke(this, (int)damage, isCritical);
