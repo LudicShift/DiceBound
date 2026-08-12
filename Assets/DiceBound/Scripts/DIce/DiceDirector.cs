@@ -36,6 +36,7 @@ namespace DiceBound
         
         private int _remainRollCount = 3;
         private UnitDirector _unitDirector;
+        private WalletDirector _walletDirector;
         private CombinationBase[] _combinations;
         private List<DicePointWidget> _keepPoints;
         private List<DicePointWidget> _remainPoints;
@@ -145,6 +146,7 @@ namespace DiceBound
             
             _keepDices = new List<DiceWidget>();
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
+            _walletDirector = DirectorFacade.GetDirector<WalletDirector>();
             _remainDices = canvas.GetComponentsInChildren<DiceWidget>(true).ToList();
             _remainPoints = remainPointGroup.GetComponentsInChildren<DicePointWidget>(true).ToList();
             _keepPoints = keepPointGroup.GetComponentsInChildren<DicePointWidget>(true).ToList();
@@ -307,8 +309,12 @@ namespace DiceBound
             if (combination != null)
             {
                 _unitDirector.SpawnUnit(combination.GetUnitID());
-                HideCanvas();
             }
+            else
+            {
+                _walletDirector.AddGold(50);
+            }
+            HideCanvas();
         }
 
         private void OnShowFieldButtonClick()

@@ -19,7 +19,7 @@ namespace DiceBound
 
         public void Update()
         {
-            if (_context is { enabled: true })
+            if (_context is { enabled: true } && _isHovered)
             {
                 _context.widget.OnUpdate(_context);
             }
