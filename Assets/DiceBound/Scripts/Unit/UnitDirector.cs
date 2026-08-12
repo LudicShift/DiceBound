@@ -15,6 +15,7 @@ namespace DiceBound
         private Vector3 _dragOffset;
         private Camera _camera;
         [SerializeField] private Canvas hpCanvas;
+        [SerializeField] private TextWidget allyCountWidget;
 
 
         private PrefabPool<UnitCore> _allyPrefabPool;
@@ -30,13 +31,21 @@ namespace DiceBound
         private BattleDirector _battleDirector;
         private UnitPlaceDirector _unitPlaceDirector;
         private TooltipDirector _tooltipDirector;
+        private WalletDirector _walletDirector;
 
         public Action<UnitCore> onSpawnAlly;
 
+        private int _maxAllyNumber = 15;
+
         [SerializeField] private UnitTrashCan trashCan;
 
+        public void UpdateAllyCountText()
+        {
+            allyCountWidget.SetText($"{_allies.Count}/{_maxAllyNumber}");
+        }
         public override IEnumerator OnInitialize()
         {
+            UpdateAllyCountText();
             _hpGaugePrefabPool = new PrefabPool<GaugeWidget>(PrefabManager.CachePrefab<GaugeWidget>(), hpCanvas.transform, 100);
             _tierLabelPrefabPool = new PrefabPool<TierLabelWidget>(PrefabManager.CachePrefab<TierLabelWidget>(), hpCanvas.transform,100);
             
@@ -49,19 +58,25 @@ namespace DiceBound
             _enemyPrefabPool.onGetAction += OnGetUnit;
             _allyPrefabPool.onReleaseAction += OnReleaseUnit;
             _enemyPrefabPool.onReleaseAction += OnReleaseUnit;
-            trashCan.onRemoveUnitAction += RemoveAllyUnit;
+            trashCan.onRemoveUnitAction += SellUnit;
 
             _tooltipDirector = DirectorFacade.GetDirector<TooltipDirector>();
             _unitPlaceDirector = DirectorFacade.GetDirector<UnitPlaceDirector>();
             _skillDirector = DirectorFacade.GetDirector<SkillDirector>();
             _battleDirector = DirectorFacade.GetDirector<BattleDirector>();
+            _walletDirector = DirectorFacade.GetDirector<WalletDirector>();
 
             _camera = CameraManager.GetMainCamera();
             _unitDataDictionary = DataTableManager.FindAllRows<UnitDataTableRow>().ToDictionary(x => x.id);
             yield return null;
         }
 
-   
+        private void SellUnit(UnitCore unit)
+        {
+            RemoveAllyUnit(unit);
+            _walletDirector.PlayGainGoldEffect(trashCan.transform.position,50);
+        }
+
 
         private void OnReleaseUnit(UnitCore instance)
         {
@@ -81,7 +96,11 @@ namespace DiceBound
             instance.onHitAction += OnUnitHit;
             instance.onHealAction += OnUnitHeal;
         }
-        
+
+        public bool IsAllyFull()
+        {
+            return _maxAllyNumber <= _allies.Count;
+        }
 
         public void SpawnUnit(string unitId)
         {
@@ -116,6 +135,7 @@ namespace DiceBound
                     _allies.Add(instance);
                     instance.PlayAppear(()=>onSpawnAlly.Invoke(instance));
                     instance.FlipSprite(false);
+                    UpdateAllyCountText();
                     break;
                 case UnitGroup.Enemy:
                     _enemies.Add(instance);
@@ -165,6 +185,7 @@ namespace DiceBound
             _units.Remove(unit);
             _unitPlaceDirector.RemoveUnit(unit);
             _allyPrefabPool.Release(unit);
+            UpdateAllyCountText();
         }
 
         public int GetEnemyUnitCount()

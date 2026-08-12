@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using DG.Tweening;
 using KCoreKit;
 using UnityEngine;
 
@@ -12,6 +13,8 @@ namespace DiceBound
         [SerializeField] private DiceRerollButtonWidget _rerollButtonWidget;
 
         [SerializeField] private ButtonWidget _showFieldButton;
+        [SerializeField] private ButtonWidget _showRewardButton;
+        [SerializeField] private ButtonWidget _showDiceButton;
         
         [SerializeField] private TextWidget _combinationInfoWidget;
         
@@ -20,7 +23,8 @@ namespace DiceBound
         [SerializeField]
         private Canvas canvas;    
         
-        [SerializeField] private ImageWidget layer;
+        [SerializeField] private ImageWidget diceLayer;
+        [SerializeField] private ImageWidget rewardLayer;
 
         [SerializeField] private List<Sprite> diceSprite;
         [SerializeField] private List<Sprite> diceAnimationSprite;
@@ -51,12 +55,14 @@ namespace DiceBound
         
         public void ShowLayer()
         {
-            layer.gameObject.SetActive(true);
+            diceLayer.gameObject.SetActive(true);
+            rewardLayer.gameObject.SetActive(true);
         }
         
         public void HideLayer()
         {
-            layer.gameObject.SetActive(false);
+            diceLayer.gameObject.SetActive(false);
+            rewardLayer.gameObject.SetActive(false);
         }
         
         public void Setup()
@@ -151,6 +157,8 @@ namespace DiceBound
             }
             
             _showFieldButton.onClickAction+=OnShowFieldButtonClick;
+            _showRewardButton.onClickAction+=OnShowRewardButtonClick;
+            _showDiceButton.onClickAction+=OnShowDiceButtonClick;
             _rerollButtonWidget.onClickAction+=Roll;
             _claimButtonWidget.onClickAction+=OnClaimButtonClick;
 
@@ -171,6 +179,22 @@ namespace DiceBound
             _combinations = combinationList.ToArray();
             
             yield return null;
+        }
+
+        private void OnShowDiceButtonClick()
+        {
+            diceLayer.DOKill();
+            rewardLayer.DOKill();
+            diceLayer.rectTransform.DOAnchorPosX(0, 0.1f);
+            rewardLayer.rectTransform.DOAnchorPosX(1920, 0.1f);
+        }
+
+        private void OnShowRewardButtonClick()
+        {
+            diceLayer.DOKill();
+            rewardLayer.DOKill();
+            diceLayer.rectTransform.DOAnchorPosX(-1920, 0.1f);
+            rewardLayer.rectTransform.DOAnchorPosX(0, 0.1f);
         }
 
         private Sprite GetDiceAnimationSprite(int index)
@@ -289,7 +313,7 @@ namespace DiceBound
 
         private void OnShowFieldButtonClick()
         {
-            if (layer.isShown)
+            if (diceLayer.isShown)
             {
                 HideLayer();
             }
