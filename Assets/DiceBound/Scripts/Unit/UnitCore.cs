@@ -49,6 +49,7 @@ namespace DiceBound
 
         [HideInInspector] public TooltipProvider tooltipProvider;
         public BattleContext battleContext;
+        private Coroutine _battleCoroutine;
 
 
         public void Awake()
@@ -455,6 +456,18 @@ namespace DiceBound
             onDodgeAction?.Invoke(this);
         }
 
-       
+
+        public void StartBattleCoroutine(IEnumerator executeBattleContext)
+        {
+           _battleCoroutine = StartCoroutine(executeBattleContext);
+        }
+
+        public void StopBattleCoroutine()
+        {
+            if (_battleCoroutine!=null)
+            {
+                StopCoroutine(_battleCoroutine);
+            }
+        }
     }
 }
