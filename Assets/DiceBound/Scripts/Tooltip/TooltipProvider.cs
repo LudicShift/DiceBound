@@ -10,6 +10,7 @@ namespace DiceBound
         private TooltipContext _context;
         public readonly Action<TooltipContext> enterAction;
         public readonly Action<TooltipContext> exitAction;
+        private bool _isHovered;
 
         public void SetText(string text)
         {
@@ -48,6 +49,7 @@ namespace DiceBound
                 _context.widget.Show();
                 _context.widget.OnShow(_context);
             }
+            _isHovered = true;
         }
 
         public void OnPointerExit(PointerEventData eventData)
@@ -57,6 +59,8 @@ namespace DiceBound
                 exitAction?.Invoke(_context);
                 _context.widget.Hide();
             }
+
+            _isHovered = false;
         }
 
         public void SetEnabled(bool value)
@@ -69,6 +73,11 @@ namespace DiceBound
                     _context.widget.Hide();
                 }
             }
+        }
+
+        public bool IsHovered()
+        {
+            return _isHovered;
         }
     }
 }

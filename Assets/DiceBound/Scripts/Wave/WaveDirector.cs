@@ -12,6 +12,10 @@ namespace DiceBound
         private Dictionary<int,WaveDataTableRow> _waveDictionary;
         private Dictionary<int,List<WaveEnemyPoolDataTableRow>> _waveEnemyPoolDictionary;
 
+        [SerializeField] private ImageWidget waveLabelImage;
+        [SerializeField] private TextWidget waveLabelText;
+        [SerializeField] private TweenAnimationPlayer waveLabelAppearTween;
+        [SerializeField] private TweenAnimationPlayer waveLabelDisappearTween;
         [SerializeField] private TextWidget waveTextWidget;
         [SerializeField] private ButtonWidget playWaveButtonWidget;
         [SerializeField] private ButtonWidget titleButtonWidget;
@@ -76,8 +80,13 @@ namespace DiceBound
                     _unitDirector.SpawnUnit(PickEnemy(wave.index));
                     enemyCount++;
                 }
+                waveLabelText.SetText($"Wave {_currentWave+1}");
+                waveLabelImage.Show();
+                yield return waveLabelAppearTween.Play();
+                yield return new WaitForSeconds(0.3f);
+                yield return waveLabelDisappearTween.Play();
+                waveLabelImage.Hide();
             
-                yield return new WaitForSeconds(0.5f);
                 _battleDirector.BeginBattle();
                 yield return new WaitUntil(() =>_unitDirector.GetEnemyUnitCount() == 0  || _unitDirector.GetAllyUnitCount() ==_unitDirector.GetDeadAllyUnitCount());
                 if (_unitDirector.GetEnemyUnitCount() == 0)

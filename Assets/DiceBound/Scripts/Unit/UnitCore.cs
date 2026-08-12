@@ -19,7 +19,7 @@ namespace DiceBound
 
         public Action<UnitCore> onDeadAction;
         public Action<UnitCore> onDodgeAction;
-        public Action<UnitCore, int,bool> onHitAction;
+        public Action<UnitCore, int, bool> onHitAction;
         public Action<UnitCore, int> onHealAction;
 
         public UnitGroup group;
@@ -45,8 +45,7 @@ namespace DiceBound
         private AnimationCallbackBehaviour[] _callBackBehaviours;
         public UnitAttackType attackType;
         private int _tier = 0;
-        [HideInInspector]
-        public TooltipProvider tooltipProvider;
+        [HideInInspector] public TooltipProvider tooltipProvider;
 
 
         public void Awake()
@@ -71,8 +70,11 @@ namespace DiceBound
 
         public void Update()
         {
-            
-            tooltipProvider.SetTooltipPosition(transform.position,CalculateTooltipOffset(),false);
+            if (tooltipProvider.IsHovered())
+            {
+                tooltipProvider.SetTooltipPosition(transform.position, CalculateTooltipOffset(), false);
+            }
+
             if (IsDead())
             {
                 return;
@@ -80,12 +82,14 @@ namespace DiceBound
 
             if (_hpGauge)
             {
-               _hpGauge.SetPositionFromWorldPoint(CameraManager.GetMainCamera(), _spriteRenderer.transform.position, new Vector2(0,_data.height));
+                _hpGauge.SetPositionFromWorldPoint(CameraManager.GetMainCamera(), _spriteRenderer.transform.position,
+                    new Vector2(0, _data.height));
             }
 
             if (_tierLabel)
             {
-                _tierLabel.SetPositionFromWorldPoint(CameraManager.GetMainCamera(), _spriteRenderer.transform.position, new Vector2(0,_data.height+30));
+                _tierLabel.SetPositionFromWorldPoint(CameraManager.GetMainCamera(), _spriteRenderer.transform.position,
+                    new Vector2(0, _data.height + 30));
             }
 
             if (_isBattle)
@@ -101,7 +105,7 @@ namespace DiceBound
         {
             var result = new Vector2();
             result.x = Mathf.Sign(transform.position.x) * -200;
-            result.y =  250;
+            result.y = 250;
             return result;
         }
 
@@ -110,10 +114,10 @@ namespace DiceBound
             _data = data;
             group = data.group;
             attackType = data.attackType;
-            
+
             _animator.runtimeAnimatorController = data.animator;
             _callBackBehaviours = _animator.GetBehaviours<AnimationCallbackBehaviour>();
-            
+
             foreach (var behaviour in _callBackBehaviours)
             {
                 behaviour.callback += OnAnimationCallback;
@@ -131,7 +135,7 @@ namespace DiceBound
             hp = StatUtility.GetMaxHp(_statAgent);
         }
 
-       
+
         public void ResetHp()
         {
             hp = StatUtility.GetMaxHp(_statAgent);
@@ -154,13 +158,15 @@ namespace DiceBound
         {
             return _data;
         }
+
         public Tween Move(Vector3 position)
         {
-           return transform.DOMove(position, moveDuration);
+            return transform.DOMove(position, moveDuration);
         }
+
         public Tween LocalMove(Vector3 position)
         {
-           return transform.DOLocalMove(position, moveDuration);
+            return transform.DOLocalMove(position, moveDuration);
         }
 
         public void LocalWarp(Vector3 position)
@@ -204,7 +210,7 @@ namespace DiceBound
             Animate("Idle");
         }
 
-        public void SetHighlight(bool value, Color color = default,int order = 1)
+        public void SetHighlight(bool value, Color color = default, int order = 1)
         {
             _outliner.SetEnable(value);
             _outliner.SetColor(color);
@@ -216,9 +222,8 @@ namespace DiceBound
             {
                 _spriteRenderer.sortingOrder = 0;
             }
-        } 
-        
-     
+        }
+
 
         public void Animate(string value)
         {
@@ -229,12 +234,12 @@ namespace DiceBound
         {
             hp -= damage;
             hp = Mathf.Clamp(hp, 0, StatUtility.GetMaxHp(_statAgent));
-            onHitAction?.Invoke(this, (int)damage,isCritical);
+            onHitAction?.Invoke(this, (int)damage, isCritical);
             Animate("Hurt");
 
             StartCoroutine(hitSequence.Play());
             _hpGauge.OnChange(hp);
-            
+
             if (_isBattle && hp <= 0)
             {
                 StartCoroutine(DeadRoutine());
@@ -260,31 +265,32 @@ namespace DiceBound
             _hpGauge = hpGauge;
             _hpGauge.Setup(StatUtility.GetMaxHp(_statAgent), hp);
         }
-        
+
         public void BindTierLabel(TierLabelWidget tierLabel)
         {
             _tierLabel = tierLabel;
             _tierLabel.OnChange(_tier);
         }
-        
-        
+
+
         public GaugeWidget GetHpGauge()
         {
-           return _hpGauge;
+            return _hpGauge;
         }
+
         public void ReleaseHpGauge(GaugeWidget hpGauge)
         {
             _hpGauge = null;
         }
 
-    
+
         public void ShowAttackAnimation(Action attackAction)
         {
             Animate("Attack");
             StartCoroutine(attackSequence.Play());
             attackAction.Invoke();
         }
-        
+
         private void OnAnimationCallback(AnimatorStateInfo info)
         {
             if (info.IsName("Attack") || info.IsName("Hurt"))
@@ -293,7 +299,7 @@ namespace DiceBound
             }
         }
 
-        
+
         public void OnHeal(float damage)
         {
             hp += damage;
@@ -338,18 +344,18 @@ namespace DiceBound
 
         public void SetParent(Transform parent)
         {
-           transform.SetParent(parent);
+            transform.SetParent(parent);
         }
 
         public void Upgrade()
         {
             _tier++;
-            
+
             foreach (var stat in _statAgent.GetAllStats())
             {
                 stat.Value.AddModifier(new StatModifier(0.8f, StatModifyType.PercentMult));
             }
-            
+
             _tierLabel.OnChange(_tier);
             var maxHp = StatUtility.GetMaxHp(_statAgent);
             hp = maxHp;
@@ -368,19 +374,19 @@ namespace DiceBound
 
         public IEnumerator HideUpgradeEffect()
         {
-            yield return  _mergeEffectHandler.FadeOut();
+            yield return _mergeEffectHandler.FadeOut();
         }
 
         public string GetId()
         {
-           return _data.id;
+            return _data.id;
         }
 
         public int GetTier()
         {
             return _tier;
         }
-        
+
         public void OnDodge()
         {
             StartCoroutine(dodgeSequence.Play());

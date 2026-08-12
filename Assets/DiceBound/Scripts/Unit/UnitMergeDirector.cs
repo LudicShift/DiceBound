@@ -58,12 +58,13 @@ namespace DiceBound
             {
                 unitList[i].Move(mainUnit.transform.position).SetDelay(i * 0.3f).OnComplete(() =>
                 {
-                    mainUnit.transform.DOScale(0.2f, 0.1f).SetRelative().SetEase(Ease.OutElastic);
+                    mainUnit.transform.DOScale(0.2f, 0.1f).SetRelative().SetEase(Ease.OutBack);
                     count++;
                 });
             }
 
             yield return new WaitUntil(() => count == unitList.Count);
+            yield return new  WaitForSeconds(0.2f);
 
             foreach (var unit in unitList)
             {
