@@ -106,6 +106,7 @@ namespace DiceBound
                 yield return effect.Play(context.target, x => { _skillDirector.Release(context.skillEffectKey, x); }).WaitForCompletion();
 
                 if (!context.self || !_unitDirector.IsAlive(context.self)) yield break;
+                if (!context.target || !_unitDirector.IsAlive(context.target)) yield break;
 
                 // 💡 여기서 hitIndex 계산 및 ShowDamage 수동 호출했던 부분들을 모두 지우고 원상복구합니다.
                 if (context.damage > 0)

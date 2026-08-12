@@ -1,63 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8412406597391447984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7207190133824d7e904d98b5e5a1f1c8, type: 3}
-  m_Name: MeleeAttack
-  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityDataTableRow
-  id: MeleeAttack
-  tags: []
-  isEnable: 1
-  abilityConditionIdList:
-  - Always
-  abilityActionIdList:
-  - MeleeAttack
---- !u!114 &-3649797228549126771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7207190133824d7e904d98b5e5a1f1c8, type: 3}
-  m_Name: MagicAttack
-  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityDataTableRow
-  id: MagicAttack
-  tags: []
-  isEnable: 1
-  abilityConditionIdList:
-  - Always
-  abilityActionIdList:
-  - MagicAttack
---- !u!114 &-1130664127194851926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7207190133824d7e904d98b5e5a1f1c8, type: 3}
-  m_Name: Heal
-  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityDataTableRow
-  id: Heal
-  tags: []
-  isEnable: 1
-  abilityConditionIdList:
-  - Always
-  abilityActionIdList:
-  - Heal
---- !u!114 &-508797367460919691
+--- !u!114 &-1375868696728459627
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,7 +36,64 @@ MonoBehaviour:
   rowTypeName: KCoreKit.AbilityDataTableRow, KCoreKit, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   dataList:
-  - {fileID: -8412406597391447984}
-  - {fileID: -508797367460919691}
-  - {fileID: -3649797228549126771}
-  - {fileID: -1130664127194851926}
+  - {fileID: 1803554436978537766}
+  - {fileID: -1375868696728459627}
+  - {fileID: 7613610637915483842}
+  - {fileID: 7047561909341957389}
+--- !u!114 &1803554436978537766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7207190133824d7e904d98b5e5a1f1c8, type: 3}
+  m_Name: MeleeAttack
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityDataTableRow
+  id: MeleeAttack
+  tags: []
+  isEnable: 1
+  abilityConditionIdList:
+  - Always
+  abilityActionIdList:
+  - MeleeAttack
+--- !u!114 &7047561909341957389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7207190133824d7e904d98b5e5a1f1c8, type: 3}
+  m_Name: Heal
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityDataTableRow
+  id: Heal
+  tags: []
+  isEnable: 1
+  abilityConditionIdList:
+  - Always
+  abilityActionIdList:
+  - Heal
+--- !u!114 &7613610637915483842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7207190133824d7e904d98b5e5a1f1c8, type: 3}
+  m_Name: MagicAttack
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityDataTableRow
+  id: MagicAttack
+  tags: []
+  isEnable: 1
+  abilityConditionIdList:
+  - Always
+  abilityActionIdList:
+  - MagicAttack

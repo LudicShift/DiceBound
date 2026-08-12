@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8895295879004934376
+--- !u!114 &-8912483101871126257
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,63 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SK_ELITEORC_T3
+  m_Name: SK_ORC_Active
   m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SK_ELITEORC_T3
-  tags: []
-  isEnable: 1
-  skillType: 1
-  nameKey: 
-  descKey: 
-  abilityId: MeleeAttack
-  cooldown: 9
-  castTime: 0.4
-  targetOption: 1
-  effectKey: HitEffect01
-  targetCount: 3
-  animClip: Attack03
-  priority: 1
-  startUpDelay: 0
---- !u!114 &-8721668167668188417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SK_WEREBEAR_T3
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SK_WEREBEAR_T3
-  tags: []
-  isEnable: 1
-  skillType: 1
-  nameKey: 
-  descKey: 
-  abilityId: MeleeAttack
-  cooldown: 9
-  castTime: 0.4
-  targetOption: 1
-  effectKey: HitEffect01
-  targetCount: 3
-  animClip: Attack03
-  priority: 1
-  startUpDelay: 0
---- !u!114 &-8683635181682982756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SK_ELITEORC_T2
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SK_ELITEORC_T2
+  id: SK_ORC_Active
   tags: []
   isEnable: 1
   skillType: 1
@@ -76,120 +22,12 @@ MonoBehaviour:
   cooldown: 6
   castTime: 0.3
   targetOption: 1
-  effectKey: HitEffect01
-  targetCount: 2
+  effectKey: Slash_Storm01
+  targetCount: 3
   animClip: Attack02
   priority: 1
   startUpDelay: 0
---- !u!114 &-8241545034643656703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SK_AXEMAN_T2
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SK_AXEMAN_T2
-  tags: []
-  isEnable: 1
-  skillType: 1
-  nameKey: 
-  descKey: 
-  abilityId: MeleeAttack
-  cooldown: 6
-  castTime: 0.3
-  targetOption: 1
-  effectKey: HitEffect01
-  targetCount: 2
-  animClip: Attack02
-  priority: 1
-  startUpDelay: 0
---- !u!114 &-7848079882983121626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SkeletonArcherBasicSkill
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SkeletonArcherBasicSkill
-  tags: []
-  isEnable: 1
-  skillType: 0
-  nameKey: 
-  descKey: 
-  abilityId: RangedAttack
-  cooldown: 0
-  castTime: 0
-  targetOption: 1
-  effectKey: ArrowEffect01
-  targetCount: 1
-  animClip: Attack
-  priority: 2
-  startUpDelay: 0
---- !u!114 &-7401107246704072997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SK_SKELARCHER_T2
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SK_SKELARCHER_T2
-  tags: []
-  isEnable: 1
-  skillType: 1
-  nameKey: 
-  descKey: 
-  abilityId: RangedAttack
-  cooldown: 6
-  castTime: 0.3
-  targetOption: 1
-  effectKey: ArrowEffect01
-  targetCount: 2
-  animClip: Attack
-  priority: 1
-  startUpDelay: 0
---- !u!114 &-7313756744100903623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: WizardBasicSkill
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: WizardBasicSkill
-  tags: []
-  isEnable: 1
-  skillType: 0
-  nameKey: 
-  descKey: 
-  abilityId: MagicAttack
-  cooldown: 0
-  castTime: 0
-  targetOption: 1
-  effectKey: Magic_Star01
-  targetCount: 1
-  animClip: Attack
-  priority: 2
-  startUpDelay: 0
---- !u!114 &-6912611328467013612
+--- !u!114 &-8655255918991201348
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,8 +53,8 @@ MonoBehaviour:
   targetCount: 1
   animClip: Attack
   priority: 2
-  startUpDelay: 0
---- !u!114 &-6243710395030687962
+  startUpDelay: 0.22
+--- !u!114 &-8636407677120109809
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -226,144 +64,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: NecroBasicSkill
+  m_Name: SK_PRIEST_T3
   m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: NecroBasicSkill
-  tags: []
-  isEnable: 1
-  skillType: 0
-  nameKey: 
-  descKey: 
-  abilityId: MagicAttack
-  cooldown: 0
-  castTime: 0
-  targetOption: 1
-  effectKey: Magic_Dark01
-  targetCount: 1
-  animClip: Attack
-  priority: 2
-  startUpDelay: 0
---- !u!114 &-5591391026282682199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: OrcRiderBasicSkill
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: OrcRiderBasicSkill
-  tags: []
-  isEnable: 1
-  skillType: 0
-  nameKey: 
-  descKey: 
-  abilityId: MeleeAttack
-  cooldown: 0
-  castTime: 0
-  targetOption: 1
-  effectKey: Hit_Pierce01
-  targetCount: 1
-  animClip: Attack
-  priority: 2
-  startUpDelay: 0
---- !u!114 &-4771425466791497102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SK_ORCRIDER_T3
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SK_ORCRIDER_T3
-  tags: []
-  isEnable: 1
-  skillType: 1
-  nameKey: 
-  descKey: 
-  abilityId: MeleeAttack
-  cooldown: 9
-  castTime: 0.4
-  targetOption: 1
-  effectKey: HitEffect01
-  targetCount: 3
-  animClip: Attack03
-  priority: 1
-  startUpDelay: 0
---- !u!114 &-4736869095078176195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SK_TEMPLAR_T2
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SK_TEMPLAR_T2
-  tags: []
-  isEnable: 1
-  skillType: 1
-  nameKey: 
-  descKey: 
-  abilityId: MeleeAttack
-  cooldown: 6
-  castTime: 0.3
-  targetOption: 1
-  effectKey: HitEffect01
-  targetCount: 2
-  animClip: Attack03
-  priority: 1
-  startUpDelay: 0
---- !u!114 &-4504524291909264644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: GreatswordSkeletonBasicSkill
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: GreatswordSkeletonBasicSkill
-  tags: []
-  isEnable: 1
-  skillType: 0
-  nameKey: 
-  descKey: 
-  abilityId: MeleeAttack
-  cooldown: 0
-  castTime: 0
-  targetOption: 1
-  effectKey: Support_BuffAttack01
-  targetCount: 1
-  animClip: Attack
-  priority: 2
-  startUpDelay: 0
---- !u!114 &-4413060589498879245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SK_PRIEST_T2
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SK_PRIEST_T2
+  id: SK_PRIEST_T3
   tags: []
   isEnable: 1
   skillType: 1
@@ -374,173 +77,11 @@ MonoBehaviour:
   castTime: 0.3
   targetOption: 0
   effectKey: HealEffect01
-  targetCount: 4
-  animClip: Attack
+  targetCount: 15
+  animClip: Heal
   priority: 1
   startUpDelay: 0
---- !u!114 &-4366613340359192019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: EliteOrcBasicSkill
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: EliteOrcBasicSkill
-  tags: []
-  isEnable: 1
-  skillType: 0
-  nameKey: 
-  descKey: 
-  abilityId: MeleeAttack
-  cooldown: 0
-  castTime: 0
-  targetOption: 1
-  effectKey: Magic_Explosion01
-  targetCount: 1
-  animClip: Attack
-  priority: 2
-  startUpDelay: 0
---- !u!114 &-4041941813678847596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SK_GSSKEL_T2
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SK_GSSKEL_T2
-  tags: []
-  isEnable: 1
-  skillType: 1
-  nameKey: 
-  descKey: 
-  abilityId: MeleeAttack
-  cooldown: 6
-  castTime: 0.3
-  targetOption: 1
-  effectKey: HitEffect01
-  targetCount: 2
-  animClip: Attack02
-  priority: 1
-  startUpDelay: 0
---- !u!114 &-3962604830221495534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: WerebearBasicSkill
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: WerebearBasicSkill
-  tags: []
-  isEnable: 1
-  skillType: 0
-  nameKey: 
-  descKey: 
-  abilityId: MeleeAttack
-  cooldown: 0
-  castTime: 0
-  targetOption: 1
-  effectKey: Hit_Claw01
-  targetCount: 1
-  animClip: Attack02
-  priority: 2
-  startUpDelay: 0
---- !u!114 &-3910079083622433708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SK_ARMSKEL_T3
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SK_ARMSKEL_T3
-  tags: []
-  isEnable: 1
-  skillType: 1
-  nameKey: 
-  descKey: 
-  abilityId: MeleeAttack
-  cooldown: 9
-  castTime: 0.4
-  targetOption: 1
-  effectKey: HitEffect01
-  targetCount: 3
-  animClip: Attack02
-  priority: 1
-  startUpDelay: 0
---- !u!114 &-3651655741709210998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: AxemanBasicSkill
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: AxemanBasicSkill
-  tags: []
-  isEnable: 1
-  skillType: 0
-  nameKey: 
-  descKey: 
-  abilityId: MeleeAttack
-  cooldown: 0
-  castTime: 0
-  targetOption: 1
-  effectKey: Slash_Storm01
-  targetCount: 1
-  animClip: Attack
-  priority: 2
-  startUpDelay: 0
---- !u!114 &-2960662836162889066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SK_SOLDIER_T2
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SK_SOLDIER_T2
-  tags: []
-  isEnable: 1
-  skillType: 1
-  nameKey: 
-  descKey: 
-  abilityId: MeleeAttack
-  cooldown: 6
-  castTime: 0.3
-  targetOption: 1
-  effectKey: Hit_Splash01
-  targetCount: 2
-  animClip: Attack02
-  priority: 1
-  startUpDelay: 0
---- !u!114 &-2782440867910791238
+--- !u!114 &-8436511733368098206
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -562,593 +103,12 @@ MonoBehaviour:
   cooldown: 9
   castTime: 0.4
   targetOption: 1
-  effectKey: HitEffect01
+  effectKey: Hit_Slash02
   targetCount: 3
-  animClip: Attack03
+  animClip: Attack3
   priority: 1
   startUpDelay: 0
---- !u!114 &-2099134137393655884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SK_SKELETON_T2
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SK_SKELETON_T2
-  tags: []
-  isEnable: 1
-  skillType: 1
-  nameKey: 
-  descKey: 
-  abilityId: MeleeAttack
-  cooldown: 6
-  castTime: 0.3
-  targetOption: 1
-  effectKey: HitEffect01
-  targetCount: 2
-  animClip: Attack02
-  priority: 1
-  startUpDelay: 0
---- !u!114 &-1891956289321204847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SK_GSSKEL_T3
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SK_GSSKEL_T3
-  tags: []
-  isEnable: 1
-  skillType: 1
-  nameKey: 
-  descKey: 
-  abilityId: MeleeAttack
-  cooldown: 9
-  castTime: 0.4
-  targetOption: 1
-  effectKey: HitEffect01
-  targetCount: 3
-  animClip: Attack03
-  priority: 1
-  startUpDelay: 0
---- !u!114 &-1042535790231815233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SK_WIZARD_T2
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SK_WIZARD_T2
-  tags: []
-  isEnable: 1
-  skillType: 1
-  nameKey: 
-  descKey: 
-  abilityId: MagicAttack
-  cooldown: 6
-  castTime: 0.3
-  targetOption: 1
-  effectKey: HitEffect01
-  targetCount: 3
-  animClip: Attack02
-  priority: 1
-  startUpDelay: 0
---- !u!114 &-810421502854633622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: ArcherBasicSkill
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: ArcherBasicSkill
-  tags: []
-  isEnable: 1
-  skillType: 0
-  nameKey: 
-  descKey: 
-  abilityId: RangedAttack
-  cooldown: 0
-  castTime: 0
-  targetOption: 1
-  effectKey: ArrowEffect01
-  targetCount: 1
-  animClip: Attack
-  priority: 2
-  startUpDelay: 0
---- !u!114 &-13438294301348755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SK_WEREBEAR_T2
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SK_WEREBEAR_T2
-  tags: []
-  isEnable: 1
-  skillType: 1
-  nameKey: 
-  descKey: 
-  abilityId: MeleeAttack
-  cooldown: 6
-  castTime: 0.3
-  targetOption: 1
-  effectKey: HitEffect01
-  targetCount: 2
-  animClip: Attack02
-  priority: 1
-  startUpDelay: 0
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 463daf5080d293049bd98a91154e958f, type: 3}
-  m_Name: DT_Skill
-  m_EditorClassIdentifier: KCoreKit::KCoreKit.DataTable
-  rowScript: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  csv: {fileID: 4900000, guid: dc6abe150a212084eaf996f91f226ae7, type: 3}
-  rowTypeName: DiceBound.SkillDataTableRow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  dataList:
-  - {fileID: 3734198727755190333}
-  - {fileID: -810421502854633622}
-  - {fileID: 3551303564326875392}
-  - {fileID: 846440203339139231}
-  - {fileID: 6285997685546982116}
-  - {fileID: -3651655741709210998}
-  - {fileID: -7313756744100903623}
-  - {fileID: 2203172918821987108}
-  - {fileID: 5533610393765566953}
-  - {fileID: 752668811387431328}
-  - {fileID: 4652977279988380619}
-  - {fileID: 4986251913339461401}
-  - {fileID: -7848079882983121626}
-  - {fileID: 7612799988749885341}
-  - {fileID: 5051845738873645719}
-  - {fileID: 8354085289223236157}
-  - {fileID: -4504524291909264644}
-  - {fileID: -5591391026282682199}
-  - {fileID: -6912611328467013612}
-  - {fileID: -3962604830221495534}
-  - {fileID: -6243710395030687962}
-  - {fileID: -4366613340359192019}
-  - {fileID: -2960662836162889066}
-  - {fileID: 8057717324588352429}
-  - {fileID: 1055523296301805600}
-  - {fileID: -2782440867910791238}
-  - {fileID: 4698886106267944015}
-  - {fileID: -4413060589498879245}
-  - {fileID: -8241545034643656703}
-  - {fileID: 1545333527830159032}
-  - {fileID: -1042535790231815233}
-  - {fileID: 105642230182019160}
-  - {fileID: -4736869095078176195}
-  - {fileID: 6940083834101965255}
-  - {fileID: 278546696540684064}
-  - {fileID: -2099134137393655884}
-  - {fileID: -7401107246704072997}
-  - {fileID: 8042599487693452414}
-  - {fileID: 6933381341434611367}
-  - {fileID: 4098181377361082087}
-  - {fileID: -3910079083622433708}
-  - {fileID: -4041941813678847596}
-  - {fileID: -1891956289321204847}
-  - {fileID: 9129941901398085836}
-  - {fileID: -4771425466791497102}
-  - {fileID: 5805861496626317995}
-  - {fileID: -13438294301348755}
-  - {fileID: -8721668167668188417}
-  - {fileID: 461036351778510072}
-  - {fileID: -8683635181682982756}
-  - {fileID: -8895295879004934376}
---- !u!114 &105642230182019160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SK_KNIGHT_T3
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SK_KNIGHT_T3
-  tags: []
-  isEnable: 1
-  skillType: 1
-  nameKey: 
-  descKey: 
-  abilityId: MeleeAttack
-  cooldown: 9
-  castTime: 0.4
-  targetOption: 1
-  effectKey: HitEffect01
-  targetCount: 3
-  animClip: Attack02
-  priority: 1
-  startUpDelay: 0
---- !u!114 &278546696540684064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SK_BAT_T2
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SK_BAT_T2
-  tags: []
-  isEnable: 1
-  skillType: 1
-  nameKey: 
-  descKey: 
-  abilityId: RangedAttack
-  cooldown: 6
-  castTime: 0.3
-  targetOption: 1
-  effectKey: ArrowEffect01
-  targetCount: 2
-  animClip: Attack02
-  priority: 1
-  startUpDelay: 0
---- !u!114 &461036351778510072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SK_NECRO_T3
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SK_NECRO_T3
-  tags: []
-  isEnable: 1
-  skillType: 1
-  nameKey: 
-  descKey: 
-  abilityId: MagicAttack
-  cooldown: 9
-  castTime: 0.4
-  targetOption: 1
-  effectKey: MagicEffect01
-  targetCount: 4
-  animClip: Attack02
-  priority: 1
-  startUpDelay: 0
---- !u!114 &752668811387431328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SlimeBasicSkill
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SlimeBasicSkill
-  tags: []
-  isEnable: 1
-  skillType: 0
-  nameKey: 
-  descKey: 
-  abilityId: MeleeAttack
-  cooldown: 0
-  castTime: 0
-  targetOption: 1
-  effectKey: Debuff_Stun01
-  targetCount: 1
-  animClip: Attack
-  priority: 2
-  startUpDelay: 0
---- !u!114 &846440203339139231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: LancerBasicSkill
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: LancerBasicSkill
-  tags: []
-  isEnable: 1
-  skillType: 0
-  nameKey: 
-  descKey: 
-  abilityId: MeleeAttack
-  cooldown: 0
-  castTime: 0
-  targetOption: 1
-  effectKey: Hit_Crush01
-  targetCount: 1
-  animClip: Attack
-  priority: 2
-  startUpDelay: 0
---- !u!114 &1055523296301805600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SK_SWORDSMAN_T2
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SK_SWORDSMAN_T2
-  tags: []
-  isEnable: 1
-  skillType: 1
-  nameKey: 
-  descKey: 
-  abilityId: MeleeAttack
-  cooldown: 6
-  castTime: 0.3
-  targetOption: 1
-  effectKey: HitEffect01
-  targetCount: 2
-  animClip: Attack02
-  priority: 1
-  startUpDelay: 0
---- !u!114 &1545333527830159032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SK_AXEMAN_T3
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SK_AXEMAN_T3
-  tags: []
-  isEnable: 1
-  skillType: 1
-  nameKey: 
-  descKey: 
-  abilityId: MeleeAttack
-  cooldown: 9
-  castTime: 0.4
-  targetOption: 1
-  effectKey: HitEffect01
-  targetCount: 3
-  animClip: Attack03
-  priority: 1
-  startUpDelay: 0
---- !u!114 &2203172918821987108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: KnightBasicSkill
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: KnightBasicSkill
-  tags: []
-  isEnable: 1
-  skillType: 0
-  nameKey: 
-  descKey: 
-  abilityId: MeleeAttack
-  cooldown: 0
-  castTime: 0
-  targetOption: 1
-  effectKey: Hit_Spark01
-  targetCount: 1
-  animClip: Attack
-  priority: 2
-  startUpDelay: 0
---- !u!114 &3551303564326875392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SwordmanBasicSkill
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SwordmanBasicSkill
-  tags: []
-  isEnable: 1
-  skillType: 0
-  nameKey: 
-  descKey: 
-  abilityId: MeleeAttack
-  cooldown: 0
-  castTime: 0
-  targetOption: 1
-  effectKey: Hit_Slash01
-  targetCount: 1
-  animClip: Attack
-  priority: 2
-  startUpDelay: 0
---- !u!114 &3734198727755190333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SoldierBasicSkill
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SoldierBasicSkill
-  tags: []
-  isEnable: 1
-  skillType: 0
-  nameKey: 
-  descKey: 
-  abilityId: MeleeAttack
-  cooldown: 0
-  castTime: 0
-  targetOption: 1
-  effectKey: HitEffect01
-  targetCount: 1
-  animClip: Attack
-  priority: 2
-  startUpDelay: 0
---- !u!114 &4098181377361082087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SK_WEREWOLF_T2
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SK_WEREWOLF_T2
-  tags: []
-  isEnable: 1
-  skillType: 1
-  nameKey: 
-  descKey: 
-  abilityId: MeleeAttack
-  cooldown: 6
-  castTime: 0.3
-  targetOption: 1
-  effectKey: HitEffect01
-  targetCount: 2
-  animClip: Attack02
-  priority: 1
-  startUpDelay: 0
---- !u!114 &4652977279988380619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: BatBasicSkill
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: BatBasicSkill
-  tags: []
-  isEnable: 1
-  skillType: 0
-  nameKey: 
-  descKey: 
-  abilityId: RangedAttack
-  cooldown: 0
-  castTime: 0
-  targetOption: 1
-  effectKey: Proj_ArcaneBolt01
-  targetCount: 1
-  animClip: Attack
-  priority: 2
-  startUpDelay: 0
---- !u!114 &4698886106267944015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SK_LANCER_T2
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SK_LANCER_T2
-  tags: []
-  isEnable: 1
-  skillType: 1
-  nameKey: 
-  descKey: 
-  abilityId: MeleeAttack
-  cooldown: 6
-  castTime: 0.3
-  targetOption: 1
-  effectKey: HitEffect01
-  targetCount: 2
-  animClip: Attack02
-  priority: 1
-  startUpDelay: 0
---- !u!114 &4986251913339461401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SkeletonBasicSkill
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SkeletonBasicSkill
-  tags: []
-  isEnable: 1
-  skillType: 0
-  nameKey: 
-  descKey: 
-  abilityId: MeleeAttack
-  cooldown: 0
-  castTime: 0
-  targetOption: 1
-  effectKey: HitEffect01
-  targetCount: 1
-  animClip: Attack
-  priority: 2
-  startUpDelay: 0
---- !u!114 &5051845738873645719
+--- !u!114 &-8091000732314385601
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1174,8 +134,577 @@ MonoBehaviour:
   targetCount: 1
   animClip: Attack
   priority: 2
+  startUpDelay: 0.24
+--- !u!114 &-6203125046327559827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  m_Name: LancerBasicSkill
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
+  id: LancerBasicSkill
+  tags: []
+  isEnable: 1
+  skillType: 0
+  nameKey: 
+  descKey: 
+  abilityId: MeleeAttack
+  cooldown: 0
+  castTime: 0
+  targetOption: 1
+  effectKey: Hit_Crush01
+  targetCount: 1
+  animClip: Attack
+  priority: 2
+  startUpDelay: 0.14
+--- !u!114 &-5276097100601843831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  m_Name: SlimeBasicSkill
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
+  id: SlimeBasicSkill
+  tags: []
+  isEnable: 1
+  skillType: 0
+  nameKey: 
+  descKey: 
+  abilityId: MeleeAttack
+  cooldown: 0
+  castTime: 0
+  targetOption: 1
+  effectKey: Debuff_Stun01
+  targetCount: 1
+  animClip: Attack
+  priority: 2
+  startUpDelay: 0.13
+--- !u!114 &-5064679570295522352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  m_Name: SK_WIZARD_T2
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
+  id: SK_WIZARD_T2
+  tags: []
+  isEnable: 1
+  skillType: 1
+  nameKey: 
+  descKey: 
+  abilityId: MagicAttack
+  cooldown: 6
+  castTime: 0.3
+  targetOption: 1
+  effectKey: Magic_Meteor01
+  targetCount: 3
+  animClip: Attack02
+  priority: 1
   startUpDelay: 0
---- !u!114 &5533610393765566953
+--- !u!114 &-4399885728176972014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  m_Name: SK_ARCHER_T2
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
+  id: SK_ARCHER_T2
+  tags: []
+  isEnable: 1
+  skillType: 1
+  nameKey: 
+  descKey: 
+  abilityId: RangedAttack
+  cooldown: 6
+  castTime: 0.3
+  targetOption: 1
+  effectKey: ArrowEffect02
+  targetCount: 3
+  animClip: Attack02
+  priority: 1
+  startUpDelay: 0.52
+--- !u!114 &-3580703050712723123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  m_Name: SK_ARMSKEL_Active
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
+  id: SK_ARMSKEL_Active
+  tags: []
+  isEnable: 1
+  skillType: 1
+  nameKey: 
+  descKey: 
+  abilityId: MeleeAttack
+  cooldown: 9
+  castTime: 0.4
+  targetOption: 1
+  effectKey: Hit_Slash02
+  targetCount: 3
+  animClip: Attack02
+  priority: 1
+  startUpDelay: 0
+--- !u!114 &-3369594085249091598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  m_Name: SK_KNIGHT_T3
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
+  id: SK_KNIGHT_T3
+  tags: []
+  isEnable: 1
+  skillType: 1
+  nameKey: 
+  descKey: 
+  abilityId: MeleeAttack
+  cooldown: 9
+  castTime: 0.4
+  targetOption: 1
+  effectKey: Magic_Explosion01
+  targetCount: 3
+  animClip: Attack03
+  priority: 1
+  startUpDelay: 0
+--- !u!114 &-2034914683294181387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  m_Name: SkeletonBasicSkill
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
+  id: SkeletonBasicSkill
+  tags: []
+  isEnable: 1
+  skillType: 0
+  nameKey: 
+  descKey: 
+  abilityId: MeleeAttack
+  cooldown: 0
+  castTime: 0
+  targetOption: 1
+  effectKey: HitEffect01
+  targetCount: 1
+  animClip: Attack
+  priority: 2
+  startUpDelay: 0.06
+--- !u!114 &-1780861861848529944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  m_Name: WizardBasicSkill
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
+  id: WizardBasicSkill
+  tags: []
+  isEnable: 1
+  skillType: 0
+  nameKey: 
+  descKey: 
+  abilityId: MagicAttack
+  cooldown: 0
+  castTime: 0
+  targetOption: 1
+  effectKey: Magic_Star01
+  targetCount: 1
+  animClip: Attack
+  priority: 2
+  startUpDelay: 0.13
+--- !u!114 &-1561413778057633694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  m_Name: NecroBasicSkill
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
+  id: NecroBasicSkill
+  tags: []
+  isEnable: 1
+  skillType: 0
+  nameKey: 
+  descKey: 
+  abilityId: MagicAttack
+  cooldown: 0
+  castTime: 0
+  targetOption: 1
+  effectKey: Magic_Dark01
+  targetCount: 1
+  animClip: Attack
+  priority: 2
+  startUpDelay: 0.22
+--- !u!114 &-1288368794974661668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  m_Name: OrcBasicSkill
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
+  id: OrcBasicSkill
+  tags: []
+  isEnable: 1
+  skillType: 0
+  nameKey: 
+  descKey: 
+  abilityId: MeleeAttack
+  cooldown: 0
+  castTime: 0
+  targetOption: 1
+  effectKey: Slash_Cross01
+  targetCount: 1
+  animClip: Attack
+  priority: 2
+  startUpDelay: 0.16
+--- !u!114 &-1223185317888929129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  m_Name: BatBasicSkill
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
+  id: BatBasicSkill
+  tags: []
+  isEnable: 1
+  skillType: 0
+  nameKey: 
+  descKey: 
+  abilityId: RangedAttack
+  cooldown: 0
+  castTime: 0
+  targetOption: 1
+  effectKey: Proj_ArcaneBolt01
+  targetCount: 1
+  animClip: Attack01
+  priority: 2
+  startUpDelay: 0.13
+--- !u!114 &-975792840794593486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  m_Name: SK_AXEMAN_T3
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
+  id: SK_AXEMAN_T3
+  tags: []
+  isEnable: 1
+  skillType: 1
+  nameKey: 
+  descKey: 
+  abilityId: MeleeAttack
+  cooldown: 9
+  castTime: 0.4
+  targetOption: 1
+  effectKey: Hit_Blood01
+  targetCount: 3
+  animClip: Attack03
+  priority: 1
+  startUpDelay: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463daf5080d293049bd98a91154e958f, type: 3}
+  m_Name: DT_Skill
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.DataTable
+  rowScript: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  csv: {fileID: 4900000, guid: dc6abe150a212084eaf996f91f226ae7, type: 3}
+  rowTypeName: DiceBound.SkillDataTableRow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  dataList:
+  - {fileID: 4071498219877152464}
+  - {fileID: 7309652891777619307}
+  - {fileID: 3511949427123482869}
+  - {fileID: -6203125046327559827}
+  - {fileID: 2627624191692222673}
+  - {fileID: 4977105346497690857}
+  - {fileID: -1780861861848529944}
+  - {fileID: 2186485807516671401}
+  - {fileID: 1976387994433707884}
+  - {fileID: -5276097100601843831}
+  - {fileID: -1223185317888929129}
+  - {fileID: -2034914683294181387}
+  - {fileID: 9075759005902558033}
+  - {fileID: -1288368794974661668}
+  - {fileID: -8091000732314385601}
+  - {fileID: 1804786715425239075}
+  - {fileID: 1973810474004774856}
+  - {fileID: 1913695515293000712}
+  - {fileID: -8655255918991201348}
+  - {fileID: 2262293299656226197}
+  - {fileID: -1561413778057633694}
+  - {fileID: 2088258349488913827}
+  - {fileID: 704105857319618256}
+  - {fileID: -4399885728176972014}
+  - {fileID: -8436511733368098206}
+  - {fileID: 2691161480618746885}
+  - {fileID: -8636407677120109809}
+  - {fileID: -975792840794593486}
+  - {fileID: -5064679570295522352}
+  - {fileID: -3369594085249091598}
+  - {fileID: -8912483101871126257}
+  - {fileID: 6871262156423920558}
+  - {fileID: -3580703050712723123}
+  - {fileID: 3336998435804541047}
+  - {fileID: 1141206383392217917}
+  - {fileID: 1324579275571761306}
+  - {fileID: 7337036549111697222}
+  - {fileID: 35766659804678631}
+  - {fileID: 6060605059942413271}
+--- !u!114 &35766659804678631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  m_Name: SK_NECRO_Active
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
+  id: SK_NECRO_Active
+  tags: []
+  isEnable: 1
+  skillType: 1
+  nameKey: 
+  descKey: 
+  abilityId: MagicAttack
+  cooldown: 9
+  castTime: 0.4
+  targetOption: 1
+  effectKey: Magic_Necro01
+  targetCount: 8
+  animClip: Attack02
+  priority: 1
+  startUpDelay: 0
+--- !u!114 &704105857319618256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  m_Name: SK_SOLDIER_T2
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
+  id: SK_SOLDIER_T2
+  tags: []
+  isEnable: 1
+  skillType: 1
+  nameKey: 
+  descKey: 
+  abilityId: MeleeAttack
+  cooldown: 6
+  castTime: 0.3
+  targetOption: 1
+  effectKey: Hit_Splash01
+  targetCount: 3
+  animClip: Attack02
+  priority: 1
+  startUpDelay: 0.16
+--- !u!114 &1141206383392217917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  m_Name: SK_ORCRIDER_Active
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
+  id: SK_ORCRIDER_Active
+  tags: []
+  isEnable: 1
+  skillType: 1
+  nameKey: 
+  descKey: 
+  abilityId: MeleeAttack
+  cooldown: 6
+  castTime: 0.3
+  targetOption: 1
+  effectKey: Debuff_Burn01
+  targetCount: 3
+  animClip: Attack03
+  priority: 1
+  startUpDelay: 0
+--- !u!114 &1324579275571761306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  m_Name: SK_ARMORC_Active
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
+  id: SK_ARMORC_Active
+  tags: []
+  isEnable: 1
+  skillType: 1
+  nameKey: 
+  descKey: 
+  abilityId: MeleeAttack
+  cooldown: 9
+  castTime: 0.4
+  targetOption: 1
+  effectKey: Hit_Shockwave01
+  targetCount: 3
+  animClip: Attack03
+  priority: 1
+  startUpDelay: 0
+--- !u!114 &1804786715425239075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  m_Name: ArmoredSkeletonBasicSkill
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
+  id: ArmoredSkeletonBasicSkill
+  tags: []
+  isEnable: 1
+  skillType: 0
+  nameKey: 
+  descKey: 
+  abilityId: MeleeAttack
+  cooldown: 0
+  castTime: 0
+  targetOption: 1
+  effectKey: Slash_Cross01
+  targetCount: 1
+  animClip: Attack
+  priority: 2
+  startUpDelay: 0.24
+--- !u!114 &1913695515293000712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  m_Name: OrcRiderBasicSkill
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
+  id: OrcRiderBasicSkill
+  tags: []
+  isEnable: 1
+  skillType: 0
+  nameKey: 
+  descKey: 
+  abilityId: MeleeAttack
+  cooldown: 0
+  castTime: 0
+  targetOption: 1
+  effectKey: Hit_Pierce01
+  targetCount: 1
+  animClip: Attack
+  priority: 2
+  startUpDelay: 0.22
+--- !u!114 &1973810474004774856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  m_Name: GreatswordSkeletonBasicSkill
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
+  id: GreatswordSkeletonBasicSkill
+  tags: []
+  isEnable: 1
+  skillType: 0
+  nameKey: 
+  descKey: 
+  abilityId: MeleeAttack
+  cooldown: 0
+  castTime: 0
+  targetOption: 1
+  effectKey: Support_BuffAttack01
+  targetCount: 1
+  animClip: Attack
+  priority: 2
+  startUpDelay: 0.22
+--- !u!114 &1976387994433707884
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1202,7 +731,7 @@ MonoBehaviour:
   animClip: Attack
   priority: 2
   startUpDelay: 0
---- !u!114 &5805861496626317995
+--- !u!114 &2088258349488913827
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1212,24 +741,78 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SK_ARMORC_T3
+  m_Name: EliteOrcBasicSkill
   m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SK_ARMORC_T3
+  id: EliteOrcBasicSkill
   tags: []
   isEnable: 1
-  skillType: 1
+  skillType: 0
   nameKey: 
   descKey: 
   abilityId: MeleeAttack
-  cooldown: 9
-  castTime: 0.4
+  cooldown: 0
+  castTime: 0
   targetOption: 1
-  effectKey: HitEffect01
-  targetCount: 3
+  effectKey: Magic_Explosion01
+  targetCount: 1
+  animClip: Attack
+  priority: 2
+  startUpDelay: 0.14
+--- !u!114 &2186485807516671401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  m_Name: KnightBasicSkill
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
+  id: KnightBasicSkill
+  tags: []
+  isEnable: 1
+  skillType: 0
+  nameKey: 
+  descKey: 
+  abilityId: MeleeAttack
+  cooldown: 0
+  castTime: 0
+  targetOption: 1
+  effectKey: Hit_Spark01
+  targetCount: 1
+  animClip: Attack
+  priority: 2
+  startUpDelay: 0.13
+--- !u!114 &2262293299656226197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  m_Name: WerebearBasicSkill
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
+  id: WerebearBasicSkill
+  tags: []
+  isEnable: 1
+  skillType: 0
+  nameKey: 
+  descKey: 
+  abilityId: MeleeAttack
+  cooldown: 0
+  castTime: 0
+  targetOption: 1
+  effectKey: Hit_Claw01
+  targetCount: 1
   animClip: Attack02
-  priority: 1
-  startUpDelay: 0
---- !u!114 &6285997685546982116
+  priority: 2
+  startUpDelay: 0.22
+--- !u!114 &2627624191692222673
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1255,8 +838,8 @@ MonoBehaviour:
   targetCount: 1
   animClip: Heal
   priority: 2
-  startUpDelay: 0
---- !u!114 &6933381341434611367
+  startUpDelay: 0.14
+--- !u!114 &2691161480618746885
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1266,36 +849,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SK_ORC_T3
+  m_Name: SK_LANCER_T2
   m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SK_ORC_T3
-  tags: []
-  isEnable: 1
-  skillType: 1
-  nameKey: 
-  descKey: 
-  abilityId: MeleeAttack
-  cooldown: 9
-  castTime: 0.4
-  targetOption: 1
-  effectKey: HitEffect01
-  targetCount: 3
-  animClip: Attack03
-  priority: 1
-  startUpDelay: 0
---- !u!114 &6940083834101965255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SK_SLIME_T2
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SK_SLIME_T2
+  id: SK_LANCER_T2
   tags: []
   isEnable: 1
   skillType: 1
@@ -1305,12 +861,12 @@ MonoBehaviour:
   cooldown: 6
   castTime: 0.3
   targetOption: 1
-  effectKey: HitEffect01
-  targetCount: 2
+  effectKey: Hit_Heavy01
+  targetCount: 3
   animClip: Attack02
   priority: 1
   startUpDelay: 0
---- !u!114 &7612799988749885341
+--- !u!114 &3336998435804541047
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1320,9 +876,36 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: OrcBasicSkill
+  m_Name: SK_GSSKEL_Active
   m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: OrcBasicSkill
+  id: SK_GSSKEL_Active
+  tags: []
+  isEnable: 1
+  skillType: 1
+  nameKey: 
+  descKey: 
+  abilityId: MeleeAttack
+  cooldown: 6
+  castTime: 0.3
+  targetOption: 1
+  effectKey: Hit_Shockwave01
+  targetCount: 3
+  animClip: Attack02
+  priority: 1
+  startUpDelay: 0
+--- !u!114 &3511949427123482869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  m_Name: SwordmanBasicSkill
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
+  id: SwordmanBasicSkill
   tags: []
   isEnable: 1
   skillType: 0
@@ -1332,12 +915,12 @@ MonoBehaviour:
   cooldown: 0
   castTime: 0
   targetOption: 1
-  effectKey: Slash_Cross01
+  effectKey: Hit_Slash01
   targetCount: 1
   animClip: Attack
   priority: 2
-  startUpDelay: 0
---- !u!114 &8042599487693452414
+  startUpDelay: 0.2
+--- !u!114 &4071498219877152464
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1347,9 +930,63 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SK_ORC_T2
+  m_Name: SoldierBasicSkill
   m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SK_ORC_T2
+  id: SoldierBasicSkill
+  tags: []
+  isEnable: 1
+  skillType: 0
+  nameKey: 
+  descKey: 
+  abilityId: MeleeAttack
+  cooldown: 0
+  castTime: 0
+  targetOption: 1
+  effectKey: HitEffect01
+  targetCount: 1
+  animClip: Attack
+  priority: 2
+  startUpDelay: 0.2
+--- !u!114 &4977105346497690857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  m_Name: AxemanBasicSkill
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
+  id: AxemanBasicSkill
+  tags: []
+  isEnable: 1
+  skillType: 0
+  nameKey: 
+  descKey: 
+  abilityId: MeleeAttack
+  cooldown: 0
+  castTime: 0
+  targetOption: 1
+  effectKey: Slash_Storm01
+  targetCount: 1
+  animClip: Attack
+  priority: 2
+  startUpDelay: 0.24
+--- !u!114 &6060605059942413271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  m_Name: SK_ELITEORC_Active
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
+  id: SK_ELITEORC_Active
   tags: []
   isEnable: 1
   skillType: 1
@@ -1359,12 +996,12 @@ MonoBehaviour:
   cooldown: 6
   castTime: 0.3
   targetOption: 1
-  effectKey: HitEffect01
-  targetCount: 2
+  effectKey: Magic_Nova01
+  targetCount: 8
   animClip: Attack02
   priority: 1
   startUpDelay: 0
---- !u!114 &8057717324588352429
+--- !u!114 &6871262156423920558
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1374,51 +1011,51 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SK_ARCHER_T2
+  m_Name: SK_WEREWOLF_Active
   m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SK_ARCHER_T2
+  id: SK_WEREWOLF_Active
   tags: []
   isEnable: 1
   skillType: 1
+  nameKey: 
+  descKey: 
+  abilityId: MeleeAttack
+  cooldown: 6
+  castTime: 0.3
+  targetOption: 1
+  effectKey: Hit_Slash02
+  targetCount: 3
+  animClip: Attack02
+  priority: 1
+  startUpDelay: 0
+--- !u!114 &7309652891777619307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  m_Name: ArcherBasicSkill
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
+  id: ArcherBasicSkill
+  tags: []
+  isEnable: 1
+  skillType: 0
   nameKey: 
   descKey: 
   abilityId: RangedAttack
-  cooldown: 6
-  castTime: 0.3
-  targetOption: 1
-  effectKey: ArrowEffect02
-  targetCount: 2
-  animClip: Attack02
-  priority: 1
-  startUpDelay: 0
---- !u!114 &8354085289223236157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: ArmoredSkeletonBasicSkill
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: ArmoredSkeletonBasicSkill
-  tags: []
-  isEnable: 1
-  skillType: 0
-  nameKey: 
-  descKey: 
-  abilityId: MeleeAttack
   cooldown: 0
   castTime: 0
   targetOption: 1
-  effectKey: Slash_Cross01
+  effectKey: ArrowEffect01
   targetCount: 1
   animClip: Attack
   priority: 2
-  startUpDelay: 0
---- !u!114 &9129941901398085836
+  startUpDelay: 0.36
+--- !u!114 &7337036549111697222
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1428,9 +1065,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
-  m_Name: SK_ORCRIDER_T2
+  m_Name: SK_WEREBEAR_Active
   m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
-  id: SK_ORCRIDER_T2
+  id: SK_WEREBEAR_Active
   tags: []
   isEnable: 1
   skillType: 1
@@ -1440,8 +1077,35 @@ MonoBehaviour:
   cooldown: 6
   castTime: 0.3
   targetOption: 1
-  effectKey: HitEffect01
-  targetCount: 2
+  effectKey: Hit_Claw01
+  targetCount: 3
   animClip: Attack02
   priority: 1
   startUpDelay: 0
+--- !u!114 &9075759005902558033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a793e7b29f94d76b04c9a7ce7a90d48, type: 3}
+  m_Name: SkeletonArcherBasicSkill
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillDataTableRow
+  id: SkeletonArcherBasicSkill
+  tags: []
+  isEnable: 1
+  skillType: 0
+  nameKey: 
+  descKey: 
+  abilityId: RangedAttack
+  cooldown: 0
+  castTime: 0
+  targetOption: 1
+  effectKey: ArrowEffect01
+  targetCount: 1
+  animClip: Attack
+  priority: 2
+  startUpDelay: 0.3
