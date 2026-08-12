@@ -202,23 +202,12 @@ namespace DiceBound
             }
 
             transform.position = _restorePosition;
-
-            if (!IsDead())
-            {
-                _spriteRenderer.color = Color.white;
-                ResetHp();
-                Animate("Idle");
-            }
-        }
-
-        public void Revive()
-        {
             _spriteRenderer.color = Color.white;
             ResetHp();
-            _hpGauge.OnChange(hp);
             Animate("Idle");
         }
-
+        
+        
         public void SetHighlight(bool value, Color color = default, int order = 1)
         {
             _outliner.SetEnable(value);

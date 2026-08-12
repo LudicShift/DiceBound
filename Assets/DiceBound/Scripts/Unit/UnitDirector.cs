@@ -39,6 +39,10 @@ namespace DiceBound
 
         [SerializeField] private UnitTrashCan trashCan;
 
+        public void Update()
+        {
+            Debug.Log($"죽은 아군 수 : {_deadAllies.Count}");
+        }
         public void UpdateAllyCountText()
         {
             allyCountWidget.SetText($"{_allies.Count}/{_maxAllyNumber}");
@@ -173,8 +177,8 @@ namespace DiceBound
                 case UnitGroup.Ally:
                     if (!_deadAllies.Contains(unit))
                     {
-                        _units.Remove(unit);
                         _deadAllies.Add(unit);
+                      
                     }
                     break;
                 case UnitGroup.Enemy:
@@ -253,13 +257,8 @@ namespace DiceBound
             return _deadAllies.Count;
         }
 
-        public void ReviveDeadAllies()
+        public void ClearDeadAllies()
         {
-            foreach (var unit in _deadAllies)
-            {
-                unit.Revive();
-            }
-
             _deadAllies.Clear();
         }
     }

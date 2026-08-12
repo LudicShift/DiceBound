@@ -83,7 +83,10 @@ namespace DiceBound
         {
             if (context.target && _unitDirector.IsAlive(context.target))
             {
-                if (!context.self || !_unitDirector.IsAlive(context.self)) yield break;
+                if (!context.self || !_unitDirector.IsAlive(context.self))
+                {
+                    yield break;
+                }
 
                 var effect = _skillDirector.GetSkillEffect(context.skillEffectKey);
                 effect.SetPosition(context.self.transform.position);

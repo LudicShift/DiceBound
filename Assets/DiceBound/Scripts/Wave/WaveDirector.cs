@@ -100,7 +100,7 @@ namespace DiceBound
                 if (_unitDirector.GetEnemyUnitCount() == 0)
                 {
                     _battleDirector.EndBattle();
-                    _unitDirector.ReviveDeadAllies();
+                    _unitDirector.ClearDeadAllies();
                     _walletDirector.AddGold(wave.waveRewardGold);
                 }
                 else if( _unitDirector.GetAllyUnitCount() == _unitDirector.GetDeadAllyUnitCount())
