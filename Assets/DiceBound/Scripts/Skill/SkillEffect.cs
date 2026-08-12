@@ -33,6 +33,12 @@ namespace DiceBound
             transform.position = position;
         }
 
+        /// <summary>발사부터 타겟 도달까지 걸리는 시간.</summary>
+        public float GetImpactDelay()
+        {
+            return moveOption == SkillMoveOption.Move ? moveDuration : 0f;
+        }
+
 
         public Sequence Play(UnitCore target,Action<SkillEffect> callback)
         {

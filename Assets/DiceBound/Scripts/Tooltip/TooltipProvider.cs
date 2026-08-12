@@ -37,6 +37,11 @@ namespace DiceBound
 
         public void SetTooltipPosition(Vector3 position, Vector2 offset ,bool screenSpace = true)
         {
+            if (_context == null)
+            {
+                return;
+            }
+
             _context.tooltipPosition = position;
             _context.offset = offset;
             _context.screenSpace = screenSpace;

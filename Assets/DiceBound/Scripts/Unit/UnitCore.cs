@@ -120,13 +120,7 @@ namespace DiceBound
             group = data.group;
             attackType = data.attackType;
 
-            _animator.runtimeAnimatorController = data.animator;
-            _callBackBehaviours = _animator.GetBehaviours<AnimationCallbackBehaviour>();
-
-            foreach (var behaviour in _callBackBehaviours)
-            {
-                behaviour.callback += OnAnimationCallback;
-            }
+            BindAnimatorController(data.animator);
 
             _skills = new Dictionary<string, Skill>();
             _boundActiveSkillId = null;
@@ -152,6 +146,63 @@ namespace DiceBound
             hp = StatUtility.GetMaxHp(_statAgent);
         }
 
+
+        private void BindAnimatorController(RuntimeAnimatorController controller)
+        {
+            // 컨트롤러를 교체하면 이전 behaviour 인스턴스는 버려지므로 구독도 함께 정리한다.
+            if (_callBackBehaviours != null)
+            {
+                foreach (var behaviour in _callBackBehaviours)
+                {
+                    if (behaviour)
+                    {
+                        behaviour.callback -= OnAnimationCallback;
+                    }
+                }
+            }
+
+            _animator.runtimeAnimatorController = controller;
+            _callBackBehaviours = _animator.GetBehaviours<AnimationCallbackBehaviour>();
+
+            foreach (var behaviour in _callBackBehaviours)
+            {
+                behaviour.callback += OnAnimationCallback;
+            }
+        }
+
+        /// <summary>
+        /// 스탯·스킬 없이 외형(애니메이터)만 교체한다. 연출 확인용 테스트 씬에서 사용.
+        /// </summary>
+        public void SetupAppearanceOnly(UnitDataTableRow data)
+        {
+            _data = data;
+            group = data.group;
+            attackType = data.attackType;
+            BindAnimatorController(data.animator);
+        }
+
+        /// <summary>
+        /// 스프라이트를 기본 상태(제자리·불투명)로 되돌린다.
+        /// AppearSequence 의 From 트윈이 Awake 시점에 스프라이트를 화면 밖으로 밀어두기 때문에,
+        /// 등장 연출을 재생하지 않는 경우 이 메서드로 초기화한다.
+        /// </summary>
+        public void ResetVisualState()
+        {
+            _spriteRenderer.transform.localPosition = Vector3.zero;
+            _spriteRenderer.color = Color.white;
+        }
+
+        /// <summary>
+        /// HP·사망 처리 없이 피격 연출만 재생한다. 연출 확인용 테스트 씬에서 사용.
+        /// </summary>
+        public void PlayHitAnimation()
+        {
+            Animate("Hurt");
+            if (hitSequence)
+            {
+                StartCoroutine(hitSequence.Play());
+            }
+        }
 
         public void ResetHp()
         {
@@ -351,10 +402,18 @@ namespace DiceBound
         public void PlayAppear(Action onComplete = null)
         {
             _spriteRenderer.color = new Color();
-            _hpGauge.canvasGroup.alpha = 0;
+            if (_hpGauge)
+            {
+                _hpGauge.canvasGroup.alpha = 0;
+            }
+
             StartCoroutine(appearSequence.Play(0.2f, () =>
             {
-                _hpGauge.canvasGroup.alpha = 1;
+                if (_hpGauge)
+                {
+                    _hpGauge.canvasGroup.alpha = 1;
+                }
+
                 onComplete?.Invoke();
             }));
         }

@@ -66,7 +66,7 @@ namespace DiceBound
                     _trashCan.SetHighlight(false);
                     _trashCan.Execute(_draggingUnit);
                 }
-                if (_hoveredCell)
+                else if (_hoveredCell)
                 {
                     
                     _replaceCell.RemoveUnit();
