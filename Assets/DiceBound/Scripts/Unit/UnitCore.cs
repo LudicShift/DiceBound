@@ -49,8 +49,6 @@ namespace DiceBound
 
         [HideInInspector] public TooltipProvider tooltipProvider;
         public BattleContext battleContext;
-        private Coroutine _battleCoroutine;
-
 
         public void Awake()
         {
@@ -341,6 +339,10 @@ namespace DiceBound
         {
             _lastAttackAnim = string.IsNullOrEmpty(clip) ? "Attack" : clip;
             Animate(_lastAttackAnim);
+        }
+
+        public void PlayAttackTween()
+        {
             StartCoroutine(attackSequence.Play());
         }
 
@@ -455,19 +457,6 @@ namespace DiceBound
             StartCoroutine(dodgeSequence.Play());
             onDodgeAction?.Invoke(this);
         }
-
-
-        public void StartBattleCoroutine(IEnumerator executeBattleContext)
-        {
-           _battleCoroutine = StartCoroutine(executeBattleContext);
-        }
-
-        public void StopBattleCoroutine()
-        {
-            if (_battleCoroutine!=null)
-            {
-                StopCoroutine(_battleCoroutine);
-            }
-        }
+        
     }
 }

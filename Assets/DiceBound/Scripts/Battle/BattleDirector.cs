@@ -73,8 +73,7 @@ namespace DiceBound
                     if ( selfBattleContext == null || selfBattleContext.priority > context.priority)
                     {
                         context.self.battleContext = context;
-                        context.self.StopBattleCoroutine();
-                        context.self.StartBattleCoroutine(ExecuteBattleContext(context.self.battleContext));
+                        StartCoroutine(ExecuteBattleContext(context.self.battleContext));
                     }
                 }
             }
@@ -90,23 +89,23 @@ namespace DiceBound
         {
             if (context.target && _unitDirector.IsAlive(context.target))
             {
-                if (!context.self || !_unitDirector.IsAlive(context.self))
+                if (!(CheckAlive(context.target) &&CheckAlive(context.self)))
                 {
+                    context.self.battleContext = null;
                     yield break;
                 }
-
                 
                 context.self.PlayAttackAnimation(context.self.battleContext.animClip);
-
-                
                 var effect = _skillDirector.GetSkillEffect(context.skillEffectKey);
                 effect.SetPosition(context.self.transform.position);
-
                 yield return new WaitForSeconds(context.startUpDelay);
-                yield return effect.Play(context.target, x => { _skillDirector.Release(context.skillEffectKey, x); }).WaitForCompletion();
-
-                if (!context.self || !_unitDirector.IsAlive(context.self)) yield break;
-
+                if (!(CheckAlive(context.target) &&CheckAlive(context.self)))
+                {
+                    context.self.battleContext = null;
+                    yield break;
+                }
+                context.self.PlayAttackTween();
+                effect.Play(context.target, x => { _skillDirector.Release(context.skillEffectKey, x); });
                 // 💡 여기서 hitIndex 계산 및 ShowDamage 수동 호출했던 부분들을 모두 지우고 원상복구합니다.
                 if (context.damage > 0)
                 {
@@ -114,6 +113,7 @@ namespace DiceBound
                     if (dodgeRoll < StatUtility.GetDodgeRate(context.target.GetStatAgent(), context.self.GetStatAgent()))
                     {
                         context.target.OnDodge();
+                        context.self.battleContext = null;
                         yield break;
                     }
 
@@ -137,6 +137,11 @@ namespace DiceBound
 
                 context.self.battleContext = null;
             }
+        }
+
+        private bool CheckAlive(UnitCore core)
+        {
+            return core && _unitDirector.IsAlive(core);
         }
 
         // 💡 UnitCore 등에서 이 메서드들이 호출될 때마다 hitIndex를 여기서 직접 계산하도록 옮겼습니다.

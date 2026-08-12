@@ -1,136 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6503547009709498318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06f2606026b4405b848c281a13adc79f, type: 3}
-  m_Name: S_STRAIGHT
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.CombinationDataTableRow
-  id: S_STRAIGHT
-  tags: []
-  isEnable: 1
-  priority: 5
-  nameKey: HAND_S_STRAIGHT
-  descKey: 
-  unitID: UN_SWORDSMAN
-  grade: Rare
-  additionalResourceId: MAT_MANA_STONE
---- !u!114 &-2556067486750462509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06f2606026b4405b848c281a13adc79f, type: 3}
-  m_Name: TRIPLE
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.CombinationDataTableRow
-  id: TRIPLE
-  tags: []
-  isEnable: 1
-  priority: 6
-  nameKey: HAND_TRIPLE
-  descKey: 
-  unitID: UN_LANCER
-  grade: Rare
-  additionalResourceId: '-'
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 463daf5080d293049bd98a91154e958f, type: 3}
-  m_Name: DT_Combination
-  m_EditorClassIdentifier: KCoreKit::KCoreKit.DataTable
-  rowScript: {fileID: 11500000, guid: 06f2606026b4405b848c281a13adc79f, type: 3}
-  csv: {fileID: 4900000, guid: b2e3f491b378ee54a88136d9806f0d59, type: 3}
-  rowTypeName: DiceBound.CombinationDataTableRow, Assembly-CSharp, Version=0.0.0.0,
-    Culture=neutral, PublicKeyToken=null
-  dataList:
-  - {fileID: 7661403638635516273}
-  - {fileID: 4772258679659041099}
-  - {fileID: -2556067486750462509}
-  - {fileID: -6503547009709498318}
-  - {fileID: 6054151822300685126}
-  - {fileID: 5721107729945136747}
-  - {fileID: 7934443113868946373}
-  - {fileID: 4859227778158597552}
---- !u!114 &4772258679659041099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06f2606026b4405b848c281a13adc79f, type: 3}
-  m_Name: TWO_PAIR
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.CombinationDataTableRow
-  id: TWO_PAIR
-  tags: []
-  isEnable: 1
-  priority: 7
-  nameKey: HAND_TWO_PAIR
-  descKey: 
-  unitID: UN_ARCHER
-  grade: Common
-  additionalResourceId: '-'
---- !u!114 &4859227778158597552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06f2606026b4405b848c281a13adc79f, type: 3}
-  m_Name: FIVE_KIND
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.CombinationDataTableRow
-  id: FIVE_KIND
-  tags: []
-  isEnable: 1
-  priority: 1
-  nameKey: HAND_FIVE_KIND
-  descKey: 
-  unitID: UN_KNIGHT
-  grade: Epic
-  additionalResourceId: MAT_JOKER_CORE
---- !u!114 &5721107729945136747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06f2606026b4405b848c281a13adc79f, type: 3}
-  m_Name: FOUR_KIND
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.CombinationDataTableRow
-  id: FOUR_KIND
-  tags: []
-  isEnable: 1
-  priority: 3
-  nameKey: HAND_FOUR_KIND
-  descKey: 
-  unitID: UN_AXEMAN
-  grade: Epic
-  additionalResourceId: MAT_HARD_STEEL
---- !u!114 &6054151822300685126
+--- !u!114 &-8308871654463172942
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,28 +21,7 @@ MonoBehaviour:
   unitID: UN_PRIEST
   grade: Rare
   additionalResourceId: MAT_HOLY_WATER
---- !u!114 &7661403638635516273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06f2606026b4405b848c281a13adc79f, type: 3}
-  m_Name: ONE_PAIR
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.CombinationDataTableRow
-  id: ONE_PAIR
-  tags: []
-  isEnable: 1
-  priority: 8
-  nameKey: HAND_ONE_PAIR
-  descKey: 
-  unitID: UN_SOLDIER
-  grade: Common
-  additionalResourceId: '-'
---- !u!114 &7934443113868946373
+--- !u!114 &-5775672035207862897
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -193,3 +42,154 @@ MonoBehaviour:
   unitID: UN_WIZARD
   grade: Epic
   additionalResourceId: MAT_MAGIC_SCROLL
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463daf5080d293049bd98a91154e958f, type: 3}
+  m_Name: DT_Combination
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.DataTable
+  rowScript: {fileID: 11500000, guid: 06f2606026b4405b848c281a13adc79f, type: 3}
+  csv: {fileID: 4900000, guid: b2e3f491b378ee54a88136d9806f0d59, type: 3}
+  rowTypeName: DiceBound.CombinationDataTableRow, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  dataList:
+  - {fileID: 4843862391902677557}
+  - {fileID: 8681290058305305387}
+  - {fileID: 7313177087373198812}
+  - {fileID: 7890124845450069778}
+  - {fileID: -8308871654463172942}
+  - {fileID: 6414138550494180014}
+  - {fileID: -5775672035207862897}
+  - {fileID: 2995068934602741946}
+--- !u!114 &2995068934602741946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06f2606026b4405b848c281a13adc79f, type: 3}
+  m_Name: FIVE_KIND
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.CombinationDataTableRow
+  id: FIVE_KIND
+  tags: []
+  isEnable: 1
+  priority: 1
+  nameKey: HAND_FIVE_KIND
+  descKey: 
+  unitID: UN_KNIGHT
+  grade: Epic
+  additionalResourceId: MAT_JOKER_CORE
+--- !u!114 &4843862391902677557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06f2606026b4405b848c281a13adc79f, type: 3}
+  m_Name: ONE_PAIR
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.CombinationDataTableRow
+  id: ONE_PAIR
+  tags: []
+  isEnable: 1
+  priority: 8
+  nameKey: HAND_ONE_PAIR
+  descKey: 
+  unitID: UN_SOLDIER
+  grade: Common
+  additionalResourceId: '-'
+--- !u!114 &6414138550494180014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06f2606026b4405b848c281a13adc79f, type: 3}
+  m_Name: FOUR_KIND
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.CombinationDataTableRow
+  id: FOUR_KIND
+  tags: []
+  isEnable: 1
+  priority: 3
+  nameKey: HAND_FOUR_KIND
+  descKey: 
+  unitID: UN_AXEMAN
+  grade: Epic
+  additionalResourceId: MAT_HARD_STEEL
+--- !u!114 &7313177087373198812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06f2606026b4405b848c281a13adc79f, type: 3}
+  m_Name: TRIPLE
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.CombinationDataTableRow
+  id: TRIPLE
+  tags: []
+  isEnable: 1
+  priority: 6
+  nameKey: HAND_TRIPLE
+  descKey: 
+  unitID: UN_LANCER
+  grade: Rare
+  additionalResourceId: '-'
+--- !u!114 &7890124845450069778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06f2606026b4405b848c281a13adc79f, type: 3}
+  m_Name: S_STRAIGHT
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.CombinationDataTableRow
+  id: S_STRAIGHT
+  tags: []
+  isEnable: 1
+  priority: 5
+  nameKey: HAND_S_STRAIGHT
+  descKey: 
+  unitID: UN_SWORDSMAN
+  grade: Rare
+  additionalResourceId: MAT_MANA_STONE
+--- !u!114 &8681290058305305387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06f2606026b4405b848c281a13adc79f, type: 3}
+  m_Name: TWO_PAIR
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.CombinationDataTableRow
+  id: TWO_PAIR
+  tags: []
+  isEnable: 1
+  priority: 7
+  nameKey: HAND_TWO_PAIR
+  descKey: 
+  unitID: UN_ARCHER
+  grade: Common
+  additionalResourceId: '-'
