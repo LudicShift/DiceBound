@@ -19586,6 +19586,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7826965618855033862}
   - component: {fileID: 2775381352680391580}
+  - component: {fileID: 3012029464556714738}
   m_Layer: 0
   m_Name: PF_Magic_Meteor01
   m_TagString: Untagged
@@ -19629,6 +19630,29 @@ MonoBehaviour:
   lifetime: 0.95
   moveDuration: 0.2
   moveOption: 0
+--- !u!114 &3012029464556714738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5368617637991835521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385ffc06106304cc3824d5bcf25a7037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BroAudio::Ami.BroAudio.SoundSource
+  _onlyPlayOnce: 0
+  _playOnEnable: 1
+  _stopOnDisable: 1
+  _overrideFadeOut: -1
+  _sound:
+    _entity: {fileID: 11400000, guid: f1706ada4f5ed8548a3118587b120396, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 5368617637991835521}
+  _overrideGroup: {fileID: 0}
+  _positionMode: 0
+  _delay: 0
 --- !u!1 &6727769239821503222
 GameObject:
   m_ObjectHideFlags: 0

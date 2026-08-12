@@ -39,7 +39,8 @@ namespace DiceBound
 
         public SkillEffect GetSkillEffect(string key)
         {
-            return _effectPools[key].Get();
+            var effect = _effectPools[key].Get();
+            return effect;
         }
 
         public void Release(string key, SkillEffect effect)

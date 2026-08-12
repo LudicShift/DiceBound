@@ -9,8 +9,12 @@ namespace DiceBound
     {
         public ButtonWidget newGameButton;
         public ButtonWidget quitButton;
-        [SerializeField] 
+        [SerializeField]
         private ButtonWidget mainDiscordButton;
+        [SerializeField]
+        private ButtonWidget settingButton;
+        [SerializeField]
+        private SettingCanvas settingCanvas;
 
         public override IEnumerator OnInitialize()
         {
@@ -18,7 +22,21 @@ namespace DiceBound
 
             newGameButton.onClickAction+=OnNewGameButtonClick;
             quitButton.onClickAction+=OnQuitButtonClick;
+
+            if (settingButton)
+            {
+                settingButton.onClickAction+=OnSettingButtonClick;
+            }
+
             yield return null;
+        }
+
+        private void OnSettingButtonClick()
+        {
+            if (settingCanvas)
+            {
+                settingCanvas.Show();
+            }
         }
 
         private void OnQuitButtonClick()

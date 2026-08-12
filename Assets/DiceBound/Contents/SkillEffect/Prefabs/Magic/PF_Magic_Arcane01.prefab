@@ -19595,6 +19595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 486140699919500776}
   - component: {fileID: 1725510111173126649}
+  - component: {fileID: 3099835775883791135}
   m_Layer: 0
   m_Name: PF_Magic_Arcane01
   m_TagString: Untagged
@@ -19636,3 +19637,26 @@ MonoBehaviour:
   lifetime: 0.75
   moveDuration: 0.2
   moveOption: 0
+--- !u!114 &3099835775883791135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8894524146573752747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385ffc06106304cc3824d5bcf25a7037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BroAudio::Ami.BroAudio.SoundSource
+  _onlyPlayOnce: 0
+  _playOnEnable: 1
+  _stopOnDisable: 1
+  _overrideFadeOut: -1
+  _sound:
+    _entity: {fileID: 11400000, guid: a16d82ea8ac54cd45807962328408f44, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 8894524146573752747}
+  _overrideGroup: {fileID: 0}
+  _positionMode: 0
+  _delay: 0

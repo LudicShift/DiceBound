@@ -1,25 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 463daf5080d293049bd98a91154e958f, type: 3}
-  m_Name: DT_Font
-  m_EditorClassIdentifier: KCoreKit::KCoreKit.DataTable
-  rowScript: {fileID: 11500000, guid: b624d8ed0c4d4ff5aef32fa316eebd36, type: 3}
-  csv: {fileID: 4900000, guid: 1b02c5047123319438390339b3d97d17, type: 3}
-  rowTypeName: KCoreKit.LocalizedFontDataTableRow, KCoreKit, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  dataList:
-  - {fileID: 4929809971099500110}
-  - {fileID: 9069967907192281897}
---- !u!114 &4929809971099500110
+--- !u!114 &-2988540307463803583
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37,7 +18,7 @@ MonoBehaviour:
   index: 0
   language: KR
   fontAsset: {fileID: 11400000, guid: 833bd7407d13e384cbb50a212dc49465, type: 2}
---- !u!114 &9069967907192281897
+--- !u!114 &-2507179912631239172
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,3 +36,22 @@ MonoBehaviour:
   index: 0
   language: EN
   fontAsset: {fileID: 11400000, guid: 833bd7407d13e384cbb50a212dc49465, type: 2}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463daf5080d293049bd98a91154e958f, type: 3}
+  m_Name: DT_Font
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.DataTable
+  rowScript: {fileID: 11500000, guid: b624d8ed0c4d4ff5aef32fa316eebd36, type: 3}
+  csv: {fileID: 4900000, guid: 1b02c5047123319438390339b3d97d17, type: 3}
+  rowTypeName: KCoreKit.LocalizedFontDataTableRow, KCoreKit, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  dataList:
+  - {fileID: -2988540307463803583}
+  - {fileID: -2507179912631239172}

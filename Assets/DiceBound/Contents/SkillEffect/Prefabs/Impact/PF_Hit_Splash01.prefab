@@ -9798,6 +9798,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3770643093255729086}
   - component: {fileID: 2385454086746710544}
+  - component: {fileID: -847639934823210404}
   m_Layer: 0
   m_Name: PF_Hit_Splash01
   m_TagString: Untagged
@@ -9838,6 +9839,29 @@ MonoBehaviour:
   lifetime: 0.6
   moveDuration: 0.2
   moveOption: 0
+--- !u!114 &-847639934823210404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8202893363157632727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385ffc06106304cc3824d5bcf25a7037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BroAudio::Ami.BroAudio.SoundSource
+  _onlyPlayOnce: 0
+  _playOnEnable: 1
+  _stopOnDisable: 1
+  _overrideFadeOut: -1
+  _sound:
+    _entity: {fileID: 11400000, guid: 0fbb8600b42f7c04398e2c566196a779, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 8202893363157632727}
+  _overrideGroup: {fileID: 0}
+  _positionMode: 0
+  _delay: 0
 --- !u!1 &8671038112229016531
 GameObject:
   m_ObjectHideFlags: 0

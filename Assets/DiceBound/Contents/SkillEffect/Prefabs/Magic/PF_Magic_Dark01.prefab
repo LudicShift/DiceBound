@@ -14701,6 +14701,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4339793879273027128}
   - component: {fileID: 3566788176722088706}
+  - component: {fileID: 8731743396392331489}
   m_Layer: 0
   m_Name: PF_Magic_Dark01
   m_TagString: Untagged
@@ -14742,6 +14743,29 @@ MonoBehaviour:
   lifetime: 0.8
   moveDuration: 0.2
   moveOption: 0
+--- !u!114 &8731743396392331489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7835180038778169073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385ffc06106304cc3824d5bcf25a7037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BroAudio::Ami.BroAudio.SoundSource
+  _onlyPlayOnce: 0
+  _playOnEnable: 1
+  _stopOnDisable: 1
+  _overrideFadeOut: -1
+  _sound:
+    _entity: {fileID: 11400000, guid: c14ea576c235f074898dd11746c56ea5, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 7835180038778169073}
+  _overrideGroup: {fileID: 0}
+  _positionMode: 0
+  _delay: 0
 --- !u!1 &7844601151581028902
 GameObject:
   m_ObjectHideFlags: 0

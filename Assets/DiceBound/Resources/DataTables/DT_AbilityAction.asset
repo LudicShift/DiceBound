@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5738928271202828534
+--- !u!114 &-8334796379528334637
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -16,7 +16,7 @@ MonoBehaviour:
   tags: []
   isEnable: 1
   actionFunctionName: RangedAttack
---- !u!114 &-4942771534025171825
+--- !u!114 &-4900842280539500853
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -32,22 +32,6 @@ MonoBehaviour:
   tags: []
   isEnable: 1
   actionFunctionName: MagicAttack
---- !u!114 &-1186841242897029520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 598896e4bb5e41349532ce8273b14f81, type: 3}
-  m_Name: Heal
-  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityActionDataTableRow
-  id: Heal
-  tags: []
-  isEnable: 1
-  actionFunctionName: Heal
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,11 +49,11 @@ MonoBehaviour:
   rowTypeName: KCoreKit.AbilityActionDataTableRow, KCoreKit, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   dataList:
-  - {fileID: 2543393098075781047}
-  - {fileID: -5738928271202828534}
-  - {fileID: -4942771534025171825}
-  - {fileID: -1186841242897029520}
---- !u!114 &2543393098075781047
+  - {fileID: 304224762065619410}
+  - {fileID: -8334796379528334637}
+  - {fileID: -4900842280539500853}
+  - {fileID: 8076221191909615648}
+--- !u!114 &304224762065619410
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -85,3 +69,19 @@ MonoBehaviour:
   tags: []
   isEnable: 1
   actionFunctionName: MeleeAttack
+--- !u!114 &8076221191909615648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598896e4bb5e41349532ce8273b14f81, type: 3}
+  m_Name: Heal
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityActionDataTableRow
+  id: Heal
+  tags: []
+  isEnable: 1
+  actionFunctionName: Heal

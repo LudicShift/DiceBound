@@ -14701,6 +14701,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5678116839126103055}
   - component: {fileID: 8269854367190270542}
+  - component: {fileID: 5572488912908135832}
   m_Layer: 0
   m_Name: PF_Magic_Poison01
   m_TagString: Untagged
@@ -14742,6 +14743,29 @@ MonoBehaviour:
   lifetime: 0.8
   moveDuration: 0.2
   moveOption: 0
+--- !u!114 &5572488912908135832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8673344768412492929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385ffc06106304cc3824d5bcf25a7037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BroAudio::Ami.BroAudio.SoundSource
+  _onlyPlayOnce: 0
+  _playOnEnable: 1
+  _stopOnDisable: 1
+  _overrideFadeOut: -1
+  _sound:
+    _entity: {fileID: 11400000, guid: 1c7890aae05e99a408f3e1123f22fa6d, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 8673344768412492929}
+  _overrideGroup: {fileID: 0}
+  _positionMode: 0
+  _delay: 0
 --- !u!1 &9097590729348726334
 GameObject:
   m_ObjectHideFlags: 0

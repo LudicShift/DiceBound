@@ -5,10 +5,25 @@ namespace DiceBound
 {
     public class SettingManager : Singleton<SettingManager>
     {
-        private float _masterVolume;
-        private float _sfxVolume;
-        private float _musicVolume;
-        
+        private float _masterVolume = 1f;
+        private float _sfxVolume = 1f;
+        private float _musicVolume = 1f;
+
+        public float GetMasterVolume()
+        {
+            return _masterVolume;
+        }
+
+        public float GetSFXVolume()
+        {
+            return _sfxVolume;
+        }
+
+        public float GetMusicVolume()
+        {
+            return _musicVolume;
+        }
+
         public void SetMasterVolume(float volume)
         {
             _masterVolume = volume;

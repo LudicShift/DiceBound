@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 1725539259892109697}
   - component: {fileID: 6105140215266776041}
   - component: {fileID: 1721135064785177694}
+  - component: {fileID: 657287868725719616}
+  - component: {fileID: 7071229013258766365}
   m_Layer: 0
   m_Name: PF_Essential
   m_TagString: Untagged
@@ -128,3 +130,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c6d53009bc55764d965d801aa2a7ff8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.DontDestroyAndDistinct
+--- !u!114 &657287868725719616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4320118492477380267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ceb910b7ffa405a80cfc7d1ed051a16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SettingManager
+--- !u!114 &7071229013258766365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4320118492477380267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d3039b0d1f245378bd8442636c8494b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundManager

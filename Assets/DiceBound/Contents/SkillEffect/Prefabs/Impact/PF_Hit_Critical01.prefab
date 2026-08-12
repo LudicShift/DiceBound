@@ -445,7 +445,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationX:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -498,7 +498,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -29392,6 +29392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2088652268972941389}
   - component: {fileID: 4498451141518857170}
+  - component: {fileID: 7819389113721131143}
   m_Layer: 0
   m_Name: PF_Hit_Critical01
   m_TagString: Untagged
@@ -29433,9 +29434,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dd70666b31e4073bcfe090524242c57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillEffect
-  lifetime: 0.75
+  lifetime: 0.3
   moveDuration: 0.2
   moveOption: 0
+--- !u!114 &7819389113721131143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6537088994736895376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385ffc06106304cc3824d5bcf25a7037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BroAudio::Ami.BroAudio.SoundSource
+  _onlyPlayOnce: 0
+  _playOnEnable: 1
+  _stopOnDisable: 1
+  _overrideFadeOut: -1
+  _sound:
+    _entity: {fileID: 11400000, guid: 326dafaa8e7a29d4b8b4c18f368d2a7d, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 6537088994736895376}
+  _overrideGroup: {fileID: 0}
+  _positionMode: 0
+  _delay: 0
 --- !u!1 &6819264478447009688
 GameObject:
   m_ObjectHideFlags: 0

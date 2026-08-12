@@ -29,5 +29,6 @@ namespace DiceBound
         public string animClip;
         public int priority;
         public float startUpDelay;
+       
     }
 }

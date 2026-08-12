@@ -1,0 +1,3130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8824273529282120944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: ChestClose02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: ChestClose02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: fe65f0562c2d7cd41be9177d36178360, type: 2}
+--- !u!114 &-8712756039477061261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WoodLand
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WoodLand
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 41e398d8aa0533340ae41e3c9f7a3101, type: 2}
+--- !u!114 &-8680123385647662398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: BowImpactHit02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: BowImpactHit02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 1ca8665ee067f9447848879c9141371e, type: 2}
+--- !u!114 &-8628998251535669849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: SpellImpact01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: SpellImpact01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: d347f63f235862942a09d033a67a5f46, type: 2}
+--- !u!114 &-8534069937213204350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: IceFreeze02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: IceFreeze02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: a7164ac7351dee14bb68967d93300ca9, type: 2}
+--- !u!114 &-8492373231566115682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: StoneWalk03
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: StoneWalk03
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 05f79d547893d7941b734a9d03c98d0f, type: 2}
+--- !u!114 &-8460994124769038902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: Fireball02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: Fireball02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 933ee754407308d49bcdaf11b560c7db, type: 2}
+--- !u!114 &-8456865810496208867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: Mine05
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: Mine05
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 942823c87b81e064daec4be7bb438511, type: 2}
+--- !u!114 &-8400933434665790616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: Chop04
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: Chop04
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: b48e85e8aaa2d2043ad80924e5b3e414, type: 2}
+--- !u!114 &-8394951371871549214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: StoneRun04
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: StoneRun04
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: a7532861fe7118d48adde8832a5272cd, type: 2}
+--- !u!114 &-8235434544295442914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: BowAttack01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: BowAttack01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 2c293d883475aeb4ab467b0c68c2f8f1, type: 2}
+--- !u!114 &-8144732596063855771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WoodChainRun05
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WoodChainRun05
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: dfe443e8392c24b47a501d39917a88bf, type: 2}
+--- !u!114 &-8106181787431253647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WaveAttack01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WaveAttack01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: a219c5cf1d4992c40a9d1f0db96f3536, type: 2}
+--- !u!114 &-7922230158232556688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WoodChainWalk01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WoodChainWalk01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 68d882cb5d70e8247a568e86dfefe3a7, type: 2}
+--- !u!114 &-7773487693953179096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: SwordParry01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: SwordParry01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: d614cabfa5be70b4eaf92c0e3200164a, type: 2}
+--- !u!114 &-7722292804376238840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: StoneChainRun05
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: StoneChainRun05
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 4358be85a566ecb4ab43672b3a92d2c1, type: 2}
+--- !u!114 &-7712128266153658750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: SwordBlocked02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: SwordBlocked02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: aa7699f9664d98c47948b8c631318004, type: 2}
+--- !u!114 &-7676073640067886000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: IceBarrage02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: IceBarrage02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: a0b526de3ea3aa640ba9266abf285988, type: 2}
+--- !u!114 &-7516039628640040380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: DirtWalk03
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: DirtWalk03
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: b4ab0a2bd09c58a43be0b2d45a4f6a38, type: 2}
+--- !u!114 &-7358669364076467856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: Waterspray01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: Waterspray01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: c7fdaba4903763040a1d1196593a16b2, type: 2}
+--- !u!114 &-6786365457316191675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: IceFreeze01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: IceFreeze01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 0646140eb54bdad4ab80da1c4856edcd, type: 2}
+--- !u!114 &-6764999601906727360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: RockMeteorSwarm01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: RockMeteorSwarm01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: c458180a70fe9114fbc5f6f91febd799, type: 2}
+--- !u!114 &-6741181314214164935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WaterChainWalk01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WaterChainWalk01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 7e5e0f18321bbcf4fafbd2d037be1cb8, type: 2}
+--- !u!114 &-6676867574459845318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: IceWall02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: IceWall02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 36abdd9da67b2b041bd8ef66e93ae938, type: 2}
+--- !u!114 &-6593684065345614634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: Chop01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: Chop01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 176635d7af368d04e96a117f04c2b15f, type: 2}
+--- !u!114 &-6546578993630788402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: StoneWalk05
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: StoneWalk05
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: d9273d0771aa1a34996b9d147a1ac752, type: 2}
+--- !u!114 &-6449016116317622009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WoodChainRun04
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WoodChainRun04
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 537db771103c3b94097f115a1c2669ae, type: 2}
+--- !u!114 &-6369355514447194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: StoneLand
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: StoneLand
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 8c5f5caa2e34d0340819ff6214313238, type: 2}
+--- !u!114 &-6358985828404091084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: StoneChainRun02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: StoneChainRun02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 8f040189ebf8f7642b364bb7a81edf54, type: 2}
+--- !u!114 &-6356492418183805309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: StoneChainWalk05
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: StoneChainWalk05
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 5885f60b20798284fb5827240edff0c5, type: 2}
+--- !u!114 &-6264190896310812264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: DirtChainWalk03
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: DirtChainWalk03
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 5a7038123fcbc2d42a4a6a72fd79deac, type: 2}
+--- !u!114 &-6172920940112354625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: Firespray01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: Firespray01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 53f7eb1cfd3aea14a93ac93bbac08369, type: 2}
+--- !u!114 &-6145226871053830312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WoodChainJump
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WoodChainJump
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 0ded8f5f95fd5cc47bc829bc4e690fdd, type: 2}
+--- !u!114 &-5943733938218340088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: DirtWalk01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: DirtWalk01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 4f7eb8e7bf0e9ca4b9a16992d86b92b6, type: 2}
+--- !u!114 &-5932251156938113336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: DirtChainRun05
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: DirtChainRun05
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 8fd38f891230e7a4c861bf0ca0abcc43, type: 2}
+--- !u!114 &-5897936471816555072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WaterChainLand
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WaterChainLand
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 5c25f9e1545f09741bcaff9e6ba47071, type: 2}
+--- !u!114 &-5836906058302644175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: SwordAttack02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: SwordAttack02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: c9b300313d32aa940a31f5dd4d34a955, type: 2}
+--- !u!114 &-5742802521603869047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WaterRun02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WaterRun02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 3d4af6053a683b843beec53c1abc2f1d, type: 2}
+--- !u!114 &-5654759654376328323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: BowImpactHit01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: BowImpactHit01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 98b580275ce3d5546872c25fc2ded950, type: 2}
+--- !u!114 &-5546020929481321086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WaterJump
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WaterJump
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 0ffc78f14e3ecf84d8577ed70416ec1d, type: 2}
+--- !u!114 &-5268247321713995057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WaterRun05
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WaterRun05
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: b049af9b5fc5eb040bf2c5b071c0c61d, type: 2}
+--- !u!114 &-5259701625760078673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: SwordAttack03
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: SwordAttack03
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 07c887537b24c51438126a9bc7a309c3, type: 2}
+--- !u!114 &-5073482510053570241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: SwordImpactHit02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: SwordImpactHit02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: e9347e5f21212e34b8f1aefb5316bb73, type: 2}
+--- !u!114 &-4874436317363738693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: DirtChainLand
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: DirtChainLand
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 451884efd3fec5547a245b359da549e7, type: 2}
+--- !u!114 &-4805884962438411436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WaterChainRun03
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WaterChainRun03
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: dea4fa0527e32c243946a010b6334f02, type: 2}
+--- !u!114 &-4755987308021461951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: DirtJump
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: DirtJump
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 3c796ab93bc07fe45bde0f25c3413020, type: 2}
+--- !u!114 &-4755499867254639708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: StoneRun05
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: StoneRun05
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 25307c3570b55224199647f0290699c8, type: 2}
+--- !u!114 &-4741595194598312098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: IceThrow01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: IceThrow01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 6c41b571cc6c1fb4cb54ec0c6d5be099, type: 2}
+--- !u!114 &-4700928322165538006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WoodChainRun02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WoodChainRun02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 2a65ebe58b40261408c2e5e321a0196d, type: 2}
+--- !u!114 &-4651053458005387554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: StoneWalk04
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: StoneWalk04
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: a9b57764a89cd6f4d988b333677498da, type: 2}
+--- !u!114 &-4534441198273801989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: DoorClose02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: DoorClose02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 238ea45b40138954084fb89318e77e4e, type: 2}
+--- !u!114 &-4509437423534469128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: SwordUnsheath02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: SwordUnsheath02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: e7880c36b065d6c48b97b26fa7683f3d, type: 2}
+--- !u!114 &-4458254659165137853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: DirtLand
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: DirtLand
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 9cfb6a3386eb6d042951a16fc3152802, type: 2}
+--- !u!114 &-4455974785823101953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: DirtRun05
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: DirtRun05
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 7e47fd0a68e551f41ba829647f3f26d9, type: 2}
+--- !u!114 &-4207310424120633700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WaterChainRun04
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WaterChainRun04
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 1c3272021f51e0d458ccad9b3e512ef6, type: 2}
+--- !u!114 &-4074092487038577729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: DirtChainWalk01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: DirtChainWalk01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 521deb92b01b90b4781562b8c96c4fa2, type: 2}
+--- !u!114 &-3968870037040268143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WaterWalk01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WaterWalk01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: a01a2d087c894d94bad40ac1955626df, type: 2}
+--- !u!114 &-3755149589771577752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WoodChainRun01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WoodChainRun01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 913d3c8cd3a9d1343b4b416a9bbe7dc9, type: 2}
+--- !u!114 &-3683260483933478742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: ChestOpen01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: ChestOpen01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 19e4858ec22ca4f47a703e44e72caa46, type: 2}
+--- !u!114 &-3620322755558921504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: DirtChainWalk02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: DirtChainWalk02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 01a3635605d251b4abd75f86bc42b1ee, type: 2}
+--- !u!114 &-3608495184145900853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: SpellImpact02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: SpellImpact02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: b6a606d51f23d3e42a87c9ccf5a828d7, type: 2}
+--- !u!114 &-3516932971794376970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: RockMeteorThrow01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: RockMeteorThrow01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 6736e4578d69ffb44803312e4f690864, type: 2}
+--- !u!114 &-3414909185762031021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: DirtRun04
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: DirtRun04
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 56d23e77a7518244e8b1121a65409c50, type: 2}
+--- !u!114 &-3252338601193358997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: SwordParry02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: SwordParry02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 25fcbece100fc974684b20684c5b1e7d, type: 2}
+--- !u!114 &-3122423574423840753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: DirtChainWalk04
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: DirtChainWalk04
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 45d456a65d8c4f74d8a8560d6550152d, type: 2}
+--- !u!114 &-3065723581644277305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WaterChainRun02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WaterChainRun02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 02d425ff468d08f449f83ca95f7d1ea8, type: 2}
+--- !u!114 &-2886302940772360626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: BowBlocked03
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: BowBlocked03
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: d710df2ba3bf6e14ab1b174a57317cf4, type: 2}
+--- !u!114 &-2862521672926669288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: Mine02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: Mine02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: b14008def7776804da8c2f108bc1974c, type: 2}
+--- !u!114 &-2578061625210137554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: StoneChainRun01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: StoneChainRun01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 8bf6247bb0fdf344a8b059cb00eb7df2, type: 2}
+--- !u!114 &-2544279105820618177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: DirtWalk05
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: DirtWalk05
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 4273dc1133da0c74d9f11c4f33cd1e0c, type: 2}
+--- !u!114 &-2171281642981533928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WoodRun02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WoodRun02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 388e44d50b9fbc943b910d94cbe0a0b3, type: 2}
+--- !u!114 &-2159675326420363596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: SpellImpact03
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: SpellImpact03
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 70d99d7a0c56e664098906da3beeebc2, type: 2}
+--- !u!114 &-1939895233779222948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WoodWalk02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WoodWalk02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 74dd12a69bef957498448cc811be1e3d, type: 2}
+--- !u!114 &-1935512159903402937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: ChestOpen02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: ChestOpen02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: a16ac1d1c21f18f41898d2c9d0c45a63, type: 2}
+--- !u!114 &-1823266985592975545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: Fireball03
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: Fireball03
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 70f6805ee2aa4554d88aef39d5ba7cb6, type: 2}
+--- !u!114 &-1789426886047148150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: SwordParry03
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: SwordParry03
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 5e36b1067bb35bd4f82032dbc28c5606, type: 2}
+--- !u!114 &-1757505933913652036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: DirtChainRun02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: DirtChainRun02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: db7ab042567f09c4fa37908a626323c6, type: 2}
+--- !u!114 &-1733619242104506931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WaterRun04
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WaterRun04
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: f0ff42f7aa085fd4f824580d924a04bb, type: 2}
+--- !u!114 &-1536710574779746402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: StoneChainWalk03
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: StoneChainWalk03
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 7d2b983697933d3449f7b45e4fa20a6f, type: 2}
+--- !u!114 &-1487842026458161344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WaterWalk04
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WaterWalk04
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 2b490d56b1ca237458e340722e53820e, type: 2}
+--- !u!114 &-1424936048971981729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: GateOpen
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: GateOpen
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 768e10dc7754a454aba48178fc654bab, type: 2}
+--- !u!114 &-1213873376974414467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: Chop03
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: Chop03
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 7e0c1ae63951ca1489f29e44765fe829, type: 2}
+--- !u!114 &-457627572549629808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: BowAttack02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: BowAttack02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: e64fcfd9054e6b44f8077fcdd627e158, type: 2}
+--- !u!114 &-381626452136989376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: TorchImpact02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: TorchImpact02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: e11dae64bfddcbf458056642037e3fef, type: 2}
+--- !u!114 &-267054123417901630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WaterRun01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WaterRun01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 0b0b727b0a6135d46b1f49ea3fdde8b1, type: 2}
+--- !u!114 &-262231278198983131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WoodWalk05
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WoodWalk05
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: d000a30c0c209c2449abb9268a5c6f62, type: 2}
+--- !u!114 &-260387471068729170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: StoneChainJump
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: StoneChainJump
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: a70490c7af263264c9a4a81e75bf5732, type: 2}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463daf5080d293049bd98a91154e958f, type: 3}
+  m_Name: DT_Sound
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.DataTable
+  rowScript: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  csv: {fileID: 4900000, guid: 865afdb142a60254f81a9becc8d7c905, type: 3}
+  rowTypeName: DiceBound.SoundDataTableRow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  dataList:
+  - {fileID: -8235434544295442914}
+  - {fileID: -457627572549629808}
+  - {fileID: 6750589780335661830}
+  - {fileID: 4216507350954746646}
+  - {fileID: -2886302940772360626}
+  - {fileID: -5654759654376328323}
+  - {fileID: -8680123385647662398}
+  - {fileID: 3191311007895967578}
+  - {fileID: 1107915339083622581}
+  - {fileID: 4056924058734165181}
+  - {fileID: 2986821630447255586}
+  - {fileID: -8824273529282120944}
+  - {fileID: -3683260483933478742}
+  - {fileID: -1935512159903402937}
+  - {fileID: 1744063109693590001}
+  - {fileID: -4874436317363738693}
+  - {fileID: 4870398559459515500}
+  - {fileID: -1757505933913652036}
+  - {fileID: 836448007003419413}
+  - {fileID: 1195914745526244350}
+  - {fileID: -5932251156938113336}
+  - {fileID: -4074092487038577729}
+  - {fileID: -3620322755558921504}
+  - {fileID: -6264190896310812264}
+  - {fileID: -3122423574423840753}
+  - {fileID: 445317975973684792}
+  - {fileID: -4755987308021461951}
+  - {fileID: -4458254659165137853}
+  - {fileID: 6342256753209742223}
+  - {fileID: 8777999312849464822}
+  - {fileID: 9205585864193483437}
+  - {fileID: -3414909185762031021}
+  - {fileID: -4455974785823101953}
+  - {fileID: -5943733938218340088}
+  - {fileID: 3263831129058645396}
+  - {fileID: -7516039628640040380}
+  - {fileID: 999508730344802067}
+  - {fileID: -2544279105820618177}
+  - {fileID: 6694578417634067945}
+  - {fileID: -4534441198273801989}
+  - {fileID: 3032574560295878441}
+  - {fileID: 6471823284036039899}
+  - {fileID: 7015392488468831375}
+  - {fileID: -8460994124769038902}
+  - {fileID: -1823266985592975545}
+  - {fileID: 2511662227256237616}
+  - {fileID: 8692890976335039309}
+  - {fileID: -6172920940112354625}
+  - {fileID: 8711656424682784755}
+  - {fileID: 8548699616706649957}
+  - {fileID: -1424936048971981729}
+  - {fileID: 1077492349503025695}
+  - {fileID: -7676073640067886000}
+  - {fileID: -6786365457316191675}
+  - {fileID: -8534069937213204350}
+  - {fileID: -4741595194598312098}
+  - {fileID: 6227812861627241515}
+  - {fileID: 6662664611827549421}
+  - {fileID: -6676867574459845318}
+  - {fileID: 243353303832163326}
+  - {fileID: 7204365020419101127}
+  - {fileID: 83417271582482449}
+  - {fileID: 4172923509919347389}
+  - {fileID: 8914674963037987216}
+  - {fileID: 2332394736085990654}
+  - {fileID: 7155206835712919374}
+  - {fileID: 1216525454318239246}
+  - {fileID: -6764999601906727360}
+  - {fileID: 6435105118427082195}
+  - {fileID: -3516932971794376970}
+  - {fileID: 8296871223321593990}
+  - {fileID: 4830154182788940183}
+  - {fileID: 258148805187208138}
+  - {fileID: -8628998251535669849}
+  - {fileID: -3608495184145900853}
+  - {fileID: -2159675326420363596}
+  - {fileID: -260387471068729170}
+  - {fileID: 1038965264048995796}
+  - {fileID: -2578061625210137554}
+  - {fileID: -6358985828404091084}
+  - {fileID: 378121396559288412}
+  - {fileID: 4136754774378437127}
+  - {fileID: -7722292804376238840}
+  - {fileID: 59967721000715170}
+  - {fileID: 197923921706286427}
+  - {fileID: -1536710574779746402}
+  - {fileID: 9181772527917889696}
+  - {fileID: -6356492418183805309}
+  - {fileID: 2607246030408007319}
+  - {fileID: -6369355514447194230}
+  - {fileID: 8032117741194173506}
+  - {fileID: 7591204877760350877}
+  - {fileID: 6679220563354885182}
+  - {fileID: -8394951371871549214}
+  - {fileID: -4755499867254639708}
+  - {fileID: 6839133458689769035}
+  - {fileID: 6346570933624064384}
+  - {fileID: -8492373231566115682}
+  - {fileID: -4651053458005387554}
+  - {fileID: -6546578993630788402}
+  - {fileID: 8347136238373434526}
+  - {fileID: -5836906058302644175}
+  - {fileID: -5259701625760078673}
+  - {fileID: 6526662315422395688}
+  - {fileID: -7712128266153658750}
+  - {fileID: 7768963280513587462}
+  - {fileID: 656527218324498240}
+  - {fileID: -5073482510053570241}
+  - {fileID: 7222211091692017744}
+  - {fileID: -7773487693953179096}
+  - {fileID: -3252338601193358997}
+  - {fileID: -1789426886047148150}
+  - {fileID: 6113467825061892891}
+  - {fileID: 4038261111345098330}
+  - {fileID: 1884092564088717130}
+  - {fileID: -4509437423534469128}
+  - {fileID: 8058273419529087958}
+  - {fileID: 3622459100652536083}
+  - {fileID: 1308725835436147529}
+  - {fileID: -381626452136989376}
+  - {fileID: 4491348500230765015}
+  - {fileID: 3044756440365084444}
+  - {fileID: -5897936471816555072}
+  - {fileID: 6551068098831482249}
+  - {fileID: -3065723581644277305}
+  - {fileID: -4805884962438411436}
+  - {fileID: -4207310424120633700}
+  - {fileID: 7361245409064554379}
+  - {fileID: -6741181314214164935}
+  - {fileID: 5088274852927195737}
+  - {fileID: 2898917016654787788}
+  - {fileID: 5861345353778715302}
+  - {fileID: 66564732824266182}
+  - {fileID: -5546020929481321086}
+  - {fileID: 3735246370280044390}
+  - {fileID: -267054123417901630}
+  - {fileID: -5742802521603869047}
+  - {fileID: 5550385347205886399}
+  - {fileID: -1733619242104506931}
+  - {fileID: -5268247321713995057}
+  - {fileID: -3968870037040268143}
+  - {fileID: 5001804623595709222}
+  - {fileID: 869633619573659321}
+  - {fileID: -1487842026458161344}
+  - {fileID: 611405731833378527}
+  - {fileID: 7772098119756952277}
+  - {fileID: -7358669364076467856}
+  - {fileID: 2257650988488752667}
+  - {fileID: -8106181787431253647}
+  - {fileID: 3785522194806561889}
+  - {fileID: -6145226871053830312}
+  - {fileID: 7871464913056159525}
+  - {fileID: -3755149589771577752}
+  - {fileID: -4700928322165538006}
+  - {fileID: 1439780621955550993}
+  - {fileID: -6449016116317622009}
+  - {fileID: -8144732596063855771}
+  - {fileID: -7922230158232556688}
+  - {fileID: 5193248402553964040}
+  - {fileID: 1662884375775921722}
+  - {fileID: 1970968530197865703}
+  - {fileID: 6964810454341266217}
+  - {fileID: 6069303164367236233}
+  - {fileID: -8712756039477061261}
+  - {fileID: 2807902758349375969}
+  - {fileID: -2171281642981533928}
+  - {fileID: 4834906509079882617}
+  - {fileID: 5271870831593835131}
+  - {fileID: 4856174269724039358}
+  - {fileID: 8956777157339204047}
+  - {fileID: -1939895233779222948}
+  - {fileID: 8290299149802804933}
+  - {fileID: 4479744934863315769}
+  - {fileID: -262231278198983131}
+  - {fileID: -6593684065345614634}
+  - {fileID: 6056038387513176453}
+  - {fileID: -1213873376974414467}
+  - {fileID: -8400933434665790616}
+  - {fileID: 4577737544139896767}
+  - {fileID: -2862521672926669288}
+  - {fileID: 3698046154376411500}
+  - {fileID: 8620697081957433640}
+  - {fileID: -8456865810496208867}
+--- !u!114 &59967721000715170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: StoneChainWalk01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: StoneChainWalk01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 433b70b5e1b03cc44b2e313b144e8386, type: 2}
+--- !u!114 &66564732824266182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WaterChainWalk05
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WaterChainWalk05
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: bf87b9f329f1a5d41a0bd37cfc80ca85, type: 2}
+--- !u!114 &83417271582482449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: LightTorchWithStartingLoop01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: LightTorchWithStartingLoop01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 1a8ad339b35c50645a3ade67cc4f3ddd, type: 2}
+--- !u!114 &197923921706286427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: StoneChainWalk02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: StoneChainWalk02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 87b82bb077fabe0459172a1007f6902b, type: 2}
+--- !u!114 &243353303832163326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: LightTorch01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: LightTorch01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: abff25fcace66fa4cb2417c3e8ead655, type: 2}
+--- !u!114 &258148805187208138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: RockWall02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: RockWall02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: bb596b9c249641744aa7dfa48ec286f0, type: 2}
+--- !u!114 &378121396559288412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: StoneChainRun03
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: StoneChainRun03
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 007d25fdd40334f42bcbf1c3fe017be9, type: 2}
+--- !u!114 &445317975973684792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: DirtChainWalk05
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: DirtChainWalk05
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: d0fd4ab91317f7440b579449752a9140, type: 2}
+--- !u!114 &611405731833378527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WaterWalk05
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WaterWalk05
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 830310efad23c9d4b8aa2b379cc777dc, type: 2}
+--- !u!114 &656527218324498240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: SwordImpactHit01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: SwordImpactHit01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 4e950f214c382f847afa2a4e9d55eb82, type: 2}
+--- !u!114 &836448007003419413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: DirtChainRun03
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: DirtChainRun03
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 6488cae4ea9e56c45b0cd41fdb1b85c3, type: 2}
+--- !u!114 &869633619573659321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WaterWalk03
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WaterWalk03
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 5180b24f6a0bf67488f9f33519898e88, type: 2}
+--- !u!114 &999508730344802067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: DirtWalk04
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: DirtWalk04
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 3de0c50b9398af3449aa2caaae16154c, type: 2}
+--- !u!114 &1038965264048995796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: StoneChainLand
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: StoneChainLand
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: b4b19856a997ba04f95ea9766510669c, type: 2}
+--- !u!114 &1077492349503025695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: IceBarrage01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: IceBarrage01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 8fd96f9e5796178469ad048a6a0ea965, type: 2}
+--- !u!114 &1107915339083622581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: BowPutAway01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: BowPutAway01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 44c01b9598364394db094c9cc544b19f, type: 2}
+--- !u!114 &1195914745526244350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: DirtChainRun04
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: DirtChainRun04
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: f955cb31be8089e4cb7e79fe2516b8ba, type: 2}
+--- !u!114 &1216525454318239246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: RiverStreamLoop
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: RiverStreamLoop
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: edba40af1a959e04f91b0a5c3a4d4bf7, type: 2}
+--- !u!114 &1308725835436147529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: TorchImpact01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: TorchImpact01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: c2f4d43f384cb714094513f957d4284d, type: 2}
+--- !u!114 &1439780621955550993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WoodChainRun03
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WoodChainRun03
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 2b28cef9ab12a0b48a3a4e688c4a19a8, type: 2}
+--- !u!114 &1662884375775921722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WoodChainWalk03
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WoodChainWalk03
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 94a0a9f3db3c7f742b672a1c94425225, type: 2}
+--- !u!114 &1744063109693590001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: DirtChainJump
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: DirtChainJump
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 46b8aa802d7a7594f84ba643cde28e70, type: 2}
+--- !u!114 &1884092564088717130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: SwordUnsheath01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: SwordUnsheath01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: cacca711666f06b478c24124bde67de8, type: 2}
+--- !u!114 &1970968530197865703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WoodChainWalk04
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WoodChainWalk04
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: c20fdadc8263e224aa66a8dac5856182, type: 2}
+--- !u!114 &2257650988488752667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: Waterspray02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: Waterspray02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: eac03cf99894fbe4aae5a920aa2fcc91, type: 2}
+--- !u!114 &2332394736085990654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: PortcullisGate
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: PortcullisGate
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: cca1470823f9a1f47b6dda9d5a96821a, type: 2}
+--- !u!114 &2511662227256237616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: Firebuff01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: Firebuff01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 805ea27915ec4d946a4d058ae0167e4f, type: 2}
+--- !u!114 &2607246030408007319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: StoneJump
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: StoneJump
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 60d9ea4a6800a2746aabe9d9aea042ca, type: 2}
+--- !u!114 &2807902758349375969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WoodRun01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WoodRun01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 84c0cf524c4964344b41bbe33ec03367, type: 2}
+--- !u!114 &2898917016654787788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WaterChainWalk03
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WaterChainWalk03
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 4c7cd51ed32dbff4a93f78e7293f441e, type: 2}
+--- !u!114 &2986821630447255586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: ChestClose01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: ChestClose01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 0b5ee8c1f1c0e714fa85504c15d56a0c, type: 2}
+--- !u!114 &3032574560295878441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: DoorOpen01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: DoorOpen01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: b96a515373d1f44439567876a188dbe0, type: 2}
+--- !u!114 &3044756440365084444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WaterChainJump
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WaterChainJump
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: bc7532d5279fc8241a420c572dd08528, type: 2}
+--- !u!114 &3191311007895967578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: BowImpactHit03
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: BowImpactHit03
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: ba98d39a9395f0948ad6eca6d3b23f05, type: 2}
+--- !u!114 &3263831129058645396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: DirtWalk02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: DirtWalk02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 277fc4566d1c317489e4ea5e4d35e726, type: 2}
+--- !u!114 &3622459100652536083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: TorchAttackStrike02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: TorchAttackStrike02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 70d571f6859576d40ac5dd0b2e57b8da, type: 2}
+--- !u!114 &3698046154376411500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: Mine03
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: Mine03
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 972b2d7c87dcded42bde25351a880628, type: 2}
+--- !u!114 &3735246370280044390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WaterLand
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WaterLand
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 28ab7290ee566204c816ecf6b0ff58c1, type: 2}
+--- !u!114 &3785522194806561889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WaveAttack02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WaveAttack02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 6c8c9e6f02eaccb408d650650a386303, type: 2}
+--- !u!114 &4038261111345098330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: SwordSheath02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: SwordSheath02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: a4718afbd206ea34691dbdaad55ac502, type: 2}
+--- !u!114 &4056924058734165181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: BowTakeOut01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: BowTakeOut01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 3ca9dfd028c2a8e4e8db3a595812f52e, type: 2}
+--- !u!114 &4136754774378437127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: StoneChainRun04
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: StoneChainRun04
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 97055de51d6eff942b72174631baa7be, type: 2}
+--- !u!114 &4172923509919347389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: LightTorchWithStartingLoop02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: LightTorchWithStartingLoop02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 498175f5515982c45bff35abc6fde361, type: 2}
+--- !u!114 &4216507350954746646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: BowBlocked02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: BowBlocked02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 277b3c4acec7a30439ecae006e6a2ef4, type: 2}
+--- !u!114 &4479744934863315769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WoodWalk04
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WoodWalk04
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 6e579ac4a662878428031eafd9658da1, type: 2}
+--- !u!114 &4491348500230765015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: TorchLoop
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: TorchLoop
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 5647358a1e5b9a040b626c66074247ce, type: 2}
+--- !u!114 &4577737544139896767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: Mine01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: Mine01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: e862a942fc8de8e4aa80b3e9a970cadc, type: 2}
+--- !u!114 &4830154182788940183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: RockWall01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: RockWall01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 456e8bf37698e7f4480ca74367515c80, type: 2}
+--- !u!114 &4834906509079882617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WoodRun03
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WoodRun03
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: ee441ebe1420a944a9db7f4da535056f, type: 2}
+--- !u!114 &4856174269724039358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WoodRun05
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WoodRun05
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: d6708a72db79ad1459843454b6acc2d2, type: 2}
+--- !u!114 &4870398559459515500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: DirtChainRun01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: DirtChainRun01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 51333ffdf22a82c4c80a15341d6eba5b, type: 2}
+--- !u!114 &5001804623595709222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WaterWalk02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WaterWalk02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: cccd856ed6c4d6444a7fbd7c7d7e26bc, type: 2}
+--- !u!114 &5088274852927195737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WaterChainWalk02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WaterChainWalk02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: b13d47be665a4de459b8db8e4091dfc3, type: 2}
+--- !u!114 &5193248402553964040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WoodChainWalk02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WoodChainWalk02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: b5375333c3a452f43b0a570f46bb06c8, type: 2}
+--- !u!114 &5271870831593835131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WoodRun04
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WoodRun04
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 56b327af4a5cf594d898f93c96ef6f7a, type: 2}
+--- !u!114 &5550385347205886399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WaterRun03
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WaterRun03
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: ac0ffce20d6886d4685a6143d1cf376e, type: 2}
+--- !u!114 &5861345353778715302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WaterChainWalk04
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WaterChainWalk04
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: afaf39768b949c445b2ca339268d4809, type: 2}
+--- !u!114 &6056038387513176453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: Chop02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: Chop02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 7923c543e6602284e8ffcf3eb25115b3, type: 2}
+--- !u!114 &6069303164367236233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WoodJump
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WoodJump
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 542712acfeb5d46498c84323ffa6155b, type: 2}
+--- !u!114 &6113467825061892891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: SwordSheath01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: SwordSheath01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: ebbfc4f65dd28b647835ff002e65eddc, type: 2}
+--- !u!114 &6227812861627241515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: IceThrow02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: IceThrow02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 221ec2644fb3d844ab90ef44d8bd0f27, type: 2}
+--- !u!114 &6342256753209742223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: DirtRun01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: DirtRun01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 7b1a21246d7eea14bb9563fc6952362a, type: 2}
+--- !u!114 &6346570933624064384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: StoneWalk02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: StoneWalk02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 8551ea43f5b50c04bafdbbc2fe12f761, type: 2}
+--- !u!114 &6435105118427082195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: RockMeteorSwarm02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: RockMeteorSwarm02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: c470d454365bb584694d02d4c268eac9, type: 2}
+--- !u!114 &6471823284036039899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: DoorOpen02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: DoorOpen02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 84f3aa549523d7a489e6a2d6eb88d7eb, type: 2}
+--- !u!114 &6526662315422395688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: SwordBlocked01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: SwordBlocked01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 001758ba338681745a2ca3ce0b16020e, type: 2}
+--- !u!114 &6551068098831482249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WaterChainRun01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WaterChainRun01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 89c65875396b2234eacae8ccd7b7b208, type: 2}
+--- !u!114 &6662664611827549421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: IceWall01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: IceWall01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: bac2c419c9b31bb48993f02c4641635f, type: 2}
+--- !u!114 &6679220563354885182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: StoneRun03
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: StoneRun03
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 8565d429f427cff40ad503b912441333, type: 2}
+--- !u!114 &6694578417634067945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: DoorClose01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: DoorClose01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: dac39fc6137cc7446b611bb2a3d36c94, type: 2}
+--- !u!114 &6750589780335661830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: BowBlocked01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: BowBlocked01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: cc2ab07c43dfde941821fa962f92c652, type: 2}
+--- !u!114 &6839133458689769035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: StoneWalk01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: StoneWalk01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 81d8fefa146870d46a2a190064d00c77, type: 2}
+--- !u!114 &6964810454341266217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WoodChainWalk05
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WoodChainWalk05
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: bb8ac26cd9711914ab44f96d2557cee5, type: 2}
+--- !u!114 &7015392488468831375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: Fireball01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: Fireball01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: e0590fd4045f05c4ba7641750247a455, type: 2}
+--- !u!114 &7155206835712919374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: RiverLoop
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: RiverLoop
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 356f59c3a6c381c4aaf05bc9733457b7, type: 2}
+--- !u!114 &7204365020419101127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: LightTorch02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: LightTorch02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: d69e14610e7a74b49936b82cf8793787, type: 2}
+--- !u!114 &7222211091692017744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: SwordImpactHit03
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: SwordImpactHit03
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: ba2b4d35a75663e45a0b457db6a0c698, type: 2}
+--- !u!114 &7361245409064554379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WaterChainRun05
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WaterChainRun05
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: d208abaeee7ee7646b0a0b3b5611ba1c, type: 2}
+--- !u!114 &7591204877760350877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: StoneRun02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: StoneRun02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 308864e4a7175444b928927450264d13, type: 2}
+--- !u!114 &7768963280513587462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: SwordBlocked03
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: SwordBlocked03
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 8c3e1acc597feac4495121ae76c69caf, type: 2}
+--- !u!114 &7772098119756952277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WaterfallLoop
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WaterfallLoop
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 4a0f1fa924568744c94c7064a8f16147, type: 2}
+--- !u!114 &7871464913056159525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WoodChainLand
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WoodChainLand
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 7652ac93d5dd3b04c8244e6756527ddc, type: 2}
+--- !u!114 &8032117741194173506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: StoneRun01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: StoneRun01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: c5ce106f601440640b82d8d0a8101223, type: 2}
+--- !u!114 &8058273419529087958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: TorchAttackStrike01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: TorchAttackStrike01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 8b8ebd347b306ef4fbf3919f653536f2, type: 2}
+--- !u!114 &8290299149802804933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WoodWalk03
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WoodWalk03
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: a2cdd7626a676494fa7acad6f7c2ea6e, type: 2}
+--- !u!114 &8296871223321593990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: RockMeteorThrow02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: RockMeteorThrow02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 258f87917caa12f48aa3c27f72fcb7b3, type: 2}
+--- !u!114 &8347136238373434526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: SwordAttack01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: SwordAttack01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 07b4958b170504944b3de3d61909f47c, type: 2}
+--- !u!114 &8548699616706649957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: GateClose
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: GateClose
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: b4eb8b391ffd1514aabb906a734e5cc0, type: 2}
+--- !u!114 &8620697081957433640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: Mine04
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: Mine04
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 29f0f9d8a36ded841b3dc85ff5d241cf, type: 2}
+--- !u!114 &8692890976335039309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: Firebuff02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: Firebuff02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 079e87af7c1ba6a4fb82550c37b76549, type: 2}
+--- !u!114 &8711656424682784755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: Firespray02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: Firespray02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 89cb236a7d605f244b661ce29cbfd9f4, type: 2}
+--- !u!114 &8777999312849464822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: DirtRun02
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: DirtRun02
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: b0a5c455a1caaf443bbc75fd92cd8e99, type: 2}
+--- !u!114 &8914674963037987216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: LockUnlock
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: LockUnlock
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 4fa020a0c988df5438bc1bff3419dd4a, type: 2}
+--- !u!114 &8956777157339204047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: WoodWalk01
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: WoodWalk01
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 91ab995dce6378949a6050af078d8525, type: 2}
+--- !u!114 &9181772527917889696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: StoneChainWalk04
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: StoneChainWalk04
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 38ecb8ddd63a82f4592278039362d33d, type: 2}
+--- !u!114 &9205585864193483437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ffbb68111944ada390a93939332a9a, type: 3}
+  m_Name: DirtRun03
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundDataTableRow
+  id: DirtRun03
+  tags: []
+  isEnable: 1
+  audio: {fileID: 11400000, guid: 84e2556006657b344a04efcc44d92315, type: 2}
