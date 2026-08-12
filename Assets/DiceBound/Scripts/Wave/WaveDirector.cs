@@ -71,8 +71,8 @@ namespace DiceBound
 
         private IEnumerator WaveRoutine(int index)
         {
-            var wave = _waveDictionary[index];
-            if (wave == null)
+            var hasWave =  _waveDictionary.TryGetValue(index,out var wave);
+            if (!hasWave)
             {
                 ShowGameClear();
             }

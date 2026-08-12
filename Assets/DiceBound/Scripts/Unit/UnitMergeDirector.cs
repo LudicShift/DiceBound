@@ -10,9 +10,11 @@ namespace DiceBound
     public class UnitMergeDirector : DirectorBase
     {
         private UnitDirector _unitDirector;
+        private ShopDirector _shopDirector;
 
         public override IEnumerator OnInitialize()
         {
+            _shopDirector = DirectorFacade.GetDirector<ShopDirector>();
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
             _unitDirector.onSpawnAlly += OnSpawnAlly;
             yield return null;
@@ -43,6 +45,7 @@ namespace DiceBound
 
         private IEnumerator MergeUnit(List<UnitCore> unitList)
         {
+            _shopDirector.SetEnable(false);
             foreach (var unit in unitList)
             {
                 StartCoroutine(unit.ShowUpgradeEffect());
@@ -76,6 +79,7 @@ namespace DiceBound
             yield return mainUnit.HideUpgradeEffect();
             mainUnit.Upgrade();
             OnSpawnAlly(mainUnit);
+            _shopDirector.SetEnable(true);
         }
     }
 }

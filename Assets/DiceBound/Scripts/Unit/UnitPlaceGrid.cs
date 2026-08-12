@@ -10,6 +10,7 @@ namespace DiceBound
         [SerializeField] private int columnCount;
 
         [SerializeField] private Vector2 spacing;
+        [SerializeField] private bool flip;
 
         private List<UnitPlaceCell> _cells;
         [SerializeField] private bool reverseIndexing;
@@ -51,8 +52,12 @@ namespace DiceBound
                 int currentColumn = count % columnCount;
 
                 // 짝수번째 칸(2, 4, ...)을 반 칸 밀어 지그재그로 배치한다.
+              
                 float zigzagOffset = currentColumn % 2 == 1 ? spacing.x * 0.5f : 0f;
-
+                if (flip)
+                {
+                    zigzagOffset *= -1;
+                }
                 _cells[count].transform.localPosition =
                     new Vector3(currentRow * spacing.x + zigzagOffset, currentColumn * spacing.y);
 
