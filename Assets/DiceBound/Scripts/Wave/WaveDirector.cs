@@ -29,9 +29,14 @@ namespace DiceBound
         private Canvas gameOverCanvas;
 
         private WalletDirector _walletDirector;
-
+        private ShopDirector _shopDirector;
+        private UnitPlaceDirector _unitPlaceDirector;
+        
         public override IEnumerator OnInitialize()
         {
+            _unitPlaceDirector = DirectorFacade.GetDirector<UnitPlaceDirector>();
+            _shopDirector = DirectorFacade.GetDirector<ShopDirector>();
+
             _walletDirector = DirectorFacade.GetDirector<WalletDirector>();
             _battleDirector = DirectorFacade.GetDirector<BattleDirector>();
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
@@ -74,12 +79,15 @@ namespace DiceBound
             }
             else
             {
+                _unitPlaceDirector.SetEnable(false);
+                _shopDirector.SetEnable(false);
                 int enemyCount = 0;
                 while (enemyCount < wave.numberOfEnemy)
                 {
                     _unitDirector.SpawnUnit(PickEnemy(wave.index));
                     enemyCount++;
                 }
+                
                 waveLabelText.SetText($"Wave {_currentWave+1}");
                 waveLabelImage.Show();
                 yield return waveLabelAppearTween.Play();
@@ -102,6 +110,8 @@ namespace DiceBound
                 }
             
                 _isPlaying = false;
+                _unitPlaceDirector.SetEnable(true);
+                _shopDirector.SetEnable(true);
             }
         }
 

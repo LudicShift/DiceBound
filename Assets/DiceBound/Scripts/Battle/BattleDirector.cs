@@ -19,14 +19,14 @@ namespace DiceBound
     public class BattleDirector : DirectorBase
     {
         private UnitDirector _unitDirector;
-        private UnitPlaceDirector _unitPlaceDirector;
+
         [SerializeField] private Canvas damageCanvas;
         private PrefabPool<DamageWidget> _damageWidgetPool;
 
         private Queue<BattleContext> _battleContextQueue = new Queue<BattleContext>();
         private bool _isPlaying;
         private SkillDirector _skillDirector;
-        private ShopDirector _shopDirector;
+       
 
         private Dictionary<UnitCore, int> _hitCountMap = new Dictionary<UnitCore, int>();
 
@@ -34,17 +34,14 @@ namespace DiceBound
         {
             _damageWidgetPool = new PrefabPool<DamageWidget>(PrefabManager.CachePrefab<DamageWidget>(), damageCanvas.transform, 20);
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
-            _unitPlaceDirector = DirectorFacade.GetDirector<UnitPlaceDirector>();
-            _skillDirector = DirectorFacade.GetDirector<SkillDirector>();
-            _shopDirector = DirectorFacade.GetDirector<ShopDirector>();
+             _skillDirector = DirectorFacade.GetDirector<SkillDirector>();
             yield return null;
         }
 
         public void BeginBattle()
         {
             _isPlaying = true;
-            _unitPlaceDirector.SetEnable(false);
-            _shopDirector.SetEnable(false);
+            
             var units = _unitDirector.GetAllUnit();
             foreach (var unit in units)
             {
@@ -55,8 +52,7 @@ namespace DiceBound
         public void EndBattle()
         {
             _isPlaying = false;
-            _unitPlaceDirector.SetEnable(true);
-            _shopDirector.SetEnable(true);
+         
             var units = _unitDirector.GetAllUnit();
             foreach (var unit in units)
             {

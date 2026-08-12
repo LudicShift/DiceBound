@@ -111,6 +111,7 @@ namespace DiceBound
 
         public void Setup(UnitDataTableRow data)
         {
+            _tier = 0;
             _data = data;
             group = data.group;
             attackType = data.attackType;
@@ -132,6 +133,14 @@ namespace DiceBound
             _statAgent.SetBaseValue("dex", data.dex);
             _statAgent.SetBaseValue("mdf", data.mdf);
             _statAgent.SetBaseValue("hp", data.hp);
+            _statAgent.ClearStatModifier("str");
+            _statAgent.ClearStatModifier("spd");
+            _statAgent.ClearStatModifier("def");
+            _statAgent.ClearStatModifier("mag");
+            _statAgent.ClearStatModifier("con");
+            _statAgent.ClearStatModifier("dex");
+            _statAgent.ClearStatModifier("mdf");
+            _statAgent.ClearStatModifier("hp");
             hp = StatUtility.GetMaxHp(_statAgent);
         }
 

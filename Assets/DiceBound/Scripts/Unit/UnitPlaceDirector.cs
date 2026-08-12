@@ -25,7 +25,9 @@ namespace DiceBound
         [SerializeField] private UnitPlaceGrid allyGrid;
         [SerializeField] private UnitPlaceGrid enemyGrid;
         private UnitTrashCan _trashCan;
-        
+        [SerializeField] private Color unitColor1;
+        [SerializeField] private Color unitColor2;
+
 
         public override IEnumerator OnInitialize()
         {
@@ -144,7 +146,7 @@ namespace DiceBound
                 }
                 _hoveredCell = result.GetComponent<UnitPlaceCell>();
                 var unit = _hoveredCell.GetUnit();
-                unit?.SetHighlight(true,Color.gray,0);
+                unit?.SetHighlight(true,unitColor2,0);
             }
             else
             {
@@ -168,7 +170,7 @@ namespace DiceBound
                     _hoveredUnit.SetHighlight(false);
                 }
                 _hoveredUnit = result.GetComponent<UnitCore>();
-                _hoveredUnit.SetHighlight(true,Color.white);
+                _hoveredUnit.SetHighlight(true,unitColor1);
             }
             else
             {
