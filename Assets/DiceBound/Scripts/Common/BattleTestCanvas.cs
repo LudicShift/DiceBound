@@ -26,6 +26,7 @@ namespace DiceBound
         [SerializeField] private TMP_Dropdown allyDropdown;
         [SerializeField] private TMP_Dropdown enemyDropdown;
         [SerializeField] private TMP_Dropdown effectDropdown;
+        [SerializeField] private TMP_Dropdown attackClipDropdown;
 
         [Header("Status")]
         [SerializeField] private TextMeshProUGUI statusLabel;
@@ -37,6 +38,7 @@ namespace DiceBound
         public event Action<int> onAllySelected;
         public event Action<int> onEnemySelected;
         public event Action<int> onEffectSelected;
+        public event Action<int> onAttackClipSelected;
 
         public float Interval
         {
@@ -62,6 +64,7 @@ namespace DiceBound
             if (allyDropdown) allyDropdown.onValueChanged.AddListener(i => { if (onAllySelected != null) onAllySelected(i); });
             if (enemyDropdown) enemyDropdown.onValueChanged.AddListener(i => { if (onEnemySelected != null) onEnemySelected(i); });
             if (effectDropdown) effectDropdown.onValueChanged.AddListener(i => { if (onEffectSelected != null) onEffectSelected(i); });
+            if (attackClipDropdown) attackClipDropdown.onValueChanged.AddListener(i => { if (onAttackClipSelected != null) onAttackClipSelected(i); });
         }
 
         public void SetUnitOptions(List<string> options, int allyIndex, int enemyIndex)
@@ -73,6 +76,11 @@ namespace DiceBound
         public void SetEffectOptions(List<string> options, int index)
         {
             FillDropdown(effectDropdown, options, index);
+        }
+
+        public void SetAttackClipOptions(List<string> options, int index)
+        {
+            FillDropdown(attackClipDropdown, options, index);
         }
 
         public void SetInterval(float value)

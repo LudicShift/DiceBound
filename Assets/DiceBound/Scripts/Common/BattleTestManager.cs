@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using KCoreKit;
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor.Animations;
+#endif
 
 namespace DiceBound
 {
@@ -37,6 +40,8 @@ namespace DiceBound
         private int _allyIndex;
         private int _enemyIndex;
         private int _effectIndex;
+        private int _attackClipIndex;
+        private readonly List<string> _allyClipNames = new List<string>();
 
         public void Start()
         {
@@ -109,6 +114,7 @@ namespace DiceBound
             canvas.onAllySelected += index => { _allyIndex = index; ApplyAppearance(); };
             canvas.onEnemySelected += index => { _enemyIndex = index; ApplyAppearance(); };
             canvas.onEffectSelected += index => _effectIndex = index;
+            canvas.onAttackClipSelected += index => _attackClipIndex = index;
         }
 
         private void ApplyAppearance()
@@ -130,6 +136,33 @@ namespace DiceBound
                 _enemy.FlipSprite(true);
                 _enemy.Animate("Idle");
             }
+
+            RefreshAttackClipOptions(allyRow);
+        }
+
+        /// <summary>선택된 아군 유닛의 AnimatorController에 실제로 존재하는 모든 애니메이션 상태를 드롭다운에 채운다.</summary>
+        private void RefreshAttackClipOptions(UnitDataTableRow allyRow)
+        {
+            _allyClipNames.Clear();
+
+#if UNITY_EDITOR
+            var controller = allyRow ? allyRow.animator as AnimatorController : null;
+            if (controller != null)
+            {
+                foreach (var layer in controller.layers)
+                {
+                    foreach (var state in layer.stateMachine.states)
+                    {
+                        if (!_allyClipNames.Contains(state.state.name)) _allyClipNames.Add(state.state.name);
+                    }
+                }
+            }
+#endif
+
+            if (_allyClipNames.Count == 0) _allyClipNames.Add("Attack");
+
+            _attackClipIndex = Mathf.Clamp(_attackClipIndex, 0, _allyClipNames.Count - 1);
+            if (canvas) canvas.SetAttackClipOptions(_allyClipNames, _attackClipIndex);
         }
 
         private UnitDataTableRow GetUnitRow(int index)
@@ -196,7 +229,9 @@ namespace DiceBound
         private void FireOnce()
         {
             if (!_ally || !_enemy) return;
-            _ally.ShowAttackAnimation(LaunchEffect);
+            if (_allyClipNames.Count == 0) return;
+            var clip = _allyClipNames[Mathf.Clamp(_attackClipIndex, 0, _allyClipNames.Count - 1)];
+            _ally.ShowAttackAnimation(LaunchEffect, clip);
         }
 
         private void LaunchEffect()
