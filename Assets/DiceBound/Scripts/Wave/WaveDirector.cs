@@ -18,8 +18,7 @@ namespace DiceBound
         [SerializeField] private TweenAnimationPlayer waveLabelDisappearTween;
         [SerializeField] private TextWidget waveTextWidget;
         [SerializeField] private ButtonWidget playWaveButtonWidget;
-        [SerializeField] private ButtonWidget titleButtonWidget;
-
+     
         private int _currentWave;
 
         private UnitDirector _unitDirector;
@@ -27,11 +26,14 @@ namespace DiceBound
         private BattleDirector _battleDirector;
         [SerializeField]
         private Canvas gameOverCanvas;
+        
+        [SerializeField]
+        private Canvas gameClearCanvas;
 
         private WalletDirector _walletDirector;
         private ShopDirector _shopDirector;
         private UnitPlaceDirector _unitPlaceDirector;
-        
+
         public override IEnumerator OnInitialize()
         {
             _unitPlaceDirector = DirectorFacade.GetDirector<UnitPlaceDirector>();
@@ -42,17 +44,14 @@ namespace DiceBound
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
             
             playWaveButtonWidget.onClickAction+=OnPlayWaveButtonClick;
-            titleButtonWidget.onClickAction+=OnTitleButtonClick;
+        
             
             _waveDictionary = DataTableManager.FindAllRows<WaveDataTableRow>().ToDictionary(x=>x.index);
             _waveEnemyPoolDictionary = DataTableManager.FindAllRows<WaveEnemyPoolDataTableRow>().GroupBy(x=>x.index).ToDictionary(x=>x.Key, x=>x.ToList());
             yield return null;
         }
 
-        private void OnTitleButtonClick()
-        {
-            LoadingManager.LoadScene("TitleScene");
-        }
+   
 
         private void OnPlayWaveButtonClick()
         {
@@ -75,7 +74,7 @@ namespace DiceBound
             var wave = _waveDictionary[index];
             if (wave == null)
             {
-                ShowGameOver();
+                ShowGameClear();
             }
             else
             {
@@ -113,6 +112,11 @@ namespace DiceBound
                 _unitPlaceDirector.SetEnable(true);
                 _shopDirector.SetEnable(true);
             }
+        }
+
+        private void ShowGameClear()
+        {
+            gameClearCanvas.gameObject.SetActive(true);
         }
 
         private void ShowGameOver()
