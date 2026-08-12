@@ -27,5 +27,7 @@ namespace DiceBound
         public string effectKey;
         public int targetCount;
         public string animClip;
+        public int priority;
+        public float startUpDelay;
     }
 }

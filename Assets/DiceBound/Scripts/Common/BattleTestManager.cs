@@ -31,6 +31,8 @@ namespace DiceBound
 
         [Header("Playback")]
         [SerializeField] private float interval = 1f;
+        [Tooltip("공격 애니메이션 시작 후 이펙트가 발사되기까지의 지연")]
+        [SerializeField] private float startUpDelay;
 
         private UnitCore _ally;
         private UnitCore _enemy;
@@ -105,12 +107,14 @@ namespace DiceBound
             canvas.SetUnitOptions(unitNames, _allyIndex, _enemyIndex);
             canvas.SetEffectOptions(effectNames, _effectIndex);
             canvas.SetInterval(interval);
+            canvas.SetStartUpDelay(startUpDelay);
             canvas.SetPaused(false);
 
             canvas.onPlay += OnPlay;
             canvas.onPause += OnPause;
             canvas.onStop += OnStop;
             canvas.onIntervalChanged += value => interval = value;
+            canvas.onStartUpDelayChanged += value => startUpDelay = value;
             canvas.onAllySelected += index => { _allyIndex = index; ApplyAppearance(); };
             canvas.onEnemySelected += index => { _enemyIndex = index; ApplyAppearance(); };
             canvas.onEffectSelected += index => _effectIndex = index;
@@ -231,16 +235,21 @@ namespace DiceBound
             if (!_ally || !_enemy) return;
             if (_allyClipNames.Count == 0) return;
             var clip = _allyClipNames[Mathf.Clamp(_attackClipIndex, 0, _allyClipNames.Count - 1)];
-            _ally.ShowAttackAnimation(LaunchEffect, clip);
+            //_ally.ShowAttackAnimation(LaunchEffect, clip);
+            _ally.PlayAttackAnimation(clip);
+            StartCoroutine(LaunchEffect(startUpDelay));
+
         }
 
-        private void LaunchEffect()
+        private IEnumerator LaunchEffect(float startUpDelay)
         {
+            
+            yield return  new WaitForSeconds(startUpDelay);
             var prefab = GetEffectPrefab();
             if (!prefab)
             {
                 StartCoroutine(PlayHitAfter(0f));
-                return;
+                yield break;
             }
 
             var effect = Instantiate(prefab, _ally.transform.position, Quaternion.identity);

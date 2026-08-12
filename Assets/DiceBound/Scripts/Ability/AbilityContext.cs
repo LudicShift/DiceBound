@@ -8,7 +8,9 @@ namespace DiceBound
         public string skillEffectKey;
         public SkillTargetOption targetOption;
         public float castTime;
+        public float priority;
         public int targetCount;
         public string animClip;
+        public float startUpDelay;
     }
 }

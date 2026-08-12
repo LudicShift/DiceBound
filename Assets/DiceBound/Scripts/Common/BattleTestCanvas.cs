@@ -22,6 +22,10 @@ namespace DiceBound
         [SerializeField] private Slider intervalSlider;
         [SerializeField] private TextMeshProUGUI intervalValueLabel;
 
+        [Header("StartUp Delay")]
+        [SerializeField] private Slider startUpDelaySlider;
+        [SerializeField] private TextMeshProUGUI startUpDelayValueLabel;
+
         [Header("Selection")]
         [SerializeField] private TMP_Dropdown allyDropdown;
         [SerializeField] private TMP_Dropdown enemyDropdown;
@@ -35,6 +39,7 @@ namespace DiceBound
         public event Action onPause;
         public event Action onStop;
         public event Action<float> onIntervalChanged;
+        public event Action<float> onStartUpDelayChanged;
         public event Action<int> onAllySelected;
         public event Action<int> onEnemySelected;
         public event Action<int> onEffectSelected;
@@ -43,6 +48,11 @@ namespace DiceBound
         public float Interval
         {
             get { return intervalSlider ? intervalSlider.value : 1f; }
+        }
+
+        public float StartUpDelay
+        {
+            get { return startUpDelaySlider ? startUpDelaySlider.value : 0f; }
         }
 
         public void Awake()
@@ -59,6 +69,16 @@ namespace DiceBound
                     if (onIntervalChanged != null) onIntervalChanged(value);
                 });
                 UpdateIntervalLabel(intervalSlider.value);
+            }
+
+            if (startUpDelaySlider)
+            {
+                startUpDelaySlider.onValueChanged.AddListener(value =>
+                {
+                    UpdateStartUpDelayLabel(value);
+                    if (onStartUpDelayChanged != null) onStartUpDelayChanged(value);
+                });
+                UpdateStartUpDelayLabel(startUpDelaySlider.value);
             }
 
             if (allyDropdown) allyDropdown.onValueChanged.AddListener(i => { if (onAllySelected != null) onAllySelected(i); });
@@ -90,6 +110,13 @@ namespace DiceBound
             UpdateIntervalLabel(value);
         }
 
+        public void SetStartUpDelay(float value)
+        {
+            if (!startUpDelaySlider) return;
+            startUpDelaySlider.SetValueWithoutNotify(value);
+            UpdateStartUpDelayLabel(value);
+        }
+
         public void SetPaused(bool paused)
         {
             if (pauseLabel) pauseLabel.text = paused ? "Resume" : "Pause";
@@ -115,6 +142,11 @@ namespace DiceBound
         private void UpdateIntervalLabel(float value)
         {
             if (intervalValueLabel) intervalValueLabel.text = value.ToString("0.00") + "s";
+        }
+
+        private void UpdateStartUpDelayLabel(float value)
+        {
+            if (startUpDelayValueLabel) startUpDelayValueLabel.text = value.ToString("0.00") + "s";
         }
     }
 }

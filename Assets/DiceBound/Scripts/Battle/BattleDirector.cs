@@ -88,10 +88,20 @@ namespace DiceBound
                     yield break;
                 }
 
+                var currentBattleContext = context.self.battleContext;
+                if ( currentBattleContext != null && currentBattleContext.priority <  context.priority)
+                {
+                    yield break;
+                }
+                context.self.battleContext = context;
+                context.self.PlayAttackAnimation(context.self.battleContext.animClip);
+
+                
                 var effect = _skillDirector.GetSkillEffect(context.skillEffectKey);
                 effect.SetPosition(context.self.transform.position);
 
-                effect.Play(context.target, x => { _skillDirector.Release(context.skillEffectKey, x); });
+                yield return new WaitForSeconds(context.startUpDelay);
+                yield return effect.Play(context.target, x => { _skillDirector.Release(context.skillEffectKey, x); }).WaitForCompletion();
 
                 if (!context.self || !_unitDirector.IsAlive(context.self)) yield break;
 

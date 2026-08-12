@@ -20,6 +20,9 @@ namespace DiceBound
         private float _timeElapsed;
         private readonly SkillDataTableRow _data;
         private SkillTargetOption _targetOption;
+        private readonly int _priority;
+        private readonly string _animClip;
+        private readonly float _startUpDelay;
 
 
         public Skill(SkillDataTableRow data)
@@ -28,9 +31,13 @@ namespace DiceBound
             type = data.skillType;
             name = data.nameKey;
             desc = data.descKey;
+            _priority = data.priority;
             _abilityId = data.abilityId;
             effectKey = data.effectKey;
             _castTime = data.castTime;
+            _ = data.cooldown;
+            _animClip =  _data.animClip;
+            _startUpDelay = _data.startUpDelay;
             _cooldown = data.cooldown;
             _targetCount = data.targetCount;
             _targetOption = data.targetOption;
@@ -46,9 +53,11 @@ namespace DiceBound
                 self =  owner,
                 skillEffectKey= effectKey,
                 castTime = _castTime,
+                priority = _priority,
                 targetCount = _targetCount,
                 targetOption = _targetOption,
-                animClip = string.IsNullOrEmpty(_data.animClip) ? "Attack" : _data.animClip,
+                animClip = _animClip,
+                startUpDelay = _startUpDelay,
             };
         }
 

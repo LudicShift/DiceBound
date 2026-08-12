@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-2243197049464668157
+--- !u!114 &-7532592952434315835
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -16,7 +16,7 @@ MonoBehaviour:
   tags: []
   isEnable: 1
   actionFunctionName: Heal
---- !u!114 &-1024431741081989251
+--- !u!114 &-5101514005165390983
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -26,13 +26,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 598896e4bb5e41349532ce8273b14f81, type: 3}
-  m_Name: MagicAttack
+  m_Name: MeleeAttack
   m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityActionDataTableRow
-  id: MagicAttack
+  id: MeleeAttack
   tags: []
   isEnable: 1
-  actionFunctionName: MagicAttack
---- !u!114 &-424674744584900694
+  actionFunctionName: MeleeAttack
+--- !u!114 &-2765241017700004776
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,11 +65,11 @@ MonoBehaviour:
   rowTypeName: KCoreKit.AbilityActionDataTableRow, KCoreKit, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   dataList:
-  - {fileID: 4524282669058428293}
-  - {fileID: -424674744584900694}
-  - {fileID: -1024431741081989251}
-  - {fileID: -2243197049464668157}
---- !u!114 &4524282669058428293
+  - {fileID: -5101514005165390983}
+  - {fileID: -2765241017700004776}
+  - {fileID: 4414340741540106301}
+  - {fileID: -7532592952434315835}
+--- !u!114 &4414340741540106301
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -79,9 +79,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 598896e4bb5e41349532ce8273b14f81, type: 3}
-  m_Name: MeleeAttack
+  m_Name: MagicAttack
   m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityActionDataTableRow
-  id: MeleeAttack
+  id: MagicAttack
   tags: []
   isEnable: 1
-  actionFunctionName: MeleeAttack
+  actionFunctionName: MagicAttack

@@ -48,6 +48,7 @@ namespace DiceBound
         private string _lastAttackAnim = "Attack";
 
         [HideInInspector] public TooltipProvider tooltipProvider;
+        public BattleContext battleContext;
 
 
         public void Awake()
@@ -335,12 +336,11 @@ namespace DiceBound
         }
 
 
-        public void ShowAttackAnimation(Action attackAction, string clip = "Attack")
+        public void PlayAttackAnimation(string clip = "Attack")
         {
             _lastAttackAnim = string.IsNullOrEmpty(clip) ? "Attack" : clip;
             Animate(_lastAttackAnim);
             StartCoroutine(attackSequence.Play());
-            attackAction.Invoke();
         }
 
         private void OnAnimationCallback(AnimatorStateInfo info)
@@ -454,5 +454,7 @@ namespace DiceBound
             StartCoroutine(dodgeSequence.Play());
             onDodgeAction?.Invoke(this);
         }
+
+       
     }
 }
