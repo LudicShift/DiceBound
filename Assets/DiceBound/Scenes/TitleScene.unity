@@ -294,6 +294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.Title.TitleDirector
   newGameButton: {fileID: 1970083881}
   quitButton: {fileID: 926188736}
+  mainDiscordButton: {fileID: 2047783706}
 --- !u!1 &97070559
 GameObject:
   m_ObjectHideFlags: 0
@@ -1850,6 +1851,8 @@ GameObject:
   - component: {fileID: 2047783705}
   - component: {fileID: 2047783704}
   - component: {fileID: 2047783703}
+  - component: {fileID: 2047783707}
+  - component: {fileID: 2047783706}
   m_Layer: 5
   m_Name: Discord Button
   m_TagString: Untagged
@@ -1958,6 +1961,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2047783701}
   m_CullTransparentMesh: 1
+--- !u!114 &2047783706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047783701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
+--- !u!225 &2047783707
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047783701}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &607850275896792097
 GameObject:
   m_ObjectHideFlags: 0
