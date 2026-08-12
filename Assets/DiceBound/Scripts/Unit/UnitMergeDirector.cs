@@ -48,7 +48,7 @@ namespace DiceBound
                 StartCoroutine(unit.ShowUpgradeEffect());
             }
 
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.1f);
 
             var mainUnit = unitList[0];
             unitList.Remove(mainUnit);
@@ -56,15 +56,15 @@ namespace DiceBound
             int count = 0;
             for (int i = 0; i < unitList.Count; i++)
             {
-                unitList[i].Move(mainUnit.transform.position).SetDelay(i * 0.3f).OnComplete(() =>
+                unitList[i].Move(mainUnit.transform.position).OnComplete(() =>
                 {
-                    mainUnit.transform.DOScale(0.2f, 0.1f).SetRelative().SetEase(Ease.OutBack);
+                    mainUnit.transform.DOScale(0.2f, 0.05f).SetRelative().SetEase(Ease.OutBack);
                     count++;
                 });
             }
 
             yield return new WaitUntil(() => count == unitList.Count);
-            yield return new  WaitForSeconds(0.2f);
+            yield return new  WaitForSeconds(0.05f);
 
             foreach (var unit in unitList)
             {
@@ -72,7 +72,7 @@ namespace DiceBound
                 _unitDirector.RemoveAllyUnit(unit);
             }
 
-            yield return mainUnit.transform.DOScale(1, 0.3f).WaitForCompletion();
+            yield return mainUnit.transform.DOScale(1, 0.05f).WaitForCompletion();
             yield return mainUnit.HideUpgradeEffect();
             mainUnit.Upgrade();
             OnSpawnAlly(mainUnit);
