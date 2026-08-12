@@ -83,7 +83,7 @@ namespace DiceBound
                 int enemyCount = 0;
                 while (enemyCount < wave.numberOfEnemy)
                 {
-                    _unitDirector.SpawnUnit(PickEnemy(wave.index));
+                    _unitDirector.SpawnUnit(PickEnemy(wave.index),wave.enemyStarTier);
                     enemyCount++;
                 }
                 

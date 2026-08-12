@@ -111,7 +111,7 @@ namespace DiceBound
             return result;
         }
 
-        public void Setup(UnitDataTableRow data)
+        public void Setup(UnitDataTableRow data, int tier = 0)
         {
             _tier = 0;
             _data = data;
@@ -138,6 +138,10 @@ namespace DiceBound
             _statAgent.ClearStatModifier("mdf");
             _statAgent.ClearStatModifier("hp");
             hp = StatUtility.GetMaxHp(_statAgent);
+            for (int i = 0; i < tier; i++)
+            {
+                Upgrade();
+            }
         }
 
 

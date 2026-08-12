@@ -116,7 +116,7 @@ namespace DiceBound
             return _maxAllyNumber <= _allies.Count;
         }
 
-        public void SpawnUnit(string unitId)
+        public void SpawnUnit(string unitId,int tier = 0)
         {
             var data = _unitDataDictionary[unitId];
             UnitCore instance;
@@ -129,11 +129,11 @@ namespace DiceBound
                 instance = _enemyPrefabPool.Get();
             }
 
-            instance.Setup(data);
+            instance.Setup(data,tier);
             instance.BindHpGauge(_hpGaugePrefabPool.Get());
-         
+            instance.BindTierLabel(_tierLabelPrefabPool.Get());
+            
             instance.Animate("Idle");
-
             instance.BindSkill(_skillDirector.GetSkill(data.skillBasicKey));
             instance.BindSkill(_skillDirector.GetSkill(data.skillActiveKey));
             instance.BindSkill(_skillDirector.GetSkill(data.skillPassiveKey));
@@ -149,7 +149,7 @@ namespace DiceBound
                 case UnitGroup.Ally:
                     _allies.Add(instance);
                     instance.PlayAppear(()=>onSpawnAlly.Invoke(instance));
-                    instance.BindTierLabel(_tierLabelPrefabPool.Get());
+                    
                     instance.FlipSprite(false);
                     UpdateAllyCountText();
                     break;

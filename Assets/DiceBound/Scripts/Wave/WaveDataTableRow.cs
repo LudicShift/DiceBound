@@ -7,5 +7,6 @@ namespace DiceBound
         public int index;
         public int numberOfEnemy;
         public int waveRewardGold;
+        public int enemyStarTier;
     }
 }
