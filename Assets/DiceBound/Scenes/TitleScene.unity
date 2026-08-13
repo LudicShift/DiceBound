@@ -379,7 +379,7 @@ MonoBehaviour:
   _stopOnDisable: 1
   _overrideFadeOut: -1
   _sound:
-    _entity: {fileID: 11400000, guid: 6ee4437e7ecf99a45a9e25c249723efe, type: 2}
+    _entity: {fileID: 11400000, guid: 25fe3aed1a8046642b14c29458ddb235, type: 2}
     ID: 0
     <DebugObject>k__BackingField: {fileID: 69393956}
   _overrideGroup: {fileID: 0}
@@ -1712,6 +1712,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
+  clickSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!225 &926188737
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3138,6 +3142,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
+  clickSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!225 &1619413747
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -4398,6 +4406,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
+  clickSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!225 &1970083882
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -4619,6 +4631,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
+  clickSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!225 &2047783707
 CanvasGroup:
   m_ObjectHideFlags: 0
