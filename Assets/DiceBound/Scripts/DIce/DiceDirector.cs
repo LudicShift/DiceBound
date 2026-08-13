@@ -45,14 +45,17 @@ namespace DiceBound
         private List<DiceWidget> _remainDices;
         private string _noCombinationText;
         private SoundDirector _soundDirector;
+        private UnitPlaceDirector _unitPlaceDirector;
 
         public void ShowCanvas()
         {
+            _unitPlaceDirector.SetEnable(false);
             canvas.gameObject.SetActive(true);
         }
 
         public void HideCanvas()
         {
+            _unitPlaceDirector.SetEnable(true);
             canvas.gameObject.SetActive(false);
         }
         
@@ -150,7 +153,8 @@ namespace DiceBound
             _keepDices = new List<DiceWidget>();
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
             _walletDirector = DirectorFacade.GetDirector<WalletDirector>();
-            
+            _unitPlaceDirector = DirectorFacade.GetDirector<UnitPlaceDirector>();
+
             _soundDirector = DirectorFacade.GetDirector<SoundDirector>();
             _remainDices = canvas.GetComponentsInChildren<DiceWidget>(true).ToList();
             _remainPoints = remainPointGroup.GetComponentsInChildren<DicePointWidget>(true).ToList();

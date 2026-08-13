@@ -16,9 +16,11 @@ namespace DiceBound
         private DiceDirector _diceDirector;
         private bool _isEnable = true;
         private UnitDirector _unitDirector;
+        private UnitPlaceDirector _unitPlaceDirector;
 
         public override IEnumerator OnInitialize()
         {
+            _unitPlaceDirector = DirectorFacade.GetDirector<UnitPlaceDirector>();
             _diceDirector = DirectorFacade.GetDirector<DiceDirector>();
             _walletDirector = DirectorFacade.GetDirector<WalletDirector>();
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
@@ -30,6 +32,7 @@ namespace DiceBound
 
         public void OnRollDiceButtonClick()
         {
+            
             if (_walletDirector.HasGold(rollDiceCost) && !_unitDirector.IsAllyFull())
             {
                 _walletDirector.SpendGold(rollDiceCost);
@@ -43,12 +46,14 @@ namespace DiceBound
         private void HideCanvas()
         {
             canvas.gameObject.SetActive(false);
+            _unitPlaceDirector.SetEnable(true);
         }
 
         private void ShowCanvas()
         {
             if (_isEnable)
             {
+                _unitPlaceDirector.SetEnable(false);
                 canvas.gameObject.SetActive(true);
             }
         }

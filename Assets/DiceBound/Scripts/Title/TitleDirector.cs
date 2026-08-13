@@ -50,8 +50,13 @@ namespace DiceBound
 
         private void OnNewGameButtonClick()
         {
-            SceneManager.LoadScene("BattleScene");
+            LoadingCanvas.FadeOut(() =>
+            {
+                LoadingManager.LoadScene("BattleScene",()=>LoadingCanvas.FadeIn());
+            });
         }
+
+      
         private void OnMainDiscordButtonClick()
         {
             Application.OpenURL("https://discord.gg/KMwkWV8wW7");

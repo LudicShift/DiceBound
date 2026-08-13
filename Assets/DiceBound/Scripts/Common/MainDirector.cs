@@ -39,10 +39,11 @@ namespace DiceBound
         
         private void OnTitleButtonClick()
         {
-            LoadingManager.LoadScene("TitleScene");
+            LoadingCanvas.FadeOut(() =>
+            {
+                LoadingManager.LoadScene("TitleScene",()=>LoadingCanvas.FadeIn());
+            });
         }
-        
-     
         
         private void OnGameOverDiscordButtonClick()
         {
