@@ -116,5 +116,36 @@ namespace DiceBound
             var cell = _cells.Find(x => x.GetUnit() == unit);
             cell?.RemoveUnit();
         }
+
+        public List<UnitCore> GetGeneralTargets(int count)
+        {
+            var result = new List<UnitCore>();
+            var unitCells = _cells.FindAll(x => !x.IsEmpty());
+
+            for (int i = 0; i < count; i++)
+            {
+                if (unitCells.Count == 0)
+                {
+                    break;
+                }
+                
+                var weightSum = unitCells.Sum(x => 2-x.distance);
+                float current = 0;
+                var randomValue = Random.Range(0, weightSum);
+                foreach (var cell in unitCells)
+                {
+                    current += 2-cell.distance;
+                    if (randomValue < current)
+                    {
+                        result.Add(cell.GetUnit());
+                        unitCells.Remove(cell);
+                        break;
+                    }
+                }
+            }
+
+            return result;
+
+        }
     }
 }

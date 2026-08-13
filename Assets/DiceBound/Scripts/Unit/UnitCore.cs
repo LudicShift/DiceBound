@@ -455,6 +455,15 @@ namespace DiceBound
             StartCoroutine(dodgeSequence.Play());
             onDodgeAction?.Invoke(this);
         }
-        
+
+        public float GetHpRate()
+        {
+            return hp / _statAgent.GetStat("hp").Value;
+        }
+
+        public float GetHp()
+        {
+            return hp;
+        }
     }
 }

@@ -8,11 +8,20 @@ namespace DiceBound
         Active,
         Passive
     }
-    public enum SkillTargetOption
+    public enum SkillTargetGroup
     {
         Ally,
         Enemy,
         Self
+    }
+            
+    public enum SkillTargetOption
+    {
+        General,
+        Weak,
+        Strong,
+        LessHp,
+        Random
     }
         
     public class SkillDataTableRow : DataTableRowBase
@@ -23,12 +32,14 @@ namespace DiceBound
         public string abilityId;
         public float cooldown;
         public float castTime;
-        public SkillTargetOption targetOption;
         public string effectKey;
         public int targetCount;
         public string animClip;
         public int priority;
         public float startUpDelay;
+        
+        public SkillTargetGroup targetGroup;
+        public SkillTargetOption targetOption;
        
     }
 }

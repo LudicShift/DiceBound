@@ -138,7 +138,7 @@ namespace DiceBound
             if (skillDictionary != null && !string.IsNullOrEmpty(attacker.data.skillBasicKey) &&
                 skillDictionary.TryGetValue(attacker.data.skillBasicKey, out var basicSkill))
             {
-                if (basicSkill.targetOption != SkillTargetOption.Enemy) return 0f;
+                if (basicSkill.targetGroup != SkillTargetGroup.Enemy) return 0f;
                 attackType = GetAbilityAttackType(basicSkill.abilityId, attackType);
             }
 
@@ -150,7 +150,7 @@ namespace DiceBound
         public static float GetActiveSkillDps(BalanceUnit attacker, SkillDataTableRow skill, List<BalanceUnit> opposingTeam)
         {
             if (skill == null || !skill.isEnable || skill.skillType != SkillType.Active) return 0f;
-            if (skill.targetOption != SkillTargetOption.Enemy) return 0f;
+            if (skill.targetGroup != SkillTargetGroup.Enemy) return 0f;
             if (skill.cooldown <= 0f) return 0f;
             if (opposingTeam == null || opposingTeam.Count == 0) return 0f;
 
@@ -242,14 +242,14 @@ namespace DiceBound
                 if (skillDictionary != null && !string.IsNullOrEmpty(u.data.skillBasicKey) &&
                     skillDictionary.TryGetValue(u.data.skillBasicKey, out var basicSkill))
                 {
-                    if (basicSkill.targetOption != SkillTargetOption.Enemy) su.nextAttackTime = float.MaxValue;
+                    if (basicSkill.targetGroup != SkillTargetGroup.Enemy) su.nextAttackTime = float.MaxValue;
                     else su.basicAttackType = GetAbilityAttackType(basicSkill.abilityId, u.data.attackType);
                 }
 
                 if (skillDictionary != null && !string.IsNullOrEmpty(u.data.skillActiveKey) &&
                     skillDictionary.TryGetValue(u.data.skillActiveKey, out var skill) &&
                     skill.isEnable && skill.skillType == SkillType.Active &&
-                    skill.targetOption == SkillTargetOption.Enemy && skill.cooldown > 0f)
+                    skill.targetGroup == SkillTargetGroup.Enemy && skill.cooldown > 0f)
                 {
                     su.nextSkillTime = skill.cooldown;
                     su.skillTargetCount = Mathf.Max(1, skill.targetCount);

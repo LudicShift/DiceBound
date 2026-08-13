@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using Ami.BroAudio;
 using KCoreKit;
 using UnityEngine;
@@ -212,6 +213,20 @@ namespace DiceBound
                 case UnitGroup.Enemy:
                     enemyGrid.RemoveUnit(unit);
                     break;
+            }
+        }
+
+        public List<UnitCore> GetGeneralTargets(UnitGroup group, int count)
+        {
+            switch (group)
+            {
+                case UnitGroup.Ally:
+                    return allyGrid.GetGeneralTargets(count);
+                    break;
+                case UnitGroup.Enemy:
+                    return allyGrid.GetGeneralTargets(count);
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(group), group, null);
             }
         }
     }

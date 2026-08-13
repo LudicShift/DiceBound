@@ -16,7 +16,7 @@ namespace DiceBound
 
         public static void MeleeAttack(AbilityEffect effect, AbilityActionDataTableRow data, ref AbilityContext context)
         {
-            var targetList = _unitDirector.GetTarget(context.self, context.targetOption, context.targetCount);
+            var targetList = _unitDirector.GetTarget(context.self, context.targetGroup,context.targetOption, context.targetCount);
             var abilityContext = context;
             var statAgent = abilityContext.self.GetStatAgent();
             foreach (var target in targetList)
@@ -55,7 +55,7 @@ namespace DiceBound
         public static void RangedAttack(AbilityEffect effect, AbilityActionDataTableRow data,
             ref AbilityContext context)
         {
-            var targetList = _unitDirector.GetTarget(context.self, context.targetOption, context.targetCount);
+            var targetList = _unitDirector.GetTarget(context.self, context.targetGroup, context.targetOption, context.targetCount);
             var abilityContext = context;
             var statAgent = abilityContext.self.GetStatAgent();
             
@@ -78,7 +78,7 @@ namespace DiceBound
 
         public static void MagicAttack(AbilityEffect effect, AbilityActionDataTableRow data, ref AbilityContext context)
         {
-            var targetList = _unitDirector.GetTarget(context.self, context.targetOption, context.targetCount);
+            var targetList = _unitDirector.GetTarget(context.self, context.targetGroup, context.targetOption,context.targetCount);
             var abilityContext = context;
             var statAgent = abilityContext.self.GetStatAgent();
             
@@ -104,7 +104,7 @@ namespace DiceBound
         {
             
             
-            var targetList = _unitDirector.GetTarget(context.self, context.targetOption, context.targetCount);
+            var targetList = _unitDirector.GetTarget(context.self, context.targetGroup, context.targetOption, context.targetCount);
             var statAgent = context.self.GetStatAgent();
             
             foreach (var target in targetList)

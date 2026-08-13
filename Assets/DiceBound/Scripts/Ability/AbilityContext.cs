@@ -6,6 +6,7 @@ namespace DiceBound
     {
         public UnitCore self;
         public string skillEffectKey;
+        public SkillTargetGroup targetGroup;
         public SkillTargetOption targetOption;
         public float castTime;
         public float priority;

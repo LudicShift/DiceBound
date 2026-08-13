@@ -19,6 +19,7 @@ namespace DiceBound
         private int _targetCount;
         private float _timeElapsed;
         private readonly SkillDataTableRow _data;
+        private SkillTargetGroup _targetGroup;
         private SkillTargetOption _targetOption;
         private readonly int _priority;
         private readonly string _animClip;
@@ -40,6 +41,7 @@ namespace DiceBound
             _startUpDelay = _data.startUpDelay;
             _cooldown = data.cooldown;
             _targetCount = data.targetCount;
+            _targetGroup = data.targetGroup;
             _targetOption = data.targetOption;
         }
 
@@ -55,6 +57,7 @@ namespace DiceBound
                 castTime = _castTime,
                 priority = _priority,
                 targetCount = _targetCount,
+                targetGroup = _targetGroup,
                 targetOption = _targetOption,
                 animClip = _animClip,
                 startUpDelay = _startUpDelay,

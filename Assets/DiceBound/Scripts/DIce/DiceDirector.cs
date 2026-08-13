@@ -80,7 +80,10 @@ namespace DiceBound
         
         public void Roll()
         {
-            StartCoroutine(RollRoutine());
+            if (_remainDices.Count > 0)
+            {
+                StartCoroutine(RollRoutine());
+            }
         }
 
         private IEnumerator RollRoutine()

@@ -229,31 +229,66 @@ namespace DiceBound
             return _units;
         }
 
-        public List<UnitCore> GetTarget(UnitCore self, SkillTargetOption attackTarget, int count)
+        public List<UnitCore> GetTarget(UnitCore self, SkillTargetGroup targetGroup,SkillTargetOption targetOption, int count)
         {
-            switch (attackTarget)
+            
+            if (targetOption == SkillTargetOption.General)
             {
-                case SkillTargetOption.Ally:
-                    return self.group == UnitGroup.Ally ? GetRandomAllies(count) : GetRandomEnemies(count);
-                case SkillTargetOption.Enemy:
-                    return self.group == UnitGroup.Ally ? GetRandomEnemies(count) : GetRandomAllies(count);
-                case SkillTargetOption.Self:
+                
+            }
+            
+            switch (targetGroup)
+            {
+                case SkillTargetGroup.Ally:
+                    return self.group == UnitGroup.Ally ? GetTargetAllies(targetOption,count) : GetTargetEnemies(targetOption,count);
+                case SkillTargetGroup.Enemy:
+                    return self.group == UnitGroup.Ally ? GetTargetEnemies(targetOption,count) : GetTargetAllies(targetOption,count);
+                case SkillTargetGroup.Self:
                     return new List<UnitCore> { self };
             }
 
             return null;
         }
 
-        private List<UnitCore> GetRandomEnemies(int count)
+        private List<UnitCore> GetTargetEnemies(SkillTargetOption targetOption,int count)
         {
-            return _enemies.GetRandomElements(count);
+            switch (targetOption)
+            {
+                case  SkillTargetOption.General:
+                    return _unitPlaceDirector.GetGeneralTargets(UnitGroup.Enemy,count);
+                case SkillTargetOption.Weak:
+                    return _enemies.Where(x => !x.IsDead()).OrderBy(x=>x.GetHp()).Take(count).ToList();
+                case SkillTargetOption.Strong:
+                    return _enemies.Where(x => !x.IsDead()).OrderByDescending(x=>x.GetHp()).Take(count).ToList();
+                case SkillTargetOption.LessHp:
+                    return _enemies.Where(x => !x.IsDead()).OrderBy(x=>x.GetHpRate()).Take(count).ToList();
+                case SkillTargetOption.Random:
+                    return _enemies.Where(x => !x.IsDead()).ToList().GetRandomElements(count);
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(targetOption), targetOption, null);
+            }
         }
 
-        private List<UnitCore> GetRandomAllies(int count)
+        private List<UnitCore> GetTargetAllies(SkillTargetOption targetOption,int count)
         {
-            return _allies.Where(x => !x.IsDead()).ToList().GetRandomElements(count);
+            switch (targetOption)
+            {
+                case  SkillTargetOption.General:
+                    return _unitPlaceDirector.GetGeneralTargets(UnitGroup.Ally,count);
+                case SkillTargetOption.Weak:
+                    return _allies.Where(x => !x.IsDead()).OrderBy(x=>x.GetHp()).Take(count).ToList();
+                case SkillTargetOption.Strong:
+                    return _allies.Where(x => !x.IsDead()).OrderByDescending(x=>x.GetHp()).Take(count).ToList();
+                case SkillTargetOption.LessHp:
+                    return _allies.Where(x => !x.IsDead()).OrderBy(x=>x.GetHpRate()).Take(count).ToList();
+                case SkillTargetOption.Random:
+                    return _allies.Where(x => !x.IsDead()).ToList().GetRandomElements(count);
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(targetOption), targetOption, null);
+            }
         }
 
+        
         public int GetAllyUnitCount()
         {
             return _allies.Count;
