@@ -42,6 +42,7 @@ namespace DiceBound
         [SerializeField] private TweenAnimationPlayer deadSequence;
         [SerializeField] private TweenAnimationPlayer dodgeSequence;
         [SerializeField] private TweenAnimationPlayer pickSequence;
+        [SerializeField] private TweenAnimationPlayer dropSequence;
         private bool _isBattle;
         private AnimationCallbackBehaviour[] _callBackBehaviours;
         public UnitAttackType attackType;
@@ -54,6 +55,10 @@ namespace DiceBound
         public void OnPick()
         {
             StartCoroutine(pickSequence.Play());
+        } 
+        public void OnDrop()
+        {
+            StartCoroutine(dropSequence.Play());
         }
         public void Awake()
         {

@@ -86,6 +86,7 @@ namespace DiceBound
                         unit.SetHighlight(false);
                     }
                     _hoveredCell.PlaceUnit(_draggingUnit);
+                    _draggingUnit.OnDrop();
                 }
                 else
                 {
