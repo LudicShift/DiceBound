@@ -1,12 +1,12 @@
 id,nameKey,descKey,animator,group,attackType,grade,hp,str,con,dex,mag,def,mdf,spd,role,skillBasicKey,skillPassiveKey,skillActiveKey,maxSkillSlot,isEnable,height
-UN_SOLDIER,UN_SOLDIER_NAME,UN_SOLDIER_DESC,Animation/Soldier.controller,Ally,Melee,Common,150,15,12,10,0,10,5,100,Tank,SoldierBasicSkill,,SK_SOLDIER_T2,3,TRUE,100
-UN_ARCHER,UN_ARCHER_NAME,UN_ARCHER_DESC,Animation/Archer.controller,Ally,Ranged,Common,100,5,8,20,0,5,5,120,Ranged DPS,ArcherBasicSkill,,SK_ARCHER_T2,3,TRUE,100
-UN_SWORDSMAN,UN_SWORDSMAN_NAME,UN_SWORDSMAN_DESC,Animation/Swordsman.controller,Ally,Melee,Rare,220,25,15,15,0,15,10,110,Melee DPS,SwordmanBasicSkill,,SK_SWORDSMAN_T3,3,TRUE,100
-UN_LANCER,UN_LANCER_NAME,UN_LANCER_DESC,Animation/Lancer.controller,Ally,Melee,Rare,200,22,14,18,0,12,8,105,Melee DPS,LancerBasicSkill,,SK_LANCER_T2,3,TRUE,175
-UN_PRIEST,UN_PRIEST_NAME,UN_PRIEST_DESC,Animation/Priest.controller,Ally,Magic,Rare,120,5,10,10,25,8,20,90,Healer,PriestBasicSkill,,SK_PRIEST_T3,3,TRUE,100
-UN_AXEMAN,UN_AXEMAN_NAME,UN_AXEMAN_DESC,Animation/Armored Axeman.controller,Ally,Melee,Epic,400,40,30,10,0,30,15,80,Bruiser,AxemanBasicSkill,,SK_AXEMAN_T3,3,TRUE,100
-UN_WIZARD,UN_WIZARD_NAME,UN_WIZARD_DESC,Animation/Wizard.controller,Ally,Magic,Epic,150,5,10,15,50,8,30,95,Magic DPS,WizardBasicSkill,,SK_WIZARD_T2,3,TRUE,100
-UN_KNIGHT,UN_KNIGHT_NAME,UN_KNIGHT_DESC,Animation/Knight.controller,Ally,Melee,Epic,450,35,35,12,10,40,25,90,Tank,KnightBasicSkill,,SK_KNIGHT_T3,3,TRUE,100
+UN_SOLDIER,UN_SOLDIER_NAME,UN_SOLDIER_DESC,Animation/Soldier.controller,Ally,Melee,Common,250,15,12,10,0,10,5,100,Tank,SoldierBasicSkill,,SK_SOLDIER_T2,3,TRUE,100
+UN_ARCHER,UN_ARCHER_NAME,UN_ARCHER_DESC,Animation/Archer.controller,Ally,Ranged,Common,200,5,8,20,0,5,5,120,Ranged DPS,ArcherBasicSkill,,SK_ARCHER_T2,3,TRUE,100
+UN_SWORDSMAN,UN_SWORDSMAN_NAME,UN_SWORDSMAN_DESC,Animation/Swordsman.controller,Ally,Melee,Rare,300,25,15,15,0,15,10,110,Melee DPS,SwordmanBasicSkill,,SK_SWORDSMAN_T3,3,TRUE,100
+UN_LANCER,UN_LANCER_NAME,UN_LANCER_DESC,Animation/Lancer.controller,Ally,Melee,Rare,350,22,14,18,0,12,8,105,Melee DPS,LancerBasicSkill,,SK_LANCER_T2,3,TRUE,175
+UN_PRIEST,UN_PRIEST_NAME,UN_PRIEST_DESC,Animation/Priest.controller,Ally,Magic,Rare,350,5,10,10,25,8,20,90,Healer,PriestBasicSkill,,SK_PRIEST_T3,3,TRUE,100
+UN_AXEMAN,UN_AXEMAN_NAME,UN_AXEMAN_DESC,Animation/Armored Axeman.controller,Ally,Melee,Epic,500,40,30,10,0,30,15,80,Bruiser,AxemanBasicSkill,,SK_AXEMAN_T3,3,TRUE,100
+UN_WIZARD,UN_WIZARD_NAME,UN_WIZARD_DESC,Animation/Wizard.controller,Ally,Magic,Epic,350,5,10,15,50,8,30,95,Magic DPS,WizardBasicSkill,,SK_WIZARD_T2,3,TRUE,100
+UN_KNIGHT,UN_KNIGHT_NAME,UN_KNIGHT_DESC,Animation/Knight.controller,Ally,Melee,Epic,750,35,35,12,10,40,25,90,Tank,KnightBasicSkill,,SK_KNIGHT_T3,3,TRUE,100
 UN_TEMPLAR,UN_TEMPLAR_NAME,UN_TEMPLAR_DESC,Animation/Knight Templar.controller,Ally,Melee,Legendary,800,60,50,20,40,50,40,100,Carry,TemplerBasicSkill,,,3,TRUE,100
 ,,,,,,,,,,,,,,,,,,,,,
 UN_SLIME,UN_SLIME_NAME,UN_SLIME_DESC,Animation/Slime.controller,Enemy,Melee,Common,40,8,8,5,5,2,2,80,Melee DPS,SlimeBasicSkill,,,3,TRUE,100

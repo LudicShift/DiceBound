@@ -1,6 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6940995115224689168
+--- !u!114 &-5187399272509645907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598896e4bb5e41349532ce8273b14f81, type: 3}
+  m_Name: MeleeAttack
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityActionDataTableRow
+  id: MeleeAttack
+  tags: []
+  isEnable: 1
+  actionFunctionName: MeleeAttack
+--- !u!114 &-990978644346947990
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -33,27 +49,11 @@ MonoBehaviour:
   rowTypeName: KCoreKit.AbilityActionDataTableRow, KCoreKit, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   dataList:
-  - {fileID: 1843800951230105339}
-  - {fileID: -6940995115224689168}
-  - {fileID: 2051056651820725065}
-  - {fileID: 3888191883334427770}
---- !u!114 &1843800951230105339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 598896e4bb5e41349532ce8273b14f81, type: 3}
-  m_Name: MeleeAttack
-  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityActionDataTableRow
-  id: MeleeAttack
-  tags: []
-  isEnable: 1
-  actionFunctionName: MeleeAttack
---- !u!114 &2051056651820725065
+  - {fileID: -5187399272509645907}
+  - {fileID: -990978644346947990}
+  - {fileID: 4248984695138895979}
+  - {fileID: 7264196382648326283}
+--- !u!114 &4248984695138895979
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -69,7 +69,7 @@ MonoBehaviour:
   tags: []
   isEnable: 1
   actionFunctionName: MagicAttack
---- !u!114 &3888191883334427770
+--- !u!114 &7264196382648326283
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
