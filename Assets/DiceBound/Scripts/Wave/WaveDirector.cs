@@ -83,11 +83,19 @@ namespace DiceBound
                 _unitPlaceDirector.SetEnable(false);
                 _shopDirector.SetEnable(false);
                 int enemyCount = 0;
-                while (enemyCount < wave.numberOfEnemy)
+                var enemyPool = _waveEnemyPoolDictionary[wave.index];
+
+                foreach (var enemyData in enemyPool)
                 {
-                    _unitDirector.SpawnUnit(PickEnemy(wave.index),wave.enemyStarTier);
-                    enemyCount++;
+                    for (int i = 0; i < enemyData.number; i++)
+                    {
+                        _unitDirector.SpawnUnit(enemyData.enemyId,enemyData.tier);
+                    }
                 }
+                    
+                
+                enemyCount++;
+                
                 
                 waveLabelText.SetText($"Wave {_currentWave+1}");
                 waveLabelImage.Show();
@@ -134,24 +142,6 @@ namespace DiceBound
         {
             gameOverCanvas.gameObject.SetActive(true);
             BroAudio.Play(_soundDirector.gameOverSFX);         
-        }
-
-
-        private string PickEnemy(int waveIndex)
-        {
-            var enemyPool = _waveEnemyPoolDictionary[waveIndex];
-            float sum = enemyPool.Sum(x => x.encounterWeight);
-            float randomValue = Random.Range(0f, sum);
-            float accum = 0f;
-            for (int i = 0; i < enemyPool.Count; i++)
-            {
-                accum+=  enemyPool[i].encounterWeight;
-                if (accum >= randomValue)
-                {
-                    return enemyPool[i].enemyId;
-                }
-            }
-            throw new System.NotSupportedException();
         }
     }
 }

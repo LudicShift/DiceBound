@@ -1,111 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8593058148725323181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_WIZARD
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitDataTableRow
-  id: UN_WIZARD
-  tags: []
-  isEnable: 1
-  group: 0
-  attackType: 2
-  nameKey: UN_WIZARD_NAME
-  descKey: UN_WIZARD_DESC
-  roleKey: 
-  skillBasicKey: WizardBasicSkill
-  skillPassiveKey: 
-  skillActiveKey: SK_WIZARD_T2
-  animator: {fileID: 9100000, guid: f9599ea8e28308844a15cbeefeca6179, type: 2}
-  grade: Epic
-  maxSkillSlot: 3
-  hp: 150
-  str: 5
-  con: 10
-  dex: 15
-  mag: 50
-  def: 8
-  mdf: 30
-  spd: 95
-  height: 100
---- !u!114 &-8069833005704896865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_ARMORC
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitDataTableRow
-  id: UN_ARMORC
-  tags: []
-  isEnable: 1
-  group: 1
-  attackType: 0
-  nameKey: UN_ARMORC_NAME
-  descKey: UN_ARMORC_DESC
-  roleKey: 
-  skillBasicKey: ArmoredOrcBasicSkill
-  skillPassiveKey: 
-  skillActiveKey: SK_ARMORC_Active
-  animator: {fileID: 9100000, guid: 1b544bfb4ad0a3942a910eb0f182b046, type: 2}
-  grade: Epic
-  maxSkillSlot: 3
-  hp: 225
-  str: 25
-  con: 35
-  dex: 8
-  mag: 0
-  def: 40
-  mdf: 15
-  spd: 70
-  height: 100
---- !u!114 &-3876789037277828919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_ARCHER
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitDataTableRow
-  id: UN_ARCHER
-  tags: []
-  isEnable: 1
-  group: 0
-  attackType: 1
-  nameKey: UN_ARCHER_NAME
-  descKey: UN_ARCHER_DESC
-  roleKey: 
-  skillBasicKey: ArcherBasicSkill
-  skillPassiveKey: 
-  skillActiveKey: SK_ARCHER_T2
-  animator: {fileID: 9100000, guid: ac56b7207f8bb0541840052639389dd2, type: 2}
-  grade: Common
-  maxSkillSlot: 3
-  hp: 100
-  str: 5
-  con: 8
-  dex: 20
-  mag: 0
-  def: 5
-  mdf: 5
-  spd: 120
-  height: 100
---- !u!114 &-1925382242009890222
+--- !u!114 &-8751909424693876878
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,7 +35,7 @@ MonoBehaviour:
   mdf: 40
   spd: 100
   height: 100
---- !u!114 &-1307201267824611576
+--- !u!114 &-7786528762645227572
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,32 +45,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_ORCRIDER
+  m_Name: UN_ARMORC
   m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitDataTableRow
-  id: UN_ORCRIDER
+  id: UN_ARMORC
   tags: []
   isEnable: 1
   group: 1
   attackType: 0
-  nameKey: UN_ORCRIDER_NAME
-  descKey: UN_ORCRIDER_DESC
+  nameKey: UN_ARMORC_NAME
+  descKey: UN_ARMORC_DESC
   roleKey: 
-  skillBasicKey: OrcRiderBasicSkill
+  skillBasicKey: ArmoredOrcBasicSkill
   skillPassiveKey: 
-  skillActiveKey: SK_ORCRIDER_Active
-  animator: {fileID: 9100000, guid: 7ff35c75f95b4b04098b7f3312bafa60, type: 2}
+  skillActiveKey: SK_ARMORC_Active
+  animator: {fileID: 9100000, guid: 1b544bfb4ad0a3942a910eb0f182b046, type: 2}
   grade: Epic
   maxSkillSlot: 3
-  hp: 150
-  str: 30
-  con: 25
-  dex: 15
+  hp: 225
+  str: 25
+  con: 35
+  dex: 8
   mag: 0
-  def: 15
-  mdf: 10
-  spd: 150
+  def: 40
+  mdf: 15
+  spd: 70
   height: 100
---- !u!114 &-1176650241987715555
+--- !u!114 &-7392580889277077988
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -210,7 +105,7 @@ MonoBehaviour:
   mdf: 5
   spd: 80
   height: 100
---- !u!114 &-881307365059249656
+--- !u!114 &-5762880501112578982
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -220,211 +115,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_LANCER
+  m_Name: UN_SKELARCHER
   m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitDataTableRow
-  id: UN_LANCER
-  tags: []
-  isEnable: 1
-  group: 0
-  attackType: 0
-  nameKey: UN_LANCER_NAME
-  descKey: UN_LANCER_DESC
-  roleKey: 
-  skillBasicKey: LancerBasicSkill
-  skillPassiveKey: 
-  skillActiveKey: SK_LANCER_T2
-  animator: {fileID: 9100000, guid: f121b5f0dd42fef4ba15f7ea011afdb9, type: 2}
-  grade: Rare
-  maxSkillSlot: 3
-  hp: 200
-  str: 22
-  con: 14
-  dex: 18
-  mag: 0
-  def: 12
-  mdf: 8
-  spd: 105
-  height: 175
---- !u!114 &-85929466572142215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_SKELETON
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitDataTableRow
-  id: UN_SKELETON
+  id: UN_SKELARCHER
   tags: []
   isEnable: 1
   group: 1
-  attackType: 0
-  nameKey: UN_SKELETON_NAME
-  descKey: UN_SKELETON_DESC
+  attackType: 1
+  nameKey: UN_SKELARCHER_NAME
+  descKey: UN_SKELARCHER_DESC
   roleKey: 
-  skillBasicKey: SkeletonBasicSkill
+  skillBasicKey: SkeletonArcherBasicSkill
   skillPassiveKey: 
   skillActiveKey: 
-  animator: {fileID: 9100000, guid: e92d7c756fe3c4b46aa8271932f7bd32, type: 2}
-  grade: Common
-  maxSkillSlot: 3
-  hp: 50
-  str: 12
-  con: 10
-  dex: 10
-  mag: 0
-  def: 8
-  mdf: 2
-  spd: 90
-  height: 100
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 463daf5080d293049bd98a91154e958f, type: 3}
-  m_Name: DT_Unit
-  m_EditorClassIdentifier: KCoreKit::KCoreKit.DataTable
-  rowScript: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  csv: {fileID: 4900000, guid: ee90f62e4541f874098bc98ccabccc89, type: 3}
-  rowTypeName: DiceBound.UnitDataTableRow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  dataList:
-  - {fileID: 4074903896057856709}
-  - {fileID: -3876789037277828919}
-  - {fileID: 8793069879196282378}
-  - {fileID: -881307365059249656}
-  - {fileID: 1191330159158780224}
-  - {fileID: 7556086418076524892}
-  - {fileID: -8593058148725323181}
-  - {fileID: 5583491597673156000}
-  - {fileID: 3418721223038096583}
-  - {fileID: 1894319010006572587}
-  - {fileID: 5275532691815694867}
-  - {fileID: -85929466572142215}
-  - {fileID: 8806245891263752545}
-  - {fileID: 192788929014599474}
-  - {fileID: 6852820223767263654}
-  - {fileID: -1176650241987715555}
-  - {fileID: 3495233356658402360}
-  - {fileID: -1307201267824611576}
-  - {fileID: -8069833005704896865}
-  - {fileID: 5336024641236947096}
-  - {fileID: 6342737257117615766}
-  - {fileID: -1925382242009890222}
---- !u!114 &192788929014599474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_ORC
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitDataTableRow
-  id: UN_ORC
-  tags: []
-  isEnable: 1
-  group: 1
-  attackType: 0
-  nameKey: UN_ORC_NAME
-  descKey: UN_ORC_DESC
-  roleKey: 
-  skillBasicKey: OrcBasicSkill
-  skillPassiveKey: 
-  skillActiveKey: SK_ORC_Active
-  animator: {fileID: 9100000, guid: df301476b053ec2469b6b0e786685d81, type: 2}
+  animator: {fileID: 9100000, guid: 0e1986e1966ed5540ade8f335bf50f1c, type: 2}
   grade: Rare
-  maxSkillSlot: 3
-  hp: 100
-  str: 20
-  con: 18
-  dex: 8
-  mag: 0
-  def: 10
-  mdf: 5
-  spd: 90
-  height: 100
---- !u!114 &1191330159158780224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_PRIEST
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitDataTableRow
-  id: UN_PRIEST
-  tags: []
-  isEnable: 1
-  group: 0
-  attackType: 2
-  nameKey: UN_PRIEST_NAME
-  descKey: UN_PRIEST_DESC
-  roleKey: 
-  skillBasicKey: PriestBasicSkill
-  skillPassiveKey: 
-  skillActiveKey: SK_PRIEST_T3
-  animator: {fileID: 9100000, guid: 06b4bfad80fdff64f8b643e9649cee6a, type: 2}
-  grade: Rare
-  maxSkillSlot: 3
-  hp: 120
-  str: 5
-  con: 10
-  dex: 10
-  mag: 25
-  def: 8
-  mdf: 20
-  spd: 90
-  height: 100
---- !u!114 &1894319010006572587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_SLIME
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitDataTableRow
-  id: UN_SLIME
-  tags: []
-  isEnable: 1
-  group: 1
-  attackType: 0
-  nameKey: UN_SLIME_NAME
-  descKey: UN_SLIME_DESC
-  roleKey: 
-  skillBasicKey: SlimeBasicSkill
-  skillPassiveKey: 
-  skillActiveKey: 
-  animator: {fileID: 9100000, guid: 675632e0417a4394392fe43afc95ee63, type: 2}
-  grade: Common
   maxSkillSlot: 3
   hp: 40
-  str: 8
+  str: 5
   con: 8
-  dex: 5
-  mag: 5
-  def: 2
+  dex: 22
+  mag: 0
+  def: 5
   mdf: 2
-  spd: 80
+  spd: 110
   height: 100
---- !u!114 &3418721223038096583
+--- !u!114 &-5705208235575907353
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -434,32 +150,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_TEMPLAR
+  m_Name: UN_ARCHER
   m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitDataTableRow
-  id: UN_TEMPLAR
+  id: UN_ARCHER
   tags: []
   isEnable: 1
   group: 0
-  attackType: 0
-  nameKey: UN_TEMPLAR_NAME
-  descKey: UN_TEMPLAR_DESC
+  attackType: 1
+  nameKey: UN_ARCHER_NAME
+  descKey: UN_ARCHER_DESC
   roleKey: 
-  skillBasicKey: TemplerBasicSkill
+  skillBasicKey: ArcherBasicSkill
   skillPassiveKey: 
-  skillActiveKey: 
-  animator: {fileID: 9100000, guid: c20cd87d450d8eb41abbfa8161774fb1, type: 2}
-  grade: Legendary
+  skillActiveKey: SK_ARCHER_T2
+  animator: {fileID: 9100000, guid: ac56b7207f8bb0541840052639389dd2, type: 2}
+  grade: Common
   maxSkillSlot: 3
-  hp: 800
-  str: 60
-  con: 50
+  hp: 100
+  str: 5
+  con: 8
   dex: 20
-  mag: 40
-  def: 50
-  mdf: 40
-  spd: 100
+  mag: 0
+  def: 5
+  mdf: 5
+  spd: 120
   height: 100
---- !u!114 &3495233356658402360
+--- !u!114 &-4616994921977277335
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -494,7 +210,42 @@ MonoBehaviour:
   mdf: 10
   spd: 85
   height: 100
---- !u!114 &4074903896057856709
+--- !u!114 &-2894211907140493795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
+  m_Name: UN_SLIME
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitDataTableRow
+  id: UN_SLIME
+  tags: []
+  isEnable: 1
+  group: 1
+  attackType: 0
+  nameKey: UN_SLIME_NAME
+  descKey: UN_SLIME_DESC
+  roleKey: 
+  skillBasicKey: SlimeBasicSkill
+  skillPassiveKey: 
+  skillActiveKey: 
+  animator: {fileID: 9100000, guid: 675632e0417a4394392fe43afc95ee63, type: 2}
+  grade: Common
+  maxSkillSlot: 3
+  hp: 40
+  str: 8
+  con: 8
+  dex: 5
+  mag: 5
+  def: 2
+  mdf: 2
+  spd: 80
+  height: 100
+--- !u!114 &-1695713825033476173
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -529,112 +280,7 @@ MonoBehaviour:
   mdf: 5
   spd: 100
   height: 100
---- !u!114 &5275532691815694867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_BAT
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitDataTableRow
-  id: UN_BAT
-  tags: []
-  isEnable: 1
-  group: 1
-  attackType: 1
-  nameKey: UN_BAT_NAME
-  descKey: UN_BAT_DESC
-  roleKey: 
-  skillBasicKey: BatBasicSkill
-  skillPassiveKey: 
-  skillActiveKey: 
-  animator: {fileID: 9100000, guid: ad34ac1b31f3e4b49858c7f3cbf5af6a, type: 2}
-  grade: Common
-  maxSkillSlot: 3
-  hp: 30
-  str: 5
-  con: 5
-  dex: 18
-  mag: 0
-  def: 2
-  mdf: 5
-  spd: 140
-  height: 100
---- !u!114 &5336024641236947096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_WEREBEAR
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitDataTableRow
-  id: UN_WEREBEAR
-  tags: []
-  isEnable: 1
-  group: 1
-  attackType: 0
-  nameKey: UN_WEREBEAR_NAME
-  descKey: UN_WEREBEAR_DESC
-  roleKey: 
-  skillBasicKey: WerebearBasicSkill
-  skillPassiveKey: 
-  skillActiveKey: SK_WEREBEAR_Active
-  animator: {fileID: 9100000, guid: cafe02283a9dc1343b1d9073f3980905, type: 2}
-  grade: Epic
-  maxSkillSlot: 3
-  hp: 250
-  str: 40
-  con: 40
-  dex: 10
-  mag: 0
-  def: 25
-  mdf: 20
-  spd: 85
-  height: 100
---- !u!114 &5583491597673156000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_KNIGHT
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitDataTableRow
-  id: UN_KNIGHT
-  tags: []
-  isEnable: 1
-  group: 0
-  attackType: 0
-  nameKey: UN_KNIGHT_NAME
-  descKey: UN_KNIGHT_DESC
-  roleKey: 
-  skillBasicKey: KnightBasicSkill
-  skillPassiveKey: 
-  skillActiveKey: SK_KNIGHT_T3
-  animator: {fileID: 9100000, guid: 2a5f9d3a97a5c2646989946f48a63244, type: 2}
-  grade: Epic
-  maxSkillSlot: 3
-  hp: 450
-  str: 35
-  con: 35
-  dex: 12
-  mag: 10
-  def: 40
-  mdf: 25
-  spd: 90
-  height: 100
---- !u!114 &6342737257117615766
+--- !u!114 &-1497490196039752230
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -669,7 +315,7 @@ MonoBehaviour:
   mdf: 50
   spd: 95
   height: 100
---- !u!114 &6852820223767263654
+--- !u!114 &-1386988120167164184
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -679,32 +325,67 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_WEREWOLF
+  m_Name: UN_BAT
   m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitDataTableRow
-  id: UN_WEREWOLF
+  id: UN_BAT
+  tags: []
+  isEnable: 1
+  group: 1
+  attackType: 1
+  nameKey: UN_BAT_NAME
+  descKey: UN_BAT_DESC
+  roleKey: 
+  skillBasicKey: BatBasicSkill
+  skillPassiveKey: 
+  skillActiveKey: 
+  animator: {fileID: 9100000, guid: ad34ac1b31f3e4b49858c7f3cbf5af6a, type: 2}
+  grade: Common
+  maxSkillSlot: 3
+  hp: 30
+  str: 5
+  con: 5
+  dex: 18
+  mag: 0
+  def: 2
+  mdf: 5
+  spd: 140
+  height: 100
+--- !u!114 &-1308451716062745370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
+  m_Name: UN_WEREBEAR
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitDataTableRow
+  id: UN_WEREBEAR
   tags: []
   isEnable: 1
   group: 1
   attackType: 0
-  nameKey: UN_WEREWOLF_NAME
-  descKey: UN_WEREWOLF_DESC
+  nameKey: UN_WEREBEAR_NAME
+  descKey: UN_WEREBEAR_DESC
   roleKey: 
-  skillBasicKey: WerewolfBasicSkill
+  skillBasicKey: WerebearBasicSkill
   skillPassiveKey: 
-  skillActiveKey: SK_WEREWOLF_Active
-  animator: {fileID: 9100000, guid: 27b7224d480ebee4db7cef2ff54f0a05, type: 2}
-  grade: Rare
+  skillActiveKey: SK_WEREBEAR_Active
+  animator: {fileID: 9100000, guid: cafe02283a9dc1343b1d9073f3980905, type: 2}
+  grade: Epic
   maxSkillSlot: 3
-  hp: 90
-  str: 25
-  con: 15
-  dex: 25
+  hp: 250
+  str: 40
+  con: 40
+  dex: 10
   mag: 0
-  def: 12
-  mdf: 8
-  spd: 130
+  def: 25
+  mdf: 20
+  spd: 85
   height: 100
---- !u!114 &7556086418076524892
+--- !u!114 &-944672657160367460
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -714,32 +395,141 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_AXEMAN
+  m_Name: UN_TEMPLAR
   m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitDataTableRow
-  id: UN_AXEMAN
+  id: UN_TEMPLAR
   tags: []
   isEnable: 1
   group: 0
   attackType: 0
-  nameKey: UN_AXEMAN_NAME
-  descKey: UN_AXEMAN_DESC
+  nameKey: UN_TEMPLAR_NAME
+  descKey: UN_TEMPLAR_DESC
   roleKey: 
-  skillBasicKey: AxemanBasicSkill
+  skillBasicKey: TemplerBasicSkill
   skillPassiveKey: 
-  skillActiveKey: SK_AXEMAN_T3
-  animator: {fileID: 9100000, guid: a1c1bd40becca914ba36f9af8f5f939c, type: 2}
+  skillActiveKey: 
+  animator: {fileID: 9100000, guid: c20cd87d450d8eb41abbfa8161774fb1, type: 2}
+  grade: Legendary
+  maxSkillSlot: 3
+  hp: 800
+  str: 60
+  con: 50
+  dex: 20
+  mag: 40
+  def: 50
+  mdf: 40
+  spd: 100
+  height: 100
+--- !u!114 &-326215303327150930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
+  m_Name: UN_PRIEST
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitDataTableRow
+  id: UN_PRIEST
+  tags: []
+  isEnable: 1
+  group: 0
+  attackType: 2
+  nameKey: UN_PRIEST_NAME
+  descKey: UN_PRIEST_DESC
+  roleKey: 
+  skillBasicKey: PriestBasicSkill
+  skillPassiveKey: 
+  skillActiveKey: SK_PRIEST_T3
+  animator: {fileID: 9100000, guid: 06b4bfad80fdff64f8b643e9649cee6a, type: 2}
+  grade: Rare
+  maxSkillSlot: 3
+  hp: 120
+  str: 5
+  con: 10
+  dex: 10
+  mag: 25
+  def: 8
+  mdf: 20
+  spd: 90
+  height: 100
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463daf5080d293049bd98a91154e958f, type: 3}
+  m_Name: DT_Unit
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.DataTable
+  rowScript: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
+  csv: {fileID: 4900000, guid: ee90f62e4541f874098bc98ccabccc89, type: 3}
+  rowTypeName: DiceBound.UnitDataTableRow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  dataList:
+  - {fileID: -1695713825033476173}
+  - {fileID: -5705208235575907353}
+  - {fileID: 1186177945385627605}
+  - {fileID: 5928442290650984030}
+  - {fileID: -326215303327150930}
+  - {fileID: 8409929992372598767}
+  - {fileID: 2039185277830280853}
+  - {fileID: 593892917406459678}
+  - {fileID: -944672657160367460}
+  - {fileID: -2894211907140493795}
+  - {fileID: -1386988120167164184}
+  - {fileID: 7855428690489557687}
+  - {fileID: -5762880501112578982}
+  - {fileID: 5745420725941311642}
+  - {fileID: 1302931938892697298}
+  - {fileID: -7392580889277077988}
+  - {fileID: -4616994921977277335}
+  - {fileID: 8050581086057337153}
+  - {fileID: -7786528762645227572}
+  - {fileID: -1308451716062745370}
+  - {fileID: -1497490196039752230}
+  - {fileID: -8751909424693876878}
+--- !u!114 &593892917406459678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
+  m_Name: UN_KNIGHT
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitDataTableRow
+  id: UN_KNIGHT
+  tags: []
+  isEnable: 1
+  group: 0
+  attackType: 0
+  nameKey: UN_KNIGHT_NAME
+  descKey: UN_KNIGHT_DESC
+  roleKey: 
+  skillBasicKey: KnightBasicSkill
+  skillPassiveKey: 
+  skillActiveKey: SK_KNIGHT_T3
+  animator: {fileID: 9100000, guid: 2a5f9d3a97a5c2646989946f48a63244, type: 2}
   grade: Epic
   maxSkillSlot: 3
-  hp: 400
-  str: 40
-  con: 30
-  dex: 10
-  mag: 0
-  def: 30
-  mdf: 15
-  spd: 80
+  hp: 450
+  str: 35
+  con: 35
+  dex: 12
+  mag: 10
+  def: 40
+  mdf: 25
+  spd: 90
   height: 100
---- !u!114 &8793069879196282378
+--- !u!114 &1186177945385627605
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -774,7 +564,7 @@ MonoBehaviour:
   mdf: 10
   spd: 110
   height: 100
---- !u!114 &8806245891263752545
+--- !u!114 &1302931938892697298
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -784,28 +574,238 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
-  m_Name: UN_SKELARCHER
+  m_Name: UN_WEREWOLF
   m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitDataTableRow
-  id: UN_SKELARCHER
+  id: UN_WEREWOLF
   tags: []
   isEnable: 1
   group: 1
-  attackType: 1
-  nameKey: UN_SKELARCHER_NAME
-  descKey: UN_SKELARCHER_DESC
+  attackType: 0
+  nameKey: UN_WEREWOLF_NAME
+  descKey: UN_WEREWOLF_DESC
   roleKey: 
-  skillBasicKey: SkeletonArcherBasicSkill
+  skillBasicKey: WerewolfBasicSkill
   skillPassiveKey: 
-  skillActiveKey: 
-  animator: {fileID: 9100000, guid: 0e1986e1966ed5540ade8f335bf50f1c, type: 2}
+  skillActiveKey: SK_WEREWOLF_Active
+  animator: {fileID: 9100000, guid: 27b7224d480ebee4db7cef2ff54f0a05, type: 2}
   grade: Rare
   maxSkillSlot: 3
-  hp: 40
-  str: 5
-  con: 8
-  dex: 22
+  hp: 90
+  str: 25
+  con: 15
+  dex: 25
   mag: 0
-  def: 5
+  def: 12
+  mdf: 8
+  spd: 130
+  height: 100
+--- !u!114 &2039185277830280853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
+  m_Name: UN_WIZARD
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitDataTableRow
+  id: UN_WIZARD
+  tags: []
+  isEnable: 1
+  group: 0
+  attackType: 2
+  nameKey: UN_WIZARD_NAME
+  descKey: UN_WIZARD_DESC
+  roleKey: 
+  skillBasicKey: WizardBasicSkill
+  skillPassiveKey: 
+  skillActiveKey: SK_WIZARD_T2
+  animator: {fileID: 9100000, guid: f9599ea8e28308844a15cbeefeca6179, type: 2}
+  grade: Epic
+  maxSkillSlot: 3
+  hp: 150
+  str: 5
+  con: 10
+  dex: 15
+  mag: 50
+  def: 8
+  mdf: 30
+  spd: 95
+  height: 100
+--- !u!114 &5745420725941311642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
+  m_Name: UN_ORC
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitDataTableRow
+  id: UN_ORC
+  tags: []
+  isEnable: 1
+  group: 1
+  attackType: 0
+  nameKey: UN_ORC_NAME
+  descKey: UN_ORC_DESC
+  roleKey: 
+  skillBasicKey: OrcBasicSkill
+  skillPassiveKey: 
+  skillActiveKey: SK_ORC_Active
+  animator: {fileID: 9100000, guid: df301476b053ec2469b6b0e786685d81, type: 2}
+  grade: Rare
+  maxSkillSlot: 3
+  hp: 100
+  str: 20
+  con: 18
+  dex: 8
+  mag: 0
+  def: 10
+  mdf: 5
+  spd: 90
+  height: 100
+--- !u!114 &5928442290650984030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
+  m_Name: UN_LANCER
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitDataTableRow
+  id: UN_LANCER
+  tags: []
+  isEnable: 1
+  group: 0
+  attackType: 0
+  nameKey: UN_LANCER_NAME
+  descKey: UN_LANCER_DESC
+  roleKey: 
+  skillBasicKey: LancerBasicSkill
+  skillPassiveKey: 
+  skillActiveKey: SK_LANCER_T2
+  animator: {fileID: 9100000, guid: f121b5f0dd42fef4ba15f7ea011afdb9, type: 2}
+  grade: Rare
+  maxSkillSlot: 3
+  hp: 200
+  str: 22
+  con: 14
+  dex: 18
+  mag: 0
+  def: 12
+  mdf: 8
+  spd: 105
+  height: 175
+--- !u!114 &7855428690489557687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
+  m_Name: UN_SKELETON
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitDataTableRow
+  id: UN_SKELETON
+  tags: []
+  isEnable: 1
+  group: 1
+  attackType: 0
+  nameKey: UN_SKELETON_NAME
+  descKey: UN_SKELETON_DESC
+  roleKey: 
+  skillBasicKey: SkeletonBasicSkill
+  skillPassiveKey: 
+  skillActiveKey: 
+  animator: {fileID: 9100000, guid: e92d7c756fe3c4b46aa8271932f7bd32, type: 2}
+  grade: Common
+  maxSkillSlot: 3
+  hp: 50
+  str: 12
+  con: 10
+  dex: 10
+  mag: 0
+  def: 8
   mdf: 2
-  spd: 110
+  spd: 90
+  height: 100
+--- !u!114 &8050581086057337153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
+  m_Name: UN_ORCRIDER
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitDataTableRow
+  id: UN_ORCRIDER
+  tags: []
+  isEnable: 1
+  group: 1
+  attackType: 0
+  nameKey: UN_ORCRIDER_NAME
+  descKey: UN_ORCRIDER_DESC
+  roleKey: 
+  skillBasicKey: OrcRiderBasicSkill
+  skillPassiveKey: 
+  skillActiveKey: SK_ORCRIDER_Active
+  animator: {fileID: 9100000, guid: 7ff35c75f95b4b04098b7f3312bafa60, type: 2}
+  grade: Epic
+  maxSkillSlot: 3
+  hp: 150
+  str: 30
+  con: 25
+  dex: 15
+  mag: 0
+  def: 15
+  mdf: 10
+  spd: 150
+  height: 100
+--- !u!114 &8409929992372598767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6c5f861bc442228ac786a01829eaae, type: 3}
+  m_Name: UN_AXEMAN
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitDataTableRow
+  id: UN_AXEMAN
+  tags: []
+  isEnable: 1
+  group: 0
+  attackType: 0
+  nameKey: UN_AXEMAN_NAME
+  descKey: UN_AXEMAN_DESC
+  roleKey: 
+  skillBasicKey: AxemanBasicSkill
+  skillPassiveKey: 
+  skillActiveKey: SK_AXEMAN_T3
+  animator: {fileID: 9100000, guid: a1c1bd40becca914ba36f9af8f5f939c, type: 2}
+  grade: Epic
+  maxSkillSlot: 3
+  hp: 400
+  str: 40
+  con: 30
+  dex: 10
+  mag: 0
+  def: 30
+  mdf: 15
+  spd: 80
   height: 100

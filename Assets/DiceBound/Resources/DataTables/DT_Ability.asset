@@ -1,25 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8807379013702474954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7207190133824d7e904d98b5e5a1f1c8, type: 3}
-  m_Name: MeleeAttack
-  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityDataTableRow
-  id: MeleeAttack
-  tags: []
-  isEnable: 1
-  abilityConditionIdList:
-  - Always
-  abilityActionIdList:
-  - MeleeAttack
---- !u!114 &-5178622112374122552
+--- !u!114 &-5499624529019266640
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -38,7 +19,7 @@ MonoBehaviour:
   - Always
   abilityActionIdList:
   - RangedAttack
---- !u!114 &-4393149425636587657
+--- !u!114 &-4721537844197048659
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74,11 +55,11 @@ MonoBehaviour:
   rowTypeName: KCoreKit.AbilityDataTableRow, KCoreKit, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   dataList:
-  - {fileID: -8807379013702474954}
-  - {fileID: -5178622112374122552}
-  - {fileID: -4393149425636587657}
-  - {fileID: 41110575883980382}
---- !u!114 &41110575883980382
+  - {fileID: 8148889658252333031}
+  - {fileID: -5499624529019266640}
+  - {fileID: -4721537844197048659}
+  - {fileID: 3880632813286364981}
+--- !u!114 &3880632813286364981
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,3 +78,22 @@ MonoBehaviour:
   - Always
   abilityActionIdList:
   - Heal
+--- !u!114 &8148889658252333031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7207190133824d7e904d98b5e5a1f1c8, type: 3}
+  m_Name: MeleeAttack
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityDataTableRow
+  id: MeleeAttack
+  tags: []
+  isEnable: 1
+  abilityConditionIdList:
+  - Always
+  abilityActionIdList:
+  - MeleeAttack

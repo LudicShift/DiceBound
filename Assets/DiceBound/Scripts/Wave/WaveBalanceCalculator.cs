@@ -192,31 +192,7 @@ namespace DiceBound
             List<WaveEnemyPoolDataTableRow> pool, Dictionary<string, UnitDataTableRow> unitDictionary)
         {
             var result = new List<BalanceUnit>();
-            if (wave == null || pool == null || pool.Count == 0) return result;
-
-            float sum = pool.Sum(x => x.encounterWeight);
-
-            for (int i = 0; i < wave.numberOfEnemy; i++)
-            {
-                float randomValue = Random.Range(0f, sum);
-                float accum = 0f;
-                string picked = null;
-                for (int j = 0; j < pool.Count; j++)
-                {
-                    accum += pool[j].encounterWeight;
-                    if (accum >= randomValue)
-                    {
-                        picked = pool[j].enemyId;
-                        break;
-                    }
-                }
-
-                if (picked != null && unitDictionary.TryGetValue(picked, out var row))
-                {
-                    result.Add(new BalanceUnit(row, wave.enemyStarTier));
-                }
-            }
-
+            //로직 수정에 의해 지워짐(To.claude)
             return result;
         }
 
