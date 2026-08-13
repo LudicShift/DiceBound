@@ -274,8 +274,8 @@ namespace DiceBound
         
         public void SetHighlight(bool value, Color color = default, int order = 1)
         {
-            _outliner.SetEnable(value);
-            _outliner.SetColor(color);
+            _outliner?.SetEnable(value);
+            _outliner?.SetColor(color);
             if (value)
             {
                 _spriteRenderer.sortingOrder = order;

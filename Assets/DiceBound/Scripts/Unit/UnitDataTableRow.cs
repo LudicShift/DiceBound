@@ -1,5 +1,5 @@
 ﻿using KCoreKit;
-using UnityEditor.Animations;
+using UnityEngine;
 
 namespace DiceBound
 {
@@ -28,7 +28,7 @@ namespace DiceBound
         public string skillPassiveKey;
         public string skillActiveKey;
       
-        public AnimatorController animator;
+        public RuntimeAnimatorController animator;
 
         public string grade;
         public int maxSkillSlot;
