@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Ami.BroAudio;
 using DG.Tweening;
 using KCoreKit;
 using UnityEngine;
@@ -11,9 +12,11 @@ namespace DiceBound
     {
         private UnitDirector _unitDirector;
         private ShopDirector _shopDirector;
+        private SoundDirector _soundDirector;
 
         public override IEnumerator OnInitialize()
         {
+            _soundDirector = DirectorFacade.GetDirector<SoundDirector>();
             _shopDirector = DirectorFacade.GetDirector<ShopDirector>();
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
             _unitDirector.onSpawnAlly += OnSpawnAlly;
@@ -45,6 +48,7 @@ namespace DiceBound
 
         private IEnumerator MergeUnit(List<UnitCore> unitList)
         {
+            BroAudio.Play(_soundDirector.mergeUnitSFX);
             _shopDirector.SetEnable(false);
             foreach (var unit in unitList)
             {

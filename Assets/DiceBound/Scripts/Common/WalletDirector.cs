@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Ami.BroAudio;
 using KCoreKit;
 using KCoreKit.Scripts.Common;
 using UnityEngine;
@@ -7,6 +8,8 @@ namespace DiceBound
 {
     public class WalletDirector : DirectorBase
     {
+        private SoundDirector _soundDirector;
+        
         [SerializeField]
         private TextWidget goldTextWidget;
         [SerializeField]
@@ -21,6 +24,7 @@ namespace DiceBound
 
         public override IEnumerator OnInitialize()
         {
+            _soundDirector = DirectorFacade.GetDirector<SoundDirector>();
             _camera = CameraManager.GetMainCamera();
             _goldEffectPool = new PrefabPool<GainGoldEffectWidget>(PrefabManager.CachePrefab<GainGoldEffectWidget>(),goldEffectCanvas.transform);
             goldTextWidget.SetText(_gold.ToString());
@@ -58,6 +62,7 @@ namespace DiceBound
             yield return goldEffectWidget.Play(from, to);
             _goldEffectPool.Release(goldEffectWidget);
             AddGold(gold);
+            
         }
 
         public bool HasGold(int gold)
@@ -76,6 +81,7 @@ namespace DiceBound
             _gold += gold;
             goldTextWidget.SetText(_gold.ToString());
             StartCoroutine(addGoldTween.Play());
+            BroAudio.Play(_soundDirector.addGoldSFX);
         }
         
     }

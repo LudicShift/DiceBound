@@ -4846,6 +4846,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4547721513700480667}
   - component: {fileID: 6109266140980601158}
+  - component: {fileID: -7338517644979837575}
   m_Layer: 0
   m_Name: PF_Proj_Rock01
   m_TagString: Untagged
@@ -4885,6 +4886,29 @@ MonoBehaviour:
   lifetime: 0.3
   moveDuration: 0.26
   moveOption: 1
+--- !u!114 &-7338517644979837575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913422053436413261}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385ffc06106304cc3824d5bcf25a7037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BroAudio::Ami.BroAudio.SoundSource
+  _onlyPlayOnce: 0
+  _playOnEnable: 1
+  _stopOnDisable: 1
+  _overrideFadeOut: -1
+  _sound:
+    _entity: {fileID: 11400000, guid: 2fa11a79c1de65a4d98fc09375db2894, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 6521636490285217479, guid: 05622c80529b4224cbc26625938cca4f, type: 3}
+  _overrideGroup: {fileID: 11400000, guid: 294a8044201f90a4881bd44556c1d288, type: 2}
+  _positionMode: 0
+  _delay: 0
 --- !u!1 &1406937998588455395
 GameObject:
   m_ObjectHideFlags: 0

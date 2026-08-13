@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Ami.BroAudio;
 using DG.Tweening;
 using KCoreKit;
 using UnityEngine;
@@ -43,6 +44,7 @@ namespace DiceBound
         private List<DiceWidget> _keepDices;
         private List<DiceWidget> _remainDices;
         private string _noCombinationText;
+        private SoundDirector _soundDirector;
 
         public void ShowCanvas()
         {
@@ -80,6 +82,7 @@ namespace DiceBound
 
         private IEnumerator RollRoutine()
         {
+            BroAudio.Play(_soundDirector.diceRollSFX);
             _combinationInfoWidget.SetText("Rolling...");
            
             _remainRollCount--;
@@ -147,6 +150,8 @@ namespace DiceBound
             _keepDices = new List<DiceWidget>();
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
             _walletDirector = DirectorFacade.GetDirector<WalletDirector>();
+            
+            _soundDirector = DirectorFacade.GetDirector<SoundDirector>();
             _remainDices = canvas.GetComponentsInChildren<DiceWidget>(true).ToList();
             _remainPoints = remainPointGroup.GetComponentsInChildren<DicePointWidget>(true).ToList();
             _keepPoints = keepPointGroup.GetComponentsInChildren<DicePointWidget>(true).ToList();
@@ -211,6 +216,7 @@ namespace DiceBound
 
         private void OnDiceClick(DiceWidget dice)
         {
+            BroAudio.Play(_soundDirector.diceClickSFX);
             if (dice.IsMoving())
             {
                 return;

@@ -1,4 +1,5 @@
 ﻿using System;
+using Ami.BroAudio;
 using DG.Tweening;
 using UnityEngine;
 
@@ -25,6 +26,16 @@ namespace DiceBound
         public void Awake()
         {
             psRenderer = GetComponentInChildren<ParticleSystemRenderer>(true);
+         
+        }
+
+        public void Start()
+        {
+            var soundSource = GetComponent<SoundSource>();
+            if (soundSource)
+            {
+                soundSource.enabled = true;
+            }
         }
         
 

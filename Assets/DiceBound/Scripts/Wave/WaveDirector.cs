@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Ami.BroAudio;
 using KCoreKit;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -33,6 +34,7 @@ namespace DiceBound
         private WalletDirector _walletDirector;
         private ShopDirector _shopDirector;
         private UnitPlaceDirector _unitPlaceDirector;
+        private SoundDirector _soundDirector;
 
         public override IEnumerator OnInitialize()
         {
@@ -42,7 +44,7 @@ namespace DiceBound
             _walletDirector = DirectorFacade.GetDirector<WalletDirector>();
             _battleDirector = DirectorFacade.GetDirector<BattleDirector>();
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
-            
+            _soundDirector = DirectorFacade.GetDirector<SoundDirector>();
             playWaveButtonWidget.onClickAction+=OnPlayWaveButtonClick;
         
             
@@ -89,6 +91,7 @@ namespace DiceBound
                 
                 waveLabelText.SetText($"Wave {_currentWave+1}");
                 waveLabelImage.Show();
+                BroAudio.Play(_soundDirector.waveStartSFX);
                 yield return waveLabelAppearTween.Play();
                 yield return new WaitForSeconds(0.3f);
                 yield return waveLabelDisappearTween.Play();
@@ -101,6 +104,13 @@ namespace DiceBound
                     _battleDirector.EndBattle();
                     _unitDirector.ClearDeadAllies();
                     _walletDirector.AddGold(wave.waveRewardGold);
+                    
+                    waveLabelText.SetText($"Victory");
+                    waveLabelImage.Show();
+                    BroAudio.Play(_soundDirector.waveVictorySFX);
+                    yield return waveLabelAppearTween.Play();
+                    yield return new WaitForSeconds(0.3f);
+                    yield return waveLabelDisappearTween.Play();
                 }
                 else if( _unitDirector.GetAllyUnitCount() == _unitDirector.GetDeadAllyUnitCount())
                 {
@@ -117,11 +127,13 @@ namespace DiceBound
         private void ShowGameClear()
         {
             gameClearCanvas.gameObject.SetActive(true);
+            BroAudio.Play(_soundDirector.gameClearSFX);
         }
 
         private void ShowGameOver()
         {
             gameOverCanvas.gameObject.SetActive(true);
+            BroAudio.Play(_soundDirector.gameOverSFX);         
         }
 
 

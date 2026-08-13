@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using Ami.BroAudio;
 using KCoreKit;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -27,10 +28,13 @@ namespace DiceBound
         private UnitTrashCan _trashCan;
         [SerializeField] private Color unitColor1;
         [SerializeField] private Color unitColor2;
+        private SoundDirector _soundDirector;
 
 
         public override IEnumerator OnInitialize()
         {
+            _soundDirector = DirectorFacade.GetDirector<SoundDirector>();
+
             InputManager.RegisterAction("Click", PlayerActionType.Started, OnDragBegin);
             InputManager.RegisterAction("Click", PlayerActionType.Canceled, OnDragEnd);
             yield return null;
@@ -46,6 +50,7 @@ namespace DiceBound
         {
             if (_mode == UnitPlaceMode.Normal && _hoveredUnit)
             {
+                BroAudio.Play(_soundDirector.pickUnitSFX);
                 _draggingUnit = _hoveredUnit;
                 _draggingUnit.tooltipProvider.SetEnabled(false);
                 _replaceCell = allyGrid.FindCellByUnit(_hoveredUnit);
@@ -68,7 +73,7 @@ namespace DiceBound
                 }
                 else if (_hoveredCell)
                 {
-                    
+                    BroAudio.Play(_soundDirector.dropUnitSFX);
                     _replaceCell.RemoveUnit();
                     if (!_hoveredCell.IsEmpty())
                     {

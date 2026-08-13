@@ -33,6 +33,7 @@ namespace DiceBound
         private UnitPlaceDirector _unitPlaceDirector;
        // private TooltipDirector _tooltipDirector;
         private WalletDirector _walletDirector;
+        private SoundDirector _soundDirector;
 
         public Action<UnitCore> onSpawnAlly;
 
@@ -66,6 +67,7 @@ namespace DiceBound
             trashCan.onRemoveUnitAction += SellUnit;
 
             //_tooltipDirector = DirectorFacade.GetDirector<TooltipDirector>();
+            _soundDirector = DirectorFacade.GetDirector<SoundDirector>();
             _unitPlaceDirector = DirectorFacade.GetDirector<UnitPlaceDirector>();
             _skillDirector = DirectorFacade.GetDirector<SkillDirector>();
             _battleDirector = DirectorFacade.GetDirector<BattleDirector>();
@@ -80,6 +82,7 @@ namespace DiceBound
         {
             RemoveAllyUnit(unit);
             _walletDirector.PlayGainGoldEffect(trashCan.transform.position,50);
+            BroAudio.Play(_soundDirector.sellUnitSFX);
         }
 
 
@@ -146,22 +149,25 @@ namespace DiceBound
                instance.Upgrade();
            }
             _unitPlaceDirector.PlaceUnit(instance);
-            
-
             _units.Add(instance);
+            
             switch (data.group)
             {
                 case UnitGroup.Ally:
                     _allies.Add(instance);
                     instance.PlayAppear(()=>onSpawnAlly.Invoke(instance));
-                    
                     instance.FlipSprite(false);
                     UpdateAllyCountText();
+
+                    BroAudio.Play(_soundDirector.spawnAllySFX);
                     break;
                 case UnitGroup.Enemy:
                     _enemies.Add(instance);
                     instance.PlayAppear();
                     instance.FlipSprite(true);
+                    
+                    
+                    BroAudio.Play(_soundDirector.spawnEnemySFX);
                     break;
             }
         }

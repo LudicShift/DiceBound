@@ -756,6 +756,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
+  clickSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!114 &93595887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1110,6 +1114,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
+  clickSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!225 &113023235
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2492,6 +2500,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
+  clickSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!1 &260163721
 GameObject:
   m_ObjectHideFlags: 0
@@ -4026,6 +4038,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
+  clickSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!225 &481456554
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -4367,12 +4383,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 504579070}
+  - component: {fileID: 504579082}
+  - component: {fileID: 504579079}
   - component: {fileID: 504579074}
   - component: {fileID: 504579072}
   - component: {fileID: 504579071}
   - component: {fileID: 504579075}
   - component: {fileID: 504579080}
-  - component: {fileID: 504579079}
   - component: {fileID: 504579076}
   - component: {fileID: 504579078}
   - component: {fileID: 504579077}
@@ -4586,6 +4603,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46b611ea004744c8998f3159e54cdd88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DiceBound.TooltipDirector
+--- !u!114 &504579082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504579069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f6552586e53df41842d8ea787129a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  mergeUnitSFX:
+    _entity: {fileID: 11400000, guid: 545057fdfda487e45bf04e1d07f89066, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 504579069}
+  spawnAllySFX:
+    _entity: {fileID: 11400000, guid: c33ec1bf6361ea34fae6e3b36663e14a, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 504579069}
+  spawnEnemySFX:
+    _entity: {fileID: 11400000, guid: c33ec1bf6361ea34fae6e3b36663e14a, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 504579069}
+  sellUnitSFX:
+    _entity: {fileID: 11400000, guid: a19afd284a8d3874096d1a880507ee54, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 504579069}
+  addGoldSFX:
+    _entity: {fileID: 11400000, guid: 4a4d468d63835994ea9afb097240ef56, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 504579069}
+  pickUnitSFX:
+    _entity: {fileID: 11400000, guid: e0b659304bda1eb4aa35a9ac742cf54e, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 504579069}
+  dropUnitSFX:
+    _entity: {fileID: 11400000, guid: 9a37b424718be20479c9e89f1c83cc87, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 504579069}
+  diceRollSFX:
+    _entity: {fileID: 11400000, guid: 87d929b4e06e32c438427d68ff8c6ac3, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 504579069}
+  diceClickSFX:
+    _entity: {fileID: 11400000, guid: 79bd9ad8715ba51409bba0e8ae261ad2, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 504579069}
+  waveStartSFX:
+    _entity: {fileID: 11400000, guid: a7ce4cfb12c30954fb268ab2e174026e, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 504579069}
+  waveVictorySFX:
+    _entity: {fileID: 11400000, guid: b968f8666ff2e9543aa7fb072659ccbe, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 504579069}
+  gameOverSFX:
+    _entity: {fileID: 11400000, guid: 6fe1517ddb548444d97016b127c653d8, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 504579069}
+  gameClearSFX:
+    _entity: {fileID: 11400000, guid: 5baaf3cc55f489145936165a4f8a61f4, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 504579069}
 --- !u!1 &512551058
 GameObject:
   m_ObjectHideFlags: 0
@@ -5992,6 +6073,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
+  clickSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!225 &700279749
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -6209,6 +6294,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
+  clickSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!225 &726491865
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -6460,7 +6549,7 @@ MonoBehaviour:
     _entity: {fileID: 11400000, guid: 714b99692bb42874e9f22e6e2e6530e3, type: 2}
     ID: 0
     <DebugObject>k__BackingField: {fileID: 750674797}
-  _overrideGroup: {fileID: 0}
+  _overrideGroup: {fileID: 11400000, guid: 294a8044201f90a4881bd44556c1d288, type: 2}
   _positionMode: 0
   _delay: 0
 --- !u!1 &751878835
@@ -9385,6 +9474,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
+  clickSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!225 &1133500669
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -10899,6 +10992,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
+  clickSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!225 &1378901847
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -11313,6 +11410,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
+  clickSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!225 &1441396471
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -11846,6 +11947,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
+  clickSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!225 &1481126484
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -13005,6 +13110,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
+  clickSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!225 &1653076907
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -13613,6 +13722,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
+  clickSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!225 &1727512145
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -15030,6 +15143,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
+  clickSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!225 &1953792367
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -16139,6 +16256,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29fbff793d2b4885be905211793372da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.DiceRerollButtonWidget
+  clickSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 0}
   rerollCount: {fileID: 501363065}
 --- !u!1 &2033921942
 GameObject:
