@@ -17,8 +17,9 @@ namespace DiceBound
         [SerializeField]
         private TweenAnimationPlayer addGoldTween;
         
-        private int _gold = 500;
-        
+        private const int BaseGold = 500;
+        private int _gold;
+
         private PrefabPool<GainGoldEffectWidget>  _goldEffectPool;
         private Camera _camera;
 
@@ -27,6 +28,7 @@ namespace DiceBound
             _soundDirector = DirectorFacade.GetDirector<SoundDirector>();
             _camera = CameraManager.GetMainCamera();
             _goldEffectPool = new PrefabPool<GainGoldEffectWidget>(PrefabManager.CachePrefab<GainGoldEffectWidget>(),goldEffectCanvas.transform);
+            _gold = BaseGold + (int)SkillTreeManager.GetInstance().GetModifierTotal("StartingGoldIncrease");
             goldTextWidget.SetText(_gold.ToString());
             yield return null;
         }

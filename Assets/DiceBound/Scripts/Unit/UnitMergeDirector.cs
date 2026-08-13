@@ -13,19 +13,22 @@ namespace DiceBound
         private UnitDirector _unitDirector;
         private ShopDirector _shopDirector;
         private SoundDirector _soundDirector;
+        private SkillTreeManager _skillTreeManager;
 
         public override IEnumerator OnInitialize()
         {
             _soundDirector = DirectorFacade.GetDirector<SoundDirector>();
             _shopDirector = DirectorFacade.GetDirector<ShopDirector>();
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
+            _skillTreeManager = SkillTreeManager.GetInstance();
             _unitDirector.onSpawnAlly += OnSpawnAlly;
             yield return null;
         }
 
         public void OnSpawnAlly(UnitCore unit)
         {
-            if (unit.GetTier() == 2)
+            var maxMergeTier = 2 + (int)_skillTreeManager.GetModifierTotal("MergeStarCapIncrease");
+            if (unit.GetTier() == maxMergeTier)
             {
                 return;
             }

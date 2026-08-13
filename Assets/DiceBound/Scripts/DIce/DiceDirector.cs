@@ -36,6 +36,7 @@ namespace DiceBound
         [SerializeField] private RectTransform keepPointGroup;
         
         private int _remainRollCount = 3;
+        private int _maxDiceFace = 6;
         private UnitDirector _unitDirector;
         private WalletDirector _walletDirector;
         private CombinationBase[] _combinations;
@@ -46,6 +47,7 @@ namespace DiceBound
         private string _noCombinationText;
         private SoundDirector _soundDirector;
         private UnitPlaceDirector _unitPlaceDirector;
+        private SkillTreeManager _skillTreeManager;
 
         public void ShowCanvas()
         {
@@ -73,9 +75,9 @@ namespace DiceBound
         
         public void Setup()
         {
-            _remainRollCount = 3;
+            _remainRollCount = 3 + (int)_skillTreeManager.GetModifierTotal("DiceRerollCountIncrease");
             StartCoroutine(ResetDice());
-           
+
         }
         
         public void Roll()
@@ -99,7 +101,7 @@ namespace DiceBound
             int count = 0;
             foreach (var dice in _remainDices)
             {
-                StartCoroutine(dice.Roll(()=>count++));
+                StartCoroutine(dice.Roll(()=>count++, _maxDiceFace));
             }
             yield return new WaitUntil(()=>count >= _remainDices.Count);
             
@@ -159,6 +161,8 @@ namespace DiceBound
             _unitPlaceDirector = DirectorFacade.GetDirector<UnitPlaceDirector>();
 
             _soundDirector = DirectorFacade.GetDirector<SoundDirector>();
+            _skillTreeManager = SkillTreeManager.GetInstance();
+            _maxDiceFace = 6 - (int)_skillTreeManager.GetModifierTotal("DiceFaceRemoval");
             _remainDices = canvas.GetComponentsInChildren<DiceWidget>(true).ToList();
             _remainPoints = remainPointGroup.GetComponentsInChildren<DicePointWidget>(true).ToList();
             _keepPoints = keepPointGroup.GetComponentsInChildren<DicePointWidget>(true).ToList();

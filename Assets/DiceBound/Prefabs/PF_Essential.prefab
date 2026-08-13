@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1721135064785177694}
   - component: {fileID: 657287868725719616}
   - component: {fileID: 7071229013258766365}
+  - component: {fileID: 8292396528171004709}
   m_Layer: 0
   m_Name: PF_Essential
   m_TagString: Untagged
@@ -154,3 +155,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3039b0d1f245378bd8442636c8494b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SoundManager
+--- !u!114 &8292396528171004709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4320118492477380267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82c93d9e1a1278a4a9aa34970c3f4b8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillTreeManager

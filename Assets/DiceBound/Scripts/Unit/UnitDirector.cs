@@ -37,7 +37,10 @@ namespace DiceBound
 
         public Action<UnitCore> onSpawnAlly;
 
-        private int _maxAllyNumber = 15;
+        private int _maxAllyNumber;
+        private SkillTreeManager _skillTreeManager;
+
+        private static readonly string[] AllyStatKeys = { "str", "spd", "def", "mag", "con", "dex", "mdf", "hp" };
 
         [SerializeField] private UnitTrashCan trashCan;
 
@@ -51,6 +54,8 @@ namespace DiceBound
         }
         public override IEnumerator OnInitialize()
         {
+            _skillTreeManager = SkillTreeManager.GetInstance();
+            _maxAllyNumber = 15 + (int)_skillTreeManager.GetModifierTotal("AllyCapIncrease");
             UpdateAllyCountText();
             _hpGaugePrefabPool = new PrefabPool<GaugeWidget>(PrefabManager.CachePrefab<GaugeWidget>(), hpCanvas.transform, 100);
             _tierLabelPrefabPool = new PrefabPool<TierLabelWidget>(PrefabManager.CachePrefab<TierLabelWidget>(), hpCanvas.transform,100);
@@ -134,6 +139,11 @@ namespace DiceBound
             }
 
             instance.Setup(data);
+            if (data.group == UnitGroup.Ally)
+            {
+                ApplyAllyStatModifiers(instance);
+            }
+
             instance.BindHpGauge(_hpGaugePrefabPool.Get());
             instance.BindTierLabel(_tierLabelPrefabPool.Get());
          
@@ -169,6 +179,21 @@ namespace DiceBound
                     
                     BroAudio.Play(_soundDirector.spawnEnemySFX);
                     break;
+            }
+        }
+
+        private void ApplyAllyStatModifiers(UnitCore instance)
+        {
+            var statPercent = _skillTreeManager.GetModifierTotal("AllyAllStatsPercent") / 100f;
+            if (statPercent == 0f)
+            {
+                return;
+            }
+
+            var statAgent = instance.GetStatAgent();
+            foreach (var statKey in AllyStatKeys)
+            {
+                statAgent.GetStat(statKey).AddModifier(new StatModifier(statPercent, StatModifyType.PercentAdd, 0, this));
             }
         }
 
