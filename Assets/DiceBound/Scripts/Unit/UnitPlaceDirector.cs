@@ -30,6 +30,7 @@ namespace DiceBound
         [SerializeField] private Color unitColor1;
         [SerializeField] private Color unitColor2;
         private SoundDirector _soundDirector;
+        private Vector3 _dragOffset;
 
 
         public override IEnumerator OnInitialize()
@@ -53,10 +54,12 @@ namespace DiceBound
             {
                 BroAudio.Play(_soundDirector.pickUnitSFX);
                 _draggingUnit = _hoveredUnit;
+                _draggingUnit.OnPick();
                 _draggingUnit.tooltipProvider.SetEnabled(false);
                 _replaceCell = allyGrid.FindCellByUnit(_hoveredUnit);
                 _replaceCell.RemoveUnit();
                 _mode = UnitPlaceMode.Drag;
+                _dragOffset =  _draggingUnit.transform.position - InputManager.GetWorldMousePosition();
                 allyGrid.Show();
             }
         }
@@ -114,7 +117,7 @@ namespace DiceBound
         {
             if (_mode == UnitPlaceMode.Drag && _draggingUnit)
             {
-                _draggingUnit.transform.position = InputManager.GetWorldMousePosition();
+                _draggingUnit.transform.position = InputManager.GetWorldMousePosition()+_dragOffset;
             }
         }
         

@@ -223,6 +223,7 @@ namespace DiceBound
 
         private void OnDiceClick(DiceWidget dice)
         {
+            dice.OnClick();
             BroAudio.Play(_soundDirector.diceClickSFX);
             if (dice.IsMoving())
             {

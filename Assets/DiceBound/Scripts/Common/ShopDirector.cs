@@ -35,11 +35,11 @@ namespace DiceBound
             
             if (_walletDirector.HasGold(rollDiceCost) && !_unitDirector.IsAllyFull())
             {
+                HideCanvas();
                 _walletDirector.SpendGold(rollDiceCost);
                 _diceDirector.ShowCanvas();
                 _diceDirector.ShowLayer();
                 _diceDirector.Setup();
-                HideCanvas();
             }
         }
 

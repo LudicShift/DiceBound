@@ -41,6 +41,7 @@ namespace DiceBound
         [SerializeField] private TweenAnimationPlayer attackSequence;
         [SerializeField] private TweenAnimationPlayer deadSequence;
         [SerializeField] private TweenAnimationPlayer dodgeSequence;
+        [SerializeField] private TweenAnimationPlayer pickSequence;
         private bool _isBattle;
         private AnimationCallbackBehaviour[] _callBackBehaviours;
         public UnitAttackType attackType;
@@ -50,6 +51,10 @@ namespace DiceBound
         [HideInInspector] public TooltipProvider tooltipProvider;
         public BattleContext battleContext;
 
+        public void OnPick()
+        {
+            StartCoroutine(pickSequence.Play());
+        }
         public void Awake()
         {
             tooltipProvider = GetComponent<TooltipProvider>();
@@ -240,6 +245,7 @@ namespace DiceBound
         {
             _isBattle = true;
             _restorePosition = transform.position;
+            SetHighlight(false);
             foreach (var skill in _skills)
             {
                 skill.Value.OnBattleBegin();
