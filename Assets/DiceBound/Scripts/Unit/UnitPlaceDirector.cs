@@ -224,7 +224,7 @@ namespace DiceBound
                     return allyGrid.GetGeneralTargets(count);
                     break;
                 case UnitGroup.Enemy:
-                    return allyGrid.GetGeneralTargets(count);
+                    return enemyGrid.GetGeneralTargets(count);
                 default:
                     throw new ArgumentOutOfRangeException(nameof(group), group, null);
             }
