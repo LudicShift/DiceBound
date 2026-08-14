@@ -105,7 +105,7 @@ namespace DiceBound
 
         public void OnBattleEnd()
         {
-          
+            _timeElapsed = 0;
         }
     }
 }

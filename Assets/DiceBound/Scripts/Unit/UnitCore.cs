@@ -270,6 +270,7 @@ namespace DiceBound
 
         public void OnBattleEnd()
         {
+            
             _isBattle = false;
             foreach (var skill in _skills)
             {

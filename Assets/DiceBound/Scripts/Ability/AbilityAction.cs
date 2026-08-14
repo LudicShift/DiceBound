@@ -29,7 +29,6 @@ namespace DiceBound
                     target = target,
                     animClip = context.animClip,
                     startUpDelay = context.startUpDelay,
-                    castTime = context.castTime,
                     damage = StatUtility.GetApMelee(statAgent) * (1 - StatUtility.GetMitigationP(targetStatAgent)),
                     skillEffectKey = context.skillEffectKey
                 });
@@ -69,7 +68,6 @@ namespace DiceBound
                     target = target,
                     animClip = context.animClip,
                     startUpDelay = context.startUpDelay,
-                    castTime = context.castTime,
                     damage = StatUtility.GetApRanged(statAgent) * (1 - StatUtility.GetMitigationP(targetStatAgent)),
                     skillEffectKey = context.skillEffectKey
                 });
@@ -92,7 +90,6 @@ namespace DiceBound
                     target = target,
                     animClip = context.animClip,
                     startUpDelay = context.startUpDelay,
-                    castTime = context.castTime,
                     damage =  StatUtility.GetApMagic(statAgent) * (1 - StatUtility.GetMitigationM(targetStatAgent)),
                     skillEffectKey = context.skillEffectKey
                 });
@@ -102,8 +99,6 @@ namespace DiceBound
 
         public static void Heal(AbilityEffect effect, AbilityActionDataTableRow data, ref AbilityContext context)
         {
-            
-            
             var targetList = _unitDirector.GetTarget(context.self, context.targetGroup, context.targetOption, context.targetCount);
             var statAgent = context.self.GetStatAgent();
             

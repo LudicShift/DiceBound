@@ -8,7 +8,7 @@ namespace DiceBound
         public string skillEffectKey;
         public SkillTargetGroup targetGroup;
         public SkillTargetOption targetOption;
-        public float castTime;
+        public float castTime; //안쓰임
         public float priority;
         public int targetCount;
         public string animClip;

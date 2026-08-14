@@ -11,7 +11,6 @@ namespace DiceBound
         public float damage;
         public string skillEffectKey;
         public float healPower;
-        public float castTime;
         public float startUpDelay;
         public string animClip { get; set; }
     }
