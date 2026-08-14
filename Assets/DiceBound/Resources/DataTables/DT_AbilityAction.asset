@@ -1,37 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5187399272509645907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 598896e4bb5e41349532ce8273b14f81, type: 3}
-  m_Name: MeleeAttack
-  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityActionDataTableRow
-  id: MeleeAttack
-  tags: []
-  isEnable: 1
-  actionFunctionName: MeleeAttack
---- !u!114 &-990978644346947990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 598896e4bb5e41349532ce8273b14f81, type: 3}
-  m_Name: RangedAttack
-  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityActionDataTableRow
-  id: RangedAttack
-  tags: []
-  isEnable: 1
-  actionFunctionName: RangedAttack
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49,11 +17,11 @@ MonoBehaviour:
   rowTypeName: KCoreKit.AbilityActionDataTableRow, KCoreKit, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   dataList:
-  - {fileID: -5187399272509645907}
-  - {fileID: -990978644346947990}
-  - {fileID: 4248984695138895979}
-  - {fileID: 7264196382648326283}
---- !u!114 &4248984695138895979
+  - {fileID: 8671039065257743874}
+  - {fileID: 1513493948516138871}
+  - {fileID: 2789130780431249224}
+  - {fileID: 2420010279369077403}
+--- !u!114 &1513493948516138871
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -63,13 +31,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 598896e4bb5e41349532ce8273b14f81, type: 3}
-  m_Name: MagicAttack
+  m_Name: RangedAttack
   m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityActionDataTableRow
-  id: MagicAttack
+  id: RangedAttack
   tags: []
   isEnable: 1
-  actionFunctionName: MagicAttack
---- !u!114 &7264196382648326283
+  actionFunctionName: RangedAttack
+--- !u!114 &2420010279369077403
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -85,3 +53,35 @@ MonoBehaviour:
   tags: []
   isEnable: 1
   actionFunctionName: Heal
+--- !u!114 &2789130780431249224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598896e4bb5e41349532ce8273b14f81, type: 3}
+  m_Name: MagicAttack
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityActionDataTableRow
+  id: MagicAttack
+  tags: []
+  isEnable: 1
+  actionFunctionName: MagicAttack
+--- !u!114 &8671039065257743874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598896e4bb5e41349532ce8273b14f81, type: 3}
+  m_Name: MeleeAttack
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityActionDataTableRow
+  id: MeleeAttack
+  tags: []
+  isEnable: 1
+  actionFunctionName: MeleeAttack

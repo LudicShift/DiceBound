@@ -54,12 +54,12 @@ namespace DiceBound
             {
                 BroAudio.Play(_soundDirector.pickUnitSFX);
                 _draggingUnit = _hoveredUnit;
-                _draggingUnit.OnPick();
+                _draggingUnit.inputHandler.OnPick();
                 _draggingUnit.tooltipProvider.SetEnabled(false);
                 _replaceCell = allyGrid.FindCellByUnit(_hoveredUnit);
                 _replaceCell.RemoveUnit();
                 _mode = UnitPlaceMode.Drag;
-                _dragOffset =  _draggingUnit.transform.position - InputManager.GetWorldMousePosition();
+                _dragOffset =  _draggingUnit.transform.position - InputManager.GetWorldPointerPosition();
                 allyGrid.Show();
             }
         }
@@ -86,7 +86,7 @@ namespace DiceBound
                         unit.SetHighlight(false);
                     }
                     _hoveredCell.PlaceUnit(_draggingUnit);
-                    _draggingUnit.OnDrop();
+                    _draggingUnit.inputHandler.OnDrop();
                 }
                 else
                 {
@@ -118,13 +118,13 @@ namespace DiceBound
         {
             if (_mode == UnitPlaceMode.Drag && _draggingUnit)
             {
-                _draggingUnit.transform.position = InputManager.GetWorldMousePosition()+_dragOffset;
+                _draggingUnit.transform.position = InputManager.GetWorldPointerPosition()+_dragOffset;
             }
         }
         
         private void CheckHoveredTrashcan()
         {
-            var result = Physics2D.OverlapCircle(InputManager.GetWorldMousePosition(), 1, LayerMask.GetMask("TrashCan"));
+            var result = Physics2D.OverlapCircle(InputManager.GetWorldPointerPosition(), 1, LayerMask.GetMask("TrashCan"));
             if (result != null)
             {
                 if (!_trashCan)
@@ -146,7 +146,7 @@ namespace DiceBound
         
         private void CheckHoveredCell()
         {
-            var result = Physics2D.OverlapCircle(InputManager.GetWorldMousePosition(), 1, LayerMask.GetMask("Cell"));
+            var result = Physics2D.OverlapCircle(InputManager.GetWorldPointerPosition(), 1, LayerMask.GetMask("Cell"));
             if (result != null)
             {
                 if (_hoveredCell)
@@ -172,7 +172,7 @@ namespace DiceBound
 
         private void CheckHoveredUnit()
         {
-            var result = Physics2D.OverlapCircle(InputManager.GetWorldMousePosition(), 1, LayerMask.GetMask("Unit"));
+            var result = Physics2D.OverlapCircle(InputManager.GetWorldPointerPosition(), 1, LayerMask.GetMask("Unit"));
             if (result != null)
             {
                 if (_hoveredUnit)

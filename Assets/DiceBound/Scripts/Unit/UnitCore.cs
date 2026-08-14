@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using AutoGroupGenerator;
 using DG.Tweening;
 using KCoreKit;
 using KCoreKit.Scripts;
@@ -15,7 +16,7 @@ namespace DiceBound
 
         private StatAgent _statAgent;
 
-        public float hp;
+        public float _hp;
 
         public Action<UnitCore> onDeadAction;
         public Action<UnitCore> onDodgeAction;
@@ -33,6 +34,7 @@ namespace DiceBound
         private Animator _animator;
         private SpriteOutliner _outliner;
         private UnitMergeEffectHandler _mergeEffectHandler;
+        [HideInInspector] public UnitInputHandler inputHandler;
 
 
         [SerializeField] private TweenAnimationPlayer appearSequence;
@@ -40,8 +42,8 @@ namespace DiceBound
         [SerializeField] private TweenAnimationPlayer attackSequence;
         [SerializeField] private TweenAnimationPlayer deadSequence;
         [SerializeField] private TweenAnimationPlayer dodgeSequence;
-        [SerializeField] private TweenAnimationPlayer pickSequence;
-        [SerializeField] private TweenAnimationPlayer dropSequence;
+
+
         private bool _isBattle;
         private AnimationCallbackBehaviour[] _callBackBehaviours;
         public UnitAttackType attackType;
@@ -50,31 +52,23 @@ namespace DiceBound
 
         [HideInInspector] public TooltipProvider tooltipProvider;
         public BattleContext battleContext;
+        private string _statTooltipFormat;
+        private string _unitName;
 
-        public void OnPick()
-        {
-            StartCoroutine(pickSequence.Play(0, () =>
-            {
-                _spriteRenderer.transform.localScale = Vector3.one;
-            }));
-        } 
-        public void OnDrop()
-        {
-            StartCoroutine(dropSequence.Play(0.05f, () =>
-            {
-                _spriteRenderer.transform.localScale = Vector3.one;
-            }));
-        }
         public void Awake()
         {
+            _statTooltipFormat = LocalizationManager.GetLocalizedText("unitStatTooltipFormat");
+
             tooltipProvider = GetComponent<TooltipProvider>();
             _statAgent = GetComponent<StatAgent>();
             _abilityAgent = GetComponent<AbilityAgent>();
             _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
             _outliner = GetComponentInChildren<SpriteOutliner>();
+            inputHandler = GetComponentInChildren<UnitInputHandler>();
             _mergeEffectHandler = GetComponentInChildren<UnitMergeEffectHandler>();
             _animator = GetComponentInChildren<Animator>();
             _animator.speed = 1.5f;
+            _statAgent.AddStat("hp");
             _statAgent.AddStat("str");
             _statAgent.AddStat("spd");
             _statAgent.AddStat("def");
@@ -82,7 +76,6 @@ namespace DiceBound
             _statAgent.AddStat("con");
             _statAgent.AddStat("dex");
             _statAgent.AddStat("mdf");
-            _statAgent.AddStat("hp");
         }
 
         public void Update()
@@ -100,7 +93,8 @@ namespace DiceBound
             if (_unitInfoWidget)
             {
                 _unitInfoWidget.OnUpdate();
-                _unitInfoWidget.SetPositionFromWorldPoint(CameraManager.GetMainCamera(), _spriteRenderer.transform.position,
+                _unitInfoWidget.SetPositionFromWorldPoint(CameraManager.GetMainCamera(),
+                    _spriteRenderer.transform.position,
                     new Vector2(0, _data.height));
             }
 
@@ -121,9 +115,11 @@ namespace DiceBound
             return result;
         }
 
-        public void Setup(UnitDataTableRow data)
+        public void Setup(UnitDataTableRow data, int tier)
         {
-            _tier = 0;
+            _tier = tier;
+
+            _unitName = LocalizationManager.GetLocalizedText(data.nameKey);
             _unitInfoWidget.SetTier(_tier);
             _data = data;
             group = data.group;
@@ -132,14 +128,16 @@ namespace DiceBound
             BindAnimatorController(data.animator);
 
             _skills = new Dictionary<string, Skill>();
-            _statAgent.SetBaseValue("str", data.str);
+            float tierMult = Mathf.Pow(1.8f, _tier);
+            _statAgent.SetBaseValue("hp", data.hp * tierMult);
+            _statAgent.SetBaseValue("str", data.str * tierMult);
             _statAgent.SetBaseValue("spd", data.spd);
-            _statAgent.SetBaseValue("def", data.def);
-            _statAgent.SetBaseValue("mag", data.mag);
-            _statAgent.SetBaseValue("con", data.con);
-            _statAgent.SetBaseValue("dex", data.dex);
-            _statAgent.SetBaseValue("mdf", data.mdf);
-            _statAgent.SetBaseValue("hp", data.hp);
+            _statAgent.SetBaseValue("def", data.def * tierMult);
+            _statAgent.SetBaseValue("mag", data.mag * tierMult);
+            _statAgent.SetBaseValue("con", data.con * tierMult);
+            _statAgent.SetBaseValue("dex", data.dex * tierMult);
+            _statAgent.SetBaseValue("mdf", data.mdf * tierMult);
+            _statAgent.ClearStatModifier("hp");
             _statAgent.ClearStatModifier("str");
             _statAgent.ClearStatModifier("spd");
             _statAgent.ClearStatModifier("def");
@@ -147,9 +145,30 @@ namespace DiceBound
             _statAgent.ClearStatModifier("con");
             _statAgent.ClearStatModifier("dex");
             _statAgent.ClearStatModifier("mdf");
-            _statAgent.ClearStatModifier("hp");
-            hp = StatUtility.GetMaxHp(_statAgent);
-            _unitInfoWidget.SetMaxHp(hp);
+            _hp = StatUtility.GetMaxHp(_statAgent);
+            _unitInfoWidget.SetMaxHp(_hp);
+            tooltipProvider.SetText(GetTooltipText());
+        }
+
+        private string GetTooltipText()
+        {
+            string stars = "";
+
+            for (int i = 0; i <= _tier; i++)
+            {
+                stars += "<sprite=0>";
+            }
+            
+            var hp = _statAgent.GetStat("hp");
+            var str = _statAgent.GetStat("str");
+            var spd = _statAgent.GetStat("spd");
+            var def = _statAgent.GetStat("def");
+            var mag = _statAgent.GetStat("mag");
+            var con = _statAgent.GetStat("con");
+            var dex = _statAgent.GetStat("dex");
+            var mdf = _statAgent.GetStat("mdf");
+
+            return string.Format(_statTooltipFormat, _unitName, stars,hp, str, spd, def, mag, con, dex, mdf);
         }
 
 
@@ -212,8 +231,8 @@ namespace DiceBound
 
         public void ResetHp()
         {
-            hp = StatUtility.GetMaxHp(_statAgent);
-            _unitInfoWidget.SetHp(hp);
+            _hp = StatUtility.GetMaxHp(_statAgent);
+            _unitInfoWidget.SetHp(_hp);
         }
 
         public void BindSkill(SkillDataTableRow data)
@@ -236,7 +255,7 @@ namespace DiceBound
                     break;
             }
         }
-        
+
         public UnitDataTableRow GetData()
         {
             return _data;
@@ -270,7 +289,6 @@ namespace DiceBound
 
         public void OnBattleEnd()
         {
-            
             _isBattle = false;
             foreach (var skill in _skills)
             {
@@ -282,8 +300,8 @@ namespace DiceBound
             ResetHp();
             Animate("Idle");
         }
-        
-        
+
+
         public void SetHighlight(bool value, Color color = default, int order = 1)
         {
             _outliner?.SetEnable(value);
@@ -306,14 +324,14 @@ namespace DiceBound
 
         public void OnDamage(float damage, bool isCritical)
         {
-            hp -= damage;
-            hp = Mathf.Clamp(hp, 0, StatUtility.GetMaxHp(_statAgent));
+            _hp -= damage;
+            _hp = Mathf.Clamp(_hp, 0, StatUtility.GetMaxHp(_statAgent));
             onHitAction?.Invoke(this, (int)damage, isCritical);
             Animate("Hurt");
 
             StartCoroutine(hitSequence.Play());
-            _unitInfoWidget.SetHp(hp);
-            if (_isBattle && hp <= 0)
+            _unitInfoWidget.SetHp(_hp);
+            if (_isBattle && _hp <= 0)
             {
                 StartCoroutine(DeadRoutine());
             }
@@ -332,8 +350,6 @@ namespace DiceBound
         {
             _spriteRenderer.flipX = value;
         }
-        
-        
 
 
         public void PlayAttackAnimation(string clip = "Attack")
@@ -358,11 +374,10 @@ namespace DiceBound
 
         public void OnHeal(float damage)
         {
-            hp += damage;
-            hp = Mathf.Clamp(hp, 0, StatUtility.GetMaxHp(_statAgent));
+            _hp += damage;
+            _hp = Mathf.Clamp(_hp, 0, StatUtility.GetMaxHp(_statAgent));
             onHealAction?.Invoke(this, (int)damage);
-            //hitSequence.Play();
-            _unitInfoWidget.SetHp(hp);
+            _unitInfoWidget.SetHp(_hp);
         }
 
         public float GetAttackInterval()
@@ -377,13 +392,13 @@ namespace DiceBound
 
         public bool IsDead()
         {
-            return hp <= 0;
+            return _hp <= 0;
         }
 
         public void PlayAppear(Action onComplete = null)
         {
             _spriteRenderer.color = new Color();
-           
+
             _unitInfoWidget.OnAppearBegin();
 
             StartCoroutine(appearSequence.Play(0.2f, () =>
@@ -401,18 +416,7 @@ namespace DiceBound
 
         public void Upgrade()
         {
-            _tier++;
-
-            foreach (var stat in _statAgent.GetAllStats())
-            {
-                stat.Value.AddModifier(new StatModifier(0.8f, StatModifyType.PercentMult));
-            }
-            
-            _unitInfoWidget.SetTier(_tier);
-            var maxHp = StatUtility.GetMaxHp(_statAgent);
-            hp = maxHp;
-            _unitInfoWidget.SetMaxHp(maxHp);
-            _unitInfoWidget.SetHp(hp);
+            Setup(_data, _tier + 1);
             _unitInfoWidget.OnUpgrade();
         }
 
@@ -444,12 +448,12 @@ namespace DiceBound
 
         public float GetHpRate()
         {
-            return hp / _statAgent.GetStat("hp").Value;
+            return _hp / _statAgent.GetStat("hp").Value;
         }
 
         public float GetHp()
         {
-            return hp;
+            return _hp;
         }
 
         public UnitInfoWidget GetUnitInfoWidget()

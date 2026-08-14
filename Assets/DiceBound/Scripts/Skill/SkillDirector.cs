@@ -10,7 +10,6 @@ namespace DiceBound
     {
         private Dictionary<string,SkillDataTableRow> _skillDictionary;
         private Dictionary<string,SkillEffectDataTableRow> _skillEffectDictionary;
-
         private Dictionary<string, PrefabPool<SkillEffect>> _effectPools;
         
         public override IEnumerator OnInitialize()

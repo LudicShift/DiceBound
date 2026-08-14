@@ -31,8 +31,6 @@ namespace DiceBound
         {
 
             _isRolling = true;
-            //_animator.SetInteger("Index",Random.Range(1,3));
-            //yield return new WaitUntil(() => !_isRolling);
             var rollStartIndex = Random.Range(0, 5);
             var rollEndIndex = rollStartIndex + 6*rollTime;
             _animationIndex = rollStartIndex;

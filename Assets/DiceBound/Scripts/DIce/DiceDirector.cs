@@ -10,30 +10,27 @@ namespace DiceBound
 {
     public class DiceDirector : DirectorBase
     {
+        [BigHeader("General")]
+        [SerializeField] private Canvas canvas;    
+        [SerializeField] private Transform initialDicePoint;
+        [SerializeField] private RectTransform remainPointGroup;
+        [SerializeField] private RectTransform keepPointGroup;
+        
+        [BigHeader("Widget")]
         [SerializeField] private ButtonWidget _claimButtonWidget;
         [SerializeField] private DiceRerollButtonWidget _rerollButtonWidget;
-
         [SerializeField] private ButtonWidget _showFieldButton;
         [SerializeField] private ButtonWidget _showRewardButton;
         [SerializeField] private ButtonWidget _showDiceButton;
-        
         [SerializeField] private TextWidget _combinationInfoWidget;
-        
-        [SerializeField] private Transform initialDicePoint;
-        
-        [SerializeField]
-        private Canvas canvas;    
-        
         [SerializeField] private ImageWidget diceLayer;
         [SerializeField] private ImageWidget rewardLayer;
-
+        
+        [BigHeader("Sprite")]
         [SerializeField] private List<Sprite> diceSprite;
         [SerializeField] private List<Sprite> diceAnimationSprite;
         [SerializeField] private Sprite emptySprite;
-        
-        
-        [SerializeField] private RectTransform remainPointGroup;
-        [SerializeField] private RectTransform keepPointGroup;
+     
         
         private int _remainRollCount = 3;
         private int _maxDiceFace = 6;

@@ -1385,6 +1385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3003753007602453789}
   - component: {fileID: 2098071271932889212}
+  - component: {fileID: 3528761739140589695}
   - component: {fileID: 3421820209706376858}
   - component: {fileID: 120364583445347332}
   - component: {fileID: 5069998341349010457}
@@ -1428,15 +1429,28 @@ MonoBehaviour:
   moveDuration: 0.3
   hp: 0
   group: 0
+  inputHandler: {fileID: 0}
   appearSequence: {fileID: 8251638664676021604}
   hitSequence: {fileID: 1292691626055214249}
   attackSequence: {fileID: 8356632432054330236}
   deadSequence: {fileID: 1921513507531996774}
   dodgeSequence: {fileID: 5817362244816249818}
-  pickSequence: {fileID: 5433879351175846249}
-  dropSequence: {fileID: 7206281554078172899}
   attackType: 0
   tooltipProvider: {fileID: 0}
+--- !u!114 &3528761739140589695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6302351625213716871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 874e34aee8714aea92096aae2c8bab29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitInputHandler
+  pickSequence: {fileID: 5433879351175846249}
+  dropSequence: {fileID: 7206281554078172899}
 --- !u!114 &3421820209706376858
 MonoBehaviour:
   m_ObjectHideFlags: 0

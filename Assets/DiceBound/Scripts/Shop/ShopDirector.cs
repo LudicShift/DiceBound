@@ -6,12 +6,15 @@ namespace DiceBound
 {
     public class ShopDirector : DirectorBase
     {
+        [BigHeader("General")]
+        [SerializeField] private Canvas canvas;
+        
+        [BigHeader("Widget")]
         [SerializeField] private ButtonWidget shopButtonWidget;
         [SerializeField] private ButtonWidget backToFieldButton;
         [SerializeField] private ButtonWidget rollDiceButtonWidget;
+        
         private int rollDiceCost = 100;
-        [SerializeField] private Canvas canvas;
-
         private WalletDirector _walletDirector;
         private DiceDirector _diceDirector;
         private bool _isEnable = true;
