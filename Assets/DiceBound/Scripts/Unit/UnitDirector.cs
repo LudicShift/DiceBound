@@ -15,14 +15,14 @@ namespace DiceBound
         private Dictionary<string, UnitDataTableRow> _unitDataDictionary;
         private Vector3 _dragOffset;
         private Camera _camera;
-        [SerializeField] private Canvas hpCanvas;
+        [SerializeField] private Canvas unitCanvas;
         [SerializeField] private TextWidget allyCountWidget;
 
 
         private PrefabPool<UnitCore> _allyPrefabPool;
         private PrefabPool<UnitCore> _enemyPrefabPool;
-        private PrefabPool<GaugeWidget> _hpGaugePrefabPool;
-        private PrefabPool<TierLabelWidget> _tierLabelPrefabPool;
+        private PrefabPool<UnitInfoWidget> _unitInfoPrefabPool;
+   
         private List<UnitCore> _units = new List<UnitCore>();
         private List<UnitCore> _allies = new List<UnitCore>();
         private List<UnitCore> _enemies = new List<UnitCore>();
@@ -57,9 +57,8 @@ namespace DiceBound
             _skillTreeManager = SkillTreeManager.GetInstance();
             _maxAllyNumber = 15 + (int)_skillTreeManager.GetModifierTotal("AllyCapIncrease");
             UpdateAllyCountText();
-            _hpGaugePrefabPool = new PrefabPool<GaugeWidget>(PrefabManager.CachePrefab<GaugeWidget>(), hpCanvas.transform, 100);
-            _tierLabelPrefabPool = new PrefabPool<TierLabelWidget>(PrefabManager.CachePrefab<TierLabelWidget>(), hpCanvas.transform,100);
-            
+            _unitInfoPrefabPool = new PrefabPool<UnitInfoWidget>(PrefabManager.CachePrefab<UnitInfoWidget>(), unitCanvas.transform, 100);
+          
             _allyPrefabPool =
                 new PrefabPool<UnitCore>(PrefabManager.CachePrefab<UnitCore>("PF_Ally"), World.GetTransform(), 50);
             _enemyPrefabPool = new PrefabPool<UnitCore>(PrefabManager.CachePrefab<UnitCore>("PF_Enemy"),
@@ -93,18 +92,9 @@ namespace DiceBound
 
         private void OnReleaseUnit(UnitCore instance)
         {
-            instance.onDeadAction -= OnUnitDead;
-            instance.onHitAction -= OnUnitHit;
-            instance.onHealAction -= OnUnitHeal;
-            instance.onDodgeAction -= OnUnitDodge;
-            var hp = instance.GetHpGauge();
-            var tierLabel = instance.GetTierLabel();
-            instance.ReleaseHpGauge(hp);
-            _hpGaugePrefabPool.Release(hp);
-            if (tierLabel)
-            {
-                _tierLabelPrefabPool.Release(tierLabel);
-            }
+            instance.OnRelease();
+            var info = instance.GetUnitInfoWidget();
+            _unitInfoPrefabPool.Release(info);
         }
 
         private void OnUnitDodge(UnitCore unit)
@@ -137,16 +127,12 @@ namespace DiceBound
             {
                 instance = _enemyPrefabPool.Get();
             }
-
+            instance.BindInfoWidget(_unitInfoPrefabPool.Get());
             instance.Setup(data);
             if (data.group == UnitGroup.Ally)
             {
                 ApplyAllyStatModifiers(instance);
             }
-
-            instance.BindHpGauge(_hpGaugePrefabPool.Get());
-            instance.BindTierLabel(_tierLabelPrefabPool.Get());
-         
             
             instance.Animate("Idle");
             instance.BindSkill(_skillDirector.GetSkill(data.skillBasicKey));

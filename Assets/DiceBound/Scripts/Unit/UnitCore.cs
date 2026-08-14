@@ -29,8 +29,7 @@ namespace DiceBound
 
         private AbilityAgent _abilityAgent;
         private SpriteRenderer _spriteRenderer;
-        private GaugeWidget _hpGauge;
-        private TierLabelWidget _tierLabel;
+        private UnitInfoWidget _unitInfoWidget;
         private Animator _animator;
         private SpriteOutliner _outliner;
         private UnitMergeEffectHandler _mergeEffectHandler;
@@ -54,11 +53,17 @@ namespace DiceBound
 
         public void OnPick()
         {
-            StartCoroutine(pickSequence.Play());
+            StartCoroutine(pickSequence.Play(0, () =>
+            {
+                _spriteRenderer.transform.localScale = Vector3.one;
+            }));
         } 
         public void OnDrop()
         {
-            StartCoroutine(dropSequence.Play());
+            StartCoroutine(dropSequence.Play(0.05f, () =>
+            {
+                _spriteRenderer.transform.localScale = Vector3.one;
+            }));
         }
         public void Awake()
         {
@@ -92,16 +97,11 @@ namespace DiceBound
                 return;
             }
 
-            if (_hpGauge)
+            if (_unitInfoWidget)
             {
-                _hpGauge.SetPositionFromWorldPoint(CameraManager.GetMainCamera(), _spriteRenderer.transform.position,
+                _unitInfoWidget.OnUpdate();
+                _unitInfoWidget.SetPositionFromWorldPoint(CameraManager.GetMainCamera(), _spriteRenderer.transform.position,
                     new Vector2(0, _data.height));
-            }
-
-            if (_tierLabel)
-            {
-                _tierLabel.SetPositionFromWorldPoint(CameraManager.GetMainCamera(), _spriteRenderer.transform.position,
-                    new Vector2(0, _data.height + 30));
             }
 
             if (_isBattle)
@@ -124,6 +124,7 @@ namespace DiceBound
         public void Setup(UnitDataTableRow data)
         {
             _tier = 0;
+            _unitInfoWidget.SetTier(_tier);
             _data = data;
             group = data.group;
             attackType = data.attackType;
@@ -148,6 +149,7 @@ namespace DiceBound
             _statAgent.ClearStatModifier("mdf");
             _statAgent.ClearStatModifier("hp");
             hp = StatUtility.GetMaxHp(_statAgent);
+            _unitInfoWidget.SetMaxHp(hp);
         }
 
 
@@ -211,7 +213,7 @@ namespace DiceBound
         public void ResetHp()
         {
             hp = StatUtility.GetMaxHp(_statAgent);
-            _hpGauge.OnChange(hp);
+            _unitInfoWidget.SetHp(hp);
         }
 
         public void BindSkill(SkillDataTableRow data)
@@ -224,6 +226,15 @@ namespace DiceBound
             var skill = new Skill(data);
             _skills.Add(data.id, skill);
             skill.SetOwner(this);
+            switch (skill.type)
+            {
+                case SkillType.Basic:
+                    _unitInfoWidget.BindBasicSkill(skill);
+                    break;
+                case SkillType.Active:
+                    _unitInfoWidget.BindActiveSkill(skill);
+                    break;
+            }
         }
         
         public UnitDataTableRow GetData()
@@ -300,8 +311,7 @@ namespace DiceBound
             Animate("Hurt");
 
             StartCoroutine(hitSequence.Play());
-            _hpGauge.OnChange(hp);
-
+            _unitInfoWidget.SetHp(hp);
             if (_isBattle && hp <= 0)
             {
                 StartCoroutine(DeadRoutine());
@@ -321,29 +331,8 @@ namespace DiceBound
         {
             _spriteRenderer.flipX = value;
         }
-
-        public void BindHpGauge(GaugeWidget hpGauge)
-        {
-            _hpGauge = hpGauge;
-            _hpGauge.Setup(StatUtility.GetMaxHp(_statAgent), hp);
-        }
-
-        public void BindTierLabel(TierLabelWidget tierLabel)
-        {
-            _tierLabel = tierLabel;
-            _tierLabel.OnChange(_tier);
-        }
-
-
-        public GaugeWidget GetHpGauge()
-        {
-            return _hpGauge;
-        }
-
-        public void ReleaseHpGauge(GaugeWidget hpGauge)
-        {
-            _hpGauge = null;
-        }
+        
+        
 
 
         public void PlayAttackAnimation(string clip = "Attack")
@@ -372,14 +361,7 @@ namespace DiceBound
             hp = Mathf.Clamp(hp, 0, StatUtility.GetMaxHp(_statAgent));
             onHealAction?.Invoke(this, (int)damage);
             //hitSequence.Play();
-            _hpGauge.OnChange(hp);
-        }
-
-        public GaugeWidget ReleaseHpGauge()
-        {
-            var hpGauge = _hpGauge;
-            _hpGauge = null;
-            return hpGauge;
+            _unitInfoWidget.SetHp(hp);
         }
 
         public float GetAttackInterval()
@@ -400,17 +382,12 @@ namespace DiceBound
         public void PlayAppear(Action onComplete = null)
         {
             _spriteRenderer.color = new Color();
-            if (_hpGauge)
-            {
-                _hpGauge.canvasGroup.alpha = 0;
-            }
+           
+            _unitInfoWidget.OnAppearBegin();
 
             StartCoroutine(appearSequence.Play(0.2f, () =>
             {
-                if (_hpGauge)
-                {
-                    _hpGauge.canvasGroup.alpha = 1;
-                }
+                _unitInfoWidget.OnAppearEnd();
 
                 onComplete?.Invoke();
             }));
@@ -429,16 +406,13 @@ namespace DiceBound
             {
                 stat.Value.AddModifier(new StatModifier(0.8f, StatModifyType.PercentMult));
             }
-
-            _tierLabel.OnChange(_tier);
+            
+            _unitInfoWidget.SetTier(_tier);
             var maxHp = StatUtility.GetMaxHp(_statAgent);
             hp = maxHp;
-            _hpGauge.Setup(maxHp, hp);
-        }
-
-        public TierLabelWidget GetTierLabel()
-        {
-            return _tierLabel;
+            _unitInfoWidget.SetMaxHp(maxHp);
+            _unitInfoWidget.SetHp(hp);
+            _unitInfoWidget.OnUpgrade();
         }
 
         public IEnumerator ShowUpgradeEffect()
@@ -475,6 +449,25 @@ namespace DiceBound
         public float GetHp()
         {
             return hp;
+        }
+
+        public UnitInfoWidget GetUnitInfoWidget()
+        {
+            return _unitInfoWidget;
+        }
+
+        public void BindInfoWidget(UnitInfoWidget infoWidget)
+        {
+            _unitInfoWidget = infoWidget;
+        }
+
+        public void OnRelease()
+        {
+            _unitInfoWidget.ReleaseSkills();
+            onDeadAction = null;
+            onHitAction = null;
+            onHealAction = null;
+            onDodgeAction = null;
         }
     }
 }

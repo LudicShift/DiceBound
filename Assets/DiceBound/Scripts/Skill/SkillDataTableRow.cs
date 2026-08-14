@@ -8,6 +8,7 @@ namespace DiceBound
         Active,
         Passive
     }
+    
     public enum SkillTargetGroup
     {
         Ally,

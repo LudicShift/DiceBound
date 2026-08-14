@@ -24,8 +24,14 @@ namespace DiceBound
         private readonly int _priority;
         private readonly string _animClip;
         private readonly float _startUpDelay;
+        
 
-
+        public float GetCurrentTime()
+        {
+            return _timeElapsed;
+        }
+        
+        
         public Skill(SkillDataTableRow data)
         {
             _data = data;
@@ -36,7 +42,6 @@ namespace DiceBound
             _abilityId = data.abilityId;
             effectKey = data.effectKey;
             _castTime = data.castTime;
-            _ = data.cooldown;
             _animClip =  _data.animClip;
             _startUpDelay = _data.startUpDelay;
             _cooldown = data.cooldown;
@@ -74,24 +79,25 @@ namespace DiceBound
             }
         }
 
-        public void OnUpdate()
+        public float GetInterval()
         {
             switch (type)
             {
                 case SkillType.Basic:
-                    if (_owner.GetAttackInterval() <_timeElapsed )
-                    {
-                        _abilityAgent.ExecuteEffectById(_abilityId, ref _abilityContext);
-                        _timeElapsed = 0;
-                    }
-                    break;
+                    return _owner.GetAttackInterval();
                 case SkillType.Active:
-                    if (_cooldown < _timeElapsed)
-                    {
-                        _abilityAgent.ExecuteEffectById(_abilityId,ref _abilityContext);
-                        _timeElapsed = 0;
-                    }
-                    break;
+                    return _cooldown;
+            }
+
+            return 0;
+        }
+        
+        public void OnUpdate()
+        {
+            if (GetInterval() < _timeElapsed)
+            {
+                _abilityAgent.ExecuteEffectById(_abilityId, ref _abilityContext);
+                _timeElapsed = 0;
             }
 
             _timeElapsed += Time.deltaTime;
