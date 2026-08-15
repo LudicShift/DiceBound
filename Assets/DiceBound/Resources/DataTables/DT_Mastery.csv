@@ -1,0 +1,10 @@
+id,nameKey,descKey,icon,effectKey,effectValue,prerequisiteIds,cost,isEnable
+ST_ALLY_CAP,SkillTree_AllyCap_Name,SkillTree_AllyCap_Desc,,AllyCapIncrease,3,,50,TRUE
+ST_WAVE_GOLD,SkillTree_WaveGold_Name,SkillTree_WaveGold_Desc,,WaveGoldRewardPercent,20,,50,TRUE
+ST_DICE_REROLL,SkillTree_DiceReroll_Name,SkillTree_DiceReroll_Desc,,DiceRerollCountIncrease,1,,50,TRUE
+ST_UNIT_4STAR,SkillTree_Unit4Star_Name,SkillTree_Unit4Star_Desc,,MergeStarCapIncrease,1,ST_ALLY_CAP,150,TRUE
+ST_DICE_2STAR,SkillTree_Dice2Star_Name,SkillTree_Dice2Star_Desc,,Unlock2StarDice,1,ST_DICE_REROLL,100,TRUE
+ST_ALLY_STAT,SkillTree_AllyStat_Name,SkillTree_AllyStat_Desc,,AllyAllStatsPercent,10,ST_ALLY_CAP,200,TRUE
+ST_LINEAGE_DMG,SkillTree_LineageDmg_Name,SkillTree_LineageDmg_Desc,,LineageDamageMultiplier,50,,300,TRUE
+ST_DICE_FACE,SkillTree_DiceFace_Name,SkillTree_DiceFace_Desc,,DiceFaceRemoval,1,ST_DICE_REROLL,250,TRUE
+ST_START_GOLD,SkillTree_StartGold_Name,SkillTree_StartGold_Desc,,StartingGoldIncrease,100,,50,TRUE

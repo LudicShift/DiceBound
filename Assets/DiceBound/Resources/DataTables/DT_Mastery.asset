@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7011277887592372682
+--- !u!114 &-5027505528082961670
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,42 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 348e32e70347ba6419ebcbde54d8072c, type: 3}
-  m_Name: ST_UNIT_4STAR
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillTreeNodeDataTableRow
-  id: ST_UNIT_4STAR
+  m_Name: ST_DICE_2STAR
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.MasteryDataTableRow
+  id: ST_DICE_2STAR
   tags: []
   isEnable: 1
-  nameKey: SkillTree_Unit4Star_Name
-  descKey: SkillTree_Unit4Star_Desc
+  nameKey: SkillTree_Dice2Star_Name
+  descKey: SkillTree_Dice2Star_Desc
   icon: {fileID: 0}
-  diamondCost: 150
-  effectKey: MergeStarCapIncrease
+  cost: 0
+  effectKey: Unlock2StarDice
   effectValue: 1
   prerequisiteIds:
-  - ST_ALLY_CAP
---- !u!114 &-2803403186716223940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 348e32e70347ba6419ebcbde54d8072c, type: 3}
-  m_Name: ST_WAVE_GOLD
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillTreeNodeDataTableRow
-  id: ST_WAVE_GOLD
-  tags: []
-  isEnable: 1
-  nameKey: SkillTree_WaveGold_Name
-  descKey: SkillTree_WaveGold_Desc
-  icon: {fileID: 0}
-  diamondCost: 50
-  effectKey: WaveGoldRewardPercent
-  effectValue: 20
-  prerequisiteIds: []
---- !u!114 &-2302312931650241414
+  - ST_DICE_REROLL
+--- !u!114 &-4607482184597956197
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -56,14 +34,14 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 348e32e70347ba6419ebcbde54d8072c, type: 3}
   m_Name: ST_DICE_REROLL
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillTreeNodeDataTableRow
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.MasteryDataTableRow
   id: ST_DICE_REROLL
   tags: []
   isEnable: 1
   nameKey: SkillTree_DiceReroll_Name
   descKey: SkillTree_DiceReroll_Desc
   icon: {fileID: 0}
-  diamondCost: 50
+  cost: 0
   effectKey: DiceRerollCountIncrease
   effectValue: 1
   prerequisiteIds: []
@@ -77,136 +55,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 463daf5080d293049bd98a91154e958f, type: 3}
-  m_Name: DT_SkillTreeNode
+  m_Name: DT_Mastery
   m_EditorClassIdentifier: KCoreKit::KCoreKit.DataTable
   rowScript: {fileID: 11500000, guid: 348e32e70347ba6419ebcbde54d8072c, type: 3}
   csv: {fileID: 4900000, guid: 1e2b9095128cce84693298693ad6cd0f, type: 3}
-  rowTypeName: DiceBound.SkillTreeNodeDataTableRow, Assembly-CSharp, Version=0.0.0.0,
-    Culture=neutral, PublicKeyToken=null
+  rowTypeName: DiceBound.MasteryDataTableRow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
   dataList:
-  - {fileID: 2539479768907144588}
-  - {fileID: -2803403186716223940}
-  - {fileID: -2302312931650241414}
-  - {fileID: -7011277887592372682}
-  - {fileID: 5291911122114737743}
-  - {fileID: 1087076808366424441}
-  - {fileID: 7250854871258171808}
-  - {fileID: 3635714709713460099}
-  - {fileID: 7171766210190323735}
---- !u!114 &1087076808366424441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 348e32e70347ba6419ebcbde54d8072c, type: 3}
-  m_Name: ST_ALLY_STAT
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillTreeNodeDataTableRow
-  id: ST_ALLY_STAT
-  tags: []
-  isEnable: 1
-  nameKey: SkillTree_AllyStat_Name
-  descKey: SkillTree_AllyStat_Desc
-  icon: {fileID: 0}
-  diamondCost: 200
-  effectKey: AllyAllStatsPercent
-  effectValue: 10
-  prerequisiteIds:
-  - ST_ALLY_CAP
---- !u!114 &2539479768907144588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 348e32e70347ba6419ebcbde54d8072c, type: 3}
-  m_Name: ST_ALLY_CAP
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillTreeNodeDataTableRow
-  id: ST_ALLY_CAP
-  tags: []
-  isEnable: 1
-  nameKey: SkillTree_AllyCap_Name
-  descKey: SkillTree_AllyCap_Desc
-  icon: {fileID: 0}
-  diamondCost: 50
-  effectKey: AllyCapIncrease
-  effectValue: 3
-  prerequisiteIds: []
---- !u!114 &3635714709713460099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 348e32e70347ba6419ebcbde54d8072c, type: 3}
-  m_Name: ST_DICE_FACE
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillTreeNodeDataTableRow
-  id: ST_DICE_FACE
-  tags: []
-  isEnable: 1
-  nameKey: SkillTree_DiceFace_Name
-  descKey: SkillTree_DiceFace_Desc
-  icon: {fileID: 0}
-  diamondCost: 250
-  effectKey: DiceFaceRemoval
-  effectValue: 1
-  prerequisiteIds:
-  - ST_DICE_REROLL
---- !u!114 &5291911122114737743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 348e32e70347ba6419ebcbde54d8072c, type: 3}
-  m_Name: ST_DICE_2STAR
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillTreeNodeDataTableRow
-  id: ST_DICE_2STAR
-  tags: []
-  isEnable: 1
-  nameKey: SkillTree_Dice2Star_Name
-  descKey: SkillTree_Dice2Star_Desc
-  icon: {fileID: 0}
-  diamondCost: 100
-  effectKey: Unlock2StarDice
-  effectValue: 1
-  prerequisiteIds:
-  - ST_DICE_REROLL
---- !u!114 &7171766210190323735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 348e32e70347ba6419ebcbde54d8072c, type: 3}
-  m_Name: ST_START_GOLD
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillTreeNodeDataTableRow
-  id: ST_START_GOLD
-  tags: []
-  isEnable: 1
-  nameKey: SkillTree_StartGold_Name
-  descKey: SkillTree_StartGold_Desc
-  icon: {fileID: 0}
-  diamondCost: 50
-  effectKey: StartingGoldIncrease
-  effectValue: 100
-  prerequisiteIds: []
---- !u!114 &7250854871258171808
+  - {fileID: 4154534701358808878}
+  - {fileID: 5405006811425888255}
+  - {fileID: -4607482184597956197}
+  - {fileID: 2986356706972112889}
+  - {fileID: -5027505528082961670}
+  - {fileID: 7411051939455872035}
+  - {fileID: 35707834249666644}
+  - {fileID: 8541884213737739426}
+  - {fileID: 3845379713850482519}
+--- !u!114 &35707834249666644
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -217,14 +82,149 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 348e32e70347ba6419ebcbde54d8072c, type: 3}
   m_Name: ST_LINEAGE_DMG
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.SkillTreeNodeDataTableRow
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.MasteryDataTableRow
   id: ST_LINEAGE_DMG
   tags: []
   isEnable: 1
   nameKey: SkillTree_LineageDmg_Name
   descKey: SkillTree_LineageDmg_Desc
   icon: {fileID: 0}
-  diamondCost: 300
+  cost: 0
   effectKey: LineageDamageMultiplier
   effectValue: 50
   prerequisiteIds: []
+--- !u!114 &2986356706972112889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 348e32e70347ba6419ebcbde54d8072c, type: 3}
+  m_Name: ST_UNIT_4STAR
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.MasteryDataTableRow
+  id: ST_UNIT_4STAR
+  tags: []
+  isEnable: 1
+  nameKey: SkillTree_Unit4Star_Name
+  descKey: SkillTree_Unit4Star_Desc
+  icon: {fileID: 0}
+  cost: 0
+  effectKey: MergeStarCapIncrease
+  effectValue: 1
+  prerequisiteIds:
+  - ST_ALLY_CAP
+--- !u!114 &3845379713850482519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 348e32e70347ba6419ebcbde54d8072c, type: 3}
+  m_Name: ST_START_GOLD
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.MasteryDataTableRow
+  id: ST_START_GOLD
+  tags: []
+  isEnable: 1
+  nameKey: SkillTree_StartGold_Name
+  descKey: SkillTree_StartGold_Desc
+  icon: {fileID: 0}
+  cost: 0
+  effectKey: StartingGoldIncrease
+  effectValue: 100
+  prerequisiteIds: []
+--- !u!114 &4154534701358808878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 348e32e70347ba6419ebcbde54d8072c, type: 3}
+  m_Name: ST_ALLY_CAP
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.MasteryDataTableRow
+  id: ST_ALLY_CAP
+  tags: []
+  isEnable: 1
+  nameKey: SkillTree_AllyCap_Name
+  descKey: SkillTree_AllyCap_Desc
+  icon: {fileID: 0}
+  cost: 0
+  effectKey: AllyCapIncrease
+  effectValue: 3
+  prerequisiteIds: []
+--- !u!114 &5405006811425888255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 348e32e70347ba6419ebcbde54d8072c, type: 3}
+  m_Name: ST_WAVE_GOLD
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.MasteryDataTableRow
+  id: ST_WAVE_GOLD
+  tags: []
+  isEnable: 1
+  nameKey: SkillTree_WaveGold_Name
+  descKey: SkillTree_WaveGold_Desc
+  icon: {fileID: 0}
+  cost: 0
+  effectKey: WaveGoldRewardPercent
+  effectValue: 20
+  prerequisiteIds: []
+--- !u!114 &7411051939455872035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 348e32e70347ba6419ebcbde54d8072c, type: 3}
+  m_Name: ST_ALLY_STAT
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.MasteryDataTableRow
+  id: ST_ALLY_STAT
+  tags: []
+  isEnable: 1
+  nameKey: SkillTree_AllyStat_Name
+  descKey: SkillTree_AllyStat_Desc
+  icon: {fileID: 0}
+  cost: 0
+  effectKey: AllyAllStatsPercent
+  effectValue: 10
+  prerequisiteIds:
+  - ST_ALLY_CAP
+--- !u!114 &8541884213737739426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 348e32e70347ba6419ebcbde54d8072c, type: 3}
+  m_Name: ST_DICE_FACE
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.MasteryDataTableRow
+  id: ST_DICE_FACE
+  tags: []
+  isEnable: 1
+  nameKey: SkillTree_DiceFace_Name
+  descKey: SkillTree_DiceFace_Desc
+  icon: {fileID: 0}
+  cost: 0
+  effectKey: DiceFaceRemoval
+  effectValue: 1
+  prerequisiteIds:
+  - ST_DICE_REROLL

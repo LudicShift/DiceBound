@@ -35,7 +35,7 @@ namespace DiceBound
         private ShopDirector _shopDirector;
         private UnitPlaceDirector _unitPlaceDirector;
         private SoundDirector _soundDirector;
-        private SkillTreeManager _skillTreeManager;
+        private MasteryManager _masteryManager;
 
         public override IEnumerator OnInitialize()
         {
@@ -46,7 +46,7 @@ namespace DiceBound
             _battleDirector = DirectorFacade.GetDirector<BattleDirector>();
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
             _soundDirector = DirectorFacade.GetDirector<SoundDirector>();
-            _skillTreeManager = SkillTreeManager.GetInstance();
+            _masteryManager = MasteryManager.GetInstance();
             playWaveButtonWidget.onClickAction+=OnPlayWaveButtonClick;
         
             
@@ -113,9 +113,9 @@ namespace DiceBound
                 {
                     _battleDirector.EndBattle();
                     _unitDirector.ClearDeadAllies();
-                    var goldRatePercent = _skillTreeManager.GetModifierTotal("WaveGoldRewardPercent");
+                    var goldRatePercent = _masteryManager.GetModifierTotal("WaveGoldRewardPercent");
                     _walletDirector.AddGold(Mathf.RoundToInt(wave.waveRewardGold * (1f + goldRatePercent / 100f)));
-                    _skillTreeManager.AddDiamond(wave.waveRewardDiamond);
+                    _masteryManager.AddDiamond(wave.waveRewardDiamond);
 
                     waveLabelText.SetText($"Victory");
                     waveLabelImage.Show();

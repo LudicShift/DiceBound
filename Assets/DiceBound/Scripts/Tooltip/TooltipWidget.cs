@@ -1,4 +1,7 @@
-﻿using Ami.BroAudio;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Ami.BroAudio;
 using KCoreKit;
 using UnityEngine;
 
@@ -9,8 +12,13 @@ namespace DiceBound
     {
         public string id;
         [SerializeField] private RectTransform root;
-        [SerializeField] private TextWidget text;
-        
+        private Dictionary<string,TooltipTextWidget> textDictionary;
+
+        public void Awake()
+        {
+            textDictionary = GetComponentsInChildren<TooltipTextWidget>().ToDictionary(x => x.key);
+        }
+
         public void OnShow(TooltipContext context)
         {
             if (context.screenSpace)
@@ -21,7 +29,12 @@ namespace DiceBound
             {
                  SetPositionFromWorldPoint(CameraManager.GetMainCamera(),context.tooltipPosition,context.offset);
             }
-            text.SetText(context.text);
+
+            foreach (var text in context.textDictionary)
+            {
+                textDictionary[text.Key].SetText(text.Value);
+            }
+           
         }
 
         public void OnUpdate(TooltipContext context)

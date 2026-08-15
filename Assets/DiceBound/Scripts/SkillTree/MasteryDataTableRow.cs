@@ -4,12 +4,12 @@ using UnityEngine;
 
 namespace DiceBound
 {
-    public class SkillTreeNodeDataTableRow : DataTableRowBase
+    public class MasteryDataTableRow : DataTableRowBase
     {
         public string nameKey;
         public string descKey;
-        public Sprite icon;
-        public int diamondCost;
+        public Texture2D icon;
+        public int cost;
         public string effectKey;
         public float effectValue;
         public List<string> prerequisiteIds;

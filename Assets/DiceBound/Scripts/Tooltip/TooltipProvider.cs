@@ -12,9 +12,9 @@ namespace DiceBound
         public readonly Action<TooltipContext> exitAction;
         private bool _isHovered;
 
-        public void SetText(string text)
+        public void SetText(string key, string text)
         {
-            _context.text = text;
+            _context.textDictionary.TryAdd(key,text);
         }
 
         public void Update()

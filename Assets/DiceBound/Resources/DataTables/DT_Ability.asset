@@ -1,25 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6495361236737152179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7207190133824d7e904d98b5e5a1f1c8, type: 3}
-  m_Name: MeleeAttack
-  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityDataTableRow
-  id: MeleeAttack
-  tags: []
-  isEnable: 1
-  abilityConditionIdList:
-  - Always
-  abilityActionIdList:
-  - MeleeAttack
---- !u!114 &-3466258493418833276
+--- !u!114 &-9092965079909093506
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -38,28 +19,7 @@ MonoBehaviour:
   - Always
   abilityActionIdList:
   - MagicAttack
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 463daf5080d293049bd98a91154e958f, type: 3}
-  m_Name: DT_Ability
-  m_EditorClassIdentifier: KCoreKit::KCoreKit.DataTable
-  rowScript: {fileID: 11500000, guid: 7207190133824d7e904d98b5e5a1f1c8, type: 3}
-  csv: {fileID: 4900000, guid: fc41fcf4ab3d4ca4fb6ab6cc4a9bba1d, type: 3}
-  rowTypeName: KCoreKit.AbilityDataTableRow, KCoreKit, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  dataList:
-  - {fileID: -6495361236737152179}
-  - {fileID: 1280045865224779811}
-  - {fileID: -3466258493418833276}
-  - {fileID: 1031321935174398693}
---- !u!114 &1031321935174398693
+--- !u!114 &-6905380567762463536
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -69,16 +29,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7207190133824d7e904d98b5e5a1f1c8, type: 3}
-  m_Name: Heal
+  m_Name: MeleeAttack
   m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityDataTableRow
-  id: Heal
+  id: MeleeAttack
   tags: []
   isEnable: 1
   abilityConditionIdList:
   - Always
   abilityActionIdList:
-  - Heal
---- !u!114 &1280045865224779811
+  - MeleeAttack
+--- !u!114 &-5785818762700016782
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,3 +57,43 @@ MonoBehaviour:
   - Always
   abilityActionIdList:
   - RangedAttack
+--- !u!114 &-4522682604713733583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7207190133824d7e904d98b5e5a1f1c8, type: 3}
+  m_Name: Heal
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityDataTableRow
+  id: Heal
+  tags: []
+  isEnable: 1
+  abilityConditionIdList:
+  - Always
+  abilityActionIdList:
+  - Heal
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463daf5080d293049bd98a91154e958f, type: 3}
+  m_Name: DT_Ability
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.DataTable
+  rowScript: {fileID: 11500000, guid: 7207190133824d7e904d98b5e5a1f1c8, type: 3}
+  csv: {fileID: 4900000, guid: fc41fcf4ab3d4ca4fb6ab6cc4a9bba1d, type: 3}
+  rowTypeName: KCoreKit.AbilityDataTableRow, KCoreKit, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  dataList:
+  - {fileID: -6905380567762463536}
+  - {fileID: -5785818762700016782}
+  - {fileID: -9092965079909093506}
+  - {fileID: -4522682604713733583}

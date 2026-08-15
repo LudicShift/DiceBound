@@ -38,7 +38,7 @@ namespace DiceBound
         public Action<UnitCore> onSpawnAlly;
 
         private int _maxAllyNumber;
-        private SkillTreeManager _skillTreeManager;
+        private MasteryManager _masteryManager;
 
         private static readonly string[] AllyStatKeys = { "str", "spd", "def", "mag", "con", "dex", "mdf", "hp" };
 
@@ -54,13 +54,12 @@ namespace DiceBound
         }
         public override IEnumerator OnInitialize()
         {
-            _skillTreeManager = SkillTreeManager.GetInstance();
-            _maxAllyNumber = 15 + (int)_skillTreeManager.GetModifierTotal("AllyCapIncrease");
+            _masteryManager = MasteryManager.GetInstance();
+            _maxAllyNumber = 15 + (int)_masteryManager.GetModifierTotal("AllyCapIncrease");
             UpdateAllyCountText();
             _unitInfoPrefabPool = new PrefabPool<UnitInfoWidget>(PrefabManager.CachePrefab<UnitInfoWidget>(), unitCanvas.transform, 100);
           
-            _allyPrefabPool =
-                new PrefabPool<UnitCore>(PrefabManager.CachePrefab<UnitCore>("PF_Ally"), World.GetTransform(), 50);
+            _allyPrefabPool = new PrefabPool<UnitCore>(PrefabManager.CachePrefab<UnitCore>("PF_Ally"), World.GetTransform(), 50);
             _enemyPrefabPool = new PrefabPool<UnitCore>(PrefabManager.CachePrefab<UnitCore>("PF_Enemy"),
                 World.GetTransform(), 50);
             
@@ -170,7 +169,7 @@ namespace DiceBound
 
         private void ApplyAllyStatModifiers(UnitCore instance)
         {
-            var statPercent = _skillTreeManager.GetModifierTotal("AllyAllStatsPercent") / 100f;
+            var statPercent = _masteryManager.GetModifierTotal("AllyAllStatsPercent") / 100f;
             if (statPercent == 0f)
             {
                 return;

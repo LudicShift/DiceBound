@@ -4,12 +4,12 @@ using KCoreKit;
 
 namespace DiceBound
 {
-    public class SkillTreeManager : Singleton<SkillTreeManager>
+    public class MasteryManager : Singleton<MasteryManager>
     {
         private const string SaveFileName = "SkillTree.sav";
         private const string SaveDirectory = "MetaProgression";
 
-        private Dictionary<string, SkillTreeNodeDataTableRow> _nodeDataDictionary;
+        private Dictionary<string, MasteryDataTableRow> _nodeDataDictionary;
         private HashSet<string> _unlockedNodeIds = new HashSet<string>();
         private int _diamond;
 
@@ -20,7 +20,7 @@ namespace DiceBound
 
         private void OnDataTableLoaded()
         {
-            _nodeDataDictionary = DataTableManager.FindAllRows<SkillTreeNodeDataTableRow>().ToDictionary(x => x.id);
+            _nodeDataDictionary = DataTableManager.FindAllRows<MasteryDataTableRow>().ToDictionary(x => x.id);
             LoadOrDefault();
         }
 
@@ -93,7 +93,7 @@ namespace DiceBound
                 return false;
             }
 
-            return ArePrerequisitesMet(nodeId) && _diamond >= row.diamondCost;
+            return ArePrerequisitesMet(nodeId) && _diamond >= row.cost;
         }
 
         public bool TryUnlock(string nodeId)
@@ -104,7 +104,7 @@ namespace DiceBound
             }
 
             var row = _nodeDataDictionary[nodeId];
-            _diamond -= row.diamondCost;
+            _diamond -= row.cost;
             _unlockedNodeIds.Add(nodeId);
             Persist();
             return true;
@@ -121,7 +121,12 @@ namespace DiceBound
             return _diamond;
         }
 
-        public IReadOnlyDictionary<string, SkillTreeNodeDataTableRow> GetAllNodeData()
+        public MasteryDataTableRow GetNode(string id)
+        {
+            return _nodeDataDictionary[id];
+        }
+
+        public IReadOnlyDictionary<string, MasteryDataTableRow> GetAllNodeData()
         {
             return _nodeDataDictionary;
         }

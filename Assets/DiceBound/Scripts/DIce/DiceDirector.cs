@@ -44,7 +44,7 @@ namespace DiceBound
         private string _noCombinationText;
         private SoundDirector _soundDirector;
         private UnitPlaceDirector _unitPlaceDirector;
-        private SkillTreeManager _skillTreeManager;
+        private MasteryManager _masteryManager;
 
         public void ShowCanvas()
         {
@@ -72,7 +72,7 @@ namespace DiceBound
         
         public void Setup()
         {
-            _remainRollCount = 3 + (int)_skillTreeManager.GetModifierTotal("DiceRerollCountIncrease");
+            _remainRollCount = 3 + (int)_masteryManager.GetModifierTotal("DiceRerollCountIncrease");
             StartCoroutine(ResetDice());
 
         }
@@ -158,8 +158,8 @@ namespace DiceBound
             _unitPlaceDirector = DirectorFacade.GetDirector<UnitPlaceDirector>();
 
             _soundDirector = DirectorFacade.GetDirector<SoundDirector>();
-            _skillTreeManager = SkillTreeManager.GetInstance();
-            _maxDiceFace = 6 - (int)_skillTreeManager.GetModifierTotal("DiceFaceRemoval");
+            _masteryManager = MasteryManager.GetInstance();
+            _maxDiceFace = 6 - (int)_masteryManager.GetModifierTotal("DiceFaceRemoval");
             _remainDices = canvas.GetComponentsInChildren<DiceWidget>(true).ToList();
             _remainPoints = remainPointGroup.GetComponentsInChildren<DicePointWidget>(true).ToList();
             _keepPoints = keepPointGroup.GetComponentsInChildren<DicePointWidget>(true).ToList();

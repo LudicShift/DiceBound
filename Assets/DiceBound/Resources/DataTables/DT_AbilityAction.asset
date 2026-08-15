@@ -1,5 +1,69 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6919725085454049922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598896e4bb5e41349532ce8273b14f81, type: 3}
+  m_Name: RangedAttack
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityActionDataTableRow
+  id: RangedAttack
+  tags: []
+  isEnable: 1
+  actionFunctionName: RangedAttack
+--- !u!114 &-6646001563418667373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598896e4bb5e41349532ce8273b14f81, type: 3}
+  m_Name: MagicAttack
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityActionDataTableRow
+  id: MagicAttack
+  tags: []
+  isEnable: 1
+  actionFunctionName: MagicAttack
+--- !u!114 &-3927527508370531427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598896e4bb5e41349532ce8273b14f81, type: 3}
+  m_Name: Heal
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityActionDataTableRow
+  id: Heal
+  tags: []
+  isEnable: 1
+  actionFunctionName: Heal
+--- !u!114 &-3573868327394740121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598896e4bb5e41349532ce8273b14f81, type: 3}
+  m_Name: MeleeAttack
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityActionDataTableRow
+  id: MeleeAttack
+  tags: []
+  isEnable: 1
+  actionFunctionName: MeleeAttack
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17,71 +81,7 @@ MonoBehaviour:
   rowTypeName: KCoreKit.AbilityActionDataTableRow, KCoreKit, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   dataList:
-  - {fileID: 8671039065257743874}
-  - {fileID: 1513493948516138871}
-  - {fileID: 2789130780431249224}
-  - {fileID: 2420010279369077403}
---- !u!114 &1513493948516138871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 598896e4bb5e41349532ce8273b14f81, type: 3}
-  m_Name: RangedAttack
-  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityActionDataTableRow
-  id: RangedAttack
-  tags: []
-  isEnable: 1
-  actionFunctionName: RangedAttack
---- !u!114 &2420010279369077403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 598896e4bb5e41349532ce8273b14f81, type: 3}
-  m_Name: Heal
-  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityActionDataTableRow
-  id: Heal
-  tags: []
-  isEnable: 1
-  actionFunctionName: Heal
---- !u!114 &2789130780431249224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 598896e4bb5e41349532ce8273b14f81, type: 3}
-  m_Name: MagicAttack
-  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityActionDataTableRow
-  id: MagicAttack
-  tags: []
-  isEnable: 1
-  actionFunctionName: MagicAttack
---- !u!114 &8671039065257743874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 598896e4bb5e41349532ce8273b14f81, type: 3}
-  m_Name: MeleeAttack
-  m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityActionDataTableRow
-  id: MeleeAttack
-  tags: []
-  isEnable: 1
-  actionFunctionName: MeleeAttack
+  - {fileID: -3573868327394740121}
+  - {fileID: -6919725085454049922}
+  - {fileID: -6646001563418667373}
+  - {fileID: -3927527508370531427}

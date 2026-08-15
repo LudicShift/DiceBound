@@ -6,13 +6,13 @@ namespace DiceBound
 {
     public class CheatManager : MonoBehaviour
     {
-        private static SkillTreeManager _skillTreeManager;
+        private static MasteryManager _masteryManager;
         private static WalletDirector _walletDirector;
 
         public void Start()
         {
             _walletDirector = DirectorFacade.GetDirector<WalletDirector>();
-            _skillTreeManager = SkillTreeManager.GetInstance();
+            _masteryManager = MasteryManager.GetInstance();
         }
     
         [DebugCommand]  
@@ -23,7 +23,7 @@ namespace DiceBound
         [DebugCommand]  
         public static void AddDiamonds(int diamonds)
         {
-            _skillTreeManager.AddDiamond(diamonds);
+            _masteryManager.AddDiamond(diamonds);
         }
     }
 }

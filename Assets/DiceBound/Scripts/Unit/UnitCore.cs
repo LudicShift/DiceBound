@@ -147,11 +147,7 @@ namespace DiceBound
             _statAgent.ClearStatModifier("mdf");
             _hp = StatUtility.GetMaxHp(_statAgent);
             _unitInfoWidget.SetMaxHp(_hp);
-            tooltipProvider.SetText(GetTooltipText());
-        }
-
-        private string GetTooltipText()
-        {
+            
             string stars = "";
 
             for (int i = 0; i <= _tier; i++)
@@ -159,6 +155,12 @@ namespace DiceBound
                 stars += "<sprite=0>";
             }
             
+            tooltipProvider.SetText("name",$"{_unitName}{stars}");
+            tooltipProvider.SetText("desc",GetTooltipText());
+        }
+
+        private string GetTooltipText()
+        {
             var hp = _statAgent.GetStat("hp");
             var str = _statAgent.GetStat("str");
             var spd = _statAgent.GetStat("spd");
@@ -168,7 +170,7 @@ namespace DiceBound
             var dex = _statAgent.GetStat("dex");
             var mdf = _statAgent.GetStat("mdf");
 
-            return string.Format(_statTooltipFormat, _unitName, stars,hp, str, spd, def, mag, con, dex, mdf);
+            return string.Format(_statTooltipFormat,hp, str, spd, def, mag, con, dex, mdf);
         }
 
 
