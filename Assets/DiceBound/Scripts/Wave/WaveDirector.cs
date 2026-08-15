@@ -144,7 +144,7 @@ namespace DiceBound
                     yield return waveLabelAppearTween.Play();
                     yield return new WaitForSeconds(0.3f);
                     yield return waveLabelDisappearTween.Play();
-                    if (_currentWave + 1 == _waveDictionary.Count)
+                    if (_currentWave == _waveDictionary.Count)
                     {
                         ShowGameClear();
                     }

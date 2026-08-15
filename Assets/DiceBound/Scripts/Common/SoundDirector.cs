@@ -6,7 +6,7 @@ public class SoundDirector : DirectorBase
 {
       public SoundID mergeUnitSFX;
       public SoundID spawnAllySFX;
-      public SoundID spawnEnemySFX;
+      public SoundID unitAppearSFX;
       public SoundID sellUnitSFX;
       public SoundID addGoldSFX;
       public SoundID pickUnitSFX;

@@ -54,6 +54,7 @@ namespace DiceBound
         public BattleContext battleContext;
         private string _statTooltipFormat;
         private string _unitName;
+        private string _currentAnimation;
 
         public void Awake()
         {
@@ -113,37 +114,21 @@ namespace DiceBound
             result.y = 250;
             return result;
         }
-
-        public void Setup(UnitDataTableRow data, int tier)
+        public void OnUpgrade(int tier)
         {
             _tier = tier;
-
-            _unitName = LocalizationManager.GetLocalizedText(data.nameKey);
-            _unitInfoWidget.SetTier(_tier);
-            _data = data;
-            group = data.group;
-            attackType = data.attackType;
-
-            BindAnimatorController(data.animator);
-
             _skills = new Dictionary<string, Skill>();
+            _unitInfoWidget.OnUpgrade(_tier);
+           
             float tierMult = Mathf.Pow(1.8f, _tier);
-            _statAgent.SetBaseValue("hp", data.hp * tierMult);
-            _statAgent.SetBaseValue("str", data.str * tierMult);
-            _statAgent.SetBaseValue("spd", data.spd);
-            _statAgent.SetBaseValue("def", data.def * tierMult);
-            _statAgent.SetBaseValue("mag", data.mag * tierMult);
-            _statAgent.SetBaseValue("con", data.con * tierMult);
-            _statAgent.SetBaseValue("dex", data.dex * tierMult);
-            _statAgent.SetBaseValue("mdf", data.mdf * tierMult);
-            _statAgent.ClearStatModifier("hp");
-            _statAgent.ClearStatModifier("str");
-            _statAgent.ClearStatModifier("spd");
-            _statAgent.ClearStatModifier("def");
-            _statAgent.ClearStatModifier("mag");
-            _statAgent.ClearStatModifier("con");
-            _statAgent.ClearStatModifier("dex");
-            _statAgent.ClearStatModifier("mdf");
+            _statAgent.SetBaseValue("hp", _data.hp * tierMult);
+            _statAgent.SetBaseValue("str", _data.str * tierMult);
+            _statAgent.SetBaseValue("spd", _data.spd);
+            _statAgent.SetBaseValue("def", _data.def * tierMult);
+            _statAgent.SetBaseValue("mag", _data.mag * tierMult);
+            _statAgent.SetBaseValue("con", _data.con * tierMult);
+            _statAgent.SetBaseValue("dex", _data.dex * tierMult);
+            _statAgent.SetBaseValue("mdf", _data.mdf * tierMult);
             _hp = StatUtility.GetMaxHp(_statAgent);
             _unitInfoWidget.SetMaxHp(_hp);
             
@@ -156,6 +141,27 @@ namespace DiceBound
             
             tooltipProvider.SetText("name",$"{_unitName}{stars}");
             tooltipProvider.SetText("desc",GetTooltipText());
+        }
+        
+        public void Setup(UnitDataTableRow data, int tier)
+        {
+            _data = data;
+            group = data.group;
+          
+            _unitName = LocalizationManager.GetLocalizedText(data.nameKey);
+            attackType = data.attackType;
+            
+            BindAnimatorController(data.animator);
+            _statAgent.ClearStatModifier("hp");
+            _statAgent.ClearStatModifier("str");
+            _statAgent.ClearStatModifier("spd");
+            _statAgent.ClearStatModifier("def");
+            _statAgent.ClearStatModifier("mag");
+            _statAgent.ClearStatModifier("con");
+            _statAgent.ClearStatModifier("dex");
+            _statAgent.ClearStatModifier("mdf");
+            
+            OnUpgrade(tier);
         }
 
         private string GetTooltipText()
@@ -223,7 +229,10 @@ namespace DiceBound
         /// </summary>
         public void PlayHitAnimation()
         {
-            Animate("Hurt");
+            if (_currentAnimation == "Idle" ||  _currentAnimation == "Hurt")
+            {
+                Animate("Hurt");
+            }
             if (hitSequence)
             {
                 StartCoroutine(hitSequence.Play());
@@ -320,7 +329,8 @@ namespace DiceBound
 
         public void Animate(string value)
         {
-            _animator.Play(value);
+            _currentAnimation = value;
+            _animator.Play(_currentAnimation);
         }
 
         public void OnDamage(float damage, bool isCritical)
@@ -415,11 +425,7 @@ namespace DiceBound
             transform.SetParent(parent);
         }
 
-        public void Upgrade()
-        {
-            Setup(_data, _tier + 1);
-            _unitInfoWidget.OnUpgrade();
-        }
+     
 
         public IEnumerator ShowUpgradeEffect()
         {

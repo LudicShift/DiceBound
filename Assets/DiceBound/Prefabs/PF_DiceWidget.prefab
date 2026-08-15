@@ -331,6 +331,7 @@ GameObject:
   - component: {fileID: 8452382420545700200}
   - component: {fileID: 8251775463838321912}
   - component: {fileID: 1884936943950864197}
+  - component: {fileID: 4207866638486077365}
   m_Layer: 5
   m_Name: PF_DiceWidget
   m_TagString: Untagged
@@ -428,6 +429,38 @@ MonoBehaviour:
   hoverTween: {fileID: 5826314040553625434}
   rollTween: {fileID: 6260047832776535862}
   clickTween: {fileID: 1902412408449810122}
+--- !u!114 &4207866638486077365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4385279877338601429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b87a4c61534bd0818d88cde07e0b1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.SoundEventHandler
+  enterSound:
+    _entity: {fileID: 11400000, guid: fafd74fd351ad6f48a4429c29a77909f, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 4385279877338601429}
+  exitSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 4385279877338601429}
+  clickSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 4385279877338601429}
+  downSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 4385279877338601429}
+  upSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 4385279877338601429}
 --- !u!1 &6013513403226984427
 GameObject:
   m_ObjectHideFlags: 0

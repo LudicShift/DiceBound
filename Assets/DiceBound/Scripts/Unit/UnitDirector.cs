@@ -114,6 +114,16 @@ namespace DiceBound
             return _maxAllyNumber <= _allies.Count;
         }
 
+        public void UpgradeUnit(UnitCore unit)
+        {
+            var tier = unit.GetTier();
+            unit.OnUpgrade(tier+1);
+            var data = unit.GetData();
+            unit.BindSkill(_skillDirector.GetSkill(data.skillBasicKey));
+            unit.BindSkill(_skillDirector.GetSkill(data.skillActiveKey));
+            unit.BindSkill(_skillDirector.GetSkill(data.skillPassiveKey));
+        }
+
         public void SpawnUnit(string unitId,int tier = 0)
         {
             var data = _unitDataDictionary[unitId];
@@ -138,11 +148,8 @@ namespace DiceBound
             instance.BindSkill(_skillDirector.GetSkill(data.skillBasicKey));
             instance.BindSkill(_skillDirector.GetSkill(data.skillActiveKey));
             instance.BindSkill(_skillDirector.GetSkill(data.skillPassiveKey));
-            
-           for (int i = 0; i < tier; i++)
-           {
-               instance.Upgrade();
-           }
+           
+           
             _unitPlaceDirector.PlaceUnit(instance);
             _units.Add(instance);
             
@@ -150,19 +157,26 @@ namespace DiceBound
             {
                 case UnitGroup.Ally:
                     _allies.Add(instance);
-                    instance.PlayAppear(()=>onSpawnAlly.Invoke(instance));
+                    instance.PlayAppear(()=>
+                    {
+                        BroAudio.Play(_soundDirector.unitAppearSFX);
+                        onSpawnAlly.Invoke(instance);
+                    });
                     instance.FlipSprite(false);
                     UpdateAllyCountText();
-
                     BroAudio.Play(_soundDirector.spawnAllySFX);
+                    
                     break;
                 case UnitGroup.Enemy:
                     _enemies.Add(instance);
-                    instance.PlayAppear();
+                    instance.PlayAppear(() =>
+                    {
+                        BroAudio.Play(_soundDirector.unitAppearSFX);
+                    });
                     instance.FlipSprite(true);
                     
                     
-                    BroAudio.Play(_soundDirector.spawnEnemySFX);
+                   
                     break;
             }
         }

@@ -71,9 +71,10 @@ public class UnitInfoWidget : WidgetBase
         activeSkillGauge.Release();
     }
 
-    public void OnUpgrade()
+    public void OnUpgrade(int tier)
     {
        basicSkillGauge.OnUpgrade();
        activeSkillGauge.OnUpgrade();
+       tierLabel.OnChange(tier);
     }
 }

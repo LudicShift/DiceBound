@@ -83,8 +83,8 @@ namespace DiceBound
             }
 
             yield return mainUnit.transform.DOScale(1, 0.05f).WaitForCompletion();
+            _unitDirector.UpgradeUnit(mainUnit);
             yield return mainUnit.HideUpgradeEffect();
-            mainUnit.Upgrade();
             OnSpawnAlly(mainUnit);
             _shopDirector.SetEnable(true);
         }

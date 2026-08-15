@@ -14,7 +14,14 @@ namespace DiceBound
 
         public void SetText(string key, string text)
         {
-            _context.textDictionary.TryAdd(key,text);
+            if (_context.textDictionary.ContainsKey(key))
+            {
+                _context.textDictionary[key] = text;
+            }
+            else
+            {
+                _context.textDictionary.TryAdd(key, text);
+            }
         }
 
         public void Update()
@@ -35,7 +42,7 @@ namespace DiceBound
             };
         }
 
-        public void SetTooltipPosition(Vector3 position, Vector2 offset ,bool screenSpace = true)
+        public void SetTooltipPosition(Vector3 position, Vector2 offset, bool screenSpace = true)
         {
             if (_context == null)
             {
@@ -46,7 +53,7 @@ namespace DiceBound
             _context.offset = offset;
             _context.screenSpace = screenSpace;
         }
-        
+
         public void OnPointerEnter(PointerEventData eventData)
         {
             if (_context is { enabled: true })
@@ -54,6 +61,7 @@ namespace DiceBound
                 _context.widget.Show();
                 _context.widget.OnShow(_context);
             }
+
             _isHovered = true;
         }
 

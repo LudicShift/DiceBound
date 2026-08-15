@@ -876,6 +876,7 @@ GameObject:
   - component: {fileID: 93595887}
   - component: {fileID: 93595886}
   - component: {fileID: 93595892}
+  - component: {fileID: 93595893}
   m_Layer: 5
   m_Name: DiceButton
   m_TagString: Untagged
@@ -1060,6 +1061,38 @@ MonoBehaviour:
   clickPlayer: {fileID: 0}
   downPlayer: {fileID: 1958904392}
   upPlayer: {fileID: 0}
+--- !u!114 &93595893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93595884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b87a4c61534bd0818d88cde07e0b1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.WidgetSoundHandler
+  enterSound:
+    _entity: {fileID: 11400000, guid: deed53bac2ab5a44ba6f991acee3d795, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 93595884}
+  exitSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 93595884}
+  clickSound:
+    _entity: {fileID: 11400000, guid: 9bed823b026ff2b408aee4918125acb4, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 93595884}
+  downSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 93595884}
+  upSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 93595884}
 --- !u!1 &96637746
 GameObject:
   m_ObjectHideFlags: 0
@@ -1256,6 +1289,7 @@ GameObject:
   - component: {fileID: 113023235}
   - component: {fileID: 113023234}
   - component: {fileID: 113023239}
+  - component: {fileID: 113023240}
   m_Layer: 5
   m_Name: ClaimButton
   m_TagString: Untagged
@@ -1413,6 +1447,38 @@ MonoBehaviour:
   clickPlayer: {fileID: 0}
   downPlayer: {fileID: 396534484}
   upPlayer: {fileID: 0}
+--- !u!114 &113023240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113023232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b87a4c61534bd0818d88cde07e0b1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.WidgetSoundHandler
+  enterSound:
+    _entity: {fileID: 11400000, guid: deed53bac2ab5a44ba6f991acee3d795, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 113023232}
+  exitSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 113023232}
+  clickSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 113023232}
+  downSound:
+    _entity: {fileID: 11400000, guid: 9bed823b026ff2b408aee4918125acb4, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 113023232}
+  upSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 113023232}
 --- !u!1 &135035499
 GameObject:
   m_ObjectHideFlags: 0
@@ -3046,6 +3112,7 @@ GameObject:
   - component: {fileID: 258559895}
   - component: {fileID: 258559899}
   - component: {fileID: 258559900}
+  - component: {fileID: 258559901}
   m_Layer: 5
   m_Name: BackToFieldButton
   m_TagString: Untagged
@@ -3203,6 +3270,38 @@ MonoBehaviour:
   clickPlayer: {fileID: 0}
   downPlayer: {fileID: 458264877}
   upPlayer: {fileID: 0}
+--- !u!114 &258559901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258559892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b87a4c61534bd0818d88cde07e0b1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.WidgetSoundHandler
+  enterSound:
+    _entity: {fileID: 11400000, guid: deed53bac2ab5a44ba6f991acee3d795, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 258559892}
+  exitSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 258559892}
+  clickSound:
+    _entity: {fileID: 11400000, guid: 9bed823b026ff2b408aee4918125acb4, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 258559892}
+  downSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 258559892}
+  upSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 258559892}
 --- !u!1 &260163721
 GameObject:
   m_ObjectHideFlags: 0
@@ -6118,10 +6217,10 @@ MonoBehaviour:
     ID: 0
     <DebugObject>k__BackingField: {fileID: 504579069}
   spawnAllySFX:
-    _entity: {fileID: 11400000, guid: c33ec1bf6361ea34fae6e3b36663e14a, type: 2}
+    _entity: {fileID: 11400000, guid: 45fbda51c5df3c747a6d7b0f0d512380, type: 2}
     ID: 0
     <DebugObject>k__BackingField: {fileID: 504579069}
-  spawnEnemySFX:
+  unitAppearSFX:
     _entity: {fileID: 11400000, guid: c33ec1bf6361ea34fae6e3b36663e14a, type: 2}
     ID: 0
     <DebugObject>k__BackingField: {fileID: 504579069}
@@ -8052,6 +8151,165 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 622540794}
   m_CullTransparentMesh: 1
+--- !u!1 &627504862
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 627504863}
+  - component: {fileID: 627504865}
+  - component: {fileID: 627504864}
+  m_Layer: 5
+  m_Name: ButtonExitTween
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &627504863
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627504862}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1378901845}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 200, y: -50}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &627504864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627504862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0390bd8b8ffd640b34fe25065ff1df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::DG.Tweening.DOTweenAnimation
+  updateType: 0
+  isSpeedBased: 0
+  hasOnStart: 0
+  hasOnPlay: 0
+  hasOnUpdate: 0
+  hasOnStepComplete: 0
+  hasOnComplete: 0
+  hasOnTweenCreated: 0
+  hasOnRewind: 0
+  onStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlay:
+    m_PersistentCalls:
+      m_Calls: []
+  onUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  onStepComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onTweenCreated:
+    m_PersistentCalls:
+      m_Calls: []
+  onRewind:
+    m_PersistentCalls:
+      m_Calls: []
+  targetIsSelf: 0
+  targetGO: {fileID: 1378901844}
+  tweenTargetIsTargetGO: 1
+  delay: 0
+  duration: 0.2
+  easeType: 6
+  easeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  loopType: 0
+  loops: 1
+  id: 
+  isRelative: 0
+  isFrom: 0
+  isIndependentUpdate: 0
+  autoKill: 0
+  autoGenerate: 1
+  isActive: 1
+  isValid: 1
+  target: {fileID: 113023233}
+  animationType: 5
+  targetType: 11
+  forcedTargetType: 0
+  autoPlay: 0
+  useTargetAsV3: 0
+  endValueFloat: 1
+  endValueV3: {x: 1.1, y: 0.1, z: 0.1}
+  endValueV2: {x: 0, y: 0}
+  endValueColor: {r: 1, g: 1, b: 1, a: 1}
+  endValueString: 
+  endValueRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  endValueTransform: {fileID: 0}
+  optionalBool0: 1
+  optionalBool1: 0
+  optionalFloat0: 1.1
+  optionalInt0: 10
+  optionalRotationMode: 0
+  optionalScrambleMode: 0
+  optionalShakeRandomnessMode: 0
+  optionalString: 
+--- !u!114 &627504865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627504862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08dcf7db256d4a809962253936c111aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.TweenAnimationPlayer
+  mode: 0
+  forcePlay: 0
 --- !u!1 &654854408
 GameObject:
   m_ObjectHideFlags: 0
@@ -8901,6 +9159,7 @@ GameObject:
   - component: {fileID: 741560548}
   - component: {fileID: 741560547}
   - component: {fileID: 741560552}
+  - component: {fileID: 741560553}
   m_Layer: 5
   m_Name: FastPlayWaveButton
   m_TagString: Untagged
@@ -9057,6 +9316,38 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &741560553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741560545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b87a4c61534bd0818d88cde07e0b1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.WidgetSoundHandler
+  enterSound:
+    _entity: {fileID: 11400000, guid: deed53bac2ab5a44ba6f991acee3d795, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 741560545}
+  exitSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 741560545}
+  clickSound:
+    _entity: {fileID: 11400000, guid: 9bed823b026ff2b408aee4918125acb4, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 741560545}
+  downSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 741560545}
+  upSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 741560545}
 --- !u!1 &749909805
 GameObject:
   m_ObjectHideFlags: 0
@@ -13929,6 +14220,8 @@ GameObject:
   - component: {fileID: 1187462059}
   - component: {fileID: 1187462062}
   - component: {fileID: 1187462061}
+  - component: {fileID: 1187462064}
+  - component: {fileID: 1187462063}
   m_Layer: 8
   m_Name: Trashcan
   m_TagString: Untagged
@@ -14026,8 +14319,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b31ac26424d14328a8eee5e58ad7f550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitTrashCan
-  clickPlayer: {fileID: 1435827710}
-  hoverPlayer: {fileID: 2132596076}
   enterPlayer: {fileID: 271735629}
   exitPlayer: {fileID: 2084992023}
 --- !u!61 &1187462062
@@ -14076,6 +14367,55 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &1187462063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187462058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b87a4c61534bd0818d88cde07e0b1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.SoundEventHandler
+  enterSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 1187462058}
+  exitSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 1187462058}
+  clickSound:
+    _entity: {fileID: 11400000, guid: 627b045ecd3e71449ab552d3466abf88, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 1187462058}
+  downSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 1187462058}
+  upSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 1187462058}
+--- !u!114 &1187462064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187462058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfd6641eef6745f4be839eccef5aff29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.TweenEventHandler
+  enterPlayer: {fileID: 2132596076}
+  exitPlayer: {fileID: 2132596076}
+  clickPlayer: {fileID: 0}
+  downPlayer: {fileID: 1435827710}
+  upPlayer: {fileID: 0}
 --- !u!1 &1243200352
 GameObject:
   m_ObjectHideFlags: 0
@@ -15157,6 +15497,8 @@ GameObject:
   - component: {fileID: 1378901847}
   - component: {fileID: 1378901851}
   - component: {fileID: 1378901846}
+  - component: {fileID: 1378901852}
+  - component: {fileID: 1378901853}
   m_Layer: 5
   m_Name: RewardButton
   m_TagString: Untagged
@@ -15178,6 +15520,9 @@ RectTransform:
   m_Children:
   - {fileID: 1442963003}
   - {fileID: 783609141}
+  - {fileID: 1383929236}
+  - {fileID: 1563939074}
+  - {fileID: 627504863}
   m_Father: {fileID: 979294340}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -15321,6 +15666,214 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1378901852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378901844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfd6641eef6745f4be839eccef5aff29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.WidgetTweenHandler
+  enterPlayer: {fileID: 1563939076}
+  exitPlayer: {fileID: 627504865}
+  clickPlayer: {fileID: 0}
+  downPlayer: {fileID: 1383929238}
+  upPlayer: {fileID: 0}
+--- !u!114 &1378901853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378901844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b87a4c61534bd0818d88cde07e0b1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.WidgetSoundHandler
+  enterSound:
+    _entity: {fileID: 11400000, guid: deed53bac2ab5a44ba6f991acee3d795, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 1378901844}
+  exitSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 1378901844}
+  clickSound:
+    _entity: {fileID: 11400000, guid: 9bed823b026ff2b408aee4918125acb4, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 1378901844}
+  downSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 1378901844}
+  upSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 1378901844}
+--- !u!1 &1383929235
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1383929236}
+  - component: {fileID: 1383929238}
+  - component: {fileID: 1383929237}
+  m_Layer: 5
+  m_Name: ClickTween
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1383929236
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383929235}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1378901845}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 200, y: -50}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1383929237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383929235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0390bd8b8ffd640b34fe25065ff1df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::DG.Tweening.DOTweenAnimation
+  updateType: 0
+  isSpeedBased: 0
+  hasOnStart: 0
+  hasOnPlay: 0
+  hasOnUpdate: 0
+  hasOnStepComplete: 0
+  hasOnComplete: 0
+  hasOnTweenCreated: 0
+  hasOnRewind: 0
+  onStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlay:
+    m_PersistentCalls:
+      m_Calls: []
+  onUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  onStepComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onTweenCreated:
+    m_PersistentCalls:
+      m_Calls: []
+  onRewind:
+    m_PersistentCalls:
+      m_Calls: []
+  targetIsSelf: 0
+  targetGO: {fileID: 1378901844}
+  tweenTargetIsTargetGO: 1
+  delay: 0
+  duration: 0.2
+  easeType: 6
+  easeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  loopType: 0
+  loops: 1
+  id: 
+  isRelative: 0
+  isFrom: 0
+  isIndependentUpdate: 0
+  autoKill: 0
+  autoGenerate: 1
+  isActive: 1
+  isValid: 1
+  target: {fileID: 1378901845}
+  animationType: 11
+  targetType: 11
+  forcedTargetType: 0
+  autoPlay: 0
+  useTargetAsV3: 0
+  endValueFloat: 0
+  endValueV3: {x: -0.3, y: 0.3, z: -0.3}
+  endValueV2: {x: 0, y: 0}
+  endValueColor: {r: 1, g: 1, b: 1, a: 1}
+  endValueString: 
+  endValueRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  endValueTransform: {fileID: 0}
+  optionalBool0: 0
+  optionalBool1: 0
+  optionalFloat0: 1
+  optionalInt0: 10
+  optionalRotationMode: 0
+  optionalScrambleMode: 0
+  optionalShakeRandomnessMode: 0
+  optionalString: 
+--- !u!114 &1383929238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383929235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08dcf7db256d4a809962253936c111aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.TweenAnimationPlayer
+  mode: 0
+  forcePlay: 0
 --- !u!1001 &1387487646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15741,6 +16294,7 @@ GameObject:
   - component: {fileID: 1441396471}
   - component: {fileID: 1441396470}
   - component: {fileID: 1441396475}
+  - component: {fileID: 1441396476}
   m_Layer: 5
   m_Name: RollDiceButton
   m_TagString: Untagged
@@ -15900,6 +16454,38 @@ MonoBehaviour:
   clickPlayer: {fileID: 0}
   downPlayer: {fileID: 1058680526}
   upPlayer: {fileID: 0}
+--- !u!114 &1441396476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441396468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b87a4c61534bd0818d88cde07e0b1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.WidgetSoundHandler
+  enterSound:
+    _entity: {fileID: 11400000, guid: deed53bac2ab5a44ba6f991acee3d795, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 1441396468}
+  exitSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 1441396468}
+  clickSound:
+    _entity: {fileID: 11400000, guid: 9bed823b026ff2b408aee4918125acb4, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 1441396468}
+  downSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 1441396468}
+  upSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 1441396468}
 --- !u!1 &1442963002
 GameObject:
   m_ObjectHideFlags: 0
@@ -16302,6 +16888,7 @@ GameObject:
   - component: {fileID: 1481126484}
   - component: {fileID: 1481126483}
   - component: {fileID: 1481126488}
+  - component: {fileID: 1481126489}
   m_Layer: 5
   m_Name: ShowFieldButton
   m_TagString: Untagged
@@ -16458,6 +17045,38 @@ MonoBehaviour:
   clickPlayer: {fileID: 0}
   downPlayer: {fileID: 1706825991}
   upPlayer: {fileID: 0}
+--- !u!114 &1481126489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481126481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b87a4c61534bd0818d88cde07e0b1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.WidgetSoundHandler
+  enterSound:
+    _entity: {fileID: 11400000, guid: deed53bac2ab5a44ba6f991acee3d795, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 1481126481}
+  exitSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 1481126481}
+  clickSound:
+    _entity: {fileID: 11400000, guid: 9bed823b026ff2b408aee4918125acb4, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 1481126481}
+  downSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 1481126481}
+  upSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 1481126481}
 --- !u!1001 &1485138115
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17387,6 +18006,165 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1558294615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08dcf7db256d4a809962253936c111aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.TweenAnimationPlayer
+  mode: 0
+  forcePlay: 0
+--- !u!1 &1563939073
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1563939074}
+  - component: {fileID: 1563939076}
+  - component: {fileID: 1563939075}
+  m_Layer: 5
+  m_Name: ButtonEnterTween
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1563939074
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563939073}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1378901845}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 200, y: -50}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1563939075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563939073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0390bd8b8ffd640b34fe25065ff1df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::DG.Tweening.DOTweenAnimation
+  updateType: 0
+  isSpeedBased: 0
+  hasOnStart: 0
+  hasOnPlay: 0
+  hasOnUpdate: 0
+  hasOnStepComplete: 0
+  hasOnComplete: 0
+  hasOnTweenCreated: 0
+  hasOnRewind: 0
+  onStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlay:
+    m_PersistentCalls:
+      m_Calls: []
+  onUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  onStepComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onTweenCreated:
+    m_PersistentCalls:
+      m_Calls: []
+  onRewind:
+    m_PersistentCalls:
+      m_Calls: []
+  targetIsSelf: 0
+  targetGO: {fileID: 1378901844}
+  tweenTargetIsTargetGO: 1
+  delay: 0
+  duration: 0.2
+  easeType: 6
+  easeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  loopType: 0
+  loops: 1
+  id: 
+  isRelative: 0
+  isFrom: 0
+  isIndependentUpdate: 0
+  autoKill: 0
+  autoGenerate: 1
+  isActive: 1
+  isValid: 1
+  target: {fileID: 113023233}
+  animationType: 5
+  targetType: 11
+  forcedTargetType: 0
+  autoPlay: 0
+  useTargetAsV3: 0
+  endValueFloat: 1.1
+  endValueV3: {x: 1.1, y: 0.1, z: 0.1}
+  endValueV2: {x: 0, y: 0}
+  endValueColor: {r: 1, g: 1, b: 1, a: 1}
+  endValueString: 
+  endValueRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  endValueTransform: {fileID: 0}
+  optionalBool0: 1
+  optionalBool1: 0
+  optionalFloat0: 1.1
+  optionalInt0: 10
+  optionalRotationMode: 0
+  optionalScrambleMode: 0
+  optionalShakeRandomnessMode: 0
+  optionalString: 
+--- !u!114 &1563939076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563939073}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 08dcf7db256d4a809962253936c111aa, type: 3}
@@ -19236,6 +20014,7 @@ GameObject:
   - component: {fileID: 1727512145}
   - component: {fileID: 1727512144}
   - component: {fileID: 1727512149}
+  - component: {fileID: 1727512150}
   m_Layer: 5
   m_Name: PlayWaveButton
   m_TagString: Untagged
@@ -19392,6 +20171,38 @@ MonoBehaviour:
   clickPlayer: {fileID: 593256812}
   downPlayer: {fileID: 0}
   upPlayer: {fileID: 0}
+--- !u!114 &1727512150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727512142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b87a4c61534bd0818d88cde07e0b1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.WidgetSoundHandler
+  enterSound:
+    _entity: {fileID: 11400000, guid: deed53bac2ab5a44ba6f991acee3d795, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 741560545}
+  exitSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 741560545}
+  clickSound:
+    _entity: {fileID: 11400000, guid: 9bed823b026ff2b408aee4918125acb4, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 741560545}
+  downSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 741560545}
+  upSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 741560545}
 --- !u!1 &1738944955
 GameObject:
   m_ObjectHideFlags: 0
@@ -21152,6 +21963,7 @@ GameObject:
   - component: {fileID: 1953792367}
   - component: {fileID: 1953792366}
   - component: {fileID: 1953792371}
+  - component: {fileID: 1953792372}
   m_Layer: 5
   m_Name: ShopButton
   m_TagString: Untagged
@@ -21309,6 +22121,38 @@ MonoBehaviour:
   clickPlayer: {fileID: 0}
   downPlayer: {fileID: 691531315}
   upPlayer: {fileID: 0}
+--- !u!114 &1953792372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953792364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b87a4c61534bd0818d88cde07e0b1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.WidgetSoundHandler
+  enterSound:
+    _entity: {fileID: 11400000, guid: deed53bac2ab5a44ba6f991acee3d795, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 1953792364}
+  exitSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 1953792364}
+  clickSound:
+    _entity: {fileID: 11400000, guid: 9bed823b026ff2b408aee4918125acb4, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 1953792364}
+  downSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 1953792364}
+  upSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 1953792364}
 --- !u!1 &1958904389
 GameObject:
   m_ObjectHideFlags: 0
@@ -22482,6 +23326,7 @@ GameObject:
   - component: {fileID: 2032662341}
   - component: {fileID: 2032662346}
   - component: {fileID: 2032662347}
+  - component: {fileID: 2032662348}
   m_Layer: 5
   m_Name: RerollButton
   m_TagString: Untagged
@@ -22641,6 +23486,38 @@ MonoBehaviour:
   clickPlayer: {fileID: 1031119070}
   downPlayer: {fileID: 0}
   upPlayer: {fileID: 0}
+--- !u!114 &2032662348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032662338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b87a4c61534bd0818d88cde07e0b1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.WidgetSoundHandler
+  enterSound:
+    _entity: {fileID: 11400000, guid: deed53bac2ab5a44ba6f991acee3d795, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 2032662338}
+  exitSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 2032662338}
+  clickSound:
+    _entity: {fileID: 11400000, guid: 9bed823b026ff2b408aee4918125acb4, type: 2}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 2032662338}
+  downSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 2032662338}
+  upSound:
+    _entity: {fileID: 0}
+    ID: 0
+    <DebugObject>k__BackingField: {fileID: 2032662338}
 --- !u!1 &2033921942
 GameObject:
   m_ObjectHideFlags: 0
@@ -23905,7 +24782,7 @@ MonoBehaviour:
   autoGenerate: 1
   isActive: 1
   isValid: 1
-  target: {fileID: 113023233}
+  target: {fileID: 93595885}
   animationType: 5
   targetType: 11
   forcedTargetType: 0

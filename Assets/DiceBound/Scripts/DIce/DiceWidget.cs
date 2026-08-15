@@ -56,7 +56,10 @@ namespace DiceBound
 
         public void OnClick()
         {
-            StartCoroutine(clickTween.Play());
+            StartCoroutine(clickTween.Play(0, () =>
+            {
+                transform.rotation = Quaternion.identity;
+            }));
         }
         
         private void SetRollIndex(int value)
