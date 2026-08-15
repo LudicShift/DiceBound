@@ -26,9 +26,9 @@ namespace DiceBound
             gameClearDiscordButton.onClickAction+=OnGameClearDiscordButtonClick;
             StartCoroutine(MainRoutine());
             AbilitySystem.Initialize();
-            AbilitySystem.AddActionMethods(typeof(AbilityAction));
-            AbilitySystem.AddConditionMethods(typeof(AbilityCondition));
-            AbilityAction.Setup();
+            AbilitySystem.AddActionMethods(typeof(SkillAbilityAction));
+            AbilitySystem.AddConditionMethods(typeof(SkillAbilityCondition));
+            SkillAbilityAction.Setup();
             yield return null;
         }
 

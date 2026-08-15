@@ -26,16 +26,12 @@ namespace DiceBound
         private float _unlockCost;
         
         [HideInInspector]
-        public TooltipProvider tooltipProvider;
+        public TooltipProvider tooltipProvider => GetComponent<TooltipProvider>();
 
-        public void Awake()
-        {
-            tooltipProvider = GetComponent<TooltipProvider>();
-        }
-
+       
         public void OnUpdate()
         {
-            tooltipProvider.SetTooltipPosition(transform.position,Vector2.zero);
+            tooltipProvider.SetTooltipPosition(transform.position,new Vector2(200,0));
         }
 
         public void Setup(MasteryDataTableRow data)
@@ -43,10 +39,8 @@ namespace DiceBound
            _nameText = LocalizationManager.GetLocalizedText(data.nameKey);
            _descText = LocalizationManager.GetLocalizedText(data.descKey);
            _unlockCost = data.cost;
-           iconImage.SetSprite(data.icon.ToSprite());
            tooltipProvider.SetText("name",$"{_nameText}");
            tooltipProvider.SetText("desc",$"{_descText}");
-           tooltipProvider.SetText("cost",$"{_unlockCost}");
         }
 
         public void Refresh(NodeVisualState state)
@@ -56,12 +50,17 @@ namespace DiceBound
             {
                 case NodeVisualState.Locked:
                     lockedVeil.Show();
+                    tooltipProvider.SetEnabled(false);
                     break;
                 case NodeVisualState.Unlockable:
                     frameImage.SetSprite(lockedFrameSprite);
+                    tooltipProvider.SetEnabled(true);
+                    tooltipProvider.SetText("cost",$"{_unlockCost}");
                     break;
                 case NodeVisualState.Unlocked:
                     frameImage.SetSprite(unlockedFrameSprite);
+                    tooltipProvider.SetEnabled(true);
+                    tooltipProvider.SetText("cost",$"Unlocked");
                     break; 
             }
         }

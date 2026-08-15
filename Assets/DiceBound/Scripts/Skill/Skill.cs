@@ -12,7 +12,7 @@ namespace DiceBound
         private UnitCore _owner;
         private AbilityAgent _abilityAgent;
         private readonly string _abilityId;
-        private AbilityContext _abilityContext;
+        private SkillAbilityContext _skillAbilityContext;
         private readonly string effectKey;
         private readonly float _castTime;
         private readonly float _cooldown;
@@ -55,7 +55,7 @@ namespace DiceBound
             _owner = owner;
             _abilityAgent = owner.GetComponent<AbilityAgent>();
             _abilityAgent.AddEffect(_abilityId);
-            _abilityContext =  new AbilityContext()
+            _skillAbilityContext =  new SkillAbilityContext()
             {
                 self =  owner,
                 skillEffectKey= effectKey,
@@ -74,7 +74,7 @@ namespace DiceBound
             switch (type)
             {
                 case SkillType.Passive:
-                    _abilityAgent.ExecuteEffectById(_abilityId,ref _abilityContext);
+                    _abilityAgent.ExecuteEffectById(_abilityId,ref _skillAbilityContext);
                     break;
             }
         }
@@ -96,7 +96,7 @@ namespace DiceBound
         {
             if (GetInterval() < _timeElapsed)
             {
-                _abilityAgent.ExecuteEffectById(_abilityId, ref _abilityContext);
+                _abilityAgent.ExecuteEffectById(_abilityId, ref _skillAbilityContext);
                 _timeElapsed = 0;
             }
 

@@ -55,7 +55,7 @@ namespace DiceBound
         public override IEnumerator OnInitialize()
         {
             _masteryManager = MasteryManager.GetInstance();
-            _maxAllyNumber = 15 + (int)_masteryManager.GetModifierTotal("AllyCapIncrease");
+            _maxAllyNumber = 15;
             UpdateAllyCountText();
             _unitInfoPrefabPool = new PrefabPool<UnitInfoWidget>(PrefabManager.CachePrefab<UnitInfoWidget>(), unitCanvas.transform, 100);
           

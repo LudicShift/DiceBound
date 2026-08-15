@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace DiceBound
 {
-    public class AbilityAction
+    public class SkillAbilityAction
     {
         private static BattleDirector _battleDirector;
         private static UnitDirector _unitDirector;
@@ -14,7 +14,7 @@ namespace DiceBound
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
         }
 
-        public static void MeleeAttack(AbilityEffect effect, AbilityActionDataTableRow data, ref AbilityContext context)
+        public static void MeleeAttack(AbilityEffect effect, AbilityActionDataTableRow data, ref SkillAbilityContext context)
         {
             var targetList = _unitDirector.GetTarget(context.self, context.targetGroup,context.targetOption, context.targetCount);
             var abilityContext = context;
@@ -37,7 +37,7 @@ namespace DiceBound
 
 
 
-        private static void Healing(AbilityContext context, UnitCore target, float healPower)
+        private static void Healing(SkillAbilityContext context, UnitCore target, float healPower)
         {
             _battleDirector.EnqueueContext(new BattleContext()
             {
@@ -52,7 +52,7 @@ namespace DiceBound
         }
 
         public static void RangedAttack(AbilityEffect effect, AbilityActionDataTableRow data,
-            ref AbilityContext context)
+            ref SkillAbilityContext context)
         {
             var targetList = _unitDirector.GetTarget(context.self, context.targetGroup, context.targetOption, context.targetCount);
             var abilityContext = context;
@@ -74,7 +74,7 @@ namespace DiceBound
             }
         }
 
-        public static void MagicAttack(AbilityEffect effect, AbilityActionDataTableRow data, ref AbilityContext context)
+        public static void MagicAttack(AbilityEffect effect, AbilityActionDataTableRow data, ref SkillAbilityContext context)
         {
             var targetList = _unitDirector.GetTarget(context.self, context.targetGroup, context.targetOption,context.targetCount);
             var abilityContext = context;
@@ -97,7 +97,7 @@ namespace DiceBound
           
         }
 
-        public static void Heal(AbilityEffect effect, AbilityActionDataTableRow data, ref AbilityContext context)
+        public static void Heal(AbilityEffect effect, AbilityActionDataTableRow data, ref SkillAbilityContext context)
         {
             var targetList = _unitDirector.GetTarget(context.self, context.targetGroup, context.targetOption, context.targetCount);
             var statAgent = context.self.GetStatAgent();

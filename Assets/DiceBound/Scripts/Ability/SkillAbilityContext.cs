@@ -2,7 +2,7 @@
 
 namespace DiceBound
 {
-    public class AbilityContext : IAbilityContext
+    public class SkillAbilityContext : IAbilityContext
     {
         public UnitCore self;
         public string skillEffectKey;

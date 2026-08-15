@@ -8,7 +8,6 @@ namespace DiceBound
     {
         public string nameKey;
         public string descKey;
-        public Texture2D icon;
         public int cost;
         public string effectKey;
         public float effectValue;

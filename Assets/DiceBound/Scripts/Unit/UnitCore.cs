@@ -67,7 +67,6 @@ namespace DiceBound
             inputHandler = GetComponentInChildren<UnitInputHandler>();
             _mergeEffectHandler = GetComponentInChildren<UnitMergeEffectHandler>();
             _animator = GetComponentInChildren<Animator>();
-            _animator.speed = 1.5f;
             _statAgent.AddStat("hp");
             _statAgent.AddStat("str");
             _statAgent.AddStat("spd");

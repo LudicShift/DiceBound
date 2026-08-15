@@ -19,10 +19,18 @@ namespace DiceBound
         
         public override IEnumerator OnInitialize()
         {
+            masteryTreeCanvas.Setup();
             _masteryManager = MasteryManager.GetInstance();
+            diamondTextWidget1.SetText(_masteryManager.GetDiamond().ToString());
+            diamondTextWidget2.SetText(_masteryManager.GetDiamond().ToString());
+
             _tooltipDirector = DirectorFacade.GetDirector<TooltipDirector>();
             
-            if (openButtonWidget) openButtonWidget.onClickAction += masteryTreeCanvas.ShowCanvas;
+            if (openButtonWidget) openButtonWidget.onClickAction += ()=>
+            {
+                RefreshAll();
+                masteryTreeCanvas.ShowCanvas();
+            };
             if (closeButtonWidget) closeButtonWidget.onClickAction +=  masteryTreeCanvas.HideCanvas;
             
             var nodes = masteryTreeCanvas.GetAllNodes();
@@ -41,7 +49,7 @@ namespace DiceBound
         {
             if (_masteryManager.TryUnlock(nodeId))
             {
-                BroAudio.Play(unlockSFX);
+                //BroAudio.Play(unlockSFX);
                 RefreshAll();
             }
         }
