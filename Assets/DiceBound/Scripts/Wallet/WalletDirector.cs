@@ -85,6 +85,10 @@ namespace DiceBound
             StartCoroutine(addGoldTween.Play());
             BroAudio.Play(_soundDirector.addGoldSFX);
         }
-        
+
+        public int GetGold()
+        {
+            return _gold;
+        }
     }
 }

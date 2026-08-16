@@ -1,6 +1,44 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8969152457535075021
+--- !u!114 &-9218903646711635802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_GSSKEL
+  tier: 2
+  index: 24
+  number: 2
+--- !u!114 &-9188453003950444299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_GSSKEL
+  tier: 2
+  index: 21
+  number: 1
+--- !u!114 &-9147486625922770210
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19,7 +57,121 @@ MonoBehaviour:
   tier: 0
   index: 9
   number: 1
---- !u!114 &-8720683096716013641
+--- !u!114 &-9065593208436686723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_WEREBEAR
+  tier: 1
+  index: 16
+  number: 3
+--- !u!114 &-8908456487605359436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ORCRIDER
+  tier: 2
+  index: 22
+  number: 2
+--- !u!114 &-8866170064709988085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ORCRIDER
+  tier: 0
+  index: 13
+  number: 1
+--- !u!114 &-8763993699240367071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_BAT
+  tier: 1
+  index: 3
+  number: 2
+--- !u!114 &-8482720118056444318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_BAT
+  tier: 0
+  index: 2
+  number: 1
+--- !u!114 &-8447384619960948352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SLIME
+  tier: 1
+  index: 1
+  number: 1
+--- !u!114 &-8251148279308721190
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -35,10 +187,10 @@ MonoBehaviour:
   tags: []
   isEnable: 1
   enemyId: UN_GSSKEL
-  tier: 1
+  tier: 0
   index: 15
   number: 1
---- !u!114 &-8689964601791440593
+--- !u!114 &-8243655756293621362
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -53,11 +205,11 @@ MonoBehaviour:
   id: 
   tags: []
   isEnable: 1
-  enemyId: UN_ARMSKEL
-  tier: 1
-  index: 17
+  enemyId: UN_WEREWOLF
+  tier: 0
+  index: 9
   number: 2
---- !u!114 &-8642709419590909170
+--- !u!114 &-7988569528451349094
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72,11 +224,11 @@ MonoBehaviour:
   id: 
   tags: []
   isEnable: 1
-  enemyId: UN_NECRO
+  enemyId: UN_ORCRIDER
   tier: 1
-  index: 24
+  index: 13
   number: 1
---- !u!114 &-8612750063698728097
+--- !u!114 &-7978769275610859965
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,11 +243,11 @@ MonoBehaviour:
   id: 
   tags: []
   isEnable: 1
-  enemyId: UN_ARMSKEL
-  tier: 1
-  index: 14
-  number: 3
---- !u!114 &-8603579233867063556
+  enemyId: UN_SKELARCHER
+  tier: 0
+  index: 10
+  number: 1
+--- !u!114 &-7969836778920078004
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,64 +266,7 @@ MonoBehaviour:
   tier: 2
   index: 27
   number: 2
---- !u!114 &-8497973484834352193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SLIME
-  tier: 0
-  index: 2
-  number: 1
---- !u!114 &-8399275835050217858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_GSSKEL
-  tier: 1
-  index: 16
-  number: 3
---- !u!114 &-8320658195732470424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_WEREWOLF
-  tier: 0
-  index: 7
-  number: 2
---- !u!114 &-7866046807679739285
+--- !u!114 &-7940630168003728441
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -188,161 +283,9 @@ MonoBehaviour:
   isEnable: 1
   enemyId: UN_ORC
   tier: 0
-  index: 12
+  index: 13
   number: 1
---- !u!114 &-7853798807255489176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ELITEORC
-  tier: 1
-  index: 19
-  number: 1
---- !u!114 &-7852493792844776876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_WEREWOLF
-  tier: 1
-  index: 8
-  number: 1
---- !u!114 &-7792872460840561434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ORC
-  tier: 0
-  index: 7
-  number: 2
---- !u!114 &-7559042746789710477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ARMORC
-  tier: 1
-  index: 16
-  number: 3
---- !u!114 &-7552544259886304369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SKELETON
-  tier: 0
-  index: 0
-  number: 1
---- !u!114 &-7362963002492358266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_GSSKEL
-  tier: 0
-  index: 15
-  number: 1
---- !u!114 &-6997132498429782712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_GSSKEL
-  tier: 0
-  index: 14
-  number: 1
---- !u!114 &-6174431988044747217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SKELETON
-  tier: 0
-  index: 8
-  number: 1
---- !u!114 &-6156435915873101935
+--- !u!114 &-7878358864869275338
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -359,9 +302,180 @@ MonoBehaviour:
   isEnable: 1
   enemyId: UN_ARMORC
   tier: 2
+  index: 22
+  number: 2
+--- !u!114 &-7729759616961583935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ELITEORC
+  tier: 0
   index: 26
+  number: 1
+--- !u!114 &-7630888002632005265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ORCRIDER
+  tier: 1
+  index: 12
   number: 3
---- !u!114 &-6072813616514633527
+--- !u!114 &-7621775197819049673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SKELETON
+  tier: 0
+  index: 8
+  number: 1
+--- !u!114 &-7508062101946327964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_GSSKEL
+  tier: 1
+  index: 16
+  number: 3
+--- !u!114 &-7367279659415070584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SKELETON
+  tier: 1
+  index: 8
+  number: 1
+--- !u!114 &-6885991265745684398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ARMORC
+  tier: 1
+  index: 16
+  number: 3
+--- !u!114 &-6879024866948369113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ORC
+  tier: 0
+  index: 8
+  number: 2
+--- !u!114 &-6842380300991033678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_NECRO
+  tier: 1
+  index: 24
+  number: 1
+--- !u!114 &-6778076324623110382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_GSSKEL
+  tier: 1
+  index: 22
+  number: 1
+--- !u!114 &-6685732527602877998
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -380,140 +494,7 @@ MonoBehaviour:
   tier: 1
   index: 3
   number: 3
---- !u!114 &-6070141959915090099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_WEREBEAR
-  tier: 1
-  index: 17
-  number: 3
---- !u!114 &-5977942020547367661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_NECRO
-  tier: 1
-  index: 26
-  number: 1
---- !u!114 &-5726368537204230598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SKELETON
-  tier: 0
-  index: 1
-  number: 1
---- !u!114 &-5561080156651388348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_WEREBEAR
-  tier: 1
-  index: 18
-  number: 4
---- !u!114 &-5559524486719285463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_NECRO
-  tier: 0
-  index: 28
-  number: 1
---- !u!114 &-5414432355091831954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ARMSKEL
-  tier: 1
-  index: 10
-  number: 2
---- !u!114 &-5406462992727704806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SLIME
-  tier: 1
-  index: 1
-  number: 1
---- !u!114 &-5368900198682513870
+--- !u!114 &-6656639837243305431
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -529,10 +510,10 @@ MonoBehaviour:
   tags: []
   isEnable: 1
   enemyId: UN_ARMORC
-  tier: 0
-  index: 15
-  number: 1
---- !u!114 &-5093990882514316017
+  tier: 2
+  index: 21
+  number: 2
+--- !u!114 &-6509976322363319776
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -551,691 +532,7 @@ MonoBehaviour:
   tier: 0
   index: 4
   number: 3
---- !u!114 &-5020024974457122908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_GSSKEL
-  tier: 2
-  index: 29
-  number: 3
---- !u!114 &-4878698387656424523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ELITEORC
-  tier: 1
-  index: 29
-  number: 1
---- !u!114 &-4841922029655379268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ORCRIDER
-  tier: 0
-  index: 14
-  number: 2
---- !u!114 &-4816775466125383686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ARMORC
-  tier: 2
-  index: 29
-  number: 3
---- !u!114 &-4563053360633161378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SKELETON
-  tier: 1
-  index: 2
-  number: 1
---- !u!114 &-4301814913897395775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_BAT
-  tier: 1
-  index: 3
-  number: 2
---- !u!114 &-4254959079708247323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_WEREWOLF
-  tier: 1
-  index: 11
-  number: 3
---- !u!114 &-4077609735601925342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SKELARCHER
-  tier: 0
-  index: 8
-  number: 2
---- !u!114 &-4053594394892416625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_GSSKEL
-  tier: 1
-  index: 12
-  number: 2
---- !u!114 &-3988139804957821853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_NECRO
-  tier: 1
-  index: 22
-  number: 1
---- !u!114 &-3872964173731832252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ORCRIDER
-  tier: 1
-  index: 16
-  number: 1
---- !u!114 &-3629966378525733224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_WEREBEAR
-  tier: 1
-  index: 24
-  number: 3
---- !u!114 &-3619232664398529653
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ORCRIDER
-  tier: 1
-  index: 14
-  number: 2
---- !u!114 &-3443055886895454101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_WEREBEAR
-  tier: 1
-  index: 29
-  number: 3
---- !u!114 &-3299750545293397244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_WEREBEAR
-  tier: 1
-  index: 16
-  number: 3
---- !u!114 &-3202553706186025627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_NECRO
-  tier: 1
-  index: 23
-  number: 1
---- !u!114 &-3058366481052511804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ORCRIDER
-  tier: 0
-  index: 13
-  number: 1
---- !u!114 &-3004040211791986924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_GSSKEL
-  tier: 0
-  index: 11
-  number: 1
---- !u!114 &-2914712160184581154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SKELETON
-  tier: 0
-  index: 10
-  number: 1
---- !u!114 &-2844388925273426367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_BAT
-  tier: 1
-  index: 2
-  number: 1
---- !u!114 &-2744450776535609761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SKELARCHER
-  tier: 1
-  index: 6
-  number: 1
---- !u!114 &-2691508364058713892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_BAT
-  tier: 0
-  index: 1
-  number: 1
---- !u!114 &-2680910402285592015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ARMORC
-  tier: 2
-  index: 20
-  number: 2
---- !u!114 &-2472735617295594258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SLIME
-  tier: 0
-  index: 5
-  number: 1
---- !u!114 &-2413338970684077732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ARMORC
-  tier: 1
-  index: 15
-  number: 2
---- !u!114 &-2320901394847639787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_GSSKEL
-  tier: 1
-  index: 11
-  number: 2
---- !u!114 &-2210411996994815723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_NECRO
-  tier: 1
-  index: 29
-  number: 1
---- !u!114 &-2205401567629586026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ORCRIDER
-  tier: 2
-  index: 21
-  number: 2
---- !u!114 &-2124138436160213186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SKELETON
-  tier: 0
-  index: 5
-  number: 2
---- !u!114 &-2084143095584872626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_WEREBEAR
-  tier: 1
-  index: 22
-  number: 2
---- !u!114 &-2043061322571366658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_NECRO
-  tier: 1
-  index: 25
-  number: 1
---- !u!114 &-1974587331961140482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SKELARCHER
-  tier: 1
-  index: 10
-  number: 1
---- !u!114 &-1880289748771156796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_WEREBEAR
-  tier: 1
-  index: 28
-  number: 2
---- !u!114 &-1869537272063691835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SKELARCHER
-  tier: 0
-  index: 6
-  number: 1
---- !u!114 &-1819052111019255064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SLIME
-  tier: 1
-  index: 0
-  number: 2
---- !u!114 &-1618728665991999144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_GSSKEL
-  tier: 1
-  index: 22
-  number: 1
---- !u!114 &-1529232132569460150
+--- !u!114 &-6353088140546003678
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1252,9 +549,9 @@ MonoBehaviour:
   isEnable: 1
   enemyId: UN_ORC
   tier: 0
-  index: 8
+  index: 9
   number: 2
---- !u!114 &-1512172976390706165
+--- !u!114 &-6247900523688783408
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1269,49 +566,11 @@ MonoBehaviour:
   id: 
   tags: []
   isEnable: 1
-  enemyId: UN_SKELARCHER
+  enemyId: UN_ARMSKEL
   tier: 0
-  index: 7
-  number: 2
---- !u!114 &-1267580977275952333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_WEREBEAR
-  tier: 1
-  index: 19
-  number: 4
---- !u!114 &-1234240618537737236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ORC
-  tier: 1
-  index: 6
+  index: 10
   number: 1
---- !u!114 &-1193781294267490941
+--- !u!114 &-6138827100538193835
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1326,68 +585,11 @@ MonoBehaviour:
   id: 
   tags: []
   isEnable: 1
-  enemyId: UN_GSSKEL
+  enemyId: UN_SKELETON
   tier: 1
-  index: 13
-  number: 2
---- !u!114 &-869225209227067431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ORCRIDER
-  tier: 1
-  index: 18
-  number: 4
---- !u!114 &-714033921010582532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SKELARCHER
-  tier: 1
-  index: 8
+  index: 5
   number: 1
---- !u!114 &-399765693710926990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SLIME
-  tier: 1
-  index: 2
-  number: 1
---- !u!114 &-192412646658879807
+--- !u!114 &-5989097480492510299
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1406,7 +608,729 @@ MonoBehaviour:
   tier: 2
   index: 27
   number: 2
---- !u!114 &-129927972604159667
+--- !u!114 &-5920674259677091634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_WEREBEAR
+  tier: 1
+  index: 24
+  number: 3
+--- !u!114 &-5782510714659780203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SKELETON
+  tier: 1
+  index: 10
+  number: 1
+--- !u!114 &-5748649570569400024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SLIME
+  tier: 1
+  index: 5
+  number: 1
+--- !u!114 &-5647874559201689759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ARMSKEL
+  tier: 1
+  index: 14
+  number: 3
+--- !u!114 &-5583537982941690191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ARMSKEL
+  tier: 1
+  index: 17
+  number: 2
+--- !u!114 &-5559151293772144037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SLIME
+  tier: 0
+  index: 5
+  number: 1
+--- !u!114 &-5470520487590916641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ORCRIDER
+  tier: 1
+  index: 16
+  number: 1
+--- !u!114 &-5238980852719718422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ARMORC
+  tier: 1
+  index: 17
+  number: 3
+--- !u!114 &-4605229815851810871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ARMSKEL
+  tier: 1
+  index: 10
+  number: 2
+--- !u!114 &-4479887670722366702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SKELETON
+  tier: 1
+  index: 2
+  number: 1
+--- !u!114 &-4211304515369417425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_BAT
+  tier: 0
+  index: 1
+  number: 1
+--- !u!114 &-4205093790227927543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ORC
+  tier: 0
+  index: 7
+  number: 2
+--- !u!114 &-4193014354217858276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_BAT
+  tier: 1
+  index: 4
+  number: 2
+--- !u!114 &-3692661228873264843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SKELETON
+  tier: 0
+  index: 2
+  number: 1
+--- !u!114 &-3683313391434191051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_NECRO
+  tier: 1
+  index: 26
+  number: 1
+--- !u!114 &-3616118696575311590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ARMSKEL
+  tier: 0
+  index: 13
+  number: 2
+--- !u!114 &-3416824372662335054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SLIME
+  tier: 0
+  index: 2
+  number: 1
+--- !u!114 &-3081881592070033936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ORC
+  tier: 0
+  index: 12
+  number: 1
+--- !u!114 &-2992780930839490830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ARMORC
+  tier: 1
+  index: 19
+  number: 4
+--- !u!114 &-2944459847614379784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ARMORC
+  tier: 2
+  index: 26
+  number: 3
+--- !u!114 &-2872664252108579184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_WEREWOLF
+  tier: 0
+  index: 8
+  number: 2
+--- !u!114 &-2820101161725370421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_GSSKEL
+  tier: 0
+  index: 11
+  number: 1
+--- !u!114 &-2645502794279905216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ORCRIDER
+  tier: 1
+  index: 18
+  number: 4
+--- !u!114 &-2522937217541273604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SKELARCHER
+  tier: 1
+  index: 6
+  number: 1
+--- !u!114 &-2029188201072432719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SKELETON
+  tier: 0
+  index: 1
+  number: 1
+--- !u!114 &-1985705648978425836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SKELARCHER
+  tier: 0
+  index: 6
+  number: 1
+--- !u!114 &-1769640809333235107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_NECRO
+  tier: 1
+  index: 25
+  number: 1
+--- !u!114 &-1510049242201140313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SLIME
+  tier: 1
+  index: 0
+  number: 2
+--- !u!114 &-1471002892934162046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ORC
+  tier: 1
+  index: 7
+  number: 1
+--- !u!114 &-1098765106542147786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SKELARCHER
+  tier: 1
+  index: 8
+  number: 1
+--- !u!114 &-1064546247311236699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SLIME
+  tier: 1
+  index: 3
+  number: 1
+--- !u!114 &-970764578329516302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ARMSKEL
+  tier: 1
+  index: 15
+  number: 2
+--- !u!114 &-953373752718013305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ORCRIDER
+  tier: 1
+  index: 14
+  number: 2
+--- !u!114 &-812045336472344583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_GSSKEL
+  tier: 1
+  index: 14
+  number: 3
+--- !u!114 &-794088014087161391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_NECRO
+  tier: 0
+  index: 28
+  number: 1
+--- !u!114 &-646339563584635364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_GSSKEL
+  tier: 0
+  index: 12
+  number: 2
+--- !u!114 &-301159898495679379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SKELETON
+  tier: 1
+  index: 6
+  number: 1
+--- !u!114 &-279696953336392703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SLIME
+  tier: 1
+  index: 4
+  number: 2
+--- !u!114 &-214029852298326964
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1425,7 +1349,26 @@ MonoBehaviour:
   tier: 1
   index: 26
   number: 3
---- !u!114 &-63243475823506487
+--- !u!114 &-198588548971672235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ELITEORC
+  tier: 1
+  index: 29
+  number: 1
+--- !u!114 &-8210141258416996
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1442,8 +1385,8 @@ MonoBehaviour:
   isEnable: 1
   enemyId: UN_ARMORC
   tier: 2
-  index: 28
-  number: 2
+  index: 29
+  number: 3
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1461,155 +1404,155 @@ MonoBehaviour:
   rowTypeName: DiceBound.WaveEnemyPoolDataTableRow, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
   dataList:
-  - {fileID: 6712561589290392165}
-  - {fileID: -1819052111019255064}
-  - {fileID: -7552544259886304369}
-  - {fileID: 5772670113161583054}
-  - {fileID: -5406462992727704806}
-  - {fileID: -5726368537204230598}
-  - {fileID: 5773076935439808153}
-  - {fileID: -2691508364058713892}
-  - {fileID: -8497973484834352193}
-  - {fileID: 8683415767228291169}
-  - {fileID: 6542791121362398586}
-  - {fileID: -399765693710926990}
-  - {fileID: -4563053360633161378}
-  - {fileID: -2844388925273426367}
-  - {fileID: -6072813616514633527}
-  - {fileID: -4301814913897395775}
-  - {fileID: 9056500378129645004}
-  - {fileID: -5093990882514316017}
-  - {fileID: 795998151973246839}
-  - {fileID: 4880772411254569424}
-  - {fileID: -2124138436160213186}
-  - {fileID: 5230312914358106965}
-  - {fileID: -2472735617295594258}
-  - {fileID: 7895317769708921180}
-  - {fileID: 2813904356367462134}
-  - {fileID: 5191046658523559624}
-  - {fileID: 2483758308727789201}
-  - {fileID: 7958353675973732820}
-  - {fileID: -1869537272063691835}
-  - {fileID: -1234240618537737236}
-  - {fileID: 8212249229373850958}
-  - {fileID: -2744450776535609761}
-  - {fileID: -8320658195732470424}
-  - {fileID: -7792872460840561434}
-  - {fileID: -1512172976390706165}
-  - {fileID: 7685580334641873559}
-  - {fileID: 2450129335398208914}
-  - {fileID: 5129074308798577050}
-  - {fileID: -1529232132569460150}
-  - {fileID: 513011206237180876}
-  - {fileID: -4077609735601925342}
-  - {fileID: -6174431988044747217}
-  - {fileID: -7852493792844776876}
-  - {fileID: -714033921010582532}
-  - {fileID: 2385709465687854613}
-  - {fileID: 5039162538447450837}
-  - {fileID: 2527258423809653811}
-  - {fileID: -8969152457535075021}
-  - {fileID: 356177675583213050}
-  - {fileID: 4191470030748921321}
-  - {fileID: 4347682948100228536}
-  - {fileID: -2914712160184581154}
-  - {fileID: -5414432355091831954}
-  - {fileID: 615275779510595177}
-  - {fileID: -1974587331961140482}
-  - {fileID: 5883579159134306772}
-  - {fileID: -3004040211791986924}
-  - {fileID: 2641714876391779154}
-  - {fileID: 2701573245377468844}
-  - {fileID: -2320901394847639787}
-  - {fileID: 3319386225387476348}
-  - {fileID: -4254959079708247323}
-  - {fileID: 3288615090040970083}
-  - {fileID: 1762544672840725274}
-  - {fileID: 4659029312232193032}
-  - {fileID: -7866046807679739285}
-  - {fileID: -4053594394892416625}
-  - {fileID: 4936714057274472787}
-  - {fileID: 4310048644132488610}
-  - {fileID: 5816331458901359563}
-  - {fileID: 789192965625019432}
-  - {fileID: -3058366481052511804}
-  - {fileID: 2001343736490771784}
-  - {fileID: 5064356265187825366}
-  - {fileID: -1193781294267490941}
-  - {fileID: 5196811267465990763}
-  - {fileID: 3292969830484723839}
-  - {fileID: -6997132498429782712}
-  - {fileID: 8413152043608075897}
-  - {fileID: -4841922029655379268}
-  - {fileID: 4953829872900237288}
-  - {fileID: -8612750063698728097}
-  - {fileID: -3619232664398529653}
-  - {fileID: -5368900198682513870}
-  - {fileID: 8544158823433362726}
-  - {fileID: -7362963002492358266}
-  - {fileID: 5349834500132412256}
-  - {fileID: -2413338970684077732}
-  - {fileID: 4915697541900162800}
-  - {fileID: -8720683096716013641}
-  - {fileID: 1660189297207232520}
-  - {fileID: -3299750545293397244}
-  - {fileID: -7559042746789710477}
-  - {fileID: -8399275835050217858}
-  - {fileID: -3872964173731832252}
-  - {fileID: -6070141959915090099}
-  - {fileID: 3815747825985002993}
-  - {fileID: 3676360166505182364}
-  - {fileID: -8689964601791440593}
-  - {fileID: 8999850208923504371}
-  - {fileID: -5561080156651388348}
-  - {fileID: -869225209227067431}
-  - {fileID: 469428955195509245}
-  - {fileID: -1267580977275952333}
-  - {fileID: -7853798807255489176}
-  - {fileID: 7858973088470196520}
-  - {fileID: 4059487787863299158}
-  - {fileID: -2680910402285592015}
-  - {fileID: 43185237876981907}
-  - {fileID: 7342177559583389081}
-  - {fileID: 8192138950009632890}
-  - {fileID: -2205401567629586026}
-  - {fileID: 5025643549880526134}
-  - {fileID: 374069281151670322}
-  - {fileID: -2084143095584872626}
-  - {fileID: 1277862017231761021}
-  - {fileID: -1618728665991999144}
-  - {fileID: -3988139804957821853}
-  - {fileID: 3057818275232048808}
-  - {fileID: 8798266486581742768}
-  - {fileID: 584776315650410004}
-  - {fileID: -3202553706186025627}
-  - {fileID: 416078632200530650}
-  - {fileID: -3629966378525733224}
-  - {fileID: 4406744953618438146}
-  - {fileID: -8642709419590909170}
-  - {fileID: 6155415922009646669}
-  - {fileID: 7808229697112461303}
-  - {fileID: -2043061322571366658}
-  - {fileID: -129927972604159667}
-  - {fileID: -6156435915873101935}
-  - {fileID: 5381217858493333966}
-  - {fileID: -5977942020547367661}
-  - {fileID: 4783855803187756542}
-  - {fileID: 4650884163691219}
-  - {fileID: -192412646658879807}
-  - {fileID: 8606452276083102444}
-  - {fileID: -8603579233867063556}
-  - {fileID: 5235917386683195453}
-  - {fileID: -5559524486719285463}
-  - {fileID: -1880289748771156796}
-  - {fileID: -63243475823506487}
-  - {fileID: 8137943002228519159}
-  - {fileID: -4878698387656424523}
-  - {fileID: -2210411996994815723}
-  - {fileID: -3443055886895454101}
-  - {fileID: -4816775466125383686}
-  - {fileID: -5020024974457122908}
---- !u!114 &4650884163691219
+  - {fileID: 7590000041724683823}
+  - {fileID: -1510049242201140313}
+  - {fileID: 8352385546216608450}
+  - {fileID: 1888332219193884789}
+  - {fileID: -8447384619960948352}
+  - {fileID: -2029188201072432719}
+  - {fileID: 6509473484588759754}
+  - {fileID: -4211304515369417425}
+  - {fileID: -3416824372662335054}
+  - {fileID: -3692661228873264843}
+  - {fileID: -8482720118056444318}
+  - {fileID: 2921695641396936270}
+  - {fileID: -4479887670722366702}
+  - {fileID: 6506071389632457899}
+  - {fileID: -6685732527602877998}
+  - {fileID: -8763993699240367071}
+  - {fileID: -1064546247311236699}
+  - {fileID: -6509976322363319776}
+  - {fileID: -279696953336392703}
+  - {fileID: -4193014354217858276}
+  - {fileID: 4674674711968571715}
+  - {fileID: 1211122643962057419}
+  - {fileID: -5559151293772144037}
+  - {fileID: -6138827100538193835}
+  - {fileID: 1309895159423957524}
+  - {fileID: -5748649570569400024}
+  - {fileID: 8155844467375970587}
+  - {fileID: 2740094649823429636}
+  - {fileID: -1985705648978425836}
+  - {fileID: 4764105767630553291}
+  - {fileID: -301159898495679379}
+  - {fileID: -2522937217541273604}
+  - {fileID: 7139629820445099831}
+  - {fileID: -4205093790227927543}
+  - {fileID: 2335270657222060949}
+  - {fileID: 6291189931742470061}
+  - {fileID: -1471002892934162046}
+  - {fileID: 4815177025905459091}
+  - {fileID: -6879024866948369113}
+  - {fileID: -2872664252108579184}
+  - {fileID: 4841529550849257953}
+  - {fileID: -7621775197819049673}
+  - {fileID: 793113115554112127}
+  - {fileID: -1098765106542147786}
+  - {fileID: -7367279659415070584}
+  - {fileID: -6353088140546003678}
+  - {fileID: -8243655756293621362}
+  - {fileID: -9147486625922770210}
+  - {fileID: -6247900523688783408}
+  - {fileID: 153724276232768403}
+  - {fileID: -7978769275610859965}
+  - {fileID: 2456975897905366142}
+  - {fileID: -4605229815851810871}
+  - {fileID: 2338967995908811363}
+  - {fileID: 3833270711112253218}
+  - {fileID: -5782510714659780203}
+  - {fileID: -2820101161725370421}
+  - {fileID: 3936818780769771171}
+  - {fileID: 3801811971295521885}
+  - {fileID: 7637389986326375736}
+  - {fileID: 6888692694566924360}
+  - {fileID: 8084158926285030076}
+  - {fileID: -7630888002632005265}
+  - {fileID: -646339563584635364}
+  - {fileID: 7241023280003130367}
+  - {fileID: -3081881592070033936}
+  - {fileID: 7274392296132373578}
+  - {fileID: 2279888246566243733}
+  - {fileID: 7337940415781978085}
+  - {fileID: -3616118696575311590}
+  - {fileID: 1886680799324102383}
+  - {fileID: -8866170064709988085}
+  - {fileID: -7940630168003728441}
+  - {fileID: 5318866404911059328}
+  - {fileID: 6353161997417045148}
+  - {fileID: -7988569528451349094}
+  - {fileID: 3130260165366535403}
+  - {fileID: 2951685855835787901}
+  - {fileID: 1870407504509473133}
+  - {fileID: 492939459025096168}
+  - {fileID: -812045336472344583}
+  - {fileID: -5647874559201689759}
+  - {fileID: -953373752718013305}
+  - {fileID: 976310637333990895}
+  - {fileID: 162802544061784982}
+  - {fileID: -8251148279308721190}
+  - {fileID: 8445975239251495040}
+  - {fileID: 2122897420046836339}
+  - {fileID: -970764578329516302}
+  - {fileID: 3339048911270012863}
+  - {fileID: 5853416030950262963}
+  - {fileID: -9065593208436686723}
+  - {fileID: -6885991265745684398}
+  - {fileID: -7508062101946327964}
+  - {fileID: -5470520487590916641}
+  - {fileID: 5121178920339053079}
+  - {fileID: 610870947363799096}
+  - {fileID: -5238980852719718422}
+  - {fileID: -5583537982941690191}
+  - {fileID: 2015962978522464666}
+  - {fileID: 4206335506313298623}
+  - {fileID: -2645502794279905216}
+  - {fileID: -2992780930839490830}
+  - {fileID: 8078063620807811190}
+  - {fileID: 4226456848227082566}
+  - {fileID: 2750705164759569370}
+  - {fileID: 3351910124076178360}
+  - {fileID: 2708040548973225533}
+  - {fileID: 8688417483322169923}
+  - {fileID: 5248058059673976349}
+  - {fileID: -6656639837243305431}
+  - {fileID: 8101327757654094212}
+  - {fileID: -9188453003950444299}
+  - {fileID: -7878358864869275338}
+  - {fileID: 8172032161070210330}
+  - {fileID: -8908456487605359436}
+  - {fileID: -6778076324623110382}
+  - {fileID: 9006338362064532851}
+  - {fileID: 3073277580695605570}
+  - {fileID: 8482395160643900679}
+  - {fileID: 2356309436288926360}
+  - {fileID: 2834567873945890202}
+  - {fileID: 4651654164301640651}
+  - {fileID: -5920674259677091634}
+  - {fileID: -9218903646711635802}
+  - {fileID: -6842380300991033678}
+  - {fileID: 4154769321095011095}
+  - {fileID: 6666337330661187468}
+  - {fileID: -1769640809333235107}
+  - {fileID: -214029852298326964}
+  - {fileID: -2944459847614379784}
+  - {fileID: -7729759616961583935}
+  - {fileID: -3683313391434191051}
+  - {fileID: 4745041221822121006}
+  - {fileID: 7591109513160190132}
+  - {fileID: -5989097480492510299}
+  - {fileID: 3516330624179818989}
+  - {fileID: -7969836778920078004}
+  - {fileID: 5028999363518744387}
+  - {fileID: -794088014087161391}
+  - {fileID: 1661474861512444943}
+  - {fileID: 6533903865174955093}
+  - {fileID: 5355663531202708692}
+  - {fileID: -198588548971672235}
+  - {fileID: 3997934353983895127}
+  - {fileID: 4154429882237493413}
+  - {fileID: -8210141258416996}
+  - {fileID: 6896954691496904342}
+--- !u!114 &153724276232768403
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1624,30 +1567,11 @@ MonoBehaviour:
   id: 
   tags: []
   isEnable: 1
-  enemyId: UN_WEREBEAR
-  tier: 1
-  index: 27
-  number: 2
---- !u!114 &43185237876981907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_GSSKEL
-  tier: 1
-  index: 20
+  enemyId: UN_ORC
+  tier: 0
+  index: 10
   number: 1
---- !u!114 &356177675583213050
+--- !u!114 &162802544061784982
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1664,389 +1588,9 @@ MonoBehaviour:
   isEnable: 1
   enemyId: UN_ARMSKEL
   tier: 0
-  index: 10
-  number: 1
---- !u!114 &374069281151670322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ARMORC
-  tier: 2
-  index: 22
-  number: 2
---- !u!114 &416078632200530650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ARMORC
-  tier: 2
-  index: 24
-  number: 3
---- !u!114 &469428955195509245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ARMORC
-  tier: 1
-  index: 19
-  number: 4
---- !u!114 &513011206237180876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_WEREWOLF
-  tier: 0
-  index: 8
-  number: 2
---- !u!114 &584776315650410004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ORCRIDER
-  tier: 2
-  index: 23
-  number: 2
---- !u!114 &615275779510595177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ORC
-  tier: 1
-  index: 10
-  number: 2
---- !u!114 &789192965625019432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_GSSKEL
-  tier: 0
-  index: 13
-  number: 2
---- !u!114 &795998151973246839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SLIME
-  tier: 1
-  index: 4
-  number: 2
---- !u!114 &1277862017231761021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ORCRIDER
-  tier: 2
-  index: 22
-  number: 2
---- !u!114 &1660189297207232520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ORCRIDER
-  tier: 1
   index: 15
   number: 1
---- !u!114 &1762544672840725274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_GSSKEL
-  tier: 0
-  index: 12
-  number: 2
---- !u!114 &2001343736490771784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ORC
-  tier: 0
-  index: 13
-  number: 1
---- !u!114 &2385709465687854613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SKELETON
-  tier: 1
-  index: 8
-  number: 1
---- !u!114 &2450129335398208914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ORC
-  tier: 1
-  index: 7
-  number: 1
---- !u!114 &2483758308727789201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ORC
-  tier: 0
-  index: 6
-  number: 2
---- !u!114 &2527258423809653811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_WEREWOLF
-  tier: 0
-  index: 9
-  number: 2
---- !u!114 &2641714876391779154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ARMSKEL
-  tier: 0
-  index: 11
-  number: 1
---- !u!114 &2701573245377468844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_WEREWOLF
-  tier: 0
-  index: 11
-  number: 1
---- !u!114 &2813904356367462134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SKELARCHER
-  tier: 1
-  index: 5
-  number: 1
---- !u!114 &3057818275232048808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_WEREBEAR
-  tier: 1
-  index: 23
-  number: 3
---- !u!114 &3288615090040970083
+--- !u!114 &492939459025096168
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2062,67 +1606,10 @@ MonoBehaviour:
   tags: []
   isEnable: 1
   enemyId: UN_ORCRIDER
-  tier: 1
-  index: 12
-  number: 3
---- !u!114 &3292969830484723839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ORC
-  tier: 1
-  index: 13
-  number: 1
---- !u!114 &3319386225387476348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ARMSKEL
-  tier: 1
-  index: 11
+  tier: 0
+  index: 14
   number: 2
---- !u!114 &3676360166505182364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ARMORC
-  tier: 1
-  index: 17
-  number: 3
---- !u!114 &3815747825985002993
+--- !u!114 &610870947363799096
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2141,558 +1628,7 @@ MonoBehaviour:
   tier: 1
   index: 17
   number: 3
---- !u!114 &4059487787863299158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_WEREBEAR
-  tier: 1
-  index: 20
-  number: 2
---- !u!114 &4191470030748921321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ORC
-  tier: 0
-  index: 10
-  number: 1
---- !u!114 &4310048644132488610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ORC
-  tier: 1
-  index: 12
-  number: 1
---- !u!114 &4347682948100228536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SKELARCHER
-  tier: 0
-  index: 10
-  number: 1
---- !u!114 &4406744953618438146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_GSSKEL
-  tier: 2
-  index: 24
-  number: 2
---- !u!114 &4659029312232193032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ARMSKEL
-  tier: 0
-  index: 12
-  number: 1
---- !u!114 &4783855803187756542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ELITEORC
-  tier: 0
-  index: 27
-  number: 2
---- !u!114 &4880772411254569424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_BAT
-  tier: 1
-  index: 4
-  number: 2
---- !u!114 &4915697541900162800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ARMSKEL
-  tier: 1
-  index: 15
-  number: 2
---- !u!114 &4936714057274472787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ARMSKEL
-  tier: 1
-  index: 12
-  number: 1
---- !u!114 &4953829872900237288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_GSSKEL
-  tier: 1
-  index: 14
-  number: 3
---- !u!114 &5025643549880526134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_GSSKEL
-  tier: 2
-  index: 21
-  number: 1
---- !u!114 &5039162538447450837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ORC
-  tier: 0
-  index: 9
-  number: 2
---- !u!114 &5064356265187825366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ARMSKEL
-  tier: 1
-  index: 13
-  number: 2
---- !u!114 &5129074308798577050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SKELARCHER
-  tier: 1
-  index: 7
-  number: 1
---- !u!114 &5191046658523559624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SLIME
-  tier: 1
-  index: 5
-  number: 1
---- !u!114 &5196811267465990763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ORCRIDER
-  tier: 1
-  index: 13
-  number: 1
---- !u!114 &5230312914358106965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SKELARCHER
-  tier: 0
-  index: 5
-  number: 2
---- !u!114 &5235917386683195453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ELITEORC
-  tier: 1
-  index: 28
-  number: 1
---- !u!114 &5349834500132412256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ORCRIDER
-  tier: 0
-  index: 15
-  number: 1
---- !u!114 &5381217858493333966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ELITEORC
-  tier: 0
-  index: 26
-  number: 1
---- !u!114 &5772670113161583054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SLIME
-  tier: 0
-  index: 1
-  number: 2
---- !u!114 &5773076935439808153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SKELETON
-  tier: 1
-  index: 1
-  number: 1
---- !u!114 &5816331458901359563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ARMSKEL
-  tier: 0
-  index: 13
-  number: 2
---- !u!114 &5883579159134306772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SKELETON
-  tier: 1
-  index: 10
-  number: 1
---- !u!114 &6155415922009646669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ARMORC
-  tier: 2
-  index: 25
-  number: 3
---- !u!114 &6542791121362398586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_BAT
-  tier: 0
-  index: 2
-  number: 1
---- !u!114 &6712561589290392165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SLIME
-  tier: 0
-  index: 0
-  number: 2
---- !u!114 &7342177559583389081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_WEREBEAR
-  tier: 1
-  index: 21
-  number: 2
---- !u!114 &7685580334641873559
+--- !u!114 &793113115554112127
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2709,9 +1645,66 @@ MonoBehaviour:
   isEnable: 1
   enemyId: UN_WEREWOLF
   tier: 1
-  index: 7
+  index: 8
   number: 1
---- !u!114 &7808229697112461303
+--- !u!114 &976310637333990895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ARMORC
+  tier: 0
+  index: 15
+  number: 1
+--- !u!114 &1211122643962057419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SKELARCHER
+  tier: 0
+  index: 5
+  number: 2
+--- !u!114 &1309895159423957524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SKELARCHER
+  tier: 1
+  index: 5
+  number: 1
+--- !u!114 &1661474861512444943
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2728,123 +1721,9 @@ MonoBehaviour:
   isEnable: 1
   enemyId: UN_WEREBEAR
   tier: 1
-  index: 25
-  number: 3
---- !u!114 &7858973088470196520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ORCRIDER
-  tier: 2
-  index: 20
-  number: 2
---- !u!114 &7895317769708921180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SKELETON
-  tier: 1
-  index: 5
-  number: 1
---- !u!114 &7958353675973732820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SKELETON
-  tier: 0
-  index: 6
-  number: 2
---- !u!114 &8137943002228519159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ORCRIDER
-  tier: 2
   index: 28
   number: 2
---- !u!114 &8192138950009632890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ARMORC
-  tier: 2
-  index: 21
-  number: 2
---- !u!114 &8212249229373850958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SKELETON
-  tier: 1
-  index: 6
-  number: 1
---- !u!114 &8413152043608075897
+--- !u!114 &1870407504509473133
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2863,7 +1742,7 @@ MonoBehaviour:
   tier: 0
   index: 14
   number: 2
---- !u!114 &8544158823433362726
+--- !u!114 &1886680799324102383
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2878,68 +1757,30 @@ MonoBehaviour:
   id: 
   tags: []
   isEnable: 1
-  enemyId: UN_ARMSKEL
+  enemyId: UN_GSSKEL
   tier: 0
-  index: 15
-  number: 1
---- !u!114 &8606452276083102444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_NECRO
-  tier: 1
-  index: 27
-  number: 1
---- !u!114 &8683415767228291169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_SKELETON
-  tier: 0
-  index: 2
-  number: 1
---- !u!114 &8798266486581742768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
-  id: 
-  tags: []
-  isEnable: 1
-  enemyId: UN_ARMORC
-  tier: 2
-  index: 23
+  index: 13
   number: 2
---- !u!114 &8999850208923504371
+--- !u!114 &1888332219193884789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SLIME
+  tier: 0
+  index: 1
+  number: 2
+--- !u!114 &2015962978522464666
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2958,7 +1799,197 @@ MonoBehaviour:
   tier: 1
   index: 18
   number: 4
---- !u!114 &9056500378129645004
+--- !u!114 &2122897420046836339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ARMORC
+  tier: 1
+  index: 15
+  number: 2
+--- !u!114 &2279888246566243733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ARMSKEL
+  tier: 1
+  index: 12
+  number: 1
+--- !u!114 &2335270657222060949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SKELARCHER
+  tier: 0
+  index: 7
+  number: 2
+--- !u!114 &2338967995908811363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ORC
+  tier: 1
+  index: 10
+  number: 2
+--- !u!114 &2356309436288926360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ORCRIDER
+  tier: 2
+  index: 23
+  number: 2
+--- !u!114 &2456975897905366142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SKELETON
+  tier: 0
+  index: 10
+  number: 1
+--- !u!114 &2708040548973225533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ARMORC
+  tier: 2
+  index: 20
+  number: 2
+--- !u!114 &2740094649823429636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SKELETON
+  tier: 0
+  index: 6
+  number: 2
+--- !u!114 &2750705164759569370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ORCRIDER
+  tier: 2
+  index: 20
+  number: 2
+--- !u!114 &2834567873945890202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_NECRO
+  tier: 1
+  index: 23
+  number: 1
+--- !u!114 &2921695641396936270
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2975,5 +2006,974 @@ MonoBehaviour:
   isEnable: 1
   enemyId: UN_SLIME
   tier: 1
-  index: 3
+  index: 2
+  number: 1
+--- !u!114 &2951685855835787901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_GSSKEL
+  tier: 0
+  index: 14
+  number: 1
+--- !u!114 &3073277580695605570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_WEREBEAR
+  tier: 1
+  index: 23
+  number: 3
+--- !u!114 &3130260165366535403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ORC
+  tier: 1
+  index: 13
+  number: 1
+--- !u!114 &3339048911270012863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_GSSKEL
+  tier: 1
+  index: 15
+  number: 1
+--- !u!114 &3351910124076178360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_WEREBEAR
+  tier: 1
+  index: 20
+  number: 2
+--- !u!114 &3516330624179818989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_NECRO
+  tier: 1
+  index: 27
+  number: 1
+--- !u!114 &3801811971295521885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_WEREWOLF
+  tier: 0
+  index: 11
+  number: 1
+--- !u!114 &3833270711112253218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SKELARCHER
+  tier: 1
+  index: 10
+  number: 1
+--- !u!114 &3936818780769771171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ARMSKEL
+  tier: 0
+  index: 11
+  number: 1
+--- !u!114 &3997934353983895127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_NECRO
+  tier: 1
+  index: 29
+  number: 1
+--- !u!114 &4154429882237493413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_WEREBEAR
+  tier: 1
+  index: 29
+  number: 3
+--- !u!114 &4154769321095011095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ARMORC
+  tier: 2
+  index: 25
+  number: 3
+--- !u!114 &4206335506313298623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_WEREBEAR
+  tier: 1
+  index: 18
+  number: 4
+--- !u!114 &4226456848227082566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ELITEORC
+  tier: 1
+  index: 19
+  number: 1
+--- !u!114 &4651654164301640651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ARMORC
+  tier: 2
+  index: 24
+  number: 3
+--- !u!114 &4674674711968571715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SKELETON
+  tier: 0
+  index: 5
+  number: 2
+--- !u!114 &4745041221822121006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ELITEORC
+  tier: 0
+  index: 27
+  number: 2
+--- !u!114 &4764105767630553291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ORC
+  tier: 1
+  index: 6
+  number: 1
+--- !u!114 &4815177025905459091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SKELARCHER
+  tier: 1
+  index: 7
+  number: 1
+--- !u!114 &4841529550849257953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SKELARCHER
+  tier: 0
+  index: 8
+  number: 2
+--- !u!114 &5028999363518744387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ELITEORC
+  tier: 1
+  index: 28
+  number: 1
+--- !u!114 &5121178920339053079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_WEREBEAR
+  tier: 1
+  index: 17
+  number: 3
+--- !u!114 &5248058059673976349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_WEREBEAR
+  tier: 1
+  index: 21
+  number: 2
+--- !u!114 &5318866404911059328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ARMSKEL
+  tier: 1
+  index: 13
+  number: 2
+--- !u!114 &5355663531202708692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ORCRIDER
+  tier: 2
+  index: 28
+  number: 2
+--- !u!114 &5853416030950262963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ORCRIDER
+  tier: 1
+  index: 15
+  number: 1
+--- !u!114 &6291189931742470061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_WEREWOLF
+  tier: 1
+  index: 7
+  number: 1
+--- !u!114 &6353161997417045148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_GSSKEL
+  tier: 1
+  index: 13
+  number: 2
+--- !u!114 &6506071389632457899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_BAT
+  tier: 1
+  index: 2
+  number: 1
+--- !u!114 &6509473484588759754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SKELETON
+  tier: 1
+  index: 1
+  number: 1
+--- !u!114 &6533903865174955093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ARMORC
+  tier: 2
+  index: 28
+  number: 2
+--- !u!114 &6666337330661187468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_WEREBEAR
+  tier: 1
+  index: 25
+  number: 3
+--- !u!114 &6888692694566924360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ARMSKEL
+  tier: 1
+  index: 11
+  number: 2
+--- !u!114 &6896954691496904342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_GSSKEL
+  tier: 2
+  index: 29
+  number: 3
+--- !u!114 &7139629820445099831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_WEREWOLF
+  tier: 0
+  index: 7
+  number: 2
+--- !u!114 &7241023280003130367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ARMSKEL
+  tier: 0
+  index: 12
+  number: 1
+--- !u!114 &7274392296132373578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_GSSKEL
+  tier: 1
+  index: 12
+  number: 2
+--- !u!114 &7337940415781978085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ORC
+  tier: 1
+  index: 12
+  number: 1
+--- !u!114 &7590000041724683823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SLIME
+  tier: 0
+  index: 0
+  number: 2
+--- !u!114 &7591109513160190132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_WEREBEAR
+  tier: 1
+  index: 27
+  number: 2
+--- !u!114 &7637389986326375736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_GSSKEL
+  tier: 1
+  index: 11
+  number: 2
+--- !u!114 &8078063620807811190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_WEREBEAR
+  tier: 1
+  index: 19
+  number: 4
+--- !u!114 &8084158926285030076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_WEREWOLF
+  tier: 1
+  index: 11
+  number: 3
+--- !u!114 &8101327757654094212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ORCRIDER
+  tier: 2
+  index: 21
+  number: 2
+--- !u!114 &8155844467375970587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ORC
+  tier: 0
+  index: 6
+  number: 2
+--- !u!114 &8172032161070210330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_WEREBEAR
+  tier: 1
+  index: 22
+  number: 2
+--- !u!114 &8352385546216608450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_SKELETON
+  tier: 0
+  index: 0
+  number: 1
+--- !u!114 &8445975239251495040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ORCRIDER
+  tier: 0
+  index: 15
+  number: 1
+--- !u!114 &8482395160643900679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_ARMORC
+  tier: 2
+  index: 23
+  number: 2
+--- !u!114 &8688417483322169923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_GSSKEL
+  tier: 1
+  index: 20
+  number: 1
+--- !u!114 &9006338362064532851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c39344e315404cb73a278238db157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.WaveEnemyPoolDataTableRow
+  id: 
+  tags: []
+  isEnable: 1
+  enemyId: UN_NECRO
+  tier: 1
+  index: 22
   number: 1

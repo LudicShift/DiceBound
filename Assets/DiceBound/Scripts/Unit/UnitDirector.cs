@@ -332,5 +332,10 @@ namespace DiceBound
         {
             _deadAllies.Clear();
         }
+
+        public UnitDataTableRow GetUnitData(string id)
+        {
+            return _unitDataDictionary[id];
+        }
     }
 }

@@ -11,6 +11,7 @@ namespace DiceBound
   
        [SerializeField] private ButtonWidget gameOverDiscordButton;
         [SerializeField] private ButtonWidget gameClearDiscordButton;
+        private ShopDirector _shopDirector;
 
         public void Awake()
         {
@@ -20,21 +21,23 @@ namespace DiceBound
 
         public override IEnumerator OnInitialize()
         {
+            StartCoroutine(MainRoutine());
             gameOverTitleButtonWidget.onClickAction+=OnTitleButtonClick;
             gameClearTitleButtonWidget.onClickAction+=OnTitleButtonClick;
              gameOverDiscordButton.onClickAction+=OnGameOverDiscordButtonClick;
             gameClearDiscordButton.onClickAction+=OnGameClearDiscordButtonClick;
-            StartCoroutine(MainRoutine());
             AbilitySystem.Initialize();
             AbilitySystem.AddActionMethods(typeof(SkillAbilityAction));
             AbilitySystem.AddConditionMethods(typeof(SkillAbilityCondition));
             SkillAbilityAction.Setup();
+            _shopDirector = DirectorFacade.GetDirector<ShopDirector>();
             yield return null;
         }
 
         private IEnumerator MainRoutine()
         {
             yield return DirectorFacade.WaitUntilInitialized();
+            _shopDirector.OnRoundBegin();
         }
         
         private void OnTitleButtonClick()

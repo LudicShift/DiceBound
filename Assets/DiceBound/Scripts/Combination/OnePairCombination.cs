@@ -27,7 +27,7 @@ namespace DiceBound
                     pairCount++;
                 }
             }
-            return pairCount == 1;
+            return pairCount >= 1;
         }
         
     }
