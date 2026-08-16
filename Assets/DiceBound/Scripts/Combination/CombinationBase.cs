@@ -1,4 +1,5 @@
-﻿using KCoreKit;
+﻿using System.Collections.Generic;
+using KCoreKit;
 
 namespace DiceBound
 {

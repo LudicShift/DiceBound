@@ -1,4 +1,5 @@
-﻿using KCoreKit;
+﻿using DiceBound.Interface;
+using KCoreKit;
 using UnityEngine;
 
 namespace DiceBound
@@ -16,7 +17,7 @@ namespace DiceBound
         Enemy
     }
     
-    public class UnitDataTableRow : DataTableRowBase
+    public class UnitDataTableRow : DataTableRowBase, IPurchaseItem
     {
         public UnitGroup group;
         public UnitAttackType attackType;
@@ -28,6 +29,7 @@ namespace DiceBound
         public string skillPassiveKey;
         public string skillActiveKey;
       
+        public Texture2D texture;
         public RuntimeAnimatorController animator;
 
         public string grade;
@@ -42,5 +44,14 @@ namespace DiceBound
         public int mdf;
         public int spd;
         public float height;
+        public Sprite GetSprite()
+        {
+            return texture.ToSprite();
+        }
+
+        public string GetId()
+        {
+            return id;
+        }
     }
 }

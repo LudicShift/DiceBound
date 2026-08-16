@@ -103,9 +103,9 @@ namespace DiceBound
             {
                 _unitPlaceDirector.SetEnable(false);
                 _shopDirector.SetEnable(false);
+                
                 int enemyCount = 0;
                 var enemyPool = _waveEnemyPoolDictionary[wave.index];
-
                 foreach (var enemyData in enemyPool)
                 {
                     for (int i = 0; i < enemyData.number; i++)
@@ -160,6 +160,7 @@ namespace DiceBound
                 playWaveButtonWidget.image.color = inactiveColor;
                 _unitPlaceDirector.SetEnable(true);
                 _shopDirector.SetEnable(true);
+                _shopDirector.OnRoundBegin();
             }
         }
 

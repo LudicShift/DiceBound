@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,33 +11,26 @@ namespace DiceBound
 {
     public class DiceDirector : DirectorBase
     {
-        [BigHeader("General")]
-        [SerializeField] private Canvas canvas;    
+        [BigHeader("General")] [SerializeField]
+        private Canvas canvas;
+
         [SerializeField] private Transform initialDicePoint;
         [SerializeField] private RectTransform remainPointGroup;
         [SerializeField] private RectTransform keepPointGroup;
-        
-        [BigHeader("Widget")]
-        [SerializeField] private ButtonWidget _claimButtonWidget;
-        [SerializeField] private DiceRerollButtonWidget _rerollButtonWidget;
-        [SerializeField] private ButtonWidget _showFieldButton;
-        [SerializeField] private ButtonWidget _showRewardButton;
-        [SerializeField] private ButtonWidget _showDiceButton;
-        [SerializeField] private TextWidget _combinationInfoWidget;
-        [SerializeField] private ImageWidget diceLayer;
-        [SerializeField] private ImageWidget rewardLayer;
-        
-        [BigHeader("Sprite")]
-        [SerializeField] private List<Sprite> diceSprite;
+
+        [BigHeader("Widget")] [SerializeField] private DiceRerollButtonWidget rerollButtonWidget;
+        [SerializeField] private TextWidget combinationInfoWidget;
+
+        [BigHeader("Sprite")] [SerializeField] private List<Sprite> diceSprite;
         [SerializeField] private List<Sprite> diceAnimationSprite;
         [SerializeField] private Sprite emptySprite;
-     
-        
+
+
         private int _remainRollCount = 3;
         private int _maxDiceFace = 6;
         private UnitDirector _unitDirector;
         private WalletDirector _walletDirector;
-        private CombinationBase[] _combinations;
+        private Dictionary<string, CombinationBase> _combinations;
         private List<DicePointWidget> _keepPoints;
         private List<DicePointWidget> _remainPoints;
         private List<DiceWidget> _keepDices;
@@ -45,6 +39,7 @@ namespace DiceBound
         private SoundDirector _soundDirector;
         private UnitPlaceDirector _unitPlaceDirector;
         private MasteryManager _masteryManager;
+        private List<CombinationBase> _currentResult;
 
         public void ShowCanvas()
         {
@@ -57,26 +52,15 @@ namespace DiceBound
             _unitPlaceDirector.SetEnable(true);
             canvas.gameObject.SetActive(false);
         }
-        
-        public void ShowLayer()
-        {
-            diceLayer.gameObject.SetActive(true);
-            rewardLayer.gameObject.SetActive(true);
-        }
-        
-        public void HideLayer()
-        {
-            diceLayer.gameObject.SetActive(false);
-            rewardLayer.gameObject.SetActive(false);
-        }
-        
+
+
         public void Setup()
         {
+            rerollButtonWidget.Show();
             _remainRollCount = 3 + (int)_masteryManager.GetModifierTotal("DiceRerollCountIncrease");
             StartCoroutine(ResetDice());
-
         }
-        
+
         public void Roll()
         {
             if (_remainDices.Count > 0)
@@ -88,38 +72,40 @@ namespace DiceBound
         private IEnumerator RollRoutine()
         {
             BroAudio.Play(_soundDirector.diceRollSFX);
-            _combinationInfoWidget.SetText("Rolling...");
-           
+            combinationInfoWidget.SetText("Rolling...");
+
             _remainRollCount--;
-            _claimButtonWidget.SetInteractable(false);
-            _rerollButtonWidget.Disable();
-            _rerollButtonWidget.SetCount(_remainRollCount);
-            
+            rerollButtonWidget.Disable();
+            rerollButtonWidget.SetCount(_remainRollCount);
+
             int count = 0;
             foreach (var dice in _remainDices)
             {
-                StartCoroutine(dice.Roll(()=>count++, _maxDiceFace));
+                StartCoroutine(dice.Roll(() => count++, _maxDiceFace));
             }
-            yield return new WaitUntil(()=>count >= _remainDices.Count);
-            
-            
+
+            yield return new WaitUntil(() => count >= _remainDices.Count);
+
+
             if (_remainRollCount <= 0)
             {
-                _rerollButtonWidget.Disable();
+                rerollButtonWidget.Disable();
             }
             else
             {
-                _rerollButtonWidget.Enable();
+                rerollButtonWidget.Enable();
             }
+            var allDices = _remainDices.Concat(_keepDices).ToList();
+            var combinationContext = new CombinationContext(allDices);
+            _currentResult = Evaluate(combinationContext);
             ShowResult();
-            _claimButtonWidget.SetInteractable(true);
         }
         
-        
-
-        private IEnumerator ResetDice()
+        public void ClearDices()
         {
-            _claimButtonWidget.SetInteractable(false);
+            _currentResult = null;
+            rerollButtonWidget.Hide();
+            
             if (_keepDices.Count > 0)
             {
                 foreach (var dice in _keepDices)
@@ -127,9 +113,16 @@ namespace DiceBound
                     _remainDices.Add(dice);
                 }
             }
-            
-            _combinationInfoWidget.SetText("");
+            combinationInfoWidget.SetText("");
+            for (int i = 0; i < _remainDices.Count; i++)
+            {
+                _remainPoints[i].SetDice(_remainDices[i]);
+                _remainDices[i].Warp(initialDicePoint.position);
+            }
+        }
 
+        private IEnumerator ResetDice()
+        {
             for (int i = 0; i < _remainDices.Count; i++)
             {
                 _remainPoints[i].SetDice(_remainDices[i]);
@@ -144,14 +137,14 @@ namespace DiceBound
             {
                 point.SetDice(null);
             }
-            
+
             Roll();
         }
 
         public override IEnumerator OnInitialize()
         {
-            _noCombinationText = "No Combination";//추후 현지화
-            
+            _noCombinationText = "No Combination"; //추후 현지화
+
             _keepDices = new List<DiceWidget>();
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
             _walletDirector = DirectorFacade.GetDirector<WalletDirector>();
@@ -163,54 +156,32 @@ namespace DiceBound
             _remainDices = canvas.GetComponentsInChildren<DiceWidget>(true).ToList();
             _remainPoints = remainPointGroup.GetComponentsInChildren<DicePointWidget>(true).ToList();
             _keepPoints = keepPointGroup.GetComponentsInChildren<DicePointWidget>(true).ToList();
-            
+
             foreach (var dice in _remainDices)
             {
                 dice.onPointerClickAction += _ => OnDiceClick(dice);
                 dice.spriteGetter = GetDiceSprite;
                 dice.animationSpriteGetter = GetDiceAnimationSprite;
             }
-            
-            _showFieldButton.onClickAction+=OnShowFieldButtonClick;
-            _showRewardButton.onClickAction+=OnShowRewardButtonClick;
-            _showDiceButton.onClickAction+=OnShowDiceButtonClick;
-            _rerollButtonWidget.onClickAction+=Roll;
-            _claimButtonWidget.onClickAction+=OnClaimButtonClick;
+
+            rerollButtonWidget.onClickAction += Roll;
 
             var combinationDataList = DataTableManager.FindAllRows<CombinationDataTableRow>();
-            var dictionary =  combinationDataList.ToDictionary(x => x.id);
-            
-            
-            var combinationList = new List<CombinationBase>();
-            combinationList.Add(new OnePairCombination(dictionary["ONE_PAIR"]));
-            combinationList.Add(new TwoPairCombination(dictionary["TWO_PAIR"]));
-            combinationList.Add(new TripleCombination(dictionary["TRIPLE"]));
-            combinationList.Add(new SmallStraightCombination(dictionary["S_STRAIGHT"]));
-            combinationList.Add(new LargeStraightCombination(dictionary["L_STRAIGHT"]));
-            combinationList.Add(new FullHouseCombination(dictionary["FULL_HOUSE"]));
-            combinationList.Add(new FourOfKindCombination(dictionary["FOUR_KIND"]));
-            combinationList.Add(new FiveKindCombination(dictionary["FIVE_KIND"]));
-            combinationList.Sort((a,b)=>a.GetPriority() - b.GetPriority());
-            _combinations = combinationList.ToArray();
-            
+            var dictionary = combinationDataList.ToDictionary(x => x.id);
+
+
+            _combinations = new Dictionary<string, CombinationBase>();
+            _combinations.Add("ONE_PAIR", new OnePairCombination(dictionary["ONE_PAIR"]));
+            _combinations.Add("TWO_PAIR", new TwoPairCombination(dictionary["TWO_PAIR"]));
+            _combinations.Add("TRIPLE", new TripleCombination(dictionary["TRIPLE"]));
+            _combinations.Add("S_STRAIGHT", new SmallStraightCombination(dictionary["S_STRAIGHT"]));
+            _combinations.Add("L_STRAIGHT", new LargeStraightCombination(dictionary["L_STRAIGHT"]));
+            _combinations.Add("FULL_HOUSE", new FullHouseCombination(dictionary["FULL_HOUSE"]));
+            _combinations.Add("FOUR_KIND", new FourOfKindCombination(dictionary["FOUR_KIND"]));
+            _combinations.Add("FIVE_KIND", new FiveKindCombination(dictionary["FIVE_KIND"]));
             yield return null;
         }
 
-        private void OnShowDiceButtonClick()
-        {
-            diceLayer.DOKill();
-            rewardLayer.DOKill();
-            diceLayer.rectTransform.DOAnchorPosX(0, 0.1f);
-            rewardLayer.rectTransform.DOAnchorPosX(1920, 0.1f);
-        }
-
-        private void OnShowRewardButtonClick()
-        {
-            diceLayer.DOKill();
-            rewardLayer.DOKill();
-            diceLayer.rectTransform.DOAnchorPosX(-1920, 0.1f);
-            rewardLayer.rectTransform.DOAnchorPosX(0, 0.1f);
-        }
 
         private Sprite GetDiceAnimationSprite(int index)
         {
@@ -219,7 +190,7 @@ namespace DiceBound
 
         private Sprite GetDiceSprite(int number)
         {
-            return diceSprite[number-1];
+            return diceSprite[number - 1];
         }
 
         private void OnDiceClick(DiceWidget dice)
@@ -230,12 +201,12 @@ namespace DiceBound
             {
                 return;
             }
-            
+
             if (_remainDices.Contains(dice))
             {
                 KeepDice(dice);
             }
-            else if(_keepDices.Contains(dice))
+            else if (_keepDices.Contains(dice))
             {
                 UnKeepDice(dice);
             }
@@ -267,7 +238,7 @@ namespace DiceBound
         {
             _keepDices.Remove(dice);
             _remainDices.Add(dice);
-            
+
             var keepPoint = GetLinkedKeepPoint(dice);
             var point = GetLinkedRemainPoint(dice);
             keepPoint.SetDice(null);
@@ -302,62 +273,44 @@ namespace DiceBound
 
         private void ShowResult()
         {
-            var allDices = _remainDices.Concat(_keepDices).ToList();
-            var combinationContext = new CombinationContext(allDices);
-            var combination = Evaluate(combinationContext);
-            if (combination!=null)
-            {
-                _combinationInfoWidget.SetText(combination.GetName());
-            }
-            else
-            {
-                _combinationInfoWidget.SetText(_noCombinationText);
-            }
-        }
         
-        private void OnClaimButtonClick()
-        {
-           
-            var allDices = _remainDices.Concat(_keepDices).ToList();
-            var combinationContext = new CombinationContext(allDices);
-            var combination = Evaluate(combinationContext);
-            if (combination != null)
+            if (_currentResult != null)
             {
-                _unitDirector.SpawnUnit(combination.GetUnitID());
+                combinationInfoWidget.SetText(_currentResult[0].GetName());
             }
             else
             {
-                _walletDirector.AddGold(50);
-            }
-            HideCanvas();
-        }
-
-        private void OnShowFieldButtonClick()
-        {
-            if (diceLayer.isShown)
-            {
-                HideLayer();
-            }
-            else
-            {
-                ShowLayer();
+                combinationInfoWidget.SetText(_noCombinationText);
             }
         }
 
 
-        public CombinationBase Evaluate(CombinationContext context)
+        public List<CombinationBase> Evaluate(CombinationContext context)
         {
+            List<CombinationBase> result = new List<CombinationBase>();
             foreach (var combination in _combinations)
             {
-                if (combination.Evaluate(context))
+                if (combination.Value.Evaluate(context))
                 {
-                    return combination;
+                    result.Add(combination.Value);
                 }
             }
 
-            return null;
+            result.Sort((a,b)=>a.GetPriority().CompareTo(b.GetPriority()));
+            return result;
         }
-        
+
+
+        public CombinationBase GetCombination(string combinationID)
+        {
+            return _combinations[combinationID];
+        }
+
+        public List<CombinationBase> GetResult()
+        {
+            return _currentResult;
+        }
+
         
     }
 }
