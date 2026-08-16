@@ -1,22 +1,30 @@
+using System;
 using DiceBound;
 using KCoreKit;
 using UnityEngine;
 
 public class UnitInfoWidget : WidgetBase
 {
-    [SerializeField]
-    private GaugeWidget hpGauge;
-    [SerializeField]
-    private SkillCooldownGaugeWidget basicSkillGauge;  
-    [SerializeField]
-    private SkillCooldownGaugeWidget activeSkillGauge;
-    [SerializeField]
-    private TierLabelWidget tierLabel;
-    
+    [SerializeField] private GaugeWidget hpGauge;
+    [SerializeField] private SkillCooldownGaugeWidget basicSkillGauge;
+    [SerializeField] private SkillCooldownGaugeWidget activeSkillGauge;
+    [SerializeField] private TierLabelWidget tierLabel;
+
+    public bool flip;
+    private Vector3 _changeBasicPos;
+    private Vector3 _changeActivePos;
+
+    public void Awake()
+    {
+        _changeBasicPos = basicSkillGauge.transform.localPosition;
+        _changeActivePos = activeSkillGauge.transform.localPosition;
+    }
+
     public void SetMaxHp(float maxHp)
     {
-        hpGauge.Setup(maxHp,maxHp);
+        hpGauge.Setup(maxHp, maxHp);
     }
+
     public void SetHp(float hp)
     {
         hpGauge.OnChange(hp);
@@ -25,13 +33,13 @@ public class UnitInfoWidget : WidgetBase
     public void BindBasicSkill(Skill skill)
     {
         basicSkillGauge.Show();
-        basicSkillGauge.Bind(skill) ;
-    }  
-    
+        basicSkillGauge.Bind(skill);
+    }
+
     public void BindActiveSkill(Skill skill)
     {
         activeSkillGauge.Show();
-        activeSkillGauge.Bind(skill) ;
+        activeSkillGauge.Bind(skill);
     }
 
     public void OnUpdate()
@@ -39,7 +47,7 @@ public class UnitInfoWidget : WidgetBase
         basicSkillGauge.OnUpdate();
         activeSkillGauge.OnUpdate();
     }
-    
+
     public void OnAppearBegin()
     {
         if (hpGauge)
@@ -56,13 +64,6 @@ public class UnitInfoWidget : WidgetBase
         }
     }
 
-    public void SetTier(int tier)
-    {
-        tierLabel.OnChange(tier);
-    }
-
-
-
     public void ReleaseSkills()
     {
         basicSkillGauge.Hide();
@@ -73,8 +74,19 @@ public class UnitInfoWidget : WidgetBase
 
     public void OnUpgrade(int tier)
     {
-       basicSkillGauge.OnUpgrade();
-       activeSkillGauge.OnUpgrade();
-       tierLabel.OnChange(tier);
+        basicSkillGauge.OnUpgrade();
+        activeSkillGauge.OnUpgrade();
+        tierLabel.OnChange(tier);
+    }
+
+    public void SetFlip(bool value)
+    {
+        flip = value;
+        var pos1 = basicSkillGauge.transform.localPosition;
+        var pos2 = activeSkillGauge.transform.localPosition;
+        pos1.x = _changeBasicPos.x * (flip ? -1 : 1);
+        pos2.x = _changeActivePos.x * (flip ? -1 : 1);
+        basicSkillGauge.transform.localPosition = pos1;
+        activeSkillGauge.transform.localPosition = pos2;
     }
 }

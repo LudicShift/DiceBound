@@ -147,7 +147,7 @@ namespace DiceBound
         {
             _data = data;
             group = data.group;
-          
+            _unitInfoWidget.SetFlip(data.group == UnitGroup.Enemy);
             _unitName = LocalizationManager.GetLocalizedText(data.nameKey);
             attackType = data.attackType;
             
