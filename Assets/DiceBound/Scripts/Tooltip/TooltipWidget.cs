@@ -23,7 +23,9 @@ namespace DiceBound
         {
             if (context.screenSpace)
             {
-                root.anchoredPosition = new Vector2(context.tooltipPosition.x+context.offset.x,context.tooltipPosition.y+context.offset.y);
+                RectTransformUtility.ScreenPointToWorldPointInRectangle(rectTransform, 
+                    new Vector2(context.tooltipPosition.x+context.offset.x,context.tooltipPosition.y+context.offset.y),CameraManager.GetMainCamera(), out var localPoint);
+                root.anchoredPosition = localPoint;
             }
             else
             {
