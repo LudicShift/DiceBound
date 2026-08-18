@@ -110,7 +110,7 @@ namespace DiceBound
                 {
                     for (int i = 0; i < enemyData.number; i++)
                     {
-                        _unitDirector.SpawnUnit(enemyData.enemyId, enemyData.tier);
+                        _unitDirector.SpawnUnit(enemyData.enemyId, UnitGroup.Enemy,true, enemyData.tier);
                     }
                 }
 

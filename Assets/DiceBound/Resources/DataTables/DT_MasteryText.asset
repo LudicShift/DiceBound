@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8525061083790449416
+--- !u!114 &-9115359271841887446
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
-  m_Name: SkillTree_AllyStat_Name
+  m_Name: SkillTree_DiceReroll_Desc
   m_EditorClassIdentifier: KCoreKit::LocalizedTextDataTableRow
-  id: SkillTree_AllyStat_Name
+  id: SkillTree_DiceReroll_Desc
   tags: []
   isEnable: 1
-  EN: Ally Stats+
-  KR: "\uB3D9\uB8CC \uB2A5\uB825\uCE58 \uAC15\uD654"
-  JP: "\u4EF2\u9593\u5168\u80FD\u529B\u5F37\u5316"
-  CN: "\u540C\u4F34\u5C5E\u6027\u5F3A\u5316"
---- !u!114 &-7931601381500257711
+  EN: Increases the number of dice rerolls by 1.
+  KR: "\uC8FC\uC0AC\uC704 \uB9AC\uB864 \uD69F\uC218\uAC00 1 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+  JP: "\u30C0\u30A4\u30B9\u306E\u30EA\u30ED\u30FC\u30EB\u56DE\u6570\u304C1\u56DE\u5897\u52A0\u3057\u307E\u3059\u3002"
+  CN: "\u9AB0\u5B50\u91CD\u6295\u6B21\u6570\u589E\u52A01\u6B21\u3002"
+--- !u!114 &-9067540879126925468
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -29,17 +29,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
-  m_Name: SkillTree_LineageDmg_Desc
+  m_Name: SkillTree_Unit4Star_Name
   m_EditorClassIdentifier: KCoreKit::LocalizedTextDataTableRow
-  id: SkillTree_LineageDmg_Desc
+  id: SkillTree_Unit4Star_Name
   tags: []
   isEnable: 1
-  EN: Increases damage dealt by lineage synergy by 50%.
-  KR: "\uD608\uD1B5 \uC2DC\uB108\uC9C0\uB85C \uC778\uD55C \uD53C\uD574\uB7C9\uC774
-    50% \uC99D\uAC00\uD569\uB2C8\uB2E4."
-  JP: "\u8840\u7D71\u30B7\u30CA\u30B8\u30FC\u306B\u3088\u308B\u30C0\u30E1\u30FC\u30B8\u304C50%\u5897\u52A0\u3057\u307E\u3059\u3002"
-  CN: "\u8840\u7EDF\u7F81\u7ECA\u9020\u6210\u7684\u4F24\u5BB3\u63D0\u534750%\u3002"
---- !u!114 &-7331178143140188857
+  EN: Unit Star Cap+
+  KR: "\uC720\uB2DB \uC131\uAE09 \uD55C\uACC4 \uD655\uC7A5"
+  JP: "\u30E6\u30CB\u30C3\u30C8\u661F\u7B49\u7D1A\u4E0A\u9650\u62E1\u5F35"
+  CN: "\u5355\u4F4D\u661F\u7EA7\u4E0A\u9650\u63D0\u5347"
+--- !u!114 &-7328411522368016314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
+  m_Name: SkillTree_AllyCap_Name
+  m_EditorClassIdentifier: KCoreKit::LocalizedTextDataTableRow
+  id: SkillTree_AllyCap_Name
+  tags: []
+  isEnable: 1
+  EN: Ally Capacity
+  KR: "\uB3D9\uB8CC \uC2AC\uB86F \uD655\uC7A5"
+  JP: "\u4EF2\u9593\u67A0\u62E1\u5F35"
+  CN: "\u540C\u4F34\u4E0A\u9650\u6269\u5C55"
+--- !u!114 &-5277676850952933120
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59,291 +77,7 @@ MonoBehaviour:
     20% \uC99D\uAC00\uD569\uB2C8\uB2E4."
   JP: "\u30A6\u30A7\u30FC\u30D6\u30AF\u30EA\u30A2\u6642\u306B\u7372\u5F97\u3059\u308B\u30B4\u30FC\u30EB\u30C9\u304C20%\u5897\u52A0\u3057\u307E\u3059\u3002"
   CN: "\u6CE2\u6B21\u901A\u5173\u83B7\u5F97\u7684\u91D1\u5E01\u589E\u52A020%\u3002"
---- !u!114 &-7059287779349343905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
-  m_Name: SkillTree_WaveGold_Name
-  m_EditorClassIdentifier: KCoreKit::LocalizedTextDataTableRow
-  id: SkillTree_WaveGold_Name
-  tags: []
-  isEnable: 1
-  EN: Wave Gold Boost
-  KR: "\uC6E8\uC774\uBE0C \uACE8\uB4DC \uC99D\uAC00"
-  JP: "\u30A6\u30A7\u30FC\u30D6\u5831\u916C\u5897\u52A0"
-  CN: "\u6CE2\u6B21\u91D1\u5E01\u52A0\u6210"
---- !u!114 &-5585008778430685524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
-  m_Name: SkillTree_AllyCap_Name
-  m_EditorClassIdentifier: KCoreKit::LocalizedTextDataTableRow
-  id: SkillTree_AllyCap_Name
-  tags: []
-  isEnable: 1
-  EN: Ally Capacity
-  KR: "\uB3D9\uB8CC \uC2AC\uB86F \uD655\uC7A5"
-  JP: "\u4EF2\u9593\u67A0\u62E1\u5F35"
-  CN: "\u540C\u4F34\u4E0A\u9650\u6269\u5C55"
---- !u!114 &-4066161115020464054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
-  m_Name: SkillTree_DiceFace_Desc
-  m_EditorClassIdentifier: KCoreKit::LocalizedTextDataTableRow
-  id: SkillTree_DiceFace_Desc
-  tags: []
-  isEnable: 1
-  EN: Allows you to remove 1 face from a die.
-  KR: "\uC8FC\uC0AC\uC704\uC758 \uD2B9\uC815 \uB208\uC744 1\uAC1C \uC81C\uAC70\uD560
-    \uC218 \uC788\uC2B5\uB2C8\uB2E4."
-  JP: "\u30C0\u30A4\u30B9\u306E\u76EE\u30921\u3064\u9664\u53BB\u3067\u304D\u308B\u3088\u3046\u306B\u306A\u308A\u307E\u3059\u3002"
-  CN: "\u53EF\u4EE5\u79FB\u9664\u9AB0\u5B50\u76841\u4E2A\u9762\u3002"
---- !u!114 &-3127799714759734461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
-  m_Name: SkillTree_StartGold_Desc
-  m_EditorClassIdentifier: KCoreKit::LocalizedTextDataTableRow
-  id: SkillTree_StartGold_Desc
-  tags: []
-  isEnable: 1
-  EN: Increases starting gold by 100.
-  KR: "\uC2DC\uC791 \uACE8\uB4DC\uAC00 100 \uC99D\uAC00\uD569\uB2C8\uB2E4."
-  JP: "\u958B\u59CB\u6642\u306E\u30B4\u30FC\u30EB\u30C9\u304C100\u5897\u52A0\u3057\u307E\u3059\u3002"
-  CN: "\u521D\u59CB\u91D1\u5E01\u589E\u52A0100\u3002"
---- !u!114 &-2324890018384814623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
-  m_Name: SkillTree_DiceReroll_Desc
-  m_EditorClassIdentifier: KCoreKit::LocalizedTextDataTableRow
-  id: SkillTree_DiceReroll_Desc
-  tags: []
-  isEnable: 1
-  EN: Increases the number of dice rerolls by 1.
-  KR: "\uC8FC\uC0AC\uC704 \uB9AC\uB864 \uD69F\uC218\uAC00 1 \uC99D\uAC00\uD569\uB2C8\uB2E4."
-  JP: "\u30C0\u30A4\u30B9\u306E\u30EA\u30ED\u30FC\u30EB\u56DE\u6570\u304C1\u56DE\u5897\u52A0\u3057\u307E\u3059\u3002"
-  CN: "\u9AB0\u5B50\u91CD\u6295\u6B21\u6570\u589E\u52A01\u6B21\u3002"
---- !u!114 &-416941801546812504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
-  m_Name: SkillTree_AllyCap_Desc
-  m_EditorClassIdentifier: KCoreKit::LocalizedTextDataTableRow
-  id: SkillTree_AllyCap_Desc
-  tags: []
-  isEnable: 1
-  EN: Increases the maximum number of allies by 3.
-  KR: "\uCD5C\uB300 \uB3D9\uB8CC \uC218\uAC00 3 \uC99D\uAC00\uD569\uB2C8\uB2E4."
-  JP: "\u4EF2\u9593\u306E\u6700\u5927\u6570\u304C3\u5897\u52A0\u3057\u307E\u3059\u3002"
-  CN: "\u6700\u5927\u540C\u4F34\u6570\u91CF\u589E\u52A03\u3002"
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 463daf5080d293049bd98a91154e958f, type: 3}
-  m_Name: DT_MasteryText
-  m_EditorClassIdentifier: KCoreKit::KCoreKit.DataTable
-  rowScript: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
-  csv: {fileID: 4900000, guid: b069580e4c6e7154a9aa7885fea93845, type: 3}
-  rowTypeName: LocalizedTextDataTableRow, KCoreKit, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  dataList:
-  - {fileID: -5585008778430685524}
-  - {fileID: -7059287779349343905}
-  - {fileID: 5222016579543353693}
-  - {fileID: 4699128183345302490}
-  - {fileID: 3848195403748579705}
-  - {fileID: -8525061083790449416}
-  - {fileID: 8188281621703669144}
-  - {fileID: 185270410076537593}
-  - {fileID: 4091176648209302535}
-  - {fileID: -416941801546812504}
-  - {fileID: -7331178143140188857}
-  - {fileID: -2324890018384814623}
-  - {fileID: 7639027643846199002}
-  - {fileID: 7231929857338003441}
-  - {fileID: 7080315458420662568}
-  - {fileID: -7931601381500257711}
-  - {fileID: -4066161115020464054}
-  - {fileID: -3127799714759734461}
---- !u!114 &185270410076537593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
-  m_Name: SkillTree_DiceFace_Name
-  m_EditorClassIdentifier: KCoreKit::LocalizedTextDataTableRow
-  id: SkillTree_DiceFace_Name
-  tags: []
-  isEnable: 1
-  EN: Dice Face Removal
-  KR: "\uC8FC\uC0AC\uC704 \uB208 \uC81C\uAC70"
-  JP: "\u30C0\u30A4\u30B9\u76EE\u9664\u53BB"
-  CN: "\u79FB\u9664\u9AB0\u5B50\u9762"
---- !u!114 &3848195403748579705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
-  m_Name: SkillTree_Dice2Star_Name
-  m_EditorClassIdentifier: KCoreKit::LocalizedTextDataTableRow
-  id: SkillTree_Dice2Star_Name
-  tags: []
-  isEnable: 1
-  EN: 2-Star Dice
-  KR: "2\uC131 \uC8FC\uC0AC\uC704 \uD574\uAE08"
-  JP: "2\u3064\u661F\u30C0\u30A4\u30B9\u89E3\u653E"
-  CN: "\u89E3\u9501\u4E8C\u661F\u9AB0\u5B50"
---- !u!114 &4091176648209302535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
-  m_Name: SkillTree_StartGold_Name
-  m_EditorClassIdentifier: KCoreKit::LocalizedTextDataTableRow
-  id: SkillTree_StartGold_Name
-  tags: []
-  isEnable: 1
-  EN: Starting Gold
-  KR: "\uC2DC\uC791 \uACE8\uB4DC \uC99D\uAC00"
-  JP: "\u958B\u59CB\u30B4\u30FC\u30EB\u30C9\u5897\u52A0"
-  CN: "\u521D\u59CB\u91D1\u5E01\u589E\u52A0"
---- !u!114 &4699128183345302490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
-  m_Name: SkillTree_Unit4Star_Name
-  m_EditorClassIdentifier: KCoreKit::LocalizedTextDataTableRow
-  id: SkillTree_Unit4Star_Name
-  tags: []
-  isEnable: 1
-  EN: Unit Star Cap+
-  KR: "\uC720\uB2DB \uC131\uAE09 \uD55C\uACC4 \uD655\uC7A5"
-  JP: "\u30E6\u30CB\u30C3\u30C8\u661F\u7B49\u7D1A\u4E0A\u9650\u62E1\u5F35"
-  CN: "\u5355\u4F4D\u661F\u7EA7\u4E0A\u9650\u63D0\u5347"
---- !u!114 &5222016579543353693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
-  m_Name: SkillTree_DiceReroll_Name
-  m_EditorClassIdentifier: KCoreKit::LocalizedTextDataTableRow
-  id: SkillTree_DiceReroll_Name
-  tags: []
-  isEnable: 1
-  EN: Dice Reroll
-  KR: "\uC8FC\uC0AC\uC704 \uB9AC\uB864 \uC99D\uAC00"
-  JP: "\u30C0\u30A4\u30B9\u30EA\u30ED\u30FC\u30EB\u5897\u52A0"
-  CN: "\u9AB0\u5B50\u91CD\u6295\u589E\u52A0"
---- !u!114 &7080315458420662568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
-  m_Name: SkillTree_AllyStat_Desc
-  m_EditorClassIdentifier: KCoreKit::LocalizedTextDataTableRow
-  id: SkillTree_AllyStat_Desc
-  tags: []
-  isEnable: 1
-  EN: Increases all stats of every ally by 10%.
-  KR: "\uBAA8\uB4E0 \uB3D9\uB8CC\uC758 \uC804\uCCB4 \uB2A5\uB825\uCE58\uAC00 10%
-    \uC99D\uAC00\uD569\uB2C8\uB2E4."
-  JP: "\u3059\u3079\u3066\u306E\u4EF2\u9593\u306E\u5168\u80FD\u529B\u5024\u304C10%\u5897\u52A0\u3057\u307E\u3059\u3002"
-  CN: "\u6240\u6709\u540C\u4F34\u7684\u5168\u90E8\u5C5E\u6027\u63D0\u534710%\u3002"
---- !u!114 &7231929857338003441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
-  m_Name: SkillTree_Dice2Star_Desc
-  m_EditorClassIdentifier: KCoreKit::LocalizedTextDataTableRow
-  id: SkillTree_Dice2Star_Desc
-  tags: []
-  isEnable: 1
-  EN: Unlocks the ability to obtain 2-star dice.
-  KR: "2\uC131 \uC8FC\uC0AC\uC704\uB97C \uD68D\uB4DD\uD560 \uC218 \uC788\uAC8C \uB429\uB2C8\uB2E4."
-  JP: "2\u3064\u661F\u30C0\u30A4\u30B9\u3092\u7372\u5F97\u3067\u304D\u308B\u3088\u3046\u306B\u306A\u308A\u307E\u3059\u3002"
-  CN: "\u89E3\u9501\u83B7\u53D6\u4E8C\u661F\u9AB0\u5B50\u7684\u80FD\u529B\u3002"
---- !u!114 &7639027643846199002
+--- !u!114 &-4980732636513066585
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -363,7 +97,7 @@ MonoBehaviour:
     1 \uC99D\uAC00\uD569\uB2C8\uB2E4."
   JP: "\u30E6\u30CB\u30C3\u30C8\u3092\u5408\u6210\u3067\u304D\u308B\u6700\u5927\u661F\u7B49\u7D1A\u304C1\u5897\u52A0\u3057\u307E\u3059\u3002"
   CN: "\u5355\u4F4D\u53EF\u5408\u6210\u7684\u6700\u5927\u661F\u7EA7\u63D0\u53471\u7EA7\u3002"
---- !u!114 &8188281621703669144
+--- !u!114 &-3916947918306990642
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -382,3 +116,269 @@ MonoBehaviour:
   KR: "\uD608\uD1B5 \uD53C\uD574\uB7C9 \uC99D\uAC00"
   JP: "\u8840\u7D71\u30C0\u30E1\u30FC\u30B8\u5897\u52A0"
   CN: "\u8840\u7EDF\u4F24\u5BB3\u63D0\u5347"
+--- !u!114 &-3335889848824489403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
+  m_Name: SkillTree_StartGold_Name
+  m_EditorClassIdentifier: KCoreKit::LocalizedTextDataTableRow
+  id: SkillTree_StartGold_Name
+  tags: []
+  isEnable: 1
+  EN: Starting Gold
+  KR: "\uC2DC\uC791 \uACE8\uB4DC \uC99D\uAC00"
+  JP: "\u958B\u59CB\u30B4\u30FC\u30EB\u30C9\u5897\u52A0"
+  CN: "\u521D\u59CB\u91D1\u5E01\u589E\u52A0"
+--- !u!114 &-1429373393826368078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
+  m_Name: SkillTree_WaveGold_Name
+  m_EditorClassIdentifier: KCoreKit::LocalizedTextDataTableRow
+  id: SkillTree_WaveGold_Name
+  tags: []
+  isEnable: 1
+  EN: Wave Gold Boost
+  KR: "\uC6E8\uC774\uBE0C \uACE8\uB4DC \uC99D\uAC00"
+  JP: "\u30A6\u30A7\u30FC\u30D6\u5831\u916C\u5897\u52A0"
+  CN: "\u6CE2\u6B21\u91D1\u5E01\u52A0\u6210"
+--- !u!114 &-692222375455759374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
+  m_Name: SkillTree_AllyStat_Desc
+  m_EditorClassIdentifier: KCoreKit::LocalizedTextDataTableRow
+  id: SkillTree_AllyStat_Desc
+  tags: []
+  isEnable: 1
+  EN: Increases all stats of every ally by 10%.
+  KR: "\uBAA8\uB4E0 \uB3D9\uB8CC\uC758 \uC804\uCCB4 \uB2A5\uB825\uCE58\uAC00 10%
+    \uC99D\uAC00\uD569\uB2C8\uB2E4."
+  JP: "\u3059\u3079\u3066\u306E\u4EF2\u9593\u306E\u5168\u80FD\u529B\u5024\u304C10%\u5897\u52A0\u3057\u307E\u3059\u3002"
+  CN: "\u6240\u6709\u540C\u4F34\u7684\u5168\u90E8\u5C5E\u6027\u63D0\u534710%\u3002"
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463daf5080d293049bd98a91154e958f, type: 3}
+  m_Name: DT_MasteryText
+  m_EditorClassIdentifier: KCoreKit::KCoreKit.DataTable
+  rowScript: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
+  csv: {fileID: 4900000, guid: b069580e4c6e7154a9aa7885fea93845, type: 3}
+  rowTypeName: LocalizedTextDataTableRow, KCoreKit, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  dataList:
+  - {fileID: -7328411522368016314}
+  - {fileID: -1429373393826368078}
+  - {fileID: 1320220303008713096}
+  - {fileID: -9067540879126925468}
+  - {fileID: 2801158518586763328}
+  - {fileID: 5216409637624329351}
+  - {fileID: -3916947918306990642}
+  - {fileID: 5646591661118038436}
+  - {fileID: -3335889848824489403}
+  - {fileID: 5502591610526473517}
+  - {fileID: -5277676850952933120}
+  - {fileID: -9115359271841887446}
+  - {fileID: -4980732636513066585}
+  - {fileID: 6332520629964078743}
+  - {fileID: -692222375455759374}
+  - {fileID: 8090193878722636508}
+  - {fileID: 6463540195875619903}
+  - {fileID: 1120840999816191760}
+--- !u!114 &1120840999816191760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
+  m_Name: SkillTree_StartGold_Desc
+  m_EditorClassIdentifier: KCoreKit::LocalizedTextDataTableRow
+  id: SkillTree_StartGold_Desc
+  tags: []
+  isEnable: 1
+  EN: Increases starting gold by 100.
+  KR: "\uC2DC\uC791 \uACE8\uB4DC\uAC00 100 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+  JP: "\u958B\u59CB\u6642\u306E\u30B4\u30FC\u30EB\u30C9\u304C100\u5897\u52A0\u3057\u307E\u3059\u3002"
+  CN: "\u521D\u59CB\u91D1\u5E01\u589E\u52A0100\u3002"
+--- !u!114 &1320220303008713096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
+  m_Name: SkillTree_DiceReroll_Name
+  m_EditorClassIdentifier: KCoreKit::LocalizedTextDataTableRow
+  id: SkillTree_DiceReroll_Name
+  tags: []
+  isEnable: 1
+  EN: Dice Reroll
+  KR: "\uC8FC\uC0AC\uC704 \uB9AC\uB864 \uC99D\uAC00"
+  JP: "\u30C0\u30A4\u30B9\u30EA\u30ED\u30FC\u30EB\u5897\u52A0"
+  CN: "\u9AB0\u5B50\u91CD\u6295\u589E\u52A0"
+--- !u!114 &2801158518586763328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
+  m_Name: SkillTree_Dice2Star_Name
+  m_EditorClassIdentifier: KCoreKit::LocalizedTextDataTableRow
+  id: SkillTree_Dice2Star_Name
+  tags: []
+  isEnable: 1
+  EN: 2-Star Dice
+  KR: "2\uC131 \uC8FC\uC0AC\uC704 \uD574\uAE08"
+  JP: "2\u3064\u661F\u30C0\u30A4\u30B9\u89E3\u653E"
+  CN: "\u89E3\u9501\u4E8C\u661F\u9AB0\u5B50"
+--- !u!114 &5216409637624329351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
+  m_Name: SkillTree_AllyStat_Name
+  m_EditorClassIdentifier: KCoreKit::LocalizedTextDataTableRow
+  id: SkillTree_AllyStat_Name
+  tags: []
+  isEnable: 1
+  EN: Ally Stats+
+  KR: "\uB3D9\uB8CC \uB2A5\uB825\uCE58 \uAC15\uD654"
+  JP: "\u4EF2\u9593\u5168\u80FD\u529B\u5F37\u5316"
+  CN: "\u540C\u4F34\u5C5E\u6027\u5F3A\u5316"
+--- !u!114 &5502591610526473517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
+  m_Name: SkillTree_AllyCap_Desc
+  m_EditorClassIdentifier: KCoreKit::LocalizedTextDataTableRow
+  id: SkillTree_AllyCap_Desc
+  tags: []
+  isEnable: 1
+  EN: Increases the maximum number of allies by 3.
+  KR: "\uCD5C\uB300 \uB3D9\uB8CC \uC218\uAC00 3 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+  JP: "\u4EF2\u9593\u306E\u6700\u5927\u6570\u304C3\u5897\u52A0\u3057\u307E\u3059\u3002"
+  CN: "\u6700\u5927\u540C\u4F34\u6570\u91CF\u589E\u52A03\u3002"
+--- !u!114 &5646591661118038436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
+  m_Name: SkillTree_DiceFace_Name
+  m_EditorClassIdentifier: KCoreKit::LocalizedTextDataTableRow
+  id: SkillTree_DiceFace_Name
+  tags: []
+  isEnable: 1
+  EN: Dice Face Removal
+  KR: "\uC8FC\uC0AC\uC704 \uB208 \uC81C\uAC70"
+  JP: "\u30C0\u30A4\u30B9\u76EE\u9664\u53BB"
+  CN: "\u79FB\u9664\u9AB0\u5B50\u9762"
+--- !u!114 &6332520629964078743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
+  m_Name: SkillTree_Dice2Star_Desc
+  m_EditorClassIdentifier: KCoreKit::LocalizedTextDataTableRow
+  id: SkillTree_Dice2Star_Desc
+  tags: []
+  isEnable: 1
+  EN: Unlocks the ability to obtain 2-star dice.
+  KR: "2\uC131 \uC8FC\uC0AC\uC704\uB97C \uD68D\uB4DD\uD560 \uC218 \uC788\uAC8C \uB429\uB2C8\uB2E4."
+  JP: "2\u3064\u661F\u30C0\u30A4\u30B9\u3092\u7372\u5F97\u3067\u304D\u308B\u3088\u3046\u306B\u306A\u308A\u307E\u3059\u3002"
+  CN: "\u89E3\u9501\u83B7\u53D6\u4E8C\u661F\u9AB0\u5B50\u7684\u80FD\u529B\u3002"
+--- !u!114 &6463540195875619903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
+  m_Name: SkillTree_DiceFace_Desc
+  m_EditorClassIdentifier: KCoreKit::LocalizedTextDataTableRow
+  id: SkillTree_DiceFace_Desc
+  tags: []
+  isEnable: 1
+  EN: Allows you to remove 1 face from a die.
+  KR: "\uC8FC\uC0AC\uC704\uC758 \uD2B9\uC815 \uB208\uC744 1\uAC1C \uC81C\uAC70\uD560
+    \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+  JP: "\u30C0\u30A4\u30B9\u306E\u76EE\u30921\u3064\u9664\u53BB\u3067\u304D\u308B\u3088\u3046\u306B\u306A\u308A\u307E\u3059\u3002"
+  CN: "\u53EF\u4EE5\u79FB\u9664\u9AB0\u5B50\u76841\u4E2A\u9762\u3002"
+--- !u!114 &8090193878722636508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95426c39dc4848d4881c675150fa8cbe, type: 3}
+  m_Name: SkillTree_LineageDmg_Desc
+  m_EditorClassIdentifier: KCoreKit::LocalizedTextDataTableRow
+  id: SkillTree_LineageDmg_Desc
+  tags: []
+  isEnable: 1
+  EN: Increases damage dealt by lineage synergy by 50%.
+  KR: "\uD608\uD1B5 \uC2DC\uB108\uC9C0\uB85C \uC778\uD55C \uD53C\uD574\uB7C9\uC774
+    50% \uC99D\uAC00\uD569\uB2C8\uB2E4."
+  JP: "\u8840\u7D71\u30B7\u30CA\u30B8\u30FC\u306B\u3088\u308B\u30C0\u30E1\u30FC\u30B8\u304C50%\u5897\u52A0\u3057\u307E\u3059\u3002"
+  CN: "\u8840\u7EDF\u7F81\u7ECA\u9020\u6210\u7684\u4F24\u5BB3\u63D0\u534750%\u3002"

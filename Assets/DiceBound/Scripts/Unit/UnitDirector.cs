@@ -35,7 +35,7 @@ namespace DiceBound
         private WalletDirector _walletDirector;
         private SoundDirector _soundDirector;
 
-        public Action<UnitCore> onSpawnAlly;
+        //public Action<UnitCore> onSpawnAlly;
 
         private int _maxAllyNumber;
         private MasteryManager _masteryManager;
@@ -124,7 +124,7 @@ namespace DiceBound
             unit.BindSkill(_skillDirector.GetSkill(data.skillPassiveKey));
         }
 
-        public void SpawnUnit(string unitId,int tier = 0)
+        public UnitCore SpawnUnit(string unitId, UnitGroup group, bool autoPlacing = true,  int tier = 0)
         {
             var data = _unitDataDictionary[unitId];
             UnitCore instance;
@@ -148,37 +148,39 @@ namespace DiceBound
             instance.BindSkill(_skillDirector.GetSkill(data.skillBasicKey));
             instance.BindSkill(_skillDirector.GetSkill(data.skillActiveKey));
             instance.BindSkill(_skillDirector.GetSkill(data.skillPassiveKey));
-           
-           
-            _unitPlaceDirector.PlaceUnit(instance);
+
+            
+            
             _units.Add(instance);
             
-            switch (data.group)
+            switch (group)
             {
                 case UnitGroup.Ally:
                     _allies.Add(instance);
-                    instance.PlayAppear(()=>
-                    {
-                        BroAudio.Play(_soundDirector.unitAppearSFX);
-                        onSpawnAlly.Invoke(instance);
-                    });
                     instance.FlipSprite(false);
                     UpdateAllyCountText();
                     BroAudio.Play(_soundDirector.spawnAllySFX);
-                    
                     break;
                 case UnitGroup.Enemy:
                     _enemies.Add(instance);
-                    instance.PlayAppear(() =>
-                    {
-                        BroAudio.Play(_soundDirector.unitAppearSFX);
-                    });
                     instance.FlipSprite(true);
-                    
-                    
-                   
                     break;
             }
+            
+            if (autoPlacing)
+            {
+                var cell = _unitPlaceDirector.GetRandomEmptyCell(group,instance.attackType);
+                _unitPlaceDirector.PlaceUnit(instance,cell);
+                instance.PlayAppear(()=>
+                {
+                    BroAudio.Play(_soundDirector.unitAppearSFX);
+                });
+            }
+            else
+            {
+                instance.ResetVisualState();
+            }
+            return instance;
         }
 
         private void ApplyAllyStatModifiers(UnitCore instance)

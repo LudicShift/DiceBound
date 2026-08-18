@@ -55,6 +55,7 @@ namespace DiceBound
         private string _statTooltipFormat;
         private string _unitName;
         private string _currentAnimation;
+ 
 
         public void Awake()
         {

@@ -1,6 +1,82 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8132913648585645775
+--- !u!114 &-9109969882957873951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 996e1c6d44e544e686e8d28416a8f75a, type: 3}
+  m_Name: UN_ARCHER
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.PurchaseItemDataTableRow
+  id: UN_ARCHER
+  tags: []
+  isEnable: 1
+  itemType: 0
+  itemId: UN_ARCHER
+  combinationID: TWO_PAIR
+  amount: 1
+--- !u!114 &-4510915375754694146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 996e1c6d44e544e686e8d28416a8f75a, type: 3}
+  m_Name: UN_PRIEST
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.PurchaseItemDataTableRow
+  id: UN_PRIEST
+  tags: []
+  isEnable: 1
+  itemType: 0
+  itemId: UN_PRIEST
+  combinationID: FULL_HOUSE
+  amount: 1
+--- !u!114 &-2845933941510228102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 996e1c6d44e544e686e8d28416a8f75a, type: 3}
+  m_Name: UN_KNIGHT
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.PurchaseItemDataTableRow
+  id: UN_KNIGHT
+  tags: []
+  isEnable: 1
+  itemType: 0
+  itemId: UN_KNIGHT
+  combinationID: FIVE_KIND
+  amount: 1
+--- !u!114 &-664875780169463151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 996e1c6d44e544e686e8d28416a8f75a, type: 3}
+  m_Name: UN_WIZARD
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.PurchaseItemDataTableRow
+  id: UN_WIZARD
+  tags: []
+  isEnable: 1
+  itemType: 0
+  itemId: UN_WIZARD
+  combinationID: L_STRAIGHT
+  amount: 1
+--- !u!114 &-497751741953824506
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19,26 +95,7 @@ MonoBehaviour:
   itemId: UN_AXEMAN
   combinationID: FOUR_KIND
   amount: 1
---- !u!114 &-5436074624788001912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 996e1c6d44e544e686e8d28416a8f75a, type: 3}
-  m_Name: UN_LANCER
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.PurchaseItemDataTableRow
-  id: UN_LANCER
-  tags: []
-  isEnable: 1
-  itemType: 0
-  itemId: UN_LANCER
-  combinationID: TRIPLE
-  amount: 1
---- !u!114 &-4224105255795342486
+--- !u!114 &-99364356876634266
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74,15 +131,15 @@ MonoBehaviour:
   rowTypeName: DiceBound.PurchaseItemDataTableRow, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
   dataList:
-  - {fileID: 8850669428739864195}
-  - {fileID: 2426427455853557711}
-  - {fileID: -4224105255795342486}
-  - {fileID: -5436074624788001912}
-  - {fileID: 8386026741421931119}
-  - {fileID: -8132913648585645775}
-  - {fileID: 8817199974797798492}
-  - {fileID: 5476154939766578383}
---- !u!114 &2426427455853557711
+  - {fileID: 7522765464114249488}
+  - {fileID: -9109969882957873951}
+  - {fileID: -99364356876634266}
+  - {fileID: 1471233243928212604}
+  - {fileID: -4510915375754694146}
+  - {fileID: -497751741953824506}
+  - {fileID: -664875780169463151}
+  - {fileID: -2845933941510228102}
+--- !u!114 &1471233243928212604
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,73 +149,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 996e1c6d44e544e686e8d28416a8f75a, type: 3}
-  m_Name: UN_ARCHER
+  m_Name: UN_LANCER
   m_EditorClassIdentifier: Assembly-CSharp::DiceBound.PurchaseItemDataTableRow
-  id: UN_ARCHER
+  id: UN_LANCER
   tags: []
   isEnable: 1
   itemType: 0
-  itemId: UN_ARCHER
-  combinationID: TWO_PAIR
+  itemId: UN_LANCER
+  combinationID: TRIPLE
   amount: 1
---- !u!114 &5476154939766578383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 996e1c6d44e544e686e8d28416a8f75a, type: 3}
-  m_Name: UN_KNIGHT
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.PurchaseItemDataTableRow
-  id: UN_KNIGHT
-  tags: []
-  isEnable: 1
-  itemType: 0
-  itemId: UN_KNIGHT
-  combinationID: FIVE_KIND
-  amount: 1
---- !u!114 &8386026741421931119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 996e1c6d44e544e686e8d28416a8f75a, type: 3}
-  m_Name: UN_PRIEST
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.PurchaseItemDataTableRow
-  id: UN_PRIEST
-  tags: []
-  isEnable: 1
-  itemType: 0
-  itemId: UN_PRIEST
-  combinationID: FULL_HOUSE
-  amount: 1
---- !u!114 &8817199974797798492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 996e1c6d44e544e686e8d28416a8f75a, type: 3}
-  m_Name: UN_WIZARD
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.PurchaseItemDataTableRow
-  id: UN_WIZARD
-  tags: []
-  isEnable: 1
-  itemType: 0
-  itemId: UN_WIZARD
-  combinationID: L_STRAIGHT
-  amount: 1
---- !u!114 &8850669428739864195
+--- !u!114 &7522765464114249488
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

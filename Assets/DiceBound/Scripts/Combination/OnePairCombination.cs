@@ -22,7 +22,7 @@ namespace DiceBound
             int pairCount = 0;
             foreach (var count in counts.Values)
             {
-                if (count == 2)
+                if (count >= 2)
                 {
                     pairCount++;
                 }

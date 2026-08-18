@@ -274,7 +274,7 @@ namespace DiceBound
         private void ShowResult()
         {
         
-            if (_currentResult != null)
+            if (_currentResult != null && _currentResult.Count>0)
             {
                 combinationInfoWidget.SetText(_currentResult[0].GetName());
             }

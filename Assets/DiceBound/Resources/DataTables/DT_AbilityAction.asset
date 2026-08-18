@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7550823804416506022
+--- !u!114 &-7298667179673654071
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -16,7 +16,7 @@ MonoBehaviour:
   tags: []
   isEnable: 1
   actionFunctionName: MeleeAttack
---- !u!114 &-4732240877445525522
+--- !u!114 &-6415919113453356854
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -32,7 +32,7 @@ MonoBehaviour:
   tags: []
   isEnable: 1
   actionFunctionName: Heal
---- !u!114 &-2419642702641123598
+--- !u!114 &-1144051835002816682
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,11 +65,11 @@ MonoBehaviour:
   rowTypeName: KCoreKit.AbilityActionDataTableRow, KCoreKit, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   dataList:
-  - {fileID: -7550823804416506022}
-  - {fileID: -2419642702641123598}
-  - {fileID: 3663615065730153233}
-  - {fileID: -4732240877445525522}
---- !u!114 &3663615065730153233
+  - {fileID: -7298667179673654071}
+  - {fileID: -1144051835002816682}
+  - {fileID: 9220049847531570505}
+  - {fileID: -6415919113453356854}
+--- !u!114 &9220049847531570505
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

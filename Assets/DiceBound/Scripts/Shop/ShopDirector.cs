@@ -68,7 +68,7 @@ namespace DiceBound
             switch (type)
             {
                 case ItemType.Unit:
-                    _unitDirector.SpawnUnit(item.GetId());
+                    _unitDirector.SpawnUnit(item.GetId(),UnitGroup.Ally);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(type), type, null);
