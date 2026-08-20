@@ -120,7 +120,7 @@ namespace DiceBound
                         }
                         break;
                     case RoundType.Pvp:
-                        _asyncPvpDirector.PrepareOpponentBoard(wave.index);
+                        yield return StartCoroutine(_asyncPvpDirector.PrepareOpponentBoard(wave.index));
                         break;
                 }
 

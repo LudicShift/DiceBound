@@ -12,12 +12,17 @@ namespace DiceBound
 
         private UnitDirector _unitDirector;
         private UnitPlaceDirector _unitPlaceDirector;
+        private AsyncPvpBackendService _backendService;
+
+        public string OwnerId => _backendService.OwnerId;
 
         public override IEnumerator OnInitialize()
         {
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
             _unitPlaceDirector = DirectorFacade.GetDirector<UnitPlaceDirector>();
-            yield return null;
+
+            _backendService = new AsyncPvpBackendService();
+            yield return _backendService.EnsureSignedIn();
         }
 
         public UnitAsyncBoardData CaptureOwnBoardSnapshot(int waveIndex)
@@ -76,18 +81,28 @@ namespace DiceBound
             return snapshot != null;
         }
 
-        // Phase 1: 아직 Firebase 연동 전이라 네트워크 상대가 없음.
-        // 로컬에 저장해둔 스냅샷 풀 중 하나를 무작위로 상대로 삼아 로직을 테스트한다.
-        // Phase 2에서 이 메서드를 업로드/조회 흐름으로 교체할 예정.
-        public void PrepareOpponentBoard(int waveIndex)
+        // 내 보드를 캡처해서 로컬 저장 + 서버 업로드하고, 서버에서 상대 스냅샷을 받아와 적 진영에 로드한다.
+        // 서버 상대가 없으면(네트워크 실패, 또는 콜드 스타트) 로컬 풀로 폴백하고, 그마저 없으면 부전승(전투 스킵).
+        public IEnumerator PrepareOpponentBoard(int waveIndex)
         {
             var mySnapshot = CaptureOwnBoardSnapshot(waveIndex);
             SaveOwnSnapshot(mySnapshot);
+            yield return _backendService.UploadSnapshot(mySnapshot);
 
-            if (TryGetRandomSnapshot(waveIndex, out var opponent))
+            UnitAsyncBoardData opponent = null;
+            yield return _backendService.FetchOpponentSnapshot(waveIndex, result => opponent = result);
+
+            if (opponent == null)
             {
-                LoadBoardSnapshot(opponent, UnitGroup.Enemy);
+                TryGetRandomSnapshot(waveIndex, out opponent);
             }
+
+            if (opponent == null)
+            {
+                yield break;
+            }
+
+            LoadBoardSnapshot(opponent, UnitGroup.Enemy);
         }
 
         private static string GetSnapshotFileName(int waveIndex)
