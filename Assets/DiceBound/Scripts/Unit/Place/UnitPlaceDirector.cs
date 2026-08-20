@@ -53,13 +53,13 @@ namespace DiceBound
 
         private void OnDragBegin(InputAction.CallbackContext context)
         {
-            if (_mode == UnitPlaceMode.Normal && _hoveredUnit)
+            if (_mode == UnitPlaceMode.Normal && _hoveredUnit && _placeDictionary.TryGetValue(_hoveredUnit, out var value))
             {
                 BroAudio.Play(_soundDirector.pickUnitSFX);
                 _draggingUnit = _hoveredUnit;
                 _draggingUnit.inputHandler.OnPick();
                 _draggingUnit.tooltipProvider.SetEnabled(false);
-                _replaceCell = _placeDictionary[_hoveredUnit];
+                _replaceCell = value;
                 RemoveUnit(_hoveredUnit);
                 _mode = UnitPlaceMode.Drag;
                 _dragOffset =  _draggingUnit.transform.position - InputManager.GetWorldPointerPosition();
@@ -73,20 +73,20 @@ namespace DiceBound
             if (_mode == UnitPlaceMode.Drag && _draggingUnit)
             {
                 _draggingUnit.tooltipProvider.SetEnabled(true);
+                //RemoveUnit(_draggingUnit);
                 if (_trashCan)
                 {
-                    _replaceCell.RemoveUnit();
                     _trashCan.SetHighlight(false);
                     _trashCan.Execute(_draggingUnit);
                 }
                 else if (_hoveredCell)
                 {
                     BroAudio.Play(_soundDirector.dropUnitSFX);
-                    _replaceCell.RemoveUnit();
                     if (!_hoveredCell.IsEmpty())
                     {
                         var unit = _hoveredCell.GetUnit();
-                        PlaceUnit(unit,_replaceCell );
+                        RemoveUnit(unit);
+                        PlaceUnit(unit,_replaceCell);
                         unit.SetHighlight(false);
                     }
                     PlaceUnit(_draggingUnit,_hoveredCell );
