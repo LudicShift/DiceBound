@@ -111,6 +111,16 @@ namespace DiceBound
             return _cells.Find(x => x.GetUnit() == unit);
         }
 
+        public UnitPlaceCell GetCell(int index)
+        {
+            return _cells[index];
+        }
+
+        public int GetCellIndex(UnitCore unit)
+        {
+            return _cells.FindIndex(x => x.GetUnit() == unit);
+        }
+
         public void RemoveUnit(UnitCore unit)
         {
             var cell = _cells.Find(x => x.GetUnit() == unit);

@@ -30,6 +30,7 @@ namespace DiceBound
         private UnitDirector _unitDirector;
         private bool _isPlaying;
         private BattleDirector _battleDirector;
+        private AsyncPvpDirector _asyncPvpDirector;
         [SerializeField] private Canvas gameOverCanvas;
 
         [SerializeField] private Canvas gameClearCanvas;
@@ -50,6 +51,7 @@ namespace DiceBound
             _battleDirector = DirectorFacade.GetDirector<BattleDirector>();
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
             _soundDirector = DirectorFacade.GetDirector<SoundDirector>();
+            _asyncPvpDirector = DirectorFacade.GetDirector<AsyncPvpDirector>();
             _masteryManager = MasteryManager.GetInstance();
             playWaveButtonWidget.onClickAction += OnPlayWaveButtonClick;
             fastButtonWidget.onClickAction += OnClickFastButton;
@@ -105,13 +107,21 @@ namespace DiceBound
                 _shopDirector.SetEnable(false);
                 
                 int enemyCount = 0;
-                var enemyPool = _waveEnemyPoolDictionary[wave.index];
-                foreach (var enemyData in enemyPool)
+                switch (wave.roundType)
                 {
-                    for (int i = 0; i < enemyData.number; i++)
-                    {
-                        _unitDirector.SpawnUnit(enemyData.enemyId, UnitGroup.Enemy,true, enemyData.tier);
-                    }
+                    case RoundType.Creep:
+                        var enemyPool = _waveEnemyPoolDictionary[wave.index];
+                        foreach (var enemyData in enemyPool)
+                        {
+                            for (int i = 0; i < enemyData.number; i++)
+                            {
+                                _unitDirector.SpawnUnit(enemyData.enemyId, UnitGroup.Enemy,true, enemyData.tier);
+                            }
+                        }
+                        break;
+                    case RoundType.Pvp:
+                        _asyncPvpDirector.PrepareOpponentBoard(wave.index);
+                        break;
                 }
 
 
@@ -153,6 +163,11 @@ namespace DiceBound
                 {
                     _battleDirector.EndBattle();
                     ShowGameOver();
+                }
+
+                if (wave.roundType == RoundType.Pvp)
+                {
+                    _unitDirector.ClearAllEnemies();
                 }
 
                 _isPlaying = false;

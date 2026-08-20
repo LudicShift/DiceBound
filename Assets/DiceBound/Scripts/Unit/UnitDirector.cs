@@ -6,7 +6,6 @@ using Ami.BroAudio;
 using KCoreKit;
 using KCoreKit.Scripts.Common;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace DiceBound
 {
@@ -128,7 +127,7 @@ namespace DiceBound
         {
             var data = _unitDataDictionary[unitId];
             UnitCore instance;
-            if (data.group == UnitGroup.Ally)
+            if (group == UnitGroup.Ally)
             {
                 instance = _allyPrefabPool.Get();
             }
@@ -138,8 +137,8 @@ namespace DiceBound
             }
             instance.BindInfoWidget(_unitInfoPrefabPool.Get());
            _tooltipDirector.BindTooltip("Unit",instance.tooltipProvider);
-            instance.Setup(data,tier);
-            if (data.group == UnitGroup.Ally)
+            instance.Setup(data,tier,group);
+            if (group == UnitGroup.Ally)
             {
                 ApplyAllyStatModifiers(instance);
             }
@@ -244,6 +243,17 @@ namespace DiceBound
         public int GetEnemyUnitCount()
         {
             return _enemies.Count;
+        }
+
+        public void ClearAllEnemies()
+        {
+            foreach (var unit in _enemies.ToList())
+            {
+                _enemies.Remove(unit);
+                _units.Remove(unit);
+                _unitPlaceDirector.RemoveUnit(unit);
+                _enemyPrefabPool.Release(unit);
+            }
         }
         public List<UnitCore> GetAllies()
         {

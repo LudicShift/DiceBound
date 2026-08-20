@@ -201,6 +201,42 @@ namespace DiceBound
             return _placeDictionary[unit];
         }
 
+        public UnitPlaceCell GetAllyCell(int index)
+        {
+            return allyGrid.GetCell(index);
+        }
+
+        public int GetAllyCellIndex(UnitCore unit)
+        {
+            return allyGrid.GetCellIndex(unit);
+        }
+
+        public UnitPlaceCell GetCell(UnitGroup group, int index)
+        {
+            switch (group)
+            {
+                case UnitGroup.Ally:
+                    return allyGrid.GetCell(index);
+                case UnitGroup.Enemy:
+                    return enemyGrid.GetCell(index);
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(group), group, null);
+            }
+        }
+
+        public int GetCellIndex(UnitGroup group, UnitCore unit)
+        {
+            switch (group)
+            {
+                case UnitGroup.Ally:
+                    return allyGrid.GetCellIndex(unit);
+                case UnitGroup.Enemy:
+                    return enemyGrid.GetCellIndex(unit);
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(group), group, null);
+            }
+        }
+
         public void PlaceUnit(UnitCore unit, UnitPlaceCellBase cell, bool warp = true)
         {
             cell.PlaceUnit(unit,warp);

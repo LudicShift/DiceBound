@@ -756,10 +756,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
-  clickSound:
-    _entity: {fileID: 0}
-    ID: 0
-    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!114 &93595887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1114,10 +1110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
-  clickSound:
-    _entity: {fileID: 0}
-    ID: 0
-    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!225 &113023235
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1245,10 +1237,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1347577646}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 210, y: -352}
-  m_SizeDelta: {x: 388, y: 28}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &119183391
 MonoBehaviour:
@@ -2546,10 +2538,10 @@ RectTransform:
   - {fileID: 277686736}
   m_Father: {fileID: 1347577646}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 210, y: -256}
-  m_SizeDelta: {x: 388, y: 44}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &256821713
 MonoBehaviour:
@@ -2800,10 +2792,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
-  clickSound:
-    _entity: {fileID: 0}
-    ID: 0
-    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!1 &260163721
 GameObject:
   m_ObjectHideFlags: 0
@@ -3597,7 +3585,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DiceBound.TooltipWidget
   id: Unit
   root: {fileID: 318871570}
-  text: {fileID: 886282074}
 --- !u!225 &318871572
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -4687,10 +4674,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
-  clickSound:
-    _entity: {fileID: 0}
-    ID: 0
-    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!225 &481456554
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -5078,10 +5061,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ff16dfc8534137a1ac39302293f7ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.ShopDirector
+  canvas: {fileID: 666482321}
   shopButtonWidget: {fileID: 1953792366}
   backToFieldButton: {fileID: 258559899}
   rollDiceButtonWidget: {fileID: 1441396470}
-  canvas: {fileID: 666482321}
+  goldText: {fileID: 0}
 --- !u!114 &504579072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5094,16 +5078,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f00511182c4504ead15ed22fad3337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.DiceDirector
-  _claimButtonWidget: {fileID: 113023234}
-  _rerollButtonWidget: {fileID: 2032662346}
-  _showFieldButton: {fileID: 1481126483}
-  _showRewardButton: {fileID: 1378901846}
-  _showDiceButton: {fileID: 93595886}
-  _combinationInfoWidget: {fileID: 1852891681}
-  initialDicePoint: {fileID: 2117079358}
   canvas: {fileID: 749909808}
-  diceLayer: {fileID: 979294342}
-  rewardLayer: {fileID: 1648581040}
+  initialDicePoint: {fileID: 2117079358}
+  remainPointGroup: {fileID: 523310976}
+  keepPointGroup: {fileID: 396504881}
+  rerollButtonWidget: {fileID: 0}
+  combinationInfoWidget: {fileID: 0}
   diceSprite:
   - {fileID: -719290280, guid: 85e083b0437827f4cb662652e914a7e4, type: 3}
   - {fileID: -1128235336, guid: 85e083b0437827f4cb662652e914a7e4, type: 3}
@@ -5119,8 +5099,6 @@ MonoBehaviour:
   - {fileID: 322781945, guid: 85e083b0437827f4cb662652e914a7e4, type: 3}
   - {fileID: 429611566, guid: 85e083b0437827f4cb662652e914a7e4, type: 3}
   emptySprite: {fileID: -953950965, guid: 85e083b0437827f4cb662652e914a7e4, type: 3}
-  remainPointGroup: {fileID: 523310976}
-  keepPointGroup: {fileID: 396504881}
 --- !u!114 &504579073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5164,7 +5142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 711eb6a4d5044ac2a8bf5f6b32bce690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitDirector
-  hpCanvas: {fileID: 255095993}
+  unitCanvas: {fileID: 0}
   allyCountWidget: {fileID: 512551062}
   trashCan: {fileID: 1187462061}
 --- !u!114 &504579076
@@ -5197,6 +5175,9 @@ MonoBehaviour:
   waveLabelDisappearTween: {fileID: 1260061777}
   waveTextWidget: {fileID: 766729665}
   playWaveButtonWidget: {fileID: 1727512144}
+  fastButtonWidget: {fileID: 0}
+  activeColor: {r: 0, g: 0, b: 0, a: 0}
+  inactiveColor: {r: 0, g: 0, b: 0, a: 0}
   gameOverCanvas: {fileID: 1141842163}
   gameClearCanvas: {fileID: 1722246375}
 --- !u!114 &504579078
@@ -5240,6 +5221,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed64ab34f0a8ae345bbe0e5892898d43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitMergeDirector
+  mergeSlots: []
+  resultSlot: {fileID: 0}
+  mergeModeToggleButton: {fileID: 0}
+  mergeButton: {fileID: 0}
+  mergeGroup: {fileID: 0}
+  preview: {fileID: 0}
 --- !u!114 &504579081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5272,10 +5259,10 @@ MonoBehaviour:
     _entity: {fileID: 11400000, guid: c33ec1bf6361ea34fae6e3b36663e14a, type: 2}
     ID: 0
     <DebugObject>k__BackingField: {fileID: 504579069}
-  spawnEnemySFX:
-    _entity: {fileID: 11400000, guid: c33ec1bf6361ea34fae6e3b36663e14a, type: 2}
+  unitAppearSFX:
+    _entity: {fileID: 0}
     ID: 0
-    <DebugObject>k__BackingField: {fileID: 504579069}
+    <DebugObject>k__BackingField: {fileID: 0}
   sellUnitSFX:
     _entity: {fileID: 11400000, guid: a19afd284a8d3874096d1a880507ee54, type: 2}
     ID: 0
@@ -6848,10 +6835,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
-  clickSound:
-    _entity: {fileID: 0}
-    ID: 0
-    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!225 &700279749
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -7069,10 +7052,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
-  clickSound:
-    _entity: {fileID: 0}
-    ID: 0
-    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!225 &726491865
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -9523,10 +9502,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1347577646}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 210, y: -176}
-  m_SizeDelta: {x: 388, y: 28}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &964514662
 MonoBehaviour:
@@ -9787,10 +9766,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1347577646}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 210, y: -60}
-  m_SizeDelta: {x: 388, y: 24}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &982197232
 MonoBehaviour:
@@ -10515,10 +10494,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1347577646}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 210, y: -140}
-  m_SizeDelta: {x: 388, y: 28}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1086838487
 MonoBehaviour:
@@ -11085,10 +11064,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
-  clickSound:
-    _entity: {fileID: 0}
-    ID: 0
-    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!225 &1133500669
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -12511,10 +12486,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1347577646}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 210, y: -28}
-  m_SizeDelta: {x: 388, y: 24}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1303839687
 MonoBehaviour:
@@ -12817,7 +12792,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -28, y: -28}
-  m_SizeDelta: {x: 420, y: 382}
+  m_SizeDelta: {x: 420, y: 0}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1347577647
 MonoBehaviour:
@@ -13065,10 +13040,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
-  clickSound:
-    _entity: {fileID: 0}
-    ID: 0
-    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!225 &1378901847
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -13483,10 +13454,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
-  clickSound:
-    _entity: {fileID: 0}
-    ID: 0
-    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!225 &1441396471
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -14020,10 +13987,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
-  clickSound:
-    _entity: {fileID: 0}
-    ID: 0
-    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!225 &1481126484
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -15320,10 +15283,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
-  clickSound:
-    _entity: {fileID: 0}
-    ID: 0
-    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!225 &1653076907
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -15932,10 +15891,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
-  clickSound:
-    _entity: {fileID: 0}
-    ID: 0
-    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!225 &1727512145
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -16643,10 +16598,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1347577646}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 210, y: -212}
-  m_SizeDelta: {x: 388, y: 28}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1786049609
 MonoBehaviour:
@@ -17861,10 +17816,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a66598e704090429c5c644df8fff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: KCoreKit::KCoreKit.ButtonWidget
-  clickSound:
-    _entity: {fileID: 0}
-    ID: 0
-    <DebugObject>k__BackingField: {fileID: 0}
 --- !u!225 &1953792367
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -18974,10 +18925,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29fbff793d2b4885be905211793372da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.DiceRerollButtonWidget
-  clickSound:
-    _entity: {fileID: 0}
-    ID: 0
-    <DebugObject>k__BackingField: {fileID: 0}
   rerollCount: {fileID: 501363065}
 --- !u!1 &2033921942
 GameObject:
@@ -19091,10 +19038,10 @@ RectTransform:
   - {fileID: 1084253706}
   m_Father: {fileID: 1347577646}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 210, y: -99}
-  m_SizeDelta: {x: 388, y: 38}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2035843812
 MonoBehaviour:
@@ -19764,10 +19711,10 @@ RectTransform:
   - {fileID: 1830860793}
   m_Father: {fileID: 1347577646}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 210, y: -308}
-  m_SizeDelta: {x: 388, y: 44}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2126734231
 MonoBehaviour:

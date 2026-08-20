@@ -144,11 +144,11 @@ namespace DiceBound
             tooltipProvider.SetText("desc",GetTooltipText());
         }
         
-        public void Setup(UnitDataTableRow data, int tier)
+        public void Setup(UnitDataTableRow data, int tier, UnitGroup group)
         {
             _data = data;
-            group = data.group;
-            _unitInfoWidget.SetFlip(data.group == UnitGroup.Enemy);
+            this.group = group;
+            _unitInfoWidget.SetFlip(group == UnitGroup.Enemy);
             _unitName = LocalizationManager.GetLocalizedText(data.nameKey);
             attackType = data.attackType;
             
