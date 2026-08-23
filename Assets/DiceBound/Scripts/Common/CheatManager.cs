@@ -9,9 +9,11 @@ namespace DiceBound
         private static MasteryManager _masteryManager;
         private static WalletDirector _walletDirector;
         private static AsyncPvpDirector _asyncPvpDirector;
+        private static CheatManager _instance;
 
         public void Start()
         {
+            _instance = this;
             _walletDirector = DirectorFacade.GetDirector<WalletDirector>();
             _masteryManager = MasteryManager.GetInstance();
             _asyncPvpDirector = DirectorFacade.GetDirector<AsyncPvpDirector>();
@@ -47,7 +49,13 @@ namespace DiceBound
         [DebugCommand]
         public static void PlaySelfAsyncPvpRound(int waveIndex)
         {
-            _asyncPvpDirector.PrepareOpponentBoard(waveIndex);
+            _instance.StartCoroutine(_asyncPvpDirector.PrepareOpponentBoard(waveIndex));
+        }
+
+        [DebugCommand]
+        public static void PrintAsyncPvpOwnerId()
+        {
+            Debug.Log($"[AsyncPvp] 현재 UID: {_asyncPvpDirector.OwnerId}");
         }
     }
 }
