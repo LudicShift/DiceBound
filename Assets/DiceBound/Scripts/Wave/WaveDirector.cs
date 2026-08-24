@@ -24,6 +24,15 @@ namespace DiceBound
         [SerializeField] private Color activeColor;
         [SerializeField] private Color inactiveColor;
 
+        [SerializeField] private TextWidget opponentNameText;
+
+        [SerializeField] private TextWidget winCountText;
+        [SerializeField] private TextWidget lossCountText;
+        private const int RequiredWins = 10;
+        private const int MaxLosses = 5;
+        private int _winCount;
+        private int _lossCount;
+
         private int _currentWave;
         private float _waveTimeScale = 1f;
 
@@ -60,7 +69,16 @@ namespace DiceBound
             _waveDictionary = DataTableManager.FindAllRows<WaveDataTableRow>().ToDictionary(x => x.index);
             _waveEnemyPoolDictionary = DataTableManager.FindAllRows<WaveEnemyPoolDataTableRow>().GroupBy(x => x.index)
                 .ToDictionary(x => x.Key, x => x.ToList());
+
+            opponentNameText.Hide();
+            UpdateLivesUI();
             yield return null;
+        }
+
+        private void UpdateLivesUI()
+        {
+            winCountText.SetText($"{_winCount}/{RequiredWins}");
+            lossCountText.SetText($"{_lossCount}/{MaxLosses}");
         }
 
 
@@ -121,6 +139,12 @@ namespace DiceBound
                         break;
                     case RoundType.Pvp:
                         yield return StartCoroutine(_asyncPvpDirector.PrepareOpponentBoard(wave.index));
+                        var opponentName = _asyncPvpDirector.CurrentOpponentDisplayName;
+                        if (!string.IsNullOrEmpty(opponentName))
+                        {
+                            opponentNameText.SetText(opponentName);
+                            opponentNameText.Show();
+                        }
                         break;
                 }
 
@@ -154,7 +178,10 @@ namespace DiceBound
                     yield return waveLabelAppearTween.Play();
                     yield return new WaitForSeconds(0.3f);
                     yield return waveLabelDisappearTween.Play();
-                    if (_currentWave == _waveDictionary.Count)
+
+                    _winCount++;
+                    UpdateLivesUI();
+                    if (_winCount >= RequiredWins)
                     {
                         ShowGameClear();
                     }
@@ -162,12 +189,19 @@ namespace DiceBound
                 else if (_unitDirector.GetAllyUnitCount() == _unitDirector.GetDeadAllyUnitCount())
                 {
                     _battleDirector.EndBattle();
-                    ShowGameOver();
+
+                    _lossCount++;
+                    UpdateLivesUI();
+                    if (_lossCount >= MaxLosses)
+                    {
+                        ShowGameOver();
+                    }
                 }
 
                 if (wave.roundType == RoundType.Pvp)
                 {
                     _unitDirector.ClearAllEnemies();
+                    opponentNameText.Hide();
                 }
 
                 _isPlaying = false;

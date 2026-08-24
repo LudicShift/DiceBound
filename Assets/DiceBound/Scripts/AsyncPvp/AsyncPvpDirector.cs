@@ -16,6 +16,10 @@ namespace DiceBound
 
         public string OwnerId => _backendService.OwnerId;
 
+        // 현재 로드된 상대 스냅샷의 소유자 표시용 식별자. 닉네임 시스템이 붙기 전까지는 uid를 그대로 노출한다.
+        // 서버/로컬 풀 어디서도 상대를 못 찾은 경우(부전승) null.
+        public string CurrentOpponentDisplayName { get; private set; }
+
         public override IEnumerator OnInitialize()
         {
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
@@ -85,6 +89,8 @@ namespace DiceBound
         // 서버 상대가 없으면(네트워크 실패, 또는 콜드 스타트) 로컬 풀로 폴백하고, 그마저 없으면 부전승(전투 스킵).
         public IEnumerator PrepareOpponentBoard(int waveIndex)
         {
+            CurrentOpponentDisplayName = null;
+
             var mySnapshot = CaptureOwnBoardSnapshot(waveIndex);
             SaveOwnSnapshot(mySnapshot);
             yield return _backendService.UploadSnapshot(mySnapshot);
@@ -92,15 +98,19 @@ namespace DiceBound
             UnitAsyncBoardData opponent = null;
             yield return _backendService.FetchOpponentSnapshot(waveIndex, result => opponent = result);
 
+            var isLocalFallback = false;
             if (opponent == null)
             {
-                TryGetRandomSnapshot(waveIndex, out opponent);
+                isLocalFallback = TryGetRandomSnapshot(waveIndex, out opponent);
             }
 
             if (opponent == null)
             {
                 yield break;
             }
+
+            // 로컬 폴백은 서버에 상대가 없을 때 내가 과거에 저장해둔 내 스냅샷을 대신 쓰는 것이라 ownerId가 비어있다.
+            CurrentOpponentDisplayName = isLocalFallback ? "???" : opponent.ownerId;
 
             LoadBoardSnapshot(opponent, UnitGroup.Enemy);
         }

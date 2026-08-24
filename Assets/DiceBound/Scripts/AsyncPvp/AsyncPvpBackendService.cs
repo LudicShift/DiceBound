@@ -182,7 +182,15 @@ namespace DiceBound
             }
 
             var response = JsonUtility.FromJson<FetchResponseBody>(request.downloadHandler.text);
-            onResult(response.found ? JsonUtility.FromJson<UnitAsyncBoardData>(response.boardJson) : null);
+            if (!response.found)
+            {
+                onResult(null);
+                yield break;
+            }
+
+            var board = JsonUtility.FromJson<UnitAsyncBoardData>(response.boardJson);
+            board.ownerId = response.ownerId;
+            onResult(board);
         }
     }
 }

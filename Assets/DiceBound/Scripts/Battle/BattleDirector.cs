@@ -142,7 +142,7 @@ namespace DiceBound
 
         private bool CheckAlive(UnitCore core)
         {
-            return core && _unitDirector.IsAlive(core);
+            return core && core.gameObject.activeInHierarchy && _unitDirector.IsAlive(core);
         }
 
         // 💡 UnitCore 등에서 이 메서드들이 호출될 때마다 hitIndex를 여기서 직접 계산하도록 옮겼습니다.
