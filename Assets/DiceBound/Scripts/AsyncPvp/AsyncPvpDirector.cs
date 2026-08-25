@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using KCoreKit;
+using NUnit.Framework.Internal;
 
 namespace DiceBound
 {
@@ -20,6 +21,8 @@ namespace DiceBound
         // 서버/로컬 풀 어디서도 상대를 못 찾은 경우(부전승) null.
         public string CurrentOpponentDisplayName { get; private set; }
 
+        List<UnitAsyncBoardData> _snapShotpool;
+
         public override IEnumerator OnInitialize()
         {
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
@@ -27,6 +30,8 @@ namespace DiceBound
 
             _backendService = new AsyncPvpBackendService();
             yield return _backendService.EnsureSignedIn();
+            
+            SaveSystem.LoadAll(MySnapshotDirectory, out _snapShotpool);
         }
 
         public UnitAsyncBoardData CaptureOwnBoardSnapshot(int waveIndex)
@@ -60,6 +65,7 @@ namespace DiceBound
             }
         }
 
+
         public void SaveOwnSnapshot(UnitAsyncBoardData snapshot)
         {
             SaveSystem.Save(snapshot, GetSnapshotFileName(snapshot.waveIndex), MySnapshotDirectory, true);
@@ -69,18 +75,17 @@ namespace DiceBound
         // Phase 2에서는 이 로컬 풀 대신 Firestore의 Cloud Function 조회로 교체될 지점이다.
         public bool TryGetRandomSnapshot(int waveIndex, out UnitAsyncBoardData snapshot)
         {
-            List<UnitAsyncBoardData> pool;
-            try
-            {
-                SaveSystem.LoadAll(MySnapshotDirectory, out pool);
-            }
-            catch (Exception)
+            if (_snapShotpool.Count == 0)
             {
                 snapshot = null;
                 return false;
             }
-
-            var candidates = pool.Where(x => x.waveIndex == waveIndex).ToList();
+            var candidates = _snapShotpool.Where(x => x.waveIndex == waveIndex).ToList();
+            if (candidates.Count == 0)
+            {
+                snapshot = null;
+                return false;
+            }
             snapshot = candidates.GetRandomElement();
             return snapshot != null;
         }
