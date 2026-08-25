@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using KCoreKit;
 using NUnit.Framework.Internal;
@@ -30,8 +31,17 @@ namespace DiceBound
 
             _backendService = new AsyncPvpBackendService();
             yield return _backendService.EnsureSignedIn();
+
+            if (!Directory.Exists(MySnapshotDirectory))
+            {
+                Directory.CreateDirectory(MySnapshotDirectory);
+                _snapShotpool = new List<UnitAsyncBoardData>();
+            }
+            else
+            {
+                SaveSystem.LoadAll(MySnapshotDirectory, out _snapShotpool);
+            }
             
-            SaveSystem.LoadAll(MySnapshotDirectory, out _snapShotpool);
         }
 
         public UnitAsyncBoardData CaptureOwnBoardSnapshot(int waveIndex)
@@ -80,12 +90,14 @@ namespace DiceBound
                 snapshot = null;
                 return false;
             }
+
             var candidates = _snapShotpool.Where(x => x.waveIndex == waveIndex).ToList();
             if (candidates.Count == 0)
             {
                 snapshot = null;
                 return false;
             }
+
             snapshot = candidates.GetRandomElement();
             return snapshot != null;
         }
