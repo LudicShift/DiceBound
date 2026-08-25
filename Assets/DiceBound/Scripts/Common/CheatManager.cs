@@ -40,7 +40,7 @@ namespace DiceBound
         [DebugCommand]
         public static void LoadAsyncPvpSnapshotAsEnemy(int waveIndex)
         {
-            if (_asyncPvpDirector.TryGetRandomSnapshot(waveIndex, out var snapshot))
+            if (_asyncPvpDirector.TryGetRandomFallbackSnapshot(waveIndex, out var snapshot))
             {
                 _asyncPvpDirector.LoadBoardSnapshot(snapshot, UnitGroup.Enemy);
             }

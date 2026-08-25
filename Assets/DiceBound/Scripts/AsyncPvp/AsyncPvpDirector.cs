@@ -22,7 +22,7 @@ namespace DiceBound
         // 서버/로컬 풀 어디서도 상대를 못 찾은 경우(부전승) null.
         public string CurrentOpponentDisplayName { get; private set; }
 
-        List<UnitAsyncBoardData> _snapShotpool;
+        List<UnitAsyncBoardData> _fallbackSnapShotpool;
 
         public override IEnumerator OnInitialize()
         {
@@ -31,16 +31,6 @@ namespace DiceBound
 
             _backendService = new AsyncPvpBackendService();
             yield return _backendService.EnsureSignedIn();
-
-            if (!Directory.Exists(MySnapshotDirectory))
-            {
-                Directory.CreateDirectory(MySnapshotDirectory);
-                _snapShotpool = new List<UnitAsyncBoardData>();
-            }
-            else
-            {
-                SaveSystem.LoadAll(MySnapshotDirectory, out _snapShotpool);
-            }
             
         }
 
@@ -81,17 +71,16 @@ namespace DiceBound
             SaveSystem.Save(snapshot, GetSnapshotFileName(snapshot.waveIndex), MySnapshotDirectory, true);
         }
 
-        // 해당 라운드에 대해 지금까지 저장된 스냅샷들(=풀) 중 하나를 무작위로 골라 반환한다.
-        // Phase 2에서는 이 로컬 풀 대신 Firestore의 Cloud Function 조회로 교체될 지점이다.
-        public bool TryGetRandomSnapshot(int waveIndex, out UnitAsyncBoardData snapshot)
+        //사전에 구성된 fallback 스냅샷 중 선택됨
+        public bool TryGetRandomFallbackSnapshot(int waveIndex, out UnitAsyncBoardData snapshot)
         {
-            if (_snapShotpool.Count == 0)
+            if (_fallbackSnapShotpool.Count == 0)
             {
                 snapshot = null;
                 return false;
             }
 
-            var candidates = _snapShotpool.Where(x => x.waveIndex == waveIndex).ToList();
+            var candidates = _fallbackSnapShotpool.Where(x => x.waveIndex == waveIndex).ToList();
             if (candidates.Count == 0)
             {
                 snapshot = null;
@@ -118,12 +107,12 @@ namespace DiceBound
             var isLocalFallback = false;
             if (opponent == null)
             {
-                isLocalFallback = TryGetRandomSnapshot(waveIndex, out opponent);
+                isLocalFallback = TryGetRandomFallbackSnapshot(waveIndex, out opponent);
             }
 
             if (opponent == null)
             {
-                yield break;
+                throw new Exception("No Snapshot");
             }
 
             // 로컬 폴백은 서버에 상대가 없을 때 내가 과거에 저장해둔 내 스냅샷을 대신 쓰는 것이라 ownerId가 비어있다.
