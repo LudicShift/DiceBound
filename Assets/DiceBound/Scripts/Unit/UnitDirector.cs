@@ -37,7 +37,6 @@ namespace DiceBound
         //public Action<UnitCore> onSpawnAlly;
 
         private int _maxAllyNumber;
-        private MasteryManager _masteryManager;
 
         private static readonly string[] AllyStatKeys = { "str", "spd", "def", "mag", "con", "dex", "mdf", "hp" };
 
@@ -53,7 +52,6 @@ namespace DiceBound
         }
         public override IEnumerator OnInitialize()
         {
-            _masteryManager = MasteryManager.GetInstance();
             _maxAllyNumber = 15;
             UpdateAllyCountText();
             _unitInfoPrefabPool = new PrefabPool<UnitInfoWidget>(PrefabManager.CachePrefab<UnitInfoWidget>(), unitCanvas.transform, 100);
@@ -138,17 +136,10 @@ namespace DiceBound
             instance.BindInfoWidget(_unitInfoPrefabPool.Get());
            _tooltipDirector.BindTooltip("Unit",instance.tooltipProvider);
             instance.Setup(data,tier,group);
-            if (group == UnitGroup.Ally)
-            {
-                ApplyAllyStatModifiers(instance);
-            }
-            
             instance.Animate("Idle");
             instance.BindSkill(_skillDirector.GetSkill(data.skillBasicKey));
             instance.BindSkill(_skillDirector.GetSkill(data.skillActiveKey));
             instance.BindSkill(_skillDirector.GetSkill(data.skillPassiveKey));
-
-            
             
             _units.Add(instance);
             
@@ -182,21 +173,7 @@ namespace DiceBound
             return instance;
         }
 
-        private void ApplyAllyStatModifiers(UnitCore instance)
-        {
-            var statPercent = _masteryManager.GetModifierTotal("AllyAllStatsPercent") / 100f;
-            if (statPercent == 0f)
-            {
-                return;
-            }
-
-            var statAgent = instance.GetStatAgent();
-            foreach (var statKey in AllyStatKeys)
-            {
-                statAgent.GetStat(statKey).AddModifier(new StatModifier(statPercent, StatModifyType.PercentAdd, 0, this));
-            }
-        }
-
+       
         private void OnUnitHeal(UnitCore core, int damage)
         {
             _battleDirector.ShowHeal(core, damage);

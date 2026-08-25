@@ -14,9 +14,7 @@ namespace DiceBound
     public class UnitMergeDirector : DirectorBase
     {
         private UnitDirector _unitDirector;
-        private ShopDirector _shopDirector;
         private SoundDirector _soundDirector;
-        private MasteryManager _masteryManager;
         private UnitPlaceDirector _unitPlaceDirector;
 
         private List<UnitMergeDataTableRow> _mergeDataList;
@@ -63,10 +61,8 @@ namespace DiceBound
             mergeButton.onClickAction += OnMergeButtonClick;
             _mergeDataList = DataTableManager.FindAllRows<UnitMergeDataTableRow>();
             _soundDirector = DirectorFacade.GetDirector<SoundDirector>();
-            _shopDirector = DirectorFacade.GetDirector<ShopDirector>();
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
             _unitPlaceDirector = DirectorFacade.GetDirector<UnitPlaceDirector>();
-            _masteryManager = MasteryManager.GetInstance();
             yield return null;
         }
 

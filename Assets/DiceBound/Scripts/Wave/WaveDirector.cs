@@ -45,23 +45,19 @@ namespace DiceBound
         [SerializeField] private Canvas gameClearCanvas;
 
         private WalletDirector _walletDirector;
-        private ShopDirector _shopDirector;
         private UnitPlaceDirector _unitPlaceDirector;
         private SoundDirector _soundDirector;
-        private MasteryManager _masteryManager;
         private bool _fastMode;
 
         public override IEnumerator OnInitialize()
         {
             _unitPlaceDirector = DirectorFacade.GetDirector<UnitPlaceDirector>();
-            _shopDirector = DirectorFacade.GetDirector<ShopDirector>();
-
+        
             _walletDirector = DirectorFacade.GetDirector<WalletDirector>();
             _battleDirector = DirectorFacade.GetDirector<BattleDirector>();
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
             _soundDirector = DirectorFacade.GetDirector<SoundDirector>();
             _asyncPvpDirector = DirectorFacade.GetDirector<AsyncPvpDirector>();
-            _masteryManager = MasteryManager.GetInstance();
             playWaveButtonWidget.onClickAction += OnPlayWaveButtonClick;
             fastButtonWidget.onClickAction += OnClickFastButton;
 
@@ -122,7 +118,6 @@ namespace DiceBound
             if (hasWave)
             {
                 _unitPlaceDirector.SetEnable(false);
-                _shopDirector.SetEnable(false);
                 
                 int enemyCount = 0;
                 switch (wave.roundType)
@@ -168,10 +163,7 @@ namespace DiceBound
                 {
                     _battleDirector.EndBattle();
                     _unitDirector.ClearDeadAllies();
-                    var goldRatePercent = _masteryManager.GetModifierTotal("WaveGoldRewardPercent");
-                    _walletDirector.AddGold(Mathf.RoundToInt(wave.waveRewardGold * (1f + goldRatePercent / 100f)));
-                    _masteryManager.AddDiamond(wave.waveRewardDiamond);
-
+                    _walletDirector.AddGold(Mathf.RoundToInt(wave.waveRewardGold));
                     waveLabelText.SetText($"Victory");
                     waveLabelImage.Show();
                     BroAudio.Play(_soundDirector.waveVictorySFX);
@@ -208,8 +200,6 @@ namespace DiceBound
                 Time.timeScale = 1;
                 playWaveButtonWidget.image.color = inactiveColor;
                 _unitPlaceDirector.SetEnable(true);
-                _shopDirector.SetEnable(true);
-                _shopDirector.OnRoundBegin();
             }
         }
 
