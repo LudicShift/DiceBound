@@ -69,7 +69,7 @@ namespace DiceBound
 
             foreach (var unit in _unitDirector.GetAllies())
             {
-                result.Add(new BalanceUnit(unit.GetData(), unit.GetTier()));
+                result.Add(new BalanceUnit(unit.GetData()));
             }
 
             return result;

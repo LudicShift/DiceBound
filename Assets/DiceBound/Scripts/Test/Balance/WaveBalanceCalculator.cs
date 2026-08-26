@@ -12,12 +12,10 @@ namespace DiceBound
     public struct BalanceUnit
     {
         public UnitDataTableRow data;
-        public int tier;
 
-        public BalanceUnit(UnitDataTableRow data, int tier)
+        public BalanceUnit(UnitDataTableRow data)
         {
             this.data = data;
-            this.tier = tier;
         }
     }
 
@@ -29,14 +27,14 @@ namespace DiceBound
             return Mathf.Pow(1.8f, tier);
         }
 
-        public static float Str(BalanceUnit u) => u.data.str * GetTierMultiplier(u.tier);
-        public static float Dex(BalanceUnit u) => u.data.dex * GetTierMultiplier(u.tier);
-        public static float Mag(BalanceUnit u) => u.data.mag * GetTierMultiplier(u.tier);
-        public static float Def(BalanceUnit u) => u.data.def * GetTierMultiplier(u.tier);
-        public static float Mdf(BalanceUnit u) => u.data.mdf * GetTierMultiplier(u.tier);
-        public static float Spd(BalanceUnit u) => u.data.spd * GetTierMultiplier(u.tier);
-        public static float Con(BalanceUnit u) => u.data.con * GetTierMultiplier(u.tier);
-        public static float Hp(BalanceUnit u) => u.data.hp * GetTierMultiplier(u.tier);
+        public static float Str(BalanceUnit u) => u.data.str;
+        public static float Dex(BalanceUnit u) => u.data.dex;
+        public static float Mag(BalanceUnit u) => u.data.mag;
+        public static float Def(BalanceUnit u) => u.data.def;
+        public static float Mdf(BalanceUnit u) => u.data.mdf;
+        public static float Spd(BalanceUnit u) => u.data.spd;
+        public static float Con(BalanceUnit u) => u.data.con;
+        public static float Hp(BalanceUnit u) => u.data.hp;
 
         public static float GetAttackInterval(BalanceUnit u)
         {

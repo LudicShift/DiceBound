@@ -1,24 +1,24 @@
-id,nameKey,descKey,animator,group,attackType,grade,hp,str,con,dex,mag,def,mdf,spd,role,skillBasicKey,skillPassiveKey,skillActiveKey,maxSkillSlot,isEnable,height,texture
-UN_SOLDIER,UN_SOLDIER_NAME,UN_SOLDIER_DESC,Animation/Soldier.controller,Ally,Melee,Common,250,15,12,10,0,10,5,100,Tank,SoldierBasicSkill,,SK_SOLDIER_T2,3,TRUE,100,Unit/Soldier.png
-UN_ARCHER,UN_ARCHER_NAME,UN_ARCHER_DESC,Animation/Archer.controller,Ally,Ranged,Common,200,5,8,20,0,5,5,120,Ranged DPS,ArcherBasicSkill,,SK_ARCHER_T2,3,TRUE,100,Unit/Archer.png
-UN_SWORDSMAN,UN_SWORDSMAN_NAME,UN_SWORDSMAN_DESC,Animation/Swordsman.controller,Ally,Melee,Rare,300,25,15,15,0,15,10,110,Melee DPS,SwordmanBasicSkill,,SK_SWORDSMAN_T3,3,TRUE,100,Unit/Swordsman.png
-UN_LANCER,UN_LANCER_NAME,UN_LANCER_DESC,Animation/Lancer.controller,Ally,Melee,Rare,350,22,14,18,0,12,8,105,Melee DPS,LancerBasicSkill,,SK_LANCER_T2,3,TRUE,175,Unit/Lancer.png
-UN_PRIEST,UN_PRIEST_NAME,UN_PRIEST_DESC,Animation/Priest.controller,Ally,Magic,Rare,350,5,10,10,25,8,20,90,Healer,PriestBasicSkill,,SK_PRIEST_T3,3,TRUE,100,Unit/Priest.png
-UN_AXEMAN,UN_AXEMAN_NAME,UN_AXEMAN_DESC,Animation/Armored Axeman.controller,Ally,Melee,Epic,500,40,30,10,0,30,15,80,Bruiser,AxemanBasicSkill,,SK_AXEMAN_T3,3,TRUE,100,Unit/Armored Axeman.png
-UN_WIZARD,UN_WIZARD_NAME,UN_WIZARD_DESC,Animation/Wizard.controller,Ally,Magic,Epic,350,5,10,15,50,8,30,95,Magic DPS,WizardBasicSkill,,SK_WIZARD_T2,3,TRUE,100,Unit/Wizard.png
-UN_KNIGHT,UN_KNIGHT_NAME,UN_KNIGHT_DESC,Animation/Knight.controller,Ally,Melee,Epic,750,35,35,12,10,40,25,90,Tank,KnightBasicSkill,,SK_KNIGHT_T3,3,TRUE,100,Unit/Knight.png
-UN_TEMPLAR,UN_TEMPLAR_NAME,UN_TEMPLAR_DESC,Animation/Knight Templar.controller,Ally,Melee,Legendary,800,60,50,20,40,50,40,100,Carry,TemplerBasicSkill,,,3,TRUE,100,Unit/Knight Templar.png
-,,,,,,,,,,,,,,,,,,,,,,
-UN_SLIME,UN_SLIME_NAME,UN_SLIME_DESC,Animation/Slime.controller,Enemy,Melee,Common,40,8,8,5,5,2,2,80,Melee DPS,SlimeBasicSkill,,,3,TRUE,100,Unit/Slime.png
-UN_BAT,UN_BAT_NAME,UN_BAT_DESC,Animation/Bat.controller,Enemy,Ranged,Common,30,5,5,18,0,2,5,140,Ranged DPS,BatBasicSkill,,,3,TRUE,100,Unit/Bat.png
-UN_SKELETON,UN_SKELETON_NAME,UN_SKELETON_DESC,Animation/Skeleton.controller,Enemy,Melee,Common,50,12,10,10,0,8,2,90,Melee DPS,SkeletonBasicSkill,,,3,TRUE,100,Unit/Skeleton.png
-UN_SKELARCHER,UN_SKELARCHER_NAME,UN_SKELARCHER_DESC,Animation/Skeleton Archer.controller,Enemy,Ranged,Rare,40,5,8,22,0,5,2,110,Ranged DPS,SkeletonArcherBasicSkill,,,3,TRUE,100,Unit/Skeleton Archer.png
-UN_ORC,UN_ORC_NAME,UN_ORC_DESC,Animation/Orc.controller,Enemy,Melee,Rare,100,20,18,8,0,10,5,90,Bruiser,OrcBasicSkill,,SK_ORC_Active,3,TRUE,100,Unit/Orc.png
-UN_WEREWOLF,UN_WEREWOLF_NAME,UN_WEREWOLF_DESC,Animation/Werewolf.controller,Enemy,Melee,Rare,90,25,15,25,0,12,8,130,Assassin,WerewolfBasicSkill,,SK_WEREWOLF_Active,3,TRUE,100,Unit/Werewolf.png
-UN_ARMSKEL,UN_ARMSKEL_NAME,UN_ARMSKEL_DESC,Animation/Armored Skeleton.controller,Enemy,Melee,Epic,125,15,20,8,0,30,5,80,Tank,ArmoredSkeletonBasicSkill,,SK_ARMSKEL_Active,3,TRUE,100,Unit/Armored Skeleton.png
-UN_GSSKEL,UN_GSSKEL_NAME,UN_GSSKEL_DESC,Animation/Greatsword Skeleton.controller,Enemy,Melee,Epic,125,45,20,10,0,15,10,85,Melee DPS,GreatswordSkeletonBasicSkill,,SK_GSSKEL_Active,3,TRUE,100,Unit/Greatsword Skeleton.png
-UN_ORCRIDER,UN_ORCRIDER_NAME,UN_ORCRIDER_DESC,Animation/Orc rider.controller,Enemy,Melee,Epic,150,30,25,15,0,15,10,150,Assassin,OrcRiderBasicSkill,,SK_ORCRIDER_Active,3,TRUE,100,Unit/Orc rider.png
-UN_ARMORC,UN_ARMORC_NAME,UN_ARMORC_DESC,Animation/Armored Orc.controller,Enemy,Melee,Epic,225,25,35,8,0,40,15,70,Tank,ArmoredOrcBasicSkill,,SK_ARMORC_Active,3,TRUE,100,Unit/Armored Orc.png
-UN_WEREBEAR,UN_WEREBEAR_NAME,UN_WEREBEAR_DESC,Animation/Werebear.controller,Enemy,Melee,Epic,250,40,40,10,0,25,20,85,Bruiser,WerebearBasicSkill,,SK_WEREBEAR_Active,3,TRUE,100,Unit/Werebear.png
-UN_NECRO,UN_NECRO_NAME,UN_NECRO_DESC,Animation/Necromancer.controller,Enemy,Magic,Boss,1600,10,40,15,110,20,50,95,Boss,NecroBasicSkill,,SK_NECRO_Active,3,TRUE,100,Unit/Necromancer.png
-UN_ELITEORC,UN_ELITEORC_NAME,UN_ELITEORC_DESC,Animation/Elite Orc.controller,Enemy,Melee,Boss,2600,100,60,20,0,60,40,100,Boss,EliteOrcBasicSkill,,SK_ELITEORC_Active,3,TRUE,100,Unit/Elite Orc.png
+id,nameKey,descKey,animator,attackType,grade,hp,str,con,dex,mag,def,mdf,spd,role,skillBasicKey,skillPassiveKey,skillActiveKey,maxSkillSlot,isEnable,height,texture
+UN_SOLDIER,UN_SOLDIER_NAME,UN_SOLDIER_DESC,Animation/Soldier.controller,Melee,Common,250,15,12,10,0,10,5,100,Tank,SoldierBasicSkill,,SK_SOLDIER_T2,3,TRUE,100,Unit/Soldier.png
+UN_ARCHER,UN_ARCHER_NAME,UN_ARCHER_DESC,Animation/Archer.controller,Ranged,Common,200,5,8,20,0,5,5,120,Ranged DPS,ArcherBasicSkill,,SK_ARCHER_T2,3,TRUE,100,Unit/Archer.png
+UN_SWORDSMAN,UN_SWORDSMAN_NAME,UN_SWORDSMAN_DESC,Animation/Swordsman.controller,Melee,Rare,300,25,15,15,0,15,10,110,Melee DPS,SwordmanBasicSkill,,SK_SWORDSMAN_T3,3,TRUE,100,Unit/Swordsman.png
+UN_LANCER,UN_LANCER_NAME,UN_LANCER_DESC,Animation/Lancer.controller,Melee,Rare,350,22,14,18,0,12,8,105,Melee DPS,LancerBasicSkill,,SK_LANCER_T2,3,TRUE,175,Unit/Lancer.png
+UN_PRIEST,UN_PRIEST_NAME,UN_PRIEST_DESC,Animation/Priest.controller,Magic,Rare,350,5,10,10,25,8,20,90,Healer,PriestBasicSkill,,SK_PRIEST_T3,3,TRUE,100,Unit/Priest.png
+UN_AXEMAN,UN_AXEMAN_NAME,UN_AXEMAN_DESC,Animation/Armored Axeman.controller,Melee,Epic,500,40,30,10,0,30,15,80,Bruiser,AxemanBasicSkill,,SK_AXEMAN_T3,3,TRUE,100,Unit/Armored Axeman.png
+UN_WIZARD,UN_WIZARD_NAME,UN_WIZARD_DESC,Animation/Wizard.controller,Magic,Epic,350,5,10,15,50,8,30,95,Magic DPS,WizardBasicSkill,,SK_WIZARD_T2,3,TRUE,100,Unit/Wizard.png
+UN_KNIGHT,UN_KNIGHT_NAME,UN_KNIGHT_DESC,Animation/Knight.controller,Melee,Epic,750,35,35,12,10,40,25,90,Tank,KnightBasicSkill,,SK_KNIGHT_T3,3,TRUE,100,Unit/Knight.png
+UN_TEMPLAR,UN_TEMPLAR_NAME,UN_TEMPLAR_DESC,Animation/Knight Templar.controller,Melee,Legendary,800,60,50,20,40,50,40,100,Carry,TemplerBasicSkill,,,3,TRUE,100,Unit/Knight Templar.png
+,,,,,,,,,,,,,,,,,,,,,
+UN_SLIME,UN_SLIME_NAME,UN_SLIME_DESC,Animation/Slime.controller,Melee,Common,40,8,8,5,5,2,2,80,Melee DPS,SlimeBasicSkill,,,3,TRUE,100,Unit/Slime.png
+UN_BAT,UN_BAT_NAME,UN_BAT_DESC,Animation/Bat.controller,Ranged,Common,30,5,5,18,0,2,5,140,Ranged DPS,BatBasicSkill,,,3,TRUE,100,Unit/Bat.png
+UN_SKELETON,UN_SKELETON_NAME,UN_SKELETON_DESC,Animation/Skeleton.controller,Melee,Common,50,12,10,10,0,8,2,90,Melee DPS,SkeletonBasicSkill,,,3,TRUE,100,Unit/Skeleton.png
+UN_SKELARCHER,UN_SKELARCHER_NAME,UN_SKELARCHER_DESC,Animation/Skeleton Archer.controller,Ranged,Rare,40,5,8,22,0,5,2,110,Ranged DPS,SkeletonArcherBasicSkill,,,3,TRUE,100,Unit/Skeleton Archer.png
+UN_ORC,UN_ORC_NAME,UN_ORC_DESC,Animation/Orc.controller,Melee,Rare,100,20,18,8,0,10,5,90,Bruiser,OrcBasicSkill,,SK_ORC_Active,3,TRUE,100,Unit/Orc.png
+UN_WEREWOLF,UN_WEREWOLF_NAME,UN_WEREWOLF_DESC,Animation/Werewolf.controller,Melee,Rare,90,25,15,25,0,12,8,130,Assassin,WerewolfBasicSkill,,SK_WEREWOLF_Active,3,TRUE,100,Unit/Werewolf.png
+UN_ARMSKEL,UN_ARMSKEL_NAME,UN_ARMSKEL_DESC,Animation/Armored Skeleton.controller,Melee,Epic,125,15,20,8,0,30,5,80,Tank,ArmoredSkeletonBasicSkill,,SK_ARMSKEL_Active,3,TRUE,100,Unit/Armored Skeleton.png
+UN_GSSKEL,UN_GSSKEL_NAME,UN_GSSKEL_DESC,Animation/Greatsword Skeleton.controller,Melee,Epic,125,45,20,10,0,15,10,85,Melee DPS,GreatswordSkeletonBasicSkill,,SK_GSSKEL_Active,3,TRUE,100,Unit/Greatsword Skeleton.png
+UN_ORCRIDER,UN_ORCRIDER_NAME,UN_ORCRIDER_DESC,Animation/Orc rider.controller,Melee,Epic,150,30,25,15,0,15,10,150,Assassin,OrcRiderBasicSkill,,SK_ORCRIDER_Active,3,TRUE,100,Unit/Orc rider.png
+UN_ARMORC,UN_ARMORC_NAME,UN_ARMORC_DESC,Animation/Armored Orc.controller,Melee,Epic,225,25,35,8,0,40,15,70,Tank,ArmoredOrcBasicSkill,,SK_ARMORC_Active,3,TRUE,100,Unit/Armored Orc.png
+UN_WEREBEAR,UN_WEREBEAR_NAME,UN_WEREBEAR_DESC,Animation/Werebear.controller,Melee,Epic,250,40,40,10,0,25,20,85,Bruiser,WerebearBasicSkill,,SK_WEREBEAR_Active,3,TRUE,100,Unit/Werebear.png
+UN_NECRO,UN_NECRO_NAME,UN_NECRO_DESC,Animation/Necromancer.controller,Magic,Boss,1600,10,40,15,110,20,50,95,Boss,NecroBasicSkill,,SK_NECRO_Active,3,TRUE,100,Unit/Necromancer.png
+UN_ELITEORC,UN_ELITEORC_NAME,UN_ELITEORC_DESC,Animation/Elite Orc.controller,Melee,Boss,2600,100,60,20,0,60,40,100,Boss,EliteOrcBasicSkill,,SK_ELITEORC_Active,3,TRUE,100,Unit/Elite Orc.png

@@ -8,7 +8,6 @@ namespace DiceBound
     public class UnitAsyncData
     {
         public string unitId;
-        public int tier;
         public int cellIndex;
     }
 

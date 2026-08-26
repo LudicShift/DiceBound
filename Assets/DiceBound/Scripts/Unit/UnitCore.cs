@@ -47,7 +47,6 @@ namespace DiceBound
         private bool _isBattle;
         private AnimationCallbackBehaviour[] _callBackBehaviours;
         public UnitAttackType attackType;
-        private int _tier = 0;
         private string _lastAttackAnim = "Attack";
 
         [HideInInspector] public TooltipProvider tooltipProvider;
@@ -115,36 +114,8 @@ namespace DiceBound
             result.y = 250;
             return result;
         }
-        public void OnUpgrade(int tier)
-        {
-            _tier = tier;
-            _skills = new Dictionary<string, Skill>();
-            _unitInfoWidget.OnUpgrade(_tier);
-           
-            float tierMult = Mathf.Pow(1.8f, _tier);
-            _statAgent.SetBaseValue("hp", _data.hp * tierMult);
-            _statAgent.SetBaseValue("str", _data.str * tierMult);
-            _statAgent.SetBaseValue("spd", _data.spd);
-            _statAgent.SetBaseValue("def", _data.def * tierMult);
-            _statAgent.SetBaseValue("mag", _data.mag * tierMult);
-            _statAgent.SetBaseValue("con", _data.con * tierMult);
-            _statAgent.SetBaseValue("dex", _data.dex * tierMult);
-            _statAgent.SetBaseValue("mdf", _data.mdf * tierMult);
-            _hp = StatUtility.GetMaxHp(_statAgent);
-            _unitInfoWidget.SetMaxHp(_hp);
-            
-            string stars = "";
-
-            for (int i = 0; i <= _tier; i++)
-            {
-                stars += "<sprite=0>";
-            }
-            
-            tooltipProvider.SetText("name",$"{_unitName}{stars}");
-            tooltipProvider.SetText("desc",GetTooltipText());
-        }
         
-        public void Setup(UnitDataTableRow data, int tier, UnitGroup group)
+        public void Setup(UnitDataTableRow data, UnitGroup group)
         {
             _data = data;
             this.group = group;
@@ -162,7 +133,8 @@ namespace DiceBound
             _statAgent.ClearStatModifier("dex");
             _statAgent.ClearStatModifier("mdf");
             
-            OnUpgrade(tier);
+            tooltipProvider.SetText("name",_unitName);
+            tooltipProvider.SetText("desc",GetTooltipText());
         }
 
         private string GetTooltipText()
@@ -209,7 +181,6 @@ namespace DiceBound
         public void SetupAppearanceOnly(UnitDataTableRow data)
         {
             _data = data;
-            group = data.group;
             attackType = data.attackType;
             BindAnimatorController(data.animator);
         }
@@ -442,12 +413,7 @@ namespace DiceBound
         {
             return _data.id;
         }
-
-        public int GetTier()
-        {
-            return _tier;
-        }
-
+        
         public void OnDodge()
         {
             StartCoroutine(dodgeSequence.Play());

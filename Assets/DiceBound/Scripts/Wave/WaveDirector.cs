@@ -38,7 +38,7 @@ namespace DiceBound
 
         private UnitDirector _unitDirector;
         private bool _isPlaying;
-        private BattleDirector _battleDirector;
+        private BattlePhaseDirectorBase _battlePhaseDirectorBase;
         private AsyncPvpDirector _asyncPvpDirector;
         [SerializeField] private Canvas gameOverCanvas;
 
@@ -54,7 +54,7 @@ namespace DiceBound
             _unitPlaceDirector = DirectorFacade.GetDirector<UnitPlaceDirector>();
         
             _walletDirector = DirectorFacade.GetDirector<WalletDirector>();
-            _battleDirector = DirectorFacade.GetDirector<BattleDirector>();
+            _battlePhaseDirectorBase = DirectorFacade.GetDirector<BattlePhaseDirectorBase>();
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
             _soundDirector = DirectorFacade.GetDirector<SoundDirector>();
             _asyncPvpDirector = DirectorFacade.GetDirector<AsyncPvpDirector>();
@@ -128,7 +128,7 @@ namespace DiceBound
                         {
                             for (int i = 0; i < enemyData.number; i++)
                             {
-                                _unitDirector.SpawnUnit(enemyData.enemyId, UnitGroup.Enemy,true, enemyData.tier);
+                                _unitDirector.SpawnUnit(enemyData.enemyId, UnitGroup.Enemy);
                             }
                         }
                         break;
@@ -155,13 +155,13 @@ namespace DiceBound
                 yield return waveLabelDisappearTween.Play();
                 waveLabelImage.Hide();
 
-                _battleDirector.BeginBattle();
+                _battlePhaseDirectorBase.BeginBattle();
                 yield return new WaitUntil(() =>
                     _unitDirector.GetEnemyUnitCount() == 0 ||
                     _unitDirector.GetAllyUnitCount() == _unitDirector.GetDeadAllyUnitCount());
                 if (_unitDirector.GetEnemyUnitCount() == 0)
                 {
-                    _battleDirector.EndBattle();
+                    _battlePhaseDirectorBase.EndBattle();
                     _unitDirector.ClearDeadAllies();
                     _walletDirector.AddGold(Mathf.RoundToInt(wave.waveRewardGold));
                     waveLabelText.SetText($"Victory");
@@ -180,7 +180,7 @@ namespace DiceBound
                 }
                 else if (_unitDirector.GetAllyUnitCount() == _unitDirector.GetDeadAllyUnitCount())
                 {
-                    _battleDirector.EndBattle();
+                    _battlePhaseDirectorBase.EndBattle();
 
                     _lossCount++;
                     UpdateLivesUI();
