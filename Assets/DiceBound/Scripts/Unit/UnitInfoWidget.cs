@@ -8,7 +8,6 @@ public class UnitInfoWidget : WidgetBase
     [SerializeField] private GaugeWidget hpGauge;
     [SerializeField] private SkillCooldownGaugeWidget basicSkillGauge;
     [SerializeField] private SkillCooldownGaugeWidget activeSkillGauge;
-    [SerializeField] private TierLabelWidget tierLabel;
 
     public bool flip;
     private Vector3 _changeBasicPos;
@@ -70,13 +69,6 @@ public class UnitInfoWidget : WidgetBase
         activeSkillGauge.Hide();
         basicSkillGauge.Release();
         activeSkillGauge.Release();
-    }
-
-    public void OnUpgrade(int tier)
-    {
-        basicSkillGauge.OnUpgrade();
-        activeSkillGauge.OnUpgrade();
-        tierLabel.OnChange(tier);
     }
 
     public void SetFlip(bool value)

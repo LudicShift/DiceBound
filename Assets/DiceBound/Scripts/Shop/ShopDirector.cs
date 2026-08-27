@@ -2,135 +2,136 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using DiceBound.Interface;
 using KCoreKit;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-namespace DiceBound
+namespace DiceBound.Shop
 {
     public class ShopDirector : DirectorBase
     {
-        [BigHeader("General")] [SerializeField]
-        private Canvas canvas;
+        private List<BoosterPackDataTableRow> _boosterPackDataList;
 
-        [BigHeader("Widget")] [SerializeField] private ButtonWidget shopButtonWidget;
-        [SerializeField] private ButtonWidget backToFieldButton;
-        [SerializeField] private ButtonWidget rollDiceButtonWidget;
-        [SerializeField] private TextWidget goldText;
+        [SerializeField] private Canvas shopCanvas;
+        [SerializeField] private ImageWidget purchaseArea;
+        [SerializeField] private List<PurchaseWidget> purchaseWidgets;
 
-        private int rollDiceCost = 100;
         private WalletDirector _walletDirector;
-        private DiceDirector _diceDirector;
-        private bool _isEnable = true;
+        private Dictionary<string, List<BoosterPackItemPoolDataTableRow>> _boosterPackItemDataList;
         private UnitDirector _unitDirector;
-        private UnitPlaceDirector _unitPlaceDirector;
+        private PurchaseWidget _draggingPurchseWidget;
+        private Vector3 _dragOffset;
 
-        private List<PurchaseItemDataTableRow> _purchaseItemDataList;
-        private List<PurchaseWidget> _purchaseWidgets;
 
         public override IEnumerator OnInitialize()
         {
-            _purchaseItemDataList = DataTableManager.FindAllRows<PurchaseItemDataTableRow>();
-            _purchaseWidgets = canvas.GetComponentsInChildren<PurchaseWidget>(true).ToList();
-            foreach (var widget in _purchaseWidgets)
-            {
-                widget.purchaseButton.onClickAction += () => OnPurchaseButtonClick(widget);
-            }
-
-            _unitPlaceDirector = DirectorFacade.GetDirector<UnitPlaceDirector>();
-            _diceDirector = DirectorFacade.GetDirector<DiceDirector>();
             _walletDirector = DirectorFacade.GetDirector<WalletDirector>();
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
-            shopButtonWidget.onClickAction += ShowCanvas;
-            backToFieldButton.onClickAction += HideCanvas;
-            rollDiceButtonWidget.onClickAction += OnRollDiceButtonClick;
+            _boosterPackDataList = DataTableManager.FindAllRows<BoosterPackDataTableRow>();
+            _boosterPackItemDataList = DataTableManager.FindAllRows<BoosterPackItemPoolDataTableRow>()
+                .GroupBy(x => x.boosterPackId).ToDictionary(x => x.Key, x => x.ToList());
+
+            foreach (var widget in purchaseWidgets)
+            {
+                widget.onDragBeginAction += OnBoosterPackDragBegin;
+          
+            }
+            InputManager.RegisterAction("Click",PlayerActionType.Canceled,OnBoosterPackDragEnd);
             yield return null;
         }
 
-        private void OnPurchaseButtonClick(PurchaseWidget widget)
+        private void OnBoosterPackDragEnd(InputAction.CallbackContext obj)
         {
-            var result = _diceDirector.GetResult();
-            if (result != null && result.Contains(widget.GetCombination()) && !widget.IsSoldOut())
+            if (!_draggingPurchseWidget)
             {
-                _diceDirector.ClearDices();
-                rollDiceButtonWidget.Show();
-                for (int i = 0; i < widget.GetAmount(); i++)
-                {
-                    PurchaseItem(widget.itemType, widget.GetItem());
-                    widget.SetSoldOut(true);
-                }
+                return;
+            }
+
+            var boosterPack = _draggingPurchseWidget.GetBoosterPack();
+            var isOverlapping = WidgetUtility.IsOverlapping(boosterPack.rectTransform, purchaseArea.rectTransform);
+            if (isOverlapping)
+            {
+                TryPurchase(_draggingPurchseWidget);
+            }
+            else
+            {
+                boosterPack.Rewind();
+            }
+
+            purchaseArea.Hide();   
+            
+            _draggingPurchseWidget = null;
+        }
+
+        private void OnBoosterPackDragBegin(PurchaseWidget widget)
+        {
+            purchaseArea.Show();   
+            _draggingPurchseWidget = widget;
+            _dragOffset = widget.transform.position - InputManager.GetScreenPointerPosition(shopCanvas);
+        }
+
+        public void Update()
+        {
+            if (_draggingPurchseWidget)
+            {
+                var boosterPack = _draggingPurchseWidget.GetBoosterPack();
+                boosterPack.transform.position = InputManager.GetScreenPointerPosition(shopCanvas) + _dragOffset;
             }
         }
 
-        private void PurchaseItem(ItemType type, IPurchaseItem item)
+        public void Refresh()
         {
-            switch (type)
+            for (int i = 0; i < _boosterPackDataList.Count; i++)
             {
-                case ItemType.Unit:
-                    _unitDirector.SpawnUnit(item.GetId(),UnitGroup.Ally);
+                purchaseWidgets[i].Setup(_boosterPackDataList[i]);
+            }
+        }
+
+        public void TryPurchase(PurchaseWidget widget)
+        {
+            var gold = widget.GetCost();
+            if (_walletDirector.HasGold(gold))
+            {
+                _walletDirector.SpendGold(gold);
+                StartCoroutine(OpenBoosterPackRoutine(widget));
+            }
+            else
+            {
+                widget.GetBoosterPack().Rewind();
+            }
+        }
+
+        private IEnumerator OpenBoosterPackRoutine(PurchaseWidget widget)
+        {
+            var data = widget.GetData();
+            var pack = widget.GetBoosterPack();
+            yield return pack.PlayOpenTween();
+            pack.Rewind();
+            //일단 무조건 한번에 아이템 수량 1개
+            var item = PickRandomBoosterPackItem(data);
+            GainBoosterPackItem(item);
+            yield return null;
+        }
+
+        private void GainBoosterPackItem(BoosterPackItemPoolDataTableRow item)
+        {
+            switch (item.itemType)
+            {
+                case BoosterPackItemType.Unit:
+                    _unitDirector.SpawnUnit(item.itemId,UnitGroup.Ally);
                     break;
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(type), type, null);
+                
             }
         }
 
-        public void OnRoundBegin()
+        private BoosterPackItemPoolDataTableRow PickRandomBoosterPackItem(BoosterPackDataTableRow data)
         {
-            //아이템 풀 변경 할수도 있음
-            for (int i = 0; i < _purchaseItemDataList.Count; i++)
-            {
-                var data = _purchaseItemDataList[i];
-                var combination = _diceDirector.GetCombination(data.combinationID);
-                IPurchaseItem item;
-                switch (data.itemType)
-                {
-                    case ItemType.Unit:
-                        item = _unitDirector.GetUnitData(data.itemId);
-
-                        break;
-                    default:
-                        throw new ArgumentOutOfRangeException();
-                }
-
-                _purchaseWidgets[i].SetCombination(combination);
-                _purchaseWidgets[i].SetItem(data.itemType, item);
-                _purchaseWidgets[i].SetAmount(data.amount);
-                _purchaseWidgets[i].Show();
-                _purchaseWidgets[i].SetSoldOut(false);
-            }
+            return _boosterPackItemDataList[data.id].GetRandomElementWithWeight(x => x.weight);
         }
 
-        public void OnRollDiceButtonClick()
+        public List<BoosterPackDataTableRow> PickRandomBoosterPackData(int number)
         {
-            if (_walletDirector.HasGold(rollDiceCost))
-            {
-                _walletDirector.SpendGold(rollDiceCost);
-                goldText.SetText($"{_walletDirector.GetGold()}G");
-                rollDiceButtonWidget.Hide();
-                _diceDirector.Setup();
-            }
-        }
-
-        private void HideCanvas()
-        {
-            canvas.gameObject.SetActive(false);
-            _unitPlaceDirector.SetEnable(true);
-        }
-
-        private void ShowCanvas()
-        {
-            if (_isEnable)
-            {
-                _unitPlaceDirector.SetEnable(false);
-                goldText.SetText($"{_walletDirector.GetGold()}G");
-                canvas.gameObject.SetActive(true);
-            }
-        }
-
-        public void SetEnable(bool value)
-        {
-            _isEnable = value;
+            return _boosterPackDataList.GetRandomElements(number);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace DiceBound
         [SerializeField] private TweenAnimationPlayer waveLabelAppearTween;
         [SerializeField] private TweenAnimationPlayer waveLabelDisappearTween;
         [SerializeField] private TextWidget waveTextWidget;
-        [SerializeField] private ButtonWidget playWaveButtonWidget;
+ 
         [SerializeField] private ButtonWidget fastButtonWidget;
 
         [SerializeField] private Color activeColor;
@@ -38,31 +38,26 @@ namespace DiceBound
 
         private UnitDirector _unitDirector;
         private bool _isPlaying;
-        private BattleDirector _battleDirector;
+        private BattlePhaseDirectorBase _battlePhaseDirector;
         private AsyncPvpDirector _asyncPvpDirector;
         [SerializeField] private Canvas gameOverCanvas;
 
         [SerializeField] private Canvas gameClearCanvas;
 
         private WalletDirector _walletDirector;
-        private ShopDirector _shopDirector;
         private UnitPlaceDirector _unitPlaceDirector;
         private SoundDirector _soundDirector;
-        private MasteryManager _masteryManager;
         private bool _fastMode;
 
         public override IEnumerator OnInitialize()
         {
             _unitPlaceDirector = DirectorFacade.GetDirector<UnitPlaceDirector>();
-            _shopDirector = DirectorFacade.GetDirector<ShopDirector>();
-
+        
             _walletDirector = DirectorFacade.GetDirector<WalletDirector>();
-            _battleDirector = DirectorFacade.GetDirector<BattleDirector>();
+            _battlePhaseDirector = DirectorFacade.GetDirector<BattlePhaseDirectorBase>();
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
             _soundDirector = DirectorFacade.GetDirector<SoundDirector>();
             _asyncPvpDirector = DirectorFacade.GetDirector<AsyncPvpDirector>();
-            _masteryManager = MasteryManager.GetInstance();
-            playWaveButtonWidget.onClickAction += OnPlayWaveButtonClick;
             fastButtonWidget.onClickAction += OnClickFastButton;
 
 
@@ -82,12 +77,13 @@ namespace DiceBound
         }
 
 
-        private void OnPlayWaveButtonClick()
+        public void PlayWave()
         {
             if (!_isPlaying)
             {
+                _isPlaying = true;
                 Time.timeScale = _waveTimeScale;
-                PlayWave(_currentWave);
+                StartCoroutine(WaveRoutine(_currentWave));
                 waveTextWidget.SetText($"{_currentWave + 1}");
                 _currentWave++;
             }
@@ -108,13 +104,7 @@ namespace DiceBound
         {
             _waveTimeScale = timeScale;
         }
-
-        public void PlayWave(int index)
-        {
-            _isPlaying = true;
-            playWaveButtonWidget.image.color = activeColor;
-            StartCoroutine(WaveRoutine(index));
-        }
+        
 
         private IEnumerator WaveRoutine(int index)
         {
@@ -122,7 +112,6 @@ namespace DiceBound
             if (hasWave)
             {
                 _unitPlaceDirector.SetEnable(false);
-                _shopDirector.SetEnable(false);
                 
                 int enemyCount = 0;
                 switch (wave.roundType)
@@ -133,7 +122,7 @@ namespace DiceBound
                         {
                             for (int i = 0; i < enemyData.number; i++)
                             {
-                                _unitDirector.SpawnUnit(enemyData.enemyId, UnitGroup.Enemy,true, enemyData.tier);
+                                _unitDirector.SpawnUnit(enemyData.enemyId, UnitGroup.Enemy);
                             }
                         }
                         break;
@@ -160,18 +149,15 @@ namespace DiceBound
                 yield return waveLabelDisappearTween.Play();
                 waveLabelImage.Hide();
 
-                _battleDirector.BeginBattle();
+                _battlePhaseDirector.BeginBattle();
                 yield return new WaitUntil(() =>
                     _unitDirector.GetEnemyUnitCount() == 0 ||
                     _unitDirector.GetAllyUnitCount() == _unitDirector.GetDeadAllyUnitCount());
                 if (_unitDirector.GetEnemyUnitCount() == 0)
                 {
-                    _battleDirector.EndBattle();
+                    _battlePhaseDirector.EndBattle();
                     _unitDirector.ClearDeadAllies();
-                    var goldRatePercent = _masteryManager.GetModifierTotal("WaveGoldRewardPercent");
-                    _walletDirector.AddGold(Mathf.RoundToInt(wave.waveRewardGold * (1f + goldRatePercent / 100f)));
-                    _masteryManager.AddDiamond(wave.waveRewardDiamond);
-
+                    _walletDirector.AddGold(Mathf.RoundToInt(wave.waveRewardGold));
                     waveLabelText.SetText($"Victory");
                     waveLabelImage.Show();
                     BroAudio.Play(_soundDirector.waveVictorySFX);
@@ -188,7 +174,7 @@ namespace DiceBound
                 }
                 else if (_unitDirector.GetAllyUnitCount() == _unitDirector.GetDeadAllyUnitCount())
                 {
-                    _battleDirector.EndBattle();
+                    _battlePhaseDirector.EndBattle();
 
                     _lossCount++;
                     UpdateLivesUI();
@@ -206,10 +192,7 @@ namespace DiceBound
 
                 _isPlaying = false;
                 Time.timeScale = 1;
-                playWaveButtonWidget.image.color = inactiveColor;
                 _unitPlaceDirector.SetEnable(true);
-                _shopDirector.SetEnable(true);
-                _shopDirector.OnRoundBegin();
             }
         }
 

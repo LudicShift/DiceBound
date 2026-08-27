@@ -47,7 +47,6 @@ namespace DiceBound
                 board.units.Add(new UnitAsyncData
                 {
                     unitId = unit.GetId(),
-                    tier = unit.GetTier(),
                     cellIndex = _unitPlaceDirector.GetCellIndex(UnitGroup.Ally, unit)
                 });
             }
@@ -59,7 +58,7 @@ namespace DiceBound
         {
             foreach (var data in snapshot.units)
             {
-                var unit = _unitDirector.SpawnUnit(data.unitId, targetGroup, false, data.tier);
+                var unit = _unitDirector.SpawnUnit(data.unitId, targetGroup, false);
                 var cell = _unitPlaceDirector.GetCell(targetGroup, data.cellIndex);
                 _unitPlaceDirector.PlaceUnit(unit, cell);
             }

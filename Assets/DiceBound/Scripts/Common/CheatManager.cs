@@ -6,7 +6,6 @@ namespace DiceBound
 {
     public class CheatManager : MonoBehaviour
     {
-        private static MasteryManager _masteryManager;
         private static WalletDirector _walletDirector;
         private static AsyncPvpDirector _asyncPvpDirector;
         private static CheatManager _instance;
@@ -15,7 +14,6 @@ namespace DiceBound
         {
             _instance = this;
             _walletDirector = DirectorFacade.GetDirector<WalletDirector>();
-            _masteryManager = MasteryManager.GetInstance();
             _asyncPvpDirector = DirectorFacade.GetDirector<AsyncPvpDirector>();
         }
 
@@ -23,11 +21,6 @@ namespace DiceBound
         public static void AddGold(int gold)
         {
             _walletDirector.AddGold(gold);
-        }
-        [DebugCommand]
-        public static void AddDiamonds(int diamonds)
-        {
-            _masteryManager.AddDiamond(diamonds);
         }
 
         [DebugCommand]

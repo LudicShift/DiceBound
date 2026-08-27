@@ -19,7 +19,6 @@ namespace DiceBound
     
     public class UnitDataTableRow : DataTableRowBase, IPurchaseItem
     {
-        public UnitGroup group;
         public UnitAttackType attackType;
         public string nameKey;
         public string descKey;

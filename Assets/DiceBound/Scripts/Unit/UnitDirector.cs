@@ -28,7 +28,7 @@ namespace DiceBound
         private List<UnitCore> _deadAllies = new List<UnitCore>();
 
         private SkillDirector _skillDirector;
-        private BattleDirector _battleDirector;
+        private BattlePhaseDirectorBase _battlePhaseDirectorBase;
         private UnitPlaceDirector _unitPlaceDirector;
         private TooltipDirector _tooltipDirector;
         private WalletDirector _walletDirector;
@@ -37,7 +37,6 @@ namespace DiceBound
         //public Action<UnitCore> onSpawnAlly;
 
         private int _maxAllyNumber;
-        private MasteryManager _masteryManager;
 
         private static readonly string[] AllyStatKeys = { "str", "spd", "def", "mag", "con", "dex", "mdf", "hp" };
 
@@ -53,7 +52,6 @@ namespace DiceBound
         }
         public override IEnumerator OnInitialize()
         {
-            _masteryManager = MasteryManager.GetInstance();
             _maxAllyNumber = 15;
             UpdateAllyCountText();
             _unitInfoPrefabPool = new PrefabPool<UnitInfoWidget>(PrefabManager.CachePrefab<UnitInfoWidget>(), unitCanvas.transform, 100);
@@ -72,7 +70,7 @@ namespace DiceBound
             _soundDirector = DirectorFacade.GetDirector<SoundDirector>();
             _unitPlaceDirector = DirectorFacade.GetDirector<UnitPlaceDirector>();
             _skillDirector = DirectorFacade.GetDirector<SkillDirector>();
-            _battleDirector = DirectorFacade.GetDirector<BattleDirector>();
+            _battlePhaseDirectorBase = DirectorFacade.GetDirector<BattlePhaseDirectorBase>();
             _walletDirector = DirectorFacade.GetDirector<WalletDirector>();
 
             _camera = CameraManager.GetMainCamera();
@@ -97,7 +95,7 @@ namespace DiceBound
 
         private void OnUnitDodge(UnitCore unit)
         {
-            _battleDirector.ShowMiss(unit);
+            _battlePhaseDirectorBase.ShowMiss(unit);
         }
 
         private void OnGetUnit(UnitCore instance)
@@ -113,17 +111,7 @@ namespace DiceBound
             return _maxAllyNumber <= _allies.Count;
         }
 
-        public void UpgradeUnit(UnitCore unit)
-        {
-            var tier = unit.GetTier();
-            unit.OnUpgrade(tier+1);
-            var data = unit.GetData();
-            unit.BindSkill(_skillDirector.GetSkill(data.skillBasicKey));
-            unit.BindSkill(_skillDirector.GetSkill(data.skillActiveKey));
-            unit.BindSkill(_skillDirector.GetSkill(data.skillPassiveKey));
-        }
-
-        public UnitCore SpawnUnit(string unitId, UnitGroup group, bool autoPlacing = true,  int tier = 0)
+        public UnitCore SpawnUnit(string unitId, UnitGroup group, bool autoPlacing = true)
         {
             var data = _unitDataDictionary[unitId];
             UnitCore instance;
@@ -137,18 +125,11 @@ namespace DiceBound
             }
             instance.BindInfoWidget(_unitInfoPrefabPool.Get());
            _tooltipDirector.BindTooltip("Unit",instance.tooltipProvider);
-            instance.Setup(data,tier,group);
-            if (group == UnitGroup.Ally)
-            {
-                ApplyAllyStatModifiers(instance);
-            }
-            
+            instance.Setup(data,group);
             instance.Animate("Idle");
             instance.BindSkill(_skillDirector.GetSkill(data.skillBasicKey));
             instance.BindSkill(_skillDirector.GetSkill(data.skillActiveKey));
             instance.BindSkill(_skillDirector.GetSkill(data.skillPassiveKey));
-
-            
             
             _units.Add(instance);
             
@@ -182,29 +163,15 @@ namespace DiceBound
             return instance;
         }
 
-        private void ApplyAllyStatModifiers(UnitCore instance)
-        {
-            var statPercent = _masteryManager.GetModifierTotal("AllyAllStatsPercent") / 100f;
-            if (statPercent == 0f)
-            {
-                return;
-            }
-
-            var statAgent = instance.GetStatAgent();
-            foreach (var statKey in AllyStatKeys)
-            {
-                statAgent.GetStat(statKey).AddModifier(new StatModifier(statPercent, StatModifyType.PercentAdd, 0, this));
-            }
-        }
-
+       
         private void OnUnitHeal(UnitCore core, int damage)
         {
-            _battleDirector.ShowHeal(core, damage);
+            _battlePhaseDirectorBase.ShowHeal(core, damage);
         }
 
         private void OnUnitHit(UnitCore core, int damage,bool isCritical)
         {
-            _battleDirector.ShowDamage(core, damage,isCritical);
+            _battlePhaseDirectorBase.ShowDamage(core, damage,isCritical);
         }
 
         private void OnUnitDead(UnitCore unit)
