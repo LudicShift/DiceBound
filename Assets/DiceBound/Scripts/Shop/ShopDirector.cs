@@ -13,6 +13,7 @@ namespace DiceBound.Shop
         private List<BoosterPackDataTableRow> _boosterPackDataList;
 
         [SerializeField] private Canvas shopCanvas;
+        [SerializeField] private RectTransform floatingParent;
         [SerializeField] private ImageWidget purchaseArea;
         [SerializeField] private List<PurchaseWidget> purchaseWidgets;
 
@@ -55,6 +56,7 @@ namespace DiceBound.Shop
             }
             else
             {
+                boosterPack.transform.SetParent(_draggingPurchseWidget.transform);
                 boosterPack.Rewind();
             }
 
@@ -65,9 +67,12 @@ namespace DiceBound.Shop
 
         private void OnBoosterPackDragBegin(PurchaseWidget widget)
         {
-            purchaseArea.Show();   
+            purchaseArea.Show();  
             _draggingPurchseWidget = widget;
-            _dragOffset = widget.transform.position - InputManager.GetScreenPointerPosition(shopCanvas);
+            var boosterPack = _draggingPurchseWidget.GetBoosterPack();
+            boosterPack.transform.SetParent(floatingParent,true);
+            
+            _dragOffset = boosterPack.transform.position - InputManager.GetScreenPointerPosition(shopCanvas);
         }
 
         public void Update()
@@ -97,16 +102,19 @@ namespace DiceBound.Shop
             }
             else
             {
-                widget.GetBoosterPack().Rewind();
+                var boosterPack = widget.GetBoosterPack();
+                boosterPack.transform.SetParent(widget.transform);
+                boosterPack.Rewind();
             }
         }
 
         private IEnumerator OpenBoosterPackRoutine(PurchaseWidget widget)
         {
             var data = widget.GetData();
-            var pack = widget.GetBoosterPack();
-            yield return pack.PlayOpenTween();
-            pack.Rewind();
+            var boosterPack = widget.GetBoosterPack();
+            yield return boosterPack.PlayOpenTween();
+            boosterPack.transform.SetParent(widget.transform);
+            boosterPack.Rewind();
             //일단 무조건 한번에 아이템 수량 1개
             var item = PickRandomBoosterPackItem(data);
             GainBoosterPackItem(item);

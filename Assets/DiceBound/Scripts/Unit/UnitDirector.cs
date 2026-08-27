@@ -80,7 +80,11 @@ namespace DiceBound
 
         private void SellUnit(UnitCore unit)
         {
-            RemoveAllyUnit(unit);
+            _allies.Remove(unit);
+            _units.Remove(unit);
+            //_unitPlaceDirector.RemoveUnit(unit);
+            _allyPrefabPool.Release(unit);
+            UpdateAllyCountText();
             _walletDirector.PlayGainGoldEffect(trashCan.transform.position,50);
             BroAudio.Play(_soundDirector.sellUnitSFX);
         }
@@ -198,14 +202,6 @@ namespace DiceBound
             }
         }
         
-        public void RemoveAllyUnit(UnitCore unit)
-        {
-            _allies.Remove(unit);
-            _units.Remove(unit);
-            _unitPlaceDirector.RemoveUnit(unit);
-            _allyPrefabPool.Release(unit);
-            UpdateAllyCountText();
-        }
 
         public int GetEnemyUnitCount()
         {
