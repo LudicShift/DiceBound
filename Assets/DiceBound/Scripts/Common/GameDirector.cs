@@ -40,7 +40,7 @@ namespace DiceBound
             _phaseDirectorDictionary.TryAdd(GamePhase.Battle, DirectorFacade.GetDirector<BattlePhaseDirectorBase>());
             _phaseDirectorDictionary.TryAdd(GamePhase.GameOver, null);
             _phaseDirectorDictionary.TryAdd(GamePhase.GameClear,null);
-            SetGamePhase(GamePhase.Prepare);
+           
 
             gameOverTitleButtonWidget.onClickAction += OnTitleButtonClick;
             gameClearTitleButtonWidget.onClickAction += OnTitleButtonClick;
@@ -56,6 +56,7 @@ namespace DiceBound
         private IEnumerator GameRoutine()
         {
             yield return DirectorFacade.WaitUntilInitialized();
+            SetGamePhase(GamePhase.Prepare);
         }
 
         public void SetGamePhase(GamePhase gamePhase)

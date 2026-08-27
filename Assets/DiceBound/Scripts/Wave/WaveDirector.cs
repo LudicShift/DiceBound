@@ -18,7 +18,7 @@ namespace DiceBound
         [SerializeField] private TweenAnimationPlayer waveLabelAppearTween;
         [SerializeField] private TweenAnimationPlayer waveLabelDisappearTween;
         [SerializeField] private TextWidget waveTextWidget;
-        [SerializeField] private ButtonWidget playWaveButtonWidget;
+ 
         [SerializeField] private ButtonWidget fastButtonWidget;
 
         [SerializeField] private Color activeColor;
@@ -38,7 +38,7 @@ namespace DiceBound
 
         private UnitDirector _unitDirector;
         private bool _isPlaying;
-        private BattlePhaseDirectorBase _battlePhaseDirectorBase;
+        private BattlePhaseDirectorBase _battlePhaseDirector;
         private AsyncPvpDirector _asyncPvpDirector;
         [SerializeField] private Canvas gameOverCanvas;
 
@@ -54,11 +54,10 @@ namespace DiceBound
             _unitPlaceDirector = DirectorFacade.GetDirector<UnitPlaceDirector>();
         
             _walletDirector = DirectorFacade.GetDirector<WalletDirector>();
-            _battlePhaseDirectorBase = DirectorFacade.GetDirector<BattlePhaseDirectorBase>();
+            _battlePhaseDirector = DirectorFacade.GetDirector<BattlePhaseDirectorBase>();
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
             _soundDirector = DirectorFacade.GetDirector<SoundDirector>();
             _asyncPvpDirector = DirectorFacade.GetDirector<AsyncPvpDirector>();
-            playWaveButtonWidget.onClickAction += OnPlayWaveButtonClick;
             fastButtonWidget.onClickAction += OnClickFastButton;
 
 
@@ -78,12 +77,13 @@ namespace DiceBound
         }
 
 
-        private void OnPlayWaveButtonClick()
+        public void PlayWave()
         {
             if (!_isPlaying)
             {
+                _isPlaying = true;
                 Time.timeScale = _waveTimeScale;
-                PlayWave(_currentWave);
+                StartCoroutine(WaveRoutine(_currentWave));
                 waveTextWidget.SetText($"{_currentWave + 1}");
                 _currentWave++;
             }
@@ -104,13 +104,7 @@ namespace DiceBound
         {
             _waveTimeScale = timeScale;
         }
-
-        public void PlayWave(int index)
-        {
-            _isPlaying = true;
-            playWaveButtonWidget.image.color = activeColor;
-            StartCoroutine(WaveRoutine(index));
-        }
+        
 
         private IEnumerator WaveRoutine(int index)
         {
@@ -155,13 +149,13 @@ namespace DiceBound
                 yield return waveLabelDisappearTween.Play();
                 waveLabelImage.Hide();
 
-                _battlePhaseDirectorBase.BeginBattle();
+                _battlePhaseDirector.BeginBattle();
                 yield return new WaitUntil(() =>
                     _unitDirector.GetEnemyUnitCount() == 0 ||
                     _unitDirector.GetAllyUnitCount() == _unitDirector.GetDeadAllyUnitCount());
                 if (_unitDirector.GetEnemyUnitCount() == 0)
                 {
-                    _battlePhaseDirectorBase.EndBattle();
+                    _battlePhaseDirector.EndBattle();
                     _unitDirector.ClearDeadAllies();
                     _walletDirector.AddGold(Mathf.RoundToInt(wave.waveRewardGold));
                     waveLabelText.SetText($"Victory");
@@ -180,7 +174,7 @@ namespace DiceBound
                 }
                 else if (_unitDirector.GetAllyUnitCount() == _unitDirector.GetDeadAllyUnitCount())
                 {
-                    _battlePhaseDirectorBase.EndBattle();
+                    _battlePhaseDirector.EndBattle();
 
                     _lossCount++;
                     UpdateLivesUI();
@@ -198,7 +192,6 @@ namespace DiceBound
 
                 _isPlaying = false;
                 Time.timeScale = 1;
-                playWaveButtonWidget.image.color = inactiveColor;
                 _unitPlaceDirector.SetEnable(true);
             }
         }

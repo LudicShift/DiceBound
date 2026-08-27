@@ -1,29 +1,33 @@
 ﻿using System;
 using KCoreKit;
+using UnityEngine;
 
 namespace DiceBound.Shop
 {
     public class PurchaseWidget : WidgetBase
     {
-        private BoosterPackWidget _boosterPack;
-        private TextWidget _costText;
+        [SerializeField]
+        private ImageWidget preview;
+        [SerializeField]
+        private BoosterPackWidget boosterPack;
+        [SerializeField]
+        private TextWidget costText;
         private int _cost;
         private BoosterPackDataTableRow _data;
         public Action<PurchaseWidget> onDragBeginAction;
-        public Action<PurchaseWidget> onDragEndAction;
 
         public void Awake()
         {
-            _boosterPack = GetComponentInChildren<BoosterPackWidget>();
-            _costText = GetComponentInChildren<TextWidget>();
+            boosterPack.onPointerDownAction += _ => onDragBeginAction.Invoke(this);
         }
 
         public void Setup(BoosterPackDataTableRow data)
         {
             _data = data;
-            _boosterPack.Setup(data);
             _cost = data.cost;
-            _costText.SetText(_cost.ToString());
+            boosterPack.Setup(data);
+            costText.SetText(_cost.ToString());
+            preview.SetSprite(data.texture.ToSprite());
         }
 
         public int GetCost()
@@ -38,7 +42,7 @@ namespace DiceBound.Shop
 
         public BoosterPackWidget GetBoosterPack()
         {
-            return _boosterPack;
+            return boosterPack;
         }
     }
 }

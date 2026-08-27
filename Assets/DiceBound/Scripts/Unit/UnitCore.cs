@@ -132,9 +132,19 @@ namespace DiceBound
             _statAgent.ClearStatModifier("con");
             _statAgent.ClearStatModifier("dex");
             _statAgent.ClearStatModifier("mdf");
+            _statAgent.SetBaseValue("hp",data.hp);
+            _statAgent.SetBaseValue("str",data.str);
+            _statAgent.SetBaseValue("spd",data.spd);
+            _statAgent.SetBaseValue("def",data.def);
+            _statAgent.SetBaseValue("mag",data.mag);
+            _statAgent.SetBaseValue("con",data.con);
+            _statAgent.SetBaseValue("dex",data.dex);
+            _statAgent.SetBaseValue("mdf",data.mdf);
             
             tooltipProvider.SetText("name",_unitName);
             tooltipProvider.SetText("desc",GetTooltipText());
+            _hp = StatUtility.GetMaxHp(_statAgent);
+            _unitInfoWidget.SetMaxHp(_hp);
         }
 
         private string GetTooltipText()

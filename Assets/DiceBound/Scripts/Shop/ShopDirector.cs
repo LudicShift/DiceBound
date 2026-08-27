@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using KCoreKit;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace DiceBound.Shop
 {
@@ -11,13 +12,14 @@ namespace DiceBound.Shop
     {
         private List<BoosterPackDataTableRow> _boosterPackDataList;
 
+        [SerializeField] private Canvas shopCanvas;
         [SerializeField] private ImageWidget purchaseArea;
         [SerializeField] private List<PurchaseWidget> purchaseWidgets;
 
         private WalletDirector _walletDirector;
         private Dictionary<string, List<BoosterPackItemPoolDataTableRow>> _boosterPackItemDataList;
         private UnitDirector _unitDirector;
-        private BoosterPackWidget _draggingBoosterPack;
+        private PurchaseWidget _draggingPurchseWidget;
         private Vector3 _dragOffset;
 
 
@@ -32,48 +34,56 @@ namespace DiceBound.Shop
             foreach (var widget in purchaseWidgets)
             {
                 widget.onDragBeginAction += OnBoosterPackDragBegin;
-                widget.onDragBeginAction += OnBoosterPackDragEnd;
+          
             }
+            InputManager.RegisterAction("Click",PlayerActionType.Canceled,OnBoosterPackDragEnd);
             yield return null;
         }
 
-        private void OnBoosterPackDragEnd(PurchaseWidget widget)
+        private void OnBoosterPackDragEnd(InputAction.CallbackContext obj)
         {
-            var isOverlapping = WidgetUtility.IsOverlapping(_draggingBoosterPack.rectTransform, purchaseArea.rectTransform);
+            if (!_draggingPurchseWidget)
+            {
+                return;
+            }
+
+            var boosterPack = _draggingPurchseWidget.GetBoosterPack();
+            var isOverlapping = WidgetUtility.IsOverlapping(boosterPack.rectTransform, purchaseArea.rectTransform);
             if (isOverlapping)
             {
-                TryPurchase(widget);
+                TryPurchase(_draggingPurchseWidget);
             }
             else
             {
-                _draggingBoosterPack.Rewind();
+                boosterPack.Rewind();
             }
 
             purchaseArea.Hide();   
-            _draggingBoosterPack = null;
+            
+            _draggingPurchseWidget = null;
         }
 
         private void OnBoosterPackDragBegin(PurchaseWidget widget)
         {
             purchaseArea.Show();   
-            _draggingBoosterPack = widget.GetBoosterPack();
-            _dragOffset = widget.transform.position - InputManager.GetScreenPointerPosition();
+            _draggingPurchseWidget = widget;
+            _dragOffset = widget.transform.position - InputManager.GetScreenPointerPosition(shopCanvas);
         }
 
         public void Update()
         {
-            if (_draggingBoosterPack)
+            if (_draggingPurchseWidget)
             {
-                _draggingBoosterPack.transform.position = InputManager.GetScreenPointerPosition() + _dragOffset;
+                var boosterPack = _draggingPurchseWidget.GetBoosterPack();
+                boosterPack.transform.position = InputManager.GetScreenPointerPosition(shopCanvas) + _dragOffset;
             }
         }
 
         public void Refresh()
         {
-            var dataList = PickRandomBoosterPackData(3);
-            for (int i = 0; i < dataList.Count; i++)
+            for (int i = 0; i < _boosterPackDataList.Count; i++)
             {
-                purchaseWidgets[i].Setup(dataList[i]);
+                purchaseWidgets[i].Setup(_boosterPackDataList[i]);
             }
         }
 
@@ -85,6 +95,10 @@ namespace DiceBound.Shop
                 _walletDirector.SpendGold(gold);
                 StartCoroutine(OpenBoosterPackRoutine(widget));
             }
+            else
+            {
+                widget.GetBoosterPack().Rewind();
+            }
         }
 
         private IEnumerator OpenBoosterPackRoutine(PurchaseWidget widget)
@@ -92,7 +106,6 @@ namespace DiceBound.Shop
             var data = widget.GetData();
             var pack = widget.GetBoosterPack();
             yield return pack.PlayOpenTween();
-            widget.Hide();
             pack.Rewind();
             //일단 무조건 한번에 아이템 수량 1개
             var item = PickRandomBoosterPackItem(data);

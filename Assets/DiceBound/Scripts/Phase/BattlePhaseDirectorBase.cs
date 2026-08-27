@@ -29,10 +29,14 @@ namespace DiceBound
         private SkillDirector _skillDirector;
         
         private Dictionary<UnitCore, int> _hitCountMap = new Dictionary<UnitCore, int>();
+        private WaveDirector _waveDirector;
+        private GameDirector _gameDirector;
 
         public override IEnumerator OnInitialize()
         {
             _damageWidgetPool = new PrefabPool<DamageWidget>(PrefabManager.CachePrefab<DamageWidget>(), damageCanvas.transform, 20);
+            _gameDirector = DirectorFacade.GetDirector<GameDirector>();
+            _waveDirector = DirectorFacade.GetDirector<WaveDirector>();
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
              _skillDirector = DirectorFacade.GetDirector<SkillDirector>();
             yield return null;
@@ -41,7 +45,6 @@ namespace DiceBound
         public void BeginBattle()
         {
             _isPlaying = true;
-            
             var units = _unitDirector.GetAllUnit();
             foreach (var unit in units)
             {
@@ -52,7 +55,7 @@ namespace DiceBound
         public void EndBattle()
         {
             _isPlaying = false;
-         
+            _gameDirector.SetGamePhase(GamePhase.Prepare);
             var units = _unitDirector.GetAllUnit();
             foreach (var unit in units)
             {
@@ -203,6 +206,7 @@ namespace DiceBound
         public override void OnEnter()
         {
             battleCanvas.Open();
+            _waveDirector.PlayWave();
         }
 
         public override void OnExit()

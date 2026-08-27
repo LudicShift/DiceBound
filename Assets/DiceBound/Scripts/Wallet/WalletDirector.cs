@@ -27,7 +27,8 @@ namespace DiceBound
         {
             _soundDirector = DirectorFacade.GetDirector<SoundDirector>();
             _camera = CameraManager.GetMainCamera();
-            _goldEffectPool = new PrefabPool<GainGoldEffectWidget>(PrefabManager.CachePrefab<GainGoldEffectWidget>(),goldEffectCanvas.transform); 
+            _goldEffectPool = new PrefabPool<GainGoldEffectWidget>(PrefabManager.CachePrefab<GainGoldEffectWidget>(),goldEffectCanvas.transform);
+            _gold = BaseGold;
             goldTextWidget.SetText(_gold.ToString());
             yield return null;
         }

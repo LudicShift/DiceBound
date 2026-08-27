@@ -22,7 +22,7 @@ namespace DiceBound.Shop
 
         public IEnumerator PlayOpenTween()
         {
-            yield return openTween?.Play();
+            yield return openTween.Play();
         }
 
         public void Rewind()

@@ -19,6 +19,8 @@ namespace DiceBound
         [SerializeField]
         private Canvas prepareCanvas;
 
+        [SerializeField] private ButtonWidget battleButton;
+        
         [SerializeField] private ButtonWidget fusionButton;
         [SerializeField] private ButtonWidget upgradeButton;
         [SerializeField] private ButtonWidget shopButton;
@@ -30,11 +32,37 @@ namespace DiceBound
         private PrepareState _prepareState = PrepareState.Shop;
 
         private ShopDirector _shopDirector;
-        
+        private GameDirector _gameDirector;
+
         public override IEnumerator OnInitialize()
         {
+            battleButton.onClickAction += OnBattleButtonCLick;
+            fusionButton.onClickAction += OnFusionButtonClick;
+            upgradeButton.onClickAction += OnUpgradeButtonClick;
+            shopButton.onClickAction += OnShopButtonClick;
+            _gameDirector = DirectorFacade.GetDirector<GameDirector>();
             _shopDirector = DirectorFacade.GetDirector<ShopDirector>();
             yield return null;
+        }
+
+        private void OnShopButtonClick()
+        {
+            SetState(PrepareState.Shop);
+        }
+
+        private void OnUpgradeButtonClick()
+        {
+            SetState(PrepareState.Upgrade);
+        }
+
+        private void OnFusionButtonClick()
+        {
+            SetState(PrepareState.Fusion);
+        }
+
+        private void OnBattleButtonCLick()
+        {
+            _gameDirector.SetGamePhase(GamePhase.Battle);
         }
 
         public void SetState(PrepareState prepareState)
@@ -44,8 +72,8 @@ namespace DiceBound
             upgradeButton.Show();
             shopButton.Show();
             shopCanvas.Close();
-            shopCanvas.Close();
-            shopCanvas.Close();
+            fusionCanvas.Close();
+            upgradeCanvas.Close();
             
             switch (_prepareState)
             {
@@ -73,8 +101,9 @@ namespace DiceBound
         public override void OnExit()
         {
             prepareCanvas.Close();
-            
-            
+            shopCanvas.Close();
+            fusionCanvas.Close();
+            upgradeCanvas.Close();
         }
     }
 }
