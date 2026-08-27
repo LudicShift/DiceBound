@@ -47,22 +47,6 @@ public class UnitInfoWidget : WidgetBase
         activeSkillGauge.OnUpdate();
     }
 
-    public void OnAppearBegin()
-    {
-        if (hpGauge)
-        {
-            hpGauge.canvasGroup.alpha = 0;
-        }
-    }
-
-    public void OnAppearEnd()
-    {
-        if (hpGauge)
-        {
-            hpGauge.canvasGroup.alpha = 1;
-        }
-    }
-
     public void ReleaseSkills()
     {
         basicSkillGauge.Hide();

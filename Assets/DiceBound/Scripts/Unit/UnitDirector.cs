@@ -80,11 +80,7 @@ namespace DiceBound
 
         private void SellUnit(UnitCore unit)
         {
-            _allies.Remove(unit);
-            _units.Remove(unit);
-            //_unitPlaceDirector.RemoveUnit(unit);
-            _allyPrefabPool.Release(unit);
-            UpdateAllyCountText();
+            RemoveAllyUnit(unit);
             _walletDirector.PlayGainGoldEffect(trashCan.transform.position,50);
             BroAudio.Play(_soundDirector.sellUnitSFX);
         }
@@ -202,6 +198,14 @@ namespace DiceBound
             }
         }
         
+        public void RemoveAllyUnit(UnitCore unit)
+        {
+            _allies.Remove(unit);
+            _units.Remove(unit);
+            _unitPlaceDirector.RemoveUnit(unit);
+            _allyPrefabPool.Release(unit);
+            UpdateAllyCountText();
+        }
 
         public int GetEnemyUnitCount()
         {
@@ -311,6 +315,11 @@ namespace DiceBound
         public UnitDataTableRow GetUnitData(string id)
         {
             return _unitDataDictionary[id];
+        }
+
+        public bool IsAllyExist(string id)
+        {
+            return _allies.Exists(x=>x.GetId() == id);
         }
     }
 }

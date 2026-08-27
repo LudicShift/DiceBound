@@ -245,8 +245,11 @@ namespace DiceBound
 
         public void RemoveUnit(UnitCore unit)
         {
-            _placeDictionary[unit].RemoveUnit();
-            _placeDictionary.Remove(unit);
+            if (_placeDictionary.ContainsKey(unit))
+            {
+                _placeDictionary[unit].RemoveUnit();
+                _placeDictionary.Remove(unit);
+            }
         }
 
         public List<UnitCore> GetGeneralTargets(UnitGroup group, int count)

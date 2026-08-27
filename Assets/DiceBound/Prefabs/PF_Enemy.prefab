@@ -820,8 +820,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.UnitCore
   moveDuration: 0.3
-  hp: 0
+  _hp: 0
   group: 1
+  inputHandler: {fileID: 0}
   appearSequence: {fileID: 3717766180547962055}
   hitSequence: {fileID: 1292691626055214249}
   attackSequence: {fileID: 8356632432054330236}
@@ -988,7 +989,7 @@ MonoBehaviour:
   loopType: 1
   loops: 1
   id: 
-  isRelative: 1
+  isRelative: 0
   isFrom: 1
   isIndependentUpdate: 0
   autoKill: 0
@@ -996,13 +997,13 @@ MonoBehaviour:
   isActive: 1
   isValid: 1
   target: {fileID: 3189649902283032812}
-  animationType: 2
+  animationType: 5
   targetType: 11
   forcedTargetType: 0
   autoPlay: 0
   useTargetAsV3: 0
   endValueFloat: 0
-  endValueV3: {x: 100, y: 0, z: 0}
+  endValueV3: {x: 0, y: 0, z: 0}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
@@ -1013,7 +1014,7 @@ MonoBehaviour:
     width: 0
     height: 0
   endValueTransform: {fileID: 0}
-  optionalBool0: 0
+  optionalBool0: 1
   optionalBool1: 0
   optionalFloat0: 0.409
   optionalInt0: 1
@@ -1067,7 +1068,7 @@ MonoBehaviour:
   targetGO: {fileID: 2426898278721724553}
   tweenTargetIsTargetGO: 1
   delay: 0
-  duration: 0.1
+  duration: 1
   easeType: 6
   easeCurve:
     serializedVersion: 2
@@ -1096,8 +1097,8 @@ MonoBehaviour:
   loopType: 1
   loops: 1
   id: 
-  isRelative: 1
-  isFrom: 0
+  isRelative: 0
+  isFrom: 1
   isIndependentUpdate: 0
   autoKill: 0
   autoGenerate: 1
@@ -1112,7 +1113,7 @@ MonoBehaviour:
   endValueFloat: 0
   endValueV3: {x: -100, y: 0, z: 0}
   endValueV2: {x: 0, y: 0}
-  endValueColor: {r: 1, g: 1, b: 1, a: 1}
+  endValueColor: {r: 1, g: 1, b: 1, a: 0}
   endValueString: 
   endValueRect:
     serializedVersion: 2

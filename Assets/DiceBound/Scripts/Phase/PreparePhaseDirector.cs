@@ -14,7 +14,7 @@ namespace DiceBound
         Upgrade,
     }
     
-    public class PreparePhaseDirectorBase : PhaseDirectorBase
+    public class PreparePhaseDirector : PhaseDirectorBase
     {
         [SerializeField]
         private Canvas prepareCanvas;
@@ -33,6 +33,8 @@ namespace DiceBound
 
         private ShopDirector _shopDirector;
         private GameDirector _gameDirector;
+        private UnitFusionDirector _unitFusionDirector;
+        private UnitPlaceDirector _unitPlaceDirector;
 
         public override IEnumerator OnInitialize()
         {
@@ -42,6 +44,8 @@ namespace DiceBound
             shopButton.onClickAction += OnShopButtonClick;
             _gameDirector = DirectorFacade.GetDirector<GameDirector>();
             _shopDirector = DirectorFacade.GetDirector<ShopDirector>();
+            _unitFusionDirector = DirectorFacade.GetDirector<UnitFusionDirector>();
+            _unitPlaceDirector = DirectorFacade.GetDirector<UnitPlaceDirector>();
             yield return null;
         }
 
@@ -67,6 +71,7 @@ namespace DiceBound
 
         public void SetState(PrepareState prepareState)
         {
+            _unitPlaceDirector.SetEnable(true);
             _prepareState = prepareState;
             fusionButton.Show();
             upgradeButton.Show();
@@ -74,7 +79,7 @@ namespace DiceBound
             shopCanvas.Close();
             fusionCanvas.Close();
             upgradeCanvas.Close();
-            
+            _unitFusionDirector.OnEndFusionState();
             switch (_prepareState)
             {
                 case PrepareState.Shop:
@@ -84,6 +89,8 @@ namespace DiceBound
                 case PrepareState.Fusion:
                     fusionButton.Hide();
                     fusionCanvas.Open();
+                    _unitFusionDirector.OnBeginFusionState();
+                    _unitPlaceDirector.SetEnable(false);
                     break;
                 case PrepareState.Upgrade:
                     upgradeButton.Hide();
@@ -99,7 +106,8 @@ namespace DiceBound
         }
 
         public override void OnExit()
-        {
+        { 
+            _unitFusionDirector.OnEndFusionState();
             prepareCanvas.Close();
             shopCanvas.Close();
             fusionCanvas.Close();

@@ -36,7 +36,7 @@ namespace DiceBound
         public override IEnumerator OnInitialize()
         {
             StartCoroutine(GameRoutine());
-            _phaseDirectorDictionary.TryAdd(GamePhase.Prepare, DirectorFacade.GetDirector<PreparePhaseDirectorBase>());
+            _phaseDirectorDictionary.TryAdd(GamePhase.Prepare, DirectorFacade.GetDirector<PreparePhaseDirector>());
             _phaseDirectorDictionary.TryAdd(GamePhase.Battle, DirectorFacade.GetDirector<BattlePhaseDirectorBase>());
             _phaseDirectorDictionary.TryAdd(GamePhase.GameOver, null);
             _phaseDirectorDictionary.TryAdd(GamePhase.GameClear,null);

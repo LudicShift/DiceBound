@@ -33,7 +33,7 @@ namespace DiceBound
         private UnitInfoWidget _unitInfoWidget;
         private Animator _animator;
         private SpriteOutliner _outliner;
-        private UnitMergeEffectHandler _mergeEffectHandler;
+        private UnitFusionEffectHandler _fusionEffectHandler;
         [HideInInspector] public UnitInputHandler inputHandler;
 
 
@@ -66,7 +66,7 @@ namespace DiceBound
             _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
             _outliner = GetComponentInChildren<SpriteOutliner>();
             inputHandler = GetComponentInChildren<UnitInputHandler>();
-            _mergeEffectHandler = GetComponentInChildren<UnitMergeEffectHandler>();
+            _fusionEffectHandler = GetComponentInChildren<UnitFusionEffectHandler>();
             _animator = GetComponentInChildren<Animator>();
             _statAgent.AddStat("hp");
             _statAgent.AddStat("str");
@@ -121,6 +121,7 @@ namespace DiceBound
             this.group = group;
             _unitInfoWidget.SetFlip(group == UnitGroup.Enemy);
             _unitName = LocalizationManager.GetLocalizedText(data.nameKey);
+            _skills = new Dictionary<string, Skill>();
             attackType = data.attackType;
             
             BindAnimatorController(data.animator);
@@ -194,21 +195,12 @@ namespace DiceBound
             attackType = data.attackType;
             BindAnimatorController(data.animator);
         }
-
-        /// <summary>
-        /// 스프라이트를 기본 상태(제자리·불투명)로 되돌린다.
-        /// AppearSequence 의 From 트윈이 Awake 시점에 스프라이트를 화면 밖으로 밀어두기 때문에,
-        /// 등장 연출을 재생하지 않는 경우 이 메서드로 초기화한다.
-        /// </summary>
         public void ResetVisualState()
         {
             _spriteRenderer.transform.localPosition = Vector3.zero;
             _spriteRenderer.color = Color.white;
         }
-
-        /// <summary>
-        /// HP·사망 처리 없이 피격 연출만 재생한다. 연출 확인용 테스트 씬에서 사용.
-        /// </summary>
+        
         public void PlayHitAnimation()
         {
             if (_currentAnimation == "Idle" ||  _currentAnimation == "Hurt")
@@ -390,14 +382,8 @@ namespace DiceBound
 
         public void PlayAppear(Action onComplete = null)
         {
-            _spriteRenderer.color = new Color();
-
-            _unitInfoWidget.OnAppearBegin();
-
             StartCoroutine(appearSequence.Play(0.2f, () =>
             {
-                _unitInfoWidget.OnAppearEnd();
-
                 onComplete?.Invoke();
             }));
         }
@@ -406,17 +392,15 @@ namespace DiceBound
         {
             transform.SetParent(parent);
         }
-
-     
-
-        public IEnumerator ShowUpgradeEffect()
+        
+        public IEnumerator ShowFusionEffect()
         {
-            yield return _mergeEffectHandler.FadeIn();
+            yield return _fusionEffectHandler.FadeIn();
         }
 
-        public IEnumerator HideUpgradeEffect()
+        public IEnumerator HideFusionEffect()
         {
-            yield return _mergeEffectHandler.FadeOut();
+            yield return _fusionEffectHandler.FadeOut();
         }
 
         public string GetId()

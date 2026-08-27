@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace DiceBound
 {
-    public class UnitMergeEffectHandler : MonoBehaviour
+    public class UnitFusionEffectHandler : MonoBehaviour
     {
         private SpriteRenderer _spriteRenderer;
         [SerializeField]
@@ -14,9 +14,7 @@ namespace DiceBound
         private Material _original;
         
         private float _alpha;
-
-        public Ease fadeInEase;
-        public Ease fadeOutEase;
+        
         public void Awake()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -26,12 +24,12 @@ namespace DiceBound
         public IEnumerator FadeIn()
         {
             _spriteRenderer.material = mergeEffectMaterial;
-            yield return DOTween.To(x => _alpha = x, 0, 1, 0.1f).SetEase(fadeInEase).WaitForCompletion();
+            yield return DOTween.To(x => _alpha = x, 0, 1, 0.1f).WaitForCompletion();
         }
         
         public IEnumerator FadeOut()
         {
-          yield return  DOTween.To(x => _alpha = x, 1, 0, 1f).SetEase(fadeOutEase).WaitForCompletion();
+          yield return  DOTween.To(x => _alpha = x, 1, 0, 1f).WaitForCompletion();
           _spriteRenderer.material = _original;
         }
 
