@@ -78,10 +78,22 @@ namespace DiceBound
             yield return null;
         }
 
+        // 등급별 판매가 - 부스터팩/합성으로 그 등급을 얻는 데 드는 골드의 약 50%만 회수되도록 설계.
+        // (팩 1개=100골드, 합성은 한 등급 올릴 때마다 동일 등급 유닛 2개가 필요하므로 등급마다 비용이 2배씩 늘어난다)
+        private static readonly Dictionary<string, int> SellPriceByGrade = new Dictionary<string, int>
+        {
+            { "Common", 50 },
+            { "Rare", 100 },
+            { "Epic", 200 },
+            { "Legendary", 400 },
+        };
+
         private void SellUnit(UnitCore unit)
         {
+            var grade = unit.GetData().grade;
+            var price = SellPriceByGrade.TryGetValue(grade, out var value) ? value : 50;
             RemoveAllyUnit(unit);
-            _walletDirector.PlayGainGoldEffect(trashCan.transform.position,50);
+            _walletDirector.PlayGainGoldEffect(trashCan.transform.position,price);
             BroAudio.Play(_soundDirector.sellUnitSFX);
         }
 
@@ -150,11 +162,20 @@ namespace DiceBound
             if (autoPlacing)
             {
                 var cell = _unitPlaceDirector.GetRandomEmptyCell(group,instance.attackType);
-                _unitPlaceDirector.PlaceUnit(instance,cell);
-                instance.PlayAppear(()=>
+                if (cell != null)
                 {
-                    BroAudio.Play(_soundDirector.unitAppearSFX);
-                });
+                    _unitPlaceDirector.PlaceUnit(instance,cell);
+                    instance.PlayAppear(()=>
+                    {
+                        BroAudio.Play(_soundDirector.unitAppearSFX);
+                    });
+                }
+                else
+                {
+                    // 보드/로스터가 꽉 차서 배치할 빈 칸이 없는 경우 - 예전엔 여기서 그대로 null cell을 넘겨 크래시했음.
+                    Debug.LogWarning($"[UnitDirector] '{unitId}' 배치 실패: 빈 칸이 없습니다.");
+                    instance.ResetVisualState();
+                }
             }
             else
             {

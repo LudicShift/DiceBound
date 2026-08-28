@@ -24,6 +24,11 @@ public class UnitInfoWidget : WidgetBase
         hpGauge.Setup(maxHp, maxHp);
     }
 
+    public void SetHpGaugeColor(Color color)
+    {
+        hpGauge.image.color = color;
+    }
+
     public void SetHp(float hp)
     {
         hpGauge.OnChange(hp);

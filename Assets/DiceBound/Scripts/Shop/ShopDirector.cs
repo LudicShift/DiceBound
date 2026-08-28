@@ -95,7 +95,8 @@ namespace DiceBound.Shop
         public void TryPurchase(PurchaseWidget widget)
         {
             var gold = widget.GetCost();
-            if (_walletDirector.HasGold(gold))
+            // 로스터가 꽉 찬 상태로 유닛을 얻으면 배치할 칸이 없어 원점에 방치되므로, 애초에 구매 자체를 막는다.
+            if (_walletDirector.HasGold(gold) && !_unitDirector.IsAllyFull())
             {
                 _walletDirector.SpendGold(gold);
                 StartCoroutine(OpenBoosterPackRoutine(widget));

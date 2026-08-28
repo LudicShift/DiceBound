@@ -32,6 +32,7 @@ namespace DiceBound
         public RuntimeAnimatorController animator;
 
         public string grade;
+        public string race;
         public int maxSkillSlot;
 
         public int hp;

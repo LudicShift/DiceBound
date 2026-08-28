@@ -25,8 +25,17 @@ namespace DiceBound
         {
             var outputUnitData = selectedWidget.GetOutputUnitData();
             var sourceUnitData = selectedWidget.GetInputUnitData();
-            outputUnitIcon.sprite = outputUnitData.GetSprite();
-            outputUnitNameText.text = LocalizationManager.GetLocalizedText(outputUnitData.nameKey);
+            // outputUnitData가 null이면 "동일 유닛 3개 -> 다음 등급 무작위 1체" 레시피라 결과를 미리 보여줄 수 없다.
+            if (outputUnitData != null)
+            {
+                outputUnitIcon.sprite = outputUnitData.GetSprite();
+                outputUnitNameText.text = LocalizationManager.GetLocalizedText(outputUnitData.nameKey);
+            }
+            else
+            {
+                outputUnitIcon.sprite = null;
+                outputUnitNameText.text = "???";
+            }
             percentageText.text = $"{selectedWidget.GetPercentage():N0}%";
             ClearAllSource();
             for (int i = 0; i < sourceUnitData.Count; i++)

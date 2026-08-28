@@ -33,7 +33,16 @@ namespace DiceBound
                     inputList.Add(unitDataDictionary[input]);
                 }
 
-                item.Setup(unitDataDictionary[fusionData.outputUnit], inputList);
+                // outputUnit이 비어있으면 "동일 유닛 3개 -> 다음 등급 무작위 1체" 레시피 - 확정된 결과가 없음
+                unitDataDictionary.TryGetValue(fusionData.outputUnit, out var outputData);
+                if (fusionData.IsWildcard)
+                {
+                    item.SetupWildcard(fusionData.wildcardGrade, fusionData.requiredCount, LocalizationManager.GetLocalizedText(fusionData.nameKey));
+                }
+                else
+                {
+                    item.Setup(outputData, inputList, fusionData.IsRandomGradeUp);
+                }
                 _fusionUnitWidgets.Add(item);
                 fusionItemRoot.sizeDelta += new Vector2(0, 103f);
             }
@@ -65,6 +74,11 @@ namespace DiceBound
         public FusionItemWidget GetSelectedFusionItem()
         {
            return  _selectedFusionItem;
+        }
+
+        public void SetFusionButtonInteractable(bool value)
+        {
+            fusionButtonWidget.SetInteractable(value);
         }
     }
 }

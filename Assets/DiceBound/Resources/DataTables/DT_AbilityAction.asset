@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7298667179673654071
+--- !u!114 &-8755894836683440295
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -16,7 +16,7 @@ MonoBehaviour:
   tags: []
   isEnable: 1
   actionFunctionName: MeleeAttack
---- !u!114 &-6415919113453356854
+--- !u!114 &-2226831664251921365
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -32,7 +32,7 @@ MonoBehaviour:
   tags: []
   isEnable: 1
   actionFunctionName: Heal
---- !u!114 &-1144051835002816682
+--- !u!114 &-244156270570711751
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,12 +42,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 598896e4bb5e41349532ce8273b14f81, type: 3}
-  m_Name: RangedAttack
+  m_Name: MagicAttack
   m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityActionDataTableRow
-  id: RangedAttack
+  id: MagicAttack
   tags: []
   isEnable: 1
-  actionFunctionName: RangedAttack
+  actionFunctionName: MagicAttack
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,11 +65,11 @@ MonoBehaviour:
   rowTypeName: KCoreKit.AbilityActionDataTableRow, KCoreKit, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   dataList:
-  - {fileID: -7298667179673654071}
-  - {fileID: -1144051835002816682}
-  - {fileID: 9220049847531570505}
-  - {fileID: -6415919113453356854}
---- !u!114 &9220049847531570505
+  - {fileID: -8755894836683440295}
+  - {fileID: 4624468156050708037}
+  - {fileID: -244156270570711751}
+  - {fileID: -2226831664251921365}
+--- !u!114 &4624468156050708037
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -79,9 +79,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 598896e4bb5e41349532ce8273b14f81, type: 3}
-  m_Name: MagicAttack
+  m_Name: RangedAttack
   m_EditorClassIdentifier: KCoreKit::KCoreKit.AbilityActionDataTableRow
-  id: MagicAttack
+  id: RangedAttack
   tags: []
   isEnable: 1
-  actionFunctionName: MagicAttack
+  actionFunctionName: RangedAttack

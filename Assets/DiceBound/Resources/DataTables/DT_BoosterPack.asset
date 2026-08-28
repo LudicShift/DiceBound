@@ -1,22 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-4428218558080569331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b5e62d30e25404e9e7b91967fa80f2b, type: 3}
-  m_Name: PACK_INFERNAL
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.Shop.BoosterPackDataTableRow
-  id: PACK_INFERNAL
-  tags: []
-  isEnable: 1
-  cost: 100
-  texture: {fileID: 2800000, guid: fd897cb1ae742c34996b4ca381a9bf9e, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34,12 +17,12 @@ MonoBehaviour:
   rowTypeName: DiceBound.Shop.BoosterPackDataTableRow, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
   dataList:
-  - {fileID: 2441229873137961572}
-  - {fileID: 2549757173297611960}
-  - {fileID: 4157372909150024581}
-  - {fileID: 5433489141879920361}
-  - {fileID: -4428218558080569331}
---- !u!114 &2441229873137961572
+  - {fileID: 2235224887170351154}
+  - {fileID: 4265215343795401828}
+  - {fileID: 2628662028401990021}
+  - {fileID: 4957154536321840418}
+  - {fileID: 6615659979645564539}
+--- !u!114 &2235224887170351154
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -56,24 +39,7 @@ MonoBehaviour:
   isEnable: 1
   cost: 100
   texture: {fileID: 2800000, guid: 35ac1c3845217174380af42044692625, type: 3}
---- !u!114 &2549757173297611960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b5e62d30e25404e9e7b91967fa80f2b, type: 3}
-  m_Name: PACK_UNDEAD
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.Shop.BoosterPackDataTableRow
-  id: PACK_UNDEAD
-  tags: []
-  isEnable: 1
-  cost: 100
-  texture: {fileID: 2800000, guid: b4a4a2609b50f194e95900cdde05db53, type: 3}
---- !u!114 &4157372909150024581
+--- !u!114 &2628662028401990021
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,7 +56,24 @@ MonoBehaviour:
   isEnable: 1
   cost: 100
   texture: {fileID: 2800000, guid: 82f324d4ef2ebfd4f9e53eb7106f146a, type: 3}
---- !u!114 &5433489141879920361
+--- !u!114 &4265215343795401828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b5e62d30e25404e9e7b91967fa80f2b, type: 3}
+  m_Name: PACK_UNDEAD
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.Shop.BoosterPackDataTableRow
+  id: PACK_UNDEAD
+  tags: []
+  isEnable: 1
+  cost: 100
+  texture: {fileID: 2800000, guid: b4a4a2609b50f194e95900cdde05db53, type: 3}
+--- !u!114 &4957154536321840418
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,3 +90,20 @@ MonoBehaviour:
   isEnable: 1
   cost: 100
   texture: {fileID: 2800000, guid: fc8751f2f5105c8469226afc63530a64, type: 3}
+--- !u!114 &6615659979645564539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b5e62d30e25404e9e7b91967fa80f2b, type: 3}
+  m_Name: PACK_INFERNAL
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.Shop.BoosterPackDataTableRow
+  id: PACK_INFERNAL
+  tags: []
+  isEnable: 1
+  cost: 100
+  texture: {fileID: 2800000, guid: fd897cb1ae742c34996b4ca381a9bf9e, type: 3}

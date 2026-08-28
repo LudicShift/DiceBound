@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8062345167505456547
+--- !u!114 &-6998633032818846047
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -17,9 +17,9 @@ MonoBehaviour:
   isEnable: 1
   boosterPackId: PACK_HUMAN
   itemType: 0
-  itemId: UN_SOLDIER
+  itemId: UN_ARCHER
   weight: 1
---- !u!114 &-3563026660940482607
+--- !u!114 &-6845534166776955849
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -36,9 +36,9 @@ MonoBehaviour:
   isEnable: 1
   boosterPackId: PACK_UNDEAD
   itemType: 0
-  itemId: UN_SKELARCHER
+  itemId: UN_SKELETON
   weight: 1
---- !u!114 &-515788189511574954
+--- !u!114 &-6652710412871300783
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,14 +48,71 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b465b3f076084034a0b9c4b0310584fe, type: 3}
-  m_Name: PD_1
+  m_Name: PI_3
   m_EditorClassIdentifier: Assembly-CSharp::DiceBound.Shop.BoosterPackItemPoolDataTableRow
-  id: PD_1
+  id: PI_3
+  tags: []
+  isEnable: 1
+  boosterPackId: PACK_INFERNAL
+  itemType: 0
+  itemId: UN_GHOSTFIRE
+  weight: 1
+--- !u!114 &-5335545469621609282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b465b3f076084034a0b9c4b0310584fe, type: 3}
+  m_Name: PI_1
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.Shop.BoosterPackItemPoolDataTableRow
+  id: PI_1
+  tags: []
+  isEnable: 1
+  boosterPackId: PACK_INFERNAL
+  itemType: 0
+  itemId: UN_LAVA_SLIME
+  weight: 1
+--- !u!114 &-4385437033013716533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b465b3f076084034a0b9c4b0310584fe, type: 3}
+  m_Name: PI_2
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.Shop.BoosterPackItemPoolDataTableRow
+  id: PI_2
+  tags: []
+  isEnable: 1
+  boosterPackId: PACK_INFERNAL
+  itemType: 0
+  itemId: UN_HELLBAT
+  weight: 1
+--- !u!114 &-3337202570596946306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b465b3f076084034a0b9c4b0310584fe, type: 3}
+  m_Name: PD_2
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.Shop.BoosterPackItemPoolDataTableRow
+  id: PD_2
   tags: []
   isEnable: 1
   boosterPackId: PACK_DEMON
   itemType: 0
-  itemId: UN_WEREWOLF
+  itemId: UN_DEMON_B
   weight: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -74,73 +131,20 @@ MonoBehaviour:
   rowTypeName: DiceBound.Shop.BoosterPackItemPoolDataTableRow, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
   dataList:
-  - {fileID: 1036804687719097353}
-  - {fileID: -8062345167505456547}
-  - {fileID: 7427716348089064094}
-  - {fileID: 3005809169872017483}
-  - {fileID: 9107557008688581071}
-  - {fileID: -3563026660940482607}
-  - {fileID: 4366691165628081263}
-  - {fileID: -515788189511574954}
-  - {fileID: 2732879878248335463}
---- !u!114 &1036804687719097353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b465b3f076084034a0b9c4b0310584fe, type: 3}
-  m_Name: PH_1
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.Shop.BoosterPackItemPoolDataTableRow
-  id: PH_1
-  tags: []
-  isEnable: 1
-  boosterPackId: PACK_HUMAN
-  itemType: 0
-  itemId: UN_ARCHER
-  weight: 1
---- !u!114 &2732879878248335463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b465b3f076084034a0b9c4b0310584fe, type: 3}
-  m_Name: PI_1
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.Shop.BoosterPackItemPoolDataTableRow
-  id: PI_1
-  tags: []
-  isEnable: 1
-  boosterPackId: PACK_INFERNAL
-  itemType: 0
-  itemId: UN_ELITEORC
-  weight: 1
---- !u!114 &3005809169872017483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b465b3f076084034a0b9c4b0310584fe, type: 3}
-  m_Name: PU_1
-  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.Shop.BoosterPackItemPoolDataTableRow
-  id: PU_1
-  tags: []
-  isEnable: 1
-  boosterPackId: PACK_UNDEAD
-  itemType: 0
-  itemId: UN_BAT
-  weight: 1
---- !u!114 &4366691165628081263
+  - {fileID: 3467090219148133100}
+  - {fileID: -6998633032818846047}
+  - {fileID: 5647123297213034260}
+  - {fileID: 3687455330907376570}
+  - {fileID: 7970595094295909075}
+  - {fileID: -6845534166776955849}
+  - {fileID: 177176360731986292}
+  - {fileID: 854625025526727248}
+  - {fileID: -3337202570596946306}
+  - {fileID: -5335545469621609282}
+  - {fileID: -4385437033013716533}
+  - {fileID: -6652710412871300783}
+  - {fileID: 1810580485069785068}
+--- !u!114 &177176360731986292
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,9 +161,85 @@ MonoBehaviour:
   isEnable: 1
   boosterPackId: PACK_BEAST
   itemType: 0
-  itemId: UN_ORCRIDER
+  itemId: UN_ORC
   weight: 1
---- !u!114 &7427716348089064094
+--- !u!114 &854625025526727248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b465b3f076084034a0b9c4b0310584fe, type: 3}
+  m_Name: PD_1
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.Shop.BoosterPackItemPoolDataTableRow
+  id: PD_1
+  tags: []
+  isEnable: 1
+  boosterPackId: PACK_DEMON
+  itemType: 0
+  itemId: UN_DEMON_A
+  weight: 1
+--- !u!114 &1810580485069785068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b465b3f076084034a0b9c4b0310584fe, type: 3}
+  m_Name: PI_4
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.Shop.BoosterPackItemPoolDataTableRow
+  id: PI_4
+  tags: []
+  isEnable: 1
+  boosterPackId: PACK_INFERNAL
+  itemType: 0
+  itemId: UN_BLOOD_MONSTER_B
+  weight: 1
+--- !u!114 &3467090219148133100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b465b3f076084034a0b9c4b0310584fe, type: 3}
+  m_Name: PH_1
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.Shop.BoosterPackItemPoolDataTableRow
+  id: PH_1
+  tags: []
+  isEnable: 1
+  boosterPackId: PACK_HUMAN
+  itemType: 0
+  itemId: UN_SOLDIER
+  weight: 1
+--- !u!114 &3687455330907376570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b465b3f076084034a0b9c4b0310584fe, type: 3}
+  m_Name: PU_1
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.Shop.BoosterPackItemPoolDataTableRow
+  id: PU_1
+  tags: []
+  isEnable: 1
+  boosterPackId: PACK_UNDEAD
+  itemType: 0
+  itemId: UN_SLIME
+  weight: 1
+--- !u!114 &5647123297213034260
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -178,7 +258,7 @@ MonoBehaviour:
   itemType: 0
   itemId: UN_WIZARD
   weight: 1
---- !u!114 &9107557008688581071
+--- !u!114 &7970595094295909075
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -195,5 +275,5 @@ MonoBehaviour:
   isEnable: 1
   boosterPackId: PACK_UNDEAD
   itemType: 0
-  itemId: UN_SKELETON
+  itemId: UN_BAT
   weight: 1

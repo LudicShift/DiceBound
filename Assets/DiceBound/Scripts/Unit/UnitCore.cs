@@ -11,6 +11,15 @@ namespace DiceBound
 {
     public class UnitCore : MonoBehaviour
     {
+        // 등급별 체력바 색상 - 어떤 유닛이 무슨 등급인지 한눈에 구분되도록 (기획 요청).
+        private static readonly Dictionary<string, Color> GradeColors = new Dictionary<string, Color>
+        {
+            { "Common", new Color(0.78f, 0.78f, 0.78f) },     // 회백색
+            { "Rare", new Color(0.30f, 0.55f, 0.95f) },       // 파랑
+            { "Epic", new Color(0.65f, 0.35f, 0.95f) },       // 보라
+            { "Legendary", new Color(1f, 0.72f, 0.15f) },     // 금색
+        };
+
         private UnitDataTableRow _data;
         [SerializeField] private float moveDuration = 0.3f;
 
@@ -117,6 +126,8 @@ namespace DiceBound
         
         public void Setup(UnitDataTableRow data, UnitGroup group)
         {
+            // 풀에서 재사용된 인스턴스가 이전 유닛의 연출(Tweens)로 흐트러진 Sprite 트랜스폼을 물려받지 않도록 방어적으로 초기화.
+            ResetVisualState();
             _data = data;
             this.group = group;
             _unitInfoWidget.SetFlip(group == UnitGroup.Enemy);
@@ -146,6 +157,8 @@ namespace DiceBound
             tooltipProvider.SetText("desc",GetTooltipText());
             _hp = StatUtility.GetMaxHp(_statAgent);
             _unitInfoWidget.SetMaxHp(_hp);
+            var gradeColor = GradeColors.TryGetValue(data.grade, out var color) ? color : Color.white;
+            _unitInfoWidget.SetHpGaugeColor(gradeColor);
         }
 
         private string GetTooltipText()
@@ -436,6 +449,9 @@ namespace DiceBound
 
         public void OnRelease()
         {
+            // 죽음/합성 등으로 연출(Tweens) 도중 풀에 반납되면 Sprite 트랜스폼이 흐트러진 채로 남을 수 있다.
+            // 다음에 이 인스턴스를 재사용할 때(다른 유닛일 수도 있음) 그대로 물려받아 UI/외형이 어긋나므로 여기서 원상복구한다.
+            ResetVisualState();
             _unitInfoWidget.ReleaseSkills();
             onDeadAction = null;
             onHitAction = null;

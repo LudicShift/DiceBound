@@ -1,5 +1,189 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8703890420552558510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018c52710cee43b9b62da2ac2a9ea970, type: 3}
+  m_Name: FR_ANGEL_PRIEST
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitFusionDataTableRow
+  id: FR_ANGEL_PRIEST
+  tags:
+  - Angel
+  isEnable: 1
+  inputUnit1: UN_SOLDIER
+  inputUnit2: UN_WIZARD
+  inputUnit3: 
+  outputUnit: UN_PRIEST
+  wildcardGrade: 
+  requiredCount: 0
+  nameKey: 
+--- !u!114 &-6557943406345466288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018c52710cee43b9b62da2ac2a9ea970, type: 3}
+  m_Name: FR_GRADEUP_RARE
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitFusionDataTableRow
+  id: FR_GRADEUP_RARE
+  tags:
+  - GradeUp
+  isEnable: 1
+  inputUnit1: 
+  inputUnit2: 
+  inputUnit3: 
+  outputUnit: 
+  wildcardGrade: Rare
+  requiredCount: 2
+  nameKey: FUSION_GRADEUP_RARE_NAME
+--- !u!114 &-5733053953569147234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018c52710cee43b9b62da2ac2a9ea970, type: 3}
+  m_Name: FR_0026
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitFusionDataTableRow
+  id: FR_0026
+  tags:
+  - Legendary
+  isEnable: 1
+  inputUnit1: UN_ARMORED_SKELETON
+  inputUnit2: UN_GREATSWORD_SKELETON
+  inputUnit3: 
+  outputUnit: UN_NECROMANCER
+  wildcardGrade: 
+  requiredCount: 0
+  nameKey: 
+--- !u!114 &-5396521664721576754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018c52710cee43b9b62da2ac2a9ea970, type: 3}
+  m_Name: FR_0029
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitFusionDataTableRow
+  id: FR_0029
+  tags:
+  - Legendary
+  isEnable: 1
+  inputUnit1: UN_SWORDSMAN
+  inputUnit2: UN_LANCER
+  inputUnit3: 
+  outputUnit: UN_GRAND_GENERAL
+  wildcardGrade: 
+  requiredCount: 0
+  nameKey: 
+--- !u!114 &-5373361571920263203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018c52710cee43b9b62da2ac2a9ea970, type: 3}
+  m_Name: FR_ANGEL_KNIGHT
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitFusionDataTableRow
+  id: FR_ANGEL_KNIGHT
+  tags:
+  - Angel
+  isEnable: 1
+  inputUnit1: UN_SWORDSMAN
+  inputUnit2: UN_LANCER
+  inputUnit3: 
+  outputUnit: UN_KNIGHT
+  wildcardGrade: 
+  requiredCount: 0
+  nameKey: 
+--- !u!114 &-3054158475655167637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018c52710cee43b9b62da2ac2a9ea970, type: 3}
+  m_Name: FR_0030
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitFusionDataTableRow
+  id: FR_0030
+  tags:
+  - Legendary
+  isEnable: 1
+  inputUnit1: UN_DEMON_D
+  inputUnit2: UN_WARLOCK
+  inputUnit3: 
+  outputUnit: UN_DEMON_E
+  wildcardGrade: 
+  requiredCount: 0
+  nameKey: 
+--- !u!114 &-2817928899448306429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018c52710cee43b9b62da2ac2a9ea970, type: 3}
+  m_Name: FR_0027
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitFusionDataTableRow
+  id: FR_0027
+  tags:
+  - Legendary
+  isEnable: 1
+  inputUnit1: UN_FLAME_GOLEM
+  inputUnit2: UN_WARLOCK
+  inputUnit3: 
+  outputUnit: UN_MINOTAUR
+  wildcardGrade: 
+  requiredCount: 0
+  nameKey: 
+--- !u!114 &-1819214782026252144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018c52710cee43b9b62da2ac2a9ea970, type: 3}
+  m_Name: FR_0025
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitFusionDataTableRow
+  id: FR_0025
+  tags:
+  - Legendary
+  isEnable: 1
+  inputUnit1: UN_KNIGHT
+  inputUnit2: UN_ARMORED_AXEMAN
+  inputUnit3: 
+  outputUnit: UN_KNIGHT_TEMPLAR
+  wildcardGrade: 
+  requiredCount: 0
+  nameKey: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17,8 +201,18 @@ MonoBehaviour:
   rowTypeName: DiceBound.UnitFusionDataTableRow, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
   dataList:
-  - {fileID: 4949806354540165658}
---- !u!114 &4949806354540165658
+  - {fileID: 7277056246605075947}
+  - {fileID: -6557943406345466288}
+  - {fileID: -8703890420552558510}
+  - {fileID: -5373361571920263203}
+  - {fileID: -1819214782026252144}
+  - {fileID: 7067170367605489661}
+  - {fileID: -5396521664721576754}
+  - {fileID: -3054158475655167637}
+  - {fileID: 591928780064871706}
+  - {fileID: -5733053953569147234}
+  - {fileID: -2817928899448306429}
+--- !u!114 &591928780064871706
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -28,11 +222,62 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 018c52710cee43b9b62da2ac2a9ea970, type: 3}
-  m_Name: M_01
+  m_Name: FR_0031
   m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitFusionDataTableRow
-  id: M_01
-  tags: []
+  id: FR_0031
+  tags:
+  - Legendary
   isEnable: 1
-  inputUnit1: UN_SOLDIER
-  inputUnit2: UN_ARCHER
-  outputUnit: UN_LANCER
+  inputUnit1: UN_BLACK_KNIGHT_B
+  inputUnit2: UN_DEMONESS_B
+  inputUnit3: 
+  outputUnit: UN_BLACK_KNIGHT_C
+  wildcardGrade: 
+  requiredCount: 0
+  nameKey: 
+--- !u!114 &7067170367605489661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018c52710cee43b9b62da2ac2a9ea970, type: 3}
+  m_Name: FR_0028
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitFusionDataTableRow
+  id: FR_0028
+  tags:
+  - Legendary
+  isEnable: 1
+  inputUnit1: UN_ARMORED_ORC
+  inputUnit2: UN_ORC_RIDER
+  inputUnit3: 
+  outputUnit: UN_ELITE_ORC
+  wildcardGrade: 
+  requiredCount: 0
+  nameKey: 
+--- !u!114 &7277056246605075947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018c52710cee43b9b62da2ac2a9ea970, type: 3}
+  m_Name: FR_GRADEUP_COMMON
+  m_EditorClassIdentifier: Assembly-CSharp::DiceBound.UnitFusionDataTableRow
+  id: FR_GRADEUP_COMMON
+  tags:
+  - GradeUp
+  isEnable: 1
+  inputUnit1: 
+  inputUnit2: 
+  inputUnit3: 
+  outputUnit: 
+  wildcardGrade: Common
+  requiredCount: 2
+  nameKey: FUSION_GRADEUP_COMMON_NAME

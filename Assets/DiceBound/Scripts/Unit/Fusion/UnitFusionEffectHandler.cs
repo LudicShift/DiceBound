@@ -29,7 +29,7 @@ namespace DiceBound
         
         public IEnumerator FadeOut()
         {
-          yield return  DOTween.To(x => _alpha = x, 1, 0, 1f).WaitForCompletion();
+          yield return  DOTween.To(x => _alpha = x, 1, 0, 0.35f).WaitForCompletion();
           _spriteRenderer.material = _original;
         }
 
