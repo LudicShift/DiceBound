@@ -87,7 +87,6 @@ namespace DiceBound
                         break;
                     case RoundType.Pvp:
                         var snapshot = _wavePvpCacheData[index];
-
                         if (snapshot == null)
                         { 
                             snapshot = ownSnapshot;

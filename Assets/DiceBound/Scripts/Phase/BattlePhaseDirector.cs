@@ -56,7 +56,7 @@ namespace DiceBound
         private GameDirector _gameDirector;
         
         private int _currentWave;
-        private float _battleTimeScale;
+        private float _battleTimeScale = 1;
         private bool _fastMode;
         private UnitPlaceDirector _unitPlaceDirector;
         private WalletDirector _walletDirector;
@@ -82,18 +82,27 @@ namespace DiceBound
 
         public IEnumerator BeginBattle()
         {
+         
+            yield return _waveDirector.BeginWaveRoutine(_currentWave);
             var units = _unitDirector.GetAllUnit();
             foreach (var unit in units)
             {
                 unit.OnBattleBegin();
             }
-            yield return _waveDirector.BeginWaveRoutine(_currentWave);
             _isBattle = true;
             Time.timeScale = _battleTimeScale;
             _unitPlaceDirector.SetEnable(false);
             waveTextWidget.SetText($"{_currentWave + 1}");
+
+            StartCoroutine(BattleRoutine());
         }
-        
+
+        private IEnumerator BattleRoutine()
+        {
+            yield return new WaitUntil(()=>_unitDirector.GetEnemyUnitCount() == 0 || _unitDirector.GetAllyUnitCount() == _unitDirector.GetDeadAllyUnitCount());
+            EndBattle();
+        }
+
 
         public void SetBattleTimeScale(float timeScale)
         {
@@ -174,11 +183,6 @@ namespace DiceBound
                         context.self.battleContext = context;
                         StartCoroutine(ExecuteBattleContext(context.self.battleContext));
                     }
-                }
-                
-                if(_unitDirector.GetEnemyUnitCount() == 0 || _unitDirector.GetAllyUnitCount() == _unitDirector.GetDeadAllyUnitCount());
-                {
-                    EndBattle();
                 }
             }
         }

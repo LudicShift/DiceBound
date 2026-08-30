@@ -165,10 +165,6 @@ namespace DiceBound
                 if (cell != null)
                 {
                     _unitPlaceDirector.PlaceUnit(instance,cell);
-                    instance.PlayAppear(()=>
-                    {
-                        BroAudio.Play(_soundDirector.unitAppearSFX);
-                    });
                 }
                 else
                 {
@@ -181,6 +177,10 @@ namespace DiceBound
             {
                 instance.ResetVisualState();
             }
+            instance.PlayAppear(()=>
+            {
+                BroAudio.Play(_soundDirector.unitAppearSFX);
+            });
             return instance;
         }
 
