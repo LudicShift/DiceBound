@@ -51,7 +51,17 @@ namespace DiceBound
         private IEnumerator PrepareWaves()
         {
             yield return DirectorFacade.WaitUntilInitialized();
-            _wavePvpCacheData = _asyncPvpDirector.PrepareBattleDataList(30).Result;
+
+            var task = _asyncPvpDirector.PrepareBattleDataList(30);
+            yield return new WaitUntil(() => task.IsCompleted);
+
+            if (task.IsFaulted)
+            {
+                Debug.LogError($"[AsyncPvp] PrepareBattleDataList 실패: {task.Exception}");
+                yield break;
+            }
+
+            _wavePvpCacheData = task.Result;
         }
 
 

@@ -82,14 +82,13 @@ namespace DiceBound
 
         public IEnumerator BeginBattle()
         {
-            _isBattle = true;
             var units = _unitDirector.GetAllUnit();
             foreach (var unit in units)
             {
                 unit.OnBattleBegin();
             }
-            
             yield return _waveDirector.BeginWaveRoutine(_currentWave);
+            _isBattle = true;
             Time.timeScale = _battleTimeScale;
             _unitPlaceDirector.SetEnable(false);
             waveTextWidget.SetText($"{_currentWave + 1}");
@@ -309,7 +308,7 @@ namespace DiceBound
         {
             battleCanvas.Open();
           
-            BeginBattle();
+            StartCoroutine(BeginBattle());
         }
 
         public override void OnExit()
