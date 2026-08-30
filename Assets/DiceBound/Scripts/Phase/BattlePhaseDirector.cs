@@ -148,6 +148,7 @@ namespace DiceBound
             opponentNameText.Hide();
             _unitPlaceDirector.SetEnable(true);
             _isBattle = false;
+            _currentWave++;
             _gameDirector.SetGamePhase(GamePhase.Prepare);
             var units = _unitDirector.GetAllUnit();
             foreach (var unit in units)
