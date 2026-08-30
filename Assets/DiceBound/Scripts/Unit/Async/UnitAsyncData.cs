@@ -17,6 +17,7 @@ namespace DiceBound
         public string ownerId;
         public int waveIndex;
         public long capturedAtUnixSeconds;
+        
         public List<UnitAsyncData> units = new List<UnitAsyncData>();
     }
 }

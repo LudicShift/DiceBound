@@ -28,7 +28,7 @@ namespace DiceBound
         private List<UnitCore> _deadAllies = new List<UnitCore>();
 
         private SkillDirector _skillDirector;
-        private BattlePhaseDirectorBase _battlePhaseDirectorBase;
+        private BattlePhaseDirector _battlePhaseDirector;
         private UnitPlaceDirector _unitPlaceDirector;
         private TooltipDirector _tooltipDirector;
         private WalletDirector _walletDirector;
@@ -70,7 +70,7 @@ namespace DiceBound
             _soundDirector = DirectorFacade.GetDirector<SoundDirector>();
             _unitPlaceDirector = DirectorFacade.GetDirector<UnitPlaceDirector>();
             _skillDirector = DirectorFacade.GetDirector<SkillDirector>();
-            _battlePhaseDirectorBase = DirectorFacade.GetDirector<BattlePhaseDirectorBase>();
+            _battlePhaseDirector = DirectorFacade.GetDirector<BattlePhaseDirector>();
             _walletDirector = DirectorFacade.GetDirector<WalletDirector>();
 
             _camera = CameraManager.GetMainCamera();
@@ -107,7 +107,7 @@ namespace DiceBound
 
         private void OnUnitDodge(UnitCore unit)
         {
-            _battlePhaseDirectorBase.ShowMiss(unit);
+            _battlePhaseDirector.ShowMiss(unit);
         }
 
         private void OnGetUnit(UnitCore instance)
@@ -187,12 +187,12 @@ namespace DiceBound
        
         private void OnUnitHeal(UnitCore core, int damage)
         {
-            _battlePhaseDirectorBase.ShowHeal(core, damage);
+            _battlePhaseDirector.ShowHeal(core, damage);
         }
 
         private void OnUnitHit(UnitCore core, int damage,bool isCritical)
         {
-            _battlePhaseDirectorBase.ShowDamage(core, damage,isCritical);
+            _battlePhaseDirector.ShowDamage(core, damage,isCritical);
         }
 
         private void OnUnitDead(UnitCore unit)

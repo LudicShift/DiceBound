@@ -5,12 +5,12 @@ namespace DiceBound
 {
     public class SkillAbilityAction
     {
-        private static BattlePhaseDirectorBase _battlePhaseDirectorBase;
+        private static BattlePhaseDirector _battlePhaseDirector;
         private static UnitDirector _unitDirector;
 
         public static void Setup()
         {
-            _battlePhaseDirectorBase = DirectorFacade.GetDirector<BattlePhaseDirectorBase>();
+            _battlePhaseDirector = DirectorFacade.GetDirector<BattlePhaseDirector>();
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
         }
 
@@ -22,7 +22,7 @@ namespace DiceBound
             foreach (var target in targetList)
             {
                 var targetStatAgent = target.GetStatAgent();
-                _battlePhaseDirectorBase.EnqueueContext(new BattleContext()
+                _battlePhaseDirector.EnqueueContext(new BattleContext()
                 {
                     self = context.self,
                     priority = context.priority,
@@ -39,7 +39,7 @@ namespace DiceBound
 
         private static void Healing(SkillAbilityContext context, UnitCore target, float healPower)
         {
-            _battlePhaseDirectorBase.EnqueueContext(new BattleContext()
+            _battlePhaseDirector.EnqueueContext(new BattleContext()
             {
                 self = context.self,
                 priority = context.priority,
@@ -61,7 +61,7 @@ namespace DiceBound
             foreach (var target in targetList)
             {
                 var targetStatAgent = target.GetStatAgent();
-                _battlePhaseDirectorBase.EnqueueContext(new BattleContext()
+                _battlePhaseDirector.EnqueueContext(new BattleContext()
                 {
                     self = context.self,
                     priority = context.priority,
@@ -83,7 +83,7 @@ namespace DiceBound
             foreach (var target in targetList)
             {
                 var targetStatAgent = target.GetStatAgent();
-                _battlePhaseDirectorBase.EnqueueContext(new BattleContext()
+                _battlePhaseDirector.EnqueueContext(new BattleContext()
                 {
                     self = context.self,
                     priority = context.priority,
@@ -105,7 +105,7 @@ namespace DiceBound
             foreach (var target in targetList)
             {
                 var targetStatAgent = target.GetStatAgent();
-                _battlePhaseDirectorBase.EnqueueContext(new BattleContext()
+                _battlePhaseDirector.EnqueueContext(new BattleContext()
                 {
                     self = context.self,
                     priority = context.priority,

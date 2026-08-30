@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Ami.BroAudio;
 using DG.Tweening;
 using KCoreKit;
 using KCoreKit.Scripts.Common;
@@ -16,45 +17,129 @@ namespace DiceBound
         Heal
     }
 
-    public class BattlePhaseDirectorBase : PhaseDirectorBase
+    public class BattlePhaseDirector : PhaseDirectorBase
     {
         private UnitDirector _unitDirector;
+        
+        [SerializeField] private TextWidget waveTextWidget;
+
+        [SerializeField] private ButtonWidget timeScaleButton;
+        [SerializeField] private Color timeScaleButtonActiveColor;
+        [SerializeField] private Color timeScaleButtonInactiveColor;
 
         [SerializeField] private Canvas damageCanvas;
         [SerializeField] private Canvas battleCanvas;
+       
+        [SerializeField] private TextWidget winCountText;
+        [SerializeField] private TextWidget lossCountText;
+       
+        [SerializeField] private Canvas gameOverCanvas;
+        [SerializeField] private Canvas gameClearCanvas;
+
+        [SerializeField] private TextWidget opponentNameText;
+
+        
+        private const int RequiredWins = 10;
+        private const int MaxLosses = 5;
+        private int _winCount;
+        private int _lossCount;
+
+        
         private PrefabPool<DamageWidget> _damageWidgetPool;
 
         private Queue<BattleContext> _battleContextQueue = new Queue<BattleContext>();
-        private bool _isPlaying;
+        private bool _isBattle;
         private SkillDirector _skillDirector;
         
         private Dictionary<UnitCore, int> _hitCountMap = new Dictionary<UnitCore, int>();
         private WaveDirector _waveDirector;
         private GameDirector _gameDirector;
+        
+        private int _currentWave;
+        private float _battleTimeScale;
+        private bool _fastMode;
+        private UnitPlaceDirector _unitPlaceDirector;
+        private WalletDirector _walletDirector;
+        private SoundDirector _soundDirector;
 
         public override IEnumerator OnInitialize()
         {
+            _walletDirector = DirectorFacade.GetDirector<WalletDirector>();
+            _soundDirector = DirectorFacade.GetDirector<SoundDirector>();
+            _unitPlaceDirector = DirectorFacade.GetDirector<UnitPlaceDirector>();
             _damageWidgetPool = new PrefabPool<DamageWidget>(PrefabManager.CachePrefab<DamageWidget>(), damageCanvas.transform, 20);
             _gameDirector = DirectorFacade.GetDirector<GameDirector>();
             _waveDirector = DirectorFacade.GetDirector<WaveDirector>();
             _unitDirector = DirectorFacade.GetDirector<UnitDirector>();
              _skillDirector = DirectorFacade.GetDirector<SkillDirector>();
-            yield return null;
+             timeScaleButton.onClickAction += OnClickBattleTimeScaleButton;
+             
+             opponentNameText.Hide();
+             UpdateLivesUI();
+             
+             yield return null;
         }
 
-        public void BeginBattle()
+        public IEnumerator BeginBattle()
         {
-            _isPlaying = true;
+            _isBattle = true;
             var units = _unitDirector.GetAllUnit();
             foreach (var unit in units)
             {
                 unit.OnBattleBegin();
             }
+            
+            yield return _waveDirector.BeginWaveRoutine(_currentWave);
+            Time.timeScale = _battleTimeScale;
+            _unitPlaceDirector.SetEnable(false);
+            waveTextWidget.SetText($"{_currentWave + 1}");
+        }
+        
+
+        public void SetBattleTimeScale(float timeScale)
+        {
+            _battleTimeScale = timeScale;    
+        }
+        
+        public void OnClickBattleTimeScaleButton()
+        {
+            _fastMode = !_fastMode;
+            SetBattleTimeScale(_fastMode ? 2 : 1);
+            timeScaleButton.image.color = _fastMode ? timeScaleButtonActiveColor : timeScaleButtonInactiveColor;
+            if (_isBattle)
+            {
+                Time.timeScale = _battleTimeScale;
+            }
         }
 
         public void EndBattle()
         {
-            _isPlaying = false;
+            if (_unitDirector.GetEnemyUnitCount() == 0)
+            {
+                _unitDirector.ClearDeadAllies();
+                var waveData = _waveDirector.GetWave(_currentWave);
+                _walletDirector.AddGold(Mathf.RoundToInt(waveData.waveRewardGold));
+                StartCoroutine(_waveDirector.EndWaveRoutine());
+                _winCount++;
+                UpdateLivesUI();
+                if (_winCount >= RequiredWins)
+                {
+                    ShowGameClear();
+                }
+            }
+            else if (_unitDirector.GetAllyUnitCount() == _unitDirector.GetDeadAllyUnitCount())
+            {
+                _lossCount++;
+                UpdateLivesUI();
+                if (_lossCount >= MaxLosses)
+                {
+                    ShowGameOver();
+                }
+            }
+            _unitDirector.ClearAllEnemies();
+            opponentNameText.Hide();
+            _unitPlaceDirector.SetEnable(true);
+            _isBattle = false;
             _gameDirector.SetGamePhase(GamePhase.Prepare);
             var units = _unitDirector.GetAllUnit();
             foreach (var unit in units)
@@ -64,10 +149,22 @@ namespace DiceBound
 
             _battleContextQueue.Clear();
         }
+        
+        private void ShowGameClear()
+        {
+            gameClearCanvas.gameObject.SetActive(true);
+            BroAudio.Play(_soundDirector.gameClearSFX);
+        }
 
+        private void ShowGameOver()
+        {
+            gameOverCanvas.gameObject.SetActive(true);
+            BroAudio.Play(_soundDirector.gameOverSFX);
+        }
+        
         public void Update()
         {
-            if (_isPlaying)
+            if (_isBattle)
             {
                 if (_battleContextQueue.Count > 0)
                 {
@@ -78,6 +175,11 @@ namespace DiceBound
                         context.self.battleContext = context;
                         StartCoroutine(ExecuteBattleContext(context.self.battleContext));
                     }
+                }
+                
+                if(_unitDirector.GetEnemyUnitCount() == 0 || _unitDirector.GetAllyUnitCount() == _unitDirector.GetDeadAllyUnitCount());
+                {
+                    EndBattle();
                 }
             }
         }
@@ -206,12 +308,19 @@ namespace DiceBound
         public override void OnEnter()
         {
             battleCanvas.Open();
-            _waveDirector.PlayWave();
+          
+            BeginBattle();
         }
 
         public override void OnExit()
         {
             battleCanvas.Close();
+        }
+        
+        private void UpdateLivesUI()
+        {
+            winCountText.SetText($"{_winCount}/{RequiredWins}");
+            lossCountText.SetText($"{MaxLosses - _lossCount}");
         }
     }
 }

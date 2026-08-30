@@ -4082,15 +4082,6 @@ MonoBehaviour:
   waveLabelText: {fileID: 1745859753}
   waveLabelAppearTween: {fileID: 1019503607}
   waveLabelDisappearTween: {fileID: 1260061777}
-  waveTextWidget: {fileID: 766729665}
-  fastButtonWidget: {fileID: 741560548}
-  activeColor: {r: 0, g: 1, b: 0.95299745, a: 1}
-  inactiveColor: {r: 1, g: 1, b: 1, a: 1}
-  opponentNameText: {fileID: 1004496435}
-  winCountText: {fileID: 555414720}
-  lossCountText: {fileID: 1792361161}
-  gameOverCanvas: {fileID: 1141842163}
-  gameClearCanvas: {fileID: 1722246375}
 --- !u!114 &504579078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4103,8 +4094,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24533e31223d472eb239d7659eb96aad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::YatchDungeon.BattleDirector
+  waveTextWidget: {fileID: 766729665}
+  timeScaleButton: {fileID: 741560548}
+  timeScaleButtonActiveColor: {r: 0, g: 0, b: 0, a: 0}
+  timeScaleButtonInactiveColor: {r: 0, g: 0, b: 0, a: 0}
   damageCanvas: {fileID: 766101618}
   battleCanvas: {fileID: 98337186}
+  winCountText: {fileID: 555414720}
+  lossCountText: {fileID: 1792361161}
+  gameOverCanvas: {fileID: 1141842163}
+  gameClearCanvas: {fileID: 1722246375}
+  opponentNameText: {fileID: 1004496435}
 --- !u!114 &504579079
 MonoBehaviour:
   m_ObjectHideFlags: 0

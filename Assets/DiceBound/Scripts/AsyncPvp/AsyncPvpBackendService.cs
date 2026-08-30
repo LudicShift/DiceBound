@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Text;
+using System.Threading.Tasks;
 using KCoreKit;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -37,9 +38,7 @@ namespace DiceBound
             public string refresh_token;
             public string user_id;
         }
-
-        // 저장된 세션이 있으면 그걸로 재로그인하고, 없으면 새 익명 계정을 만든다.
-        // 반드시 라운드 시작 전에 한 번 완료돼 있어야 한다 (OwnerId/idToken이 필요하므로).
+        
         public IEnumerator EnsureSignedIn()
         {
             if (SaveSystem.Exist(AuthSaveFileName, AuthSaveDirectory))
@@ -162,7 +161,7 @@ namespace DiceBound
 
         // getOpponentSnapshot Cloud Function을 호출해 상대 스냅샷을 조회한다.
         // 상대가 없거나 요청이 실패하면 onResult에 null을 넘긴다.
-        public IEnumerator FetchOpponentSnapshot(int waveIndex, Action<UnitAsyncBoardData> onResult)
+        public async Task<UnitAsyncBoardData> FetchOpponentSnapshot(int waveIndex)
         {
             var requestBody = new FetchRequestBody { waveIndex = waveIndex };
 
@@ -172,25 +171,22 @@ namespace DiceBound
             request.SetRequestHeader("Content-Type", "application/json");
             request.SetRequestHeader("Authorization", $"Bearer {_idToken}");
 
-            yield return request.SendWebRequest();
+            await request.SendWebRequest();
 
             if (request.result != UnityWebRequest.Result.Success)
             {
                 Debug.LogError($"[AsyncPvp] 상대 조회 실패: {request.error}\n{request.downloadHandler.text}");
-                onResult(null);
-                yield break;
+                return null;
             }
 
             var response = JsonUtility.FromJson<FetchResponseBody>(request.downloadHandler.text);
             if (!response.found)
             {
-                onResult(null);
-                yield break;
+                return null;
             }
 
             var board = JsonUtility.FromJson<UnitAsyncBoardData>(response.boardJson);
-            board.ownerId = response.ownerId;
-            onResult(board);
+            return board;
         }
     }
 }

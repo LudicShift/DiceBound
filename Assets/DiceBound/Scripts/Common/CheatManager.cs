@@ -22,33 +22,5 @@ namespace DiceBound
         {
             _walletDirector.AddGold(gold);
         }
-
-        [DebugCommand]
-        public static void CaptureAsyncPvpSnapshot(int waveIndex)
-        {
-            var snapshot = _asyncPvpDirector.CaptureOwnBoardSnapshot(waveIndex);
-            _asyncPvpDirector.SaveOwnSnapshot(snapshot);
-        }
-
-        [DebugCommand]
-        public static void LoadAsyncPvpSnapshotAsEnemy(int waveIndex)
-        {
-            if (_asyncPvpDirector.TryGetRandomFallbackSnapshot(waveIndex, out var snapshot))
-            {
-                _asyncPvpDirector.LoadBoardSnapshot(snapshot, UnitGroup.Enemy);
-            }
-        }
-
-        [DebugCommand]
-        public static void PlaySelfAsyncPvpRound(int waveIndex)
-        {
-            _instance.StartCoroutine(_asyncPvpDirector.PrepareOpponentBoard(waveIndex));
-        }
-
-        [DebugCommand]
-        public static void PrintAsyncPvpOwnerId()
-        {
-            Debug.Log($"[AsyncPvp] 현재 UID: {_asyncPvpDirector.OwnerId}");
-        }
     }
 }
